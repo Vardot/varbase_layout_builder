@@ -1,0 +1,15 @@
+name: 'Varbase Layout Builder'
+type: module
+description: 'Provides default configuration and enhancements to utilize Drupal core's Layout Builder.'
+core: 8.x
+package: Varbase
+project: varbase_layout_builder
+dependencies:
+  - drupal:system (>=8.7.0)
+  - drupal:layout_builder
+  - layout_builder_restrictions:layout_builder_restrictions
+install:
+  - bootstrap_layouts
+  - layout_library
+  - layout_builder_styles
+  - layout_builder_modal

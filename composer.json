@@ -1,0 +1,45 @@
+{
+  "name": "drupal/varbase_layout_builder",
+  "description": "Provides default configuration and enhancements to utilize Drupal core's Layout Builder.",
+  "type": "drupal-module",
+  "homepage": "https://www.drupal.org/project/varbase_layout_builder",
+  "license": "GPL-2.0-or-later",
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "Vardot",
+      "homepage": "https://www.drupal.org/vardot",
+      "role": "Maintainer"
+    }
+  ],
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/varbase_layout_builder",
+    "source": "http://cgit.drupalcode.org/varbase_layout_builder"
+  },
+  "repositories": {
+    "drupal": {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    },
+    "assets": {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  },
+  "require": {
+    "drupal/layout_builder_modal": "~1.0",
+    "drupal/layout_builder_restrictions": "~2.0",
+    "drupal/layout_builder_styles": "~1.0",
+    "drupal/layout_library": "~1.0",
+    "drupal/bootstrap_layouts": "~5.0"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-8.x-1.x": "8.1.x-dev"
+    },
+    "installer-types": [
+      "bower-asset",
+      "npm-asset"
+    ]
+  }
+}
