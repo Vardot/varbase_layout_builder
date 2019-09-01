@@ -1,6 +1,6 @@
 name: 'Varbase Layout Builder'
 type: module
-description: 'Provides default configuration and enhancements to utilize Drupal core's Layout Builder.'
+description: "Provides default configuration and enhancements to utilize Drupal core's Layout Builder."
 core: 8.x
 package: Varbase
 project: varbase_layout_builder
