@@ -1,0 +1,4 @@
+varbase_layout_builder.varbase_layout_builder_enhancements:
+  css:
+    base:
+      css/base/varbase-layout-builder-enhancements.base.css: {}

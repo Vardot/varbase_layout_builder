@@ -1,0 +1,18 @@
+#drupal-off-canvas select[multiple] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    background: none;
+}
+
+#drupal-off-canvas .description, #drupal-off-canvas .form-item .description, #drupal-off-canvas .details-description {
+    color: #ddd !important;
+}
+
+#drupal-off-canvas div.checkbox.form-check {
+    padding: 0;
+}
+
+#drupal-off-canvas div.checkbox.form-check label {
+    display: inline;
+}
