@@ -49,6 +49,18 @@ function varbase_layout_builder_install() {
         $config_factory->setData($settings_config_file_data)->save(TRUE);
       }
     }
+
+    // Have the list of layout builder style options configs into the active config.
+    $layout_builder_style_options_config_files = file_scan_directory($optional_install_path, '/^layout_builder.style.options.*\\.(yml)$/i');
+    if (isset($layout_builder_style_options_config_files)
+      && is_array($layout_builder_style_options_config_files)) {
+      foreach ($layout_builder_style_options_config_files as $layout_builder_style_options_config_file) {
+        $layout_builder_style_options_config_file_content = file_get_contents(DRUPAL_ROOT . '/' . $layout_builder_style_options_config_file->uri);
+        $layout_builder_style_options_config_file_data = (array) Yaml::parse($layout_builder_style_options_config_file_content);
+        $layout_builder_style_options_config_file_config_factory = \Drupal::configFactory()->getEditable($layout_builder_style_options_config_file->name);
+        $layout_builder_style_options_config_file_config_factory->setData($layout_builder_style_options_config_file_data)->save(TRUE);
+      }
+    }
   }
   // ------------------------------------------------------------------------.
 }
