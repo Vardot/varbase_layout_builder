@@ -16,3 +16,4 @@ install:
   - layout_builder_modal
   - layout_builder_block_sanitizer
   - media_library_theme_reset
+  - layout_builder_at
