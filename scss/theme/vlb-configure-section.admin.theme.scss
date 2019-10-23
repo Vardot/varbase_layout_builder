@@ -1,0 +1,326 @@
+// Varbase Layout Builder Section background color field at configure section.
+
+#drupal-off-canvas {
+
+  div[id^="edit-vlb-"] {
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    
+    &.form-item,
+    .js-form-item {
+      padding: 0;
+      margin: 0;
+    }
+  }
+
+  .vlb_background_color {
+    .radio {
+      input {
+        visibility: hidden;
+        position: absolute;
+
+        &:checked + label.option {
+          border: #000000 2px solid;
+        }
+      }
+
+      label.option {
+        cursor: pointer !important;
+        border: #000000 1px solid;
+        font-size: 0.00001px;
+        position: relative;
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        float: left;
+        margin: 5px 5px 5px 0;
+        padding : 0;
+        white-space: nowrap;
+
+        &:after {
+          content: 'a';
+          display: table;
+          position: absolute;
+          top: 3px;
+          left: 0;
+          right: 0px;
+          bottom: 0;
+          z-index: 1;
+          font-size: 20px;
+          text-align: center;
+          vertical-align: middle;
+          width: 100%;
+          height: 100%;
+        }
+
+        &:hover {
+          opacity: 0.8;
+        }
+
+        &._none {
+          background: #ffffff !important;
+
+          &:after {
+            display: inline-block;
+            -webkit-box-sizing: content-box;
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+            float: none;
+            z-index: auto;
+            width: 37px;
+            height: 2px;
+            position: absolute;
+            content: "";
+            cursor: pointer !important;
+            opacity: 1;
+            top: 12px;
+            left: -5px;
+            right: 0;
+            bottom: 0;
+            margin: 0;
+            padding: 0;
+            -o-text-overflow: clip;
+            background: #f00;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            text-shadow: none;
+            -webkit-transition: none;
+            -moz-transition: none;
+            -o-transition: none;
+            transition: none;
+            -webkit-transform: rotateZ(-45deg);
+            transform: rotateZ(-45deg);
+            -webkit-transform-origin: 50% 50% 0;
+            transform-origin: 50% 50% 0;
+          }
+        }
+      }
+    }
+  }
+
+  .vlb_width,
+  .vlb_gutter,
+  .vlb_column_style_3,
+  .vlb_column_style_2, {
+    .radio {
+      input {
+
+        visibility: hidden !important;
+        position: absolute !important;
+
+        &:checked + label.option {
+          -webkit-filter: invert(25%) sepia(0.9) !important;
+          filter: invert(25%) sepia(0.9) !important;
+        }
+      }
+
+      label.option {
+        cursor: pointer !important;
+        font-size: 75% !important;
+        text-align: center !important;
+        position: relative !important;
+        display: inline-block !important;
+        min-width: 50px !important;
+        height: 20px !important;
+        float: left !important;
+        margin: 10px 10px 10px 0 !important;
+        padding: 40px 0px 0 !important;
+        white-space: nowrap !important;
+        -webkit-transition: opacity 0.3s ease-in-out !important;
+        -moz-transition: opacity 0.3s ease-in-out !important;
+        transition: opacity 0.3s ease-in-out !important;
+
+        &:after {
+          content: '';
+          display: table;
+          position: absolute;
+          top: 3px;
+          left: 0;
+          right: 0px;
+          bottom: 0;
+          z-index: 1;
+          font-size: 20px !important;
+          text-align: center;
+          vertical-align: middle;
+          width: 100%;
+          height: 100%;
+        }
+
+        &:hover {
+          opacity: 0.8 !important;
+        }
+      }
+    }
+  }
+
+  // Varbase Layout Builder Section width.
+  .vlb_width {
+    .radio {
+      label.option {
+        &.tiny,
+        &.narrow,
+        &.medium,
+        &.wide,
+        &.full,
+        &.edge2edge {
+          background-image: none;
+          background-position: top center;
+          background-repeat: no-repeat;
+        }
+
+        &.tiny {
+          background-image: url("../../images/icons/vlb--width--tiny.svg");
+        }
+
+        &.narrow {
+          background-image: url("../../images/icons/vlb--width--narrow.svg");
+        }
+
+        &.medium {
+          background-image: url("../../images/icons/vlb--width--medium.svg");
+        }
+
+        &.wide {
+          background-image: url("../../images/icons/vlb--width--wide.svg");
+        }
+
+        &.full {
+          background-image: url("../../images/icons/vlb--width--full.svg");
+        }
+
+        &.edge2edge {
+          background-image: url("../../images/icons/vlb--width--edge-to-edge.svg");
+        }
+      }
+    }
+  }
+
+  // Varbase Layout Builder Section gutter.
+  .vlb_gutter {
+    .radio {
+      label.option {
+        &.gutter-0,
+        &.gutter-1 {
+          background-image: none;
+          background-position: top center;
+          background-repeat: no-repeat;
+        }
+
+        &.gutter-0 {
+          background-image: url("../../images/icons/vlb--gutter--without-gutter.svg");
+        }
+
+        &.gutter-1 {
+          background-image: url("../../images/icons/vlb--gutter--with-gutter.svg");
+        }
+      }
+    }
+  }
+
+  // Varbase Layout Builder Section column style 3
+  .vlb_column_style_3 {
+    .radio {
+      label.option {
+        &.vlb_style_33_34_33,
+        &.vlb_style_25_50_25,
+        &.vlb_style_50_25_25,
+        &.vlb_style_25_25_50,
+        &.vlb_style_16_66_16,
+        &.vlb_style_66_16_16,
+        &.vlb_style_16_16_66 {
+          background-image: none;
+          background-position: top center;
+          background-repeat: no-repeat;
+        }
+
+        &.vlb_style_33_34_33 {
+          background-image: url("../../images/icons/vlb--style--33-34-33.svg");
+        }
+
+        &.vlb_style_25_50_25 {
+          background-image: url("../../images/icons/vlb--style--25-50-25.svg");
+        }
+
+        &.vlb_style_50_25_25 {
+          background-image: url("../../images/icons/vlb--style--50-25-25.svg");
+        }
+
+        &.vlb_style_25_25_50 {
+          background-image: url("../../images/icons/vlb--style--25-25-50.svg");
+        }
+
+        &.vlb_style_16_66_16 {
+          background-image: url("../../images/icons/vlb--style--16-66-16.svg");
+        }
+
+        &.vlb_style_66_16_16 {
+          background-image: url("../../images/icons/vlb--style--66-16-16.svg");
+        }
+
+        &.vlb_style_16_16_66 {
+          background-image: url("../../images/icons/vlb--style--16-16-66.svg");
+        }
+
+      }
+    }
+  }
+
+  // Varbase Layout Builder Section column style 2
+  .vlb_column_style_2 {
+    .radio {
+      label.option {
+        &.vlb_style_50_50,
+        &.vlb_style_75_25,
+        &.vlb_style_66_33,
+        &.vlb_style_25_75,
+        &.vlb_style_33_66 {
+          background-image: none;
+          background-position: top center;
+          background-repeat: no-repeat;
+        }
+
+        &.vlb_style_50_50 {
+          background-image: url("../../images/icons/vlb--style--50-50.svg");
+        }
+
+        &.vlb_style_75_25 {
+          background-image: url("../../images/icons/vlb--style--75-25.svg");
+        }
+
+        &.vlb_style_66_33 {
+          background-image: url("../../images/icons/vlb--style--66-33.svg");
+        }
+
+        &.vlb_style_25_75 {
+          background-image: url("../../images/icons/vlb--style--25-75.svg");
+        }
+
+        &.vlb_style_33_66 {
+          background-image: url("../../images/icons/vlb--style--33-66.svg");
+        }
+
+      }
+    }
+  }
+
+  [dir=rtl] .vlb_background,
+  [dir=rtl] .vlb_width,
+  [dir=rtl] .vlb_gutter,
+  [dir=rtl] .vlb_column_style_3,
+  [dir=rtl] .vlb_column_style_2 {
+    .radio {
+      label.option {
+        float: right !important;
+
+        &._none {
+          &:after {
+            left: 0;
+            right: -5px;
+          }
+        }
+      }
+    }
+  }
+
+}

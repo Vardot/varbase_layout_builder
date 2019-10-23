@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.landing_page_lb
+id: node_type_landing_page_lb
+action: display_page
+allow_override: 0
+redirect: ''
+redirect_code: 301

@@ -4,3 +4,790 @@
  * @file
  * Contains varbase_layout_builder.module.
  */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\media\Entity\Media;
+use Drupal\entity_browser\Plugin\Field\FieldWidget\EntityReferenceBrowserWidget;
+use Drupal\Core\Url;
+use Drupal\Component\Utility\Html;
+
+/**
+ * Implements hook_form_alter().
+ */
+function varbase_layout_builder_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+  // Only for layout builder forms.
+  if (strpos($form_id, '_layout_builder_form') !== FALSE) {
+
+    // Attache the Varbase Layout Builder enhancements libraray.
+    $form['#attached']['library'][] = 'varbase_layout_builder/enhancements';
+
+    // Attache the Varbase Layout Builder configure section admin libraray.
+    $form['#attached']['library'][] = 'varbase_layout_builder/configure-section.admin';
+    
+    // Attache the Varbase Layout Builder background media libraray.
+    $form['#attached']['library'][] = 'varbase_layout_builder/background-media';
+    
+    
+
+    // Hide revision information fields.
+    if (isset($form['revision_information'])) {
+      $form['revision_information']['#access'] = FALSE;
+    }
+
+    // Hide rabbit hole fields.
+    if (isset($form['rabbit_hole'])) {
+      $form['rabbit_hole']['#access'] = FALSE;
+    }
+  }
+
+}
+
+/**
+ * Implements hook_layouts_alter().
+ */
+function varbase_layout_builder_preprocess_layout(&$variables) {
+
+  // Apply a configured style to a layout by adding the style's CSS classes.
+  if (isset($variables['settings']['vlb_section_config'])) {
+
+    // Get the current Varbase Layout Builder section configs.
+    $current_vlb_section_configs = $variables['settings']['vlb_section_config'];
+
+    $layout_id = $variables['layout']->id();
+    $config_style_options = \Drupal::config('layout_builder.style.options.' . $layout_id);
+    $style_options = $config_style_options->get('style_options');
+
+    if (!is_array($current_vlb_section_configs)) {
+      $current_vlb_section_configs = [$current_vlb_section_configs];
+    }
+
+    foreach ($current_vlb_section_configs as $current_vlb_section_config_id => $current_vlb_section_config) {
+      $preset_config = $style_options[$current_vlb_section_config_id];
+
+      if (isset($style_options)) {
+
+        // For options array in styling options.
+        if (isset($style_options[$current_vlb_section_config_id])
+          && isset($style_options[$current_vlb_section_config_id]['options'])
+          && is_array($style_options[$current_vlb_section_config_id]['options'])
+          && count($style_options[$current_vlb_section_config_id]['options']) > 0) {
+
+          foreach ($style_options[$current_vlb_section_config_id]['options'] as $current_config_option) {
+
+            if (isset($current_config_option['value'])
+              && $current_config_option['value'] == $current_vlb_section_config) {
+
+              if (isset($variables['settings']['vlb_section_config']['vlb_use_advanced'])
+                  && $variables['settings']['vlb_section_config']['vlb_use_advanced'] == 1) {
+                // Use Advanced insted.
+
+                // When we have classes in the option.
+                if (isset($style_options[$current_vlb_section_config_id]['use_with_advanced'])
+                  && $style_options[$current_vlb_section_config_id]['use_with_advanced'] == 1
+                  && isset($current_config_option['classes'])) {
+                  
+                  if (is_array($current_config_option['classes'])) {
+                    if (count($current_config_option['classes']) > 0) {
+                      // If we do have classes values as an ( Array ) in this option.
+                      $variables['settings']['vlb_section_config'][$current_vlb_section_config_id . '_classes'] = implode(' ', $current_config_option['classes']);
+                    }
+                  }
+                  else {
+                    // If we do have classes values as ( String ) in this option.
+                    $variables['settings']['vlb_section_config'][$current_vlb_section_config_id . '_classes'] = $current_config_option['classes'];
+                  }
+
+                }
+              }
+              else {
+
+                // If we do have layout values for this option. 
+                if (isset($current_config_option['layout'])) {
+                  $variables['settings']['layout'] = $current_config_option['layout'];
+                }
+
+                // If we do have regions values for this option.
+                if (isset($current_config_option['regions'])) {
+                  $variables['settings']['regions'] = $current_config_option['regions'];
+                }
+
+                // When we have classes in the option.
+                if (isset($current_config_option['classes'])) {
+
+                  if (is_array($current_config_option['classes'])) {
+                    if (count($current_config_option['classes']) > 0) {
+                    // If we do have classes values as an ( Array ) in this option.
+                      $variables['settings']['vlb_section_config'][$current_vlb_section_config_id . '_classes'] = implode(' ', $current_config_option['classes']);
+                    }
+                  }
+                  else {
+                    // If we do have classes values as ( String ) in this option.
+                    $variables['settings']['vlb_section_config'][$current_vlb_section_config_id . '_classes'] = $current_config_option['classes'];
+                  }
+
+                }
+              }
+            }
+          }
+        }
+      }
+
+      if (isset($variables['settings']['vlb_section_config']['vlb_background_media'])
+          && $variables['settings']['vlb_section_config']['vlb_background_media'] > 0) {
+
+        $background_media_entity = Media::load($variables['settings']['vlb_section_config']['vlb_background_media']);
+        
+        if (isset($background_media_entity)) {
+          $background_media_build = Drupal::entityTypeManager()->getViewBuilder('media')->view($background_media_entity, $variables['settings']['vlb_section_config']['vlb_background_media']['view_mode']);
+          $background_media_render = Drupal::service('renderer')->render($background_media_build);
+
+          $variables['settings']['vlb_section_config']['vlb_background_media_html'] = $background_media_render;
+        }
+      }
+
+      // Add custom Varbase Layout Builder classes.
+      if (isset($variables['settings']['vlb_section_config']['vlb_classes'])) {
+        $final_classes = explode(' ', $variables['settings']['vlb_section_config']['vlb_classes']);
+
+        // Add the final list of css classes to the class attribute.
+        if (!empty($final_classes)) {
+
+          // Convert the calss attributes to array and reset it if it was not array.
+          if (!isset($variables['attributes']['class'])
+            || !is_array($variables['attributes']['class'])) {
+
+            $variables['attributes']['class'] = [];
+          }
+
+          $variables['attributes']['class'] = array_merge($variables['attributes']['class'], $final_classes);
+        }
+      }
+
+    }
+  }
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function varbase_layout_builder_form_layout_builder_configure_section_alter(&$form, FormStateInterface &$form_state, $form_id) {
+
+  $form_object = $form_state->getFormObject();
+  $section_config = $form_object->getLayout()->getConfiguration();
+  $vlb_section_config = $section_config['vlb_section_config'] ?? [];
+
+  $layout_id = $form_object->getLayout()->getPluginDefinition()->id();
+
+  $config_style_options = \Drupal::config('layout_builder.style.options.' . $layout_id);
+
+  $form['actions']['#weight'] = -210;
+
+  $form['vlb_default'] = [
+    '#type' => 'continer',
+    '#weight' => -200,
+    '#prefix' => '<hr />',
+  ];
+
+  $form['vlb_advanced'] = [
+    '#type' => 'details',
+    '#title' => t('Advanced'),
+    '#collapsible' => TRUE,
+    '#collapsed' => FALSE,
+    '#weight' => -190,
+    '#prefix' => '<hr />',
+    '#states' => [
+      'visible' => [
+        [':input[name="vlb_default[vlb_use_advanced]"]' => ['checked' => TRUE]],
+      ],
+    ]
+  ];
+
+  // When we do have a layout settings in the form.
+  if (isset($form['layout_settings'])) {
+
+    // Add the layout to the advanced group.
+    if (isset($form['layout_settings']['layout'])) {
+      $form['layout_settings']['layout']['#group'] = 'vlb_advanced';
+    }
+
+    // Get list of Regions in the current layout.
+    $layout_regions = $form_object->getLayout()->getPluginDefinition()->getRegions();
+
+    // Add all layout regions to the advanced group.
+    foreach ($layout_regions as $region_id => $region_info) {
+      if (isset($form['layout_settings'][$region_id])) {
+        $form['layout_settings'][$region_id]['#group'] = 'vlb_advanced';
+        $form['layout_settings'][$region_id]['#collapsed'] = TRUE;
+      }
+    }
+  }
+
+  // When we have a list of style options.
+  if (isset($config_style_options)) {
+
+    $style_options = $config_style_options->get('style_options');
+
+    foreach ($style_options as $style_option_id => $style_option) {
+
+      if (isset($style_option['field_type'])) {
+        if ($style_option['field_type'] == 'radios') {
+
+          $options = [];
+
+          if (isset($style_option['options_source_config'])) {
+            $options_source_config = \Drupal::configFactory()->getEditable($style_option['options_source_config']);
+            if (isset($options_source_config)) {
+              $options_source_map = $options_source_config->get($style_option['options_source_map']);
+
+              $options_source_options = ['_none' => t('N/A')];
+              $lines = explode(PHP_EOL, $options_source_map);
+              foreach ($lines as $line) {
+                $line = explode($style_option['options_source_schema'], $line);
+                $options_source_options[$line[0]] = $line[1];
+              }
+
+              $options = $options_source_options;
+            }
+
+          }
+
+          if (isset($style_option['options'])
+            && count($style_option['options']) > 0 ) {
+
+            if (isset($style_option['options']['empty_option'])
+              && $style_option['options']['empty_option']) {
+              $options = ['_none' => t('N/A')];
+            }
+
+            foreach ($style_option['options'] as $option) {
+              if (isset($option['value']) && isset($option['label'])) {
+                $options[$option['value']] = $option['label'];
+              }
+            }
+
+          }         
+
+          $default_value = '_none'; 
+          if (isset($vlb_section_config[$style_option_id])) {
+            $default_value = $vlb_section_config[$style_option_id];
+          }
+          else if (isset($style_option['default_value'])) {
+            $default_value = $style_option['default_value'];
+          }
+
+          $form[$style_option['group']][$style_option_id] = [
+            '#type' => 'radios',
+            '#options' =>  $options,
+            '#title' => $style_option['label'],
+            '#description' => (isset($style_option['description']) ? $style_option['description'] : NULL),
+            '#default_value' => $default_value,
+            '#required' => (isset($style_option['required']) ? $style_option['required'] : NULL),
+            '#attributes' => [
+              'class' => [$style_option_id, 'form-radio'],
+            ],
+            '#prefix' => '<hr />',
+          ];
+
+        }
+        else if ($style_option['field_type'] == 'entity_browser_entity_reference') {
+
+          $default_value = ''; 
+          if (isset($vlb_section_config[$style_option_id])) {
+            $default_value = $style_option['entity_types'] . ":" . $vlb_section_config[$style_option_id];
+          }
+          else if (isset($style_option['default_value'])) {
+            $default_value = $style_option['default_value'];
+          }
+
+          $media_id = null;
+          $background_media_preview = '';
+          if (isset($default_value) && $default_value != '') {
+            $media_id = str_replace('media:', '', $default_value);
+            $background_media_entity = Media::load($media_id);
+
+            if (isset($background_media_entity)) {
+              $background_media_build = Drupal::entityTypeManager()->getViewBuilder('media')->view($background_media_entity, 'field_preview');
+              $background_media_preview = Drupal::service('renderer')->render($background_media_build);
+            }
+          }
+
+          $hidden_id = Html::getUniqueId('edit-' . $style_option_id . '-target-id');
+          $details_id = Html::getUniqueId('edit-' . $style_option_id);
+          
+          $current_display = NULL;
+
+          if (isset($media_id) && $media_id > 0) {
+            $current_display = [
+                '#theme_wrappers' => ['container'],
+                '#attributes' => [
+                  'class' => 'entities-list',
+                ],
+                'items' => [
+                  '#theme_wrappers' => ['container'],
+                  '#attributes' => [
+                    'class' => ['item-container'],
+                    'data-entity-id' => 'media:' . $media_id,
+                  ],
+                  'display' => ['#markup' => $background_media_preview],
+                  'remove_button' => [
+                    '#type' => 'submit',
+                    '#value' => t('Remove'),
+                    '#ajax' => [
+                      'callback' => [
+                        'Drupal\entity_browser\Plugin\Field\FieldWidget\EntityReferenceBrowserWidget',
+                        'updateWidgetCallback'
+                      ],
+                      'wrapper' => $details_id,
+                    ],
+                    '#submit' => [
+                      [
+                        'Drupal\entity_browser\Plugin\Field\FieldWidget\EntityReferenceBrowserWidget',
+                        'removeItemSubmit'
+                      ]
+                    ],
+                    '#name' => $style_option_id . '_remove_' . $media_id,
+                    '#attributes' => [
+                      'data-entity-id' => 'media:' . $media_id,
+                      'class' => ['remove-button'],
+                    ],
+                    '#access' => TRUE,
+                  ],
+                  'edit_button' => [
+                    '#type' => 'submit',
+                    '#value' => t('Edit'),
+                    '#name' => $style_option_id . '_edit_button_' . $media_id,
+                    '#ajax' => [
+                      'url' => Url::fromRoute(
+                        'entity_browser.edit_form', [
+                          'entity_type' => 'media',
+                          'entity' => $media_id,
+                        ]
+                      ),
+                      'options' => [
+                        'query' => [
+                          'details_id' => $details_id,
+                        ],
+                      ],
+                    ],
+                    '#attributes' => [
+                      'class' => ['edit-button'],
+                    ],
+                    '#access' => TRUE,
+                  ],
+                ],
+              ];
+          }
+
+          $form[$style_option['group']][$style_option_id]['entity_browser_entity_reference'] = [
+            '#type' => 'container',
+            '#parents' => [$style_option_id . '_wrapper'],
+            'widget' => [
+              '#title' => (isset($style_option['label']) ? $style_option['label'] : ''),
+              '#description' => (isset($style_option['description']) ? $style_option['description'] : ''),
+              '#field_name' => $style_option_id,
+              '#field_parents' => [],
+              '#required' => TRUE,
+              '#parents' => [$style_option_id],
+              '#collapsible' => FALSE,
+              '#collapsed' => FALSE,
+              '#id' => 'edit-' . $style_option_id,
+              '#type' => 'container',
+              '#open' => TRUE,
+              'entity_browser' => [
+                '#type' => 'entity_browser',
+                '#entity_browser' => 'media_browser',
+                '#field_widget_display' => 'rendered_entity',
+                '#field_widget_edit' => TRUE,
+                '#field_widget_remove' => TRUE,
+                '#field_widget_replace' => FALSE,
+                '#cardinality' => 1,
+                '#selection_mode' => 'selection_append',
+                '#field_widget_display_settings' => [
+                  'view_mode' => 'field_preview',
+                ],
+                '#default_value' => $default_value,
+                '#entity_browser_validators' => [
+                  'entity_type' => [
+                    'type' => 'media',
+                  ],
+                ],
+                '#custom_hidden_id' => $hidden_id,
+                '#process' => [
+                  [
+                    [
+                      '\Drupal\entity_browser\Element\EntityBrowserElement',
+                      'processEntityBrowser',
+                    ]
+                  ],
+                ],
+              ],
+              'current' => $current_display,
+              "#tree" => TRUE,
+              '#after_build' => [
+                [
+                  'Drupal\entity_browser\Plugin\Field\FieldWidget\EntityReferenceBrowserWidget',
+                  'afterBuild',
+                ],
+              ],
+              '#attached' => [
+                'library' => [
+                  'entity_browser/entity_reference',
+                ],
+              ],
+            ],
+            '#prefix' => '<hr /><legend>
+    <span class="fieldset-legend">' . (isset($style_option['label']) ? $style_option['label'] : '') . '</span>
+  </legend>',
+          ];
+
+        }
+        else if ($style_option['field_type'] == 'textfield') {
+
+          $default_value = ''; 
+          if (isset($vlb_section_config[$style_option_id])) {
+            $default_value = $vlb_section_config[$style_option_id];
+          }
+          else if (isset($style_option['default_value'])) {
+            $default_value = $style_option['default_value'];
+          }
+
+          $form[$style_option['group']][$style_option_id] = [
+            '#type' => 'textfield',
+            '#title' => $style_option['label'],
+            '#description' => (isset($style_option['description']) ? $style_option['description'] : NULL),
+            '#default_value' => $default_value,
+            '#size' => $style_option['size'],
+            '#maxlength' => $style_option['maxlength'],
+            '#required' => (isset($style_option['required']) ? $style_option['required'] : NULL),
+            '#prefix' => '<hr />',
+          ];
+        }
+        else if ($style_option['field_type'] == 'checkbox') {
+
+          $default_value = ''; 
+          if (isset($vlb_section_config[$style_option_id])) {
+            $default_value = $vlb_section_config[$style_option_id];
+          }
+          else if (isset($style_option['default_value'])) {
+            $default_value = $style_option['default_value'];
+          }
+
+          $form[$style_option['group']][$style_option_id] = [
+            '#type' => 'checkbox',
+            '#title' => $style_option['label'],
+            '#description' => (isset($style_option['description']) ? $style_option['description'] : NULL),
+            '#default_value' => $default_value,
+            '#prefix' => '<hr />',
+          ];
+        }
+
+        // When we do have a status option for the section config style.
+        if (isset($style_option['status'])) {
+
+          // When the visible status has some configs. 
+          if (isset($style_option['status']['visible'])) {
+            $visible_config = $style_option['status']['visible'];
+
+            if (isset($visible_config['selector_tag'])
+              && isset($visible_config['selector_attribute'])
+              && isset($visible_config['selector_value'])
+              && isset($visible_config['status'])
+              && isset($visible_config['value'])) {
+
+              $jquery_selector = $visible_config['selector_tag'] . '[' . $visible_config['selector_attribute'] . '="' . $visible_config['selector_value'] . '"]'; 
+              $remote_conditions = [$visible_config['status'] => $visible_config['value']];
+
+              if (isset($form[$style_option['group']][$style_option_id])) {
+                $form[$style_option['group']][$style_option_id]['#status'] = [
+                  'visible' => [
+                    [$jquery_selector => $remote_conditions],
+                  ],
+                ];
+              }
+            }
+          }
+
+          // When the invisible status has some configs.
+          if (isset($style_option['status']['invisible'])) {
+            $invisible_config = $style_option['status']['invisible'];
+
+            if (isset($invisible_config['selector_tag'])
+              && isset($invisible_config['selector_attribute'])
+              && isset($invisible_config['selector_value'])
+              && isset($invisible_config['status'])
+              && isset($invisible_config['value'])) {
+
+              $jquery_selector = $invisible_config['selector_tag'] . '[' . $invisible_config['selector_attribute'] . '="' . $invisible_config['selector_value'] . '"]'; 
+              $remote_conditions = [$invisible_config['status'] => $invisible_config['value']];
+
+              if (isset($form[$style_option['group']][$style_option_id])) {
+                $form[$style_option['group']][$style_option_id]['#states'] = [
+                  'invisible' => [
+                    [$jquery_selector => $remote_conditions],
+                  ],
+                ];
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Attache the Varbase Layout Builder enhancements libraray.
+  $form['#attached']['library'][] = 'varbase_layout_builder/enhancements';
+
+  // Attache the Varbase Layout Builder configure section admin libraray.
+  $form['#attached']['library'][] = 'varbase_layout_builder/configure-section.admin';
+
+  array_unshift($form['#submit'], '_varbase_layout_builder_submit_section_form');
+
+}
+
+/**
+ * Varbase Layout Builder submit section form.
+ */
+function _varbase_layout_builder_submit_section_form(array &$form, FormStateInterface &$form_state) {
+  
+  $form_object = $form_state->getFormObject();
+
+  // Only current Varbase Layout Builder section configs will be saved. 
+  $vlb_section_config = [];
+
+  // Get the layout id.
+  $layout_id = $form_object->getLayout()->getPluginDefinition()->id();
+
+  // Get the config style options.
+  $config_style_options = \Drupal::config('layout_builder.style.options.' . $layout_id);
+  if (isset($config_style_options)) {
+
+    // Get the style options list.
+    $style_options = $config_style_options->get('style_options');
+
+    // Make sure that we do have a list in the current config.
+    if (isset($style_options)
+      && is_array($style_options)
+      && count($style_options) > 0) {
+
+      foreach ($style_options as $style_option_id => $style_option) {
+
+        // Fetch the data from the form to be saved in vlb_section_config.
+        if (isset($form[$style_option['group']])
+            && isset($form[$style_option['group']][$style_option_id])) {
+
+          $vlb_section_config_element = $form[$style_option['group']][$style_option_id];
+          if ($style_option['field_type'] == 'entity_browser_entity_reference') {
+            if (isset($style_option['entity_types']) 
+              && isset($vlb_section_config_element['entity_browser_entity_reference'])) {
+            
+              $entity_type_format = $style_option['entity_types'] . ":";
+              $entity_browser_entity_reference_id_string = (string) $vlb_section_config_element['entity_browser_entity_reference']['widget']['target_id']['#value'];
+              $entity_browser_entity_reference_id = str_replace($entity_type_format, "", $entity_browser_entity_reference_id_string);
+              $vlb_section_config[$style_option_id] = (integer) $entity_browser_entity_reference_id;
+            }
+          }
+          else {
+            $vlb_section_config[$style_option_id] = $form_state->getValue($vlb_section_config_element['#parents']);
+          }
+
+        }
+      }
+    }
+
+
+    // When the check box "use advanced insted" is checked.
+    if (isset($vlb_section_config['vlb_use_advanced'])
+      && $vlb_section_config['vlb_use_advanced'] == 1) {
+
+      // Only save the Varbase Layout Builder section config.
+      $form_object->getLayout()
+        ->setConfiguration([
+          'vlb_section_config' => $vlb_section_config,
+        ]
+      );
+
+    }
+    // When the check box "use advanced insted" is NOT checked. 
+    else {
+
+      // Have advanced layout and regions holders.
+      $advanced_layout = [];
+      $advanced_regions = [];
+
+      // For all style options template.
+      foreach ($style_options as $config_style_id => $config_style_item) {
+
+        // When sync with advanced option enabled.
+        if (isset($config_style_item['sync_with_advanced'])
+          && $config_style_item['sync_with_advanced'] == 1) {
+
+          // When the style option has [layout] pre-set template config.
+          // Add the layout classes to the layout in the config style.
+          if (isset($config_style_item['layout'])
+            && is_array($config_style_item['layout'])
+            && isset($config_style_item['sync_layout_classes'])
+            && $config_style_item['sync_layout_classes'] == 1) {
+
+            $advanced_layout = $config_style_item['layout'];
+          }
+
+          // When the style option has [regions] pre-set template config.
+          // Add regions classes to the regions in the config style.
+          if (isset($config_style_item['regions'])
+            && is_array($config_style_item['regions'])
+            && isset($config_style_item['sync_region_classes'])
+            && $config_style_item['sync_region_classes'] == 1) {
+
+            $advanced_regions = $config_style_item['regions'];
+          }
+
+          // When the layout section config has ncd umber of options.
+          if (isset($config_style_item['options'])) {
+            foreach($config_style_item['options'] as $config_style_option_id => $config_style_option_item) {
+
+              if ($vlb_section_config[$config_style_id] == $config_style_option_item['value']) {
+
+                // When we have [layout] in the config style.
+                // Add layout classes to advanced layout.
+                if (isset($config_style_option_item['layout'])
+                  && is_array($config_style_option_item['layout'])
+                  && isset($config_style_option_item['sync_layout_classes'])
+                  && $config_style_option_item['sync_layout_classes'] == 1) {
+
+                  $advanced_layout = $config_style_option_item['layout'];
+
+                }
+
+                // When we have [regions] in the config style.
+                // Add regions classes to advanced layout
+                if (isset($config_style_option_item['regions'])
+                  && is_array($config_style_option_item['regions'])
+                  && isset($config_style_option_item['sync_region_classes'])
+                  && $config_style_option_item['sync_region_classes'] == 1) {
+
+                  $advanced_regions = $config_style_option_item['regions'];
+
+                } 
+              }
+            }
+          }
+        }
+      }
+
+      // Get Layout Settings from the form status
+      $form_layout_settings = $form_state->getValue('layout_settings');
+
+      // Get list of Regions in the current layout.
+      $layout_regions = $form_object->getLayout()->getPluginDefinition()->getRegions();
+
+      // Set section layout configs.
+      $section_layout_configs = [];
+      if (count($advanced_layout) > 0) {
+        $section_layout_configs = $advanced_layout;
+      }
+      else {
+        $section_layout_configs = $form_layout_settings['layout'];
+      }
+
+      // Set regions configs.
+      $section_regions_configs = [];
+      if (count($advanced_regions) > 0) {
+        foreach ($layout_regions as $region_id => $region_info) {
+          $section_regions_configs[$region_id] = $advanced_regions[$region_id];
+        }
+      }
+      else {
+        foreach ($layout_regions as $region_id => $region_info) {
+          $section_regions_configs[$region_id] = $form_layout_settings[$region_id];
+        }
+      }
+
+      // Save the layout section config with pre-set layout and regions.
+      $form_object->getLayout()
+        ->setConfiguration([
+          'vlb_section_config' => $vlb_section_config,
+          'layout' => $section_layout_configs,
+          'regions' => $section_regions_configs,
+        ]
+      );
+      
+      // Update the form state.
+      $pre_set_section_settings = [];
+      if (count($advanced_layout) > 0) {
+        $pre_set_section_settings['layout'] = $advanced_layout;
+      }
+      else {
+        $pre_set_section_settings['layout'] = $form_layout_settings['layout'];
+      }
+
+      if (count($advanced_regions) > 0) {
+        foreach ($layout_regions as $region_id => $region_info) {
+          $pre_set_section_settings[$region_id] = $advanced_regions[$region_id];
+        }
+      }
+      else {
+        foreach ($layout_regions as $region_id => $region_info) {
+          $pre_set_section_settings[$region_id] = $form_layout_settings[$region_id];
+        }
+      }
+
+      // Set new values and rebuild the form status before saving.
+      $form_state->setValue('layout_settings', $pre_set_section_settings);
+      $form_state->setRebuild(TRUE);
+
+    }
+  }
+
+}
+
+/**
+ * Implements hook_theme().
+ */
+function varbase_layout_builder_theme($existing, $type, $theme, $path) {
+
+  $templates = $path . '/templates';
+
+  $theme_templates = [];
+
+  $theme_templates['bs_1col'] = [
+    'template' => 'bs-1col--vlb',
+    'path' => $templates,
+  ];
+
+  $theme_templates['bs_2col'] = [
+    'template' => 'bs-2col--vlb',
+    'path' => $templates,
+  ];
+
+  $theme_templates['bs_3col'] = [
+    'template' => 'bs-3col--vlb',
+    'path' => $templates,
+  ];
+
+  $theme_templates['bs_4col'] = [
+    'template' => 'bs-4col--vlb',
+    'path' => $templates,
+  ];
+
+  $theme_templates['media_oembed_iframe__remote_video__background_media'] = [
+    'template' => 'media-oembed-iframe--remote-video--background-media',
+  ];
+
+	return $theme_templates;
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function varbase_layout_builder_preprocess_media_oembed_iframe__remote_video__background_media(&$variables) {
+  // Suggestions go here!
+  $module_handler = \Drupal::service('module_handler');
+  $query = \Drupal::request()->query;
+  $variables['type'] = $query->get('type');
+  $variables['provider'] = $query->get('provider');
+  $variables['view_mode'] = $query->get('view_mode');
+  $variables['base_path'] = base_path();
+  $variables['varbase_layout_builder_path'] = $module_handler->getModule('varbase_layout_builder')->getPath();
+
+}

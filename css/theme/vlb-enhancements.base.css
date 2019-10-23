@@ -1,0 +1,242 @@
+#drupal-off-canvas select[multiple] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 100%;
+  background: none;
+}
+
+#drupal-off-canvas description,
+#drupal-off-canvas .form-item .description,
+#drupal-off-canvas .details-description {
+  color: #ddd !important;
+}
+
+#drupal-off-canvas div.checkbox.form-check {
+  padding: 0;
+}
+
+#drupal-off-canvas div.checkbox.form-check label {
+  display: inline;
+}
+
+#drupal-off-canvas button,
+#drupal-off-canvas .button {
+  display: inline-block;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  margin-top: 5px;
+  padding: 6px 12px;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #drupal-off-canvas button,
+  #drupal-off-canvas .button {
+    -webkit-transition: none;
+    -o-transition: none;
+    transition: none;
+  }
+}
+
+#drupal-off-canvas button,
+#drupal-off-canvas .button:hover {
+  color: #212529;
+  text-decoration: none;
+}
+
+#drupal-off-canvas button.entity-browser-processed,
+#drupal-off-canvas .button:hover.entity-browser-processed {
+  color: #212529;
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+}
+
+#drupal-off-canvas button.entity-browser-processed:hover,
+#drupal-off-canvas .button:hover.entity-browser-processed:hover {
+  color: #212529;
+  background-color: #e2e6ea;
+  border-color: #dae0e5;
+}
+
+#drupal-off-canvas button:focus,
+#drupal-off-canvas .button:focus,
+#drupal-off-canvas button, #drupal-off-canvas .focus,
+#drupal-off-canvas .button.focus {
+  outline: 0;
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+#drupal-off-canvas button.disabled,
+#drupal-off-canvas .button.disabled,
+#drupal-off-canvas button:disabled,
+#drupal-off-canvas .button:disabled {
+  opacity: 0.65;
+}
+
+#drupal-off-canvas a.button.disabled,
+#drupal-off-canvas fieldset:disabled a.button {
+  pointer-events: none;
+}
+
+#drupal-off-canvas .button--primary {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+#drupal-off-canvas .button--primary:hover {
+  color: #fff;
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+#drupal-off-canvas .button--primary:focus, #drupal-off-canvas .btn-primary.focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+
+#drupal-off-canvas .button--primary.disabled,
+#drupal-off-canvas .button--primary:disabled {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+#drupal-off-canvas .button--primary:not(:disabled):not(.disabled):active,
+#drupal-off-canvas .button--primary:not(:disabled):not(.disabled).active {
+  color: #fff;
+  background-color: #0062cc;
+  border-color: #005cbf;
+}
+
+#drupal-off-canvas .button--primary:not(:disabled):not(.disabled):active:focus,
+#drupal-off-canvas .button--primary:not(:disabled):not(.disabled).active:focus {
+  -webkit-box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+}
+
+#drupal-off-canvas .entities-list#edit-selected .item-container {
+  width: 48vw !important;
+}
+
+#drupal-off-canvas .entities-list .item-container {
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  width: 150px !important;
+  height: 150px !important;
+  background: #000;
+}
+
+#drupal-off-canvas .entities-list .item-container .contextual-region {
+  position: initial;
+}
+
+#drupal-off-canvas .entities-list .item-container .field--name-name {
+  display: none;
+  position: absolute;
+  bottom: 3px;
+  left: 0;
+  right: 0;
+  padding: 0.5em;
+  margin: 0;
+  background: #000;
+  opacity: 1;
+  font-size: 9px;
+  color: #fff;
+  word-break: break-all;
+  z-index: 5;
+}
+
+#drupal-off-canvas .entities-list .item-container:hover .field--name-name {
+  display: block;
+}
+
+#drupal-off-canvas .entities-list .item-container:hover input,
+#drupal-off-canvas .entities-list .item-container:hover button {
+  display: block;
+}
+
+#drupal-off-canvas .entities-list .item-container input,
+#drupal-off-canvas .entities-list .item-container button {
+  position: absolute;
+  top: 0;
+  display: none;
+  font-size: 0;
+  border: 0;
+  padding: 0;
+  border: 0;
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  background: transparent;
+  background-color: transparent;
+  cursor: pointer;
+  opacity: 1;
+  z-index: 4;
+}
+
+#drupal-off-canvas .entities-list .item-container input[id*="-edit-button"],
+#drupal-off-canvas .entities-list .item-container button[id*="-edit-button"] {
+  background-image: url("../../images/pencil-square-o.svg");
+  background-repeat: no-repeat;
+  background-position: left top;
+  -webkit-background-size: 100% 100%;
+          background-size: 100%;
+  left: 0;
+  right: auto;
+  -webkit-filter: invert(100%) !important;
+  filter: invert(100%) !important;
+}
+
+#drupal-off-canvas .entities-list .item-container input[id*="-remove-button"],
+#drupal-off-canvas .entities-list .item-container button[id*="-remove-button"] {
+  background-image: url("../../images/times-circle-o.svg");
+  background-repeat: no-repeat;
+  background-position: left top;
+  -webkit-background-size: 100% 100%;
+          background-size: 100%;
+  right: 0;
+  left: auto;
+  -webkit-filter: invert(75%) !important;
+  filter: invert(75%) !important;
+}
+
+#drupal-off-canvas .entities-list .item-container img.image-style-field-preview {
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+body .block-help {
+  width: 100%;
+}
+
+body .layout-builder__link--add {
+  color: #686868 !important;
+}
+
+.layout-builder__link.layout-builder__link--configure {
+  z-index: 20;
+  position: absolute;
+}

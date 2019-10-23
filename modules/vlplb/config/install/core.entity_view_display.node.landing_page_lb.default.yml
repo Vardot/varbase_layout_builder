@@ -1,0 +1,83 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.landing_page_lb.field_description
+    - field.field.node.landing_page_lb.field_meta_tags
+    - field.field.node.landing_page_lb.field_yoast_seo
+    - field.field.node.landing_page_lb.layout_builder__layout
+    - field.field.node.landing_page_lb.layout_selection
+    - node.type.landing_page_lb
+  module:
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_library
+    - user
+third_party_settings:
+  layout_builder:
+    allow_custom: true
+    enabled: true
+  layout_library:
+    enable: true
+  layout_builder_restrictions:
+    entity_view_mode_restriction:
+      allowed_blocks:
+        'Chaos Tools':
+          - 'entity_view:node'
+        Content:
+          - 'entity_field:node:field_media'
+        'Content fields':
+          - 'field_block:node:landing_page_lb:uid'
+          - 'field_block:node:landing_page_lb:created'
+          - 'field_block:node:landing_page_lb:field_description'
+          - 'field_block:node:landing_page_lb:title'
+        'Custom block types':
+          - basic
+          - varbase_carousel_block
+        Dashboard: {  }
+        Devel: {  }
+        Forms: {  }
+        Help: {  }
+        'Inline blocks':
+          - 'inline_block:basic'
+          - 'inline_block:varbase_carousel_block'
+        'Lists (Views)':
+          - 'views_block:varbase_blog-blog_listing_block'
+          - 'views_block:varbase_blog-blog_listing_by_blog_category_block'
+          - 'views_block:varbase_blog-blog_listing_by_tags_block'
+          - 'views_block:varbase_blog-homepage_blog_block'
+          - 'views_block:content_recent-block_1'
+          - 'views_block:taxonomy_term-terms_list_block'
+          - 'views_block:who_s_online-who_s_online_block'
+        Menus: {  }
+        'Responsive Preview': {  }
+        'Social Auth': {  }
+        System:
+          - system_breadcrumb_block
+          - system_main_block
+          - system_branding_block
+        User: {  }
+        'User fields': {  }
+        Webform:
+          - webform_block
+        core:
+          - page_title_block
+      allowed_layouts:
+        - bs_1col
+        - bs_2col
+        - bs_3col
+        - bs_4col
+id: node.landing_page_lb.default
+targetEntityType: node
+bundle: landing_page_lb
+mode: default
+content: {  }
+hidden:
+  field_description: true
+  field_meta_tags: true
+  field_yoast_seo: true
+  langcode: true
+  layout_builder__layout: true
+  layout_selection: true
+  links: true
+  search_api_excerpt: true

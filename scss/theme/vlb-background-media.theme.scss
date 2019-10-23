@@ -1,0 +1,118 @@
+// Varbase Layout Builder Background Media styling.
+// -----------------------------------------------------------------------------
+@import "../variables.scss";
+// -----------------------------------------------------------------------------
+
+// Varbase Layout Builder Section. 
+.vlb-section {
+  display: block;
+  position: relative;
+  
+  // Varbase background media.
+  .vlb-background-media {
+    position: relative;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+
+    .media {
+      width: 100%;
+
+      video {
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+      }
+
+      iframe {
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+      }
+    }
+
+    .varbase-video-player {
+      &.embed-responsive {
+        position: relative;
+        width: 100vw;
+        height: 140vh;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        padding-bottom: 0;
+      }
+    }
+
+    /* 1. No object-fit support: */
+    @media (min-aspect-ratio: #{"16/9"}) {
+      img {
+        height: 300%;
+        top: -100%;
+      }
+    }
+    @media (max-aspect-ratio: #{"16/9"}) {
+      .varbase-video-player {
+        &.embed-responsive {
+          position: relative;
+          width: 240vw;
+          height: 140vh;
+          top: 50%;
+          transform: translateY(-50%) translateX(-50%);
+          padding-bottom: 0 !important;
+          left: 50%;
+        }
+      }
+
+      img {
+        width: 300%;
+        left: -100%;
+      }
+    }
+    /* 2. If supporting object-fit, overriding (1): */
+    @supports (object-fit: cover) {
+      .media {
+        width: 100%;
+
+        video {
+          top: 0;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: fit-content;
+          object-fit: cover;
+        }
+      }
+
+      img {
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: fit-content;
+        object-fit: cover;
+      }
+    }
+  }
+  
+  .vlb-content-wrapper {
+    display: block;
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: block;
+    width: 100%;
+  }
+}

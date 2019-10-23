@@ -1,4 +1,27 @@
-varbase_layout_builder.varbase_layout_builder_enhancements:
+enhancements:
   css:
-    base:
-      css/base/varbase-layout-builder-enhancements.base.css: {}
+    theme:
+      css/theme/vlb-enhancements.base.css: { }
+
+configure-section.admin:
+  css:
+    theme:
+      css/theme/vlb-configure-section.admin.theme.css: { }
+  js:
+    js/vlb-configure-section.admin.js: { }
+
+background-media:
+  css:
+    theme:
+      css/theme/vlb-background-media.theme.css: { }
+  js:
+    js/video.vlb-background-media.local.js: { }
+    js/video.vlb-background-media.vimeo.js: { }
+    js/video.vlb-background-media.youtube.js: { }
+  dependencies:
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery
+    - core/jquery.once
+    - varbase_media/youtube_player
+    - varbase_media/vimeo_player

@@ -1,0 +1,25 @@
+name: 'Varbase Landing page (Layout Builder)'
+description: 'Provides Landing page (Layout Builder) content type and related configuration. Use Landing page (Layout Builder) to build pages with custom sections and layouts to display content in a modern way.'
+type: module
+package: Varbase
+version: 8.x-1.x-dev
+core: 8.x
+project: varbase_layout_builder
+dependencies:
+  - varbase_layout_builder:varbase_layout_builder
+  - advanced_text_formatter
+  - field
+  - field_group
+  - layout_builder
+  - layout_builder_restrictions
+  - layout_library
+install:
+  - user
+  - node
+  - menu_ui
+  - varbase_seo
+  - paragraphs_features
+  - paragraphs_asymmetric_translation_widgets
+  - length_indicator
+  - advanced_text_formatter
+  - maxlength

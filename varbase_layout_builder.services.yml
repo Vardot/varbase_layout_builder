@@ -1,0 +1,8 @@
+services:
+  varbase_layout_builder.route_subscriber:
+    class: Drupal\varbase_layout_builder\EventSubscriber\RouteSubscriber
+    tags:
+    - { name: 'event_subscriber' }
+  plugin.manager.layout_builder.style_options:
+    class: Drupal\varbase_layout_builder\LayoutBuilderStyleOptionsPluginManager
+    arguments: ['@module_handler', '@cache.discovery']

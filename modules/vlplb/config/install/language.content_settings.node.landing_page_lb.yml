@@ -1,0 +1,15 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.landing_page_lb
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.landing_page_lb
+target_entity_type_id: node
+target_bundle: landing_page_lb
+default_langcode: und
+language_alterable: true

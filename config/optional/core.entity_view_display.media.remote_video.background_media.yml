@@ -1,0 +1,89 @@
+uuid: 13201470-8eda-4c7d-ae11-6207d7db508d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.background_media
+    - field.field.media.remote_video.field_media_cover_image
+    - field.field.media.remote_video.field_media_in_library
+    - field.field.media.remote_video.field_media_oembed_video
+    - media.type.remote_video
+  module:
+    - ds
+    - layout_builder
+    - media
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_media_oembed_video
+  layout_builder:
+    allow_custom: false
+    enabled: false
+_core:
+  default_config_hash: '-LWkaksnLe8l2FF9_zftktN_uTSc6KOdzEyt1cDpcvI'
+id: media.remote_video.background_media
+targetEntityType: media
+bundle: remote_video
+mode: background_media
+content:
+  field_media_oembed_video:
+    type: oembed
+    weight: 0
+    label: hidden
+    settings:
+      max_width: 0
+      max_height: 0
+    third_party_settings:
+      ds:
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            prefix: ''
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            ow: true
+            ow-el: ''
+            ow-cl: 'varbase-video-player embed-responsive embed-responsive-16by9'
+            ow-at: ''
+            ow-def-at: true
+            ow-def-cl: true
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            suffix: ''
+            lbw: false
+            lb-col: false
+            fis: false
+            fis-def-at: false
+            fi: false
+            fi-def-at: false
+    region: ds_content
+hidden:
+  created: true
+  field_media_cover_image: true
+  field_media_in_library: true
+  langcode: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true
