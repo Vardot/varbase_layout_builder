@@ -35,14 +35,14 @@
 {% set inner_row_attributes = inner_row_attributes.addClass('vlb-inner-row') %}
 {% set inner_row_attributes = inner_row_attributes.addClass('row') %}
 
-{# When the Width is Edge to Edge #}
+{# When the Width is Edge to Edge. #}
 {% if settings.vlb_section_config.vlb_width and settings.vlb_section_config.vlb_width == 'edge2edge' %}
   {% set width_edge2edge = true %}
   {% set section_attributes = section_attributes.addClass('bg-edge2edge') %}
   {% set container_attributes = container_attributes.addClass('container-fluid') %}
 {% endif %}
 
-{# When gutter option were selected. #}
+{# When the Gutter option is With Gutter. #}
 {% if not (settings.vlb_section_config.vlb_gutter and settings.vlb_section_config.vlb_gutter == 1) %}
   {% set outer_row_attributes = outer_row_attributes.addClass('no-gutters') %}
   {% set inner_row_attributes = inner_row_attributes.addClass('no-gutters') %}
@@ -54,6 +54,7 @@
 {# Background media #}
 {% if settings.vlb_section_config.vlb_background_media_html %}
   {% set has_vlb_background_media = true %}
+
   {% if settings.vlb_section_config.vlb_background_edge2edge and settings.vlb_section_config.vlb_background_edge2edge == 1 %}
     {% set width_edge2edge = true %}
     {% set section_attributes = section_attributes.addClass('bg-edge2edge') %}
@@ -89,7 +90,8 @@
 {# Background color #}
 {% if settings.vlb_section_config.vlb_background_color is not null and settings.vlb_section_config.vlb_background_color != '_none' %}
   {% set has_vlb_background_color = true %}
-  {# When we do have Background colro we add edge to edge #}
+
+  {# When we do have Background color we add edge to edge exepte if do not want to have a an edge to edge background #}
   {% if settings.vlb_section_config.vlb_background_edge2edge and settings.vlb_section_config.vlb_background_edge2edge == 1 %}
     {% set width_edge2edge = true %}
     {% set section_attributes = section_attributes.addClass('bg-edge2edge') %}
@@ -117,20 +119,24 @@
       {% endif %}
     {% endif %}
 
+    {# When we have a Background media and Background Color. #}
     {% if has_vlb_background_media %}
+      {# Add the Background color class to the section attributes. #}
       {% set section_attributes = section_attributes.addClass(settings.vlb_section_config.vlb_background_color) %}
     {% else %}
+      {# Add the Background color class to the outer row attributes. #}
       {% set outer_row_attributes = outer_row_attributes.addClass(settings.vlb_section_config.vlb_background_color) %}
     {% endif %}
 
   {% endif %}
 {% endif %}
 
-{# When the Width is Edge to Edit do not add the container #}
+{# When we do have width classes and not using the advacned mode #}
 {% if settings.vlb_section_config.vlb_width_classes and settings.vlb_section_config.vlb_use_advanced != 1 %}
   {% set attributes = attributes.addClass(settings.vlb_section_config.vlb_width_classes) %}
 {% endif %}
 
+{# Varbase Layout Builder Section #}
 <div{{ section_attributes }}>
 
   {% if has_vlb_background_media %}
