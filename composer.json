@@ -34,7 +34,7 @@
     "drupal/bootstrap_layouts": "~5.0",
     "drupal/layout_builder_block_sanitizer": "~1.0",
     "drupal/media_library_theme_reset": "~1.0",
-    "druoal/layout_builder_at": "~2.0"
+    "drupal/layout_builder_at": "~2.0"
   },
   "extra": {
     "branch-alias": {
