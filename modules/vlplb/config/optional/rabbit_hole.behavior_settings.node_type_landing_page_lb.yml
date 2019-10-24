@@ -1,8 +1,6 @@
 langcode: en
 status: true
-dependencies:
-  config:
-    - node.type.landing_page_lb
+dependencies: {  }
 id: node_type_landing_page_lb
 action: display_page
 allow_override: 0
