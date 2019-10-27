@@ -292,91 +292,96 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
         }
         else if ($style_option['field_type'] == 'entity_browser_entity_reference') {
 
+          $media_id = 0;
           $default_value = ''; 
-          if (isset($vlb_section_config[$style_option_id])) {
+          if (isset($vlb_section_config[$style_option_id]) && $vlb_section_config[$style_option_id] != 0) {
             $default_value = $style_option['entity_types'] . ":" . $vlb_section_config[$style_option_id];
+            $media_id = $vlb_section_config[$style_option_id];
           }
           else if (isset($style_option['default_value'])) {
             $default_value = $style_option['default_value'];
           }
 
-          $media_id = null;
           $background_media_preview = '';
-          if (isset($default_value) && $default_value != '') {
-            $media_id = str_replace('media:', '', $default_value);
+          if ($media_id != 0) {
             $background_media_entity = Media::load($media_id);
-
             if (isset($background_media_entity)) {
-              $background_media_build = Drupal::entityTypeManager()->getViewBuilder('media')->view($background_media_entity, 'field_preview');
+              $background_media_build = Drupal::entityTypeManager()->getViewBuilder('media')->view($background_media_entity, $style_option['settings']['field_widget_display_settings']['view_mode']);
               $background_media_preview = Drupal::service('renderer')->render($background_media_build);
             }
           }
 
-          $hidden_id = Html::getUniqueId('edit-' . $style_option_id . '-target-id');
-          $details_id = Html::getUniqueId('edit-' . $style_option_id);
-          
-          $current_display = NULL;
+          $hidden_id = Html::getUniqueId('edit-entity-reference-' . $style_option_id . '-target-id');
+          $details_id = Html::getUniqueId('edit-entity-reference-' . $style_option_id);
 
-          if (isset($media_id) && $media_id > 0) {
-            $current_display = [
+          $current_selected_display = [
+            '#theme_wrappers' => ['container'],
+            '#attributes' => [
+              'class' => 'entities-list',
+            ],
+            'items' => [],
+          ];
+
+          if ($media_id != 0) {
+            $current_selected_display = [
+              '#theme_wrappers' => ['container'],
+              '#attributes' => [
+                'class' => 'entities-list',
+              ],
+              'items' => [
                 '#theme_wrappers' => ['container'],
                 '#attributes' => [
-                  'class' => 'entities-list',
+                  'class' => ['item-container'],
+                  'data-entity-id' => 'media:' . $media_id,
                 ],
-                'items' => [
-                  '#theme_wrappers' => ['container'],
+                'display' => ['#markup' => $background_media_preview],
+                'remove_button' => [
+                  '#type' => 'submit',
+                  '#value' => t('Remove'),
+                  '#ajax' => [
+                    'callback' => [
+                      'Drupal\entity_browser\Plugin\Field\FieldWidget\EntityReferenceBrowserWidget',
+                      'updateWidgetCallback'
+                    ],
+                    'wrapper' => $details_id,
+                  ],
+                  '#submit' => [
+                    [
+                      'Drupal\entity_browser\Plugin\Field\FieldWidget\EntityReferenceBrowserWidget',
+                      'removeItemSubmit'
+                    ]
+                  ],
+                  '#name' => $style_option_id . '_remove_' . $media_id,
                   '#attributes' => [
-                    'class' => ['item-container'],
                     'data-entity-id' => 'media:' . $media_id,
+                    'class' => ['remove-button'],
                   ],
-                  'display' => ['#markup' => $background_media_preview],
-                  'remove_button' => [
-                    '#type' => 'submit',
-                    '#value' => t('Remove'),
-                    '#ajax' => [
-                      'callback' => [
-                        'Drupal\entity_browser\Plugin\Field\FieldWidget\EntityReferenceBrowserWidget',
-                        'updateWidgetCallback'
-                      ],
-                      'wrapper' => $details_id,
-                    ],
-                    '#submit' => [
-                      [
-                        'Drupal\entity_browser\Plugin\Field\FieldWidget\EntityReferenceBrowserWidget',
-                        'removeItemSubmit'
-                      ]
-                    ],
-                    '#name' => $style_option_id . '_remove_' . $media_id,
-                    '#attributes' => [
-                      'data-entity-id' => 'media:' . $media_id,
-                      'class' => ['remove-button'],
-                    ],
-                    '#access' => TRUE,
-                  ],
-                  'edit_button' => [
-                    '#type' => 'submit',
-                    '#value' => t('Edit'),
-                    '#name' => $style_option_id . '_edit_button_' . $media_id,
-                    '#ajax' => [
-                      'url' => Url::fromRoute(
-                        'entity_browser.edit_form', [
-                          'entity_type' => 'media',
-                          'entity' => $media_id,
-                        ]
-                      ),
-                      'options' => [
-                        'query' => [
-                          'details_id' => $details_id,
-                        ],
-                      ],
-                    ],
-                    '#attributes' => [
-                      'class' => ['edit-button'],
-                    ],
-                    '#access' => TRUE,
-                  ],
+                  '#access' => TRUE,
                 ],
-              ];
+                'edit_button' => [
+                  '#type' => 'submit',
+                  '#value' => t('Edit'),
+                  '#name' => $style_option_id . '_edit_button_' . $media_id,
+                  '#ajax' => [
+                    'url' => Url::fromRoute(
+                      'entity_browser.edit_form', [
+                        'entity_type' => 'media',
+                        'entity' => $media_id,
+                      ]
+                    ),
+                    'options' => [
+                      'query' => [
+                        'details_id' => $details_id,
+                      ],
+                    ],
+                  ],
+                  '#attributes' => [
+                    'class' => ['edit-button'],
+                  ],
+                  '#access' => TRUE,
+                ],
+              ],
+            ];
           }
 
           $form[$style_option['group']][$style_option_id]['entity_browser_entity_reference'] = [
@@ -387,24 +392,40 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
               '#description' => (isset($style_option['description']) ? $style_option['description'] : ''),
               '#field_name' => $style_option_id,
               '#field_parents' => [],
-              '#required' => TRUE,
+              '#required' => $style_option['required'],
               '#parents' => [$style_option_id],
               '#collapsible' => FALSE,
               '#collapsed' => FALSE,
-              '#id' => 'edit-' . $style_option_id,
+              '#id' => 'edit-entity-reference-' . $style_option_id,
               '#type' => 'container',
-              '#open' => TRUE,
+              '#open' => $style_option['settings']['open'],
+              'target_id' => [
+                '#type' => 'hidden',
+                '#id' => 'edit-entity-reference-' . $style_option_id . '-target-id',
+                '#attributes' => [
+                  'id' => 'edit-entity-reference-' . $style_option_id . '-target-id',
+                ],
+                '#default_value' => $default_value,
+                '#ajax' => [
+                  'callback' => [
+                    'Drupal\entity_browser\Plugin\Field\FieldWidget\EntityReferenceBrowserWidget',
+                    'updateWidgetCallback',
+                  ],
+                  'wrapper' => 'edit-entity-reference-' . $style_option_id,
+                  'event' => 'entity_browser_value_updated',
+                ],
+              ],
               'entity_browser' => [
                 '#type' => 'entity_browser',
-                '#entity_browser' => 'media_browser',
-                '#field_widget_display' => 'rendered_entity',
-                '#field_widget_edit' => TRUE,
-                '#field_widget_remove' => TRUE,
-                '#field_widget_replace' => FALSE,
+                '#entity_browser' => $style_option['settings']['entity_browser'],
+                '#field_widget_display' => $style_option['settings']['field_widget_display'],
+                '#field_widget_edit' => $style_option['settings']['field_widget_edit'],
+                '#field_widget_remove' => $style_option['settings']['field_widget_remove'],
+                '#field_widget_replace' => $style_option['settings']['field_widget_replace'],
                 '#cardinality' => 1,
-                '#selection_mode' => 'selection_append',
+                '#selection_mode' => $style_option['settings']['selection_mode'],
                 '#field_widget_display_settings' => [
-                  'view_mode' => 'field_preview',
+                  'view_mode' => $style_option['settings']['field_widget_display_settings']['view_mode'],
                 ],
                 '#default_value' => $default_value,
                 '#entity_browser_validators' => [
@@ -415,14 +436,16 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
                 '#custom_hidden_id' => $hidden_id,
                 '#process' => [
                   [
-                    [
-                      '\Drupal\entity_browser\Element\EntityBrowserElement',
-                      'processEntityBrowser',
-                    ]
+                    '\Drupal\entity_browser\Element\EntityBrowserElement',
+                    'processEntityBrowser',
                   ],
-                ],
+//                  [
+//                    'Drupal\entity_browser\Plugin\Field\FieldWidget\EntityReferenceBrowserWidget',
+//                    'processEntityBrowser',
+//                  ],
+                ]
               ],
-              'current' => $current_display,
+              'current' => $current_selected_display,
               "#tree" => TRUE,
               '#after_build' => [
                 [
