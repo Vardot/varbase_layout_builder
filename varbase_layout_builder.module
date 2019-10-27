@@ -396,14 +396,14 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
               '#parents' => [$style_option_id],
               '#collapsible' => FALSE,
               '#collapsed' => FALSE,
-              '#id' => 'edit-entity-reference-' . $style_option_id,
+              '#id' => $details_id,
               '#type' => 'container',
               '#open' => $style_option['settings']['open'],
               'target_id' => [
                 '#type' => 'hidden',
-                '#id' => 'edit-entity-reference-' . $style_option_id . '-target-id',
+                '#id' => $hidden_id,
                 '#attributes' => [
-                  'id' => 'edit-entity-reference-' . $style_option_id . '-target-id',
+                  'id' => $hidden_id,
                 ],
                 '#default_value' => $default_value,
                 '#ajax' => [
@@ -411,7 +411,7 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
                     'Drupal\entity_browser\Plugin\Field\FieldWidget\EntityReferenceBrowserWidget',
                     'updateWidgetCallback',
                   ],
-                  'wrapper' => 'edit-entity-reference-' . $style_option_id,
+                  'wrapper' => $details_id,
                   'event' => 'entity_browser_value_updated',
                 ],
               ],
@@ -428,10 +428,11 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
                   'view_mode' => $style_option['settings']['field_widget_display_settings']['view_mode'],
                 ],
                 '#default_value' => $default_value,
-                '#entity_browser_validators' => [
-                  'entity_type' => [
-                    'type' => 'media',
+                '#widget_context' => [
+                  'target_entity_type' => [
+                    'media',
                   ],
+                  'target_bundles' => $style_option['target_bundles'],
                 ],
                 '#custom_hidden_id' => $hidden_id,
                 '#process' => [
@@ -439,10 +440,10 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
                     '\Drupal\entity_browser\Element\EntityBrowserElement',
                     'processEntityBrowser',
                   ],
-//                  [
-//                    'Drupal\entity_browser\Plugin\Field\FieldWidget\EntityReferenceBrowserWidget',
-//                    'processEntityBrowser',
-//                  ],
+                  [
+                    'Drupal\entity_browser\Plugin\Field\FieldWidget\EntityReferenceBrowserWidget',
+                    'processEntityBrowser',
+                  ],
                 ]
               ],
               'current' => $current_selected_display,

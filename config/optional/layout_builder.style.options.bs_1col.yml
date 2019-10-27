@@ -149,7 +149,7 @@ style_options:
     sync_with_advanced: false
     use_with_advanced: true
     entity_types: media
-    media_types:
+    target_bundles:
       - image
       - video
       - remote_video
