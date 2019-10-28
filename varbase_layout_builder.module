@@ -323,6 +323,17 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
             'items' => [],
           ];
 
+          $process = [
+            [
+              '\Drupal\entity_browser\Element\EntityBrowserElement',
+              'processEntityBrowser',
+            ],
+            [
+              'Drupal\entity_browser\Plugin\Field\FieldWidget\EntityReferenceBrowserWidget',
+              'processEntityBrowser',
+            ],
+          ];
+
           if ($media_id != 0) {
             $current_selected_display = [
               '#theme_wrappers' => ['container'],
@@ -381,6 +392,13 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
                   ],
                   '#access' => TRUE,
                 ],
+              ],
+            ];
+            
+            $process = [
+              [
+                'Drupal\entity_browser\Plugin\Field\FieldWidget\EntityReferenceBrowserWidget',
+                'processEntityBrowser',
               ],
             ];
           }
@@ -447,16 +465,7 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
                   'target_bundles' => $style_option['target_bundles'],
                 ],
                 '#custom_hidden_id' => $hidden_id,
-                '#process' => [
-                  [
-                    '\Drupal\entity_browser\Element\EntityBrowserElement',
-                    'processEntityBrowser',
-                  ],
-                  [
-                    'Drupal\entity_browser\Plugin\Field\FieldWidget\EntityReferenceBrowserWidget',
-                    'processEntityBrowser',
-                  ],
-                ]
+                '#process' => $process,
               ],
               'current' => $current_selected_display,
               "#tree" => TRUE,
