@@ -80,7 +80,7 @@ function varbase_layout_builder_preprocess_layout(&$variables) {
 
               if (isset($variables['settings']['vlb_section_config']['vlb_use_advanced'])
                   && $variables['settings']['vlb_section_config']['vlb_use_advanced'] == 1) {
-                // Use Advanced insted.
+                // Use advanced instead.
 
                 // When we have classes in the option.
                 if (isset($style_options[$current_vlb_section_config_id]['use_with_advanced'])
@@ -394,7 +394,6 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
                 'field--type-' . Html::getClass('entity_browser'),
                 'field--name-' . Html::getClass($style_option_id),
                 'field--widget-' . Html::getClass('details'),
-                'w100',
               ],
             ],
             'widget' => [
@@ -629,7 +628,7 @@ function _varbase_layout_builder_submit_section_form(array &$form, FormStateInte
     }
 
 
-    // When the check box "use advanced insted" is checked.
+    // When the check box "Use advanced instead" is checked.
     if (isset($vlb_section_config['vlb_use_advanced'])
       && $vlb_section_config['vlb_use_advanced'] == 1) {
 
@@ -641,7 +640,7 @@ function _varbase_layout_builder_submit_section_form(array &$form, FormStateInte
       );
 
     }
-    // When the check box "use advanced insted" is NOT checked. 
+    // When the check box "Use advanced instead" is NOT checked. 
     else {
 
       // Have advanced layout and regions holders.

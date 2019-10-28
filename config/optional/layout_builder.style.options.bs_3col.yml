@@ -356,7 +356,7 @@ style_options:
     maxlength: 228
   vlb_use_advanced:
     field_type: checkbox
-    label: 'Use advanced insted'
+    label: 'Use advanced instead'
     group: vlb_default
     required: false
     sync_with_advanced: false
