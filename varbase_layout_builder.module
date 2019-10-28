@@ -295,7 +295,7 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
           $media_id = 0;
           $default_value = ''; 
           if (isset($vlb_section_config[$style_option_id]) && $vlb_section_config[$style_option_id] != 0) {
-            $default_value = $style_option['entity_types'] . ":" . $vlb_section_config[$style_option_id];
+            $default_value = "media:" . $vlb_section_config[$style_option_id];
             $media_id = $vlb_section_config[$style_option_id];
           }
           else if (isset($style_option['default_value'])) {
@@ -311,8 +311,9 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
             }
           }
 
-          $hidden_id = Html::getUniqueId('edit-entity-reference-' . $style_option_id . '-target-id');
-          $details_id = Html::getUniqueId('edit-entity-reference-' . $style_option_id);
+          $hidden_id = Html::getUniqueId('edit-' . $style_option_id . '-target-id');
+          $details_id = Html::getUniqueId('edit-' . $style_option_id);
+          $row_id = 0;
 
           $current_selected_display = [
             '#theme_wrappers' => ['container'],
@@ -333,6 +334,7 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
                 '#attributes' => [
                   'class' => ['item-container'],
                   'data-entity-id' => 'media:' . $media_id,
+                  'data-row-id' => $row_id,
                 ],
                 'display' => ['#markup' => $background_media_preview],
                 'remove_button' => [
@@ -346,22 +348,21 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
                     'wrapper' => $details_id,
                   ],
                   '#submit' => [
-                    [
-                      'Drupal\entity_browser\Plugin\Field\FieldWidget\EntityReferenceBrowserWidget',
-                      'removeItemSubmit'
-                    ]
+                    'Drupal\entity_browser\Plugin\Field\FieldWidget\EntityReferenceBrowserWidget',
+                    'removeItemSubmit'
                   ],
-                  '#name' => $style_option_id . '_remove_' . $media_id,
+                  '#name' => $style_option_id . '_remove_' . $media_id . '_' . $row_id,
                   '#attributes' => [
                     'data-entity-id' => 'media:' . $media_id,
                     'class' => ['remove-button'],
+                    'data-row-id' => $row_id,
                   ],
                   '#access' => TRUE,
                 ],
                 'edit_button' => [
                   '#type' => 'submit',
                   '#value' => t('Edit'),
-                  '#name' => $style_option_id . '_edit_button_' . $media_id,
+                  '#name' => $style_option_id . '_edit_button_' . $media_id . '_' . $row_id,
                   '#ajax' => [
                     'url' => Url::fromRoute(
                       'entity_browser.edit_form', [
@@ -387,6 +388,15 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
           $form[$style_option['group']][$style_option_id]['entity_browser_entity_reference'] = [
             '#type' => 'container',
             '#parents' => [$style_option_id . '_wrapper'],
+            '#access' => TRUE,
+            '#attributes' => [
+              'class' => [
+                'field--type-' . Html::getClass('entity_browser'),
+                'field--name-' . Html::getClass($style_option_id),
+                'field--widget-' . Html::getClass('details'),
+                'w100',
+              ],
+            ],
             'widget' => [
               '#title' => (isset($style_option['label']) ? $style_option['label'] : ''),
               '#description' => (isset($style_option['description']) ? $style_option['description'] : ''),
@@ -397,7 +407,7 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
               '#collapsible' => FALSE,
               '#collapsed' => FALSE,
               '#id' => $details_id,
-              '#type' => 'container',
+              '#type' => 'details',
               '#open' => $style_option['settings']['open'],
               'target_id' => [
                 '#type' => 'hidden',
@@ -428,6 +438,9 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
                   'view_mode' => $style_option['settings']['field_widget_display_settings']['view_mode'],
                 ],
                 '#default_value' => $default_value,
+                '#validators' => [
+                  'entity_type' => ['type' => 'media'],
+                ],
                 '#widget_context' => [
                   'target_entity_type' => [
                     'media',
@@ -460,9 +473,7 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
                 ],
               ],
             ],
-            '#prefix' => '<hr /><legend>
-    <span class="fieldset-legend">' . (isset($style_option['label']) ? $style_option['label'] : '') . '</span>
-  </legend>',
+            '#prefix' => '<hr />',
           ];
 
         }
@@ -573,7 +584,7 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
  * Varbase Layout Builder submit section form.
  */
 function _varbase_layout_builder_submit_section_form(array &$form, FormStateInterface &$form_state) {
-  
+
   $form_object = $form_state->getFormObject();
 
   // Only current Varbase Layout Builder section configs will be saved. 
@@ -602,10 +613,8 @@ function _varbase_layout_builder_submit_section_form(array &$form, FormStateInte
 
           $vlb_section_config_element = $form[$style_option['group']][$style_option_id];
           if ($style_option['field_type'] == 'entity_browser_entity_reference') {
-            if (isset($style_option['entity_types']) 
-              && isset($vlb_section_config_element['entity_browser_entity_reference'])) {
-            
-              $entity_type_format = $style_option['entity_types'] . ":";
+            if (isset($vlb_section_config_element['entity_browser_entity_reference'])) {
+              $entity_type_format = "media:";
               $entity_browser_entity_reference_id_string = (string) $vlb_section_config_element['entity_browser_entity_reference']['widget']['target_id']['#value'];
               $entity_browser_entity_reference_id = str_replace($entity_type_format, "", $entity_browser_entity_reference_id_string);
               $vlb_section_config[$style_option_id] = (integer) $entity_browser_entity_reference_id;
@@ -735,7 +744,7 @@ function _varbase_layout_builder_submit_section_form(array &$form, FormStateInte
           'regions' => $section_regions_configs,
         ]
       );
-      
+
       // Update the form state.
       $pre_set_section_settings = [];
       if (count($advanced_layout) > 0) {

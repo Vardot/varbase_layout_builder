@@ -282,3 +282,7 @@
   left: 0;
   right: -5px;
 }
+
+#drupal-off-canvas .field--name-vlb-background-media details {
+  width: 300px;
+}
