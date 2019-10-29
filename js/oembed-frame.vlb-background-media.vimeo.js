@@ -38,6 +38,7 @@ firstScriptTag.onload = function() {
         if (!player_confgured) {
           var vimeo_iframe = document.querySelector('iframe[src*="vimeo.com"]');
           var vimeo_options = {
+              background: true,
               muted: true,
               controls: false
           };

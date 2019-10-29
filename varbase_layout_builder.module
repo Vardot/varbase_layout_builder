@@ -318,14 +318,14 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
           $current_selected_display = [
             '#theme_wrappers' => ['container'],
             '#attributes' => [
-              'class' => 'entities-list',
+              'class' => 'entities-list entity-type--media',
             ],
             'items' => [],
           ];
 
           $process = [
             [
-              '\Drupal\entity_browser\Element\EntityBrowserElement',
+              'Drupal\entity_browser\Element\EntityBrowserElement',
               'processEntityBrowser',
             ],
             [
@@ -338,7 +338,7 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
             $current_selected_display = [
               '#theme_wrappers' => ['container'],
               '#attributes' => [
-                'class' => 'entities-list',
+                'class' => 'entities-list entity-type--media',
               ],
               'items' => [
                 '#theme_wrappers' => ['container'],
@@ -368,7 +368,7 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
                     'class' => ['remove-button'],
                     'data-row-id' => $row_id,
                   ],
-                  '#access' => TRUE,
+                  '#access' => TRUE, 
                 ],
                 'edit_button' => [
                   '#type' => 'submit',
@@ -475,14 +475,11 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
                   'afterBuild',
                 ],
               ],
-              '#attached' => [
-                'library' => [
-                  'entity_browser/entity_reference',
-                ],
-              ],
             ],
             '#prefix' => '<hr />',
           ];
+
+         $form['#attached']['library'][] = 'entity_browser/entity_reference';
 
         }
         else if ($style_option['field_type'] == 'textfield') {
