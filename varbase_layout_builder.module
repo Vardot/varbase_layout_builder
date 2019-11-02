@@ -15,7 +15,7 @@ use Drupal\Component\Utility\Html;
  * Implements hook_form_alter().
  */
 function varbase_layout_builder_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-
+  
   // Only for layout builder forms.
   if (strpos($form_id, '_layout_builder_form') !== FALSE) {
 
@@ -311,21 +311,18 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
             }
           }
 
-          $hidden_id = Html::getUniqueId('edit-' . $style_option_id . '-target-id');
-          $details_id = Html::getUniqueId('edit-' . $style_option_id);
-          $row_id = 0;
-
           $current_selected_display = [
             '#theme_wrappers' => ['container'],
             '#attributes' => [
-              'class' => 'entities-list entity-type--media',
+              'class' => ['entities-list', 'entity-type--media'],
             ],
+            '#prefix' => "<p>" . t('You can select one media item.') . "</p>",
             'items' => [],
           ];
 
           $process = [
             [
-              'Drupal\entity_browser\Element\EntityBrowserElement',
+              '\Drupal\entity_browser\Element\EntityBrowserElement',
               'processEntityBrowser',
             ],
             [
@@ -338,14 +335,15 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
             $current_selected_display = [
               '#theme_wrappers' => ['container'],
               '#attributes' => [
-                'class' => 'entities-list entity-type--media',
+                'class' => ['entities-list', 'entity-type--media'],
               ],
+              '#prefix' => "<p>" . t('You can select up to 1 media items (0 left).') . "</p>",  
               'items' => [
                 '#theme_wrappers' => ['container'],
                 '#attributes' => [
-                  'class' => ['item-container'],
+                  'class' => ['item-container', 'rendered-entity'],
                   'data-entity-id' => 'media:' . $media_id,
-                  'data-row-id' => $row_id,
+                  'data-row-id' => 0,
                 ],
                 'display' => ['#markup' => $background_media_preview],
                 'remove_button' => [
@@ -356,24 +354,24 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
                       'Drupal\entity_browser\Plugin\Field\FieldWidget\EntityReferenceBrowserWidget',
                       'updateWidgetCallback'
                     ],
-                    'wrapper' => $details_id,
+                    'wrapper' => $style_option_id . '_wrapper',
                   ],
                   '#submit' => [
                     'Drupal\entity_browser\Plugin\Field\FieldWidget\EntityReferenceBrowserWidget',
                     'removeItemSubmit'
                   ],
-                  '#name' => $style_option_id . '_remove_' . $media_id . '_' . $row_id,
+                  '#name' => $style_option_id . '_remove_' . $media_id . '_0_' . md5(json_encode([Html::getClass($style_option_id), 'target_id'])),
                   '#attributes' => [
                     'data-entity-id' => 'media:' . $media_id,
                     'class' => ['remove-button'],
-                    'data-row-id' => $row_id,
+                    'data-row-id' => 0,
                   ],
                   '#access' => TRUE, 
                 ],
                 'edit_button' => [
                   '#type' => 'submit',
                   '#value' => t('Edit'),
-                  '#name' => $style_option_id . '_edit_button_' . $media_id . '_' . $row_id,
+                  '#name' => $style_option_id . '_edit_button_' . $media_id . '_0_' . md5(json_encode([Html::getClass($style_option_id), 'target_id'])),
                   '#ajax' => [
                     'url' => Url::fromRoute(
                       'entity_browser.edit_form', [
@@ -383,7 +381,7 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
                     ),
                     'options' => [
                       'query' => [
-                        'details_id' => $details_id,
+                        'details_id' => "edit-" . Html::getClass($style_option_id),
                       ],
                     ],
                   ],
@@ -409,9 +407,9 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
             '#access' => TRUE,
             '#attributes' => [
               'class' => [
-                'field--type-' . Html::getClass('entity_browser'),
+                'field--type-entity-reference',
                 'field--name-' . Html::getClass($style_option_id),
-                'field--widget-' . Html::getClass('details'),
+                'field--widget-entity-browser-entity-reference',
               ],
             ],
             'widget' => [
@@ -420,17 +418,20 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
               '#field_name' => $style_option_id,
               '#field_parents' => [],
               '#required' => $style_option['required'],
+              '#weight' => 0,
+              '#delta' => 0,
               '#parents' => [$style_option_id],
+              '#tree' => TRUE,
               '#collapsible' => FALSE,
               '#collapsed' => FALSE,
-              '#id' => $details_id,
+              '#id' => "edit-" . Html::getClass($style_option_id),
               '#type' => 'details',
               '#open' => $style_option['settings']['open'],
               'target_id' => [
                 '#type' => 'hidden',
-                '#id' => $hidden_id,
+                '#id' => "edit-" . Html::getClass($style_option_id) . "-target-id",
                 '#attributes' => [
-                  'id' => $hidden_id,
+                  'id' => "edit-" . Html::getClass($style_option_id) . "-target-id",
                 ],
                 '#default_value' => $default_value,
                 '#ajax' => [
@@ -438,7 +439,7 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
                     'Drupal\entity_browser\Plugin\Field\FieldWidget\EntityReferenceBrowserWidget',
                     'updateWidgetCallback',
                   ],
-                  'wrapper' => $details_id,
+                  'wrapper' => "edit-" . Html::getClass($style_option_id),
                   'event' => 'entity_browser_value_updated',
                 ],
               ],
@@ -459,16 +460,13 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
                   'entity_type' => ['type' => 'media'],
                 ],
                 '#widget_context' => [
-                  'target_entity_type' => [
-                    'media',
-                  ],
+                  'target_entity_type' => 'media',
                   'target_bundles' => $style_option['target_bundles'],
                 ],
-                '#custom_hidden_id' => $hidden_id,
+                '#custom_hidden_id' => "edit-" . Html::getClass($style_option_id) . "-target-id",
                 '#process' => $process,
               ],
               'current' => $current_selected_display,
-              "#tree" => TRUE,
               '#after_build' => [
                 [
                   'Drupal\entity_browser\Plugin\Field\FieldWidget\EntityReferenceBrowserWidget',
