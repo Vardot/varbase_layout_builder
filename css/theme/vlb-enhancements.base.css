@@ -236,6 +236,11 @@ body .layout-builder__link--add {
   color: #686868 !important;
 }
 
+body .layout-builder-block {
+  padding: 0;
+  margin: 0;
+}
+
 .layout-builder__link.layout-builder__link--configure {
   z-index: 20;
   position: absolute;
