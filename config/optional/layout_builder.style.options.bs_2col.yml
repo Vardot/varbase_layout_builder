@@ -242,29 +242,18 @@ style_options:
     options_source_schema: '|'
     options_source_map: background_colors
   vlb_background_media:
-    field_type: entity_browser_entity_reference
+    field_type: media_library
     label: 'Background media'
     group: vlb_default
     default_value: ''
     required: false
     sync_with_advanced: false
     use_with_advanced: true
-    entity_types: media
-    target_bundles:
+    allowed_bundles:
       - image
       - video
       - remote_video
     view_mode: background_media
-    settings:
-      entity_browser: media_browser
-      field_widget_display: rendered_entity
-      field_widget_edit: true
-      field_widget_remove: true
-      field_widget_replace: false
-      open: true
-      selection_mode: selection_append
-      field_widget_display_settings:
-        view_mode: field_preview
   vlb_background_edge2edge:
     field_type: checkbox
     label: 'Edge to Edge Background'

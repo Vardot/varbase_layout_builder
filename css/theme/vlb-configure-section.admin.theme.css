@@ -1,3 +1,9 @@
+#drupal-off-canvas {
+  /*  button[id*="edit-vlb-default-vlb-background-media-media-library-update-widget"] {
+    display: none; 
+  }*/
+}
+
 #drupal-off-canvas div[id^="edit-vlb-"] {
   display: -webkit-box;
   display: -webkit-flex;
@@ -283,6 +289,116 @@
   right: -5px;
 }
 
-#drupal-off-canvas .field--name-vlb-background-media details {
+#drupal-off-canvas .media-library-item {
   width: 300px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  vertical-align: top;
+  border: 1px solid #dbdbdb;
+  margin: 16px 16px 2px 2px;
+  width: 300px;
+  background: #fff;
+  -webkit-transition: border-color 0.2s, color 0.2s, background 0.2s;
+  -o-transition: border-color 0.2s, color 0.2s, background 0.2s;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+}
+
+#drupal-off-canvas .media-library-item *,
+#drupal-off-canvas .media-library-item *:not(div) {
+  background: #eeeeee;
+}
+
+#drupal-off-canvas .media-library-item .media-library-item__remove {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  right: 10px;
+  width: 24px;
+  height: 24px;
+  margin: 5px;
+  padding: 0;
+  -webkit-transition: 0.2s border-color;
+  -o-transition: 0.2s border-color;
+  transition: 0.2s border-color;
+  color: transparent;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  background: url(../../images/icons/787878/ex.svg) #fff center no-repeat;
+  -webkit-background-size: 16px 16px;
+          background-size: 16px 16px;
+  text-shadow: none;
+}
+
+#drupal-off-canvas .media-library-item .media-library-item__remove:hover, #drupal-off-canvas .media-library-item .media-library-item__remove:focus, #drupal-off-canvas .media-library-item .media-library-item__remove.button, #drupal-off-canvas .media-library-item .media-library-item__remove.button:first-child, #drupal-off-canvas .media-library-item .media-library-item__remove.button:disabled, #drupal-off-canvas .media-library-item .media-library-item__remove.button:disabled:active, #drupal-off-canvas .media-library-item .media-library-item__remove.button:hover, #drupal-off-canvas .media-library-item .media-library-item__remove.button:focus {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  margin: 5px;
+  padding: 0;
+  background: url(../../images/icons/ee0000/ex.svg) #fff center no-repeat;
+  -webkit-background-size: 16px 16px;
+  background-size: 16px 16px;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  color: transparent;
+  text-shadow: none;
+  -webkit-transition: 0.2s border-color;
+  -o-transition: 0.2s border-color;
+  transition: 0.2s border-color;
+}
+
+#drupal-off-canvas .media-library-item .js-click-to-select-trigger {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#drupal-off-canvas .media-library-views-form,
+#drupal-off-canvas .media-library-selection,
+#drupal-off-canvas .media-library-add-form__selected-media .details-wrapper,
+#drupal-off-canvas .media-library-views-form__bulk_form,
+#drupal-off-canvas .media-library-view .form--inline {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+#drupal-off-canvas .media-library-selection {
+  margin: 1em -8px;
+  margin-bottom: 1.5rem;
+}
+
+#drupal-off-canvas .media-library-item__preview {
+  padding-bottom: 34px;
+}
+
+#drupal-off-canvas .media-library-form-element .media-library-open-button {
+  color: #212529;
+  background-color: #f8f9fa;
+  border-color: #f8f9fa;
+}
+
+#drupal-off-canvas .media-library-form-element .media-library-open-button:hover {
+  color: #212529;
+  background-color: #e2e6ea;
+  border-color: #dae0e5;
+}
+
+#drupal-off-canvas .media-library-item__attributes {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  padding: 5px;
+  max-width: calc(100% - 10px);
+  max-height: calc(100% - 50px);
+  overflow: hidden;
+  background: white !important;
 }
