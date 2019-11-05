@@ -325,31 +325,14 @@
   color: transparent;
   border: 2px solid #ccc;
   border-radius: 20px;
-  background: url(../../images/icons/787878/ex.svg) #fff center no-repeat;
+  background: url(../../images/icons/bebebe/ex.svg) #fff center no-repeat;
   -webkit-background-size: 16px 16px;
           background-size: 16px 16px;
   text-shadow: none;
 }
 
-#drupal-off-canvas .media-library-item .media-library-item__remove:hover, #drupal-off-canvas .media-library-item .media-library-item__remove:focus, #drupal-off-canvas .media-library-item .media-library-item__remove.button, #drupal-off-canvas .media-library-item .media-library-item__remove.button:first-child, #drupal-off-canvas .media-library-item .media-library-item__remove.button:disabled, #drupal-off-canvas .media-library-item .media-library-item__remove.button:disabled:active, #drupal-off-canvas .media-library-item .media-library-item__remove.button:hover, #drupal-off-canvas .media-library-item .media-library-item__remove.button:focus {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  right: 0;
-  width: 24px;
-  height: 24px;
-  margin: 5px;
-  padding: 0;
-  background: url(../../images/icons/ee0000/ex.svg) #fff center no-repeat;
-  -webkit-background-size: 16px 16px;
-  background-size: 16px 16px;
-  border: 2px solid #ccc;
-  border-radius: 20px;
-  color: transparent;
-  text-shadow: none;
-  -webkit-transition: 0.2s border-color;
-  -o-transition: 0.2s border-color;
-  transition: 0.2s border-color;
+#drupal-off-canvas .media-library-item .media-library-item__remove:hover, #drupal-off-canvas .media-library-item .media-library-item__remove:focus, #drupal-off-canvas .media-library-item .media-library-item__remove.button:disabled, #drupal-off-canvas .media-library-item .media-library-item__remove.button:disabled:active, #drupal-off-canvas .media-library-item .media-library-item__remove.button:hover, #drupal-off-canvas .media-library-item .media-library-item__remove.button:focus {
+  background: url(../../images/icons/787878/ex.svg) #fff center no-repeat;
 }
 
 #drupal-off-canvas .media-library-item .js-click-to-select-trigger {
