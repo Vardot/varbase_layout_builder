@@ -44,12 +44,6 @@
     "installer-types": [
       "bower-asset",
       "npm-asset"
-    ],
-    "patches": {
-      "drupal/layout_builder_modal": {
-        "Issue #3078943: Attach libraries from themes and their base themes into the Layout Builder Modal forms and have a list of currently installed themes in the settings page":
-        "https://www.drupal.org/files/issues/2019-09-03/3078943-3.patch"
-      }
-    }
+    ]
   }
 }
