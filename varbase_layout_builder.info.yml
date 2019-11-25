@@ -18,3 +18,4 @@ install:
   - media_library_theme_reset
   - layout_builder_at
   - media_library_form_element
+  - lb_ux
