@@ -36,7 +36,7 @@
     "drupal/media_library_theme_reset": "~1.0",
     "drupal/layout_builder_at": "~2.0",
     "drupal/media_library_form_element": "~1.0",
-    "drupal/lb_ux": "~1.0"
+    "drupal/lb_ux": "1.0-alpha1"
   },
   "extra": {
     "branch-alias": {
@@ -51,7 +51,7 @@
     "patches": {
       "drupal/lb_ux": {
         "Issue #3096099: Streamline the display of available layouts when adding a section":
-        "https://www.drupal.org/files/issues/2019-11-21/3096099-layout_selector-2.patch"
+        "https://www.drupal.org/files/issues/2019-12-02/3096099-layout_selector-8.patch"
       }
     }
   }
