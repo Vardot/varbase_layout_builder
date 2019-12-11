@@ -142,6 +142,8 @@ body .layout-builder__link--add {
 body .layout-builder-block {
   padding: 0;
   margin: 0;
+  background: transparent;
+  background-color: transparent;
 }
 
 .layout-builder__link.layout-builder__link--configure {
