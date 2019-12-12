@@ -138,36 +138,34 @@
 
   {% if has_vlb_background_media %}
     {{ attach_library('varbase_layout_builder/background-media') }}
-    <div class="vlb-background-media">
+    <div class="background-media-wrapper">
       {{ settings.vlb_section_config.vlb_background_media_html }}
-    </div>
-    <div class="vlb-content-wrapper">
   {% endif %}
 
-        <div{{ container_attributes }}>
-          <div{{ outer_row_attributes }}>
-            <{{ wrapper }}{{ attributes }}>
-              <div{{ inner_row_attributes }}>
+      <div{{ container_attributes }}>
+        <div{{ outer_row_attributes }}>
+          <{{ wrapper }}{{ attributes }}>
+            <div{{ inner_row_attributes }}>
 
-                {% if left.content %}
-                <{{ left.wrapper }}{{ left.attributes }}>
-                  {{ left.content }}
-                </{{ left.wrapper }}>
-                {% endif %}
+              {% if left.content %}
+              <{{ left.wrapper }}{{ left.attributes }}>
+                {{ left.content }}
+              </{{ left.wrapper }}>
+              {% endif %}
 
-                {% if right.content %}
-                <{{ right.wrapper }}{{ right.attributes }}>
-                  {{ right.content }}
-                </{{ right.wrapper }}>
-                {% endif %}
+              {% if right.content %}
+              <{{ right.wrapper }}{{ right.attributes }}>
+                {{ right.content }}
+              </{{ right.wrapper }}>
+              {% endif %}
 
-              </div>{# /inner_row_attributes #}
-            </{{ wrapper }}>
-          </div>{# /outer_row_attributes #}
-        </div>{# /container_attributes #}
+            </div>{# /inner_row_attributes #}
+          </{{ wrapper }}>
+        </div>{# /outer_row_attributes #}
+      </div>{# /container_attributes #}
 
   {% if has_vlb_background_media %}
-    </div>{# /.vlb-content-wrapper #}
+    </div>{# /.background-media-wrapper #}
   {% endif %}
 
 </div>{# /section_attributes #}

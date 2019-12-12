@@ -137,12 +137,11 @@ function varbase_layout_builder_preprocess_layout(&$variables) {
           && $variables['settings']['vlb_section_config']['vlb_background_media'] > 0) {
 
         $background_media_entity = Media::load($variables['settings']['vlb_section_config']['vlb_background_media']);
-        
-        if (isset($background_media_entity)) {
-          $background_media_build = Drupal::entityTypeManager()->getViewBuilder('media')->view($background_media_entity, $variables['settings']['vlb_section_config']['vlb_background_media']['view_mode']);
-          $background_media_render = Drupal::service('renderer')->render($background_media_build);
 
-          $variables['settings']['vlb_section_config']['vlb_background_media_html'] = $background_media_render;
+        if (isset($background_media_entity)) {
+          $background_media_view_mode = (isset($style_options['vlb_background_media']['view_mode']) ? $style_options['vlb_background_media']['view_mode'] : 'background_media');
+          $background_media_build = Drupal::entityTypeManager()->getViewBuilder('media')->view($background_media_entity, $background_media_view_mode);
+          $variables['settings']['vlb_section_config']['vlb_background_media_html'] = $background_media_build;
         }
       }
 
@@ -632,6 +631,18 @@ function varbase_layout_builder_theme($existing, $type, $theme, $path) {
 
   $theme_templates['media_oembed_iframe__remote_video__background_media'] = [
     'template' => 'media-oembed-iframe--remote-video--background-media',
+  ];
+
+  $theme_templates['media__image__background_media'] = [
+    'template' => 'media--image--background-media',
+  ];
+
+  $theme_templates['media__video__background_media'] = [
+    'template' => 'media--video--background-media',
+  ];
+
+  $theme_templates['media__remote_video__background_media'] = [
+    'template' => 'media--remote-video--background-media',
   ];
 
 	return $theme_templates;
