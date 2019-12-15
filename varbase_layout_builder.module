@@ -7,7 +7,7 @@
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\media\Entity\Media;
-use Drupal\entity_browser\Plugin\Field\FieldWidget\EntityReferenceBrowserWidget;
+use Drupal\file\Entity\File;
 use Drupal\Core\Url;
 use Drupal\Component\Utility\Html;
 
@@ -661,4 +661,41 @@ function varbase_layout_builder_preprocess_media_oembed_iframe__remote_video__ba
   $variables['base_path'] = base_path();
   $variables['varbase_layout_builder_path'] = $module_handler->getModule('varbase_layout_builder')->getPath();
 
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function varbase_layout_builder_preprocess_media__video__background_media(&$variables) {
+  if (isset($variables['elements']['#view_mode'])
+      && $variables['elements']['#view_mode'] == 'background_media') {
+
+    $background_media_video_fid = $variables['elements']['#media']->getSource()->getSourceFieldValue($variables['elements']['#media']);
+    $background_media_video_file = File::load($background_media_video_fid);
+    $variables['background_media_video_url'] = file_create_url($background_media_video_file->getFileUri());
+    $variables['background_media_video_type'] = $background_media_video_file->getMimeType();
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function varbase_layout_builder_preprocess_media__remote_video__background_media(&$variables) {
+
+  if (isset($variables['elements']['#view_mode'])
+      && $variables['elements']['#view_mode'] == 'background_media') {
+
+    $variables['elements']['field_media_oembed_video'][0]['#attributes']['class'][] = 'bg';
+    $variables['elements']['field_media_oembed_video'][0]['#attributes']['scrolling'] = 'no';
+
+  }
+}
+
+/**
+ * Implements hook__preprocess_responsive_image().
+ */
+function varbase_layout_builder_preprocess_responsive_image(&$variables) {
+  if (isset($variables['img_element'])) {
+    $variables['img_element']['#attributes']['class'][] = 'bg';
+  }
 }

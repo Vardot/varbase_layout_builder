@@ -10,8 +10,8 @@
     attach: function (context, settings) {
       if (context === window.document) {
         $(document).ready(function() {
-          if ($('.vlb-background-media').find('.media--type-remote-video iframe[src*="vimeo.com"]').length > 0) {
-            var closestVimeoIframe = $('.vlb-background-media').find('.media--type-remote-video iframe[src*="vimeo.com"]').get(0).contentWindow;
+          if ($('.background-media-wrapper').find('iframe[src*="vimeo.com"]').length > 0) {
+            var closestVimeoIframe = $('.background-media-wrapper').find('iframe[src*="vimeo.com"]').get(0).contentWindow;
             closestVimeoIframe.postMessage('play', "*");
           }
         });

@@ -325,7 +325,7 @@
 
   .media-library-item {
     width: 300px;
-    
+    position: relative;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
     -ms-flex-pack: center;
@@ -333,7 +333,6 @@
     vertical-align: top;
     border: 1px solid #dbdbdb;
     margin: 16px 16px 2px 2px;
-    width: 300px;
     background: #fff;
     -webkit-transition: border-color 0.2s, color 0.2s, background 0.2s;
     -o-transition: border-color 0.2s, color 0.2s, background 0.2s;
@@ -420,9 +419,5 @@
     overflow: hidden;
     background: white !important;
   }
-
-/*  button[id*="edit-vlb-default-vlb-background-media-media-library-update-widget"] {
-    display: none; 
-  }*/
 
 }

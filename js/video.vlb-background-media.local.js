@@ -8,7 +8,7 @@
 
   Drupal.behaviors.varbaseLayoutBuilder_local_video = {
     attach: function (context, settings) {
-      var player = $(".vlb-background-media video").get(0);
+      var player = $(".background-media-wrapper video").get(0);
       // Play local video on load of the page.
       if(player){
         player.play();
@@ -17,12 +17,12 @@
       }
 
       function onPause() {
-        $(".vlb-background-media video").trigger('play');
+        $(".background-media-wrapper video").trigger('play');
       }
 
       // Play when finished.
       function onFinish() {
-        $(".vlb-background-media video").trigger('play');
+        $(".background-media-wrapper video").trigger('play');
       }
     }
   }
