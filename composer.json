@@ -28,7 +28,7 @@
   },
   "require": {
     "drupal/varbase_media": "~7.0",
-    "drupal/layout_builder_modal": "~1.0",
+    "drupal/layout_builder_modal": "1.0-alpha2",
     "drupal/layout_builder_restrictions": "~2.0",
     "drupal/layout_library": "~1.0",
     "drupal/bootstrap_layouts": "~5.0",
@@ -47,6 +47,12 @@
       "npm-asset"
     ],
     "enable-patching": true,
-    "composer-exit-on-patch-failure": true
+    "composer-exit-on-patch-failure": true,
+    "patches": {
+      "drupal/layout_builder_modal": {
+        "Issue #3101791: Fix an integration issue with [Layout Builder Modal] and  [Layout Builder UX] to configure shortcut link to open with modal":
+        "https://www.drupal.org/files/issues/2019-12-22/3101791-8.patch"
+      }
+    }
   }
 }
