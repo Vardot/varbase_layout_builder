@@ -631,6 +631,10 @@ function varbase_layout_builder_theme($existing, $type, $theme, $path) {
 
   $theme_templates['media_oembed_iframe__remote_video__background_media'] = [
     'template' => 'media-oembed-iframe--remote-video--background-media',
+    'variables' => [
+      'provider' => NULL,
+      'media' => NULL,
+    ],
   ];
 
   $theme_templates['media__image__background_media'] = [
