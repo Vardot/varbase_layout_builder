@@ -64,3 +64,12 @@ function varbase_layout_builder_install() {
   }
   // ------------------------------------------------------------------------.
 }
+
+/**
+ * Issue #3104761: Add and enable [Entity Blocks] module ( ~1.0 )
+ */
+function varbase_layout_update_8101() {
+  if (!\Drupal::moduleHandler()->moduleExists('entity_block')) {
+    \Drupal::service('module_installer')->install(['entity_block'], FALSE);
+  }
+}

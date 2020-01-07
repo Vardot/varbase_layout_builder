@@ -19,3 +19,4 @@ install:
   - layout_builder_at
   - media_library_form_element
   - lb_ux
+  - entity_block
