@@ -1,4 +1,5 @@
-// Varbase Layout Builder Section background color field at configure section.
+// Varbase Layout Builder theme of configure section.
+// -----------------------------------------------------------------------------
 
 #drupal-off-canvas {
 
@@ -324,7 +325,7 @@
   }
 
   .media-library-item {
-    width: 300px;
+    width: 100%;
     position: relative;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -332,7 +333,7 @@
     justify-content: center;
     vertical-align: top;
     border: 1px solid #dbdbdb;
-    margin: 16px 16px 2px 2px;
+    margin: 0 auto;
     background: #fff;
     -webkit-transition: border-color 0.2s, color 0.2s, background 0.2s;
     -o-transition: border-color 0.2s, color 0.2s, background 0.2s;
@@ -340,9 +341,9 @@
 
     *,
     *:not(div) {
-      background: #eeeeee;
+      background: transparent;
     }
-    
+
     .media-library-item__remove {
       position: absolute;
       z-index: 1;
@@ -375,7 +376,7 @@
       cursor: pointer;
     }
   }
-  
+
   .media-library-views-form,
   .media-library-selection,
   .media-library-add-form__selected-media .details-wrapper,
@@ -386,10 +387,9 @@
   }
 
   .media-library-selection {
-    margin: 1em -8px;
-    margin-bottom: 1.5rem;
+    margin: 1em 0;
   }
-
+  
   .media-library-item__preview {
     padding-bottom: 34px;
   }
@@ -407,6 +407,13 @@
       }
     }
 
+    .media-library-form-element-empty-text,
+    .description,
+    .js-hide,
+    .media-library-selection:empty {
+      display: none;
+    }
+
   }
 
   .media-library-item__attributes {
@@ -414,7 +421,6 @@
     bottom: 0;
     display: block;
     padding: 5px;
-    max-width: calc(100% - 10px);
     max-height: calc(100% - 50px);
     overflow: hidden;
     background: white !important;

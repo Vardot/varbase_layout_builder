@@ -1,8 +1,10 @@
+# Varbase Layout Builder base enhancements.
 enhancements:
   css:
     theme:
       css/theme/vlb-enhancements.base.css: { }
 
+# Varbase Layout Builder theme of configure section.
 configure-section.admin:
   css:
     theme:
@@ -10,6 +12,7 @@ configure-section.admin:
   js:
     js/vlb-configure-section.admin.js: { }
 
+# Varbase Layout Builder Background Media styling.
 background-media:
   css:
     theme:
@@ -25,3 +28,9 @@ background-media:
     - core/jquery.once
     - varbase_media/youtube_player
     - varbase_media/vimeo_player
+
+# Varbase Layout Builder colors.
+vlb-colors:
+  css:
+    theme:
+      css/theme/vlb-colors.theme.css: {}

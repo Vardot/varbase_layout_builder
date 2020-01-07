@@ -7,19 +7,13 @@ core: 8.x
 project: varbase_layout_builder
 dependencies:
   - varbase_layout_builder:varbase_layout_builder
-  - advanced_text_formatter
-  - field
-  - field_group
-  - layout_builder
-  - layout_builder_restrictions
-  - layout_library
 install:
   - user
   - node
   - menu_ui
   - varbase_seo
-  - paragraphs_features
-  - paragraphs_asymmetric_translation_widgets
+  - field
+  - field_group
   - length_indicator
   - advanced_text_formatter
   - maxlength

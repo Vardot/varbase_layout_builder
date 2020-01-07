@@ -54,6 +54,7 @@
 {# Background media #}
 {% if settings.vlb_section_config.vlb_background_media_html %}
   {% set has_vlb_background_media = true %}
+  {{ attach_library('varbase_layout_builder/background-media') }}
 
   {% if settings.vlb_section_config.vlb_background_edge2edge and settings.vlb_section_config.vlb_background_edge2edge == 1 %}
     {% set width_edge2edge = true %}
@@ -90,6 +91,7 @@
 {# Background color #}
 {% if settings.vlb_section_config.vlb_background_color is not null and settings.vlb_section_config.vlb_background_color != '_none' %}
   {% set has_vlb_background_color = true %}
+  {{ attach_library('varbase_layout_builder/vlb-colors') }}
 
   {# When we do have Background color we add edge to edge exepte if do not want to have a an edge to edge background #}
   {% if settings.vlb_section_config.vlb_background_edge2edge and settings.vlb_section_config.vlb_background_edge2edge == 1 %}
@@ -98,7 +100,7 @@
     {% set section_attributes = section_attributes.addClass(settings.vlb_section_config.vlb_background_color) %}
 
     {% set container_attributes = container_attributes.removeClass('container-fluid').addClass('container') %}
-    
+
     {% if settings.vlb_section_config.vlb_gutter and settings.vlb_section_config.vlb_gutter == 1 and settings.vlb_section_config.vlb_width and settings.vlb_section_config.vlb_width != 'edge2edge' %}
       {% set outer_row_attributes = outer_row_attributes.addClass('no-gutters') %}
     {% endif %}
@@ -140,7 +142,6 @@
 <div{{ section_attributes }}>
 
   {% if has_vlb_background_media %}
-    {{ attach_library('varbase_layout_builder/background-media') }}
     <div class="background-media-wrapper">
       {{ settings.vlb_section_config.vlb_background_media_html }}
   {% endif %}

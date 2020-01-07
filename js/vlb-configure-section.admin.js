@@ -32,14 +32,5 @@
 
     }
   };
-  
-  // Sync with Advanced section settings.
-  Drupal.behaviors.varbaseLayoutBuilderSyncWithAdvanced = {
-    attach: function (context) {
-
-
-
-    }
-  };
 
 })(window.jQuery, window._, window.Drupal, window.drupalSettings);

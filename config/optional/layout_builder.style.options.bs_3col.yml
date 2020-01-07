@@ -308,7 +308,7 @@ style_options:
     use_with_advanced: true
     default_value: _none
     options: null
-    options_source_config: varbase_bootstrap_paragraphs.settings
+    options_source_config: varbase_layout_builder.settings
     options_source_schema: '|'
     options_source_map: background_colors
   vlb_background_media:

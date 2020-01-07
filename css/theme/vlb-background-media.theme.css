@@ -1,25 +1,23 @@
 .vlb-section {
+  position: relative;
   display: block;
-  position: relative;
 }
-
 .vlb-section .background-media-wrapper {
-  overflow: hidden;
   position: relative;
+  overflow: hidden;
 }
-
 .vlb-section .background-media-wrapper > img.bg,
 .vlb-section .background-media-wrapper > video.bg,
 .vlb-section .background-media-wrapper > iframe.bg {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
   position: absolute;
   z-index: 1;
-}
+  width: 100%;
+  height: 100%;
 
+  -o-object-fit: cover;
+  object-fit: cover;
+}
 .vlb-section .background-media-wrapper > :not(.bg) {
-  z-index: 2;
   position: relative;
+  z-index: 2;
 }
