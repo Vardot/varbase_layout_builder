@@ -1,7 +1,6 @@
 #drupal-off-canvas select[multiple] {
   width: 100%;
   background: none;
-
   -webkit-appearance: none;
   -moz-appearance: none;
 }
