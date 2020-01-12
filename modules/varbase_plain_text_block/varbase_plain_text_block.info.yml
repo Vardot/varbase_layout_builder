@@ -17,4 +17,3 @@ dependencies:
   - ctools:ctools_block
   - allowed_formats:allowed_formats
   - block_content_permissions:block_content_permissions
-  - varbase_media:varbase_media
