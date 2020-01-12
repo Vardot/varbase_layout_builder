@@ -1,0 +1,8 @@
+uuid: 49c70c47-e749-464d-9024-bbc222793979
+langcode: en
+status: true
+dependencies: {  }
+id: varbase_plain_text_block
+label: 'Plain text block'
+revision: 1
+description: 'A plain text block contains a title and a body with a plain text format.'

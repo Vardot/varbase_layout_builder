@@ -1,0 +1,20 @@
+name: 'Varbase Simple text block'
+description: 'A simple text block contains a title and a body with a simple text format.'
+type: module
+package: Varbase
+version: 8.x-1.x-dev
+core: 8.x
+project: varbase_layout_builder
+dependencies:
+  - drupal:block
+  - drupal:block_content
+  - drupal:text
+  - drupal:field
+  - drupal:user
+  - drupal:options
+  - drupal:link
+  - drupal:filter
+  - ctools:ctools_block
+  - allowed_formats:allowed_formats
+  - block_content_permissions:block_content_permissions
+  - varbase_media:varbase_media

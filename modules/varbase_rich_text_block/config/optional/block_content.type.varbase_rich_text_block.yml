@@ -1,0 +1,8 @@
+uuid: f2a1ca66-5d2b-4d3d-a430-43121bfeeb9f
+langcode: en
+status: true
+dependencies: {  }
+id: varbase_rich_text_block
+label: 'Rich text block'
+revision: 1
+description: 'A rich text block contains a title and a body with a rich text format.'

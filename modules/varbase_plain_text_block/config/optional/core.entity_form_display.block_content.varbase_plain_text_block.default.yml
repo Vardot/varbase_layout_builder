@@ -1,0 +1,45 @@
+uuid: 6b1fd27b-008a-4640-aa55-2e770bc10a09
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.varbase_plain_text_block
+    - field.field.block_content.varbase_plain_text_block.body
+  module:
+    - text
+id: block_content.varbase_plain_text_block.default
+targetEntityType: block_content
+bundle: varbase_plain_text_block
+mode: default
+content:
+  body:
+    weight: 1
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  translation:
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,16 @@
+uuid: 52256bbb-9542-4a1e-a94f-db4f7ab09b77
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.varbase_simple_text_block
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.varbase_simple_text_block
+target_entity_type_id: block_content
+target_bundle: varbase_simple_text_block
+default_langcode: site_default
+language_alterable: true

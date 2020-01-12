@@ -1,0 +1,16 @@
+uuid: 818ce4a9-d4e1-4441-90c3-c58262a162d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.varbase_rich_text_block
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.varbase_rich_text_block
+target_entity_type_id: block_content
+target_bundle: varbase_rich_text_block
+default_langcode: und
+language_alterable: true

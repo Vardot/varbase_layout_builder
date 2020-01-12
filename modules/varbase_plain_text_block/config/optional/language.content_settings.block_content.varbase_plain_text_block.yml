@@ -1,0 +1,16 @@
+uuid: a1bea206-ba2d-4bca-8016-18b9c574e405
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.varbase_plain_text_block
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.varbase_plain_text_block
+target_entity_type_id: block_content
+target_bundle: varbase_plain_text_block
+default_langcode: und
+language_alterable: true

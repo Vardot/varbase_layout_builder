@@ -1,0 +1,8 @@
+uuid: 981d1a4f-0420-4905-99ff-026a9082f226
+langcode: en
+status: true
+dependencies: {  }
+id: varbase_html_code_block
+label: 'HTML Code block'
+revision: 1
+description: 'An HTML Code block contains a title and a body with an HTML text format.'

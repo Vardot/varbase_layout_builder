@@ -1,0 +1,30 @@
+uuid: b9b24916-878c-42e2-a12a-0f6e3760f91f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.varbase_rich_text_block
+    - field.storage.block_content.body
+  module:
+    - allowed_formats
+    - text
+third_party_settings:
+  allowed_formats:
+    full_html: full_html
+    basic_html: '0'
+    code_html: '0'
+    plain_text: '0'
+id: block_content.varbase_rich_text_block.body
+field_name: body
+entity_type: block_content
+bundle: varbase_rich_text_block
+label: Body
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary
