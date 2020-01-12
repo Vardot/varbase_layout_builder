@@ -27,6 +27,7 @@
     }
   },
   "require": {
+    "drupal/core": "^8.8.0",
     "drupal/varbase_media": "~7.0",
     "drupal/layout_builder_modal": "1.0-alpha2",
     "drupal/layout_builder_restrictions": "~2.0",
@@ -37,7 +38,9 @@
     "drupal/bootstrap_layouts": "~5.0",
     "drupal/media_library_theme_reset": "~1.0",
     "drupal/media_library_form_element": "~1.0",
-    "drupal/entity_block": "~1.0"
+    "drupal/entity_block": "~1.0",
+    "drupal/allowed_formats": "~1.0",
+    "drupal/block_content_permissions": "~1.0"
   },
   "extra": {
     "branch-alias": {

@@ -27,13 +27,16 @@ third_party_settings:
         Content:
           - 'entity_field:node:field_media'
         'Content fields':
-          - 'field_block:node:landing_page_lb:field_description'
-          - 'field_block:node:landing_page_lb:title'
           - 'field_block:node:landing_page_lb:uid'
           - 'field_block:node:landing_page_lb:created'
+          - 'field_block:node:landing_page_lb:field_description'
+          - 'field_block:node:landing_page_lb:title'
         'Custom block types':
-          - basic
           - varbase_carousel_block
+          - varbase_html_code_block
+          - varbase_plain_text_block
+          - varbase_rich_text_block
+          - varbase_simple_text_block
         Dashboard: {  }
         Devel: {  }
         'Entity Block':
@@ -46,16 +49,19 @@ third_party_settings:
         Forms: {  }
         Help: {  }
         'Inline blocks':
-          - 'inline_block:basic'
           - 'inline_block:varbase_carousel_block'
+          - 'inline_block:varbase_html_code_block'
+          - 'inline_block:varbase_plain_text_block'
+          - 'inline_block:varbase_rich_text_block'
+          - 'inline_block:varbase_simple_text_block'
         'Lists (Views)':
-          - 'views_block:who_s_online-who_s_online_block'
-          - 'views_block:content_recent-block_1'
-          - 'views_block:varbase_blog-homepage_blog_block'
           - 'views_block:varbase_blog-blog_listing_block'
           - 'views_block:varbase_blog-blog_listing_by_blog_category_block'
           - 'views_block:varbase_blog-blog_listing_by_tags_block'
+          - 'views_block:varbase_blog-homepage_blog_block'
+          - 'views_block:content_recent-block_1'
           - 'views_block:taxonomy_term-terms_list_block'
+          - 'views_block:who_s_online-who_s_online_block'
         Menus: {  }
         'Responsive Preview': {  }
         'Social Auth': {  }
