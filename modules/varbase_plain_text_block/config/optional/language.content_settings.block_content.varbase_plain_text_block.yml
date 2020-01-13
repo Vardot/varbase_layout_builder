@@ -11,5 +11,5 @@ third_party_settings:
 id: block_content.varbase_plain_text_block
 target_entity_type_id: block_content
 target_bundle: varbase_plain_text_block
-default_langcode: und
+default_langcode: current_interface
 language_alterable: true
