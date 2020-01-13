@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.varbase_media_block
+    - field.field.block_content.varbase_media_block.field_media
+  module:
+    - ds
+id: block_content.varbase_media_block.default
+targetEntityType: block_content
+bundle: varbase_media_block
+mode: default
+content:
+  field_media:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

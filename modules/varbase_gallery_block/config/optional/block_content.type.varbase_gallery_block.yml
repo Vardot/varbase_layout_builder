@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: varbase_gallery_block
+label: 'Gallery block'
+revision: 1
+description: 'A gallery block contains a title and a gallery of images and videos.'

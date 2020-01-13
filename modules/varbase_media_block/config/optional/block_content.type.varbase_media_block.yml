@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: varbase_media_block
+label: 'Media block'
+revision: 1
+description: 'A media block contains a title and media.'

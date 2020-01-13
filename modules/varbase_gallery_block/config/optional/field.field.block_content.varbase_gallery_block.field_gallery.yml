@@ -1,0 +1,27 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.varbase_gallery_block
+    - field.storage.block_content.field_gallery
+    - media.type.gallery
+id: block_content.varbase_gallery_block.field_gallery
+field_name: field_gallery
+entity_type: block_content
+bundle: varbase_gallery_block
+label: Gallery
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      gallery: gallery
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
