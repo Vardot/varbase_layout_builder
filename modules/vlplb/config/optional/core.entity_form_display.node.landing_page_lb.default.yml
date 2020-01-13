@@ -72,7 +72,7 @@ content:
     region: content
   langcode:
     type: language_select
-    weight: 0
+    weight: 2
     region: content
     settings:
       include_locked: true

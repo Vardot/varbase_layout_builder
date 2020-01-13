@@ -32,13 +32,13 @@ third_party_settings:
           - 'field_block:node:landing_page_lb:field_description'
           - 'field_block:node:landing_page_lb:title'
         'Custom block types':
-          - varbase_rich_text_block
-          - varbase_simple_text_block
-          - varbase_plain_text_block
+          - varbase_carousel_block
+          - varbase_gallery_block
           - varbase_html_code_block
           - varbase_media_block
-          - varbase_gallery_block
-          - varbase_carousel_block
+          - varbase_plain_text_block
+          - varbase_rich_text_block
+          - varbase_simple_text_block
         Dashboard: {  }
         Devel: {  }
         'Entity Block':
@@ -51,13 +51,13 @@ third_party_settings:
         Forms: {  }
         Help: {  }
         'Inline blocks':
-          - 'inline_block:varbase_rich_text_block'
-          - 'inline_block:varbase_simple_text_block'
-          - 'inline_block:varbase_plain_text_block'
+          - 'inline_block:varbase_carousel_block'
           - 'inline_block:varbase_html_code_block'
           - 'inline_block:varbase_media_block'
+          - 'inline_block:varbase_plain_text_block'
+          - 'inline_block:varbase_rich_text_block'
+          - 'inline_block:varbase_simple_text_block'
           - 'inline_block:varbase_gallery_block'
-          - 'inline_block:varbase_carousel_block'
         'Lists (Views)':
           - 'views_block:varbase_blog-blog_listing_block'
           - 'views_block:varbase_blog-blog_listing_by_blog_category_block'
