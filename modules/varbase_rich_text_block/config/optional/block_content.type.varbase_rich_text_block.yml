@@ -2,6 +2,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: varbase_rich_text_block
-label: 'Rich text block'
+label: 'Rich text'
 revision: 1
 description: 'A rich text block contains a title and a body with a rich text format.'

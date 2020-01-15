@@ -10,9 +10,9 @@ dependencies:
 third_party_settings:
   allowed_formats:
     full_html: full_html
-    basic_html: '0'
+    basic_html: basic_html
     code_html: '0'
-    plain_text: '0'
+    plain_text: plain_text
 id: block_content.varbase_rich_text_block.body
 field_name: body
 entity_type: block_content

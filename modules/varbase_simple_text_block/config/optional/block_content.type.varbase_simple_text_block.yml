@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: varbase_simple_text_block
-label: 'Simple text block'
-revision: 1
-description: 'A simple text block contains a title and a body with a simple text format.'
