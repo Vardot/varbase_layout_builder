@@ -1,7 +1,7 @@
 name: 'Varbase Gallery block'
 description: 'A gallery block contains a title and a gallery of images and videos.'
 type: module
-package: Varbase
+package: 'Varbase Blocks'
 version: 8.x-1.x-dev
 core: 8.x
 project: varbase_layout_builder
