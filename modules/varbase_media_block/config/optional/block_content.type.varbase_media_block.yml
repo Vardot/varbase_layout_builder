@@ -1,8 +1,7 @@
-uuid: c9912938-3ac2-4c21-80bc-a14365b2d32c
 langcode: en
 status: true
 dependencies: {  }
 id: varbase_media_block
-label: 'Media block'
+label: 'Media (image/video)'
 revision: 1
 description: 'A media block contains a title and media.'
