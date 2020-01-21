@@ -6,7 +6,7 @@ version: 8.x-1.x-dev
 core: 8.x
 project: varbase_layout_builder
 dependencies:
-  - drupal:system (>=8.7.0)
+  - drupal:system (>=8.8.0)
   - drupal:layout_builder
   - layout_builder_restrictions:layout_builder_restrictions
   - varbase_media:varbase_media
@@ -20,3 +20,4 @@ install:
   - media_library_form_element
   - lb_ux
   - entity_block
+  - block_form_alter
