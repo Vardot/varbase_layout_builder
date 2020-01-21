@@ -1,4 +1,4 @@
-name: 'Varbase Modal'
+name: 'Varbase Modal block'
 description: 'A modal block contains a title and modal button title, body and footer.'
 type: module
 package: 'Varbase Blocks'

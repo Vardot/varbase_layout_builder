@@ -1,4 +1,4 @@
-name: 'Varbase HTML code'
+name: 'Varbase HTML code block'
 description: 'An HTML Code block contains a title and a body with an HTML text format.'
 type: module
 package: 'Varbase Blocks'

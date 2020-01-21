@@ -1,16 +1,32 @@
+uuid: bb46858b-3935-4059-93d3-4f0700b61099
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.varbase_media_block
+    - field.field.block_content.varbase_media_block.field_link
     - field.field.block_content.varbase_media_block.field_media
+    - field.field.block_content.varbase_media_block.field_media_view_mode
   module:
     - ds
+    - link
 id: block_content.varbase_media_block.default
 targetEntityType: block_content
 bundle: varbase_media_block
 mode: default
 content:
+  field_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
   field_media:
     type: entity_reference_entity_view
     weight: 0
@@ -27,6 +43,13 @@ content:
             lb-col: false
             classes: {  }
     region: content
+  field_media_view_mode:
+    type: entity_reference_entity_id
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   langcode: true
   search_api_excerpt: true

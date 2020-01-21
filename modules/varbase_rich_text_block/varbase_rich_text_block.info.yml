@@ -1,4 +1,4 @@
-name: 'Varbase Rich text'
+name: 'Varbase Rich text block'
 description: 'A rich text block contains a title and a body with a rich text format.'
 type: module
 package: 'Varbase Blocks'

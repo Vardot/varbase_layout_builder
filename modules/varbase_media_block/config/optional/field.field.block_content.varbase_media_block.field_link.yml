@@ -1,0 +1,23 @@
+uuid: 7f4ef35a-ec56-4dbc-a82b-b23186b71f4d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.varbase_media_block
+    - field.storage.block_content.field_link
+  module:
+    - link
+id: block_content.varbase_media_block.field_link
+field_name: field_link
+entity_type: block_content
+bundle: varbase_media_block
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link
