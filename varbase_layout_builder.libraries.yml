@@ -21,6 +21,7 @@ background-media:
     js/video.vlb-background-media.local.js: { }
     js/video.vlb-background-media.vimeo.js: { }
     js/video.vlb-background-media.youtube.js: { }
+    js/vlb-object-fit-polyfill.js: { }
   dependencies:
     - core/drupal
     - core/drupalSettings
@@ -28,6 +29,7 @@ background-media:
     - core/jquery.once
     - varbase_media/youtube_player
     - varbase_media/vimeo_player
+    - varbase_core/object-fit-polyfill
 
 # Varbase Layout Builder colors.
 vlb-colors:
