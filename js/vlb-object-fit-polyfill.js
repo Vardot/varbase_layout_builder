@@ -1,12 +1,12 @@
 /**
  * @file
- * Behaviors Varbase hero slider media general scripts.
+ * Behaviors Varbase Layout Builder Object-Fit Polyfill fix scripts.
  */
 
 (function ($, _, Drupal, drupalSettings) {
   "use strict";
-  
-  // Configure Section Admin behaviors for Varbase Layout Builder.
+
+  // Configure Object-Fit Polyfill behaviors for Varbase Layout Builder.
   Drupal.behaviors.varbaseLayoutBuilderObjectFitPolyfill = {
     attach: function (context) {
 

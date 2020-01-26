@@ -1,6 +1,6 @@
 /**
  * @file
- * Behaviors Varbase hero slider media general scripts.
+ * Behaviors Varbase Layout Builder general scripts.
  */
 
 (function ($, _, Drupal, drupalSettings) {
