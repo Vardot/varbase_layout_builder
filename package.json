@@ -22,7 +22,7 @@
         "del": "^3.0.0",
         "gulp": "^4.0.0",
         "gulp-sass": "^4.0.1",
-        "gulp-csscombx": "^4.2.0",
+        "gulp-csscomb": "^3.1.0",
         "gulp-autoprefixer": "^4.1.0",
         "gulp-scss-lint": "^1.0.0",
         "gulp-clean-css": "3.9.4",

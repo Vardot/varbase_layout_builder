@@ -8,7 +8,6 @@
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\media\Entity\Media;
 use Drupal\file\Entity\File;
-use Drupal\node\Entity\NodeType;
 
 /**
  * Implements hook_form_alter().
@@ -604,7 +603,7 @@ function varbase_layout_builder_theme_suggestions_layout_alter(array &$suggestio
 
   if (isset($variables['content'])
       && isset($variables['content']['#settings'])
-      && isset($variables['content']['#settings']['vlb_section_config']) ) {
+      && isset($variables['content']['#settings']['vlb_section_config'])) {
 
     $suggestions[] = $variables['theme_hook_original'] . '__vlb';
 
@@ -749,18 +748,19 @@ function varbase_layout_builder_form_node_form_alter(&$form, FormStateInterface 
 }
 
 /**
- * Implements hook_form_BASE_FORM_ID_submit() for node_form.
+ * Process the Varbase Layout Builder form node form submit.
  *
- * @param $form
- * @param FormStateInterface $form_state
+ * @param array $form
+ *   The form object.
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ *   The form status.
  */
-function _varbase_layout_builder_form_node_form_submit($form, FormStateInterface $form_state) {
+function _varbase_layout_builder_form_node_form_submit(array &$form, FormStateInterface $form_state) {
 
   $node = $form_state->getFormObject()->getEntity();
-  $node_type = NodeType::load($node->bundle());
   $node_type_display = entity_get_display('node', $node->bundle(), 'default');
 
-  // Only When submitted after a new creation of a node with which it's 
+  // Only When submitted after a new creation of a node with which it's
   // content type has an enabled layout builder on it's default display.
   if (!($form_state->getFormObject()->getOperation() === 'edit')
       && !empty($node_type_display)

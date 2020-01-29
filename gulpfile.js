@@ -1,7 +1,7 @@
 let gulp = require('gulp'),
   sass = require('gulp-sass'),
   postcss = require('gulp-postcss'),
-  csscomb = require('gulp-csscombx'),
+  csscomb = require('gulp-csscomb'),
   autoprefixer = require('autoprefixer'),
   browserSync = require('browser-sync').create()
 

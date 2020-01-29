@@ -1,44 +1,49 @@
 #drupal-off-canvas select[multiple] {
-  width: 100%;
-  background: none;
   -webkit-appearance: none;
   -moz-appearance: none;
+  width: 100%;
+  background: none;
 }
+
 #drupal-off-canvas description,
 #drupal-off-canvas .form-item .description,
 #drupal-off-canvas .details-description {
   color: #ddd !important;
 }
+
 #drupal-off-canvas div.checkbox.form-check {
   padding: 0;
 }
+
 #drupal-off-canvas div.checkbox.form-check label {
   display: inline;
 }
+
 #drupal-off-canvas button,
 #drupal-off-canvas .button {
   display: inline-block;
-  margin-top: 5px;
-  padding: 6px 12px;
+  font-weight: 400;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  margin-top: 5px;
+  padding: 6px 12px;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 0.25rem;
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-  -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+  -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
-  text-align: center;
-  vertical-align: middle;
-  color: #212529;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  background-color: transparent;
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
 }
+
 @media (prefers-reduced-motion: reduce) {
   #drupal-off-canvas button,
   #drupal-off-canvas .button {
@@ -47,23 +52,27 @@
     transition: none;
   }
 }
+
 #drupal-off-canvas button,
 #drupal-off-canvas .button:hover {
-  text-decoration: none;
   color: #212529;
+  text-decoration: none;
 }
+
 #drupal-off-canvas button.entity-browser-processed,
 #drupal-off-canvas .button:hover.entity-browser-processed {
   color: #212529;
-  border-color: #f8f9fa;
   background-color: #f8f9fa;
+  border-color: #f8f9fa;
 }
+
 #drupal-off-canvas button.entity-browser-processed:hover,
 #drupal-off-canvas .button:hover.entity-browser-processed:hover {
   color: #212529;
-  border-color: #dae0e5;
   background-color: #e2e6ea;
+  border-color: #dae0e5;
 }
+
 #drupal-off-canvas button:focus,
 #drupal-off-canvas .button:focus,
 #drupal-off-canvas button,
@@ -73,61 +82,73 @@
   -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
 }
+
 #drupal-off-canvas button.disabled,
 #drupal-off-canvas .button.disabled,
 #drupal-off-canvas button:disabled,
 #drupal-off-canvas .button:disabled {
   opacity: 0.65;
 }
+
 #drupal-off-canvas a.button.disabled,
 #drupal-off-canvas fieldset:disabled a.button {
   pointer-events: none;
 }
+
 #drupal-off-canvas .button--primary {
   color: #fff;
-  border-color: #007bff;
   background-color: #007bff;
+  border-color: #007bff;
 }
+
 #drupal-off-canvas .button--primary:hover {
   color: #fff;
-  border-color: #0062cc;
   background-color: #0069d9;
+  border-color: #0062cc;
 }
+
 #drupal-off-canvas .button--primary:focus,
 #drupal-off-canvas .btn-primary.focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
   box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
 }
+
 #drupal-off-canvas .button--primary.disabled,
 #drupal-off-canvas .button--primary:disabled {
   color: #fff;
-  border-color: #007bff;
   background-color: #007bff;
+  border-color: #007bff;
 }
+
 #drupal-off-canvas .button--primary:not(:disabled):not(.disabled):active,
 #drupal-off-canvas .button--primary:not(:disabled):not(.disabled).active {
   color: #fff;
-  border-color: #005cbf;
   background-color: #0062cc;
+  border-color: #005cbf;
 }
+
 #drupal-off-canvas .button--primary:not(:disabled):not(.disabled):active:focus,
 #drupal-off-canvas .button--primary:not(:disabled):not(.disabled).active:focus {
   -webkit-box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
   box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
 }
+
 body .block-help {
   width: 100%;
 }
+
 body .layout-builder__link--add {
   color: #686868 !important;
 }
+
 body .layout-builder-block {
-  margin: 0;
   padding: 0;
+  margin: 0;
   background: transparent;
   background-color: transparent;
 }
+
 .layout-builder__link.layout-builder__link--configure {
-  position: absolute;
   z-index: 20;
+  position: absolute;
 }

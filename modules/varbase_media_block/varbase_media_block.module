@@ -39,7 +39,7 @@ function _varbase_media_block_active_media_view_mode_options() {
   ];
 
   $active_media_view_mode_options = ['_none' => t("-  None  -")];
-  foreach($media_view_mode_options as $media_view_mode_option) {
+  foreach ($media_view_mode_options as $media_view_mode_option) {
     if ($media_view_mode_option['status'] == TRUE
         && !in_array($media_view_mode_option['id'], $ignore_view_mode_list)) {
 
@@ -99,9 +99,6 @@ function varbase_media_block_theme_suggestions_block_alter(array &$suggestions, 
  * Implements hook_preprocess_block().
  */
 function varbase_media_block_preprocess_block(&$variables) {
-  
-//  dump($variables);
-//  die(' con');
 
   if (isset($variables['content']['field_media'])
       && isset($variables['content']['field_media_view_mode'])) {
@@ -123,7 +120,7 @@ function varbase_media_block_preprocess_block(&$variables) {
 
     $variables['content']['field_media'] = $field_media_output_with_selected_view_mode;
     unset($variables['content']['field_media_view_mode']);
-    
+
     $variables['media_link'] = $variables['content']['field_link'];
     unset($variables['content']['field_link']);
 
@@ -144,10 +141,10 @@ function varbase_media_block_preprocess_block(&$variables) {
     }
 
     $field_media_output_with_selected_view_mode = entity_view($media, $media_view_mode);
-    
+
     $variables['content']['content']['field_media'] = $field_media_output_with_selected_view_mode;
     unset($variables['content']['content']['field_media_view_mode']);
-    
+
     $variables['media_link'] = $variables['content']['content']['field_link'];
     unset($variables['content']['content']['field_link']);
   }
