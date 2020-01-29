@@ -9,10 +9,19 @@
 }
 
 .vlb-section .background-media-wrapper > img.bg,
-.vlb-section .background-media-wrapper > video.bg,
-.vlb-section .background-media-wrapper > iframe.bg {
+.vlb-section .background-media-wrapper > picture.bg,
+.vlb-section .background-media-wrapper > video.bg {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  position: absolute;
+  z-index: 1;
+}
+
+.vlb-section .background-media-wrapper > iframe.bg {
+  width: 100vw;
+  height: 34vw;
   -o-object-fit: cover;
   object-fit: cover;
   position: absolute;
