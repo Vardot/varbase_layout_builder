@@ -10,16 +10,10 @@
   Drupal.behaviors.varbaseLayoutBuilderObjectFitPolyfill = {
     attach: function (context) {
 
-      objectFitPolyfill($('.background-media-wrapper > image.bg'));
-      objectFitPolyfill($('.background-media-wrapper > picture.bg'));
-      objectFitPolyfill($('.background-media-wrapper > video.bg'));
-      objectFitPolyfill($('.background-media-wrapper > iframe.bg'));
+      objectFitPolyfill($('.background-media-wrapper .bg'));
 
       $(window).on('resize', function() {
-        objectFitPolyfill($('.background-media-wrapper > image.bg'));
-        objectFitPolyfill($('.background-media-wrapper > picture.bg'));
-        objectFitPolyfill($('.background-media-wrapper > video.bg'));
-        objectFitPolyfill($('.background-media-wrapper > iframe.bg'));
+        objectFitPolyfill($('.background-media-wrapper .bg'));
       });
 
     }
