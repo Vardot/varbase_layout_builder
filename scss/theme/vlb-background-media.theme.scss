@@ -54,10 +54,10 @@ $grid-breakpoints: (
 }
 
 @media (max-width: map-get($grid-breakpoints, "sm")) {
-  .vlb-section {
-    .backgrounds-media-wrapper {
-      > iframe {
-        &.bg {
+.vlb-section {
+  .background-media-wrapper {
+    > iframe {
+      &.bg {
           width: 100%;
           height: 100%;
         }
