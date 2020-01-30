@@ -21,7 +21,8 @@
 
 .vlb-section .background-media-wrapper > iframe.bg {
   width: 100vw;
-  height: 34vw;
+  min-height: 34vw;
+  height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
   position: absolute;

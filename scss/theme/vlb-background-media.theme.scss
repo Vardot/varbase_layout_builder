@@ -39,7 +39,8 @@ $grid-breakpoints: (
     > iframe {
       &.bg {
         width: 100vw;
-        height: 34vw;
+        min-height: 34vw;
+        height: 100%;
         object-fit: cover;
         position: absolute;
         z-index: 1;
