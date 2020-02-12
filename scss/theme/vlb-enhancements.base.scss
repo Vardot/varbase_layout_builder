@@ -2,6 +2,7 @@
 // -----------------------------------------------------------------------------
 
 #drupal-off-canvas {
+  width: auto !important;
   
   select[multiple] {
     -webkit-appearance: none;
@@ -22,6 +23,16 @@
 
   div.checkbox.form-check label {
     display: inline;
+  }
+  
+  .layout-selection {
+    li {
+      a {
+        div {
+          padding: 1em;
+        }
+      }
+    }
   }
 
   // Re-Style Bootstrap Buttons in the drupal-off-canvas

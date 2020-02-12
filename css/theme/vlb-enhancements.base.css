@@ -1,3 +1,7 @@
+#drupal-off-canvas {
+  width: auto !important;
+}
+
 #drupal-off-canvas select[multiple] {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -17,6 +21,10 @@
 
 #drupal-off-canvas div.checkbox.form-check label {
   display: inline;
+}
+
+#drupal-off-canvas .layout-selection li a div {
+  padding: 1em;
 }
 
 #drupal-off-canvas button,

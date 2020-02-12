@@ -1,6 +1,6 @@
 services:
-  varbase_layout_builder.route_subscriber:
-    class: Drupal\varbase_layout_builder\EventSubscriber\RouteSubscriber
+  varbase_layout_builder.route_alter:
+    class: Drupal\varbase_layout_builder\Routing\VLBRouteAlter
     tags:
     - { name: 'event_subscriber' }
   plugin.manager.layout_builder.style_options:
