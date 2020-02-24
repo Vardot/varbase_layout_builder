@@ -764,7 +764,7 @@ function varbase_layout_builder_form_node_form_alter(&$form, FormStateInterface 
 function _varbase_layout_builder_form_node_form_submit(array &$form, FormStateInterface $form_state) {
 
   $node = $form_state->getFormObject()->getEntity();
-  $node_type_display = entity_get_display('node', $node->bundle(), 'default');
+  $node_type_display = \Drupal::service('entity_display.repository')->getViewDisplay('node', $node->bundle(), 'default');
 
   // Only When submitted after a new creation of a node with which it's
   // content type has an enabled layout builder on it's default display.
