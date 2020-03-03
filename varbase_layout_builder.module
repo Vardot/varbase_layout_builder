@@ -144,8 +144,8 @@ function varbase_layout_builder_preprocess_layout(&$variables) {
       }
 
       // Add custom Varbase Layout Builder classes.
-      if (isset($variables['settings']['vlb_section_config']['vlb_classes'])) {
-        $final_classes = explode(' ', $variables['settings']['vlb_section_config']['vlb_classes']);
+      if (isset($current_vlb_section_config) && $current_vlb_section_config_id == 'vlb_classes') {
+        $final_classes = explode(' ', $current_vlb_section_config);
 
         // Add the final list of css classes to the class attribute.
         if (!empty($final_classes)) {
