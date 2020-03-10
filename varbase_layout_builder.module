@@ -348,6 +348,60 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
               '#prefix' => '<hr />',
             ];
           }
+          elseif ($style_option['field_type'] == 'list_string') {
+
+            $default_value = '';
+            if (isset($vlb_section_config[$style_option_id])) {
+              $default_value = $vlb_section_config[$style_option_id];
+            }
+            elseif (isset($style_option['default_value'])) {
+              $default_value = $style_option['default_value'];
+            }
+
+            $options = [];
+
+            if (isset($style_option['options_source_config'])) {
+              $options_source_config = \Drupal::configFactory()->getEditable($style_option['options_source_config']);
+              if (isset($options_source_config)) {
+                $options_source_map = $options_source_config->get($style_option['options_source_map']);
+
+                $options_source_options = ['_none' => t('N/A')];
+                $lines = explode(PHP_EOL, $options_source_map);
+                foreach ($lines as $line) {
+                  $line = explode($style_option['options_source_schema'], $line);
+                  $options_source_options[$line[0]] = $line[1];
+                }
+
+                $options = $options_source_options;
+              }
+            }
+
+            if (isset($style_option['options'])
+              && count($style_option['options']) > 0) {
+
+              if (isset($style_option['options']['empty_option'])
+                && $style_option['options']['empty_option']) {
+                $options = ['_none' => t('N/A')];
+              }
+
+              foreach ($style_option['options'] as $option) {
+                if (isset($option['value']) && isset($option['label'])) {
+                  $options[$option['value']] = $option['label'];
+                }
+              }
+            }
+
+            $form[$style_option['group']][$style_option_id] = [
+              '#type' => 'select',
+              '#title' => (isset($style_option['label']) ? $style_option['label'] : ''),
+              '#description' => (isset($style_option['description']) ? $style_option['description'] : NULL),
+              '#multiple' => (isset($style_option['multiple']) ? $style_option['multiple'] : FALSE),
+              '#required' => (isset($style_option['required']) ? $style_option['required'] : FALSE),
+              '#prefix' => '<hr />',
+              '#options' => $options,
+              '#default_value' => $default_value,
+            ];
+          }
 
           // When we do have a status option for the section config style.
           if (isset($style_option['status'])) {
