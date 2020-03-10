@@ -2,6 +2,17 @@ name: bs_2col
 label: 'Two column'
 type: section
 style_options:
+  vlb_title:
+    field_type: textfield
+    label: 'Section title'
+    description: 'Add title for the section.'
+    group: vlb_default
+    default_value: ''
+    required: false
+    sync_with_advanced: false
+    use_with_advanced: true
+    size: 30
+    maxlength: 225
   vlb_width:
     field_type: radios
     label: Width

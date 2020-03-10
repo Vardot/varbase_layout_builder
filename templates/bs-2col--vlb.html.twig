@@ -22,6 +22,10 @@
 {% set has_vlb_background_color = false %}
 {% set has_vlb_background_media = false %}
 
+{% set section_title_attributes = create_attribute() %}
+{% set section_title_attributes = section_title_attributes.addClass('section-title') %}
+{% set section_title_attributes = section_title_attributes.addClass('text-center') %}
+
 {% set section_attributes = create_attribute() %}
 {% set section_attributes = section_attributes.addClass('vlb-section') %}
 
@@ -146,6 +150,9 @@
       <div{{ container_attributes }}>
         <div{{ outer_row_attributes }}>
           <{{ wrapper }}{{ attributes }}>
+            {% if settings.vlb_section_config.vlb_title %}
+              <h2{{ section_title_attributes }}> {{ settings.vlb_section_config.vlb_title }}</h2>
+            {% endif %}
             <div{{ inner_row_attributes }}>
 
               {% if left.content %}
