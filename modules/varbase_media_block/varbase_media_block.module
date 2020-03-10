@@ -36,9 +36,9 @@ function _varbase_media_block_active_media_view_mode_options() {
     'media.browser_teaser',
     'media.field_preview',
     'media.varbase_media_hero_slider',
+    '_none',
   ];
 
-  $active_media_view_mode_options = ['_none' => t("-  None  -")];
   foreach ($media_view_mode_options as $media_view_mode_option) {
     if ($media_view_mode_option['status'] == TRUE
         && !in_array($media_view_mode_option['id'], $ignore_view_mode_list)) {
@@ -111,9 +111,6 @@ function varbase_media_block_preprocess_block(&$variables) {
 
     $media_view_mode = $block_field_media_view_mode->first()->getValue()['target_id'];
     $media_view_mode = str_replace('media.', '', $media_view_mode);
-    if ($media_view_mode == '_none') {
-      $media_view_mode = 'default';
-    }
 
     $view_builder = \Drupal::entityTypeManager()->getViewBuilder($media->getEntityTypeId());
     $field_media_output_with_selected_view_mode = $view_builder->view($media, $media_view_mode);
@@ -137,9 +134,6 @@ function varbase_media_block_preprocess_block(&$variables) {
 
     $media_view_mode = $block_field_media_view_mode->first()->getValue()['target_id'];
     $media_view_mode = str_replace('media.', '', $media_view_mode);
-    if ($media_view_mode == '_none') {
-      $media_view_mode = 'default';
-    }
 
     $view_builder = \Drupal::entityTypeManager()->getViewBuilder($media->getEntityTypeId());
     $field_media_output_with_selected_view_mode = $view_builder->view($media, $media_view_mode);
