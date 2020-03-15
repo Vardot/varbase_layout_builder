@@ -330,6 +330,23 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
               '#prefix' => '<hr />',
             ];
           }
+          elseif ($style_option['field_type'] == 'textarea') {
+            $default_value = '';
+            if (isset($vlb_section_config[$style_option_id])) {
+              $default_value = $vlb_section_config[$style_option_id];
+            }
+            elseif (isset($style_option['default_value'])) {
+              $default_value = $style_option['default_value'];
+            }
+            $form[$style_option['group']][$style_option_id] = [
+              '#type' => 'textarea',
+              '#title' => (isset($style_option['label']) ? $style_option['label'] : ''),
+              '#description' => (isset($style_option['description']) ? $style_option['description'] : NULL),
+              '#default_value' => $default_value,
+              '#required' => (isset($style_option['required']) ? $style_option['required'] : NULL),
+              '#prefix' => '<hr />',
+            ];
+          }
           elseif ($style_option['field_type'] == 'checkbox') {
 
             $default_value = '';
