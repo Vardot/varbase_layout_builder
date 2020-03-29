@@ -37,7 +37,7 @@
     "drupal/lb_ux": "~1.0",
     "drupal/bootstrap_layouts": "~5.0",
     "drupal/media_library_theme_reset": "~1.0",
-    "drupal/media_library_form_element": "~1.0",
+    "drupal/media_library_form_element": "1.0-alpha7",
     "drupal/entity_block": "~1.0",
     "drupal/allowed_formats": "~1.0",
     "drupal/block_content_permissions": "~1.0",
@@ -52,6 +52,12 @@
       "npm-asset"
     ],
     "enable-patching": true,
-    "composer-exit-on-patch-failure": true
+    "composer-exit-on-patch-failure": true,
+    "patches": {
+      "drupal/media_library_form_element": {
+        "Issue #3102729: Default settings are lost in Ajax context":
+        "https://www.drupal.org/files/issues/2020-01-30/check_for_remove_btn-3102729-4.patch"
+      }
+    }
   }
 }
