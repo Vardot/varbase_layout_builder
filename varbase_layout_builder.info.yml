@@ -5,6 +5,7 @@ package: Varbase
 version: 8.x-1.x-dev
 core: 8.x
 project: varbase_layout_builder
+configure: varbase_layout_builder.settings
 core_version_requirement: ^8 || ^9
 dependencies:
   - drupal:system (>=8.8.0)
