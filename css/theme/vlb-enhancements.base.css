@@ -160,3 +160,11 @@ body .layout-builder-block {
   z-index: 20;
   position: absolute;
 }
+
+.toolbar-fixed .js-messages__wrapper {
+  top: 0;
+}
+
+.toolbar-horizontal.toolbar-tray-open .js-messages__wrapper {
+  top: 0;
+}
