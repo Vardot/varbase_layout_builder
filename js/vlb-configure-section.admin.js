@@ -33,8 +33,8 @@
     }
   };
 
-  // Fix WYSIWYG text fields disabled when using inside layout builder modal
-  Drupal.behaviors.ckeditoreModalIssues = {
+  // Fix CKEditor text fields disabled when using inside layout builder modal.
+  Drupal.behaviors.varbaseLayoutBuilderCkeditoreWithModal = {
     attach: function (context) {
 
       var orig_allowInteraction = $.ui.dialog.prototype._allowInteraction;
