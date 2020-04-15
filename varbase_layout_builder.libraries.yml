@@ -27,6 +27,7 @@ background-media:
     - core/drupalSettings
     - core/jquery
     - core/jquery.once
+    - core/drupal.dialog
     - varbase_media/youtube_player
     - varbase_media/vimeo_player
     - varbase_core/object-fit-polyfill
