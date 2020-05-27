@@ -8,6 +8,7 @@ dependencies:
     - field.field.media.video.field_media_video_file
     - media.type.video
   module:
+    - blazy
     - ds
     - file
     - layout_builder

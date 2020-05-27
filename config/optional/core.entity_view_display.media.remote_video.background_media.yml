@@ -39,8 +39,8 @@ hidden:
   created: true
   field_media_cover_image: true
   field_media_in_library: true
-  langcode: true
   field_provider: true
+  langcode: true
   name: true
   search_api_excerpt: true
   thumbnail: true
