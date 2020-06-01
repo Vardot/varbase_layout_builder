@@ -166,14 +166,14 @@ body {
 
 .toolbar-fixed {
   .js-messages__wrapper {
-    top: 0;
+    top: 0 !important;
   }
 }
 
 .toolbar-horizontal {
   &.toolbar-tray-open {
     .js-messages__wrapper {
-      top: 0;
+      top: 0 !important;
     }
   }
 }
