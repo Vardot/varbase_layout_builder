@@ -41,7 +41,6 @@ function varbase_layout_builder_entity_operation(EntityInterface $entity) {
   ];
 }
 
-
 /**
  * Implements hook_form_alter().
  */
