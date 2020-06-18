@@ -15,7 +15,7 @@ use Drupal\varbase_layout_builder\Form\VarbaseLayoutBuilderConfigureSectionForm;
 /**
  * Implements hook_entity_operation().
  */
-function varbase_layout_builder_link_entity_operation(EntityInterface $entity) {
+function varbase_layout_builder_entity_operation(EntityInterface $entity) {
   $account = \Drupal::currentUser();
   $entity_type_id = $entity->getEntityTypeId();
 
