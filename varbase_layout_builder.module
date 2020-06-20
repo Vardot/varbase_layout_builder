@@ -292,7 +292,7 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
           }
           elseif ($style_option['field_type'] == 'media_library') {
 
-            $default_value = 0;
+            $default_value = NULL;
             if (isset($vlb_section_config[$style_option_id])
               && $vlb_section_config[$style_option_id] != 0) {
 
@@ -305,6 +305,7 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
               '#description' => (isset($style_option['description']) ? $style_option['description'] : NULL),
               '#allowed_bundles' => $style_option['allowed_bundles'],
               '#default_value' => $default_value,
+              '#cardinality' => (isset($style_option['cardinality']) ? $style_option['cardinality'] : 1),
               '#prefix' => '<hr />',
             ];
 

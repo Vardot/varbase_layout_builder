@@ -326,7 +326,8 @@ style_options:
     field_type: media_library
     label: 'Background media'
     group: vlb_default
-    default_value: ''
+    default_value: null
+    cardinality: 1
     required: false
     sync_with_advanced: false
     use_with_advanced: true

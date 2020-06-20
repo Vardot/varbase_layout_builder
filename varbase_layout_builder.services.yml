@@ -3,6 +3,3 @@ services:
     class: Drupal\varbase_layout_builder\Routing\VLBRouteAlter
     tags:
     - { name: 'event_subscriber' }
-  plugin.manager.layout_builder.style_options:
-    class: Drupal\varbase_layout_builder\LayoutBuilderStyleOptionsPluginManager
-    arguments: ['@module_handler', '@cache.discovery']
