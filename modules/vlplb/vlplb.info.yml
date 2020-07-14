@@ -19,6 +19,8 @@ install:
   - length_indicator
   - advanced_text_formatter
   - maxlength
+  - viewsreference
+  - entity_reference_revisions
   - varbase_seo
   - varbase_rich_text_block
   - varbase_html_code_block
