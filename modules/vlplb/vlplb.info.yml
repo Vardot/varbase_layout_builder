@@ -9,9 +9,18 @@ install:
   - user
   - node
   - menu_ui
-  - varbase_seo
+  - text
+  - options
+  - link
+  - ckeditor
+  - block
   - field
   - field_group
   - length_indicator
   - advanced_text_formatter
   - maxlength
+  - varbase_seo
+  - varbase_rich_text_block
+  - varbase_html_code_block
+  - varbase_media_block
+  - varbase_gallery_block
