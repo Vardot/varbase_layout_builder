@@ -30,11 +30,6 @@ function varbase_layout_builder_form_alter(&$form, FormStateInterface $form_stat
     // Attache the Varbase Layout Builder Colors libraray.
     $form['#attached']['library'][] = 'varbase_layout_builder/vlb-colors';
 
-    // Hide revision information fields.
-    if (isset($form['revision_information'])) {
-      $form['revision_information']['#access'] = FALSE;
-    }
-
     // Hide rabbit hole fields.
     if (isset($form['rabbit_hole'])) {
       $form['rabbit_hole']['#access'] = FALSE;
