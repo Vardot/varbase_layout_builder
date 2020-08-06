@@ -3,26 +3,23 @@ status: true
 dependencies:
   config:
     - block_content.type.varbase_gallery_block
-    - core.entity_form_mode.media.simplified
     - field.field.block_content.varbase_gallery_block.field_gallery
   module:
-    - inline_entity_form
+    - media_library
+    - media_library_edit
 id: block_content.varbase_gallery_block.default
 targetEntityType: block_content
 bundle: varbase_gallery_block
 mode: default
 content:
   field_gallery:
-    type: inline_entity_form_simple
+    type: media_library_widget
     weight: 0
     settings:
-      form_mode: simplified
-      label_singular: ''
-      label_plural: ''
-      override_labels: false
-      collapsible: false
-      collapsed: false
-    third_party_settings: {  }
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
     region: content
 hidden:
   info: true

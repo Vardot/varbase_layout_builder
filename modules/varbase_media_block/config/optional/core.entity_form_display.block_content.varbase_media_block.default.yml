@@ -3,14 +3,14 @@ status: true
 dependencies:
   config:
     - block_content.type.varbase_media_block
-    - entity_browser.browser.media_browser
     - field.field.block_content.varbase_media_block.field_link
     - field.field.block_content.varbase_media_block.field_media
     - field.field.block_content.varbase_media_block.field_media_view_mode
   module:
-    - entity_browser
     - link
     - maxlength
+    - media_library
+    - media_library_edit
 id: block_content.varbase_media_block.default
 targetEntityType: block_content
 bundle: varbase_media_block
@@ -28,19 +28,18 @@ content:
     type: link_default
     region: content
   field_media:
-    type: entity_browser_entity_reference
+    type: media_library_widget
     weight: 1
     settings:
-      entity_browser: media_browser
-      field_widget_display: rendered_entity
-      field_widget_display_settings:
-        view_mode: field_preview
-      field_widget_edit: true
-      field_widget_remove: true
-      open: true
-      selection_mode: selection_append
-      field_widget_replace: false
-    third_party_settings: {  }
+      media_types:
+        - audio
+        - file
+        - image
+        - remote_video
+        - video
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
     region: content
   field_media_view_mode:
     weight: 2
