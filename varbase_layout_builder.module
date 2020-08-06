@@ -30,6 +30,27 @@ function varbase_layout_builder_form_alter(&$form, FormStateInterface $form_stat
     // Attache the Varbase Layout Builder Colors libraray.
     $form['#attached']['library'][] = 'varbase_layout_builder/vlb-colors';
 
+    // No revision information or revision log message.
+    if (isset($form['revision_information'])) {
+      $form['revision_information']['#disabled'] = TRUE;
+      $form['revision_information']['#attributes']['style'][] = 'display:none;';
+      $form['revision_information']['#prefix'] = '<div style="display:none;">';
+      $form['revision_information']['#suffix'] = '</div>';
+    }
+
+    // Hide revision.
+    if (isset($form['revision'])) {
+      $form['revision']['#default_value'] = TRUE;
+      $form['revision']['#disabled'] = TRUE;
+      $form['revision']['#attributes']['style'][] = 'display:none;';
+    }
+
+    // Hide revision log message.
+    if (isset($form['revision_log_message'])) {
+      $form['revision_log_message']['#disabled'] = TRUE;
+      $form['revision_log_message']['#attributes']['style'][] = 'display:none;';
+    }
+
     // Hide rabbit hole fields.
     if (isset($form['rabbit_hole'])) {
       $form['rabbit_hole']['#access'] = FALSE;
