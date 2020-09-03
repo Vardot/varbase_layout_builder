@@ -5,9 +5,6 @@
  * as it would not be present in this context.
  */
 @import url(../../../../../core/themes/claro/css/components/details.css);
-#layout-builder-modal,
-#modal-media-library {
-}
 
 #layout-builder-modal details,
 #modal-media-library details {
