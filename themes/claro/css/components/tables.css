@@ -4,7 +4,7 @@
  * Maintainers: the import statement presumes a relative location of core css.
  * The location may need to be adjusted depending on your setup.
  */
-@import url(../../../../../core/themes/claro/css/components/tabledrag.css);
+@import url(../../../../../../../core/themes/claro/css/components/tabledrag.css);
 
 #layout-builder-modal table,
 #modal-media-library table {

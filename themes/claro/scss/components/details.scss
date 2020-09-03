@@ -6,7 +6,8 @@
  */
 #layout-builder-modal,
 #modal-media-library {
-  @import "../../../../../core/themes/claro/css/components/details.css";
+  @import "../../../../../../../core/themes/claro/css/components/details.css";
+  // @import url();
   details {
     border: 0;
     .details-wrapper {

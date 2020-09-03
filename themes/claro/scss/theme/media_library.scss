@@ -20,7 +20,7 @@
   .media-library-item__remove.button:disabled,
   .media-library-item__remove.button:disabled:active,
   .media-library-item__remove.button:focus {
-    background: url("./icons/ex.svg") #fff center no-repeat;
+    background: url("../../icons/ex.svg") #fff center no-repeat;
     width: 25px;
     height: 25px;
     top: 10px;
@@ -35,10 +35,10 @@
 
   .media-library-wrapper {
     .views-display-link-widget {
-      background: url(./icons/grid.svg) left 0 no-repeat;
+      background: url(../../icons/grid.svg) left 0 no-repeat;
     }
     .views-display-link-widget_table {
-      background: url(./icons/table.svg) left 0 no-repeat;
+      background: url(../../icons/table.svg) left 0 no-repeat;
     }
   }
 }

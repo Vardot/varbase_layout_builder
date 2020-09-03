@@ -6,7 +6,7 @@
  * The location may need to be adjusted depending on your setup.
  */
 
- #layout-builder-modal .form-element,
+#layout-builder-modal .form-element,
 #modal-media-library .form-element,
 #drupal-modal #media-image-edit-form .form-element {
   -webkit-box-sizing: border-box;

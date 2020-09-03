@@ -4,7 +4,8 @@
  * Maintainers: the import statement presumes a relative location of core css.
  * The location may need to be adjusted depending on your setup.
  */
-@import url(../../../../../themes/contrib/vartheme_claro/css/vartheme-claro.theme.style.css);
+
 #layout-builder-modal,
 #modal-media-library {
+  @import "../../../../../../../themes/contrib/vartheme_claro/css/vartheme-claro.theme.style.css";
 }

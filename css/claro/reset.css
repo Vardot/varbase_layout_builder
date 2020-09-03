@@ -1,9 +1,0 @@
-#layout-builder-modal,
-#modal-media-library {
-  all: initial;
-}
-
-#layout-builder-modal *,
-#modal-media-library * {
-  all: unset;
-}
