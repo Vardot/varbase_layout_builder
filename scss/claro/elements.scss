@@ -1,0 +1,12 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/base/elements.pcss.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+
+@import "../../../../../core/themes/claro/css/base/elements";
+
+html {
+  font-size: 90%;
+}

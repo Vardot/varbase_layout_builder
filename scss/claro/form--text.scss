@@ -1,0 +1,22 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/components/form--text.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+
+#layout-builder-modal,
+#modal-media-library,
+#drupal-modal #media-image-edit-form {
+  @import "../../../../../core/themes/claro/css/components/form--text";
+  @import "../../../../../core/themes/claro/css/components/autocomplete-loading.module";
+
+  .form-element--extrasmall {
+    padding-right: calc(1.5rem - 1px);
+    background-size: 1.75rem 0.4375rem;
+    min-height: 1.5rem;
+    padding: calc(0.15rem - 1px) calc(0.5rem - 1px);
+    font-size: 0.889rem;
+    line-height: 1.2rem;
+  }
+}

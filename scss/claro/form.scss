@@ -1,0 +1,42 @@
+/**
+ * Wrapped content from core/themes/claro/css/components/form.css.
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+
+#layout-builder-modal,
+#modal-media-library,
+#drupal-modal #media-image-edit-form {
+  @import "../../../../../core/themes/claro/css/components/form";
+  legend {
+    font-size: initial;
+    width: auto;
+    font-weight: bold;
+  }
+  .form-control {
+    &:focus {
+      outline: 2px dotted transparent;
+      box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769;
+    }
+  }
+  .label {
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    text-transform: inherit;
+  }
+  .form-actions {
+    align-items: center;
+  }
+}
+
+[dir="rtl"] {
+  #layout-builder-modal,
+  #modal-media-library {
+    tr {
+      .form-item {
+        text-align: right;
+      }
+    }
+  }
+}

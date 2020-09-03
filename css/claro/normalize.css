@@ -1,0 +1,477 @@
+#layout-builder-modal,
+#modal-media-library {
+  /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+  /**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+  /**
+ * Remove default margin.
+ */
+  /* HTML5 display definitions
+   ========================================================================== */
+  /**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+  /**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+  /**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+  /**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+  /* Links
+   ========================================================================== */
+  /**
+ * Remove the gray background color from active links in IE 10.
+ */
+  /**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+  /* Text-level semantics
+   ========================================================================== */
+  /**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+  /**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+  /**
+ * Address styling not present in Safari and Chrome.
+ */
+  /**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+  /**
+ * Address styling not present in IE 8/9.
+ */
+  /**
+ * Address inconsistent and variable font size in all browsers.
+ */
+  /**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+  /* Embedded content
+   ========================================================================== */
+  /**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+  /**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+  /* Grouping content
+   ========================================================================== */
+  /**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+  /**
+ * Address differences between Firefox and other browsers.
+ */
+  /**
+ * Contain overflow in all browsers.
+ */
+  /**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+  /* Forms
+   ========================================================================== */
+  /**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+  /**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+  /**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+  /**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+  /**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+  /**
+ * Re-set default cursor for disabled elements.
+ */
+  /**
+ * Remove inner padding and border in Firefox 4+.
+ */
+  /**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+  /**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+  /**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+  /**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+  /**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+  /**
+ * Define consistent border, margin, and padding.
+ */
+  /**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+  /**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+  /**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+  /* Tables
+   ========================================================================== */
+  /**
+ * Remove most spacing between table cells.
+ */
+}
+
+#layout-builder-modal html,
+#modal-media-library html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+#layout-builder-modal body,
+#modal-media-library body {
+  margin: 0;
+}
+
+#layout-builder-modal article,
+#layout-builder-modal aside,
+#layout-builder-modal details,
+#layout-builder-modal figcaption,
+#layout-builder-modal figure,
+#layout-builder-modal footer,
+#layout-builder-modal header,
+#layout-builder-modal hgroup,
+#layout-builder-modal main,
+#layout-builder-modal menu,
+#layout-builder-modal nav,
+#layout-builder-modal section,
+#layout-builder-modal summary,
+#modal-media-library article,
+#modal-media-library aside,
+#modal-media-library details,
+#modal-media-library figcaption,
+#modal-media-library figure,
+#modal-media-library footer,
+#modal-media-library header,
+#modal-media-library hgroup,
+#modal-media-library main,
+#modal-media-library menu,
+#modal-media-library nav,
+#modal-media-library section,
+#modal-media-library summary {
+  display: block;
+}
+
+#layout-builder-modal audio,
+#layout-builder-modal canvas,
+#layout-builder-modal progress,
+#layout-builder-modal video,
+#modal-media-library audio,
+#modal-media-library canvas,
+#modal-media-library progress,
+#modal-media-library video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+#layout-builder-modal audio:not([controls]),
+#modal-media-library audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+#layout-builder-modal [hidden],
+#layout-builder-modal template,
+#modal-media-library [hidden],
+#modal-media-library template {
+  display: none;
+}
+
+#layout-builder-modal a,
+#modal-media-library a {
+  background-color: transparent;
+}
+
+#layout-builder-modal a:active,
+#layout-builder-modal a:hover,
+#modal-media-library a:active,
+#modal-media-library a:hover {
+  outline: 0;
+}
+
+#layout-builder-modal abbr[title],
+#modal-media-library abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+#layout-builder-modal b,
+#layout-builder-modal strong,
+#modal-media-library b,
+#modal-media-library strong {
+  font-weight: bold;
+}
+
+#layout-builder-modal dfn,
+#modal-media-library dfn {
+  font-style: italic;
+}
+
+#layout-builder-modal h1,
+#modal-media-library h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+#layout-builder-modal mark,
+#modal-media-library mark {
+  background: #ff0;
+  color: #000;
+}
+
+#layout-builder-modal small,
+#modal-media-library small {
+  font-size: 80%;
+}
+
+#layout-builder-modal sub,
+#layout-builder-modal sup,
+#modal-media-library sub,
+#modal-media-library sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+#layout-builder-modal sup,
+#modal-media-library sup {
+  top: -0.5em;
+}
+
+#layout-builder-modal sub,
+#modal-media-library sub {
+  bottom: -0.25em;
+}
+
+#layout-builder-modal img,
+#modal-media-library img {
+  border: 0;
+}
+
+#layout-builder-modal svg:not(:root),
+#modal-media-library svg:not(:root) {
+  overflow: hidden;
+}
+
+#layout-builder-modal figure,
+#modal-media-library figure {
+  margin: 1em 40px;
+}
+
+#layout-builder-modal hr,
+#modal-media-library hr {
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  height: 0;
+}
+
+#layout-builder-modal pre,
+#modal-media-library pre {
+  overflow: auto;
+}
+
+#layout-builder-modal code,
+#layout-builder-modal kbd,
+#layout-builder-modal pre,
+#layout-builder-modal samp,
+#modal-media-library code,
+#modal-media-library kbd,
+#modal-media-library pre,
+#modal-media-library samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+#layout-builder-modal button,
+#layout-builder-modal input,
+#layout-builder-modal optgroup,
+#layout-builder-modal select,
+#layout-builder-modal textarea,
+#modal-media-library button,
+#modal-media-library input,
+#modal-media-library optgroup,
+#modal-media-library select,
+#modal-media-library textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+#layout-builder-modal button,
+#modal-media-library button {
+  overflow: visible;
+}
+
+#layout-builder-modal button,
+#layout-builder-modal select,
+#modal-media-library button,
+#modal-media-library select {
+  text-transform: none;
+}
+
+#layout-builder-modal button,
+#layout-builder-modal html input[type="button"],
+#layout-builder-modal input[type="reset"],
+#layout-builder-modal input[type="submit"],
+#modal-media-library button,
+#modal-media-library html input[type="button"],
+#modal-media-library input[type="reset"],
+#modal-media-library input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+#layout-builder-modal button[disabled],
+#layout-builder-modal html input[disabled],
+#modal-media-library button[disabled],
+#modal-media-library html input[disabled] {
+  cursor: default;
+}
+
+#layout-builder-modal button::-moz-focus-inner,
+#layout-builder-modal input::-moz-focus-inner,
+#modal-media-library button::-moz-focus-inner,
+#modal-media-library input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+#layout-builder-modal input,
+#modal-media-library input {
+  line-height: normal;
+}
+
+#layout-builder-modal input[type="checkbox"],
+#layout-builder-modal input[type="radio"],
+#modal-media-library input[type="checkbox"],
+#modal-media-library input[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+#layout-builder-modal input[type="number"]::-webkit-inner-spin-button,
+#layout-builder-modal input[type="number"]::-webkit-outer-spin-button,
+#modal-media-library input[type="number"]::-webkit-inner-spin-button,
+#modal-media-library input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+#layout-builder-modal input[type="search"],
+#modal-media-library input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  /* 2 */
+}
+
+#layout-builder-modal input[type="search"]::-webkit-search-cancel-button,
+#layout-builder-modal input[type="search"]::-webkit-search-decoration,
+#modal-media-library input[type="search"]::-webkit-search-cancel-button,
+#modal-media-library input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+#layout-builder-modal fieldset,
+#modal-media-library fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+#layout-builder-modal legend,
+#modal-media-library legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+#layout-builder-modal textarea,
+#modal-media-library textarea {
+  overflow: auto;
+}
+
+#layout-builder-modal optgroup,
+#modal-media-library optgroup {
+  font-weight: bold;
+}
+
+#layout-builder-modal table,
+#modal-media-library table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#layout-builder-modal td,
+#layout-builder-modal th,
+#modal-media-library td,
+#modal-media-library th {
+  padding: 0;
+}

@@ -37,3 +37,45 @@ vlb-colors:
   css:
     theme:
       css/theme/vlb-colors.theme.css: {}
+
+# Layout builder modal claro theme 
+claro:
+  version: VERSION
+  css:
+    base:
+      css/claro/elements.css: {}
+    component:
+      css/claro/accordion.css: {}
+      css/claro/action-link.css: {}
+      css/claro/autocomplete-loading.module.css: {}
+      css/claro/container-inline.css: {}
+      css/claro/container-inline.module.css: {}
+      css/claro/buttons.css: {}
+      css/claro/details.css: {}
+      css/claro/divider.css: {}
+      css/claro/dialog.css: {}
+      css/claro/messages.css: {}
+      css/claro/media_library.css: {}
+      css/claro/entity-meta.css: {}
+      css/claro/fieldset.css: {}
+      css/claro/js.css: {}
+      css/claro/form.css: {}
+      css/claro/form--checkbox-radio.css: {}
+      css/claro/form--checkbox-radio--ie.css: {}
+      css/claro/form--field-multiple.css: {}
+      css/claro/form--managed-file.css: {}
+      css/claro/form--text.css: {}
+      css/claro/form--select.css: {}
+      css/claro/help.css: {}
+      css/claro/image-preview.css: {}
+      css/claro/menus-and-lists.css: {}
+      css/claro/pager.css: {}
+      css/claro/skip-link.css: {}
+      css/claro/tables.css: {}
+      css/claro/table--file-multiple-widget.css: {}
+      css/claro/search-admin-settings.css: {}
+      css/claro/tablesort-indicator.css: {}
+      css/claro/tabs.css: {}
+      css/claro/views-exposed-form.css: {}
+      css/claro/views-ui.css: {}
+      css/claro/vartheme-claro.theme.style.css: {}

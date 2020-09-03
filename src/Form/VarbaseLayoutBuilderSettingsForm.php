@@ -45,6 +45,11 @@ class VarbaseLayoutBuilderSettingsForm extends ConfigFormBase {
       '#cols' => 60,
       '#rows' => 10,
     ];
+    $form['settings']['use_claro'] = [
+      '#type' => 'checkbox',
+      '#default_value' => $config->get('use_claro'),
+      '#title' => $this->t('Use claro theme inside layout builder modal'),
+    ];
 
     return parent::buildForm($form, $form_state);
   }
@@ -56,6 +61,7 @@ class VarbaseLayoutBuilderSettingsForm extends ConfigFormBase {
 
     $config = $this->config('varbase_layout_builder.settings');
     $config->set('background_colors', $form_state->getValue('background_colors'));
+    $config->set('use_claro', $form_state->getValue('use_claro'));
     $config->save();
 
     parent::submitForm($form, $form_state);

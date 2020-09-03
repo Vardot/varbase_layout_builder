@@ -3,3 +3,8 @@ services:
     class: Drupal\varbase_layout_builder\Routing\VLBRouteAlter
     tags:
     - { name: 'event_subscriber' }
+  varbase_layout_builder.negotiator.ajax_base_page:
+    class: Drupal\varbase_layout_builder\Theme\ThemeNegotiator
+    arguments: ['@csrf_token', '@config.factory', '@request_stack']
+    tags:
+      - { name: theme_negotiator, priority: 5000 }
