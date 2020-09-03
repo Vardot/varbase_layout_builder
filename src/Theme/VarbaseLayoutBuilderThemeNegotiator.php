@@ -11,9 +11,7 @@ use Drupal\Core\Theme\AjaxBasePageNegotiator;
 use Drupal\Core\Access\CsrfTokenGenerator;
 use Symfony\Component\HttpFoundation\RequestStack;
 
-
-class ThemeNegotiator extends AjaxBasePageNegotiator {
-
+class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
 
   /**
    * The CSRF token generator.
@@ -57,7 +55,14 @@ class ThemeNegotiator extends AjaxBasePageNegotiator {
    * @return bool
    */
   public function applies(RouteMatchInterface $route_match) {
-    return $this->getTheme($route_match) ? true : false;
+    $dialog_options = $this->requestStack->getCurrentRequest()->request->get('dialogOptions')['target'];
+    $offcanvas = $this->requestStack->getCurrentRequest()->query->get('_wrapper_format');
+    if ($dialog_options != NULL) {
+      return $this->getTheme($dialog_options) ? true : false;
+    }
+    else {
+      return $this->getTheme($offcanvas) ? true : false;
+    }
   }
   
   /**
@@ -66,7 +71,15 @@ class ThemeNegotiator extends AjaxBasePageNegotiator {
    * @return null|string
    */
   public function determineActiveTheme(RouteMatchInterface $route_match) {
-    return $this->getTheme($route_match) ?: null;
+    $dialog_options = $this->requestStack->getCurrentRequest()->request->get('dialogOptions')['target'];
+    $offcanvas = $this->requestStack->getCurrentRequest()->query->get('_wrapper_format');
+    if ($dialog_options != NULL) {
+      return $this->getTheme($dialog_options) ?: null;
+    }
+    else {
+      return $this->getTheme($offcanvas) ?: null;
+    }
+
   }
 
   /**
@@ -74,18 +87,17 @@ class ThemeNegotiator extends AjaxBasePageNegotiator {
    * @param RouteMatchInterface $route_match
    * @return bool|string
    */
-  private function getTheme(RouteMatchInterface $route_match) {
+  private function getTheme($dialog_or_offcanvas) {
     $config = \Drupal::config('varbase_layout_builder.settings');
 
-    $applied_routes = ['layout_builder.update_block', 'layout_builder.add_block'];
-    if (in_array($route_match->getRouteName(), $applied_routes)) {
+    if ($dialog_or_offcanvas == "layout-builder-modal") {
       if (isset($config)) {
         if ($config->get('use_claro') == 1) {
           return "claro";
         }
       }
     }
-    elseif ($route_match->getRouteName() == 'layout_builder.configure_section_form') {
+    elseif ($dialog_or_offcanvas == 'drupal_dialog.off_canvas') {
       return \Drupal::config('system.theme')->get('default');
     }
     return NULL;
