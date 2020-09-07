@@ -57,6 +57,18 @@ function varbase_layout_builder_form_alter(&$form, FormStateInterface $form_stat
     }
   }
 
+  // Add claro theme libraries
+  $applicable_forms = [
+    'layout_builder_add_block',
+    'layout_builder_update_block',
+    'media_image_edit_form',
+  ];
+  if (in_array($form_id, $applicable_forms)) {
+    $config = \Drupal::config('varbase_layout_builder.settings');
+    if ($config->get('use_claro') == 1) {
+      $form['#attached']['library'][] = 'varbase_layout_builder/claro';
+    }
+  }
 }
 
 /**

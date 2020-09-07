@@ -1,0 +1,7 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/components/views-exposed-form.css.
+ * This has been modified to remove the .seven-details class,
+ * as it would not be present in this context.
+ */
+@import url(../../../../../../../core/themes/claro/css/components/views-exposed-form.css);

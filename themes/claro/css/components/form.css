@@ -1,0 +1,373 @@
+/**
+ * Wrapped content from core/themes/claro/css/components/form.css.
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+
+#layout-builder-modal :-ms-input-placeholder,
+#modal-media-library :-ms-input-placeholder,
+#drupal-modal #media-image-edit-form :-ms-input-placeholder {
+  color: #8e929c;
+}
+
+#layout-builder-modal ::-webkit-input-placeholder,
+#modal-media-library ::-webkit-input-placeholder,
+#drupal-modal #media-image-edit-form ::-webkit-input-placeholder {
+  color: #8e929c;
+}
+
+#layout-builder-modal ::-moz-placeholder,
+#modal-media-library ::-moz-placeholder,
+#drupal-modal #media-image-edit-form ::-moz-placeholder {
+  color: #8e929c;
+}
+
+#layout-builder-modal ::-ms-input-placeholder,
+#modal-media-library ::-ms-input-placeholder,
+#drupal-modal #media-image-edit-form ::-ms-input-placeholder {
+  color: #8e929c;
+}
+
+#layout-builder-modal ::placeholder,
+#modal-media-library ::placeholder,
+#drupal-modal #media-image-edit-form ::placeholder {
+  color: #8e929c;
+}
+
+#layout-builder-modal :-ms-input-placeholder,
+#modal-media-library :-ms-input-placeholder,
+#drupal-modal #media-image-edit-form :-ms-input-placeholder {
+  color: #8e929c !important;
+}
+
+#layout-builder-modal .form-item,
+#modal-media-library .form-item,
+#drupal-modal #media-image-edit-form .form-item {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+#layout-builder-modal tr .form-item,
+#layout-builder-modal .container-inline .form-item,
+#modal-media-library tr .form-item,
+#modal-media-library .container-inline .form-item,
+#drupal-modal #media-image-edit-form tr .form-item,
+#drupal-modal #media-image-edit-form .container-inline .form-item {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+#layout-builder-modal .form-item__label,
+#modal-media-library .form-item__label,
+#drupal-modal #media-image-edit-form .form-item__label {
+  display: table;
+  margin-top: 0.25rem;
+  /* 4px */
+  margin-bottom: 0.25rem;
+  /* 4px */
+  font-size: 0.889rem;
+  /* ~14px */
+  font-weight: bold;
+  line-height: 1.125rem;
+  /* 18px */
+}
+
+#layout-builder-modal .form-item__label--multiple-value-form,
+#modal-media-library .form-item__label--multiple-value-form,
+#drupal-modal #media-image-edit-form .form-item__label--multiple-value-form {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+#layout-builder-modal .form-item__label[for],
+#modal-media-library .form-item__label[for],
+#drupal-modal #media-image-edit-form .form-item__label[for] {
+  cursor: pointer;
+}
+
+#layout-builder-modal .form-item__label.option,
+#modal-media-library .form-item__label.option,
+#drupal-modal #media-image-edit-form .form-item__label.option {
+  display: inline;
+  font-weight: normal;
+}
+
+#layout-builder-modal .form-item__label.has-error,
+#modal-media-library .form-item__label.has-error,
+#drupal-modal #media-image-edit-form .form-item__label.has-error {
+  color: #d72222;
+}
+
+#layout-builder-modal .form-item__label.option.has-error,
+#modal-media-library .form-item__label.option.has-error,
+#drupal-modal #media-image-edit-form .form-item__label.option.has-error {
+  color: inherit;
+}
+
+#layout-builder-modal .form-item__label.is-disabled,
+#modal-media-library .form-item__label.is-disabled,
+#drupal-modal #media-image-edit-form .form-item__label.is-disabled {
+  cursor: default;
+  /* @todo ...or auto? */
+  color: #82828c;
+}
+
+#layout-builder-modal .form-item__label.form-required::after,
+#layout-builder-modal .fieldset__label.form-required::after,
+#modal-media-library .form-item__label.form-required::after,
+#modal-media-library .fieldset__label.form-required::after,
+#drupal-modal #media-image-edit-form .form-item__label.form-required::after,
+#drupal-modal #media-image-edit-form .fieldset__label.form-required::after {
+  display: inline-block;
+  width: 0.4375rem;
+  height: 0.4375rem;
+  margin-right: 0.3em;
+  margin-left: 0.3em;
+  content: "";
+  vertical-align: super;
+  /* Use a background image to prevent screen readers from announcing the text. */
+  background-image: url(../../images/core/ee0000/required.svg);
+  background-repeat: no-repeat;
+  -webkit-background-size: 0.4375rem 0.4375rem;
+          background-size: 0.4375rem 0.4375rem;
+}
+
+#layout-builder-modal .form-item__description,
+#modal-media-library .form-item__description,
+#drupal-modal #media-image-edit-form .form-item__description {
+  margin-top: 0.375rem;
+  /* 6px */
+  margin-bottom: 0.375rem;
+  /* 6px */
+  color: #545560;
+  font-size: 0.79rem;
+  /* ~13px */
+  line-height: 1.0625rem;
+  /* 17px */
+}
+
+#layout-builder-modal .form-item__description.is-disabled,
+#modal-media-library .form-item__description.is-disabled,
+#drupal-modal #media-image-edit-form .form-item__description.is-disabled {
+  color: #82828c;
+}
+
+#layout-builder-modal .form-item__error-message,
+#modal-media-library .form-item__error-message,
+#drupal-modal #media-image-edit-form .form-item__error-message {
+  margin-top: 0.375rem;
+  /* 6px */
+  margin-bottom: 0.375rem;
+  /* 6px */
+  color: #d72222;
+  font-size: 0.79rem;
+  /* ~13px */
+  font-weight: normal;
+  line-height: 1.0625rem;
+  /* 17px */
+}
+
+#layout-builder-modal .form-item__prefix.is-disabled,
+#layout-builder-modal .form-item__suffix.is-disabled,
+#modal-media-library .form-item__prefix.is-disabled,
+#modal-media-library .form-item__suffix.is-disabled,
+#drupal-modal #media-image-edit-form .form-item__prefix.is-disabled,
+#drupal-modal #media-image-edit-form .form-item__suffix.is-disabled {
+  color: #82828c;
+}
+
+@media screen and (min-width: 601px) {
+  #layout-builder-modal .form-item__suffix,
+  #modal-media-library .form-item__suffix,
+  #drupal-modal #media-image-edit-form .form-item__suffix {
+    margin-left: 0.5rem;
+    /* LTR */
+  }
+  #layout-builder-modal [dir="rtl"] .form-item__suffix,
+  #modal-media-library [dir="rtl"] .form-item__suffix,
+  #drupal-modal #media-image-edit-form [dir="rtl"] .form-item__suffix {
+    margin-right: 0.5rem;
+    margin-left: 0;
+  }
+}
+
+#layout-builder-modal .form-actions,
+#modal-media-library .form-actions,
+#drupal-modal #media-image-edit-form .form-actions {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#layout-builder-modal .form-actions .button,
+#layout-builder-modal .form-actions .action-link,
+#modal-media-library .form-actions .button,
+#modal-media-library .form-actions .action-link,
+#drupal-modal #media-image-edit-form .form-actions .button,
+#drupal-modal #media-image-edit-form .form-actions .action-link {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#layout-builder-modal .form-actions .ajax-progress--throbber,
+#modal-media-library .form-actions .ajax-progress--throbber,
+#drupal-modal #media-image-edit-form .form-actions .ajax-progress--throbber {
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+}
+
+#layout-builder-modal .confirm-parent,
+#layout-builder-modal .password-parent,
+#modal-media-library .confirm-parent,
+#modal-media-library .password-parent,
+#drupal-modal #media-image-edit-form .confirm-parent,
+#drupal-modal #media-image-edit-form .password-parent {
+  overflow: visible;
+  width: auto;
+}
+
+#layout-builder-modal .form-item-options-group-info-identifier,
+#layout-builder-modal .form-item-pass .description,
+#modal-media-library .form-item-options-group-info-identifier,
+#modal-media-library .form-item-pass .description,
+#drupal-modal #media-image-edit-form .form-item-options-group-info-identifier,
+#drupal-modal #media-image-edit-form .form-item-pass .description {
+  clear: both;
+}
+
+#layout-builder-modal .form-item--editor-format,
+#modal-media-library .form-item--editor-format,
+#drupal-modal #media-image-edit-form .form-item--editor-format {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 100%;
+}
+
+#layout-builder-modal .form-item--editor-format .form-item__label,
+#layout-builder-modal .form-item--editor-format .form-item__prefix,
+#layout-builder-modal .form-item--editor-format .form-item__suffix,
+#layout-builder-modal .form-item--editor-format .form-element--editor-format,
+#modal-media-library .form-item--editor-format .form-item__label,
+#modal-media-library .form-item--editor-format .form-item__prefix,
+#modal-media-library .form-item--editor-format .form-item__suffix,
+#modal-media-library .form-item--editor-format .form-element--editor-format,
+#drupal-modal #media-image-edit-form .form-item--editor-format .form-item__label,
+#drupal-modal #media-image-edit-form .form-item--editor-format .form-item__prefix,
+#drupal-modal #media-image-edit-form .form-item--editor-format .form-item__suffix,
+#drupal-modal #media-image-edit-form .form-item--editor-format .form-element--editor-format {
+  min-width: 1px;
+}
+
+#layout-builder-modal .form-item--editor-format .form-item__label,
+#layout-builder-modal .form-item--editor-format .form-item__prefix,
+#layout-builder-modal .form-item--editor-format .form-item__suffix,
+#modal-media-library .form-item--editor-format .form-item__label,
+#modal-media-library .form-item--editor-format .form-item__prefix,
+#modal-media-library .form-item--editor-format .form-item__suffix,
+#drupal-modal #media-image-edit-form .form-item--editor-format .form-item__label,
+#drupal-modal #media-image-edit-form .form-item--editor-format .form-item__prefix,
+#drupal-modal #media-image-edit-form .form-item--editor-format .form-item__suffix {
+  margin-right: 0.5rem;
+  /* LTR */
+}
+
+#layout-builder-modal [dir="rtl"] .form-item--editor-format .form-item__label,
+#layout-builder-modal [dir="rtl"] .form-item--editor-format .form-item__prefix,
+#layout-builder-modal [dir="rtl"] .form-item--editor-format .form-item__suffix,
+#modal-media-library [dir="rtl"] .form-item--editor-format .form-item__label,
+#modal-media-library [dir="rtl"] .form-item--editor-format .form-item__prefix,
+#modal-media-library [dir="rtl"] .form-item--editor-format .form-item__suffix,
+#drupal-modal #media-image-edit-form [dir="rtl"] .form-item--editor-format .form-item__label,
+#drupal-modal #media-image-edit-form [dir="rtl"] .form-item--editor-format .form-item__prefix,
+#drupal-modal #media-image-edit-form [dir="rtl"] .form-item--editor-format .form-item__suffix {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
+#layout-builder-modal .form-item--editor-format .form-item__description,
+#layout-builder-modal .form-item--editor-format .form-item__error-message,
+#modal-media-library .form-item--editor-format .form-item__description,
+#modal-media-library .form-item--editor-format .form-item__error-message,
+#drupal-modal #media-image-edit-form .form-item--editor-format .form-item__description,
+#drupal-modal #media-image-edit-form .form-item--editor-format .form-item__error-message {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 100%;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+  min-width: 1px;
+}
+
+@media screen and (max-width: 600px) {
+  #layout-builder-modal .password-strength,
+  #modal-media-library .password-strength,
+  #drupal-modal #media-image-edit-form .password-strength {
+    width: 100%;
+  }
+  #layout-builder-modal div.form-item div.password-suggestions,
+  #modal-media-library div.form-item div.password-suggestions,
+  #drupal-modal #media-image-edit-form div.form-item div.password-suggestions {
+    float: none;
+  }
+}
+
+#layout-builder-modal legend,
+#modal-media-library legend,
+#drupal-modal #media-image-edit-form legend {
+  font-size: initial;
+  width: auto;
+  font-weight: bold;
+}
+
+#layout-builder-modal .form-control:focus,
+#modal-media-library .form-control:focus,
+#drupal-modal #media-image-edit-form .form-control:focus {
+  outline: 2px dotted transparent;
+  -webkit-box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769;
+          box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769;
+}
+
+#layout-builder-modal .label,
+#modal-media-library .label,
+#drupal-modal #media-image-edit-form .label {
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-transform: inherit;
+}
+
+#layout-builder-modal .form-actions,
+#modal-media-library .form-actions,
+#drupal-modal #media-image-edit-form .form-actions {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+[dir="rtl"] #layout-builder-modal tr .form-item,
+[dir="rtl"] #modal-media-library tr .form-item {
+  text-align: right;
+}

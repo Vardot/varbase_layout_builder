@@ -1,0 +1,169 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/components/fieldset.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+
+#layout-builder-modal .fieldset,
+#modal-media-library .fieldset {
+  min-width: 0;
+  margin: 1rem 0;
+  padding: 0;
+  color: #222330;
+  border: 1px solid rgba(216, 217, 224, 0.8);
+  border-radius: 2px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#layout-builder-modal .fieldset--group,
+#modal-media-library .fieldset--group {
+  color: inherit;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+#layout-builder-modal _:-ms-fullscreen,
+#layout-builder-modal .fieldset,
+#modal-media-library _:-ms-fullscreen,
+#modal-media-library .fieldset {
+  display: table;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+#layout-builder-modal .fieldset__legend,
+#modal-media-library .fieldset__legend {
+  display: contents;
+  /* For Firefox. */
+  float: left;
+  /* iOS Safari, Android Chrome, Edge. */
+  width: 100%;
+  /* iOS Safari, Android Chrome, Edge. */
+  margin-bottom: 1rem;
+  color: #545560;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 48em) {
+  #layout-builder-modal .fieldset__legend,
+  #modal-media-library .fieldset__legend {
+    margin-bottom: 1.5rem;
+  }
+}
+
+#layout-builder-modal .fieldset__legend--composite,
+#modal-media-library .fieldset__legend--composite {
+  float: none;
+  width: auto;
+  margin-top: 0;
+  /* IE11 and Edge do not collapse this margin. Ideally this would be 4px */
+  margin-bottom: 0.25rem;
+  /* 4px */
+  color: inherit;
+  font-size: 0.889rem;
+  /* 14px */
+  line-height: 1.125rem;
+  /* 18px */
+}
+
+#layout-builder-modal .fieldset__legend--group,
+#modal-media-library .fieldset__legend--group {
+  text-transform: uppercase;
+  color: inherit;
+}
+
+#layout-builder-modal .fieldset__label,
+#modal-media-library .fieldset__label {
+  display: block;
+  padding: 1rem;
+  line-height: 1rem;
+}
+
+@media screen and (min-width: 48em) {
+  #layout-builder-modal .fieldset__label,
+  #modal-media-library .fieldset__label {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+}
+
+#layout-builder-modal .fieldset__label--group,
+#modal-media-library .fieldset__label--group {
+  padding: 0;
+  line-height: inherit;
+}
+
+#layout-builder-modal .fieldset__label.is-disabled,
+#modal-media-library .fieldset__label.is-disabled {
+  color: #82828c;
+}
+
+#layout-builder-modal .fieldset__label.has-error,
+#modal-media-library .fieldset__label.has-error {
+  color: #d72222;
+}
+
+#layout-builder-modal .fieldset__description,
+#modal-media-library .fieldset__description {
+  margin-top: 0.375rem;
+  /* 6px */
+  margin-bottom: 0.375rem;
+  /* 6px */
+  color: #545560;
+  font-size: 0.79rem;
+  /* ~13px */
+  line-height: 1.0625rem;
+  /* 17px */
+}
+
+#layout-builder-modal .fieldset__description.is-disabled,
+#modal-media-library .fieldset__description.is-disabled {
+  color: #82828c;
+}
+
+#layout-builder-modal .fieldset__error-message,
+#modal-media-library .fieldset__error-message {
+  margin-top: 0.375rem;
+  /* 6px */
+  margin-bottom: 0.375rem;
+  /* 6px */
+  color: #d72222;
+  font-size: 0.79rem;
+  /* ~13px */
+  font-weight: normal;
+  line-height: 1.0625rem;
+  /* 17px */
+}
+
+#layout-builder-modal .fieldset__wrapper,
+#modal-media-library .fieldset__wrapper {
+  margin: 1rem;
+}
+
+@media screen and (min-width: 48em) {
+  #layout-builder-modal .fieldset__wrapper,
+  #modal-media-library .fieldset__wrapper {
+    margin: 1.5rem 1.5rem 1.75rem;
+  }
+}
+
+#layout-builder-modal .fieldset__legend--visible ~ .fieldset__wrapper,
+#modal-media-library .fieldset__legend--visible ~ .fieldset__wrapper {
+  margin-top: 0;
+}
+
+#layout-builder-modal .fieldset__wrapper--group,
+#modal-media-library .fieldset__wrapper--group {
+  margin: 0;
+}
+
+#layout-builder-modal .fieldset__wrapper > .container-inline,
+#modal-media-library .fieldset__wrapper > .container-inline {
+  padding: 0;
+}

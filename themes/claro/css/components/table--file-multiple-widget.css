@@ -1,0 +1,126 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/components/table--file-multiple-widget.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+
+#layout-builder-modal .table-file-multiple-widget tbody,
+#modal-media-library .table-file-multiple-widget tbody {
+  vertical-align: top;
+}
+
+#layout-builder-modal .table-file-multiple-widget .tabledrag-cell-content,
+#modal-media-library .table-file-multiple-widget .tabledrag-cell-content {
+  position: relative;
+  display: block;
+  height: auto;
+}
+
+#layout-builder-modal .table-file-multiple-widget .tabledrag-cell-content > *,
+#modal-media-library .table-file-multiple-widget .tabledrag-cell-content > * {
+  display: block;
+}
+
+#layout-builder-modal .table-file-multiple-widget .tabledrag-cell-content__item,
+#modal-media-library .table-file-multiple-widget .tabledrag-cell-content__item {
+  padding: 0;
+}
+
+#layout-builder-modal .table-file-multiple-widget .tabledrag-handle,
+#modal-media-library .table-file-multiple-widget .tabledrag-handle {
+  float: left;
+  /* LTR */
+}
+
+#layout-builder-modal [dir="rtl"] .table-file-multiple-widget .tabledrag-handle,
+#modal-media-library [dir="rtl"] .table-file-multiple-widget .tabledrag-handle {
+  float: right;
+}
+
+#layout-builder-modal .table-file-multiple-widget .tabledrag-changed,
+#modal-media-library .table-file-multiple-widget .tabledrag-changed {
+  float: left;
+  /* LTR */
+  line-height: 2.0625rem;
+}
+
+#layout-builder-modal [dir="rtl"] .table-file-multiple-widget .tabledrag-changed,
+#modal-media-library [dir="rtl"] .table-file-multiple-widget .tabledrag-changed {
+  float: left;
+}
+
+#layout-builder-modal .table-file-multiple-widget td,
+#modal-media-library .table-file-multiple-widget td {
+  height: 3rem;
+}
+
+#layout-builder-modal .table-file-multiple-widget td > :first-child,
+#modal-media-library .table-file-multiple-widget td > :first-child {
+  margin-top: 0;
+}
+
+#layout-builder-modal .table-file-multiple-widget td > :last-child,
+#modal-media-library .table-file-multiple-widget td > :last-child {
+  margin-bottom: 0;
+}
+
+#layout-builder-modal .table-file-multiple-widget .button.button:only-child,
+#modal-media-library .table-file-multiple-widget .button.button:only-child {
+  margin: 0;
+}
+
+#layout-builder-modal .table-file-multiple-widget th,
+#modal-media-library .table-file-multiple-widget th {
+  height: 2rem;
+  color: #545560;
+  background: #f3f4f9;
+  font-size: 0.889rem;
+}
+
+#layout-builder-modal .table-file-multiple-widget td,
+#modal-media-library .table-file-multiple-widget td {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+#layout-builder-modal .table-file-multiple-widget .tabledrag-cell,
+#modal-media-library .table-file-multiple-widget .tabledrag-cell {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+#layout-builder-modal .table-file-multiple-widget .checkbox .form-type--boolean,
+#modal-media-library .table-file-multiple-widget .checkbox .form-type--boolean {
+  line-height: 3rem;
+}
+
+#layout-builder-modal .no-touchevents .table-file-multiple-widget .checkbox .form-type--boolean,
+#modal-media-library .no-touchevents .table-file-multiple-widget .checkbox .form-type--boolean {
+  line-height: 1.5;
+}
+
+#layout-builder-modal .file-operations-cell,
+#modal-media-library .file-operations-cell {
+  width: 1px;
+  white-space: nowrap;
+  /* Don't let ajax-progress be broken into a new line. */
+}
+
+#layout-builder-modal .table-file-multiple-widget--no-upload > tbody:last-child > tr:last-child,
+#modal-media-library .table-file-multiple-widget--no-upload > tbody:last-child > tr:last-child {
+  border-bottom: 0;
+}
+
+@media screen and (max-width: 37.5em) {
+  #layout-builder-modal .claro-details__wrapper .file-widget-multiple__table-wrapper,
+  #modal-media-library .claro-details__wrapper .file-widget-multiple__table-wrapper {
+    margin-right: -1rem;
+    margin-left: -1rem;
+  }
+  #layout-builder-modal .claro-details__wrapper .file-widget-multiple__table-wrapper > :not(table),
+  #modal-media-library .claro-details__wrapper .file-widget-multiple__table-wrapper > :not(table) {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+}

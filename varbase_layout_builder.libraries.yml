@@ -37,3 +37,46 @@ vlb-colors:
   css:
     theme:
       css/theme/vlb-colors.theme.css: {}
+
+# Layout builder modal claro theme 
+claro:
+  version: VERSION
+  css:
+    base:
+      themes/claro/css/base/elements.css: {}
+    component:
+      themes/claro/css/components/accordion.css: {}
+      themes/claro/css/components/action-link.css: {}
+      themes/claro/css/components/autocomplete-loading.module.css: {}
+      themes/claro/css/components/container-inline.css: {}
+      themes/claro/css/components/container-inline.module.css: {}
+      themes/claro/css/components/buttons.css: {}
+      themes/claro/css/components/details.css: {}
+      themes/claro/css/components/divider.css: {}
+      themes/claro/css/components/dialog.css: {}
+      themes/claro/css/components/messages.css: {}
+      themes/claro/css/components/entity-meta.css: {}
+      themes/claro/css/components/fieldset.css: {}
+      themes/claro/css/components/form.css: {}
+      themes/claro/css/components/form--checkbox-radio.css: {}
+      themes/claro/css/components/form--checkbox-radio--ie.css: {}
+      themes/claro/css/components/form--field-multiple.css: {}
+      themes/claro/css/components/form--managed-file.css: {}
+      themes/claro/css/components/form--text.css: {}
+      themes/claro/css/components/form--select.css: {}
+      themes/claro/css/components/help.css: {}
+      themes/claro/css/components/image-preview.css: {}
+      themes/claro/css/components/menus-and-lists.css: {}
+      themes/claro/css/components/pager.css: {}
+      themes/claro/css/components/skip-link.css: {}
+      themes/claro/css/components/tables.css: {}
+      themes/claro/css/components/table--file-multiple-widget.css: {}
+      themes/claro/css/components/search-admin-settings.css: {}
+      themes/claro/css/components/tablesort-indicator.css: {}
+      themes/claro/css/components/tabs.css: {}
+      themes/claro/css/components/views-exposed-form.css: {}
+      themes/claro/css/components/views-ui.css: {}
+    theme:
+      themes/claro/css/theme/js.css: {}
+      themes/claro/css/theme/media_library.css: {}
+      themes/claro/css/theme/vartheme-claro.theme.style.css: {}
