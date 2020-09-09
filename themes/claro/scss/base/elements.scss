@@ -5,7 +5,10 @@
  * The location may need to be adjusted depending on your setup.
  */
 
-@import "../../../../../core/themes/claro/css/base/elements";
+#layout-builder-modal,
+#modal-media-library {
+  @import "../../../../../core/themes/claro/css/base/elements";
+}
 
 html {
   font-size: 90%;

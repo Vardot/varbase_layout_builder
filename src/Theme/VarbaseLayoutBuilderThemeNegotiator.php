@@ -1,8 +1,5 @@
 <?php
-/**
- * @file
- * Contains \Drupal\varbase_layout_builder\Theme\ThemeNegotiator
- */
+
 namespace Drupal\varbase_layout_builder\Theme;
 
 use Drupal\Core\Routing\RouteMatchInterface;
@@ -10,7 +7,11 @@ use Drupal\Core\Config\ConfigFactoryInterface;
 use Drupal\Core\Theme\AjaxBasePageNegotiator;
 use Drupal\Core\Access\CsrfTokenGenerator;
 use Symfony\Component\HttpFoundation\RequestStack;
+use Drupal\Core\Extension\ThemeHandlerInterface;
 
+/**
+ * Varbase Layout Builder Theme Negotiator.
+ */
 class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
 
   /**
@@ -35,6 +36,13 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
   protected $requestStack;
 
   /**
+   * The theme handler.
+   *
+   * @var \Drupal\Core\Extension\ThemeHandlerInterface
+   */
+  protected $themeHandler;
+
+  /**
    * Constructs a new AjaxBasePageNegotiator.
    *
    * @param \Drupal\Core\Access\CsrfTokenGenerator $token_generator
@@ -43,63 +51,79 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
    *   The config factory.
    * @param \Symfony\Component\HttpFoundation\RequestStack $request_stack
    *   The request stack used to retrieve the current request.
+   * @param \Drupal\Core\Extension\ThemeHandlerInterface $theme_handler
+   *   The theme handler.
    */
-  public function __construct(CsrfTokenGenerator $token_generator, ConfigFactoryInterface $config_factory, RequestStack $request_stack) {
+  public function __construct(CsrfTokenGenerator $token_generator, ConfigFactoryInterface $config_factory, RequestStack $request_stack, ThemeHandlerInterface $theme_handler) {
     $this->csrfGenerator = $token_generator;
     $this->configFactory = $config_factory;
     $this->requestStack = $request_stack;
+    $this->themeHandler = $theme_handler;
   }
+
   /**
    * Whether this theme negotiator should be used to set the theme.
-   * @param RouteMatchInterface $route_match
+   *
+   * @param \Drupal\Core\Routing\RouteMatchInterface $route_match
+   *   The route match.
+   *
    * @return bool
+   *   To proceed with changing the theme.
    */
   public function applies(RouteMatchInterface $route_match) {
-    $dialog_options = $this->requestStack->getCurrentRequest()->request->get('dialogOptions')['target'];
-    $offcanvas = $this->requestStack->getCurrentRequest()->query->get('_wrapper_format');
-    if ($dialog_options != NULL) {
-      return $this->getTheme($dialog_options) ? true : false;
-    }
-    else {
-      return $this->getTheme($offcanvas) ? true : false;
-    }
-  }
-  
-  /**
-   * Determine the active theme for the request
-   * @param RouteMatchInterface $route_match
-   * @return null|string
-   */
-  public function determineActiveTheme(RouteMatchInterface $route_match) {
-    $dialog_options = $this->requestStack->getCurrentRequest()->request->get('dialogOptions')['target'];
-    $offcanvas = $this->requestStack->getCurrentRequest()->query->get('_wrapper_format');
-    if ($dialog_options != NULL) {
-      return $this->getTheme($dialog_options) ?: null;
-    }
-    else {
-      return $this->getTheme($offcanvas) ?: null;
-    }
+    $config = $this->configFactory->get('varbase_layout_builder.settings');
+    $use_claro = $config->get('use_claro');
 
-  }
+    if (isset($use_claro) && $use_claro == 1
+      && !version_compare(\Drupal::VERSION, '8.8.0', 'lt')) {
 
-  /**
-   * Function that does all of the work in selecting a theme
-   * @param RouteMatchInterface $route_match
-   * @return bool|string
-   */
-  private function getTheme($dialog_or_offcanvas) {
-    $config = \Drupal::config('varbase_layout_builder.settings');
-
-    if ($dialog_or_offcanvas == "layout-builder-modal") {
-      if (isset($config)) {
-        if ($config->get('use_claro') == 1) {
-          return "claro";
-        }
+      if ($this->themeHandler->themeExists('claro')) {
+        return TRUE;
       }
     }
-    elseif ($dialog_or_offcanvas == 'drupal_dialog.off_canvas') {
-      return \Drupal::config('system.theme')->get('default');
+
+    return FALSE;
+  }
+
+  /**
+   * Determine the active theme for the request.
+   *
+   * @param \Drupal\Core\Routing\RouteMatchInterface $route_match
+   *   The route match.
+   *
+   * @return null|string
+   *   The selected active theme.
+   */
+  public function determineActiveTheme(RouteMatchInterface $route_match) {
+    $use_claro = $this->configFactory->get('varbase_layout_builder.settings')->get('use_claro');
+
+    if (isset($use_claro) && $use_claro == 1
+      && !version_compare(\Drupal::VERSION, '8.8.0', 'lt')) {
+
+      if ($this->themeHandler->themeExists('claro')) {
+
+        $dialog_options = $this->requestStack->getCurrentRequest()->request->get('dialogOptions')['target'];
+        if (isset($dialog_options)) {
+          return "claro";
+        }
+        else {
+          $request_query_wrapper_format = $this->requestStack->getCurrentRequest()->query->get('_wrapper_format');
+          if (isset($request_query_wrapper_format)) {
+            if ($request_query_wrapper_format == 'drupal_dialog.off_canvas') {
+              return $this->configFactory->get('system.theme')->get('default');
+            }
+            else {
+              return "claro";
+            }
+          }
+        }
+      }
+      else {
+        return $this->configFactory->get('system.theme')->get('admin');
+      }
     }
+
     return NULL;
   }
+
 }

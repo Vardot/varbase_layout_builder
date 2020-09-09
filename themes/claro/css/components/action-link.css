@@ -165,7 +165,7 @@
   background-repeat: no-repeat;
   background-position: center;
   -webkit-background-size: contain;
-          background-size: contain;
+  background-size: contain;
 }
 
 #layout-builder-modal [dir="rtl"] .action-link::before,
@@ -199,10 +199,6 @@
 }
 
 @media screen and (-ms-high-contrast: active) {
-  #layout-builder-modal,
-  #modal-media-library {
-    /* stylelint-disable-next-line selector-type-no-unknown */
-  }
   #layout-builder-modal _:-ms-fullscreen,
   #layout-builder-modal .action-link::before,
   #modal-media-library _:-ms-fullscreen,

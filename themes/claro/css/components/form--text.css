@@ -10,7 +10,7 @@
 #modal-media-library .form-element,
 #drupal-modal #media-image-edit-form .form-element {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   max-width: 100%;
   min-height: 3rem;
   /* iOS. */
@@ -47,7 +47,7 @@
   -moz-appearance: none;
   appearance: none;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 #layout-builder-modal .form-element--type-date,
@@ -119,21 +119,21 @@
 #drupal-modal #media-image-edit-form .form-element:hover {
   border-color: #222330;
   -webkit-box-shadow: inset 0 0 0 1px #222330;
-          box-shadow: inset 0 0 0 1px #222330;
+  box-shadow: inset 0 0 0 1px #222330;
 }
 
 #layout-builder-modal .form-element:focus,
 #modal-media-library .form-element:focus,
 #drupal-modal #media-image-edit-form .form-element:focus {
   -webkit-box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769;
-          box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769;
 }
 
 #layout-builder-modal .form-element:hover:focus,
 #modal-media-library .form-element:hover:focus,
 #drupal-modal #media-image-edit-form .form-element:hover:focus {
   -webkit-box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769, inset 0 0 0 1px #222330;
-          box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769, inset 0 0 0 1px #222330;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769, inset 0 0 0 1px #222330;
 }
 
 #layout-builder-modal .form-element.error,
@@ -147,14 +147,14 @@
 #modal-media-library .form-element.error:hover,
 #drupal-modal #media-image-edit-form .form-element.error:hover {
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 #layout-builder-modal .form-element.error:hover:focus,
 #modal-media-library .form-element.error:hover:focus,
 #drupal-modal #media-image-edit-form .form-element.error:hover:focus {
   -webkit-box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769;
-          box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769;
 }
 
 #layout-builder-modal .form-element--type-textarea.error + .cke,
@@ -170,7 +170,7 @@
   border-color: #bababf;
   background-color: #f2f2f3;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   /* https://stackoverflow.com/q/262158#answer-23511280 */
   -webkit-text-fill-color: #82828c;
 }
@@ -178,9 +178,6 @@
 @media screen and (max-width: 600px) {
   #layout-builder-modal,
   #modal-media-library,
-  #drupal-modal #media-image-edit-form {
-    /* Number, date and time are skipped here */
-  }
   #layout-builder-modal .form-element,
   #modal-media-library .form-element,
   #drupal-modal #media-image-edit-form .form-element {
@@ -198,89 +195,6 @@
   #drupal-modal #media-image-edit-form .form-item__label + .form-element {
     margin-top: 0;
   }
-}
-
-#layout-builder-modal :root,
-#modal-media-library :root,
-#drupal-modal #media-image-edit-form :root {
-  /*
-   * Color Palette.
-   */
-  /* Secondary. */
-  /* Variations. */
-  /* 5% darker than base. */
-  /* 10% darker than base. */
-  /* 10% darker than base. */
-  /* 20% darker than base. */
-  /* 5% darker than base. */
-  /* 10% darker than base. */
-  /* 5% darker than base. */
-  /* 10% darker than base. */
-  /* 5% darker than base. */
-  /* 10% darker than base. */
-  /*
-   * Base.
-   */
-  /*
-   * Typography.
-   */
-  /* 1rem = 16px if font root is 100% ands browser defaults are used. */
-  /* ~32px */
-  /* ~29px */
-  /* ~26px */
-  /* ~23px */
-  /* ~20px */
-  /* 18px */
-  /* ~14px */
-  /* ~13px */
-  /* ~11px */
-  /**
-   * Spaces.
-   */
-  /* 3 * 16px = 48px */
-  /* 1.5 * 16px = 24px */
-  /* 1 * 16px = 16px */
-  /* 0.75 * 16px = 12px */
-  /* 0.5 * 16px = 8px */
-  /*
-   * Common.
-   */
-  /*
-   * Inputs.
-   */
-  /* Absolute zero with opacity. */
-  /* Davy's grey with 0.6 opacity. */
-  /* Light gray with 0.3 opacity on white bg. */
-  /* Old silver with 0.5 opacity on white bg. */
-  /* (1/8)em ~ 2px */
-  /* (1/16)em ~ 1px */
-  /* Font size is too big to use 1rem for extrasmall line-height */
-  /* 7px inside the form element label. */
-  /* 8px with the checkbox width of 19px */
-  /*
-   * Details.
-   */
-  /**
-   * Buttons.
-   */
-  /**
-   * jQuery.UI dropdown.
-   */
-  /* Light gray with 0.8 opacity. */
-  /* Text color with 0.1 opacity. */
-  /**
-   * Progress bar.
-   */
-  /**
-   * Tabledrag icon size.
-   */
-  /* 17px */
-  /**
-   * Ajax progress.
-   */
-  /**
-   * Breadcrumb.
-   */
 }
 
 #layout-builder-modal .js .form-autocomplete,
@@ -378,7 +292,7 @@
 #drupal-modal #media-image-edit-form .form-element--extrasmall {
   padding-right: calc(1.5rem - 1px);
   -webkit-background-size: 1.75rem 0.4375rem;
-          background-size: 1.75rem 0.4375rem;
+  background-size: 1.75rem 0.4375rem;
   min-height: 1.5rem;
   padding: calc(0.15rem - 1px) calc(0.5rem - 1px);
   font-size: 0.889rem;

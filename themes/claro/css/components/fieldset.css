@@ -15,7 +15,7 @@
   border-radius: 2px;
   background-color: #fff;
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #layout-builder-modal .fieldset--group,
@@ -25,7 +25,7 @@
   border-radius: 0;
   background: none;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 #layout-builder-modal _:-ms-fullscreen,

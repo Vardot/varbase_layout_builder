@@ -7,6 +7,12 @@
  */
 
 @import "../../../../../core/themes/claro/css/components/dialog";
+
+.ui-dialog-off-canvas #drupal-off-canvas {
+  padding: 1rem;
+  background: #444;
+}
+
 [dir="rtl"] {
   .ui-dialog {
     .ui-dialog-title {

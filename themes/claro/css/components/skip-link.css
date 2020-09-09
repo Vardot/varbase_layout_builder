@@ -11,8 +11,8 @@
   left: 50%;
   padding: 1px 10px 2px;
   -webkit-transform: translateX(-50%);
-       -o-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  transform: translateX(-50%);
   color: #fff;
   border-radius: 0 0 10px 10px;
   background: #444;

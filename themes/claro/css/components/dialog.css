@@ -156,6 +156,11 @@
   background: none;
 }
 
+.ui-dialog-off-canvas #drupal-off-canvas {
+  padding: 1rem;
+  background: #444;
+}
+
 [dir="rtl"] .ui-dialog .ui-dialog-title {
   float: right;
 }
@@ -168,7 +173,7 @@
 .ui-dialog .ui-dialog-titlebar-close {
   background-image: url(../../icons/close.svg);
   -webkit-background-size: 15px 15px;
-          background-size: 15px 15px;
+  background-size: 15px 15px;
   background-repeat: no-repeat;
   background-position: center;
   width: 30px;
@@ -194,6 +199,7 @@
   padding: calc(1rem - 1px) calc(1.5rem - 1px);
 }
 
-.ui-dialog .ui-dialog-buttonpane .button:hover, .ui-dialog .ui-dialog-buttonpane .button:active {
+.ui-dialog .ui-dialog-buttonpane .button:hover,
+.ui-dialog .ui-dialog-buttonpane .button:active {
   background: #0036b1;
 }

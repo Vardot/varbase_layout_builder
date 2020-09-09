@@ -148,9 +148,6 @@
 }
 
 body {
-  .block-help {
-    width: 100%;  
-  }
 
   .layout-builder__link--add {
     color: #686868 !important;
@@ -174,6 +171,15 @@ body {
   &.toolbar-tray-open {
     .js-messages__wrapper {
       top: 0 !important;
+    }
+  }
+}
+
+.layout-builder__region {
+  > .layout-builder-block:hover:not(.ui-state-drop),
+  > .layout-builder-block:focus:not(.ui-state-drop) {
+    .layout-builder__actions__block {
+      z-index: 1;
     }
   }
 }

@@ -141,10 +141,6 @@
   box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
 }
 
-body .block-help {
-  width: 100%;
-}
-
 body .layout-builder__link--add {
   color: #686868 !important;
 }
@@ -162,4 +158,9 @@ body .layout-builder-block {
 
 .toolbar-horizontal.toolbar-tray-open .js-messages__wrapper {
   top: 0 !important;
+}
+
+.layout-builder__region > .layout-builder-block:hover:not(.ui-state-drop) .layout-builder__actions__block,
+.layout-builder__region > .layout-builder-block:focus:not(.ui-state-drop) .layout-builder__actions__block {
+  z-index: 1;
 }

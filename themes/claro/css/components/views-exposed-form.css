@@ -4,4 +4,55 @@
  * This has been modified to remove the .seven-details class,
  * as it would not be present in this context.
  */
-@import url(../../../../../../../core/themes/claro/css/components/views-exposed-form.css);
+
+
+#layout-builder-modal .views-exposed-form.views-exposed-form,
+#modal-media-library .views-exposed-form.views-exposed-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+  border: 1px solid rgba(216, 217, 224, 0.8);
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: 0  2px  4px  rgba(0, 0, 0, 0.1);
+}
+
+#layout-builder-modal .views-exposed-form__item.views-exposed-form__item,
+#modal-media-library .views-exposed-form__item.views-exposed-form__item {
+  margin: 0.75rem 0.5rem 0 0; /* LTR */
+}
+
+[dir="rtl"] #layout-builder-modal .views-exposed-form__item.views-exposed-form__item,
+[dir="rtl"] #modal-media-library .views-exposed-form__item.views-exposed-form__item {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+
+#layout-builder-modal .views-exposed-form__item--preceding-actions.views-exposed-form__item--preceding-actions,
+#modal-media-library .views-exposed-form__item--preceding-actions.views-exposed-form__item--preceding-actions {
+  margin-right: 1rem; /* LTR */
+}
+
+[dir="rtl"] #layout-builder-modal .views-exposed-form__item--preceding-actions.views-exposed-form__item--preceding-actions,
+[dir="rtl"] #modal-media-library .views-exposed-form__item--preceding-actions.views-exposed-form__item--preceding-actions {
+  margin-right: 0;
+  margin-left: 1rem;
+}
+
+#layout-builder-modal .views-exposed-form__item--actions.views-exposed-form__item--actions .button,
+#modal-media-library .views-exposed-form__item--actions.views-exposed-form__item--actions .button {
+  margin-bottom: 0;
+}
+
+#layout-builder-modal .views-exposed-form__item--actions.views-exposed-form__item--actions .button:last-child,
+#modal-media-library .views-exposed-form__item--actions.views-exposed-form__item--actions .button:last-child {
+  margin-right: 0;
+}
+
+[dir="rtl"] #layout-builder-modal .views-exposed-form__item--actions.views-exposed-form__item--actions:last-child,
+[dir="rtl"] #modal-media-library .views-exposed-form__item--actions.views-exposed-form__item--actions:last-child {
+  margin-left: 0;
+}

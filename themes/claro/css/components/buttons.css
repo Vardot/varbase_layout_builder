@@ -41,7 +41,7 @@
 #modal-media-library .button:not(:focus),
 #drupal-modal #media-image-edit-form .button:not(:focus) {
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
-          box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
 
 #layout-builder-modal .button:hover,
@@ -236,7 +236,8 @@
   background: #003cc5;
 }
 
-#layout-builder-modal .button--primary:hover, #layout-builder-modal .button--primary:active,
+#layout-builder-modal .button--primary:hover,
+#layout-builder-modal .button--primary:active,
 #modal-media-library .button--primary:hover,
 #modal-media-library .button--primary:active,
 #drupal-modal #media-image-edit-form .button--primary:hover,

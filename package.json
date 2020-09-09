@@ -24,6 +24,8 @@
         "gulp-sass": "^4.0.1",
         "gulp-csscomb": "^3.1.0",
         "gulp-autoprefixer": "^4.1.0",
+        "gulp-cssimport": "^7.0.0",
+        "gulp-css-wrap": "^0.1.2",
         "gulp-scss-lint": "^1.0.0",
         "gulp-clean-css": "3.9.4",
         "gulp-concat": "^2.6.1",

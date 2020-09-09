@@ -409,7 +409,7 @@
 #layout-builder-modal .views-tabs .action-list input.form-submit:hover,
 #modal-media-library .views-tabs .action-list input.form-submit:hover {
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 #layout-builder-modal .views-tabs .action-list li:hover,

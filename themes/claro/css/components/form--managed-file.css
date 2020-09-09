@@ -14,8 +14,8 @@
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   max-width: 100%;
 }
 
@@ -32,8 +32,8 @@
   display: inline-flex;
   -webkit-box-align: center;
   -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   max-width: 100%;
 }
 
@@ -57,12 +57,12 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   margin-top: 1rem;
   /* Bottom margin will be added by the child elements: because of we use flex display here, our margins won't collapse. */
 }
@@ -81,7 +81,7 @@
   #modal-media-library *::-ms-backdrop,
   #modal-media-library td .form-managed-file__meta {
     -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
+    flex-basis: 100%;
   }
 }
 
@@ -89,8 +89,8 @@
 #modal-media-library .form-managed-file__image-preview {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 auto;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
   max-width: 100%;
   margin-bottom: 1rem;
 }
@@ -116,8 +116,8 @@
 #modal-media-library .form-managed-file__meta-items {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 16rem;
-      -ms-flex: 1 1 16rem;
-          flex: 1 1 16rem;
+  -ms-flex: 1 1 16rem;
+  flex: 1 1 16rem;
   max-width: 100%;
 }
 
@@ -127,7 +127,7 @@
   #modal-media-library *::-ms-backdrop,
   #modal-media-library .form-managed-file__meta-items {
     -ms-flex-preferred-size: 32rem;
-        flex-basis: 32rem;
+    flex-basis: 32rem;
   }
 }
 
@@ -147,7 +147,7 @@
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
   -moz-hyphens: auto;
-       hyphens: auto;
+  hyphens: auto;
 }
 
 #layout-builder-modal .form-managed-file .file__size,
@@ -159,8 +159,8 @@
 #modal-media-library .form-managed-file__main .file {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 auto;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   margin: 0.5rem 1rem 0.5rem 0;
   /* LTR */
 }
@@ -177,7 +177,7 @@
   #modal-media-library *::-ms-backdrop,
   #modal-media-library td .form-managed-file__main .file {
     -ms-flex: 0 1 100%;
-        flex: 0 1 100%;
+    flex: 0 1 100%;
   }
 }
 
@@ -185,8 +185,8 @@
 #modal-media-library .form-managed-file__main .form-element--api-file {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 auto;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   min-width: 1px;
   /* This makes the element to be shrinked on IE11 */
 }
@@ -195,8 +195,8 @@
 #modal-media-library .form-managed-file__main .button.button {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 auto;
-      -ms-flex: 0 0 auto;
-          flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
   margin: 0;
 }
 

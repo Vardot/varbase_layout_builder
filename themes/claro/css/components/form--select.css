@@ -12,7 +12,7 @@
   background-repeat: no-repeat;
   background-position: 100% 50%;
   -webkit-background-size: 2.75rem 0.5625rem;
-          background-size: 2.75rem 0.5625rem;
+  background-size: 2.75rem 0.5625rem;
   /* w: 14px + (2 * 15px), h: 9px */
 }
 
@@ -29,7 +29,7 @@
 #modal-media-library .no-touchevents .form-element--type-select[name$="][_weight]"] {
   padding-right: calc(1.5rem - 1px);
   -webkit-background-size: 1.75rem 0.4375rem;
-          background-size: 1.75rem 0.4375rem;
+  background-size: 1.75rem 0.4375rem;
   /* w: 14px + (2 * 7px), h: 7px */
 }
 

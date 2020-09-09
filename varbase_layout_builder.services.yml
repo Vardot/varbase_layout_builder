@@ -5,6 +5,6 @@ services:
     - { name: 'event_subscriber' }
   varbase_layout_builder.negotiator.ajax_base_page:
     class: Drupal\varbase_layout_builder\Theme\VarbaseLayoutBuilderThemeNegotiator
-    arguments: ['@csrf_token', '@config.factory', '@request_stack']
+    arguments: ['@csrf_token', '@config.factory', '@request_stack', '@theme_handler']
     tags:
       - { name: theme_negotiator, priority: 5000 }

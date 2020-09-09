@@ -78,3 +78,26 @@ function varbase_layout_builder_update_8101() {
     \Drupal::service('module_installer')->install(['entity_block'], FALSE);
   }
 }
+
+/**
+ * Issue #3169416: Theme Layout Builder Modal and Media Library to look like.
+ *
+ * Claro admin theme.
+ */
+function varbase_layout_builder_update_8102() {
+
+  if (version_compare(\Drupal::VERSION, '8.8.0', 'gt') {
+    if (!\Drupal::service('theme_handler')->themeExists('claro')) {
+
+      // Install Claro theme.
+      \Drupal::service('theme_installer')->install(['claro'], FALSE);
+    }
+
+    if (\Drupal::moduleHandler()->moduleExists('media_library_theme_reset')) {
+      \Drupal::service('module_installer')->uninstall(['media_library_theme_reset'], FALSE);
+    }
+
+    $config_factory = \Drupal::service('config.factory')->getEditable('varbase_layout_builder.settings');
+    $config_factory->set('use_claro', 1)->save(TRUE);
+  }
+}
