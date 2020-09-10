@@ -4,7 +4,7 @@
  * The location may need to be adjusted depending on your setup.
  */
 #layout-builder-modal,
-#modal-media-library {
+.media-library-widget-modal {
   @import "../../../../../core/themes/claro/css/theme/media-library";
   .media-library-widget {
     border: 1px solid #c0c0c0;

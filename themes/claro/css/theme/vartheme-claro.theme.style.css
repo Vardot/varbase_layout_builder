@@ -6,7 +6,7 @@
  */
 
 #layout-builder-modal input[type="text"],
-#modal-media-library input[type="text"] {
+.media-library-widget-modal input[type="text"] {
   max-width: 100%;
 }
 
@@ -16,29 +16,29 @@
 #layout-builder-modal #edit-user-created-to,
 #layout-builder-modal #edit-content-created-from,
 #layout-builder-modal #edit-content-created-to,
-#modal-media-library #edit-created-from,
-#modal-media-library #edit-created-to,
-#modal-media-library #edit-user-created-from,
-#modal-media-library #edit-user-created-to,
-#modal-media-library #edit-content-created-from,
-#modal-media-library #edit-content-created-to {
+.media-library-widget-modal #edit-created-from,
+.media-library-widget-modal #edit-created-to,
+.media-library-widget-modal #edit-user-created-from,
+.media-library-widget-modal #edit-user-created-to,
+.media-library-widget-modal #edit-content-created-from,
+.media-library-widget-modal #edit-content-created-to {
   width: 150px;
 }
 
 #layout-builder-modal .node-form .field--name-title input,
-#modal-media-library .node-form .field--name-title input {
+.media-library-widget-modal .node-form .field--name-title input {
   font-size: 1.6em;
   width: 100%;
   min-height: 4rem;
 }
 
 #layout-builder-modal .node-form .field--name-title .length-indicator,
-#modal-media-library .node-form .field--name-title .length-indicator {
+.media-library-widget-modal .node-form .field--name-title .length-indicator {
   margin-top: -1rem;
 }
 
-#layout-builder-modal body.path-admin .panel.dashboard-block,
-#modal-media-library body.path-admin .panel.dashboard-block {
+body.path-admin #layout-builder-modal .panel.dashboard-block,
+body.path-admin .media-library-widget-modal .panel.dashboard-block {
   display: block;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -51,17 +51,17 @@
 }
 
 #layout-builder-modal .block-views-blockvarbase-google-analytics-summary-sessions-and-pageviews .panel__title,
-#modal-media-library .block-views-blockvarbase-google-analytics-summary-sessions-and-pageviews .panel__title {
+.media-library-widget-modal .block-views-blockvarbase-google-analytics-summary-sessions-and-pageviews .panel__title {
   display: block;
 }
 
 #layout-builder-modal .block-views-blockvarbase-google-analytics-summary-sessions-and-pageviews .description,
-#modal-media-library .block-views-blockvarbase-google-analytics-summary-sessions-and-pageviews .description {
+.media-library-widget-modal .block-views-blockvarbase-google-analytics-summary-sessions-and-pageviews .description {
   padding: 20px;
 }
 
 #layout-builder-modal .node-form div.autocomplete-deluxe-container,
-#modal-media-library .node-form div.autocomplete-deluxe-container {
+.media-library-widget-modal .node-form div.autocomplete-deluxe-container {
   width: 65%;
   padding: 0.68rem 1.875rem 0.68rem 0.93rem;
   -webkit-box-shadow: none;
@@ -74,18 +74,18 @@
 
 @media screen and (max-width: 81.25rem) {
   #layout-builder-modal .node-form div.autocomplete-deluxe-container,
-  #modal-media-library .node-form div.autocomplete-deluxe-container {
+  .media-library-widget-modal .node-form div.autocomplete-deluxe-container {
     width: 100%;
   }
 }
 
 #layout-builder-modal .node-form div.autocomplete-deluxe-container:not(.autocomplete-deluxe-multiple),
-#modal-media-library .node-form div.autocomplete-deluxe-container:not(.autocomplete-deluxe-multiple) {
+.media-library-widget-modal .node-form div.autocomplete-deluxe-container:not(.autocomplete-deluxe-multiple) {
   padding: 0;
 }
 
 #layout-builder-modal .node-form div.autocomplete-deluxe-container:not(.autocomplete-deluxe-multiple) input.autocomplete-deluxe-form,
-#modal-media-library .node-form div.autocomplete-deluxe-container:not(.autocomplete-deluxe-multiple) input.autocomplete-deluxe-form {
+.media-library-widget-modal .node-form div.autocomplete-deluxe-container:not(.autocomplete-deluxe-multiple) input.autocomplete-deluxe-form {
   width: 100%;
   background: white;
   min-height: 3rem;
@@ -93,24 +93,24 @@
 }
 
 #layout-builder-modal .node-form div.autocomplete-deluxe-container:not(.autocomplete-deluxe-multiple) .autocomplete-deluxe-throbber,
-#modal-media-library .node-form div.autocomplete-deluxe-container:not(.autocomplete-deluxe-multiple) .autocomplete-deluxe-throbber {
+.media-library-widget-modal .node-form div.autocomplete-deluxe-container:not(.autocomplete-deluxe-multiple) .autocomplete-deluxe-throbber {
   top: 0.93rem;
 }
 
 #layout-builder-modal .node-form div.autocomplete-deluxe-container .autocomplete-deluxe-item,
-#modal-media-library .node-form div.autocomplete-deluxe-container .autocomplete-deluxe-item {
+.media-library-widget-modal .node-form div.autocomplete-deluxe-container .autocomplete-deluxe-item {
   margin: 0 0.31rem 0.18rem 0;
 }
 
 #layout-builder-modal .node-form div.autocomplete-deluxe-container input.autocomplete-deluxe-form,
-#modal-media-library .node-form div.autocomplete-deluxe-container input.autocomplete-deluxe-form {
+.media-library-widget-modal .node-form div.autocomplete-deluxe-container input.autocomplete-deluxe-form {
   min-height: 1.25rem;
   padding-bottom: 0;
   padding-top: 0;
 }
 
 #layout-builder-modal .node-form div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber,
-#modal-media-library .node-form div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber {
+.media-library-widget-modal .node-form div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber {
   width: 1.875rem;
   height: 100%;
   position: absolute;
@@ -119,79 +119,79 @@
 }
 
 #layout-builder-modal .node-form div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber.autocomplete-deluxe-open,
-#modal-media-library .node-form div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber.autocomplete-deluxe-open {
+.media-library-widget-modal .node-form div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber.autocomplete-deluxe-open {
   background: url("../images/search-autocompleting.svg") no-repeat;
 }
 
 #layout-builder-modal .node-form div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber.autocomplete-deluxe-closed,
-#modal-media-library .node-form div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber.autocomplete-deluxe-closed {
+.media-library-widget-modal .node-form div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber.autocomplete-deluxe-closed {
   background: url("../images/search-autocomplete.svg") no-repeat;
 }
 
 #layout-builder-modal .node-form .claro-autocomplete,
-#modal-media-library .node-form .claro-autocomplete {
+.media-library-widget-modal .node-form .claro-autocomplete {
   width: 65%;
 }
 
 #layout-builder-modal .node-form .claro-autocomplete .claro-autocomplete__message,
-#modal-media-library .node-form .claro-autocomplete .claro-autocomplete__message {
+.media-library-widget-modal .node-form .claro-autocomplete .claro-autocomplete__message {
   display: none;
 }
 
 #layout-builder-modal .node-form .claro-autocomplete input,
-#modal-media-library .node-form .claro-autocomplete input {
+.media-library-widget-modal .node-form .claro-autocomplete input {
   width: 100%;
   padding-right: 1.875rem;
 }
 
 @media screen and (max-width: 81.25rem) {
   #layout-builder-modal .node-form .claro-autocomplete,
-  #modal-media-library .node-form .claro-autocomplete {
+  .media-library-widget-modal .node-form .claro-autocomplete {
     width: 100%;
   }
 }
 
 #layout-builder-modal .node-form .accordion .claro-autocomplete,
-#modal-media-library .node-form .accordion .claro-autocomplete {
+.media-library-widget-modal .node-form .accordion .claro-autocomplete {
   width: 100%;
 }
 
 #layout-builder-modal .node-form .js input.form-autocomplete,
-#modal-media-library .node-form .js input.form-autocomplete {
+.media-library-widget-modal .node-form .js input.form-autocomplete {
   background: url("../images/search-autocomplete.svg") no-repeat 100% 50%;
 }
 
 #layout-builder-modal .node-form .js input.form-autocomplete.ui-autocomplete-loading,
-#modal-media-library .node-form .js input.form-autocomplete.ui-autocomplete-loading {
+.media-library-widget-modal .node-form .js input.form-autocomplete.ui-autocomplete-loading {
   background: url("../images/search-autocompleting.svg") no-repeat 100% 50%;
 }
 
 #layout-builder-modal .node-form .js .is-autocompleting + .claro-autocomplete__message,
-#modal-media-library .node-form .js .is-autocompleting + .claro-autocomplete__message {
+.media-library-widget-modal .node-form .js .is-autocompleting + .claro-autocomplete__message {
   display: none;
 }
 
 #layout-builder-modal .node-form .field--type-yoast-seo input,
-#modal-media-library .node-form .field--type-yoast-seo input {
+.media-library-widget-modal .node-form .field--type-yoast-seo input {
   width: 66%;
 }
 
 @media screen and (max-width: 81.25rem) {
   #layout-builder-modal .node-form .field--type-yoast-seo input,
-  #modal-media-library .node-form .field--type-yoast-seo input {
+  .media-library-widget-modal .node-form .field--type-yoast-seo input {
     width: 100%;
   }
 }
 
 #layout-builder-modal .media-library-item .media-library-edit__link,
-#modal-media-library .media-library-item .media-library-edit__link {
+.media-library-widget-modal .media-library-item .media-library-edit__link {
   right: 40px;
 }
 
 #layout-builder-modal .media-library-item .media-library-edit__link,
 #layout-builder-modal .media-library-item .media-library-item__remove.button:first-child,
-#modal-media-library .media-library-item .media-library-edit__link,
-#modal-media-library .media-library-item .media-library-item__remove.button:first-child {
+.media-library-widget-modal .media-library-item .media-library-edit__link,
+.media-library-widget-modal .media-library-item .media-library-item__remove.button:first-child {
   width: 25px;
   height: 25px;
   top: 10px;
@@ -203,8 +203,8 @@
 
 #layout-builder-modal .media-library-item .media-library-edit__link:not(:focus),
 #layout-builder-modal .media-library-item .media-library-item__remove.button:first-child:not(:focus),
-#modal-media-library .media-library-item .media-library-edit__link:not(:focus),
-#modal-media-library .media-library-item .media-library-item__remove.button:first-child:not(:focus) {
+.media-library-widget-modal .media-library-item .media-library-edit__link:not(:focus),
+.media-library-widget-modal .media-library-item .media-library-item__remove.button:first-child:not(:focus) {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -213,31 +213,31 @@
 #layout-builder-modal .media-library-item .media-library-edit__link:focus,
 #layout-builder-modal .media-library-item .media-library-item__remove.button:first-child:hover,
 #layout-builder-modal .media-library-item .media-library-item__remove.button:first-child:focus,
-#modal-media-library .media-library-item .media-library-edit__link:hover,
-#modal-media-library .media-library-item .media-library-edit__link:focus,
-#modal-media-library .media-library-item .media-library-item__remove.button:first-child:hover,
-#modal-media-library .media-library-item .media-library-item__remove.button:first-child:focus {
+.media-library-widget-modal .media-library-item .media-library-edit__link:hover,
+.media-library-widget-modal .media-library-item .media-library-edit__link:focus,
+.media-library-widget-modal .media-library-item .media-library-item__remove.button:first-child:hover,
+.media-library-widget-modal .media-library-item .media-library-item__remove.button:first-child:focus {
   border-color: #40b6ff !important;
   color: transparent;
 }
 
 #layout-builder-modal .media-library-item .media-library-edit__link:active,
 #layout-builder-modal .media-library-item .media-library-item__remove.button:first-child:active,
-#modal-media-library .media-library-item .media-library-edit__link:active,
-#modal-media-library .media-library-item .media-library-item__remove.button:first-child:active {
+.media-library-widget-modal .media-library-item .media-library-edit__link:active,
+.media-library-widget-modal .media-library-item .media-library-item__remove.button:first-child:active {
   outline: 2px dotted transparent;
   -webkit-box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769;
   box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769;
 }
 
 #layout-builder-modal .focal-point-preview-link,
-#modal-media-library .focal-point-preview-link {
+.media-library-widget-modal .focal-point-preview-link {
   padding: 1.2rem;
   text-decoration: none;
 }
 
 #layout-builder-modal .layout-region-node-secondary .media-library-item.media-library-item--grid,
-#modal-media-library .layout-region-node-secondary .media-library-item.media-library-item--grid {
+.media-library-widget-modal .layout-region-node-secondary .media-library-item.media-library-item--grid {
   width: 200px;
   max-width: 200px;
 }

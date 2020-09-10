@@ -6,20 +6,20 @@
  */
 
 #layout-builder-modal .form-type--boolean,
-#modal-media-library .form-type--boolean {
+.media-library-widget-modal .form-type--boolean {
   margin-left: 1.6875rem;
   /* LTR */
   line-height: 1.5rem;
 }
 
 #layout-builder-modal [dir="rtl"] .form-type--boolean,
-#modal-media-library [dir="rtl"] .form-type--boolean {
+.media-library-widget-modal [dir="rtl"] .form-type--boolean {
   margin-right: 1.6875rem;
   margin-left: 0;
 }
 
 #layout-builder-modal .form-type--boolean .form-boolean,
-#modal-media-library .form-type--boolean .form-boolean {
+.media-library-widget-modal .form-type--boolean .form-boolean {
   position: relative;
   top: 0.75rem;
   float: left;
@@ -32,26 +32,26 @@
 }
 
 #layout-builder-modal [dir="rtl"] .form-type--boolean .form-boolean,
-#modal-media-library [dir="rtl"] .form-type--boolean .form-boolean {
+.media-library-widget-modal [dir="rtl"] .form-type--boolean .form-boolean {
   float: right;
   margin-right: -1.6875rem;
   margin-left: 0;
 }
 
 #layout-builder-modal .form-type--boolean.form-item--no-label,
-#modal-media-library .form-type--boolean.form-item--no-label {
+.media-library-widget-modal .form-type--boolean.form-item--no-label {
   margin-left: 0;
 }
 
 #layout-builder-modal [dir="rtl"] .form-type--boolean.form-item--no-label,
-#modal-media-library [dir="rtl"] .form-type--boolean.form-item--no-label {
+.media-library-widget-modal [dir="rtl"] .form-type--boolean.form-item--no-label {
   margin-right: 0;
 }
 
 #layout-builder-modal .form-type--boolean.form-item--no-label .form-boolean,
 #layout-builder-modal [dir="rtl"] .form-type--boolean.form-item--no-label .form-boolean,
-#modal-media-library .form-type--boolean.form-item--no-label .form-boolean,
-#modal-media-library [dir="rtl"] .form-type--boolean.form-item--no-label .form-boolean {
+.media-library-widget-modal .form-type--boolean.form-item--no-label .form-boolean,
+.media-library-widget-modal [dir="rtl"] .form-type--boolean.form-item--no-label .form-boolean {
   position: static;
   float: none;
   margin-right: 0;
@@ -62,13 +62,13 @@
 }
 
 #layout-builder-modal .form-boolean-group .form-type--boolean,
-#modal-media-library .form-boolean-group .form-type--boolean {
+.media-library-widget-modal .form-boolean-group .form-type--boolean {
   margin-top: 0.4em;
   margin-bottom: 0.4em;
 }
 
 #layout-builder-modal .form-boolean,
-#modal-media-library .form-boolean {
+.media-library-widget-modal .form-boolean {
   display: inline-block;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -89,7 +89,7 @@
 }
 
 #layout-builder-modal .form-boolean--type-radio,
-#modal-media-library .form-boolean--type-radio {
+.media-library-widget-modal .form-boolean--type-radio {
   width: 19px;
   height: 19px;
   border-radius: 19px;
@@ -97,8 +97,8 @@
 
 #layout-builder-modal .form-boolean:active,
 #layout-builder-modal .form-boolean:hover,
-#modal-media-library .form-boolean:active,
-#modal-media-library .form-boolean:hover {
+.media-library-widget-modal .form-boolean:active,
+.media-library-widget-modal .form-boolean:hover {
   border-color: #222330;
   -webkit-box-shadow: inset 0 0 0 1px #222330;
   box-shadow: inset 0 0 0 1px #222330;
@@ -106,14 +106,14 @@
 
 #layout-builder-modal .form-boolean:focus:active,
 #layout-builder-modal .form-boolean:focus:hover,
-#modal-media-library .form-boolean:focus:active,
-#modal-media-library .form-boolean:focus:hover {
+.media-library-widget-modal .form-boolean:focus:active,
+.media-library-widget-modal .form-boolean:focus:hover {
   -webkit-box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769, inset 0 0 0 1px #222330;
   box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769, inset 0 0 0 1px #222330;
 }
 
 #layout-builder-modal .form-boolean--type-checkbox:checked,
-#modal-media-library .form-boolean--type-checkbox:checked {
+.media-library-widget-modal .form-boolean--type-checkbox:checked {
   border-color: #003cc5;
   background-color: #003cc5;
   background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.7949219,7.095703 6.1816406,9.601563 12.205078,3.2753906 13.689453,4.8359375 6.1816406,12.724609 2.3105469,8.65625 Z' fill='white'/%3E%3C/svg%3E");
@@ -121,14 +121,14 @@
 
 #layout-builder-modal .form-boolean--type-checkbox:checked:active,
 #layout-builder-modal .form-boolean--type-checkbox:checked:hover,
-#modal-media-library .form-boolean--type-checkbox:checked:active,
-#modal-media-library .form-boolean--type-checkbox:checked:hover {
+.media-library-widget-modal .form-boolean--type-checkbox:checked:active,
+.media-library-widget-modal .form-boolean--type-checkbox:checked:hover {
   border-color: #222330;
   background-color: #222330;
 }
 
 #layout-builder-modal .form-boolean--type-radio:checked,
-#modal-media-library .form-boolean--type-radio:checked {
+.media-library-widget-modal .form-boolean--type-radio:checked {
   border-color: #003cc5;
   background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle r='4.5' cx='8.5' cy='8.5' fill='%23004adc'/%3E%3C/svg%3E");
   -webkit-box-shadow: inset 0 0 0 1px #003cc5;
@@ -136,15 +136,15 @@
 }
 
 #layout-builder-modal .form-boolean--type-radio:checked:focus,
-#modal-media-library .form-boolean--type-radio:checked:focus {
+.media-library-widget-modal .form-boolean--type-radio:checked:focus {
   -webkit-box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769, inset 0 0 0 1px #003cc5;
   box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769, inset 0 0 0 1px #003cc5;
 }
 
 #layout-builder-modal .form-boolean--type-radio:checked:active,
 #layout-builder-modal .form-boolean--type-radio:checked:hover,
-#modal-media-library .form-boolean--type-radio:checked:active,
-#modal-media-library .form-boolean--type-radio:checked:hover {
+.media-library-widget-modal .form-boolean--type-radio:checked:active,
+.media-library-widget-modal .form-boolean--type-radio:checked:hover {
   border-color: #222330;
   background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle r='4.5' cx='8.5' cy='8.5' fill='%23222330'/%3E%3C/svg%3E");
   -webkit-box-shadow: inset 0 0 0 1px #222330;
@@ -153,14 +153,14 @@
 
 #layout-builder-modal .form-boolean--type-radio:checked:focus:active,
 #layout-builder-modal .form-boolean--type-radio:checked:focus:hover,
-#modal-media-library .form-boolean--type-radio:checked:focus:active,
-#modal-media-library .form-boolean--type-radio:checked:focus:hover {
+.media-library-widget-modal .form-boolean--type-radio:checked:focus:active,
+.media-library-widget-modal .form-boolean--type-radio:checked:focus:hover {
   -webkit-box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769, inset 0 0 0 1px #222330;
   box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769, inset 0 0 0 1px #222330;
 }
 
 #layout-builder-modal .form-boolean.error,
-#modal-media-library .form-boolean.error {
+.media-library-widget-modal .form-boolean.error {
   border-color: #d72222;
   background-color: #fff;
   -webkit-box-shadow: inset 0 0 0 1px #d72222;
@@ -169,8 +169,8 @@
 
 #layout-builder-modal .form-boolean.error:active,
 #layout-builder-modal .form-boolean.error:hover,
-#modal-media-library .form-boolean.error:active,
-#modal-media-library .form-boolean.error:hover {
+.media-library-widget-modal .form-boolean.error:active,
+.media-library-widget-modal .form-boolean.error:hover {
   -webkit-box-shadow: inset 0 0 0 1px #d72222;
   box-shadow: inset 0 0 0 1px #d72222;
 }
@@ -178,17 +178,17 @@
 #layout-builder-modal .form-boolean.error:focus,
 #layout-builder-modal .form-boolean.error:focus:active,
 #layout-builder-modal .form-boolean.error:focus:hover,
-#modal-media-library .form-boolean.error:focus,
-#modal-media-library .form-boolean.error:focus:active,
-#modal-media-library .form-boolean.error:focus:hover {
+.media-library-widget-modal .form-boolean.error:focus,
+.media-library-widget-modal .form-boolean.error:focus:active,
+.media-library-widget-modal .form-boolean.error:focus:hover {
   -webkit-box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769, inset 0 0 0 1px #d72222;
   box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769, inset 0 0 0 1px #d72222;
 }
 
 #layout-builder-modal .form-boolean.error:checked:active,
 #layout-builder-modal .form-boolean.error:checked:hover,
-#modal-media-library .form-boolean.error:checked:active,
-#modal-media-library .form-boolean.error:checked:hover {
+.media-library-widget-modal .form-boolean.error:checked:active,
+.media-library-widget-modal .form-boolean.error:checked:hover {
   border-color: #d72222;
   background-color: #fff;
 }
@@ -196,23 +196,23 @@
 #layout-builder-modal .form-boolean--type-checkbox.error:checked,
 #layout-builder-modal .form-boolean--type-checkbox.error:checked:active,
 #layout-builder-modal .form-boolean--type-checkbox.error:checked:hover,
-#modal-media-library .form-boolean--type-checkbox.error:checked,
-#modal-media-library .form-boolean--type-checkbox.error:checked:active,
-#modal-media-library .form-boolean--type-checkbox.error:checked:hover {
+.media-library-widget-modal .form-boolean--type-checkbox.error:checked,
+.media-library-widget-modal .form-boolean--type-checkbox.error:checked:active,
+.media-library-widget-modal .form-boolean--type-checkbox.error:checked:hover {
   background-color: #d72222;
 }
 
 #layout-builder-modal .form-boolean--type-radio.error:checked,
 #layout-builder-modal .form-boolean--type-radio.error:checked:active,
 #layout-builder-modal .form-boolean--type-radio.error:checked:hover,
-#modal-media-library .form-boolean--type-radio.error:checked,
-#modal-media-library .form-boolean--type-radio.error:checked:active,
-#modal-media-library .form-boolean--type-radio.error:checked:hover {
+.media-library-widget-modal .form-boolean--type-radio.error:checked,
+.media-library-widget-modal .form-boolean--type-radio.error:checked:active,
+.media-library-widget-modal .form-boolean--type-radio.error:checked:hover {
   background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle r='4.5' cx='8.5' cy='8.5' fill='%23d72222'/%3E%3C/svg%3E");
 }
 
 #layout-builder-modal .form-boolean--type-radio.error:checked:focus,
-#modal-media-library .form-boolean--type-radio.error:checked:focus {
+.media-library-widget-modal .form-boolean--type-radio.error:checked:focus {
   -webkit-box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769, inset 0 0 0 1px #d72222;
   box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769, inset 0 0 0 1px #d72222;
 }
@@ -224,13 +224,13 @@
 #layout-builder-modal .form-boolean--type-radio[disabled]:focus:active,
 #layout-builder-modal .form-boolean--type-radio[disabled]:active:hover,
 #layout-builder-modal .form-boolean--type-radio[disabled].error:active:hover,
-#modal-media-library .form-boolean[disabled],
-#modal-media-library .form-boolean[disabled]:hover,
-#modal-media-library .form-boolean[disabled].error,
-#modal-media-library .form-boolean[disabled].error:hover,
-#modal-media-library .form-boolean--type-radio[disabled]:focus:active,
-#modal-media-library .form-boolean--type-radio[disabled]:active:hover,
-#modal-media-library .form-boolean--type-radio[disabled].error:active:hover {
+.media-library-widget-modal .form-boolean[disabled],
+.media-library-widget-modal .form-boolean[disabled]:hover,
+.media-library-widget-modal .form-boolean[disabled].error,
+.media-library-widget-modal .form-boolean[disabled].error:hover,
+.media-library-widget-modal .form-boolean--type-radio[disabled]:focus:active,
+.media-library-widget-modal .form-boolean--type-radio[disabled]:active:hover,
+.media-library-widget-modal .form-boolean--type-radio[disabled].error:active:hover {
   border-color: #bababf;
   background-color: #f2f2f3;
   background-image: none;
@@ -239,13 +239,13 @@
 }
 
 #layout-builder-modal .form-boolean--type-checkbox[disabled]:checked,
-#modal-media-library .form-boolean--type-checkbox[disabled]:checked {
+.media-library-widget-modal .form-boolean--type-checkbox[disabled]:checked {
   background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.7949219,7.095703 6.1816406,9.601563 12.205078,3.2753906 13.689453,4.8359375 6.1816406,12.724609 2.3105469,8.65625 Z' fill='%2382828c'/%3E%3C/svg%3E");
 }
 
 #layout-builder-modal .form-boolean--type-radio[disabled]:checked,
 #layout-builder-modal .form-boolean--type-radio[disabled].error:checked,
-#modal-media-library .form-boolean--type-radio[disabled]:checked,
-#modal-media-library .form-boolean--type-radio[disabled].error:checked {
+.media-library-widget-modal .form-boolean--type-radio[disabled]:checked,
+.media-library-widget-modal .form-boolean--type-radio[disabled].error:checked {
   background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle r='4.5' cx='8.5' cy='8.5' fill='%2382828c'/%3E%3C/svg%3E");
 }

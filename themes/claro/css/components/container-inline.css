@@ -6,17 +6,17 @@
  */
 
 #layout-builder-modal .container-inline .form-radios label:after,
-#modal-media-library .container-inline .form-radios label:after {
+.media-library-widget-modal .container-inline .form-radios label:after {
   content: "";
 }
 
 #layout-builder-modal .container-inline .form-radios .form-type-radio,
-#modal-media-library .container-inline .form-radios .form-type-radio {
+.media-library-widget-modal .container-inline .form-radios .form-type-radio {
   margin-right: 1em;
 }
 
 #layout-builder-modal [dir="rtl"] .container-inline .form-radios .form-type-radio,
-#modal-media-library [dir="rtl"] .container-inline .form-radios .form-type-radio {
+.media-library-widget-modal [dir="rtl"] .container-inline .form-radios .form-type-radio {
   margin-right: 0;
   margin-left: 1em;
 }

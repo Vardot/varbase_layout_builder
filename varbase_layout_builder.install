@@ -86,7 +86,7 @@ function varbase_layout_builder_update_8101() {
  */
 function varbase_layout_builder_update_8102() {
 
-  if (version_compare(\Drupal::VERSION, '8.8.0', 'gt') {
+  if (!version_compare(\Drupal::VERSION, '8.8.0', 'lt')) {
     if (!\Drupal::service('theme_handler')->themeExists('claro')) {
 
       // Install Claro theme.

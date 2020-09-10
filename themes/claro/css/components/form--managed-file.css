@@ -6,7 +6,7 @@
  */
 
 #layout-builder-modal .form-managed-file.no-upload,
-#modal-media-library .form-managed-file.no-upload {
+.media-library-widget-modal .form-managed-file.no-upload {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -20,12 +20,12 @@
 }
 
 #layout-builder-modal .form-managed-file.has-value.is-multiple,
-#modal-media-library .form-managed-file.has-value.is-multiple {
+.media-library-widget-modal .form-managed-file.has-value.is-multiple {
   display: block;
 }
 
 #layout-builder-modal .form-managed-file__main,
-#modal-media-library .form-managed-file__main {
+.media-library-widget-modal .form-managed-file__main {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -38,7 +38,7 @@
 }
 
 #layout-builder-modal .draggable .form-managed-file.has-value .form-managed-file__main,
-#modal-media-library .draggable .form-managed-file.has-value .form-managed-file__main {
+.media-library-widget-modal .draggable .form-managed-file.has-value .form-managed-file__main {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -46,12 +46,12 @@
 }
 
 #layout-builder-modal .form-managed-file.is-single.has-value .form-managed-file__main:last-child,
-#modal-media-library .form-managed-file.is-single.has-value .form-managed-file__main:last-child {
+.media-library-widget-modal .form-managed-file.is-single.has-value .form-managed-file__main:last-child {
   margin-bottom: 1rem;
 }
 
 #layout-builder-modal .form-managed-file__meta,
-#modal-media-library .form-managed-file__meta {
+.media-library-widget-modal .form-managed-file__meta {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -68,7 +68,7 @@
 }
 
 #layout-builder-modal .draggable .form-managed-file.has-value .form-managed-file__meta,
-#modal-media-library .draggable .form-managed-file.has-value .form-managed-file__meta {
+.media-library-widget-modal .draggable .form-managed-file.has-value .form-managed-file__meta {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
@@ -78,15 +78,15 @@
 @media all and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   #layout-builder-modal *::-ms-backdrop,
   #layout-builder-modal td .form-managed-file__meta,
-  #modal-media-library *::-ms-backdrop,
-  #modal-media-library td .form-managed-file__meta {
+  .media-library-widget-modal *::-ms-backdrop,
+  .media-library-widget-modal td .form-managed-file__meta {
     -ms-flex-preferred-size: 100%;
     flex-basis: 100%;
   }
 }
 
 #layout-builder-modal .form-managed-file__image-preview,
-#modal-media-library .form-managed-file__image-preview {
+.media-library-widget-modal .form-managed-file__image-preview {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -96,24 +96,24 @@
 }
 
 #layout-builder-modal .form-managed-file.has-meta .form-managed-file__image-preview,
-#modal-media-library .form-managed-file.has-meta .form-managed-file__image-preview {
+.media-library-widget-modal .form-managed-file.has-meta .form-managed-file__image-preview {
   margin-right: 1rem;
   /* LTR */
 }
 
 #layout-builder-modal [dir="rtl"] .form-managed-file.has-meta .form-managed-file__image-preview,
-#modal-media-library [dir="rtl"] .form-managed-file.has-meta .form-managed-file__image-preview {
+.media-library-widget-modal [dir="rtl"] .form-managed-file.has-meta .form-managed-file__image-preview {
   margin-right: 0;
   margin-left: 1rem;
 }
 
 #layout-builder-modal td .form-managed-file.no-meta .form-managed-file__image-preview,
-#modal-media-library td .form-managed-file.no-meta .form-managed-file__image-preview {
+.media-library-widget-modal td .form-managed-file.no-meta .form-managed-file__image-preview {
   margin-bottom: 0.5rem;
 }
 
 #layout-builder-modal .form-managed-file__meta-items,
-#modal-media-library .form-managed-file__meta-items {
+.media-library-widget-modal .form-managed-file__meta-items {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 16rem;
   -ms-flex: 1 1 16rem;
@@ -124,8 +124,8 @@
 @media all and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   #layout-builder-modal *::-ms-backdrop,
   #layout-builder-modal .form-managed-file__meta-items,
-  #modal-media-library *::-ms-backdrop,
-  #modal-media-library .form-managed-file__meta-items {
+  .media-library-widget-modal *::-ms-backdrop,
+  .media-library-widget-modal .form-managed-file__meta-items {
     -ms-flex-preferred-size: 32rem;
     flex-basis: 32rem;
   }
@@ -134,15 +134,15 @@
 @media all and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   #layout-builder-modal *::-ms-backdrop,
   #layout-builder-modal td .form-managed-file__meta-wrapper,
-  #modal-media-library *::-ms-backdrop,
-  #modal-media-library td .form-managed-file__meta-wrapper {
+  .media-library-widget-modal *::-ms-backdrop,
+  .media-library-widget-modal td .form-managed-file__meta-wrapper {
     display: -ms-flexbox;
     display: flex;
   }
 }
 
 #layout-builder-modal .form-managed-file .file,
-#modal-media-library .form-managed-file .file {
+.media-library-widget-modal .form-managed-file .file {
   word-break: break-all;
   -webkit-hyphens: auto;
   -ms-hyphens: auto;
@@ -151,12 +151,12 @@
 }
 
 #layout-builder-modal .form-managed-file .file__size,
-#modal-media-library .form-managed-file .file__size {
+.media-library-widget-modal .form-managed-file .file__size {
   word-break: normal;
 }
 
 #layout-builder-modal .form-managed-file__main .file,
-#modal-media-library .form-managed-file__main .file {
+.media-library-widget-modal .form-managed-file__main .file {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
@@ -166,7 +166,7 @@
 }
 
 #layout-builder-modal [dir="rtl"] .form-managed-file__main .file,
-#modal-media-library [dir="rtl"] .form-managed-file__main .file {
+.media-library-widget-modal [dir="rtl"] .form-managed-file__main .file {
   margin-right: 0;
   margin-left: 1rem;
 }
@@ -174,15 +174,15 @@
 @media all and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   #layout-builder-modal *::-ms-backdrop,
   #layout-builder-modal td .form-managed-file__main .file,
-  #modal-media-library *::-ms-backdrop,
-  #modal-media-library td .form-managed-file__main .file {
+  .media-library-widget-modal *::-ms-backdrop,
+  .media-library-widget-modal td .form-managed-file__main .file {
     -ms-flex: 0 1 100%;
     flex: 0 1 100%;
   }
 }
 
 #layout-builder-modal .form-managed-file__main .form-element--api-file,
-#modal-media-library .form-managed-file__main .form-element--api-file {
+.media-library-widget-modal .form-managed-file__main .form-element--api-file {
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
@@ -192,7 +192,7 @@
 }
 
 #layout-builder-modal .form-managed-file__main .button.button,
-#modal-media-library .form-managed-file__main .button.button {
+.media-library-widget-modal .form-managed-file__main .button.button {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 auto;
   -ms-flex: 0 0 auto;
@@ -201,7 +201,7 @@
 }
 
 #layout-builder-modal .form-managed-file__meta .form-item,
-#modal-media-library .form-managed-file__meta .form-item {
+.media-library-widget-modal .form-managed-file__meta .form-item {
   max-width: 32rem;
   margin-top: 0;
   /* Top margin is added by the parent element */
@@ -209,17 +209,17 @@
 }
 
 #layout-builder-modal .form-managed-file__meta .form-item:last-child,
-#modal-media-library .form-managed-file__meta .form-item:last-child {
+.media-library-widget-modal .form-managed-file__meta .form-item:last-child {
   margin-bottom: 0.5rem;
 }
 
 #layout-builder-modal .form-managed-file__meta .form-element,
-#modal-media-library .form-managed-file__meta .form-element {
+.media-library-widget-modal .form-managed-file__meta .form-element {
   width: 100%;
 }
 
 #layout-builder-modal .file-widget-multiple.has-table .form-type--managed-file,
-#modal-media-library .file-widget-multiple.has-table .form-type--managed-file {
+.media-library-widget-modal .file-widget-multiple.has-table .form-type--managed-file {
   margin-right: 1rem;
   margin-left: 1rem;
 }

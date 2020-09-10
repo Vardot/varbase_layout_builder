@@ -5,6 +5,6 @@
  * as it would not be present in this context.
  */
 #layout-builder-modal,
-#modal-media-library {
-  @import "../../../../../../../core/themes/claro/css/components/views-exposed-form.css";
+.media-library-widget-modal {
+  @import "../../../../../../../core/themes/claro/css/components/views-exposed-form";
 }

@@ -6,7 +6,7 @@
  */
 
 #layout-builder-modal .form-element--type-select,
-#modal-media-library .form-element--type-select {
+.media-library-widget-modal .form-element--type-select {
   padding-right: calc(2rem - 1px);
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 9'%3E%3Cpath fill='none' stroke-width='1.5' d='M1 1L7 7L13 1' stroke='%23545560'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
@@ -17,7 +17,7 @@
 }
 
 #layout-builder-modal [dir="rtl"] .form-element--type-select,
-#modal-media-library [dir="rtl"] .form-element--type-select {
+.media-library-widget-modal [dir="rtl"] .form-element--type-select {
   padding-right: calc(1rem - 1px);
   padding-left: calc(2rem - 1px);
   background-position: 0 50%;
@@ -25,8 +25,8 @@
 
 #layout-builder-modal .no-touchevents .form-element--type-select.form-element--extrasmall,
 #layout-builder-modal .no-touchevents .form-element--type-select[name$="][_weight]"],
-#modal-media-library .no-touchevents .form-element--type-select.form-element--extrasmall,
-#modal-media-library .no-touchevents .form-element--type-select[name$="][_weight]"] {
+.media-library-widget-modal .no-touchevents .form-element--type-select.form-element--extrasmall,
+.media-library-widget-modal .no-touchevents .form-element--type-select[name$="][_weight]"] {
   padding-right: calc(1.5rem - 1px);
   -webkit-background-size: 1.75rem 0.4375rem;
   background-size: 1.75rem 0.4375rem;
@@ -35,23 +35,23 @@
 
 #layout-builder-modal [dir="rtl"].no-touchevents .form-element--type-select.form-element--extrasmall,
 #layout-builder-modal [dir="rtl"].no-touchevents .form-element--type-select[name$="][_weight]"],
-#modal-media-library [dir="rtl"].no-touchevents .form-element--type-select.form-element--extrasmall,
-#modal-media-library [dir="rtl"].no-touchevents .form-element--type-select[name$="][_weight]"] {
+.media-library-widget-modal [dir="rtl"].no-touchevents .form-element--type-select.form-element--extrasmall,
+.media-library-widget-modal [dir="rtl"].no-touchevents .form-element--type-select[name$="][_weight]"] {
   padding-right: calc(0.5rem - 1px);
   padding-left: calc(1.5rem - 1px);
 }
 
 #layout-builder-modal .form-element--type-select::-ms-expand,
-#modal-media-library .form-element--type-select::-ms-expand {
+.media-library-widget-modal .form-element--type-select::-ms-expand {
   display: none;
 }
 
 #layout-builder-modal .form-element--type-select:focus,
-#modal-media-library .form-element--type-select:focus {
+.media-library-widget-modal .form-element--type-select:focus {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 9'%3E%3Cpath fill='none' stroke-width='1.5' d='M1 1L7 7L13 1' stroke='%23004adc'/%3E%3C/svg%3E%0A");
 }
 
 #layout-builder-modal .form-element--type-select[disabled],
-#modal-media-library .form-element--type-select[disabled] {
+.media-library-widget-modal .form-element--type-select[disabled] {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 9'%3E%3Cpath fill='none' stroke-width='1.5' d='M1 1L7 7L13 1' stroke='%238e929c'/%3E%3C/svg%3E%0A");
 }

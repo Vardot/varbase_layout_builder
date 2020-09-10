@@ -6,11 +6,11 @@
  */
 
 #layout-builder-modal .search-admin-settings .container-inline,
-#modal-media-library .search-admin-settings .container-inline {
+.media-library-widget-modal .search-admin-settings .container-inline {
   margin-bottom: 1em;
 }
 
 #layout-builder-modal .search-admin-settings label[for="edit-search-type"],
-#modal-media-library .search-admin-settings label[for="edit-search-type"] {
+.media-library-widget-modal .search-admin-settings label[for="edit-search-type"] {
   display: block;
 }

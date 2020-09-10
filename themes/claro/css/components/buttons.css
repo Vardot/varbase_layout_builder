@@ -6,7 +6,7 @@
  */
 
 #layout-builder-modal .button,
-#modal-media-library .button,
+.media-library-widget-modal .button,
 #drupal-modal #media-image-edit-form .button {
   display: inline-block;
   margin: 1rem 0.75rem 1rem 0;
@@ -32,39 +32,39 @@
 }
 
 #layout-builder-modal [dir="rtl"] .button,
-#modal-media-library [dir="rtl"] .button,
+.media-library-widget-modal [dir="rtl"] .button,
 #drupal-modal #media-image-edit-form [dir="rtl"] .button {
   margin: 1rem 0 1rem 0.75rem;
 }
 
 #layout-builder-modal .button:not(:focus),
-#modal-media-library .button:not(:focus),
+.media-library-widget-modal .button:not(:focus),
 #drupal-modal #media-image-edit-form .button:not(:focus) {
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
 
 #layout-builder-modal .button:hover,
-#modal-media-library .button:hover,
+.media-library-widget-modal .button:hover,
 #drupal-modal #media-image-edit-form .button:hover {
   text-decoration: none;
   background-color: #c2c3ca;
 }
 
 #layout-builder-modal .button:focus,
-#modal-media-library .button:focus,
+.media-library-widget-modal .button:focus,
 #drupal-modal #media-image-edit-form .button:focus {
   text-decoration: none;
 }
 
 #layout-builder-modal .button:active,
-#modal-media-library .button:active,
+.media-library-widget-modal .button:active,
 #drupal-modal #media-image-edit-form .button:active {
   background-color: #adaeb3;
 }
 
 #layout-builder-modal .no-touchevents .button--small,
-#modal-media-library .no-touchevents .button--small,
+.media-library-widget-modal .no-touchevents .button--small,
 #drupal-modal #media-image-edit-form .no-touchevents .button--small {
   margin: 0.75rem 0.5rem 0.75rem 0;
   /* LTR */
@@ -74,7 +74,7 @@
 }
 
 #layout-builder-modal .no-touchevents .button--extrasmall,
-#modal-media-library .no-touchevents .button--extrasmall,
+.media-library-widget-modal .no-touchevents .button--extrasmall,
 #drupal-modal #media-image-edit-form .no-touchevents .button--extrasmall {
   margin: 0.5rem 0.5rem 0.5rem 0;
   /* LTR */
@@ -85,8 +85,8 @@
 
 #layout-builder-modal [dir="rtl"].no-touchevents .button--small,
 #layout-builder-modal [dir="rtl"].no-touchevents .button--extrasmall,
-#modal-media-library [dir="rtl"].no-touchevents .button--small,
-#modal-media-library [dir="rtl"].no-touchevents .button--extrasmall,
+.media-library-widget-modal [dir="rtl"].no-touchevents .button--small,
+.media-library-widget-modal [dir="rtl"].no-touchevents .button--extrasmall,
 #drupal-modal #media-image-edit-form [dir="rtl"].no-touchevents .button--small,
 #drupal-modal #media-image-edit-form [dir="rtl"].no-touchevents .button--extrasmall {
   margin-right: 0;
@@ -94,13 +94,13 @@
 }
 
 #layout-builder-modal .button--action,
-#modal-media-library .button--action,
+.media-library-widget-modal .button--action,
 #drupal-modal #media-image-edit-form .button--action {
   margin: 0;
 }
 
 #layout-builder-modal .button--action::before,
-#modal-media-library .button--action::before,
+.media-library-widget-modal .button--action::before,
 #drupal-modal #media-image-edit-form .button--action::before {
   margin-left: -0.25em;
   /* LTR */
@@ -111,7 +111,7 @@
 }
 
 #layout-builder-modal [dir="rtl"] .button--action::before,
-#modal-media-library [dir="rtl"] .button--action::before,
+.media-library-widget-modal [dir="rtl"] .button--action::before,
 #drupal-modal #media-image-edit-form [dir="rtl"] .button--action::before {
   margin-right: -0.25em;
   margin-left: 0;
@@ -121,66 +121,66 @@
 
 #layout-builder-modal a.button:hover,
 #layout-builder-modal a.button:active,
-#modal-media-library a.button:hover,
-#modal-media-library a.button:active,
+.media-library-widget-modal a.button:hover,
+.media-library-widget-modal a.button:active,
 #drupal-modal #media-image-edit-form a.button:hover,
 #drupal-modal #media-image-edit-form a.button:active {
   color: #222330;
 }
 
 #layout-builder-modal .button--primary,
-#modal-media-library .button--primary,
+.media-library-widget-modal .button--primary,
 #drupal-modal #media-image-edit-form .button--primary {
   color: #fff;
   background-color: #003cc5;
 }
 
 #layout-builder-modal .button--primary:hover,
-#modal-media-library .button--primary:hover,
+.media-library-widget-modal .button--primary:hover,
 #drupal-modal #media-image-edit-form .button--primary:hover {
   color: #fff;
   background-color: #0036b1;
 }
 
 #layout-builder-modal .button--primary:active,
-#modal-media-library .button--primary:active,
+.media-library-widget-modal .button--primary:active,
 #drupal-modal #media-image-edit-form .button--primary:active {
   background-color: #00339a;
 }
 
 #layout-builder-modal a.button--primary:hover,
 #layout-builder-modal a.button--primary:active,
-#modal-media-library a.button--primary:hover,
-#modal-media-library a.button--primary:active,
+.media-library-widget-modal a.button--primary:hover,
+.media-library-widget-modal a.button--primary:active,
 #drupal-modal #media-image-edit-form a.button--primary:hover,
 #drupal-modal #media-image-edit-form a.button--primary:active {
   color: #fff;
 }
 
 #layout-builder-modal .button--danger,
-#modal-media-library .button--danger,
+.media-library-widget-modal .button--danger,
 #drupal-modal #media-image-edit-form .button--danger {
   color: #fff;
   background-color: #d72222;
 }
 
 #layout-builder-modal .button--danger:hover,
-#modal-media-library .button--danger:hover,
+.media-library-widget-modal .button--danger:hover,
 #drupal-modal #media-image-edit-form .button--danger:hover {
   color: #fff;
   background-color: #c11f1f;
 }
 
 #layout-builder-modal .button--danger:active,
-#modal-media-library .button--danger:active,
+.media-library-widget-modal .button--danger:active,
 #drupal-modal #media-image-edit-form .button--danger:active {
   background-color: #ab1b1b;
 }
 
 #layout-builder-modal a.button--danger:hover,
 #layout-builder-modal a.button--danger:active,
-#modal-media-library a.button--danger:hover,
-#modal-media-library a.button--danger:active,
+.media-library-widget-modal a.button--danger:hover,
+.media-library-widget-modal a.button--danger:active,
 #drupal-modal #media-image-edit-form a.button--danger:hover,
 #drupal-modal #media-image-edit-form a.button--danger:active {
   color: #fff;
@@ -188,8 +188,8 @@
 
 #layout-builder-modal .button:disabled,
 #layout-builder-modal .button.is-disabled,
-#modal-media-library .button:disabled,
-#modal-media-library .button.is-disabled,
+.media-library-widget-modal .button:disabled,
+.media-library-widget-modal .button.is-disabled,
 #drupal-modal #media-image-edit-form .button:disabled,
 #drupal-modal #media-image-edit-form .button.is-disabled {
   color: #8e929c;
@@ -198,8 +198,8 @@
 
 #layout-builder-modal .button--primary:disabled,
 #layout-builder-modal .button--primary.is-disabled,
-#modal-media-library .button--primary:disabled,
-#modal-media-library .button--primary.is-disabled,
+.media-library-widget-modal .button--primary:disabled,
+.media-library-widget-modal .button--primary.is-disabled,
 #drupal-modal #media-image-edit-form .button--primary:disabled,
 #drupal-modal #media-image-edit-form .button--primary.is-disabled {
   color: #82828c;
@@ -207,7 +207,7 @@
 }
 
 #layout-builder-modal .button.is-disabled,
-#modal-media-library .button.is-disabled,
+.media-library-widget-modal .button.is-disabled,
 #drupal-modal #media-image-edit-form .button.is-disabled {
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -217,7 +217,7 @@
 }
 
 #layout-builder-modal .link,
-#modal-media-library .link,
+.media-library-widget-modal .link,
 #drupal-modal #media-image-edit-form .link {
   display: inline;
   padding: 0;
@@ -231,22 +231,22 @@
 }
 
 #layout-builder-modal .button--primary,
-#modal-media-library .button--primary,
+.media-library-widget-modal .button--primary,
 #drupal-modal #media-image-edit-form .button--primary {
   background: #003cc5;
 }
 
 #layout-builder-modal .button--primary:hover,
 #layout-builder-modal .button--primary:active,
-#modal-media-library .button--primary:hover,
-#modal-media-library .button--primary:active,
+.media-library-widget-modal .button--primary:hover,
+.media-library-widget-modal .button--primary:active,
 #drupal-modal #media-image-edit-form .button--primary:hover,
 #drupal-modal #media-image-edit-form .button--primary:active {
   background: #0036b1;
 }
 
 #layout-builder-modal .button,
-#modal-media-library .button,
+.media-library-widget-modal .button,
 #drupal-modal #media-image-edit-form .button {
   background-image: none;
   height: auto;
@@ -254,21 +254,21 @@
 }
 
 #layout-builder-modal .button.form-element,
-#modal-media-library .button.form-element,
+.media-library-widget-modal .button.form-element,
 #drupal-modal #media-image-edit-form .button.form-element {
   background: #d4d4d8;
 }
 
 #layout-builder-modal .js-hide,
-#modal-media-library .js-hide,
+.media-library-widget-modal .js-hide,
 #drupal-modal #media-image-edit-form .js-hide {
   display: none;
 }
 
 #layout-builder-modal .button--extrasmall,
 #layout-builder-modal .button--small,
-#modal-media-library .button--extrasmall,
-#modal-media-library .button--small,
+.media-library-widget-modal .button--extrasmall,
+.media-library-widget-modal .button--small,
 #drupal-modal #media-image-edit-form .button--extrasmall,
 #drupal-modal #media-image-edit-form .button--small {
   margin: 0.5rem 0.5rem 0.5rem 0;
@@ -277,7 +277,7 @@
 }
 
 #layout-builder-modal .field-add-more-submit,
-#modal-media-library .field-add-more-submit,
+.media-library-widget-modal .field-add-more-submit,
 #drupal-modal #media-image-edit-form .field-add-more-submit {
   display: inline-block !important;
 }

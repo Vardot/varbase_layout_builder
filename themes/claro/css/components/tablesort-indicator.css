@@ -6,7 +6,7 @@
  */
 
 #layout-builder-modal .tablesort,
-#modal-media-library .tablesort {
+.media-library-widget-modal .tablesort {
   position: absolute;
   top: 50%;
   right: 1rem;
@@ -24,8 +24,8 @@
 
 #layout-builder-modal _:-ms-fullscreen,
 #layout-builder-modal .tablesort,
-#modal-media-library _:-ms-fullscreen,
-#modal-media-library .tablesort {
+.media-library-widget-modal _:-ms-fullscreen,
+.media-library-widget-modal .tablesort {
   position: static;
   float: right;
   margin-top: 0.125rem;
@@ -35,7 +35,7 @@
 }
 
 #layout-builder-modal [dir="rtl"] .tablesort,
-#modal-media-library [dir="rtl"] .tablesort {
+.media-library-widget-modal [dir="rtl"] .tablesort {
   right: auto;
   left: 1rem;
   /* 16px */
@@ -44,8 +44,8 @@
 
 #layout-builder-modal _:-ms-fullscreen,
 #layout-builder-modal [dir="rtl"] .tablesort,
-#modal-media-library _:-ms-fullscreen,
-#modal-media-library [dir="rtl"] .tablesort {
+.media-library-widget-modal _:-ms-fullscreen,
+.media-library-widget-modal [dir="rtl"] .tablesort {
   float: left;
   margin-right: 0;
   margin-left: -1.5rem;
@@ -54,16 +54,16 @@
 
 #layout-builder-modal .tablesort--asc,
 #layout-builder-modal [dir="rtl"] .tablesort--asc,
-#modal-media-library .tablesort--asc,
-#modal-media-library [dir="rtl"] .tablesort--asc {
+.media-library-widget-modal .tablesort--asc,
+.media-library-widget-modal [dir="rtl"] .tablesort--asc {
   opacity: 1;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='16' viewBox='0 0 10 12'%3E%3Cpath d='M 5 0.43945312 L 0.71875 4.71875 L 1.78125 5.78125 L 4.25 3.3125 L 4.25 11.25 L 5.75 11.25 L 5.75 3.3125 L 8.21875 5.78125 L 9.28125 4.71875 L 5 0.43945312 z' fill='%23004adc'/%3E%3C/svg%3E");
 }
 
 #layout-builder-modal .tablesort--desc,
 #layout-builder-modal [dir="rtl"] .tablesort--desc,
-#modal-media-library .tablesort--desc,
-#modal-media-library [dir="rtl"] .tablesort--desc {
+.media-library-widget-modal .tablesort--desc,
+.media-library-widget-modal [dir="rtl"] .tablesort--desc {
   opacity: 1;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='16' viewBox='0 0 10 12'%3E%3Cpath d='M 4.25 0.75 L 4.25 8.6875 L 1.78125 6.21875 L 0.71875 7.28125 L 5 11.560547 L 9.28125 7.28125 L 8.21875 6.21875 L 5.75 8.6875 L 5.75 0.75 L 4.25 0.75 z' fill='%23004adc'/%3E%3C/svg%3E");
 }

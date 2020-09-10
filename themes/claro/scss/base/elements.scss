@@ -6,10 +6,11 @@
  */
 
 #layout-builder-modal,
-#modal-media-library {
+.media-library-widget-modal {
   @import "../../../../../core/themes/claro/css/base/elements";
 }
 
-html {
+html #layout-builder-modal,
+html .media-library-widget-modal {
   font-size: 90%;
 }

@@ -4,11 +4,11 @@
  * This is modified so that the #layout-builder-modal is inside .js.
  */
 .js #layout-builder-modal .js-hide,
-#modal-media-library .js-hide {
+.media-library-widget-modal .js-hide {
   display: none;
 }
 
 .js #layout-builder-modal .js-show,
-#modal-media-library .js-show {
+.media-library-widget-modal .js-show {
   display: block;
 }

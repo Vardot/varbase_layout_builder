@@ -7,9 +7,17 @@
 
 
 #layout-builder-modal .views-exposed-form.views-exposed-form,
-#modal-media-library .views-exposed-form.views-exposed-form {
+.media-library-widget-modal .views-exposed-form.views-exposed-form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+  -ms-flex-align: end;
   align-items: flex-end;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
@@ -17,42 +25,45 @@
   border: 1px solid rgba(216, 217, 224, 0.8);
   border-radius: 2px;
   background-color: #fff;
-  box-shadow: 0  2px  4px  rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #layout-builder-modal .views-exposed-form__item.views-exposed-form__item,
-#modal-media-library .views-exposed-form__item.views-exposed-form__item {
-  margin: 0.75rem 0.5rem 0 0; /* LTR */
+.media-library-widget-modal .views-exposed-form__item.views-exposed-form__item {
+  margin: 0.75rem 0.5rem 0 0;
+  /* LTR */
 }
 
-[dir="rtl"] #layout-builder-modal .views-exposed-form__item.views-exposed-form__item,
-[dir="rtl"] #modal-media-library .views-exposed-form__item.views-exposed-form__item {
+#layout-builder-modal [dir="rtl"] .views-exposed-form__item.views-exposed-form__item,
+.media-library-widget-modal [dir="rtl"] .views-exposed-form__item.views-exposed-form__item {
   margin-right: 0;
   margin-left: 0.5rem;
 }
 
 #layout-builder-modal .views-exposed-form__item--preceding-actions.views-exposed-form__item--preceding-actions,
-#modal-media-library .views-exposed-form__item--preceding-actions.views-exposed-form__item--preceding-actions {
-  margin-right: 1rem; /* LTR */
+.media-library-widget-modal .views-exposed-form__item--preceding-actions.views-exposed-form__item--preceding-actions {
+  margin-right: 1rem;
+  /* LTR */
 }
 
-[dir="rtl"] #layout-builder-modal .views-exposed-form__item--preceding-actions.views-exposed-form__item--preceding-actions,
-[dir="rtl"] #modal-media-library .views-exposed-form__item--preceding-actions.views-exposed-form__item--preceding-actions {
+#layout-builder-modal [dir="rtl"] .views-exposed-form__item--preceding-actions.views-exposed-form__item--preceding-actions,
+.media-library-widget-modal [dir="rtl"] .views-exposed-form__item--preceding-actions.views-exposed-form__item--preceding-actions {
   margin-right: 0;
   margin-left: 1rem;
 }
 
 #layout-builder-modal .views-exposed-form__item--actions.views-exposed-form__item--actions .button,
-#modal-media-library .views-exposed-form__item--actions.views-exposed-form__item--actions .button {
+.media-library-widget-modal .views-exposed-form__item--actions.views-exposed-form__item--actions .button {
   margin-bottom: 0;
 }
 
 #layout-builder-modal .views-exposed-form__item--actions.views-exposed-form__item--actions .button:last-child,
-#modal-media-library .views-exposed-form__item--actions.views-exposed-form__item--actions .button:last-child {
+.media-library-widget-modal .views-exposed-form__item--actions.views-exposed-form__item--actions .button:last-child {
   margin-right: 0;
 }
 
-[dir="rtl"] #layout-builder-modal .views-exposed-form__item--actions.views-exposed-form__item--actions:last-child,
-[dir="rtl"] #modal-media-library .views-exposed-form__item--actions.views-exposed-form__item--actions:last-child {
+#layout-builder-modal [dir="rtl"] .views-exposed-form__item--actions.views-exposed-form__item--actions:last-child,
+.media-library-widget-modal [dir="rtl"] .views-exposed-form__item--actions.views-exposed-form__item--actions:last-child {
   margin-left: 0;
 }

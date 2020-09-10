@@ -6,13 +6,13 @@
  */
 
 #layout-builder-modal .field-multiple-table,
-#modal-media-library .field-multiple-table {
+.media-library-widget-modal .field-multiple-table {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
 #layout-builder-modal .form-item--multiple .field-add-more-submit,
-#modal-media-library .form-item--multiple .field-add-more-submit {
+.media-library-widget-modal .form-item--multiple .field-add-more-submit {
   margin-top: 0;
   margin-bottom: 0;
 }

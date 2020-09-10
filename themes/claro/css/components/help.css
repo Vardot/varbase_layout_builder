@@ -6,6 +6,6 @@
  */
 
 #layout-builder-modal .help p,
-#modal-media-library .help p {
+.media-library-widget-modal .help p {
   margin: 0 0 10px;
 }
