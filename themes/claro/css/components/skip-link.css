@@ -6,7 +6,8 @@
  */
 
 #layout-builder-modal .skip-link,
-.media-library-widget-modal .skip-link {
+.media-library-widget-modal .skip-link,
+form.media-form .skip-link {
   z-index: 50;
   left: 50%;
   padding: 1px 10px 2px;
@@ -20,11 +21,13 @@
 }
 
 #layout-builder-modal .skip-link:focus,
-.media-library-widget-modal .skip-link:focus {
+.media-library-widget-modal .skip-link:focus,
+form.media-form .skip-link:focus {
   text-decoration: none;
 }
 
 #layout-builder-modal .skip-link.visually-hidden.focusable:focus,
-.media-library-widget-modal .skip-link.visually-hidden.focusable:focus {
+.media-library-widget-modal .skip-link.visually-hidden.focusable:focus,
+form.media-form .skip-link.visually-hidden.focusable:focus {
   position: absolute !important;
 }

@@ -6,12 +6,14 @@
  */
 
 #layout-builder-modal .image-preview,
-.media-library-widget-modal .image-preview {
+.media-library-widget-modal .image-preview,
+form.media-form .image-preview {
   line-height: 0;
 }
 
 #layout-builder-modal .image-preview__img-wrapper,
-.media-library-widget-modal .image-preview__img-wrapper {
+.media-library-widget-modal .image-preview__img-wrapper,
+form.media-form .image-preview__img-wrapper {
   display: inline-block;
   max-width: 100%;
   background-color: #fff;
@@ -20,7 +22,8 @@
 }
 
 #layout-builder-modal .image-preview img,
-.media-library-widget-modal .image-preview img {
+.media-library-widget-modal .image-preview img,
+form.media-form .image-preview img {
   background-image: -webkit-linear-gradient(135deg, #d4d4d8 25%, transparent 26%), -webkit-linear-gradient(135deg, #d4d4d8 25%, transparent 26%), -webkit-linear-gradient(315deg, #d4d4d8 25%, transparent 26%), -webkit-linear-gradient(315deg, #d4d4d8 25%, transparent 26%);
   background-image: -o-linear-gradient(135deg, #d4d4d8 25%, transparent 26%), -o-linear-gradient(135deg, #d4d4d8 25%, transparent 26%), -o-linear-gradient(315deg, #d4d4d8 25%, transparent 26%), -o-linear-gradient(315deg, #d4d4d8 25%, transparent 26%);
   background-image: linear-gradient(-45deg, #d4d4d8 25%, transparent 26%), linear-gradient(-45deg, #d4d4d8 25%, transparent 26%), linear-gradient(135deg, #d4d4d8 25%, transparent 26%), linear-gradient(135deg, #d4d4d8 25%, transparent 26%);
@@ -31,13 +34,15 @@
 
 @media screen and (-ms-high-contrast: active) {
   #layout-builder-modal .image-preview img,
-  .media-library-widget-modal .image-preview img {
+  .media-library-widget-modal .image-preview img,
+  form.media-form .image-preview img {
     background: none;
   }
 }
 
 #layout-builder-modal .image-widget .file.file,
-.media-library-widget-modal .image-widget .file.file {
+.media-library-widget-modal .image-widget .file.file,
+form.media-form .image-widget .file.file {
   padding: 0;
   /* LTR and RTL */
   background: none;

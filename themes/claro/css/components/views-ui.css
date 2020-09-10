@@ -6,7 +6,8 @@
  */
 
 #layout-builder-modal details.fieldset-no-legend,
-.media-library-widget-modal details.fieldset-no-legend {
+.media-library-widget-modal details.fieldset-no-legend,
+form.media-form details.fieldset-no-legend {
   padding-top: 0;
 }
 
@@ -15,7 +16,10 @@
 #layout-builder-modal .views-ui-dialog a.button,
 .media-library-widget-modal .views-ui-dialog input.form-submit,
 .media-library-widget-modal .views-admin a.button,
-.media-library-widget-modal .views-ui-dialog a.button {
+.media-library-widget-modal .views-ui-dialog a.button,
+form.media-form .views-ui-dialog input.form-submit,
+form.media-form .views-admin a.button,
+form.media-form .views-ui-dialog a.button {
   margin-top: 0;
   margin-right: 0;
   margin-bottom: 0;
@@ -26,7 +30,10 @@
 #layout-builder-modal [dir="rtl"] .views-ui-dialog a.button,
 .media-library-widget-modal [dir="rtl"] .views-ui-dialog input.form-submit,
 .media-library-widget-modal [dir="rtl"] .views-admin a.button,
-.media-library-widget-modal [dir="rtl"] .views-ui-dialog a.button {
+.media-library-widget-modal [dir="rtl"] .views-ui-dialog a.button,
+form.media-form [dir="rtl"] .views-ui-dialog input.form-submit,
+form.media-form [dir="rtl"] .views-admin a.button,
+form.media-form [dir="rtl"] .views-ui-dialog a.button {
   margin-right: 1em;
   margin-left: 0;
 }
@@ -36,7 +43,10 @@
 #layout-builder-modal [dir="rtl"] .views-ui-dialog a.button:first-child,
 .media-library-widget-modal [dir="rtl"] .views-ui-dialog input.form-submit:first-child,
 .media-library-widget-modal [dir="rtl"] .views-admin a.button:first-child,
-.media-library-widget-modal [dir="rtl"] .views-ui-dialog a.button:first-child {
+.media-library-widget-modal [dir="rtl"] .views-ui-dialog a.button:first-child,
+form.media-form [dir="rtl"] .views-ui-dialog input.form-submit:first-child,
+form.media-form [dir="rtl"] .views-admin a.button:first-child,
+form.media-form [dir="rtl"] .views-ui-dialog a.button:first-child {
   margin-right: 0;
 }
 
@@ -45,7 +55,10 @@
 #layout-builder-modal .form-item-options-expose-description,
 .media-library-widget-modal .form-item-options-expose-required,
 .media-library-widget-modal .form-item-options-expose-label,
-.media-library-widget-modal .form-item-options-expose-description {
+.media-library-widget-modal .form-item-options-expose-description,
+form.media-form .form-item-options-expose-required,
+form.media-form .form-item-options-expose-label,
+form.media-form .form-item-options-expose-description {
   margin-left: 1.5em;
   /* LTR */
 }
@@ -55,7 +68,10 @@
 #layout-builder-modal [dir="rtl"] .form-item-options-expose-description,
 .media-library-widget-modal [dir="rtl"] .form-item-options-expose-required,
 .media-library-widget-modal [dir="rtl"] .form-item-options-expose-label,
-.media-library-widget-modal [dir="rtl"] .form-item-options-expose-description {
+.media-library-widget-modal [dir="rtl"] .form-item-options-expose-description,
+form.media-form [dir="rtl"] .form-item-options-expose-required,
+form.media-form [dir="rtl"] .form-item-options-expose-label,
+form.media-form [dir="rtl"] .form-item-options-expose-description {
   margin-right: 1.5em;
   margin-left: 0;
 }
@@ -73,7 +89,14 @@
 .media-library-widget-modal .views-admin-dependent .form-item .form-item,
 .media-library-widget-modal .form-item-options-expose-required,
 .media-library-widget-modal .form-item-options-expose-label,
-.media-library-widget-modal .form-item-options-expose-description {
+.media-library-widget-modal .form-item-options-expose-description,
+form.media-form .views-admin-dependent .form-item .form-item,
+form.media-form .views-admin-dependent .form-type-checkboxes,
+form.media-form .views-admin-dependent .form-type-radios,
+form.media-form .views-admin-dependent .form-item .form-item,
+form.media-form .form-item-options-expose-required,
+form.media-form .form-item-options-expose-label,
+form.media-form .form-item-options-expose-description {
   margin-top: 6px;
   margin-bottom: 6px;
 }
@@ -81,7 +104,9 @@
 #layout-builder-modal .views-admin-dependent .form-type-radio,
 #layout-builder-modal .views-admin-dependent .form-radios .form-item,
 .media-library-widget-modal .views-admin-dependent .form-type-radio,
-.media-library-widget-modal .views-admin-dependent .form-radios .form-item {
+.media-library-widget-modal .views-admin-dependent .form-radios .form-item,
+form.media-form .views-admin-dependent .form-type-radio,
+form.media-form .views-admin-dependent .form-radios .form-item {
   margin-top: 2px;
   margin-bottom: 2px;
 }
@@ -89,7 +114,9 @@
 #layout-builder-modal .views-admin ul.secondary,
 #layout-builder-modal .views-admin .item-list ul,
 .media-library-widget-modal .views-admin ul.secondary,
-.media-library-widget-modal .views-admin .item-list ul {
+.media-library-widget-modal .views-admin .item-list ul,
+form.media-form .views-admin ul.secondary,
+form.media-form .views-admin .item-list ul {
   margin: 0;
   padding: 0;
 }
@@ -99,58 +126,71 @@
 #layout-builder-modal .views-displays ul.secondary li.is-active a.is-active,
 .media-library-widget-modal .views-displays ul.secondary li a,
 .media-library-widget-modal .views-displays ul.secondary li.is-active a,
-.media-library-widget-modal .views-displays ul.secondary li.is-active a.is-active {
+.media-library-widget-modal .views-displays ul.secondary li.is-active a.is-active,
+form.media-form .views-displays ul.secondary li a,
+form.media-form .views-displays ul.secondary li.is-active a,
+form.media-form .views-displays ul.secondary li.is-active a.is-active {
   padding: 2px 7px 3px;
 }
 
 #layout-builder-modal .views-displays ul.secondary li a,
-.media-library-widget-modal .views-displays ul.secondary li a {
+.media-library-widget-modal .views-displays ul.secondary li a,
+form.media-form .views-displays ul.secondary li a {
   color: #0074bd;
 }
 
 #layout-builder-modal .views-displays ul.secondary li.is-active a,
 #layout-builder-modal .views-displays ul.secondary li.is-active a.is-active,
 .media-library-widget-modal .views-displays ul.secondary li.is-active a,
-.media-library-widget-modal .views-displays ul.secondary li.is-active a.is-active {
+.media-library-widget-modal .views-displays ul.secondary li.is-active a.is-active,
+form.media-form .views-displays ul.secondary li.is-active a,
+form.media-form .views-displays ul.secondary li.is-active a.is-active {
   border: 1px solid transparent;
 }
 
 #layout-builder-modal .views-admin .links li,
-.media-library-widget-modal .views-admin .links li {
+.media-library-widget-modal .views-admin .links li,
+form.media-form .views-admin .links li {
   padding-right: 0;
   /* LTR */
 }
 
 #layout-builder-modal [dir="rtl"] .views-admin .links li,
-.media-library-widget-modal [dir="rtl"] .views-admin .links li {
+.media-library-widget-modal [dir="rtl"] .views-admin .links li,
+form.media-form [dir="rtl"] .views-admin .links li {
   padding-left: 0;
 }
 
 #layout-builder-modal .views-admin .button .links li,
-.media-library-widget-modal .views-admin .button .links li {
+.media-library-widget-modal .views-admin .button .links li,
+form.media-form .views-admin .button .links li {
   padding-right: 12px;
   /* LTR */
 }
 
 #layout-builder-modal [dir="rtl"] .views-admin .button .links li,
-.media-library-widget-modal [dir="rtl"] .views-admin .button .links li {
+.media-library-widget-modal [dir="rtl"] .views-admin .button .links li,
+form.media-form [dir="rtl"] .views-admin .button .links li {
   padding-left: 12px;
 }
 
 #layout-builder-modal .views-display-top ul.secondary,
-.media-library-widget-modal .views-display-top ul.secondary {
+.media-library-widget-modal .views-display-top ul.secondary,
+form.media-form .views-display-top ul.secondary {
   float: left;
   /* LTR */
   background-color: transparent;
 }
 
 #layout-builder-modal [dir="rtl"] .views-display-top ul.secondary,
-.media-library-widget-modal [dir="rtl"] .views-display-top ul.secondary {
+.media-library-widget-modal [dir="rtl"] .views-display-top ul.secondary,
+form.media-form [dir="rtl"] .views-display-top ul.secondary {
   float: right;
 }
 
 #layout-builder-modal .views-display-top .secondary .action-list li,
-.media-library-widget-modal .views-display-top .secondary .action-list li {
+.media-library-widget-modal .views-display-top .secondary .action-list li,
+form.media-form .views-display-top .secondary .action-list li {
   float: none;
   margin: 0;
 }
@@ -158,17 +198,21 @@
 #layout-builder-modal .views-ui-rearrange-filter-form table td,
 #layout-builder-modal .views-ui-rearrange-filter-form table th,
 .media-library-widget-modal .views-ui-rearrange-filter-form table td,
-.media-library-widget-modal .views-ui-rearrange-filter-form table th {
+.media-library-widget-modal .views-ui-rearrange-filter-form table th,
+form.media-form .views-ui-rearrange-filter-form table td,
+form.media-form .views-ui-rearrange-filter-form table th {
   vertical-align: top;
 }
 
 #layout-builder-modal #edit-display-settings-title,
-.media-library-widget-modal #edit-display-settings-title {
+.media-library-widget-modal #edit-display-settings-title,
+form.media-form #edit-display-settings-title {
   color: #008bcb;
 }
 
 #layout-builder-modal .views-tabs,
-.media-library-widget-modal .views-tabs {
+.media-library-widget-modal .views-tabs,
+form.media-form .views-tabs {
   overflow: visible;
   margin: 0 200px 0 0;
   /* LTR */
@@ -180,14 +224,16 @@
 }
 
 #layout-builder-modal [dir="rtl"] .views-tabs,
-.media-library-widget-modal [dir="rtl"] .views-tabs {
+.media-library-widget-modal [dir="rtl"] .views-tabs,
+form.media-form [dir="rtl"] .views-tabs {
   margin-right: 0;
   margin-left: 200px;
   text-align: right;
 }
 
 #layout-builder-modal .views-tabs > li,
-.media-library-widget-modal .views-tabs > li {
+.media-library-widget-modal .views-tabs > li,
+form.media-form .views-tabs > li {
   float: left;
   /* LTR */
   padding: 0;
@@ -196,30 +242,35 @@
 }
 
 #layout-builder-modal [dir="rtl"] .views-tabs > li,
-.media-library-widget-modal [dir="rtl"] .views-tabs > li {
+.media-library-widget-modal [dir="rtl"] .views-tabs > li,
+form.media-form [dir="rtl"] .views-tabs > li {
   float: right;
   border-right: 1px solid #bfbfbf;
   border-left: 0 none;
 }
 
 #layout-builder-modal .views-tabs .open > a,
-.media-library-widget-modal .views-tabs .open > a {
+.media-library-widget-modal .views-tabs .open > a,
+form.media-form .views-tabs .open > a {
   position: relative;
   z-index: 51;
 }
 
 #layout-builder-modal .views-tabs .views-display-deleted-link,
-.media-library-widget-modal .views-tabs .views-display-deleted-link {
+.media-library-widget-modal .views-tabs .views-display-deleted-link,
+form.media-form .views-tabs .views-display-deleted-link {
   text-decoration: line-through;
 }
 
 #layout-builder-modal .views-tabs .add,
-.media-library-widget-modal .views-tabs .add {
+.media-library-widget-modal .views-tabs .add,
+form.media-form .views-tabs .add {
   position: relative;
 }
 
 #layout-builder-modal .views-tabs .action-list,
-.media-library-widget-modal .views-tabs .action-list {
+.media-library-widget-modal .views-tabs .action-list,
+form.media-form .views-tabs .action-list {
   position: absolute;
   z-index: 50;
   top: 23px;
@@ -229,59 +280,71 @@
 }
 
 #layout-builder-modal [dir="rtl"] .views-tabs .action-list,
-.media-library-widget-modal [dir="rtl"] .views-tabs .action-list {
+.media-library-widget-modal [dir="rtl"] .views-tabs .action-list,
+form.media-form [dir="rtl"] .views-tabs .action-list {
   right: 0;
   left: auto;
 }
 
 #layout-builder-modal .views-tabs .action-list li,
-.media-library-widget-modal .views-tabs .action-list li {
+.media-library-widget-modal .views-tabs .action-list li,
+form.media-form .views-tabs .action-list li {
   display: block;
 }
 
 #layout-builder-modal .views-tab a:hover > .icon.add,
-.media-library-widget-modal .views-tab a:hover > .icon.add {
+.media-library-widget-modal .views-tab a:hover > .icon.add,
+form.media-form .views-tab a:hover > .icon.add {
   background-position: center -25px;
 }
 
 #layout-builder-modal .views-tab .open > a,
-.media-library-widget-modal .views-tab .open > a {
+.media-library-widget-modal .views-tab .open > a,
+form.media-form .views-tab .open > a {
   border-radius: 7px 7px 0 0;
 }
 
 #layout-builder-modal .views-tab .open > a:hover,
 #layout-builder-modal .views-tab .open > a:focus,
 .media-library-widget-modal .views-tab .open > a:hover,
-.media-library-widget-modal .views-tab .open > a:focus {
+.media-library-widget-modal .views-tab .open > a:focus,
+form.media-form .views-tab .open > a:hover,
+form.media-form .views-tab .open > a:focus {
   color: #008bcb;
   background-color: #f1f1f1;
 }
 
 #layout-builder-modal .views-tab .action-list li:first-child,
-.media-library-widget-modal .views-tab .action-list li:first-child {
+.media-library-widget-modal .views-tab .action-list li:first-child,
+form.media-form .views-tab .action-list li:first-child {
   border-radius: 0 7px 0 0;
   /* LTR */
 }
 
 #layout-builder-modal [dir="rtl"] .views-tab .action-list li:first-child,
-.media-library-widget-modal [dir="rtl"] .views-tab .action-list li:first-child {
+.media-library-widget-modal [dir="rtl"] .views-tab .action-list li:first-child,
+form.media-form [dir="rtl"] .views-tab .action-list li:first-child {
   border-radius: 7px 0 0 0;
 }
 
 #layout-builder-modal .views-tab .action-list li:last-child,
-.media-library-widget-modal .views-tab .action-list li:last-child {
+.media-library-widget-modal .views-tab .action-list li:last-child,
+form.media-form .views-tab .action-list li:last-child {
   border-radius: 0 0 7px 7px;
 }
 
 #layout-builder-modal .views-tab .action-list input.form-submit,
-.media-library-widget-modal .views-tab .action-list input.form-submit {
+.media-library-widget-modal .views-tab .action-list input.form-submit,
+form.media-form .views-tab .action-list input.form-submit {
   color: #008bcb;
 }
 
 #layout-builder-modal .views-tabs li,
 #layout-builder-modal .views-tabs li.is-active,
 .media-library-widget-modal .views-tabs li,
-.media-library-widget-modal .views-tabs li.is-active {
+.media-library-widget-modal .views-tabs li.is-active,
+form.media-form .views-tabs li,
+form.media-form .views-tabs li.is-active {
   width: auto;
   padding: 0;
   border: 0;
@@ -289,41 +352,48 @@
 }
 
 #layout-builder-modal .views-tabs li.add ul.action-list li,
-.media-library-widget-modal .views-tabs li.add ul.action-list li {
+.media-library-widget-modal .views-tabs li.add ul.action-list li,
+form.media-form .views-tabs li.add ul.action-list li {
   margin: 0;
 }
 
 #layout-builder-modal .views-tabs li,
-.media-library-widget-modal .views-tabs li {
+.media-library-widget-modal .views-tabs li,
+form.media-form .views-tabs li {
   margin: 0 5px 5px 6px;
   /* LTR */
 }
 
 #layout-builder-modal [dir="rtl"] .views-tabs li,
-.media-library-widget-modal [dir="rtl"] .views-tabs li {
+.media-library-widget-modal [dir="rtl"] .views-tabs li,
+form.media-form [dir="rtl"] .views-tabs li {
   margin-right: 6px;
   margin-left: 5px;
 }
 
 #layout-builder-modal .views-tabs li + li,
-.media-library-widget-modal .views-tabs li + li {
+.media-library-widget-modal .views-tabs li + li,
+form.media-form .views-tabs li + li {
   border-top: 0;
 }
 
 #layout-builder-modal .views-tabs li:hover,
-.media-library-widget-modal .views-tabs li:hover {
+.media-library-widget-modal .views-tabs li:hover,
+form.media-form .views-tabs li:hover {
   padding-left: 0;
   /* LTR */
   border: 0;
 }
 
 #layout-builder-modal [dir="rtl"] .views-tabs li:hover,
-.media-library-widget-modal [dir="rtl"] .views-tabs li:hover {
+.media-library-widget-modal [dir="rtl"] .views-tabs li:hover,
+form.media-form [dir="rtl"] .views-tabs li:hover {
   padding-right: 0;
 }
 
 #layout-builder-modal .views-tabs a,
-.media-library-widget-modal .views-tabs a {
+.media-library-widget-modal .views-tabs a,
+form.media-form .views-tabs a {
   display: inline-block;
   padding: 3px 7px;
   border: 1px solid #cbcbcb;
@@ -335,18 +405,22 @@
 #layout-builder-modal .views-tabs li.is-active a.is-active.error,
 #layout-builder-modal .views-tabs .error,
 .media-library-widget-modal .views-tabs li.is-active a.is-active.error,
-.media-library-widget-modal .views-tabs .error {
+.media-library-widget-modal .views-tabs .error,
+form.media-form .views-tabs li.is-active a.is-active.error,
+form.media-form .views-tabs .error {
   padding: 1px 6px;
   border: 2px solid #ed541d;
 }
 
 #layout-builder-modal .views-tabs a:focus,
-.media-library-widget-modal .views-tabs a:focus {
+.media-library-widget-modal .views-tabs a:focus,
+form.media-form .views-tabs a:focus {
   outline: none;
 }
 
 #layout-builder-modal .views-tabs li a,
-.media-library-widget-modal .views-tabs li a {
+.media-library-widget-modal .views-tabs li a,
+form.media-form .views-tabs li a {
   text-decoration: none;
   background-color: #fff;
 }
@@ -356,26 +430,32 @@
 #layout-builder-modal .views-tabs li.is-active a.is-active,
 .media-library-widget-modal .views-tabs li a:hover,
 .media-library-widget-modal .views-tabs li.is-active a,
-.media-library-widget-modal .views-tabs li.is-active a.is-active {
+.media-library-widget-modal .views-tabs li.is-active a.is-active,
+form.media-form .views-tabs li a:hover,
+form.media-form .views-tabs li.is-active a,
+form.media-form .views-tabs li.is-active a.is-active {
   color: #fff;
   background-color: #555;
 }
 
 #layout-builder-modal .views-tabs .open > a,
-.media-library-widget-modal .views-tabs .open > a {
+.media-library-widget-modal .views-tabs .open > a,
+form.media-form .views-tabs .open > a {
   position: relative;
   border-bottom: 1px solid transparent;
   background-color: #f1f1f1;
 }
 
 #layout-builder-modal .views-tabs .open > a:hover,
-.media-library-widget-modal .views-tabs .open > a:hover {
+.media-library-widget-modal .views-tabs .open > a:hover,
+form.media-form .views-tabs .open > a:hover {
   color: #0074bd;
   background-color: #f1f1f1;
 }
 
 #layout-builder-modal .views-tabs .action-list li,
-.media-library-widget-modal .views-tabs .action-list li {
+.media-library-widget-modal .views-tabs .action-list li,
+form.media-form .views-tabs .action-list li {
   padding: 2px 9px;
   border-width: 0 1px;
   border-style: solid;
@@ -384,22 +464,26 @@
 }
 
 #layout-builder-modal .views-tabs .action-list li:first-child,
-.media-library-widget-modal .views-tabs .action-list li:first-child {
+.media-library-widget-modal .views-tabs .action-list li:first-child,
+form.media-form .views-tabs .action-list li:first-child {
   border-width: 1px 1px 0;
 }
 
 #layout-builder-modal .views-displays .action-list li:last-child,
-.media-library-widget-modal .views-displays .action-list li:last-child {
+.media-library-widget-modal .views-displays .action-list li:last-child,
+form.media-form .views-displays .action-list li:last-child {
   border-width: 0 1px 1px;
 }
 
 #layout-builder-modal .views-tabs .action-list li:last-child,
-.media-library-widget-modal .views-tabs .action-list li:last-child {
+.media-library-widget-modal .views-tabs .action-list li:last-child,
+form.media-form .views-tabs .action-list li:last-child {
   border-width: 0 1px 1px;
 }
 
 #layout-builder-modal .views-tabs .action-list input.form-submit,
-.media-library-widget-modal .views-tabs .action-list input.form-submit {
+.media-library-widget-modal .views-tabs .action-list input.form-submit,
+form.media-form .views-tabs .action-list input.form-submit {
   margin: 0;
   padding: 0;
   border: medium none;
@@ -407,121 +491,142 @@
 }
 
 #layout-builder-modal .views-tabs .action-list input.form-submit:hover,
-.media-library-widget-modal .views-tabs .action-list input.form-submit:hover {
+.media-library-widget-modal .views-tabs .action-list input.form-submit:hover,
+form.media-form .views-tabs .action-list input.form-submit:hover {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
 
 #layout-builder-modal .views-tabs .action-list li:hover,
-.media-library-widget-modal .views-tabs .action-list li:hover {
+.media-library-widget-modal .views-tabs .action-list li:hover,
+form.media-form .views-tabs .action-list li:hover {
   background-color: #ddd;
 }
 
 #layout-builder-modal .views-tabs a:hover > .icon.add,
-.media-library-widget-modal .views-tabs a:hover > .icon.add {
+.media-library-widget-modal .views-tabs a:hover > .icon.add,
+form.media-form .views-tabs a:hover > .icon.add {
   background-position: center -25px;
 }
 
 #layout-builder-modal .views-tabs .open a:hover > .icon.add,
-.media-library-widget-modal .views-tabs .open a:hover > .icon.add {
+.media-library-widget-modal .views-tabs .open a:hover > .icon.add,
+form.media-form .views-tabs .open a:hover > .icon.add {
   background-position: center 3px;
 }
 
 #layout-builder-modal .views-ui-display-tab-bucket h3,
-.media-library-widget-modal .views-ui-display-tab-bucket h3 {
+.media-library-widget-modal .views-ui-display-tab-bucket h3,
+form.media-form .views-ui-display-tab-bucket h3 {
   text-transform: uppercase;
 }
 
 #layout-builder-modal .views-ui-display-tab-bucket .links,
-.media-library-widget-modal .views-ui-display-tab-bucket .links {
+.media-library-widget-modal .views-ui-display-tab-bucket .links,
+form.media-form .views-ui-display-tab-bucket .links {
   padding: 2px 6px 4px;
 }
 
 #layout-builder-modal .views-ui-display-tab-bucket .links li + li,
-.media-library-widget-modal .views-ui-display-tab-bucket .links li + li {
+.media-library-widget-modal .views-ui-display-tab-bucket .links li + li,
+form.media-form .views-ui-display-tab-bucket .links li + li {
   margin-left: 3px;
   /* LTR */
 }
 
 #layout-builder-modal [dir="rtl"] .views-ui-display-tab-bucket .links li + li,
-.media-library-widget-modal [dir="rtl"] .views-ui-display-tab-bucket .links li + li {
+.media-library-widget-modal [dir="rtl"] .views-ui-display-tab-bucket .links li + li,
+form.media-form [dir="rtl"] .views-ui-display-tab-bucket .links li + li {
   margin-right: 3px;
   margin-left: 0;
 }
 
 #layout-builder-modal .views-ui-rearrange-filter-form .action-links,
-.media-library-widget-modal .views-ui-rearrange-filter-form .action-links {
+.media-library-widget-modal .views-ui-rearrange-filter-form .action-links,
+form.media-form .views-ui-rearrange-filter-form .action-links {
   float: left;
   margin: 0 0 1em;
   padding: 0;
 }
 
 #layout-builder-modal .views-ui-rearrange-filter-form .tabledrag-toggle-weight-wrapper,
-.media-library-widget-modal .views-ui-rearrange-filter-form .tabledrag-toggle-weight-wrapper {
+.media-library-widget-modal .views-ui-rearrange-filter-form .tabledrag-toggle-weight-wrapper,
+form.media-form .views-ui-rearrange-filter-form .tabledrag-toggle-weight-wrapper {
   float: right;
   margin-bottom: 1em;
 }
 
 #layout-builder-modal .views-ui-rearrange-filter-form table,
-.media-library-widget-modal .views-ui-rearrange-filter-form table {
+.media-library-widget-modal .views-ui-rearrange-filter-form table,
+form.media-form .views-ui-rearrange-filter-form table {
   border: medium none;
 }
 
 #layout-builder-modal .views-ui-rearrange-filter-form [id^="views-row"],
-.media-library-widget-modal .views-ui-rearrange-filter-form [id^="views-row"] {
+.media-library-widget-modal .views-ui-rearrange-filter-form [id^="views-row"],
+form.media-form .views-ui-rearrange-filter-form [id^="views-row"] {
   border: medium none;
 }
 
 #layout-builder-modal .views-ui-rearrange-filter-form tr td:last-child,
-.media-library-widget-modal .views-ui-rearrange-filter-form tr td:last-child {
+.media-library-widget-modal .views-ui-rearrange-filter-form tr td:last-child,
+form.media-form .views-ui-rearrange-filter-form tr td:last-child {
   border-right: medium none;
   /* LTR */
 }
 
 #layout-builder-modal [dir="rtl"] .views-ui-rearrange-filter-form tr td:last-child,
-.media-library-widget-modal [dir="rtl"] .views-ui-rearrange-filter-form tr td:last-child {
+.media-library-widget-modal [dir="rtl"] .views-ui-rearrange-filter-form tr td:last-child,
+form.media-form [dir="rtl"] .views-ui-rearrange-filter-form tr td:last-child {
   border-right: initial;
   border-left: medium none;
 }
 
 #layout-builder-modal .views-ui-rearrange-filter-form .filter-group-operator-row,
-.media-library-widget-modal .views-ui-rearrange-filter-form .filter-group-operator-row {
+.media-library-widget-modal .views-ui-rearrange-filter-form .filter-group-operator-row,
+form.media-form .views-ui-rearrange-filter-form .filter-group-operator-row {
   border-right: 1px solid transparent !important;
   border-left: 1px solid transparent !important;
 }
 
 #layout-builder-modal .views-ui-rearrange-filter-form tr.drag td,
-.media-library-widget-modal .views-ui-rearrange-filter-form tr.drag td {
+.media-library-widget-modal .views-ui-rearrange-filter-form tr.drag td,
+form.media-form .views-ui-rearrange-filter-form tr.drag td {
   background-color: #fe7 !important;
 }
 
 #layout-builder-modal .views-ui-rearrange-filter-form tr.drag-previous td,
-.media-library-widget-modal .views-ui-rearrange-filter-form tr.drag-previous td {
+.media-library-widget-modal .views-ui-rearrange-filter-form tr.drag-previous td,
+form.media-form .views-ui-rearrange-filter-form tr.drag-previous td {
   background-color: #ffb !important;
 }
 
 #layout-builder-modal .views-query-info pre,
-.media-library-widget-modal .views-query-info pre {
+.media-library-widget-modal .views-query-info pre,
+form.media-form .views-query-info pre {
   margin-top: 0;
   margin-bottom: 0;
 }
 
 #layout-builder-modal .views-query-info table,
-.media-library-widget-modal .views-query-info table {
+.media-library-widget-modal .views-query-info table,
+form.media-form .views-query-info table {
   border-radius: 7px;
   -webkit-border-horizontal-spacing: 1px;
   -webkit-border-vertical-spacing: 1px;
 }
 
 #layout-builder-modal .views-query-info table tr td:last-child,
-.media-library-widget-modal .views-query-info table tr td:last-child {
+.media-library-widget-modal .views-query-info table tr td:last-child,
+form.media-form .views-query-info table tr td:last-child {
   /* Fixes a Claro style that bleeds down into this table unnecessarily */
   border-right: 0 none;
   /* LTR */
 }
 
 #layout-builder-modal [dir="rtl"] .views-query-info table tr td:last-child,
-.media-library-widget-modal [dir="rtl"] .views-query-info table tr td:last-child {
+.media-library-widget-modal [dir="rtl"] .views-query-info table tr td:last-child,
+form.media-form [dir="rtl"] .views-query-info table tr td:last-child {
   border-right: initial;
   border-left: 0 none;
 }
@@ -529,12 +634,15 @@
 #layout-builder-modal .form-item-page-create,
 #layout-builder-modal .form-item-block-create,
 .media-library-widget-modal .form-item-page-create,
-.media-library-widget-modal .form-item-block-create {
+.media-library-widget-modal .form-item-block-create,
+form.media-form .form-item-page-create,
+form.media-form .form-item-block-create {
   margin-top: 13px;
 }
 
 #layout-builder-modal .filterable-option .form-item.form-type-checkbox,
-.media-library-widget-modal .filterable-option .form-item.form-type-checkbox {
+.media-library-widget-modal .filterable-option .form-item.form-type-checkbox,
+form.media-form .filterable-option .form-item.form-type-checkbox {
   padding-top: 4px;
   /* This selector is aggressive because Claro's reset for .form-items is aggressive. */
   padding-bottom: 4px;
@@ -543,7 +651,8 @@
 }
 
 #layout-builder-modal [dir="rtl"] .filterable-option .form-item.form-type-checkbox,
-.media-library-widget-modal [dir="rtl"] .filterable-option .form-item.form-type-checkbox {
+.media-library-widget-modal [dir="rtl"] .filterable-option .form-item.form-type-checkbox,
+form.media-form [dir="rtl"] .filterable-option .form-item.form-type-checkbox {
   padding-right: 4px;
   padding-left: 8px;
 }

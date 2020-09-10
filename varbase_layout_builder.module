@@ -59,7 +59,10 @@ function varbase_layout_builder_form_alter(&$form, FormStateInterface $form_stat
 
   $current_path = \Drupal::service('path.current')->getPath();
   $url_object = \Drupal::service('path.validator')->getUrlIfValid($current_path);
-  $route_name = $url_object->getRouteName();
+  $route_name = '';
+  if (isset($url_object) && is_object($url_object)) {
+    $route_name = $url_object->getRouteName();
+  }
 
   $applicable_forms = [
     'layout_builder_add_block',

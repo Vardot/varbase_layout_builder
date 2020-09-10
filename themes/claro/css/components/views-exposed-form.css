@@ -7,7 +7,8 @@
 
 
 #layout-builder-modal .views-exposed-form.views-exposed-form,
-.media-library-widget-modal .views-exposed-form.views-exposed-form {
+.media-library-widget-modal .views-exposed-form.views-exposed-form,
+form.media-form .views-exposed-form.views-exposed-form {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -30,40 +31,47 @@
 }
 
 #layout-builder-modal .views-exposed-form__item.views-exposed-form__item,
-.media-library-widget-modal .views-exposed-form__item.views-exposed-form__item {
+.media-library-widget-modal .views-exposed-form__item.views-exposed-form__item,
+form.media-form .views-exposed-form__item.views-exposed-form__item {
   margin: 0.75rem 0.5rem 0 0;
   /* LTR */
 }
 
 #layout-builder-modal [dir="rtl"] .views-exposed-form__item.views-exposed-form__item,
-.media-library-widget-modal [dir="rtl"] .views-exposed-form__item.views-exposed-form__item {
+.media-library-widget-modal [dir="rtl"] .views-exposed-form__item.views-exposed-form__item,
+form.media-form [dir="rtl"] .views-exposed-form__item.views-exposed-form__item {
   margin-right: 0;
   margin-left: 0.5rem;
 }
 
 #layout-builder-modal .views-exposed-form__item--preceding-actions.views-exposed-form__item--preceding-actions,
-.media-library-widget-modal .views-exposed-form__item--preceding-actions.views-exposed-form__item--preceding-actions {
+.media-library-widget-modal .views-exposed-form__item--preceding-actions.views-exposed-form__item--preceding-actions,
+form.media-form .views-exposed-form__item--preceding-actions.views-exposed-form__item--preceding-actions {
   margin-right: 1rem;
   /* LTR */
 }
 
 #layout-builder-modal [dir="rtl"] .views-exposed-form__item--preceding-actions.views-exposed-form__item--preceding-actions,
-.media-library-widget-modal [dir="rtl"] .views-exposed-form__item--preceding-actions.views-exposed-form__item--preceding-actions {
+.media-library-widget-modal [dir="rtl"] .views-exposed-form__item--preceding-actions.views-exposed-form__item--preceding-actions,
+form.media-form [dir="rtl"] .views-exposed-form__item--preceding-actions.views-exposed-form__item--preceding-actions {
   margin-right: 0;
   margin-left: 1rem;
 }
 
 #layout-builder-modal .views-exposed-form__item--actions.views-exposed-form__item--actions .button,
-.media-library-widget-modal .views-exposed-form__item--actions.views-exposed-form__item--actions .button {
+.media-library-widget-modal .views-exposed-form__item--actions.views-exposed-form__item--actions .button,
+form.media-form .views-exposed-form__item--actions.views-exposed-form__item--actions .button {
   margin-bottom: 0;
 }
 
 #layout-builder-modal .views-exposed-form__item--actions.views-exposed-form__item--actions .button:last-child,
-.media-library-widget-modal .views-exposed-form__item--actions.views-exposed-form__item--actions .button:last-child {
+.media-library-widget-modal .views-exposed-form__item--actions.views-exposed-form__item--actions .button:last-child,
+form.media-form .views-exposed-form__item--actions.views-exposed-form__item--actions .button:last-child {
   margin-right: 0;
 }
 
 #layout-builder-modal [dir="rtl"] .views-exposed-form__item--actions.views-exposed-form__item--actions:last-child,
-.media-library-widget-modal [dir="rtl"] .views-exposed-form__item--actions.views-exposed-form__item--actions:last-child {
+.media-library-widget-modal [dir="rtl"] .views-exposed-form__item--actions.views-exposed-form__item--actions:last-child,
+form.media-form [dir="rtl"] .views-exposed-form__item--actions.views-exposed-form__item--actions:last-child {
   margin-left: 0;
 }

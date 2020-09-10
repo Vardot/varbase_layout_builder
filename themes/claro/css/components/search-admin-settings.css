@@ -6,11 +6,13 @@
  */
 
 #layout-builder-modal .search-admin-settings .container-inline,
-.media-library-widget-modal .search-admin-settings .container-inline {
+.media-library-widget-modal .search-admin-settings .container-inline,
+form.media-form .search-admin-settings .container-inline {
   margin-bottom: 1em;
 }
 
 #layout-builder-modal .search-admin-settings label[for="edit-search-type"],
-.media-library-widget-modal .search-admin-settings label[for="edit-search-type"] {
+.media-library-widget-modal .search-admin-settings label[for="edit-search-type"],
+form.media-form .search-admin-settings label[for="edit-search-type"] {
   display: block;
 }

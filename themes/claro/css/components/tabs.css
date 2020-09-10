@@ -6,12 +6,14 @@
  */
 
 #layout-builder-modal .tabs-wrapper > nav,
-.media-library-widget-modal .tabs-wrapper > nav {
+.media-library-widget-modal .tabs-wrapper > nav,
+form.media-form .tabs-wrapper > nav {
   width: 100%;
 }
 
 #layout-builder-modal .tabs,
-.media-library-widget-modal .tabs {
+.media-library-widget-modal .tabs,
+form.media-form .tabs {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -30,12 +32,14 @@
 }
 
 #layout-builder-modal [dir="rtl"] .tabs,
-.media-library-widget-modal [dir="rtl"] .tabs {
+.media-library-widget-modal [dir="rtl"] .tabs,
+form.media-form [dir="rtl"] .tabs {
   margin: 0 0 1.5rem 0;
 }
 
 #layout-builder-modal .tabs__tab,
-.media-library-widget-modal .tabs__tab {
+.media-library-widget-modal .tabs__tab,
+form.media-form .tabs__tab {
   position: relative;
   border-bottom: 1px solid #d4d4d8;
   background-color: #fafbfd;
@@ -44,12 +48,14 @@
 }
 
 #layout-builder-modal .tabs__tab:last-child,
-.media-library-widget-modal .tabs__tab:last-child {
+.media-library-widget-modal .tabs__tab:last-child,
+form.media-form .tabs__tab:last-child {
   border-bottom: 0;
 }
 
 #layout-builder-modal .tabs__tab.is-active,
-.media-library-widget-modal .tabs__tab.is-active {
+.media-library-widget-modal .tabs__tab.is-active,
+form.media-form .tabs__tab.is-active {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -64,7 +70,8 @@
 }
 
 #layout-builder-modal .tabs__link,
-.media-library-widget-modal .tabs__link {
+.media-library-widget-modal .tabs__link,
+form.media-form .tabs__link {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -89,7 +96,8 @@
 }
 
 #layout-builder-modal .tabs__link:focus,
-.media-library-widget-modal .tabs__link:focus {
+.media-library-widget-modal .tabs__link:focus,
+form.media-form .tabs__link:focus {
   min-height: calc(3rem + 2px);
   margin: -1px;
   padding-left: calc(1.5rem - 2px);
@@ -104,19 +112,22 @@
 }
 
 #layout-builder-modal [dir="rtl"] .tabs__link:focus,
-.media-library-widget-modal [dir="rtl"] .tabs__link:focus {
+.media-library-widget-modal [dir="rtl"] .tabs__link:focus,
+form.media-form [dir="rtl"] .tabs__link:focus {
   padding-right: calc(1.5rem - 2px);
   padding-left: 1.5rem;
 }
 
 #layout-builder-modal .tabs__link:hover,
-.media-library-widget-modal .tabs__link:hover {
+.media-library-widget-modal .tabs__link:hover,
+form.media-form .tabs__link:hover {
   text-decoration: none;
   color: #222330;
 }
 
 #layout-builder-modal .tabs__link.is-active,
-.media-library-widget-modal .tabs__link.is-active {
+.media-library-widget-modal .tabs__link.is-active,
+form.media-form .tabs__link.is-active {
   z-index: 1;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -126,7 +137,8 @@
 }
 
 #layout-builder-modal .tabs__link.is-active:focus,
-.media-library-widget-modal .tabs__link.is-active:focus {
+.media-library-widget-modal .tabs__link.is-active:focus,
+form.media-form .tabs__link.is-active:focus {
   margin: -1px 0;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
@@ -136,32 +148,38 @@
 }
 
 #layout-builder-modal .tabs__link:not(.is-active):focus,
-.media-library-widget-modal .tabs__link:not(.is-active):focus {
+.media-library-widget-modal .tabs__link:not(.is-active):focus,
+form.media-form .tabs__link:not(.is-active):focus {
   z-index: 3;
 }
 
 #layout-builder-modal [dir="rtl"] .tabs__link.is-active:focus,
-.media-library-widget-modal [dir="rtl"] .tabs__link.is-active:focus {
+.media-library-widget-modal [dir="rtl"] .tabs__link.is-active:focus,
+form.media-form [dir="rtl"] .tabs__link.is-active:focus {
   border-right: none;
   border-left: 3px solid #26a769;
 }
 
 #layout-builder-modal .tabs__link.is-active:hover,
-.media-library-widget-modal .tabs__link.is-active:hover {
+.media-library-widget-modal .tabs__link.is-active:hover,
+form.media-form .tabs__link.is-active:hover {
   color: #222330;
 }
 
 #layout-builder-modal .tabs__tab::before,
 #layout-builder-modal .tabs__link::before,
 .media-library-widget-modal .tabs__tab::before,
-.media-library-widget-modal .tabs__link::before {
+.media-library-widget-modal .tabs__link::before,
+form.media-form .tabs__tab::before,
+form.media-form .tabs__link::before {
   position: absolute;
   display: block;
   content: "";
 }
 
 #layout-builder-modal .tabs__tab.is-active::before,
-.media-library-widget-modal .tabs__tab.is-active::before {
+.media-library-widget-modal .tabs__tab.is-active::before,
+form.media-form .tabs__tab.is-active::before {
   z-index: 2;
   top: -1px;
   left: -1px;
@@ -175,7 +193,8 @@
 }
 
 #layout-builder-modal [dir="rtl"] .tabs__tab.is-active::before,
-.media-library-widget-modal [dir="rtl"] .tabs__tab.is-active::before {
+.media-library-widget-modal [dir="rtl"] .tabs__tab.is-active::before,
+form.media-form [dir="rtl"] .tabs__tab.is-active::before {
   right: -1px;
   left: auto;
   border-right: 3px solid #003cc5;
@@ -184,34 +203,40 @@
 }
 
 #layout-builder-modal .tabs.is-open .tabs__tab.is-active::before,
-.media-library-widget-modal .tabs.is-open .tabs__tab.is-active::before {
+.media-library-widget-modal .tabs.is-open .tabs__tab.is-active::before,
+form.media-form .tabs.is-open .tabs__tab.is-active::before {
   border-bottom-left-radius: 0;
   /* LTR */
 }
 
 #layout-builder-modal [dir="rtl"] .tabs.is-open .tabs__tab.is-active::before,
-.media-library-widget-modal [dir="rtl"] .tabs.is-open .tabs__tab.is-active::before {
+.media-library-widget-modal [dir="rtl"] .tabs.is-open .tabs__tab.is-active::before,
+form.media-form [dir="rtl"] .tabs.is-open .tabs__tab.is-active::before {
   border-bottom-right-radius: 2px;
 }
 
 #layout-builder-modal .tabs__tab.is-active:focus::before,
-.media-library-widget-modal .tabs__tab.is-active:focus::before {
+.media-library-widget-modal .tabs__tab.is-active:focus::before,
+form.media-form .tabs__tab.is-active:focus::before {
   top: -3px;
   height: calc(3rem + 2px);
 }
 
 #layout-builder-modal .tabs__tab:not(.is-active),
-.media-library-widget-modal .tabs__tab:not(.is-active) {
+.media-library-widget-modal .tabs__tab:not(.is-active),
+form.media-form .tabs__tab:not(.is-active) {
   display: none;
 }
 
 #layout-builder-modal .tabs--secondary .tabs__tab:not(.is-active),
-.media-library-widget-modal .tabs--secondary .tabs__tab:not(.is-active) {
+.media-library-widget-modal .tabs--secondary .tabs__tab:not(.is-active),
+form.media-form .tabs--secondary .tabs__tab:not(.is-active) {
   display: block;
 }
 
 #layout-builder-modal .tabs.is-open > .tabs__tab,
-.media-library-widget-modal .tabs.is-open > .tabs__tab {
+.media-library-widget-modal .tabs.is-open > .tabs__tab,
+form.media-form .tabs.is-open > .tabs__tab {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -219,7 +244,8 @@
 }
 
 #layout-builder-modal .tabs__trigger,
-.media-library-widget-modal .tabs__trigger {
+.media-library-widget-modal .tabs__trigger,
+form.media-form .tabs__trigger {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -243,13 +269,15 @@
 }
 
 #layout-builder-modal [dir="rtl"] .tabs__trigger,
-.media-library-widget-modal [dir="rtl"] .tabs__trigger {
+.media-library-widget-modal [dir="rtl"] .tabs__trigger,
+form.media-form [dir="rtl"] .tabs__trigger {
   border-right: 1px solid rgba(216, 217, 224, 0.8);
   border-left: none;
 }
 
 #layout-builder-modal .tabs__trigger:focus,
-.media-library-widget-modal .tabs__trigger:focus {
+.media-library-widget-modal .tabs__trigger:focus,
+form.media-form .tabs__trigger:focus {
   padding-right: 0;
   border: 3px solid #26a769;
   border-radius: 2px;
@@ -259,14 +287,16 @@
 
 @media screen and (min-width: 48em) {
   #layout-builder-modal .tabs-wrapper,
-  .media-library-widget-modal .tabs-wrapper {
+  .media-library-widget-modal .tabs-wrapper,
+  form.media-form .tabs-wrapper {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
   }
   #layout-builder-modal .is-horizontal .tabs,
-  .media-library-widget-modal .is-horizontal .tabs {
+  .media-library-widget-modal .is-horizontal .tabs,
+  form.media-form .is-horizontal .tabs {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -webkit-flex-direction: row;
@@ -279,28 +309,33 @@
     box-shadow: none;
   }
   #layout-builder-modal .is-horizontal .tabs--secondary,
-  .media-library-widget-modal .is-horizontal .tabs--secondary {
+  .media-library-widget-modal .is-horizontal .tabs--secondary,
+  form.media-form .is-horizontal .tabs--secondary {
     overflow: hidden;
     margin: -6px -6px 0;
     padding: 6px 6px 0;
     border-radius: 0;
   }
   #layout-builder-modal .is-horizontal .tabs--secondary .tabs__tab,
-  .media-library-widget-modal .is-horizontal .tabs--secondary .tabs__tab {
+  .media-library-widget-modal .is-horizontal .tabs--secondary .tabs__tab,
+  form.media-form .is-horizontal .tabs--secondary .tabs__tab {
     font-size: 0.889rem;
   }
   #layout-builder-modal .is-horizontal .tabs--secondary .tabs__link,
-  .media-library-widget-modal .is-horizontal .tabs--secondary .tabs__link {
+  .media-library-widget-modal .is-horizontal .tabs--secondary .tabs__link,
+  form.media-form .is-horizontal .tabs--secondary .tabs__link {
     min-height: 2.5rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
   #layout-builder-modal .is-horizontal .tabs--secondary .tabs__link:focus,
-  .media-library-widget-modal .is-horizontal .tabs--secondary .tabs__link:focus {
+  .media-library-widget-modal .is-horizontal .tabs--secondary .tabs__link:focus,
+  form.media-form .is-horizontal .tabs--secondary .tabs__link:focus {
     min-height: 2.5rem;
   }
   #layout-builder-modal .is-horizontal .tabs--secondary::after,
-  .media-library-widget-modal .is-horizontal .tabs--secondary::after {
+  .media-library-widget-modal .is-horizontal .tabs--secondary::after,
+  form.media-form .is-horizontal .tabs--secondary::after {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -310,14 +345,16 @@
     border-bottom: 1px solid #d4d4d8;
   }
   #layout-builder-modal .is-horizontal .tabs__tab,
-  .media-library-widget-modal .is-horizontal .tabs__tab {
+  .media-library-widget-modal .is-horizontal .tabs__tab,
+  form.media-form .is-horizontal .tabs__tab {
     border-top: none;
     border-bottom: none;
     background: none;
     font-size: 1rem;
   }
   #layout-builder-modal .is-horizontal .tabs__tab.is-active,
-  .media-library-widget-modal .is-horizontal .tabs__tab.is-active {
+  .media-library-widget-modal .is-horizontal .tabs__tab.is-active,
+  form.media-form .is-horizontal .tabs__tab.is-active {
     -webkit-box-ordinal-group: 1;
     -webkit-order: 0;
     -ms-flex-order: 0;
@@ -327,29 +364,35 @@
     box-shadow: none;
   }
   #layout-builder-modal .is-horizontal .tabs__tab.is-active::before,
-  .media-library-widget-modal .is-horizontal .tabs__tab.is-active::before {
+  .media-library-widget-modal .is-horizontal .tabs__tab.is-active::before,
+  form.media-form .is-horizontal .tabs__tab.is-active::before {
     content: none;
   }
   #layout-builder-modal .is-horizontal .tabs__tab .tabs__link.is-active::before,
-  .media-library-widget-modal .is-horizontal .tabs__tab .tabs__link.is-active::before {
+  .media-library-widget-modal .is-horizontal .tabs__tab .tabs__link.is-active::before,
+  form.media-form .is-horizontal .tabs__tab .tabs__link.is-active::before {
     border-radius: 0;
   }
   #layout-builder-modal .is-horizontal .tabs__trigger,
-  .media-library-widget-modal .is-horizontal .tabs__trigger {
+  .media-library-widget-modal .is-horizontal .tabs__trigger,
+  form.media-form .is-horizontal .tabs__trigger {
     display: none;
   }
   #layout-builder-modal .is-horizontal .tabs__tab,
-  .media-library-widget-modal .is-horizontal .tabs__tab {
+  .media-library-widget-modal .is-horizontal .tabs__tab,
+  form.media-form .is-horizontal .tabs__tab {
     display: block;
   }
   #layout-builder-modal .is-horizontal .tabs__link,
-  .media-library-widget-modal .is-horizontal .tabs__link {
+  .media-library-widget-modal .is-horizontal .tabs__link,
+  form.media-form .is-horizontal .tabs__link {
     padding-right: 2rem;
     padding-left: 2rem;
     border-radius: 2px 2px 0 0;
   }
   #layout-builder-modal .is-horizontal .tabs__link:focus,
-  .media-library-widget-modal .is-horizontal .tabs__link:focus {
+  .media-library-widget-modal .is-horizontal .tabs__link:focus,
+  form.media-form .is-horizontal .tabs__link:focus {
     min-height: 3rem;
     margin: 0;
     padding-right: 2rem;
@@ -362,21 +405,25 @@
     box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769;
   }
   #layout-builder-modal [dir="rtl"] .is-horizontal .tabs__link:focus,
-  .media-library-widget-modal [dir="rtl"] .is-horizontal .tabs__link:focus {
+  .media-library-widget-modal [dir="rtl"] .is-horizontal .tabs__link:focus,
+  form.media-form [dir="rtl"] .is-horizontal .tabs__link:focus {
     border: none;
   }
   #layout-builder-modal .is-horizontal .tabs--primary .tabs__link:focus,
-  .media-library-widget-modal .is-horizontal .tabs--primary .tabs__link:focus {
+  .media-library-widget-modal .is-horizontal .tabs--primary .tabs__link:focus,
+  form.media-form .is-horizontal .tabs--primary .tabs__link:focus {
     -webkit-box-shadow: 0 0 0 2px #f3f4f9, 0 0 0 5px #26a769;
     box-shadow: 0 0 0 2px #f3f4f9, 0 0 0 5px #26a769;
   }
   #layout-builder-modal .is-horizontal .tabs__link:hover,
-  .media-library-widget-modal .is-horizontal .tabs__link:hover {
+  .media-library-widget-modal .is-horizontal .tabs__link:hover,
+  form.media-form .is-horizontal .tabs__link:hover {
     color: #0036b1;
     background: #e6ecf8;
   }
   #layout-builder-modal .is-horizontal .tabs__link.is-active::before,
-  .media-library-widget-modal .is-horizontal .tabs__link.is-active::before {
+  .media-library-widget-modal .is-horizontal .tabs__link.is-active::before,
+  form.media-form .is-horizontal .tabs__link.is-active::before {
     top: auto;
     right: 0;
     bottom: 0;

@@ -6,7 +6,8 @@
  */
 
 #layout-builder-modal .claro-details,
-.media-library-widget-modal .claro-details {
+.media-library-widget-modal .claro-details,
+form.media-form .claro-details {
   display: block;
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -21,7 +22,9 @@
 #layout-builder-modal .claro-details--accordion-item,
 #layout-builder-modal .claro-details--vertical-tabs-item,
 .media-library-widget-modal .claro-details--accordion-item,
-.media-library-widget-modal .claro-details--vertical-tabs-item {
+.media-library-widget-modal .claro-details--vertical-tabs-item,
+form.media-form .claro-details--accordion-item,
+form.media-form .claro-details--vertical-tabs-item {
   margin-top: 0;
   margin-bottom: 0;
   border-radius: 0;
@@ -30,19 +33,22 @@
 }
 
 #layout-builder-modal .claro-details--accordion-item:first-of-type,
-.media-library-widget-modal .claro-details--accordion-item:first-of-type {
+.media-library-widget-modal .claro-details--accordion-item:first-of-type,
+form.media-form .claro-details--accordion-item:first-of-type {
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
 }
 
 #layout-builder-modal .claro-details--accordion-item:last-of-type,
-.media-library-widget-modal .claro-details--accordion-item:last-of-type {
+.media-library-widget-modal .claro-details--accordion-item:last-of-type,
+form.media-form .claro-details--accordion-item:last-of-type {
   border-bottom-right-radius: 2px;
   border-bottom-left-radius: 2px;
 }
 
 #layout-builder-modal .claro-details__summary,
-.media-library-widget-modal .claro-details__summary {
+.media-library-widget-modal .claro-details__summary,
+form.media-form .claro-details__summary {
   position: relative;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -65,7 +71,8 @@
 }
 
 #layout-builder-modal [dir="rtl"] .claro-details__summary,
-.media-library-widget-modal [dir="rtl"] .claro-details__summary {
+.media-library-widget-modal [dir="rtl"] .claro-details__summary,
+form.media-form [dir="rtl"] .claro-details__summary {
   padding-right: 2.25rem;
   padding-left: 1rem;
 }
@@ -75,7 +82,10 @@
 #layout-builder-modal .claro-details__summary--vertical-tabs-item,
 .media-library-widget-modal .claro-details__summary--accordion,
 .media-library-widget-modal .claro-details__summary--accordion-item,
-.media-library-widget-modal .claro-details__summary--vertical-tabs-item {
+.media-library-widget-modal .claro-details__summary--vertical-tabs-item,
+form.media-form .claro-details__summary--accordion,
+form.media-form .claro-details__summary--accordion-item,
+form.media-form .claro-details__summary--vertical-tabs-item {
   padding: 1.25rem 1.5rem 1.25rem 2.25rem;
   /* LTR */
   background: #fff;
@@ -87,35 +97,43 @@
 #layout-builder-modal [dir="rtl"] .claro-details__summary--vertical-tabs-item,
 .media-library-widget-modal [dir="rtl"] .claro-details__summary--accordion,
 .media-library-widget-modal [dir="rtl"] .claro-details__summary--accordion-item,
-.media-library-widget-modal [dir="rtl"] .claro-details__summary--vertical-tabs-item {
+.media-library-widget-modal [dir="rtl"] .claro-details__summary--vertical-tabs-item,
+form.media-form [dir="rtl"] .claro-details__summary--accordion,
+form.media-form [dir="rtl"] .claro-details__summary--accordion-item,
+form.media-form [dir="rtl"] .claro-details__summary--vertical-tabs-item {
   padding-right: 2.25rem;
   padding-left: 1.5rem;
 }
 
 #layout-builder-modal .claro-details__summary--accordion-item,
-.media-library-widget-modal .claro-details__summary--accordion-item {
+.media-library-widget-modal .claro-details__summary--accordion-item,
+form.media-form .claro-details__summary--accordion-item {
   border-radius: 0;
 }
 
 #layout-builder-modal .claro-details--accordion-item:first-child .claro-details__summary--accordion-item,
-.media-library-widget-modal .claro-details--accordion-item:first-child .claro-details__summary--accordion-item {
+.media-library-widget-modal .claro-details--accordion-item:first-child .claro-details__summary--accordion-item,
+form.media-form .claro-details--accordion-item:first-child .claro-details__summary--accordion-item {
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
 }
 
 #layout-builder-modal .claro-details--accordion-item:last-child .claro-details__summary--accordion-item,
-.media-library-widget-modal .claro-details--accordion-item:last-child .claro-details__summary--accordion-item {
+.media-library-widget-modal .claro-details--accordion-item:last-child .claro-details__summary--accordion-item,
+form.media-form .claro-details--accordion-item:last-child .claro-details__summary--accordion-item {
   border-bottom-right-radius: 2px;
   border-bottom-left-radius: 2px;
 }
 
 #layout-builder-modal .claro-details__summary::-webkit-details-marker,
-.media-library-widget-modal .claro-details__summary::-webkit-details-marker {
+.media-library-widget-modal .claro-details__summary::-webkit-details-marker,
+form.media-form .claro-details__summary::-webkit-details-marker {
   display: none;
 }
 
 #layout-builder-modal .claro-details__summary::before,
-.media-library-widget-modal .claro-details__summary::before {
+.media-library-widget-modal .claro-details__summary::before,
+form.media-form .claro-details__summary::before {
   position: absolute;
   top: 50%;
   left: 0.75rem;
@@ -141,7 +159,8 @@
 }
 
 #layout-builder-modal [dir="rtl"] .claro-details__summary::before,
-.media-library-widget-modal [dir="rtl"] .claro-details__summary::before {
+.media-library-widget-modal [dir="rtl"] .claro-details__summary::before,
+form.media-form [dir="rtl"] .claro-details__summary::before {
   right: 0.75rem;
   left: auto;
   -webkit-transform: rotate(180deg);
@@ -151,7 +170,8 @@
 
 @media (prefers-reduced-motion: reduce) {
   #layout-builder-modal .claro-details__summary::before,
-  .media-library-widget-modal .claro-details__summary::before {
+  .media-library-widget-modal .claro-details__summary::before,
+  form.media-form .claro-details__summary::before {
     -webkit-transition: none;
     -o-transition: none;
     transition: none;
@@ -160,7 +180,8 @@
 
 @media screen and (-ms-high-contrast: active) {
   #layout-builder-modal .claro-details__summary::before,
-  .media-library-widget-modal .claro-details__summary::before {
+  .media-library-widget-modal .claro-details__summary::before,
+  form.media-form .claro-details__summary::before {
     width: 0.5625rem;
     height: 0.5625rem;
     margin-top: -0.28125rem;
@@ -178,7 +199,8 @@
     background: none;
   }
   #layout-builder-modal [dir="rtl"] .claro-details__summary::before,
-  .media-library-widget-modal [dir="rtl"] .claro-details__summary::before {
+  .media-library-widget-modal [dir="rtl"] .claro-details__summary::before,
+  form.media-form [dir="rtl"] .claro-details__summary::before {
     -webkit-transform: rotate(225deg);
     -o-transform: rotate(225deg);
     transform: rotate(225deg);
@@ -187,7 +209,8 @@
 
 @media not all and (min-resolution: 0.001dpcm) {
   #layout-builder-modal .claro-details__summary::before,
-  .media-library-widget-modal .claro-details__summary::before {
+  .media-library-widget-modal .claro-details__summary::before,
+  form.media-form .claro-details__summary::before {
     -webkit-transition: none;
     -o-transition: none;
     transition: none;
@@ -195,7 +218,8 @@
 }
 
 #layout-builder-modal .claro-details__summary::after,
-.media-library-widget-modal .claro-details__summary::after {
+.media-library-widget-modal .claro-details__summary::after,
+form.media-form .claro-details__summary::after {
   position: absolute;
   top: -1px;
   right: -1px;
@@ -215,14 +239,18 @@
 #layout-builder-modal .claro-details > .claro-details__summary--accordion-item::after,
 #layout-builder-modal .vertical-tabs__item > .claro-details__summary--vertical-tabs-item::after,
 .media-library-widget-modal .claro-details > .claro-details__summary--accordion-item::after,
-.media-library-widget-modal .vertical-tabs__item > .claro-details__summary--vertical-tabs-item::after {
+.media-library-widget-modal .vertical-tabs__item > .claro-details__summary--vertical-tabs-item::after,
+form.media-form .claro-details > .claro-details__summary--accordion-item::after,
+form.media-form .vertical-tabs__item > .claro-details__summary--vertical-tabs-item::after {
   border-radius: 0;
 }
 
 #layout-builder-modal .claro-details:first-child > .claro-details__summary--accordion-item::after,
 #layout-builder-modal .vertical-tabs__item--first > .claro-details__summary--vertical-tabs-item::after,
 .media-library-widget-modal .claro-details:first-child > .claro-details__summary--accordion-item::after,
-.media-library-widget-modal .vertical-tabs__item--first > .claro-details__summary--vertical-tabs-item::after {
+.media-library-widget-modal .vertical-tabs__item--first > .claro-details__summary--vertical-tabs-item::after,
+form.media-form .claro-details:first-child > .claro-details__summary--accordion-item::after,
+form.media-form .vertical-tabs__item--first > .claro-details__summary--vertical-tabs-item::after {
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
 }
@@ -230,7 +258,9 @@
 #layout-builder-modal .claro-details:last-child > .claro-details__summary--accordion-item::after,
 #layout-builder-modal .vertical-tabs__item--last > .claro-details__summary--vertical-tabs-item::after,
 .media-library-widget-modal .claro-details:last-child > .claro-details__summary--accordion-item::after,
-.media-library-widget-modal .vertical-tabs__item--last > .claro-details__summary--vertical-tabs-item::after {
+.media-library-widget-modal .vertical-tabs__item--last > .claro-details__summary--vertical-tabs-item::after,
+form.media-form .claro-details:last-child > .claro-details__summary--accordion-item::after,
+form.media-form .vertical-tabs__item--last > .claro-details__summary--vertical-tabs-item::after {
   border-bottom-right-radius: 2px;
   border-bottom-left-radius: 2px;
 }
@@ -240,13 +270,17 @@
 #layout-builder-modal .vertical-tabs__item--last[open] > .claro-details__summary--vertical-tabs-item::after,
 .media-library-widget-modal .claro-details[open] > .claro-details__summary--accordion::after,
 .media-library-widget-modal .claro-details[open] > .claro-details__summary--accordion-item::after,
-.media-library-widget-modal .vertical-tabs__item--last[open] > .claro-details__summary--vertical-tabs-item::after {
+.media-library-widget-modal .vertical-tabs__item--last[open] > .claro-details__summary--vertical-tabs-item::after,
+form.media-form .claro-details[open] > .claro-details__summary--accordion::after,
+form.media-form .claro-details[open] > .claro-details__summary--accordion-item::after,
+form.media-form .vertical-tabs__item--last[open] > .claro-details__summary--vertical-tabs-item::after {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
 #layout-builder-modal .claro-details__summary:focus,
-.media-library-widget-modal .claro-details__summary:focus {
+.media-library-widget-modal .claro-details__summary:focus,
+form.media-form .claro-details__summary:focus {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
@@ -256,7 +290,10 @@
 #layout-builder-modal [open] .claro-details__summary--vertical-tabs-item,
 .media-library-widget-modal [open] .claro-details__summary--accordion,
 .media-library-widget-modal [open] .claro-details__summary--accordion-item,
-.media-library-widget-modal [open] .claro-details__summary--vertical-tabs-item {
+.media-library-widget-modal [open] .claro-details__summary--vertical-tabs-item,
+form.media-form [open] .claro-details__summary--accordion,
+form.media-form [open] .claro-details__summary--accordion-item,
+form.media-form [open] .claro-details__summary--vertical-tabs-item {
   color: #003cc5;
 }
 
@@ -271,17 +308,25 @@
 .media-library-widget-modal .claro-details[open] > .claro-details__summary:focus::before,
 .media-library-widget-modal .claro-details[open] > .claro-details__summary--accordion::before,
 .media-library-widget-modal .claro-details[open] > .claro-details__summary--accordion-item::before,
-.media-library-widget-modal .claro-details[open] > .claro-details__summary--vertical-tabs-item::before {
+.media-library-widget-modal .claro-details[open] > .claro-details__summary--vertical-tabs-item::before,
+form.media-form .claro-details__summary:hover::before,
+form.media-form .claro-details__summary:hover:focus::before,
+form.media-form .claro-details[open] > .claro-details__summary:focus::before,
+form.media-form .claro-details[open] > .claro-details__summary--accordion::before,
+form.media-form .claro-details[open] > .claro-details__summary--accordion-item::before,
+form.media-form .claro-details[open] > .claro-details__summary--vertical-tabs-item::before {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath d='M5.2109375,1.3144531 3.7890625,2.7226562 9.0917969,8.0761719 3.7890625,13.429688 5.2109375,14.837891 11.908203,8.0761719Z' fill='%230036B1'/%3E%3C/svg%3E");
 }
 
 #layout-builder-modal .claro-details[open] > .claro-details__summary,
-.media-library-widget-modal .claro-details[open] > .claro-details__summary {
+.media-library-widget-modal .claro-details[open] > .claro-details__summary,
+form.media-form .claro-details[open] > .claro-details__summary {
   border-radius: 1px 1px 0 0;
 }
 
 #layout-builder-modal .claro-details[open] > .claro-details__summary::before,
-.media-library-widget-modal .claro-details[open] > .claro-details__summary::before {
+.media-library-widget-modal .claro-details[open] > .claro-details__summary::before,
+form.media-form .claro-details[open] > .claro-details__summary::before {
   -webkit-transform: rotate(90deg);
   -o-transform: rotate(90deg);
   transform: rotate(90deg);
@@ -292,13 +337,17 @@
   #layout-builder-modal .claro-details__summary:hover::before,
   #layout-builder-modal .claro-details__summary:hover:focus::before,
   .media-library-widget-modal .claro-details__summary:hover::before,
-  .media-library-widget-modal .claro-details__summary:hover:focus::before {
+  .media-library-widget-modal .claro-details__summary:hover:focus::before,
+  form.media-form .claro-details__summary:hover::before,
+  form.media-form .claro-details__summary:hover:focus::before {
     background: none;
   }
   #layout-builder-modal .claro-details[open] > .claro-details__summary::before,
   #layout-builder-modal [dir="rtl"] .claro-details[open] > .claro-details__summary::before,
   .media-library-widget-modal .claro-details[open] > .claro-details__summary::before,
-  .media-library-widget-modal [dir="rtl"] .claro-details[open] > .claro-details__summary::before {
+  .media-library-widget-modal [dir="rtl"] .claro-details[open] > .claro-details__summary::before,
+  form.media-form .claro-details[open] > .claro-details__summary::before,
+  form.media-form [dir="rtl"] .claro-details[open] > .claro-details__summary::before {
     margin-top: -0.40625rem;
     margin-right: 0.125rem;
     -webkit-transform: rotate(135deg);
@@ -314,13 +363,17 @@
 #layout-builder-modal .claro-details[open] > .claro-details__summary--vertical-tabs-item,
 .media-library-widget-modal .claro-details[open] > .claro-details__summary--accordion,
 .media-library-widget-modal .claro-details[open] > .claro-details__summary--accordion-item,
-.media-library-widget-modal .claro-details[open] > .claro-details__summary--vertical-tabs-item {
+.media-library-widget-modal .claro-details[open] > .claro-details__summary--vertical-tabs-item,
+form.media-form .claro-details[open] > .claro-details__summary--accordion,
+form.media-form .claro-details[open] > .claro-details__summary--accordion-item,
+form.media-form .claro-details[open] > .claro-details__summary--vertical-tabs-item {
   -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 #layout-builder-modal .claro-details__summary:hover,
-.media-library-widget-modal .claro-details__summary:hover {
+.media-library-widget-modal .claro-details__summary:hover,
+form.media-form .claro-details__summary:hover {
   color: #003cc5;
   background-color: #f0f5fd;
 }
@@ -336,7 +389,13 @@
 .media-library-widget-modal .collapse-processed[open] > .claro-details__summary--accordion .details-title:not(:focus)::after,
 .media-library-widget-modal .collapse-processed[open] > .claro-details__summary--accordion-item .details-title:not(:focus)::after,
 .media-library-widget-modal [open] > .claro-details__summary--vertical-tabs-item:not(:focus):not(:active)::after,
-.media-library-widget-modal .collapse-processed[open] > .claro-details__summary--vertical-tabs-item .details-title:not(:focus)::after {
+.media-library-widget-modal .collapse-processed[open] > .claro-details__summary--vertical-tabs-item .details-title:not(:focus)::after,
+form.media-form [open] > .claro-details__summary--accordion:not(:focus):not(:active)::after,
+form.media-form [open] > .claro-details__summary--accordion-item:not(:focus):not(:active)::after,
+form.media-form .collapse-processed[open] > .claro-details__summary--accordion .details-title:not(:focus)::after,
+form.media-form .collapse-processed[open] > .claro-details__summary--accordion-item .details-title:not(:focus)::after,
+form.media-form [open] > .claro-details__summary--vertical-tabs-item:not(:focus):not(:active)::after,
+form.media-form .collapse-processed[open] > .claro-details__summary--vertical-tabs-item .details-title:not(:focus)::after {
   opacity: 1;
   border: 3px solid #003cc5;
   border-width: 0 0 0 3px;
@@ -356,7 +415,13 @@
 .media-library-widget-modal [dir="rtl"] .collapse-processed[open] > .claro-details__summary--accordion .details-title:not(:focus)::after,
 .media-library-widget-modal [dir="rtl"] .collapse-processed[open] > .claro-details__summary--accordion-item .details-title:not(:focus)::after,
 .media-library-widget-modal [dir="rtl"] [open] > .claro-details__summary--vertical-tabs-item:not(:focus)::after,
-.media-library-widget-modal [dir="rtl"] .collapse-processed[open] > .claro-details__summary--vertical-tabs-item .details-title:not(:focus)::after {
+.media-library-widget-modal [dir="rtl"] .collapse-processed[open] > .claro-details__summary--vertical-tabs-item .details-title:not(:focus)::after,
+form.media-form [dir="rtl"] [open] > .claro-details__summary--accordion:not(:focus)::after,
+form.media-form [dir="rtl"] [open] > .claro-details__summary--accordion-item:not(:focus)::after,
+form.media-form [dir="rtl"] .collapse-processed[open] > .claro-details__summary--accordion .details-title:not(:focus)::after,
+form.media-form [dir="rtl"] .collapse-processed[open] > .claro-details__summary--accordion-item .details-title:not(:focus)::after,
+form.media-form [dir="rtl"] [open] > .claro-details__summary--vertical-tabs-item:not(:focus)::after,
+form.media-form [dir="rtl"] .collapse-processed[open] > .claro-details__summary--vertical-tabs-item .details-title:not(:focus)::after {
   border-width: 0 3px 0 0;
 }
 
@@ -365,13 +430,17 @@
 #layout-builder-modal .collapse-processed > .claro-details__summary .details-title:focus::after,
 .media-library-widget-modal .claro-details__summary:focus::after,
 .media-library-widget-modal .claro-details__summary:active::after,
-.media-library-widget-modal .collapse-processed > .claro-details__summary .details-title:focus::after {
+.media-library-widget-modal .collapse-processed > .claro-details__summary .details-title:focus::after,
+form.media-form .claro-details__summary:focus::after,
+form.media-form .claro-details__summary:active::after,
+form.media-form .collapse-processed > .claro-details__summary .details-title:focus::after {
   opacity: 1;
 }
 
 @media not all and (min-resolution: 0.001dpcm) {
   #layout-builder-modal .claro-details__summary::after,
-  .media-library-widget-modal .claro-details__summary::after {
+  .media-library-widget-modal .claro-details__summary::after,
+  form.media-form .claro-details__summary::after {
     -webkit-transition: none;
     -o-transition: none;
     transition: none;
@@ -379,14 +448,17 @@
 }
 
 #layout-builder-modal .claro-details[open] > .claro-details__summary:focus,
-.media-library-widget-modal .claro-details[open] > .claro-details__summary:focus {
+.media-library-widget-modal .claro-details[open] > .claro-details__summary:focus,
+form.media-form .claro-details[open] > .claro-details__summary:focus {
   color: #003cc5;
 }
 
 #layout-builder-modal .claro-details__wrapper,
 #layout-builder-modal .claro-details__content,
 .media-library-widget-modal .claro-details__wrapper,
-.media-library-widget-modal .claro-details__content {
+.media-library-widget-modal .claro-details__content,
+form.media-form .claro-details__wrapper,
+form.media-form .claro-details__content {
   margin: 1rem;
 }
 
@@ -395,7 +467,10 @@
 #layout-builder-modal .claro-details__wrapper--vertical-tabs-item,
 .media-library-widget-modal .claro-details__wrapper--accordion,
 .media-library-widget-modal .claro-details__wrapper--accordion-item,
-.media-library-widget-modal .claro-details__wrapper--vertical-tabs-item {
+.media-library-widget-modal .claro-details__wrapper--vertical-tabs-item,
+form.media-form .claro-details__wrapper--accordion,
+form.media-form .claro-details__wrapper--accordion-item,
+form.media-form .claro-details__wrapper--vertical-tabs-item {
   margin: 0;
 }
 
@@ -410,7 +485,13 @@
 .media-library-widget-modal .claro-details__wrapper--accordion-item::before,
 .media-library-widget-modal .claro-details__wrapper--accordion-item::after,
 .media-library-widget-modal .claro-details__wrapper--vertical-tabs-item::before,
-.media-library-widget-modal .claro-details__wrapper--vertical-tabs-item::after {
+.media-library-widget-modal .claro-details__wrapper--vertical-tabs-item::after,
+form.media-form .claro-details__wrapper--accordion::before,
+form.media-form .claro-details__wrapper--accordion::after,
+form.media-form .claro-details__wrapper--accordion-item::before,
+form.media-form .claro-details__wrapper--accordion-item::after,
+form.media-form .claro-details__wrapper--vertical-tabs-item::before,
+form.media-form .claro-details__wrapper--vertical-tabs-item::after {
   display: table;
   clear: both;
   content: "";
@@ -421,14 +502,18 @@
 #layout-builder-modal .claro-details__wrapper--vertical-tabs-item,
 .media-library-widget-modal .claro-details__wrapper--accordion,
 .media-library-widget-modal .claro-details__wrapper--accordion-item,
-.media-library-widget-modal .claro-details__wrapper--vertical-tabs-item {
+.media-library-widget-modal .claro-details__wrapper--vertical-tabs-item,
+form.media-form .claro-details__wrapper--accordion,
+form.media-form .claro-details__wrapper--accordion-item,
+form.media-form .claro-details__wrapper--vertical-tabs-item {
   border-top: 1px solid rgba(216, 217, 224, 0.8);
   background-color: rgba(243, 244, 249, 0.4);
 }
 
 @media screen and (min-width: 48em) {
   #layout-builder-modal .claro-details__wrapper,
-  .media-library-widget-modal .claro-details__wrapper {
+  .media-library-widget-modal .claro-details__wrapper,
+  form.media-form .claro-details__wrapper {
     margin: 1.5rem 2.25rem;
   }
   #layout-builder-modal .claro-details__wrapper--accordion,
@@ -436,14 +521,18 @@
   #layout-builder-modal .claro-details__wrapper--vertical-tabs-item,
   .media-library-widget-modal .claro-details__wrapper--accordion,
   .media-library-widget-modal .claro-details__wrapper--accordion-item,
-  .media-library-widget-modal .claro-details__wrapper--vertical-tabs-item {
+  .media-library-widget-modal .claro-details__wrapper--vertical-tabs-item,
+  form.media-form .claro-details__wrapper--accordion,
+  form.media-form .claro-details__wrapper--accordion-item,
+  form.media-form .claro-details__wrapper--vertical-tabs-item {
     margin: 0;
   }
 }
 
 @media screen and (min-width: 85em) {
   #layout-builder-modal .js .claro-details__wrapper--vertical-tabs-item,
-  .media-library-widget-modal .js .claro-details__wrapper--vertical-tabs-item {
+  .media-library-widget-modal .js .claro-details__wrapper--vertical-tabs-item,
+  form.media-form .js .claro-details__wrapper--vertical-tabs-item {
     margin: 0;
     border-top: 0;
     background-color: transparent;
@@ -455,19 +544,24 @@
 #layout-builder-modal .claro-details__content--vertical-tabs-item,
 .media-library-widget-modal .claro-details__content--accordion,
 .media-library-widget-modal .claro-details__content--accordion-item,
-.media-library-widget-modal .claro-details__content--vertical-tabs-item {
+.media-library-widget-modal .claro-details__content--vertical-tabs-item,
+form.media-form .claro-details__content--accordion,
+form.media-form .claro-details__content--accordion-item,
+form.media-form .claro-details__content--vertical-tabs-item {
   margin: 1rem 1rem 1.5rem;
 }
 
 @media screen and (min-width: 85em) {
   #layout-builder-modal .vertical-tabs .claro-details__content--vertical-tabs-item,
-  .media-library-widget-modal .vertical-tabs .claro-details__content--vertical-tabs-item {
+  .media-library-widget-modal .vertical-tabs .claro-details__content--vertical-tabs-item,
+  form.media-form .vertical-tabs .claro-details__content--vertical-tabs-item {
     margin: 1.5rem;
   }
 }
 
 #layout-builder-modal .claro-details__description,
-.media-library-widget-modal .claro-details__description {
+.media-library-widget-modal .claro-details__description,
+form.media-form .claro-details__description {
   margin-bottom: 1rem;
   color: #545560;
   font-size: 0.79rem;
@@ -477,22 +571,26 @@
 }
 
 #layout-builder-modal .claro-details__description.is-disabled,
-.media-library-widget-modal .claro-details__description.is-disabled {
+.media-library-widget-modal .claro-details__description.is-disabled,
+form.media-form .claro-details__description.is-disabled {
   color: #82828c;
 }
 
 #layout-builder-modal .collapse-processed > .claro-details__summary,
-.media-library-widget-modal .collapse-processed > .claro-details__summary {
+.media-library-widget-modal .collapse-processed > .claro-details__summary,
+form.media-form .collapse-processed > .claro-details__summary {
   padding: 0;
 }
 
 #layout-builder-modal .collapse-processed > .claro-details__summary::after,
-.media-library-widget-modal .collapse-processed > .claro-details__summary::after {
+.media-library-widget-modal .collapse-processed > .claro-details__summary::after,
+form.media-form .collapse-processed > .claro-details__summary::after {
   content: none;
 }
 
 #layout-builder-modal .collapse-processed > .claro-details__summary .details-title,
-.media-library-widget-modal .collapse-processed > .claro-details__summary .details-title {
+.media-library-widget-modal .collapse-processed > .claro-details__summary .details-title,
+form.media-form .collapse-processed > .claro-details__summary .details-title {
   position: relative;
   display: block;
   padding: 1rem 1rem 1rem 2.25rem;
@@ -503,7 +601,8 @@
 }
 
 #layout-builder-modal [dir="rtl"] .collapse-processed > .claro-details__summary .details-title,
-.media-library-widget-modal [dir="rtl"] .collapse-processed > .claro-details__summary .details-title {
+.media-library-widget-modal [dir="rtl"] .collapse-processed > .claro-details__summary .details-title,
+form.media-form [dir="rtl"] .collapse-processed > .claro-details__summary .details-title {
   padding-right: 2.25rem;
   padding-left: 1rem;
 }
@@ -513,7 +612,10 @@
 #layout-builder-modal .collapse-processed > .claro-details__summary--vertical-tabs-item .details-title,
 .media-library-widget-modal .collapse-processed > .claro-details__summary--accordion .details-title,
 .media-library-widget-modal .collapse-processed > .claro-details__summary--accordion-item .details-title,
-.media-library-widget-modal .collapse-processed > .claro-details__summary--vertical-tabs-item .details-title {
+.media-library-widget-modal .collapse-processed > .claro-details__summary--vertical-tabs-item .details-title,
+form.media-form .collapse-processed > .claro-details__summary--accordion .details-title,
+form.media-form .collapse-processed > .claro-details__summary--accordion-item .details-title,
+form.media-form .collapse-processed > .claro-details__summary--vertical-tabs-item .details-title {
   padding: 1.25rem 1.5rem 1.25rem 2.25rem;
   /* LTR */
 }
@@ -523,7 +625,10 @@
 #layout-builder-modal [dir="rtl"] .collapse-processed > .claro-details__summary--vertical-tabs-item .details-title,
 .media-library-widget-modal [dir="rtl"] .collapse-processed > .claro-details__summary--accordion .details-title,
 .media-library-widget-modal [dir="rtl"] .collapse-processed > .claro-details__summary--accordion-item .details-title,
-.media-library-widget-modal [dir="rtl"] .collapse-processed > .claro-details__summary--vertical-tabs-item .details-title {
+.media-library-widget-modal [dir="rtl"] .collapse-processed > .claro-details__summary--vertical-tabs-item .details-title,
+form.media-form [dir="rtl"] .collapse-processed > .claro-details__summary--accordion .details-title,
+form.media-form [dir="rtl"] .collapse-processed > .claro-details__summary--accordion-item .details-title,
+form.media-form [dir="rtl"] .collapse-processed > .claro-details__summary--vertical-tabs-item .details-title {
   padding-right: 2.25rem;
   padding-left: 1.5rem;
 }
@@ -531,7 +636,9 @@
 #layout-builder-modal .collapse-processed > .claro-details__summary .details-title:focus,
 #layout-builder-modal .collapse-processed > .claro-details__summary .details-title:hover,
 .media-library-widget-modal .collapse-processed > .claro-details__summary .details-title:focus,
-.media-library-widget-modal .collapse-processed > .claro-details__summary .details-title:hover {
+.media-library-widget-modal .collapse-processed > .claro-details__summary .details-title:hover,
+form.media-form .collapse-processed > .claro-details__summary .details-title:focus,
+form.media-form .collapse-processed > .claro-details__summary .details-title:hover {
   z-index: 1;
   text-decoration: none;
   outline: none;
@@ -540,7 +647,8 @@
 }
 
 #layout-builder-modal .collapse-processed > .claro-details__summary .details-title::after,
-.media-library-widget-modal .collapse-processed > .claro-details__summary .details-title::after {
+.media-library-widget-modal .collapse-processed > .claro-details__summary .details-title::after,
+form.media-form .collapse-processed > .claro-details__summary .details-title::after {
   position: absolute;
   top: -1px;
   right: -1px;
@@ -557,21 +665,26 @@
 }
 
 #layout-builder-modal .collapse-processed > .claro-details__summary .details-title:focus::after,
-.media-library-widget-modal .collapse-processed > .claro-details__summary .details-title:focus::after {
+.media-library-widget-modal .collapse-processed > .claro-details__summary .details-title:focus::after,
+form.media-form .collapse-processed > .claro-details__summary .details-title:focus::after {
   opacity: 1;
 }
 
 #layout-builder-modal .collapse-processed > .claro-details__summary--accordion-item .details-title::after,
 #layout-builder-modal .vertical-tabs__item > .claro-details__summary--vertical-tabs-item .details-title::after,
 .media-library-widget-modal .collapse-processed > .claro-details__summary--accordion-item .details-title::after,
-.media-library-widget-modal .vertical-tabs__item > .claro-details__summary--vertical-tabs-item .details-title::after {
+.media-library-widget-modal .vertical-tabs__item > .claro-details__summary--vertical-tabs-item .details-title::after,
+form.media-form .collapse-processed > .claro-details__summary--accordion-item .details-title::after,
+form.media-form .vertical-tabs__item > .claro-details__summary--vertical-tabs-item .details-title::after {
   border-radius: 0;
 }
 
 #layout-builder-modal .collapse-processed:first-child > .claro-details__summary--accordion-item .details-title::after,
 #layout-builder-modal .vertical-tabs__item--first > .claro-details__summary--vertical-tabs-item .details-title::after,
 .media-library-widget-modal .collapse-processed:first-child > .claro-details__summary--accordion-item .details-title::after,
-.media-library-widget-modal .vertical-tabs__item--first > .claro-details__summary--vertical-tabs-item .details-title::after {
+.media-library-widget-modal .vertical-tabs__item--first > .claro-details__summary--vertical-tabs-item .details-title::after,
+form.media-form .collapse-processed:first-child > .claro-details__summary--accordion-item .details-title::after,
+form.media-form .vertical-tabs__item--first > .claro-details__summary--vertical-tabs-item .details-title::after {
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
 }
@@ -579,7 +692,9 @@
 #layout-builder-modal .collapse-processed:last-child > .claro-details__summary--accordion-item .details-title::after,
 #layout-builder-modal .vertical-tabs__item--last > .claro-details__summary--vertical-tabs-item .details-title::after,
 .media-library-widget-modal .collapse-processed:last-child > .claro-details__summary--accordion-item .details-title::after,
-.media-library-widget-modal .vertical-tabs__item--last > .claro-details__summary--vertical-tabs-item .details-title::after {
+.media-library-widget-modal .vertical-tabs__item--last > .claro-details__summary--vertical-tabs-item .details-title::after,
+form.media-form .collapse-processed:last-child > .claro-details__summary--accordion-item .details-title::after,
+form.media-form .vertical-tabs__item--last > .claro-details__summary--vertical-tabs-item .details-title::after {
   border-bottom-right-radius: 2px;
   border-bottom-left-radius: 2px;
 }
@@ -589,7 +704,10 @@
 #layout-builder-modal .vertical-tabs__item[open] > .claro-details__summary--vertical-tabs-item .details-title::after,
 .media-library-widget-modal .collapse-processed[open] > .claro-details__summary--accordion .details-title::after,
 .media-library-widget-modal .collapse-processed[open] > .claro-details__summary--accordion-item .details-title::after,
-.media-library-widget-modal .vertical-tabs__item[open] > .claro-details__summary--vertical-tabs-item .details-title::after {
+.media-library-widget-modal .vertical-tabs__item[open] > .claro-details__summary--vertical-tabs-item .details-title::after,
+form.media-form .collapse-processed[open] > .claro-details__summary--accordion .details-title::after,
+form.media-form .collapse-processed[open] > .claro-details__summary--accordion-item .details-title::after,
+form.media-form .vertical-tabs__item[open] > .claro-details__summary--vertical-tabs-item .details-title::after {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
@@ -599,7 +717,10 @@
 #layout-builder-modal .claro-details__summary--vertical-tabs-item .summary,
 .media-library-widget-modal .claro-details__summary--accordion .summary,
 .media-library-widget-modal .claro-details__summary--accordion-item .summary,
-.media-library-widget-modal .claro-details__summary--vertical-tabs-item .summary {
+.media-library-widget-modal .claro-details__summary--vertical-tabs-item .summary,
+form.media-form .claro-details__summary--accordion .summary,
+form.media-form .claro-details__summary--accordion-item .summary,
+form.media-form .claro-details__summary--vertical-tabs-item .summary {
   display: none;
 }
 
@@ -609,14 +730,18 @@
   #layout-builder-modal .collapse-processed[open] > .claro-details__summary--vertical-tabs-item .details-title:not(:focus)::after,
   .media-library-widget-modal .collapse-processed[open] > .claro-details__summary--accordion .details-title:not(:focus)::after,
   .media-library-widget-modal .collapse-processed[open] > .claro-details__summary--accordion-item .details-title:not(:focus)::after,
-  .media-library-widget-modal .collapse-processed[open] > .claro-details__summary--vertical-tabs-item .details-title:not(:focus)::after {
+  .media-library-widget-modal .collapse-processed[open] > .claro-details__summary--vertical-tabs-item .details-title:not(:focus)::after,
+  form.media-form .collapse-processed[open] > .claro-details__summary--accordion .details-title:not(:focus)::after,
+  form.media-form .collapse-processed[open] > .claro-details__summary--accordion-item .details-title:not(:focus)::after,
+  form.media-form .collapse-processed[open] > .claro-details__summary--vertical-tabs-item .details-title:not(:focus)::after {
     top: -1px;
     right: -1px;
     bottom: -1px;
     left: -1px;
   }
   #layout-builder-modal .collapse-processed > .claro-details__summary .details-title::after,
-  .media-library-widget-modal .collapse-processed > .claro-details__summary .details-title::after {
+  .media-library-widget-modal .collapse-processed > .claro-details__summary .details-title::after,
+  form.media-form .collapse-processed > .claro-details__summary .details-title::after {
     top: -5px;
     right: -5px;
     bottom: -5px;
@@ -626,7 +751,8 @@
 }
 
 #layout-builder-modal .required-mark::after,
-.media-library-widget-modal .required-mark::after {
+.media-library-widget-modal .required-mark::after,
+form.media-form .required-mark::after {
   display: inline-block;
   width: 0.4375rem;
   height: 0.4375rem;
@@ -641,11 +767,13 @@
 }
 
 #layout-builder-modal details,
-.media-library-widget-modal details {
+.media-library-widget-modal details,
+form.media-form details {
   border: 0;
 }
 
 #layout-builder-modal details .details-wrapper,
-.media-library-widget-modal details .details-wrapper {
+.media-library-widget-modal details .details-wrapper,
+form.media-form details .details-wrapper {
   padding: 0;
 }

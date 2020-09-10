@@ -6,6 +6,7 @@
  */
 
 #layout-builder-modal .help p,
-.media-library-widget-modal .help p {
+.media-library-widget-modal .help p,
+form.media-form .help p {
   margin: 0 0 10px;
 }

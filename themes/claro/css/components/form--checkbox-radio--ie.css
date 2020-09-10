@@ -6,7 +6,8 @@
  */
 
 #layout-builder-modal .form-boolean::-ms-check,
-.media-library-widget-modal .form-boolean::-ms-check {
+.media-library-widget-modal .form-boolean::-ms-check,
+form.media-form .form-boolean::-ms-check {
   display: inline-block;
   box-sizing: border-box;
   width: 18px;
@@ -23,14 +24,16 @@
 }
 
 #layout-builder-modal .form-boolean--type-radio::-ms-check,
-.media-library-widget-modal .form-boolean--type-radio::-ms-check {
+.media-library-widget-modal .form-boolean--type-radio::-ms-check,
+form.media-form .form-boolean--type-radio::-ms-check {
   width: 19px;
   height: 19px;
   border-radius: 19px;
 }
 
 #layout-builder-modal .form-boolean:focus::-ms-check,
-.media-library-widget-modal .form-boolean:focus::-ms-check {
+.media-library-widget-modal .form-boolean:focus::-ms-check,
+form.media-form .form-boolean:focus::-ms-check {
   color: transparent;
   /* IE */
 }
@@ -38,7 +41,9 @@
 #layout-builder-modal .form-boolean:active::-ms-check,
 #layout-builder-modal .form-boolean:hover::-ms-check,
 .media-library-widget-modal .form-boolean:active::-ms-check,
-.media-library-widget-modal .form-boolean:hover::-ms-check {
+.media-library-widget-modal .form-boolean:hover::-ms-check,
+form.media-form .form-boolean:active::-ms-check,
+form.media-form .form-boolean:hover::-ms-check {
   border-color: #222330;
   box-shadow: inset 0 0 0 1px #222330;
 }
@@ -46,12 +51,15 @@
 #layout-builder-modal .form-boolean:focus:active::-ms-check,
 #layout-builder-modal .form-boolean:focus:hover::-ms-check,
 .media-library-widget-modal .form-boolean:focus:active::-ms-check,
-.media-library-widget-modal .form-boolean:focus:hover::-ms-check {
+.media-library-widget-modal .form-boolean:focus:hover::-ms-check,
+form.media-form .form-boolean:focus:active::-ms-check,
+form.media-form .form-boolean:focus:hover::-ms-check {
   box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769, inset 0 0 0 1px #222330;
 }
 
 #layout-builder-modal .form-boolean--type-checkbox:checked::-ms-check,
-.media-library-widget-modal .form-boolean--type-checkbox:checked::-ms-check {
+.media-library-widget-modal .form-boolean--type-checkbox:checked::-ms-check,
+form.media-form .form-boolean--type-checkbox:checked::-ms-check {
   color: transparent;
   /* IE */
   border-color: #003cc5;
@@ -62,13 +70,16 @@
 #layout-builder-modal .form-boolean--type-checkbox:checked:active::-ms-check,
 #layout-builder-modal .form-boolean--type-checkbox:checked:hover::-ms-check,
 .media-library-widget-modal .form-boolean--type-checkbox:checked:active::-ms-check,
-.media-library-widget-modal .form-boolean--type-checkbox:checked:hover::-ms-check {
+.media-library-widget-modal .form-boolean--type-checkbox:checked:hover::-ms-check,
+form.media-form .form-boolean--type-checkbox:checked:active::-ms-check,
+form.media-form .form-boolean--type-checkbox:checked:hover::-ms-check {
   border-color: #222330;
   background-color: #222330;
 }
 
 #layout-builder-modal .form-boolean--type-radio:checked::-ms-check,
-.media-library-widget-modal .form-boolean--type-radio:checked::-ms-check {
+.media-library-widget-modal .form-boolean--type-radio:checked::-ms-check,
+form.media-form .form-boolean--type-radio:checked::-ms-check {
   color: transparent;
   /* IE */
   border-color: #003cc5;
@@ -79,27 +90,33 @@
 #layout-builder-modal .form-boolean--type-checkbox:checked:active::-ms-check,
 #layout-builder-modal .form-boolean--type-checkbox:checked:hover::-ms-check,
 .media-library-widget-modal .form-boolean--type-checkbox:checked:active::-ms-check,
-.media-library-widget-modal .form-boolean--type-checkbox:checked:hover::-ms-check {
+.media-library-widget-modal .form-boolean--type-checkbox:checked:hover::-ms-check,
+form.media-form .form-boolean--type-checkbox:checked:active::-ms-check,
+form.media-form .form-boolean--type-checkbox:checked:hover::-ms-check {
   border-color: #222330;
   background-color: #222330;
 }
 
 #layout-builder-modal .form-boolean--type-radio:checked::-ms-check,
-.media-library-widget-modal .form-boolean--type-radio:checked::-ms-check {
+.media-library-widget-modal .form-boolean--type-radio:checked::-ms-check,
+form.media-form .form-boolean--type-radio:checked::-ms-check {
   border-color: #003cc5;
   background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle r='4.5' cx='8.5' cy='8.5' fill='%23004adc'/%3E%3C/svg%3E");
   box-shadow: inset 0 0 0 1px #003cc5;
 }
 
 #layout-builder-modal .form-boolean--type-radio:checked:focus::-ms-check,
-.media-library-widget-modal .form-boolean--type-radio:checked:focus::-ms-check {
+.media-library-widget-modal .form-boolean--type-radio:checked:focus::-ms-check,
+form.media-form .form-boolean--type-radio:checked:focus::-ms-check {
   box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769, inset 0 0 0 1px #003cc5;
 }
 
 #layout-builder-modal .form-boolean--type-radio:checked:active::-ms-check,
 #layout-builder-modal .form-boolean--type-radio:checked:hover::-ms-check,
 .media-library-widget-modal .form-boolean--type-radio:checked:active::-ms-check,
-.media-library-widget-modal .form-boolean--type-radio:checked:hover::-ms-check {
+.media-library-widget-modal .form-boolean--type-radio:checked:hover::-ms-check,
+form.media-form .form-boolean--type-radio:checked:active::-ms-check,
+form.media-form .form-boolean--type-radio:checked:hover::-ms-check {
   border-color: #222330;
   background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle r='4.5' cx='8.5' cy='8.5' fill='%23222330'/%3E%3C/svg%3E");
   box-shadow: inset 0 0 0 1px #222330;
@@ -108,12 +125,15 @@
 #layout-builder-modal .form-boolean--type-radio:checked:focus:active::-ms-check,
 #layout-builder-modal .form-boolean--type-radio:checked:focus:hover::-ms-check,
 .media-library-widget-modal .form-boolean--type-radio:checked:focus:active::-ms-check,
-.media-library-widget-modal .form-boolean--type-radio:checked:focus:hover::-ms-check {
+.media-library-widget-modal .form-boolean--type-radio:checked:focus:hover::-ms-check,
+form.media-form .form-boolean--type-radio:checked:focus:active::-ms-check,
+form.media-form .form-boolean--type-radio:checked:focus:hover::-ms-check {
   box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769, inset 0 0 0 1px #222330;
 }
 
 #layout-builder-modal .form-boolean.error::-ms-check,
-.media-library-widget-modal .form-boolean.error::-ms-check {
+.media-library-widget-modal .form-boolean.error::-ms-check,
+form.media-form .form-boolean.error::-ms-check {
   border-color: #d72222;
   background-color: #fff;
   box-shadow: inset 0 0 0 1px #d72222;
@@ -122,7 +142,9 @@
 #layout-builder-modal .form-boolean.error:active::-ms-check,
 #layout-builder-modal .form-boolean.error:hover::-ms-check,
 .media-library-widget-modal .form-boolean.error:active::-ms-check,
-.media-library-widget-modal .form-boolean.error:hover::-ms-check {
+.media-library-widget-modal .form-boolean.error:hover::-ms-check,
+form.media-form .form-boolean.error:active::-ms-check,
+form.media-form .form-boolean.error:hover::-ms-check {
   box-shadow: inset 0 0 0 1px #d72222;
 }
 
@@ -131,14 +153,19 @@
 #layout-builder-modal .form-boolean.error:focus:hover::-ms-check,
 .media-library-widget-modal .form-boolean.error:focus::-ms-check,
 .media-library-widget-modal .form-boolean.error:focus:active::-ms-check,
-.media-library-widget-modal .form-boolean.error:focus:hover::-ms-check {
+.media-library-widget-modal .form-boolean.error:focus:hover::-ms-check,
+form.media-form .form-boolean.error:focus::-ms-check,
+form.media-form .form-boolean.error:focus:active::-ms-check,
+form.media-form .form-boolean.error:focus:hover::-ms-check {
   box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769, inset 0 0 0 1px #d72222;
 }
 
 #layout-builder-modal .form-boolean.error:checked:active::-ms-check,
 #layout-builder-modal .form-boolean.error:checked:hover::-ms-check,
 .media-library-widget-modal .form-boolean.error:checked:active::-ms-check,
-.media-library-widget-modal .form-boolean.error:checked:hover::-ms-check {
+.media-library-widget-modal .form-boolean.error:checked:hover::-ms-check,
+form.media-form .form-boolean.error:checked:active::-ms-check,
+form.media-form .form-boolean.error:checked:hover::-ms-check {
   border-color: #d72222;
   background-color: #fff;
 }
@@ -148,7 +175,10 @@
 #layout-builder-modal .form-boolean--type-checkbox.error:checked:hover::-ms-check,
 .media-library-widget-modal .form-boolean--type-checkbox.error:checked::-ms-check,
 .media-library-widget-modal .form-boolean--type-checkbox.error:checked:active::-ms-check,
-.media-library-widget-modal .form-boolean--type-checkbox.error:checked:hover::-ms-check {
+.media-library-widget-modal .form-boolean--type-checkbox.error:checked:hover::-ms-check,
+form.media-form .form-boolean--type-checkbox.error:checked::-ms-check,
+form.media-form .form-boolean--type-checkbox.error:checked:active::-ms-check,
+form.media-form .form-boolean--type-checkbox.error:checked:hover::-ms-check {
   background-color: #d72222;
 }
 
@@ -157,12 +187,16 @@
 #layout-builder-modal .form-boolean--type-radio.error:checked:hover::-ms-check,
 .media-library-widget-modal .form-boolean--type-radio.error:checked::-ms-check,
 .media-library-widget-modal .form-boolean--type-radio.error:checked:active::-ms-check,
-.media-library-widget-modal .form-boolean--type-radio.error:checked:hover::-ms-check {
+.media-library-widget-modal .form-boolean--type-radio.error:checked:hover::-ms-check,
+form.media-form .form-boolean--type-radio.error:checked::-ms-check,
+form.media-form .form-boolean--type-radio.error:checked:active::-ms-check,
+form.media-form .form-boolean--type-radio.error:checked:hover::-ms-check {
   background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle r='4.5' cx='8.5' cy='8.5' fill='%23d72222'/%3E%3C/svg%3E");
 }
 
 #layout-builder-modal .form-boolean--type-radio.error:checked:focus::-ms-check,
-.media-library-widget-modal .form-boolean--type-radio.error:checked:focus::-ms-check {
+.media-library-widget-modal .form-boolean--type-radio.error:checked:focus::-ms-check,
+form.media-form .form-boolean--type-radio.error:checked:focus::-ms-check {
   box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769, inset 0 0 0 1px #d72222;
 }
 
@@ -179,7 +213,14 @@
 .media-library-widget-modal .form-boolean[disabled].error:hover::-ms-check,
 .media-library-widget-modal .form-boolean--type-radio[disabled]:focus:active::-ms-check,
 .media-library-widget-modal .form-boolean--type-radio[disabled]:active:hover::-ms-check,
-.media-library-widget-modal .form-boolean--type-radio[disabled].error:active:hover::-ms-check {
+.media-library-widget-modal .form-boolean--type-radio[disabled].error:active:hover::-ms-check,
+form.media-form .form-boolean[disabled]::-ms-check,
+form.media-form .form-boolean[disabled]:hover::-ms-check,
+form.media-form .form-boolean[disabled].error::-ms-check,
+form.media-form .form-boolean[disabled].error:hover::-ms-check,
+form.media-form .form-boolean--type-radio[disabled]:focus:active::-ms-check,
+form.media-form .form-boolean--type-radio[disabled]:active:hover::-ms-check,
+form.media-form .form-boolean--type-radio[disabled].error:active:hover::-ms-check {
   border-color: #bababf;
   background-color: #f2f2f3;
   background-image: none;
@@ -187,7 +228,8 @@
 }
 
 #layout-builder-modal .form-boolean--type-checkbox[disabled]:checked::-ms-check,
-.media-library-widget-modal .form-boolean--type-checkbox[disabled]:checked::-ms-check {
+.media-library-widget-modal .form-boolean--type-checkbox[disabled]:checked::-ms-check,
+form.media-form .form-boolean--type-checkbox[disabled]:checked::-ms-check {
   color: transparent;
   /* IE */
   background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3.7949219,7.095703 6.1816406,9.601563 12.205078,3.2753906 13.689453,4.8359375 6.1816406,12.724609 2.3105469,8.65625 Z' fill='%2382828c'/%3E%3C/svg%3E");
@@ -196,7 +238,9 @@
 #layout-builder-modal .form-boolean--type-radio[disabled]:checked::-ms-check,
 #layout-builder-modal .form-boolean--type-radio[disabled].error:checked::-ms-check,
 .media-library-widget-modal .form-boolean--type-radio[disabled]:checked::-ms-check,
-.media-library-widget-modal .form-boolean--type-radio[disabled].error:checked::-ms-check {
+.media-library-widget-modal .form-boolean--type-radio[disabled].error:checked::-ms-check,
+form.media-form .form-boolean--type-radio[disabled]:checked::-ms-check,
+form.media-form .form-boolean--type-radio[disabled].error:checked::-ms-check {
   color: transparent;
   /* IE */
   background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle r='4.5' cx='8.5' cy='8.5' fill='%2382828c'/%3E%3C/svg%3E");

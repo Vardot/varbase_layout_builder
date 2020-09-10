@@ -7,13 +7,15 @@
  */
 
 #layout-builder-modal .pager,
-.media-library-widget-modal .pager {
+.media-library-widget-modal .pager,
+form.media-form .pager {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
 #layout-builder-modal .pager__items,
-.media-library-widget-modal .pager__items {
+.media-library-widget-modal .pager__items,
+form.media-form .pager__items {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -37,12 +39,14 @@
 }
 
 #layout-builder-modal [dir="rtl"] .pager__items,
-.media-library-widget-modal [dir="rtl"] .pager__items {
+.media-library-widget-modal [dir="rtl"] .pager__items,
+form.media-form [dir="rtl"] .pager__items {
   margin: 1rem 0;
 }
 
 #layout-builder-modal .pager__item,
-.media-library-widget-modal .pager__item {
+.media-library-widget-modal .pager__item,
+form.media-form .pager__item {
   display: inline-block;
   margin-right: 0.25rem;
   margin-left: 0.25rem;
@@ -52,7 +56,9 @@
 #layout-builder-modal .pager__link,
 #layout-builder-modal .pager__item--current,
 .media-library-widget-modal .pager__link,
-.media-library-widget-modal .pager__item--current {
+.media-library-widget-modal .pager__item--current,
+form.media-form .pager__link,
+form.media-form .pager__item--current {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -85,48 +91,60 @@
 #layout-builder-modal .pager__link:active,
 .media-library-widget-modal .pager__link:hover,
 .media-library-widget-modal .pager__link:focus,
-.media-library-widget-modal .pager__link:active {
+.media-library-widget-modal .pager__link:active,
+form.media-form .pager__link:hover,
+form.media-form .pager__link:focus,
+form.media-form .pager__link:active {
   text-decoration: none;
 }
 
 #layout-builder-modal .pager__link:hover,
 #layout-builder-modal .pager__link.is-active:hover,
 .media-library-widget-modal .pager__link:hover,
-.media-library-widget-modal .pager__link.is-active:hover {
+.media-library-widget-modal .pager__link.is-active:hover,
+form.media-form .pager__link:hover,
+form.media-form .pager__link.is-active:hover {
   color: #545560;
   background: #e6ecf8;
 }
 
 #layout-builder-modal .pager__link--action-link,
-.media-library-widget-modal .pager__link--action-link {
+.media-library-widget-modal .pager__link--action-link,
+form.media-form .pager__link--action-link {
   border-radius: 0.125rem;
 }
 
 #layout-builder-modal .pager__link.is-active,
 #layout-builder-modal .pager__item--current,
 .media-library-widget-modal .pager__link.is-active,
-.media-library-widget-modal .pager__item--current {
+.media-library-widget-modal .pager__item--current,
+form.media-form .pager__link.is-active,
+form.media-form .pager__item--current {
   color: #fff;
   background: #003cc5;
 }
 
 #layout-builder-modal .pager__item--first .pager__link::before,
-.media-library-widget-modal .pager__item--first .pager__link::before {
+.media-library-widget-modal .pager__item--first .pager__link::before,
+form.media-form .pager__item--first .pager__link::before {
   background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2 2V14' stroke='%23545560' stroke-width='2'/%3E%3Cpath d='M14 2L8 8L14 14' stroke='%23545560' stroke-width='2'/%3E%3C/svg%3E%0A");
 }
 
 #layout-builder-modal .pager__item--previous .pager__link::before,
-.media-library-widget-modal .pager__item--previous .pager__link::before {
+.media-library-widget-modal .pager__item--previous .pager__link::before,
+form.media-form .pager__item--previous .pager__link::before {
   background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 2L5 8L11 14' stroke='%23545560' stroke-width='2'/%3E%3C/svg%3E%0A");
 }
 
 #layout-builder-modal .pager__item--next .pager__link::after,
-.media-library-widget-modal .pager__item--next .pager__link::after {
+.media-library-widget-modal .pager__item--next .pager__link::after,
+form.media-form .pager__item--next .pager__link::after {
   background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 14L11 8L5 2' stroke='%23545560' stroke-width='2'/%3E%3C/svg%3E%0A");
 }
 
 #layout-builder-modal .pager__item--last .pager__link::after,
-.media-library-widget-modal .pager__item--last .pager__link::after {
+.media-library-widget-modal .pager__item--last .pager__link::after,
+form.media-form .pager__item--last .pager__link::after {
   background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14 14L14 2.00001' stroke='%23545560' stroke-width='2'/%3E%3Cpath d='M2 14L8 8.00001L2 2.00001' stroke='%23545560' stroke-width='2'/%3E%3C/svg%3E%0A");
 }
 
@@ -137,7 +155,11 @@
 .media-library-widget-modal .pager__item--first .pager__link::before,
 .media-library-widget-modal .pager__item--previous .pager__link::before,
 .media-library-widget-modal .pager__item--next .pager__link::after,
-.media-library-widget-modal .pager__item--last .pager__link::after {
+.media-library-widget-modal .pager__item--last .pager__link::after,
+form.media-form .pager__item--first .pager__link::before,
+form.media-form .pager__item--previous .pager__link::before,
+form.media-form .pager__item--next .pager__link::after,
+form.media-form .pager__item--last .pager__link::after {
   position: relative;
   display: inline-block;
   width: 1rem;
@@ -154,60 +176,73 @@
 .media-library-widget-modal [dir="rtl"] .pager__item--first .pager__link::before,
 .media-library-widget-modal [dir="rtl"] .pager__item--previous .pager__link::before,
 .media-library-widget-modal [dir="rtl"] .pager__item--next .pager__link::after,
-.media-library-widget-modal [dir="rtl"] .pager__item--last .pager__link::after {
+.media-library-widget-modal [dir="rtl"] .pager__item--last .pager__link::after,
+form.media-form [dir="rtl"] .pager__item--first .pager__link::before,
+form.media-form [dir="rtl"] .pager__item--previous .pager__link::before,
+form.media-form [dir="rtl"] .pager__item--next .pager__link::after,
+form.media-form [dir="rtl"] .pager__item--last .pager__link::after {
   -webkit-transform: scaleX(-1);
   -o-transform: scaleX(-1);
   transform: scaleX(-1);
 }
 
 #layout-builder-modal .pager__item--mini,
-.media-library-widget-modal .pager__item--mini {
+.media-library-widget-modal .pager__item--mini,
+form.media-form .pager__item--mini {
   margin-right: 0.5rem;
   margin-left: 0.5rem;
 }
 
 #layout-builder-modal .pager__link--mini,
-.media-library-widget-modal .pager__link--mini {
+.media-library-widget-modal .pager__link--mini,
+form.media-form .pager__link--mini {
   border-radius: 50%;
 }
 
 #layout-builder-modal .pager__link--mini::before,
-.media-library-widget-modal .pager__link--mini::before {
+.media-library-widget-modal .pager__link--mini::before,
+form.media-form .pager__link--mini::before {
   margin-right: 0;
   margin-left: 0;
 }
 
 #layout-builder-modal .pager__item-title--backwards,
-.media-library-widget-modal .pager__item-title--backwards {
+.media-library-widget-modal .pager__item-title--backwards,
+form.media-form .pager__item-title--backwards {
   margin-left: 0.5rem;
   /* LTR */
 }
 
 #layout-builder-modal [dir="rtl"] .pager__item-title--backwards,
-.media-library-widget-modal [dir="rtl"] .pager__item-title--backwards {
+.media-library-widget-modal [dir="rtl"] .pager__item-title--backwards,
+form.media-form [dir="rtl"] .pager__item-title--backwards {
   margin-right: 0.5rem;
   margin-left: 0;
 }
 
 #layout-builder-modal .pager__item-title--forward,
-.media-library-widget-modal .pager__item-title--forward {
+.media-library-widget-modal .pager__item-title--forward,
+form.media-form .pager__item-title--forward {
   margin-right: 0.5rem;
   /* LTR */
 }
 
 #layout-builder-modal [dir="rtl"] .pager__item-title--forward,
-.media-library-widget-modal [dir="rtl"] .pager__item-title--forward {
+.media-library-widget-modal [dir="rtl"] .pager__item-title--forward,
+form.media-form [dir="rtl"] .pager__item-title--forward {
   margin-right: 0;
   margin-left: 0.5rem;
 }
 
 @media (-ms-high-contrast: active) {
   #layout-builder-modal .pager__item a:hover,
-  .media-library-widget-modal .pager__item a:hover {
+  .media-library-widget-modal .pager__item a:hover,
+  form.media-form .pager__item a:hover {
     text-decoration: underline;
   }
   #layout-builder-modal .pager__link.is-active,
-  .media-library-widget-modal .pager__link.is-active {
+  .media-library-widget-modal .pager__link.is-active,
+  form.media-form .pager__link.is-active {
     border: 0.125rem solid #fff;
   }
 }
