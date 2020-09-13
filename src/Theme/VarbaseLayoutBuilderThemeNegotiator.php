@@ -71,14 +71,15 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
    *   To proceed with changing the theme.
    */
   public function applies(RouteMatchInterface $route_match) {
-    $config = $this->configFactory->get('varbase_layout_builder.settings');
-    $use_claro = $config->get('use_claro');
-
+    $use_claro = $this->configFactory->get('varbase_layout_builder.settings')->get('use_claro');
     if (isset($use_claro) && $use_claro == 1
       && !version_compare(\Drupal::VERSION, '8.8.0', 'lt')) {
 
-      if ($this->themeHandler->themeExists('claro')) {
-        return TRUE;
+      $route_name = $route_match->getRouteName();
+      if (strpos($route_name, 'layout_builder') !== FALSE) {
+        if ($this->themeHandler->themeExists('claro')) {
+          return TRUE;
+        }
       }
     }
 
@@ -100,26 +101,29 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
     if (isset($use_claro) && $use_claro == 1
       && !version_compare(\Drupal::VERSION, '8.8.0', 'lt')) {
 
-      if ($this->themeHandler->themeExists('claro')) {
+      $route_name = $route_match->getRouteName();
+      if (strpos($route_name, 'layout_builder') !== FALSE) {
 
-        $dialog_options = $this->requestStack->getCurrentRequest()->request->get('dialogOptions')['target'];
-        if (isset($dialog_options)) {
-          return "claro";
-        }
-        else {
-          $request_query_wrapper_format = $this->requestStack->getCurrentRequest()->query->get('_wrapper_format');
-          if (isset($request_query_wrapper_format)) {
-            if ($request_query_wrapper_format == 'drupal_dialog.off_canvas') {
-              return $this->configFactory->get('system.theme')->get('default');
-            }
-            else {
-              return "claro";
+        if ($this->themeHandler->themeExists('claro')) {
+          $dialog_options = $this->requestStack->getCurrentRequest()->request->get('dialogOptions')['target'];
+          if (isset($dialog_options)) {
+            return "claro";
+          }
+          else {
+            $request_query_wrapper_format = $this->requestStack->getCurrentRequest()->query->get('_wrapper_format');
+            if (isset($request_query_wrapper_format)) {
+              if ($request_query_wrapper_format == 'drupal_dialog.off_canvas') {
+                return $this->configFactory->get('system.theme')->get('default');
+              }
+              else {
+                return "claro";
+              }
             }
           }
         }
-      }
-      else {
-        return $this->configFactory->get('system.theme')->get('admin');
+        else {
+          return $this->configFactory->get('system.theme')->get('admin');
+        }
       }
     }
 
