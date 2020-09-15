@@ -101,3 +101,12 @@ function varbase_layout_builder_update_8102() {
     $config_factory->set('use_claro', 1)->save(TRUE);
   }
 }
+
+/**
+ * Issue #3170980: Add Layout Builder Component Attributes module.
+ */
+function varbase_layout_builder_update_8103() {
+  if (!\Drupal::moduleHandler()->moduleExists('layout_builder_component_attributes')) {
+    \Drupal::service('module_installer')->install(['layout_builder_component_attributes'], FALSE);
+  }
+}
