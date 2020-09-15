@@ -19,3 +19,4 @@ install:
   - lb_ux
   - entity_block
   - block_form_alter
+  - layout_builder_component_attributes
