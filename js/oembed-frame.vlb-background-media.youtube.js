@@ -10,19 +10,20 @@ function ready(fn) {
   }
 }
 
+let YT;
 const tag = document.createElement("script");
 tag.src = "//youtube.com/player_api";
 const firstScriptTag = document.getElementsByTagName("script")[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-ready(function(YT) {
+ready(function() {
   const mediaIframe = document.querySelector("iframe");
   mediaIframe.setAttribute("id", "media-oembed-iframe");
 
-  let playerConfgured = false;
+  let playerConfigured = false;
   let youtubePlayer;
 
-  const actionProcessor = function actionProcessor(evt) {
+  function actionProcessor(evt) {
     // Manage Youtube video.
     if (evt.data === "play") {
       if (
@@ -37,12 +38,12 @@ ready(function(YT) {
         handlePlayer();
       }
     }
-  };
+  }
 
-  const handlePlayer = function handlePlayer() {
+  function handlePlayer() {
     const youtubeIframe = document.querySelector('iframe[src*="youtube.com"]');
     if (youtubeIframe !== undefined && youtubeIframe.src !== undefined) {
-      if (!playerConfgured) {
+      if (!playerConfigured) {
         let youtubeURL = String(youtubeIframe.src);
         youtubeURL = youtubeURL.replace(/autoplay=0/gi, "autoplay=1");
         youtubeURL = youtubeURL.replace(/controls=0/gi, "controls=1");
@@ -76,28 +77,28 @@ ready(function(YT) {
           }
         });
 
-        const onPlayerReady = function onPlayerReady(event) {
-          event.target.mute();
-          event.target.setVolume(0);
-          event.target.playVideo();
-        };
-
-        const onPlayerStateChange = function onPlayerStateChange(event) {
-          if (event.data === YT.PlayerState.ENDED) {
-            youtubePlayer.isPlaying = false;
-            youtubePlayer.seekTo(0);
-            youtubePlayer.playVideo();
-          } else if (event.data === YT.PlayerState.PLAYING) {
-            youtubePlayer.isPlaying = true;
-          } else {
-            youtubePlayer.isPlaying = false;
-          }
-        };
-
-        playerConfgured = true;
+        playerConfigured = true;
       }
     }
-  };
+
+    function onPlayerReady(event) {
+      event.target.mute();
+      event.target.setVolume(0);
+      event.target.playVideo();
+    }
+
+    function onPlayerStateChange(event) {
+      if (event.data === YT.PlayerState.ENDED) {
+        youtubePlayer.isPlaying = false;
+        youtubePlayer.seekTo(0);
+        youtubePlayer.playVideo();
+      } else if (event.data === YT.PlayerState.PLAYING) {
+        youtubePlayer.isPlaying = true;
+      } else {
+        youtubePlayer.isPlaying = false;
+      }
+    }
+  }
 
   // Setup the event listener for messaging.
   if (window.addEventListener) {

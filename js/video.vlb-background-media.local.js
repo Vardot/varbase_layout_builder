@@ -14,14 +14,14 @@
         player.onended = onFinish;
       }
 
-      const onPause = function onPause() {
+      function onPause() {
         $(".background-media-wrapper video").trigger("play");
-      };
+      }
 
       // Play when finished.
-      const onFinish = function onFinish() {
+      function onFinish() {
         $(".background-media-wrapper video").trigger("play");
-      };
+      }
     }
   };
 })(window.jQuery, window._, window.Drupal);
