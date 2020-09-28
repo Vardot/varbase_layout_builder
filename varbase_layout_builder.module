@@ -5,6 +5,7 @@
  * Contains varbase_layout_builder.module.
  */
 
+use Drupal\Component\Utility\NestedArray;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\media\Entity\Media;
 use Drupal\file\Entity\File;
@@ -148,7 +149,10 @@ function varbase_layout_builder_preprocess_layout(&$variables) {
 
                 // If we do have layout values for this option.
                 if (isset($current_config_option['layout'])) {
-                  $variables['settings']['layout'] = $current_config_option['layout'];
+                  if (!isset($variables['settings']['layout'])) {
+                    $variables['settings']['layout'] = [];
+                  }
+                  $variables['settings']['layout'] = NestedArray::mergeDeep($variables['settings']['layout'], $current_config_option['layout']);
                 }
 
                 // If we do have regions values for this option.
