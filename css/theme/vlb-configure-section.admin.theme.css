@@ -1,61 +1,52 @@
 #drupal-off-canvas div[id^="edit-vlb-"] {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
 #drupal-off-canvas div[id^="edit-vlb-"].form-item,
 #drupal-off-canvas div[id^="edit-vlb-"] .js-form-item {
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 #drupal-off-canvas .vlb_background_color .radio input {
-  visibility: hidden;
   position: absolute;
+  visibility: hidden;
 }
 
 #drupal-off-canvas .vlb_background_color .radio input:checked + label.option {
-  border: #000000 2px solid;
+  border: #000 2px solid;
 }
 
 #drupal-off-canvas .vlb_background_color .radio label.option {
-  cursor: pointer !important;
-  border: #000000 1px solid;
-  font-size: 0.00001px;
   position: relative;
   display: inline-block;
+  float: left;
   width: 30px;
   height: 30px;
-  float: left;
   margin: 5px 5px 5px 0;
   padding: 0;
+  cursor: pointer !important;
   white-space: nowrap;
+  border: #000 1px solid;
+  font-size: 0.00001px;
 }
 
 #drupal-off-canvas .vlb_background_color .radio label.option:after {
-  content: 'a';
-  display: table;
   position: absolute;
-  top: 3px;
-  left: 0;
-  right: 0px;
-  bottom: 0;
   z-index: 1;
-  font-size: 20px;
-  text-align: center;
-  vertical-align: middle;
+  top: 3px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: table;
   width: 100%;
   height: 100%;
+  content: "a";
+  text-align: center;
+  vertical-align: middle;
+  font-size: 20px;
 }
 
 #drupal-off-canvas .vlb_background_color .radio label.option:hover {
@@ -63,56 +54,47 @@
 }
 
 #drupal-off-canvas .vlb_background_color .radio label.option._none {
-  background: #ffffff !important;
+  background: #fff !important;
 }
 
 #drupal-off-canvas .vlb_background_color .radio label.option._none:after {
-  display: inline-block;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
-  float: none;
-  z-index: auto;
-  width: 37px;
-  height: 2px;
   position: absolute;
-  content: "";
-  cursor: pointer !important;
-  opacity: 1;
+  z-index: auto;
   top: 12px;
-  left: -5px;
   right: 0;
   bottom: 0;
+  left: -5px;
+  display: inline-block;
+  float: none;
+  box-sizing: content-box;
+  width: 37px;
+  height: 2px;
   margin: 0;
   padding: 0;
+  content: "";
+  cursor: pointer !important;
+  transition: none;
+  transform: rotateZ(-45deg);
+  transform-origin: 50% 50% 0;
   -o-text-overflow: clip;
+  opacity: 1;
   background: #f00;
-  -webkit-box-shadow: none;
   box-shadow: none;
   text-shadow: none;
-  -webkit-transition: none;
-  -o-transition: none;
-  transition: none;
-  -webkit-transform: rotateZ(-45deg);
-  -o-transform: rotateZ(-45deg);
-  transform: rotateZ(-45deg);
-  -webkit-transform-origin: 50% 50% 0;
-  -o-transform-origin: 50% 50% 0;
-  transform-origin: 50% 50% 0;
 }
 
 #drupal-off-canvas .vlb_width .radio input,
 #drupal-off-canvas .vlb_gutter .radio input,
 #drupal-off-canvas .vlb_column_style_3 .radio input,
 #drupal-off-canvas .vlb_column_style_2 .radio input {
-  visibility: hidden !important;
   position: absolute !important;
+  visibility: hidden !important;
 }
 
 #drupal-off-canvas .vlb_width .radio input:checked + label.option,
 #drupal-off-canvas .vlb_gutter .radio input:checked + label.option,
 #drupal-off-canvas .vlb_column_style_3 .radio input:checked + label.option,
 #drupal-off-canvas .vlb_column_style_2 .radio input:checked + label.option {
-  -webkit-filter: invert(25%) sepia(0.9) !important;
   filter: invert(25%) sepia(0.9) !important;
 }
 
@@ -120,39 +102,37 @@
 #drupal-off-canvas .vlb_gutter .radio label.option,
 #drupal-off-canvas .vlb_column_style_3 .radio label.option,
 #drupal-off-canvas .vlb_column_style_2 .radio label.option {
-  cursor: pointer !important;
-  font-size: 75% !important;
-  text-align: center !important;
   position: relative !important;
   display: inline-block !important;
+  float: left !important;
   min-width: 50px !important;
   height: 20px !important;
-  float: left !important;
   margin: 10px 10px 10px 0 !important;
-  padding: 40px 0px 0 !important;
-  white-space: nowrap !important;
-  -webkit-transition: opacity 0.3s ease-in-out !important;
-  -o-transition: opacity 0.3s ease-in-out !important;
+  padding: 40px 0 0 !important;
+  cursor: pointer !important;
   transition: opacity 0.3s ease-in-out !important;
+  text-align: center !important;
+  white-space: nowrap !important;
+  font-size: 75% !important;
 }
 
 #drupal-off-canvas .vlb_width .radio label.option:after,
 #drupal-off-canvas .vlb_gutter .radio label.option:after,
 #drupal-off-canvas .vlb_column_style_3 .radio label.option:after,
 #drupal-off-canvas .vlb_column_style_2 .radio label.option:after {
-  content: '';
-  display: table;
   position: absolute;
-  top: 3px;
-  left: 0;
-  right: 0px;
-  bottom: 0;
   z-index: 1;
-  font-size: 20px !important;
-  text-align: center;
-  vertical-align: middle;
+  top: 3px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: table;
   width: 100%;
   height: 100%;
+  content: "";
+  text-align: center;
+  vertical-align: middle;
+  font-size: 20px !important;
 }
 
 #drupal-off-canvas .vlb_width .radio label.option:hover,
@@ -169,8 +149,8 @@
 #drupal-off-canvas .vlb_width .radio label.option.full,
 #drupal-off-canvas .vlb_width .radio label.option.edge2edge {
   background-image: none;
-  background-position: top center;
   background-repeat: no-repeat;
+  background-position: top center;
 }
 
 #drupal-off-canvas .vlb_width .radio label.option.tiny {
@@ -200,8 +180,8 @@
 #drupal-off-canvas .vlb_gutter .radio label.option.gutter-0,
 #drupal-off-canvas .vlb_gutter .radio label.option.gutter-1 {
   background-image: none;
-  background-position: top center;
   background-repeat: no-repeat;
+  background-position: top center;
 }
 
 #drupal-off-canvas .vlb_gutter .radio label.option.gutter-0 {
@@ -220,8 +200,8 @@
 #drupal-off-canvas .vlb_column_style_3 .radio label.option.vlb_style_66_16_16,
 #drupal-off-canvas .vlb_column_style_3 .radio label.option.vlb_style_16_16_66 {
   background-image: none;
-  background-position: top center;
   background-repeat: no-repeat;
+  background-position: top center;
 }
 
 #drupal-off-canvas .vlb_column_style_3 .radio label.option.vlb_style_33_34_33 {
@@ -258,8 +238,8 @@
 #drupal-off-canvas .vlb_column_style_2 .radio label.option.vlb_style_25_75,
 #drupal-off-canvas .vlb_column_style_2 .radio label.option.vlb_style_33_66 {
   background-image: none;
-  background-position: top center;
   background-repeat: no-repeat;
+  background-position: top center;
 }
 
 #drupal-off-canvas .vlb_column_style_2 .radio label.option.vlb_style_50_50 {
@@ -295,24 +275,19 @@
 #drupal-off-canvas [dir=rtl] .vlb_gutter .radio label.option._none:after,
 #drupal-off-canvas [dir=rtl] .vlb_column_style_3 .radio label.option._none:after,
 #drupal-off-canvas [dir=rtl] .vlb_column_style_2 .radio label.option._none:after {
-  left: 0;
   right: -5px;
+  left: 0;
 }
 
 #drupal-off-canvas .media-library-item {
-  width: 100%;
   position: relative;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
   vertical-align: top;
   border: 1px solid #dbdbdb;
-  margin: 0 auto;
   background: #fff;
-  -webkit-transition: border-color 0.2s, color 0.2s, background 0.2s;
-  -o-transition: border-color 0.2s, color 0.2s, background 0.2s;
-  transition: border-color 0.2s, color 0.2s, background 0.2s;
 }
 
 #drupal-off-canvas .media-library-item *,
@@ -329,14 +304,11 @@
   height: 24px;
   margin: 5px;
   padding: 0;
-  -webkit-transition: 0.2s border-color;
-  -o-transition: 0.2s border-color;
   transition: 0.2s border-color;
   color: transparent;
   border: 2px solid #ccc;
   border-radius: 20px;
   background: url(../../images/icons/bebebe/ex.svg) #fff center no-repeat;
-  -webkit-background-size: 16px 16px;
   background-size: 16px 16px;
   text-shadow: none;
 }
@@ -360,12 +332,7 @@
 #drupal-off-canvas .media-library-add-form__selected-media .details-wrapper,
 #drupal-off-canvas .media-library-views-form__bulk_form,
 #drupal-off-canvas .media-library-view .form--inline {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 
@@ -379,14 +346,14 @@
 
 #drupal-off-canvas .media-library-form-element .media-library-open-button {
   color: #212529;
-  background-color: #f8f9fa;
   border-color: #f8f9fa;
+  background-color: #f8f9fa;
 }
 
 #drupal-off-canvas .media-library-form-element .media-library-open-button:hover {
   color: #212529;
-  background-color: #e2e6ea;
   border-color: #dae0e5;
+  background-color: #e2e6ea;
 }
 
 #drupal-off-canvas .media-library-form-element .media-library-form-element-empty-text,
@@ -400,8 +367,8 @@
   position: absolute;
   bottom: 0;
   display: block;
-  padding: 5px;
-  max-height: calc(100% - 50px);
   overflow: hidden;
+  max-height: calc(100% - 50px);
+  padding: 5px;
   background: white !important;
 }

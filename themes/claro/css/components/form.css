@@ -336,8 +336,8 @@ form.media-form .form-item--editor-format .form-item__error-message {
 #layout-builder-modal legend,
 .media-library-widget-modal legend,
 form.media-form legend {
-  font-size: initial;
   width: auto;
+  font-size: initial;
   font-weight: bold;
 }
 
@@ -352,10 +352,10 @@ form.media-form .form-control:focus {
 #layout-builder-modal .label,
 .media-library-widget-modal .label,
 form.media-form .label {
+  text-transform: inherit;
+  color: inherit;
   font-size: inherit;
   font-weight: inherit;
-  color: inherit;
-  text-transform: inherit;
 }
 
 #layout-builder-modal .form-actions,

@@ -5,16 +5,16 @@
  * The location may need to be adjusted depending on your setup.
  */
 
-html #layout-builder-modal ,
+html #layout-builder-modal,
 html .media-library-widget-modal {
-  font-family: BlinkMacSystemFont , -apple-system , "Segoe UI" , Roboto , Oxygen-Sans , Ubuntu , Cantarell , "Helvetica Neue" , sans-serif;
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 100%;
   font-weight: normal;
   font-style: normal;
   line-height: 1.5;
 }
 
-body #layout-builder-modal ,
+body #layout-builder-modal,
 body .media-library-widget-modal,
 body form.media-form {
   color: #222330;
@@ -345,8 +345,8 @@ form.media-form img {
 form.media-form .page-wrapper *:focus,
 form.media-form .ui-dialog *:focus {
   outline: 2px dotted transparent;
-  -webkit-box-shadow: 0 0 0 2px #fff , 0 0 0 5px #26a769;
-  box-shadow: 0 0 0 2px #fff , 0 0 0 5px #26a769;
+  -webkit-box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769;
+  box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769;
 }
 
 html #layout-builder-modal,

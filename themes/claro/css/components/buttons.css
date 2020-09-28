@@ -248,9 +248,9 @@ form.media-form .button--primary:active {
 #layout-builder-modal .button,
 .media-library-widget-modal .button,
 form.media-form .button {
-  background-image: none;
-  height: auto;
   width: auto;
+  height: auto;
+  background-image: none;
 }
 
 #layout-builder-modal .button.form-element,

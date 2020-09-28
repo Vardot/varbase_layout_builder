@@ -15,48 +15,46 @@
       }
 
       iframe {
-        align-items: stretch;
         position: absolute;
-        left: 0;
-        top: 0;
+        top: 50%;
         right: 0;
         bottom: 0;
+        left: 50%;
+        overflow: hidden;
+        align-items: stretch;
         width: 250vw;
         height: 200vh;
-        top: 50%;
-        left: 50%;
+        margin: 0;
+        padding: 0;
         -webkit-transform: translateY(-50%) translateX(-50%);
         -o-transform: translateY(-50%) translateX(-50%);
         transform: translateY(-50%) translateX(-50%);
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
         pointer-events: none;
       }
 
       @media (max-aspect-ratio: 16 / 9) {
         iframe {
           position: absolute;
-          width: 650vw;
-          height: 250vh;
           top: 50%;
           left: 50%;
+          overflow: hidden;
+          width: 650vw;
+          height: 250vh;
+          margin: 0;
+          padding: 0;
           -webkit-transform: translateY(-50%) translateX(-50%);
           -o-transform: translateY(-50%) translateX(-50%);
           transform: translateY(-50%) translateX(-50%);
-          margin: 0;
-          padding: 0;
-          overflow: hidden;
         }
       }
-      
+
       @media (min-width: 1920px) {
         iframe {
           width: 1200vw;
           height: 1200vh;
         }
       }
-      
+
       @media (min-width: 3840px) {
         iframe {
           width: 2800vw;
@@ -66,7 +64,7 @@
     </style>
     <script src="{{ base_path }}{{ varbase_layout_builder_path }}/js/oembed-frame.vlb-background-media.{{ provider }}.js"></script>
   </head>
-  <body style="margin: 0">
+  <body style="margin: 0;">
     {{ media|raw }}
   </body>
 </html>

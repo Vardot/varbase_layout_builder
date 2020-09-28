@@ -3,7 +3,7 @@
 
 #drupal-off-canvas {
   width: auto !important;
-  
+
   select[multiple] {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -11,7 +11,7 @@
     background: none;
   }
 
-  description,
+  .description,
   .form-item .description,
   .details-description {
     color: #ddd !important;
@@ -24,7 +24,7 @@
   div.checkbox.form-check label {
     display: inline;
   }
-  
+
   .layout-selection {
     li {
       a {
@@ -36,7 +36,7 @@
   }
 
   // Re-Style Bootstrap Buttons in the drupal-off-canvas
-  
+
   button,
   .button {
     display: inline-block;
@@ -73,12 +73,12 @@
   .button:hover {
     color: #212529;
     text-decoration: none;
-    
+
     &.entity-browser-processed {
       color: #212529;
       background-color: #f8f9fa;
       border-color: #f8f9fa;
-      
+
       &:hover {
         color: #212529;
         background-color: #e2e6ea;

@@ -8,10 +8,10 @@
 form.media-form {
   @import "../../../../../core/themes/claro/css/theme/media-library";
   .media-library-widget {
-    border: 1px solid #c0c0c0;
     margin: 0 2px;
     padding: 0.35em 0.625em 0.75em;
-    .layout__region { 
+    border: 1px solid #c0c0c0;
+    .layout__region {
       position: relative;
     }
   }
@@ -21,17 +21,17 @@ form.media-form {
   .media-library-item__remove.button:disabled,
   .media-library-item__remove.button:disabled:active,
   .media-library-item__remove.button:focus {
-    background: url("../../icons/ex.svg") #fff center no-repeat;
+    top: 10px;
     width: 25px;
     height: 25px;
-    top: 10px;
-    background-size: 14px;
     border: 2px solid #ccc;
+    background: url("../../icons/ex.svg") #fff center no-repeat;
+    background-size: 14px;
     font-size: 0;
   }
   .media-library-item__remove.button:hover {
-    border-color: #40b6ff !important;
     color: transparent;
+    border-color: #40b6ff !important;
   }
 
   .media-library-wrapper {

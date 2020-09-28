@@ -557,6 +557,6 @@ form.media-form .action-link--icon-hide.action-link--danger:active::before {
 [dir="rtl"] #layout-builder-modal .action-link::before,
 [dir="rtl"] .media-library-widget-modal .action-link::before,
 [dir="rtl"] form.media-form .action-link::before {
-  margin-left: 0.5em;
   margin-right: -0.25rem;
+  margin-left: 0.5em;
 }

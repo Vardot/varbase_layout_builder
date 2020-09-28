@@ -5,7 +5,7 @@ namespace Drupal\varbase_layout_builder\Form;
 use Drupal\layout_builder\Form\ConfigureSectionForm as OriginalConfigureSectionForm;
 
 /**
- * Class VarbaseLayoutBuilderConfigureSectionForm.
+ * Class Varbase Layout Builder Configure Section Form.
  */
 class VarbaseLayoutBuilderConfigureSectionForm extends OriginalConfigureSectionForm {
 

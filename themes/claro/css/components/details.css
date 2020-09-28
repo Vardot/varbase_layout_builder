@@ -144,8 +144,8 @@ form.media-form .claro-details__summary::before {
   margin-top: -0.5rem;
   content: "";
   -webkit-transition: -webkit-transform 0.12s ease-in 0s;
-  transition: -webkit-transform 0.12s ease-in 0s;
   -o-transition: -o-transform 0.12s ease-in 0s;
+  transition: -webkit-transform 0.12s ease-in 0s;
   transition: transform 0.12s ease-in 0s;
   transition: transform 0.12s ease-in 0s, -webkit-transform 0.12s ease-in 0s, -o-transform 0.12s ease-in 0s;
   -webkit-transform: rotate(0);
@@ -186,8 +186,8 @@ form.media-form [dir="rtl"] .claro-details__summary::before {
     height: 0.5625rem;
     margin-top: -0.28125rem;
     -webkit-transition: margin 0.12s ease-in 0s, -webkit-transform 0.12s ease-in 0s;
-    transition: margin 0.12s ease-in 0s, -webkit-transform 0.12s ease-in 0s;
     -o-transition: margin 0.12s ease-in 0s, -o-transform 0.12s ease-in 0s;
+    transition: margin 0.12s ease-in 0s, -webkit-transform 0.12s ease-in 0s;
     transition: transform 0.12s ease-in 0s, margin 0.12s ease-in 0s;
     transition: transform 0.12s ease-in 0s, margin 0.12s ease-in 0s, -webkit-transform 0.12s ease-in 0s, -o-transform 0.12s ease-in 0s;
     -webkit-transform: rotate(45deg);

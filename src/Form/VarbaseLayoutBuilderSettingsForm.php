@@ -6,7 +6,7 @@ use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 
 /**
- * Provides form for managing module settings.
+ * The settings for the Varbase Layout Builder.
  */
 class VarbaseLayoutBuilderSettingsForm extends ConfigFormBase {
 

@@ -1,6 +1,6 @@
 /**
  * @file
- * Wrapped content from core/themes/claro/css/components/tabs.css
+ * Wrapped content from themes/contrib/vartheme_claro/css/vartheme-claro.theme.style.css
  * Maintainers: the import statement presumes a relative location of core css.
  * The location may need to be adjusted depending on your setup.
  */
@@ -35,9 +35,9 @@ form.media-form #edit-content-created-to {
 #layout-builder-modal .node-form .field--name-title input,
 .media-library-widget-modal .node-form .field--name-title input,
 form.media-form .node-form .field--name-title input {
-  font-size: 1.6em;
   width: 100%;
   min-height: 4rem;
+  font-size: 1.6em;
 }
 
 #layout-builder-modal .node-form .field--name-title .length-indicator,
@@ -77,12 +77,12 @@ form.media-form .block-views-blockvarbase-google-analytics-summary-sessions-and-
 form.media-form .node-form div.autocomplete-deluxe-container {
   width: 65%;
   padding: 0.68rem 1.875rem 0.68rem 0.93rem;
+  color: #222330;
+  border: 1px solid #8e929c;
+  border-radius: 0.125rem;
+  background: #fff;
   -webkit-box-shadow: none;
   box-shadow: none;
-  background: #ffffff;
-  border: 1px solid #8e929c;
-  color: #222330;
-  border-radius: 0.125rem;
 }
 
 @media screen and (max-width: 81.25rem) {
@@ -103,9 +103,9 @@ form.media-form .node-form div.autocomplete-deluxe-container:not(.autocomplete-d
 .media-library-widget-modal .node-form div.autocomplete-deluxe-container:not(.autocomplete-deluxe-multiple) input.autocomplete-deluxe-form,
 form.media-form .node-form div.autocomplete-deluxe-container:not(.autocomplete-deluxe-multiple) input.autocomplete-deluxe-form {
   width: 100%;
-  background: white;
   min-height: 3rem;
   padding: 0.68rem 1.875rem 0.68rem 0.93rem;
+  background: white;
 }
 
 #layout-builder-modal .node-form div.autocomplete-deluxe-container:not(.autocomplete-deluxe-multiple) .autocomplete-deluxe-throbber,
@@ -124,18 +124,18 @@ form.media-form .node-form div.autocomplete-deluxe-container .autocomplete-delux
 .media-library-widget-modal .node-form div.autocomplete-deluxe-container input.autocomplete-deluxe-form,
 form.media-form .node-form div.autocomplete-deluxe-container input.autocomplete-deluxe-form {
   min-height: 1.25rem;
-  padding-bottom: 0;
   padding-top: 0;
+  padding-bottom: 0;
 }
 
 #layout-builder-modal .node-form div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber,
 .media-library-widget-modal .node-form div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber,
 form.media-form .node-form div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber {
+  position: absolute;
+  top: 0.875rem;
+  right: 0.625rem;
   width: 1.875rem;
   height: 100%;
-  position: absolute;
-  right: 0.625rem;
-  top: 0.875rem;
 }
 
 #layout-builder-modal .node-form div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber.autocomplete-deluxe-open,
@@ -227,12 +227,12 @@ form.media-form .media-library-item .media-library-edit__link {
 .media-library-widget-modal .media-library-item .media-library-item__remove.button:first-child,
 form.media-form .media-library-item .media-library-edit__link,
 form.media-form .media-library-item .media-library-item__remove.button:first-child {
+  top: 10px;
   width: 25px;
   height: 25px;
-  top: 10px;
+  border: 2px solid #ccc !important;
   -webkit-background-size: 13px 13px;
   background-size: 13px;
-  border: 2px solid #ccc !important;
   font-size: 0;
 }
 
@@ -258,8 +258,8 @@ form.media-form .media-library-item .media-library-edit__link:hover,
 form.media-form .media-library-item .media-library-edit__link:focus,
 form.media-form .media-library-item .media-library-item__remove.button:first-child:hover,
 form.media-form .media-library-item .media-library-item__remove.button:first-child:focus {
-  border-color: #40b6ff !important;
   color: transparent;
+  border-color: #40b6ff !important;
 }
 
 #layout-builder-modal .media-library-item .media-library-edit__link:active,

@@ -171,21 +171,21 @@
 }
 
 .ui-dialog .ui-dialog-titlebar-close {
-  background-image: url(../../icons/close.svg);
-  -webkit-background-size: 15px 15px;
-  background-size: 15px 15px;
-  background-repeat: no-repeat;
-  background-position: center;
   width: 30px;
   height: 30px;
+  background-image: url(../../icons/close.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: 15px 15px;
+  background-size: 15px 15px;
 }
 
 .ui-dialog.ui-widget-content {
-  border-radius: initial;
-  padding: 0;
   margin: 0;
-  background: transparent;
+  padding: 0;
   border: 0 !important;
+  border-radius: initial;
+  background: transparent;
 }
 
 .ui-dialog.ui-widget-content a {
@@ -193,10 +193,10 @@
 }
 
 .ui-dialog .ui-dialog-buttonpane .button {
-  background: #003cc5;
+  padding: calc(1rem - 1px) calc(1.5rem - 1px);
   color: white;
   border-radius: 0;
-  padding: calc(1rem - 1px) calc(1.5rem - 1px);
+  background: #003cc5;
 }
 
 .ui-dialog .ui-dialog-buttonpane .button:hover,

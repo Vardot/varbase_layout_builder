@@ -9,8 +9,8 @@
 form.media-form {
   @import "../../../../../core/themes/claro/css/components/form";
   legend {
-    font-size: initial;
     width: auto;
+    font-size: initial;
     font-weight: bold;
   }
   .form-control {
@@ -20,10 +20,10 @@ form.media-form {
     }
   }
   .label {
+    text-transform: inherit;
+    color: inherit;
     font-size: inherit;
     font-weight: inherit;
-    color: inherit;
-    text-transform: inherit;
   }
   .form-actions {
     align-items: center;

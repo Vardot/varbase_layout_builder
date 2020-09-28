@@ -288,11 +288,11 @@ form.media-form .js .is-autocompleting + .claro-autocomplete__message {
 #layout-builder-modal .form-element--extrasmall,
 .media-library-widget-modal .form-element--extrasmall,
 form.media-form .form-element--extrasmall {
+  min-height: 1.5rem;
+  padding: calc(0.15rem - 1px) calc(0.5rem - 1px);
   padding-right: calc(1.5rem - 1px);
   -webkit-background-size: 1.75rem 0.4375rem;
   background-size: 1.75rem 0.4375rem;
-  min-height: 1.5rem;
-  padding: calc(0.15rem - 1px) calc(0.5rem - 1px);
   font-size: 0.889rem;
   line-height: 1.2rem;
 }
