@@ -4,7 +4,7 @@
  */
 
 (function($, _, Drupal) {
-  Drupal.behaviors.varbaseLayoutBuilder_youtube = {
+  Drupal.behaviors.varbaseLayoutBuilderRemoteVideoYoutube = {
     attach: function(context) {
       if (context === window.document) {
         $(document).ready(function() {

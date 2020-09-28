@@ -4,7 +4,7 @@
  */
 
 (function($, _, Drupal) {
-  Drupal.behaviors.varbaseLayoutBuilder_local_video = {
+  Drupal.behaviors.varbaseLayoutBuilderLocalVideo = {
     attach: function() {
       const player = $(".background-media-wrapper video").get(0);
       // Play local video on load of the page.

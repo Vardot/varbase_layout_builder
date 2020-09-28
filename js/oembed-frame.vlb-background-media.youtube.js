@@ -10,7 +10,6 @@ function ready(fn) {
   }
 }
 
-let YT;
 const tag = document.createElement("script");
 tag.src = "//youtube.com/player_api";
 const firstScriptTag = document.getElementsByTagName("script")[0];

@@ -4,7 +4,7 @@
  */
 
 (function($, _, Drupal) {
-  Drupal.behaviors.varbaseLayoutBuilder_vimeo = {
+  Drupal.behaviors.varbaseLayoutBuilderRemoteVideoVimeo = {
     attach: function(context) {
       if (context === window.document) {
         $(document).ready(function() {

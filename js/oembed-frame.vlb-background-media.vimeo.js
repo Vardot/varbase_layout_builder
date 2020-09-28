@@ -10,7 +10,6 @@ function ready(fn) {
   }
 }
 
-let Vimeo;
 const tag = document.createElement("script");
 tag.src = "//player.vimeo.com/api/player.js";
 const firstScriptTag = document.getElementsByTagName("script")[0];
