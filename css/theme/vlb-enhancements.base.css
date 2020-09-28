@@ -9,6 +9,12 @@
   background: none;
 }
 
+#drupal-off-canvas input[type=text],
+#drupal-off-canvas textarea {
+  color: #495057;
+  background: #fff;
+}
+
 #drupal-off-canvas .description,
 #drupal-off-canvas .form-item .description,
 #drupal-off-canvas .details-description {

@@ -11,6 +11,12 @@
     background: none;
   }
 
+  input[type=text],
+  textarea {
+    color: #495057;
+    background: #fff;
+  }
+
   .description,
   .form-item .description,
   .details-description {
