@@ -61,7 +61,7 @@
       },
       "drupal/media_library_form_element": {
         "Issue #3155697: Fix Nested Modals by Drupal core and Media Library Form API Element":
-        "https://www.drupal.org/files/issues/2020-09-30/3155697-10.patch"
+        "https://www.drupal.org/files/issues/2020-09-30/3155697-12.patch"
       }
     }
   }
