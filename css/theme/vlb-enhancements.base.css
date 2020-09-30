@@ -161,3 +161,7 @@ body .layout-builder-block {
 .layout-builder__region > .layout-builder-block:focus:not(.ui-state-drop) .layout-builder__actions__block {
   z-index: 1;
 }
+
+.layout-builder__actions .layout-builder__link--layout_builder_block_attributes {
+  background: url("../../images/icons/ffffff/droplet-fill.svg") center center/12px 12px no-repeat;
+}
