@@ -37,7 +37,7 @@
     "drupal/lb_ux": "1.0-beta2",
     "drupal/bootstrap_layouts": "~5.0",
     "drupal/media_library_theme_reset": "~1.0",
-    "drupal/media_library_form_element": "~2.0",
+    "drupal/media_library_form_element": "2.0",
     "drupal/entity_block": "~1.0",
     "drupal/allowed_formats": "~1.0",
     "drupal/block_content_permissions": "~1.0",
@@ -58,6 +58,10 @@
       "drupal/lb_ux": {
         "Issue #3173730: Remove the change of default for auto-submit controller on the existing route to have a better behavior when adding a new section":
         "https://www.drupal.org/files/issues/2020-09-29/3173730-2.patch"
+      },
+      "drupal/media_library_form_element": {
+        "Issue #3155697: Fix Nested Modals by Drupal core and Media Library Form API Element":
+        "https://www.drupal.org/files/issues/2020-09-30/3155697-10.patch"
       }
     }
   }
