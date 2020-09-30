@@ -55,8 +55,10 @@
     "enable-patching": true,
     "composer-exit-on-patch-failure": true,
     "patches": {
-      "Issue #3173730: Remove the change of default for auto-submit controller on the existing route to have a better behavior when adding a new section":
-      "https://www.drupal.org/files/issues/2020-09-29/3173730-2.patch"
+      "drupal/lb_ux": {
+        "Issue #3173730: Remove the change of default for auto-submit controller on the existing route to have a better behavior when adding a new section":
+        "https://www.drupal.org/files/issues/2020-09-29/3173730-2.patch"
+      }
     }
   }
 }
