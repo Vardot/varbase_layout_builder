@@ -1,8 +1,8 @@
 {
-  "name": "varbase_bootstrap_paragraphs",
+  "name": "varbase_layout_builder",
   "private": true,
-  "version": "8.1.0",
-  "description": "Varbase Bootstrap Paragraphs",
+  "version": "9.0.0",
+  "description": "Provides default configuration and enhancements to utilize Drupal core''s Layout Builder.",
   "main": "index.js",
   "scripts": {
     "eslint": "node ./node_modules/eslint/bin/eslint.js --config=.eslintrc.json .",
