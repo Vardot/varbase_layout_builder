@@ -26,7 +26,8 @@ ready(function() {
     // Manage Youtube video.
     if (evt.data === "play") {
       if (
-        (typeof YT === "undefined" || typeof YT.Player === "undefined") &&
+        (typeof window.YT === "undefined" ||
+          typeof window.YT.Player === "undefined") &&
         !window.loadingPlayer
       ) {
         window.loadingPlayer = true;
@@ -59,7 +60,7 @@ ready(function() {
         youtubeIframe.src = youtubeURL;
         youtubeURL = undefined;
 
-        youtubePlayer = new YT.Player(youtubeIframe.id, {
+        youtubePlayer = new window.YT.Player(youtubeIframe.id, {
           playerVars: {
             autoplay: 1, // Auto-play the video on load
             controls: 0, // Show pause/play buttons in player
@@ -87,11 +88,11 @@ ready(function() {
     }
 
     function onPlayerStateChange(event) {
-      if (event.data === YT.PlayerState.ENDED) {
+      if (event.data === window.YT.PlayerState.ENDED) {
         youtubePlayer.isPlaying = false;
         youtubePlayer.seekTo(0);
         youtubePlayer.playVideo();
-      } else if (event.data === YT.PlayerState.PLAYING) {
+      } else if (event.data === window.YT.PlayerState.PLAYING) {
         youtubePlayer.isPlaying = true;
       } else {
         youtubePlayer.isPlaying = false;

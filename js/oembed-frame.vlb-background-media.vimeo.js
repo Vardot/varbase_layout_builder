@@ -24,7 +24,7 @@ firstScriptTag.onload = function() {
     let vimeoPlayer;
 
     function actionProcessor(evt) {
-      if (typeof Vimeo === "undefined") {
+      if (typeof window.Vimeo === "undefined") {
         setTimeout(function() {
           actionProcessor(evt);
         }, 500);
@@ -46,7 +46,7 @@ firstScriptTag.onload = function() {
             controls: false
           };
 
-          vimeoPlayer = new Vimeo.Player(vimeoIframe, vimeoOptions);
+          vimeoPlayer = new window.Vimeo.Player(vimeoIframe, vimeoOptions);
           vimeoPlayer.setVolume(0);
           vimeoPlayer.setLoop(true);
           playerConfigured = true;
