@@ -86,21 +86,21 @@ function vlplb_install() {
  */
 function vlplb_update_8101() {
   $config_factory = \Drupal::service('config.factory');
-  $media_uid_configs = $config_factory->listAll('core.base_field_override.node.');
+  $node_uid_configs = $config_factory->listAll('core.base_field_override.node.');
 
   // Update for core.base_field_override.node.landing_page_lb.uid
   // And all content types.
-  foreach ($media_uid_configs as $media_uid_config) {
-    if (substr($media_uid_config, -4) === ".uid") {
+  foreach ($node_uid_configs as $node_uid_config) {
+    if (substr($node_uid_config, -4) === ".uid") {
 
-      $media_uid_config_factory = $config_factory->getEditable($media_uid_config);
-      $default_value_callback = $media_uid_config_factory->get('default_value_callback');
+      $node_uid_config_factory = $config_factory->getEditable($node_uid_config);
+      $default_value_callback = $node_uid_config_factory->get('default_value_callback');
 
       if (isset($default_value_callback)
         && !empty($default_value_callback)
         && $default_value_callback === 'Drupal\node\Entity\Node::getCurrentUserId') {
 
-        $media_uid_config_factory->set('default_value_callback', 'Drupal\node\Entity\Node::getDefaultEntityOwner')->save(TRUE);
+        $node_uid_config_factory->set('default_value_callback', 'Drupal\node\Entity\Node::getDefaultEntityOwner')->save(TRUE);
       }
     }
   }
