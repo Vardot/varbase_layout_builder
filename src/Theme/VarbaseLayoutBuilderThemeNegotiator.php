@@ -116,7 +116,12 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
                 return $this->configFactory->get('system.theme')->get('default');
               }
               else {
-                return "claro";
+                if ($request_query_wrapper_format == 'drupal_dialog') {
+                  return "claro";
+                }
+                else {
+                  return $this->configFactory->get('system.theme')->get('default');
+                }
               }
             }
           }
