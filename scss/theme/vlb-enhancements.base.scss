@@ -195,3 +195,9 @@ body {
     background: url("../../images/icons/ffffff/droplet-fill.svg") center center / 12px 12px no-repeat;
   }
 }
+
+.layout-builder__section { 
+  .contextual {
+    display: none;
+  }
+}
