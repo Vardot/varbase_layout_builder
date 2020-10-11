@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.landing_page_lb.layout_selection
     - node.type.landing_page_lb
   module:
+    - bootstrap_layouts
     - layout_builder
     - layout_builder_restrictions
     - layout_library
@@ -17,6 +18,47 @@ third_party_settings:
   layout_builder:
     allow_custom: true
     enabled: true
+    sections:
+      -
+        layout_id: bs_1col
+        layout_settings:
+          vlb_section_config:
+            vlb_title: ''
+            vlb_width: full
+            vlb_gutter: '1'
+            vlb_background_color: _none
+            vlb_background_media: 0
+            vlb_background_edge2edge: 1
+            vlb_classes: ''
+            vlb_use_advanced: 0
+          layout:
+            wrapper: div
+            classes:
+              col-12: col-12
+            add_layout_class: 1
+            attributes: ''
+          regions:
+            main:
+              wrapper: div
+              classes:
+                col-sm-12: col-sm-12
+              add_region_classes: 1
+              attributes: ''
+          label: ''
+        components:
+          e827093b-a71d-437a-8400-563e45927dc2:
+            uuid: e827093b-a71d-437a-8400-563e45927dc2
+            region: main
+            configuration:
+              id: 'extra_field_block:node:landing_page_lb:content_moderation_control'
+              label: 'Moderation control'
+              provider: layout_builder
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
   layout_library:
     enable: true
   layout_builder_restrictions:
@@ -87,7 +129,12 @@ id: node.landing_page_lb.default
 targetEntityType: node
 bundle: landing_page_lb
 mode: default
-content: {  }
+content:
+  content_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden:
   field_description: true
   field_meta_tags: true
