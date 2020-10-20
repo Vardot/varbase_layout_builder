@@ -7,6 +7,7 @@
 
 use Drupal\Component\Utility\NestedArray;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\media\MediaInterface;
 use Drupal\media\Entity\Media;
 use Drupal\file\Entity\File;
 use Drupal\varbase_layout_builder\Form\VarbaseLayoutBuilderConfigureSectionForm;
@@ -189,7 +190,9 @@ function varbase_layout_builder_preprocess_layout(&$variables) {
 
         $background_media_entity = Media::load($variables['settings']['vlb_section_config']['vlb_background_media']);
 
-        if (isset($background_media_entity)) {
+        if (isset($background_media_entity)
+          && $background_media_entity instanceof MediaInterface) {
+
           $background_media_view_mode = (isset($style_options['vlb_background_media']['view_mode']) ? $style_options['vlb_background_media']['view_mode'] : 'background_media');
           $background_media_build = Drupal::entityTypeManager()->getViewBuilder('media')->view($background_media_entity, $background_media_view_mode);
           $variables['settings']['vlb_section_config']['vlb_background_media_html'] = $background_media_build;
@@ -354,7 +357,10 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
               if (isset($vlb_section_config[$style_option_id])
               && $vlb_section_config[$style_option_id] != 0) {
 
-                $default_value = $vlb_section_config[$style_option_id];
+                $background_media_entity = Media::load($vlb_section_config[$style_option_id]);
+                if ($background_media_entity instanceof MediaInterface) {
+                  $default_value = $vlb_section_config[$style_option_id];
+                }
               }
 
               $form[$style_option['group']][$style_option_id] = [
