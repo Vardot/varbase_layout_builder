@@ -922,10 +922,27 @@ function _varbase_layout_builder_form_node_form_submit(array &$form, FormStateIn
       && !empty($node_type_display)
       && $node_type_display->isLayoutBuilderEnabled()) {
 
+    // Check if layout selection is not none.
+    $layout_selection_is_none = TRUE;
+    $layout_selection_value = $form_state->getValue('layout_selection');
+    if (is_array($layout_selection_value)
+        && isset($layout_selection_value[0])
+        && $layout_selection_value[0]['target_id']
+        && !empty($layout_selection_value[0]['target_id'])) {
+      $layout_selection_is_none = FALSE;
+    }
+
     // Get a valid edit layout url.
     $edit_layout_url = \Drupal::pathValidator()->getUrlIfValid('node/' . $node->id() . '/layout');
 
-    if (!empty($edit_layout_url)) {
+    // Have the permission name to change the layout for this content type.
+    $bundle_permission_name = 'configure all ' . $node->bundle() . ' node layout overrides';
+    $user = \Drupal::currentUser();
+    $user_has_permission_to_manage_the_layout = ($user->hasPermission('configure any layout') || $user->hasPermission($bundle_permission_name));
+
+    if (!empty($edit_layout_url)
+        && $layout_selection_is_none
+        && $user_has_permission_to_manage_the_layout) {
 
       // Remove destination if we do have it before we create the node.
       $request = \Drupal::request();
