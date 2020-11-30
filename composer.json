@@ -27,11 +27,10 @@
     }
   },
   "require": {
-		"composer/installers": "~1.0",
-    "oomphinc/composer-installers-extender": "~1.0",
+		"composer/installers": "~1.0 || ~2.0",
+    "oomphinc/composer-installers-extender": "~1.0 || ~2.0",
     "cweagans/composer-patches": "~1.0",
-    "drupal/drupal-library-installer-plugin": "^0.3",
-    "drupal/core": "^9 || ~10.0.0",
+    "drupal/core": "~9.0",
     "drupal/varbase_media": "^9 || 9.0.x-dev",
     "drupal/layout_builder_modal": "~1.0",
     "drupal/layout_builder_restrictions": "~2.0",
