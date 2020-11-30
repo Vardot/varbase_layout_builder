@@ -27,6 +27,9 @@
     }
   },
   "require": {
+    "composer/installers": "~1.0 || ~2.0",
+    "oomphinc/composer-installers-extender": "~1.0 || ~2.0",
+    "cweagans/composer-patches": "~1.0",
     "drupal/core": "^8.8.0 || ~9.0.0",
     "drupal/varbase_media": "^7.18",
     "drupal/layout_builder_modal": "~1.0",
