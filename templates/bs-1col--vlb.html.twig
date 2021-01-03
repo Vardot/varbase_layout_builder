@@ -23,7 +23,6 @@
 
 {% set section_title_attributes = create_attribute() %}
 {% set section_title_attributes = section_title_attributes.addClass('section-title') %}
-{% set section_title_attributes = section_title_attributes.addClass('text-center') %}
 
 {% set section_attributes = create_attribute() %}
 {% set section_attributes = section_attributes.addClass('vlb-section') %}
@@ -49,8 +48,6 @@
 {% if not (settings.vlb_section_config.vlb_gutter and settings.vlb_section_config.vlb_gutter == 1) %}
   {% set outer_row_attributes = outer_row_attributes.addClass('no-gutters') %}
   {% set inner_row_attributes = inner_row_attributes.addClass('no-gutters') %}
-{% else %}
-  {% set container_attributes = container_attributes.addClass('px-4') %}
 {% endif %}
 
 
@@ -80,7 +77,6 @@
       {% endif %}
     {% else %}
       {% set container_attributes = container_attributes.removeClass('container-fluid').addClass('container') %}
-      {% set container_attributes = container_attributes.removeClass('px-4') %}
       {% if settings.vlb_section_config.vlb_width and settings.vlb_section_config.vlb_width == 'edge2edge' %}
        {% set outer_row_attributes = outer_row_attributes.addClass('no-gutters') %}
       {% endif %}
@@ -118,7 +114,6 @@
       {% endif %}
     {% else %}
       {% set container_attributes = container_attributes.removeClass('container-fluid').addClass('container') %}
-      {% set container_attributes = container_attributes.removeClass('px-4') %}
       {% if settings.vlb_section_config.vlb_width and settings.vlb_section_config.vlb_width == 'edge2edge' %}
        {% set outer_row_attributes = outer_row_attributes.addClass('no-gutters') %}
       {% endif %}
