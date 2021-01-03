@@ -105,7 +105,9 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
       if (strpos($route_name, 'layout_builder') !== FALSE) {
 
         if ($this->themeHandler->themeExists('claro')) {
-          $dialog_options = $this->requestStack->getCurrentRequest()->request->get('dialogOptions')['target'];
+          if ($this->requestStack->getCurrentRequest()->request->get('dialogOptions')) {
+            $dialog_options = $this->requestStack->getCurrentRequest()->request->get('dialogOptions')['target'];
+          }
           if (isset($dialog_options)) {
             return "claro";
           }
