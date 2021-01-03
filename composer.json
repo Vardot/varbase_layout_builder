@@ -38,13 +38,16 @@
     "drupal/layout_builder_at": "~2.0",
     "drupal/layout_builder_block_sanitizer": "~1.0",
     "drupal/lb_ux": "1.x-dev",
-    "drupal/bootstrap_layouts": "~5.0",
+    "drupal/bootstrap_styles": "~1.0",
+    "drupal/bootstrap_layout_builder": "~2.0",
+    "drupal/layout_builder_blocks": "~1.0",
+    "drupal/block_library": "^1.0@alpha",
+    "drupal/section_library": "^1.0@alpha",
     "drupal/media_library_form_element": "~2.0",
     "drupal/entity_block": "~1.0",
     "drupal/allowed_formats": "~1.0",
     "drupal/block_content_permissions": "~1.0",
-    "drupal/block_form_alter": "~1.0",
-    "drupal/layout_builder_component_attributes": "~1.0"
+    "drupal/block_form_alter": "~1.0"
   },
   "extra": {
     "installer-types": [

@@ -12,32 +12,6 @@ configure-section.admin:
   js:
     js/vlb-configure-section.admin.js: { }
 
-# Varbase Layout Builder Background Media styling.
-background-media:
-  css:
-    theme:
-      css/theme/vlb-background-media.theme.css: { }
-  js:
-    js/video.vlb-background-media.local.js: { }
-    js/video.vlb-background-media.vimeo.js: { }
-    js/video.vlb-background-media.youtube.js: { }
-    js/vlb-object-fit-polyfill.js: { }
-  dependencies:
-    - core/drupal
-    - core/drupalSettings
-    - core/jquery
-    - core/jquery.once
-    - core/drupal.dialog
-    - varbase_media/youtube_player
-    - varbase_media/vimeo_player
-    - varbase_core/object-fit-polyfill
-
-# Varbase Layout Builder colors.
-vlb-colors:
-  css:
-    theme:
-      css/theme/vlb-colors.theme.css: {}
-
 # Layout builder modal claro theme 
 claro:
   version: VERSION
