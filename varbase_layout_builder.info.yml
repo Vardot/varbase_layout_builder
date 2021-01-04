@@ -10,6 +10,7 @@ dependencies:
   - layout_builder_restrictions:layout_builder_restrictions
   - varbase_media:varbase_media
 install:
+  - bootstrap_layouts
   - layout_library
   - bootstrap_styles
   - bootstrap_layout_builder
@@ -22,4 +23,4 @@ install:
   - lb_ux
   - entity_block
   - block_form_alter
-
+  - layout_builder_component_attributes

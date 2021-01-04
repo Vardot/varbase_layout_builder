@@ -1,0 +1,8 @@
+uuid: 90183e2d-73f6-4094-a638-b73ea1bb677a
+langcode: en
+status: 1
+dependencies: {  }
+id: breakpoint_md
+label: 'Medium devices (Tablets)'
+base_class: col-md
+weight: '-8'

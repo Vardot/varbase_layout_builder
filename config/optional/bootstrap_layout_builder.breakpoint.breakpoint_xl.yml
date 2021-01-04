@@ -1,0 +1,8 @@
+uuid: cced9a28-3e39-4d9a-affd-364c93108320
+langcode: en
+status: 1
+dependencies: {  }
+id: breakpoint_xl
+label: 'Extra large devices (Large desktops)'
+base_class: col-xl
+weight: '-10'

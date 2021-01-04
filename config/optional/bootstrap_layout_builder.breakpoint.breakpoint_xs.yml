@@ -1,0 +1,8 @@
+uuid: f9357fd5-d96b-4b3c-b698-50f0a14821a7
+langcode: en
+status: 1
+dependencies: {  }
+id: breakpoint_xs
+label: 'Extra small devices (Portrait phones)'
+base_class: col
+weight: '-6'

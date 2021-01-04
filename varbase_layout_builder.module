@@ -8,6 +8,80 @@
 use Drupal\Core\Form\FormStateInterface;
 
 /**
+ * Implements hook_form_alter().
+ */
+function varbase_layout_builder_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+
+  // Only for layout builder forms.
+  if (strpos($form_id, '_layout_builder_form') !== FALSE) {
+
+    // Attache the Varbase Layout Builder enhancements libraray.
+    $form['#attached']['library'][] = 'varbase_layout_builder/enhancements';
+
+    // Attache the Varbase Layout Builder configure section admin libraray.
+    $form['#attached']['library'][] = 'varbase_layout_builder/configure-section.admin';
+
+
+    // No revision information or revision log message.
+    if (isset($form['revision_information'])) {
+      $form['revision_information']['#disabled'] = TRUE;
+      $form['revision_information']['#attributes']['style'][] = 'display:none;';
+      $form['revision_information']['#prefix'] = '<div style="display:none;">';
+      $form['revision_information']['#suffix'] = '</div>';
+    }
+
+    // Hide revision.
+    if (isset($form['revision'])) {
+      $form['revision']['#default_value'] = TRUE;
+      $form['revision']['#disabled'] = TRUE;
+      $form['revision']['#attributes']['style'][] = 'display:none;';
+    }
+
+    // Hide revision log message.
+    if (isset($form['revision_log_message'])) {
+      $form['revision_log_message']['#disabled'] = TRUE;
+      $form['revision_log_message']['#attributes']['style'][] = 'display:none;';
+    }
+
+    // Hide rabbit hole fields.
+    if (isset($form['rabbit_hole'])) {
+      $form['rabbit_hole']['#access'] = FALSE;
+    }
+  }
+
+  $current_path = \Drupal::service('path.current')->getPath();
+  $url_object = \Drupal::service('path.validator')->getUrlIfValid($current_path);
+  $route_name = '';
+  if (isset($url_object) && is_object($url_object)) {
+    $route_name = $url_object->getRouteName();
+  }
+
+  $applicable_forms = [
+    'layout_builder_add_block',
+    'layout_builder_update_block',
+    'media_image_edit_form',
+  ];
+
+  if (in_array($form_id, $applicable_forms)
+    || $route_name === 'layout_builder.overrides.node.view') {
+
+    if ($form_id !== 'layout_builder_configure_section') {
+      $config = \Drupal::config('varbase_layout_builder.settings');
+      $use_claro = $config->get('use_claro');
+
+      if (isset($use_claro) && $use_claro == 1
+        && !version_compare(\Drupal::VERSION, '8.8.0', 'lt')) {
+
+        if (\Drupal::service('theme_handler')->themeExists('claro')) {
+          // Add claro theme libraries.
+          $form['#attached']['library'][] = 'varbase_layout_builder/claro';
+        }
+      }
+    }
+  }
+}
+
+/**
  * Implements hook_form_BASE_FORM_ID_alter() for node_form.
  */
 function varbase_layout_builder_form_node_form_alter(&$form, FormStateInterface $form_state) {

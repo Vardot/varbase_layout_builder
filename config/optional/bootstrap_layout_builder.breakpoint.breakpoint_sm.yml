@@ -1,0 +1,8 @@
+uuid: 4154c7c1-6890-477b-9863-c7acdc5a1af2
+langcode: en
+status: 1
+dependencies: {  }
+id: breakpoint_sm
+label: 'Small devices (Landscape phones)'
+base_class: col-sm
+weight: '-7'

@@ -1,0 +1,48 @@
+layout_builder_theme: dark
+background_colors: "bg-primary|Primary\r\nbg-secondary|Secondary\r\nbg-success|Success\r\nbg-danger|Danger\r\nbg-warning|Warning\r\nbg-info|Info\r\nbg-light|Light\r\nbg-dark|Dark\r\nbg-white|White\r\nbg-transparent|Transparent"
+background_image:
+  bundle: image
+  field: field_media_image
+background_local_video:
+  bundle: video
+  field: field_media_video_file
+text_colors: "text-primary|Primary\r\ntext-secondary|Secondary\r\ntext-success|Success\r\ntext-danger|Danger\r\ntext-warning|Warning\r\ntext-info|Info\r\ntext-light|Light\r\ntext-dark|Dark\r\ntext-body|Body\r\ntext-muted|Muted\r\ntext-white|White\r\ntext-black-50|Black-50\r\ntext-white-50|White-50"
+text_alignment: "text-left|Left\r\ntext-center|Center\r\ntext-right|Right\r\ntext-justify|Justify"
+padding: "p-1|Padding 1\r\np-2|Padding 2\r\np-3|Padding 3\r\np-4|Padding 4\r\np-5|Padding 5"
+padding_left: "pl-1|Padding Left 1\r\npl-2|Padding Left 2\r\npl-3|Padding Left 3\r\npl-4|Padding Left 4\r\npl-5|Padding Left 5"
+padding_top: "pt-1|Padding Top 1\r\npt-2|Padding Top 2\r\npt-3|Padding Top 3\r\npt-4|Padding Top 4\r\npt-5|Padding Top 5"
+padding_right: "pr-1|Padding Right 1\r\npr-2|Padding Right 2\r\npr-3|Padding Right 3\r\npr-4|Padding Right 4\r\npr-5|Padding Right 5"
+padding_bottom: "pb-1|Padding Bottom 1\r\npb-2|Padding Bottom 2\r\npb-3|Padding Bottom 3\r\npb-4|Padding Bottom 4\r\npb-5|Padding Bottom 5"
+margin: "m-1|Margin 1\r\nm-2|Margin 2\r\nm-3|Margin 3\r\nm-4|Margin 4\r\nm-5|Margin 5"
+margin_left: "ml-1|Margin Left 1\r\nml-2|Margin Left 2\r\nml-3|Margin Left 3\r\nml-4|Margin Left 4\r\nml-5|Margin Left 5"
+margin_top: "mt-1|Margin Top 1\r\nmt-2|Margin Top 2\r\nmt-3|Margin Top 3\r\nmt-4|Margin Top 4\r\nmt-5|Margin Top 5"
+margin_right: "mr-1|Margin Right 1\r\nmr-2|Margin Right 2\r\nmr-3|Margin Right 3\r\nmr-4|Margin Right 4\r\nmr-5|Margin Right 5"
+margin_bottom: "mb-1|Margin Bottom 1\r\nmb-2|Margin Bottom 2\r\nmb-3|Margin Bottom 3\r\nmb-4|Margin Bottom 4\r\nmb-5|Margin Bottom 5"
+border_style: "bs-border-style-solid|Solid\r\nbs-border-style-dashed|Dashed\r\nbs-border-style-dotted|Dotted"
+border_left_style: "bs-border-style-left-solid|Solid\r\nbs-border-style-left-dashed|Dashed\r\nbs-border-style-left-dotted|Dotted"
+border_top_style: "bs-border-style-top-solid|Solid\r\nbs-border-style-top-dashed|Dashed\r\nbs-border-style-top-dotted|Dotted"
+border_right_style: "bs-border-style-right-solid|Solid\r\nbs-border-style-right-dashed|Dashed\r\nbs-border-style-right-dotted|Dotted"
+border_bottom_style: "bs-border-style-bottom-solid|Solid\r\nbs-border-style-bottom-dashed|Dashed\r\nbs-border-style-bottom-dotted|Dotted"
+border_width: "bs-border-width-1|Width 1\r\nbs-border-width-2|Width 2\r\nbs-border-width-3|Width 3"
+border_left_width: "bs-border-width-left-1|Width 1\r\nbs-border-width-left-2|Width 2\r\nbs-border-width-left-3|Width 3"
+border_top_width: "bs-border-width-top-1|Width 1\r\nbs-border-width-top-2|Width 2\r\nbs-border-width-top-3|Width 3"
+border_right_width: "bs-border-width-right-1|Width 1\r\nbs-border-width-right-2|Width 2\r\nbs-border-width-right-3|Width 3"
+border_bottom_width: "bs-border-width-bottom-1|Width 1\r\nbs-border-width-bottom-2|Width 2\r\nbs-border-width-bottom-3|Width 3"
+border_color: "border border-primary|Primary\r\nborder border-secondary|Secondary\r\nborder border-success|Success\r\nborder border-danger|Danger\r\nborder border-warning|Warning\r\nborder border-info|Info\r\nborder border-light|Light\r\nborder border-dark|Dark\r\nborder border-white|White"
+border_left_color: "border-start border-primary|Primary\r\nborder-start border-secondary|Secondary\r\nborder-start border-success|Success\r\nborder-start border-danger|Danger\r\nborder-start border-warning|Warning\r\nborder-start border-info|Info\r\nborder-start border-light|Light\r\nborder-start border-dark|Dark\r\nborder-start border-white|White"
+border_top_color: "border-top border-primary|Primary\r\nborder-top border-secondary|Secondary\r\nborder-top border-success|Success\r\nborder-top border-danger|Danger\r\nborder-top border-warning|Warning\r\nborder-top border-info|Info\r\nborder-top border-light|Light\r\nborder-top border-dark|Dark\r\nborder-top border-white|White"
+border_right_color: "border-end border-primary|Primary\r\nborder-end border-secondary|Secondary\r\nborder-end border-success|Success\r\nborder-end border-danger|Danger\r\nborder-end border-warning|Warning\r\nborder-end border-info|Info\r\nborder-end border-light|Light\r\nborder-end border-dark|Dark\r\nborder-end border-white|White"
+border_bottom_color: "border-bottom border-primary|Primary\r\nborder-bottom border-secondary|Secondary\r\nborder-bottom border-success|Success\r\nborder-bottom border-danger|Danger\r\nborder-bottom border-warning|Warning\r\nborder-bottom border-info|Info\r\nborder-bottom border-light|Light\r\nborder-bottom border-dark|Dark\r\nborder-bottom border-white|White"
+rounded_corners: "bs-border-radius-1|Rounded 1\r\nbs-border-radius-2|Rounded 2\r\nbs-border-radius-3|Rounded 3"
+rounded_corner_top_left: "bs-border-radius-top-left-1|Rounded 1\r\nbs-border-radius-top-left-2|Rounded 2\r\nbs-border-radius-top-left-3|Rounded 3"
+rounded_corner_top_right: "bs-border-radius-top-right-1|Rounded 1\r\nbs-border-radius-top-right-2|Rounded 2\r\nbs-border-radius-top-right-3|Rounded 3"
+rounded_corner_bottom_left: "bs-border-radius-bottom-left-1|Rounded 1\r\nbs-border-radius-bottom-left-2|Rounded 2\r\nbs-border-radius-bottom-left-3|Rounded 3"
+rounded_corner_bottom_right: "bs-border-radius-bottom-right-1|Rounded 1\r\nbs-border-radius-bottom-right-2|Rounded 2\r\nbs-border-radius-bottom-right-3|Rounded 3"
+scroll_effects: "fade-up|Fade Up\r\nfade-down|Fade Down\r\nfade-left|Fade Left\r\nfade-right|Fade Right\r\nfade-up-right|Fade Up Right\r\nfade-up-left|Fade Up Left\r\nfade-down-right|Fade Down Right\r\nfade-down-left|Fade Down Left\r\nflip-left|Flip Left\r\nflip-right|Flip Right\r\nflip-up|Flip Up\r\nflip-down|Flip Down\r\nzoom-in|Zoom In\r\nzoom-in-up|Zoom In Up\r\nzoom-in-down|Zoom In Down\r\nzoom-in-left|Zoom In Left\r\nzoom-in-right|Zoom In Right\r\nzoom-out|Zoom Out\r\nzoom-out-up|Zoom Out Up\r\nzoom-out-down|Zoom Out Down\r\nzoom-out-right|Zoom Out Right\r\nzoom-out-left|Zoom Out Left"
+attribute_type: data
+data_key: aos
+scroll_effects_attr_type: 1
+scroll_effects_data_key: data-aos
+scroll_effects_library_type: external
+_core:
+  default_config_hash: 2dzzZg3Bjp7AtmnosM3BpQUua8PW-dJr-BHfmnCrcFU

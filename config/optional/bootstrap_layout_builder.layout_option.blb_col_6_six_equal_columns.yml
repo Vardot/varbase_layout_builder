@@ -1,0 +1,17 @@
+uuid: ed979a98-9fcf-4e1c-aa19-5cf8d3ccfb9a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: abTny1lyNxMwOlYpJ0hYhXehciFbPraDFbyyvp0_xQg
+id: blb_col_6_six_equal_columns
+layout_id: blb_col_6
+label: 'Six equal columns'
+structure: '2 2 2 2 2 2'
+breakpoints:
+  breakpoint_xl: breakpoint_xl
+  breakpoint_lg: breakpoint_lg
+  breakpoint_md: breakpoint_md
+  breakpoint_sm: 0
+  breakpoint_xs: 0
+weight: '-10'

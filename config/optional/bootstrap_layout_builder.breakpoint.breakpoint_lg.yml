@@ -1,0 +1,8 @@
+uuid: f1b74849-a9e7-492a-bcff-c80076f3790b
+langcode: en
+status: 1
+dependencies: {  }
+id: breakpoint_lg
+label: 'Large devices (Desktops)'
+base_class: col-lg
+weight: '-9'

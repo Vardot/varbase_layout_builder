@@ -1,0 +1,15 @@
+uuid: 6fced865-7b46-4a5f-b2ec-e85443ec75d2
+langcode: en
+status: true
+dependencies: {  }
+id: vlb_col_2_33_66
+layout_id: blb_col_2
+label: '33% 66%'
+structure: '4 8'
+breakpoints:
+  breakpoint_xl: breakpoint_xl
+  breakpoint_lg: breakpoint_lg
+  breakpoint_md: breakpoint_md
+  breakpoint_sm: breakpoint_sm
+  breakpoint_xs: breakpoint_xs
+weight: '-7'
