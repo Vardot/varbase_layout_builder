@@ -1,9 +1,6 @@
-uuid: 46431b34-dc9c-44cd-9bc8-77c0ecf16f96
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: Z0Z6TrqVuI40xwzKBoE5D669MmUV4U_qmamFRWm3C94
 id: blb_col_6_full_width
 layout_id: blb_col_6
 label: 'Full width'

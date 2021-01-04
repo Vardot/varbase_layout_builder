@@ -1,9 +1,6 @@
-uuid: 3cb88d08-c39a-495c-8a85-8e348eeb2b3e
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: tkSG8H7yGr4ETxBR9lhg_BZoJD2AeCybsdE4k-fz9UQ
 id: blb_col_2_75_25
 layout_id: blb_col_2
 label: '75% 25%'

@@ -1,10 +1,9 @@
-uuid: 2fe7d606-7131-487d-9c60-f91083298830
 langcode: en
 status: true
 dependencies: {  }
-id: vlb_col_2_66_33
+id: vlb_col_2_67_33
 layout_id: blb_col_2
-label: '66% 33%'
+label: '67% 33%'
 structure: '8 4'
 breakpoints:
   breakpoint_xl: breakpoint_xl
