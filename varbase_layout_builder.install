@@ -34,6 +34,18 @@ function varbase_layout_builder_install() {
     }
   }
 
+  // Remove BLB layout options to use VLB layout options.
+  $blb_layout_options = \Drupal::service('config.factory')->listAll($prefix = "bootstrap_layout_builder.layout_option.blb_");
+  foreach($blb_layout_options as $blb_layout_option) {
+    \Drupal::service('config.factory')->getEditable($blb_layout_option)->delete();
+  }
+
+  // Remove BLB breakpoints to use VLB breakpoints. 
+  $blb_breakpoints = \Drupal::service('config.factory')->listAll($prefix = "bootstrap_layout_builder.breakpoint.");
+  foreach ($blb_breakpoints as $blb_breakpoint) {
+    \Drupal::service('config.factory')->getEditable($blb_breakpoint)->delete();
+  }
+
   // Install optional configs.
   $optional_install_path = $module_path . '/' . InstallStorage::CONFIG_OPTIONAL_DIRECTORY;
   if (is_dir($optional_install_path)) {

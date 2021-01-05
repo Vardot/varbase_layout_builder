@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+id: vlb_col_4_4_2_2_4
+layout_id: blb_col_4
+label: '4/12 2/12 2/12 4/12'
+structure: '4 2 2 4'
+breakpoints:
+  breakpoint_xl: breakpoint_xl
+  breakpoint_lg: breakpoint_lg
+  breakpoint_md: breakpoint_md
+  breakpoint_sm: breakpoint_sm
+  breakpoint_xs: breakpoint_xs
+weight: '0'

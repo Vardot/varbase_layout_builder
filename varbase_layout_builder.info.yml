@@ -7,20 +7,21 @@ core_version_requirement: ^9
 dependencies:
   - drupal:system
   - drupal:layout_builder
-  - layout_builder_restrictions:layout_builder_restrictions
   - varbase_media:varbase_media
+  - layout_builder_restrictions:layout_builder_restrictions
 install:
+  - entity_block
+  - block_form_alter
+  - media_library_form_element
   - bootstrap_layouts
-  - layout_library
-  - bootstrap_styles
-  - bootstrap_layout_builder
   - layout_builder_blocks
-  - block_library
   - layout_builder_modal
   - layout_builder_block_sanitizer
   - layout_builder_at
-  - media_library_form_element
-  - lb_ux
-  - entity_block
-  - block_form_alter
   - layout_builder_component_attributes
+  - lb_ux
+  - layout_library
+  - block_library
+  - section_library
+  - bootstrap_styles
+  - bootstrap_layout_builder

@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+id: vlb_col_3_25_25_50
+layout_id: blb_col_3
+label: '25% 25% 50%'
+structure: '3 3 6'
+breakpoints:
+  breakpoint_xl: breakpoint_xl
+  breakpoint_lg: breakpoint_lg
+  breakpoint_md: breakpoint_md
+  breakpoint_sm: breakpoint_sm
+  breakpoint_xs: breakpoint_xs
+weight: '0'

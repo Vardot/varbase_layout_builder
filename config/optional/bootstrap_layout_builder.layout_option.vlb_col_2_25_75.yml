@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies: {  }
+id: vlb_col_2_25_75
+layout_id: blb_col_2
+label: '25% 75%'
+structure: '3 9'
+breakpoints:
+  breakpoint_xl: breakpoint_xl
+  breakpoint_lg: breakpoint_lg
+  breakpoint_md: breakpoint_md
+  breakpoint_sm: breakpoint_sm
+  breakpoint_xs: breakpoint_xs
+weight: '-9'

@@ -1,8 +1,8 @@
 langcode: en
 status: true
 dependencies: {  }
-id: blb_col_2_full_width
-layout_id: blb_col_2
+id: vlb_col_3_full_width
+layout_id: blb_col_3
 label: 'Full width'
 structure: '12'
 breakpoints:
@@ -11,4 +11,4 @@ breakpoints:
   breakpoint_md: breakpoint_md
   breakpoint_sm: breakpoint_sm
   breakpoint_xs: breakpoint_xs
-weight: '-5'
+weight: '0'
