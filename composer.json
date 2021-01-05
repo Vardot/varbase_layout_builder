@@ -49,7 +49,7 @@
     "drupal/block_library": "~1.0",
     "drupal/section_library": "~1.0",
     "drupal/bootstrap_styles": "~1.0",
-    "drupal/bootstrap_layout_builder": "~2.0",
+    "drupal/bootstrap_layout_builder": "~2.0"
   },
   "extra": {
     "installer-types": [
