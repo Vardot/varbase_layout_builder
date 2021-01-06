@@ -284,12 +284,6 @@ third_party_settings:
         - 'bootstrap_layout_builder:blb_col_4'
         - 'bootstrap_layout_builder:blb_col_5'
         - 'bootstrap_layout_builder:blb_col_6'
-        - 'bootstrap_layout_builder:blb_col_7'
-        - 'bootstrap_layout_builder:blb_col_8'
-        - 'bootstrap_layout_builder:blb_col_9'
-        - 'bootstrap_layout_builder:blb_col_10'
-        - 'bootstrap_layout_builder:blb_col_11'
-        - 'bootstrap_layout_builder:blb_col_12'
       whitelisted_blocks: {  }
       blacklisted_blocks: {  }
     allowed_block_categories: {  }
