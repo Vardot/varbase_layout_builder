@@ -39,7 +39,7 @@
     "drupal/block_form_alter": "~1.0",
     "drupal/media_library_form_element": "~2.0",
     "drupal/bootstrap_layouts": "~5.0",
-    "drupal/layout_builder_blocks": "~1.0",
+    "drupal/layout_builder_blocks": "1.0.0",
     "drupal/layout_builder_modal": "~1.0",
     "drupal/layout_builder_block_sanitizer": "~1.0",
     "drupal/layout_builder_at": "~2.0",
@@ -48,8 +48,8 @@
     "drupal/layout_library": "~1.0",
     "drupal/block_library": "~1.0",
     "drupal/section_library": "~1.0",
-    "drupal/bootstrap_styles": "~1.0",
-    "drupal/bootstrap_layout_builder": "~2.0"
+    "drupal/bootstrap_styles": "1.0.2",
+    "drupal/bootstrap_layout_builder": "2.0.0"
   },
   "extra": {
     "installer-types": [
@@ -66,6 +66,18 @@
         "https://www.drupal.org/files/issues/2020-09-30/3143804-3.patch",
         "Issue #3150012: Fix RuntimeException: Callable LayoutBuilderAccessCheck::access requires a value for the $section_storage argument":
         "https://www.drupal.org/files/issues/2020-10-11/3150012-12_0.patch"
+      },
+      "drupal/bootstrap_styles": {
+        "Issue #3191446: Fix base path issues with multilingual websites and if drupal was located in a sub-directory":
+        "https://www.drupal.org/files/issues/2021-01-07/3191446-2.patch"
+      },
+      "drupal/bootstrap_layout_builder": {
+        "Issue #3188729: Fix Error when choosing or editing a layout for a section":
+        "https://www.drupal.org/files/issues/2021-01-07/3188729-8.patch"
+      },
+      "drupal/layout_builder_blocks": {
+        "Issue #3183443: Fix Unable to add a block in layout and it gives ajax error",
+        "https://www.drupal.org/files/issues/2021-01-07/3183443-9.patch"
       }
     }
   }
