@@ -76,7 +76,7 @@
         "https://www.drupal.org/files/issues/2021-01-07/3188729-8.patch"
       },
       "drupal/layout_builder_blocks": {
-        "Issue #3183443: Fix Unable to add a block in layout and it gives ajax error",
+        "Issue #3183443: Fix Unable to add a block in layout and it gives ajax error":
         "https://www.drupal.org/files/issues/2021-01-07/3183443-9.patch"
       }
     }
