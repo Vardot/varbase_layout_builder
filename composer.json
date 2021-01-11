@@ -69,7 +69,11 @@
       },
       "drupal/bootstrap_styles": {
         "Issue #3191446: Fix base path issues with multilingual websites and if drupal was located in a sub-directory":
-        "https://www.drupal.org/files/issues/2021-01-07/3191446-2.patch"
+        "https://www.drupal.org/files/issues/2021-01-07/3191446-2.patch",
+        "Issue #3189081: Fix Theme Suggestions Overriding Templates":
+        "https://git.drupalcode.org/project/bootstrap_styles/-/merge_requests/22.diff",
+        "Issue #3192061: Have the option to use other admin themes like Claro or Gin":
+        "https://www.drupal.org/files/issues/2021-01-11/3192061-2.patch"
       },
       "drupal/bootstrap_layout_builder": {
         "Issue #3188729: Fix Error when choosing or editing a layout for a section":
