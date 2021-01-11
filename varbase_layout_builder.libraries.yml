@@ -54,6 +54,7 @@ claro:
       themes/claro/css/theme/js.css: {}
       themes/claro/css/theme/media_library.css: {}
       themes/claro/css/theme/vartheme-claro.theme.style.css: {}
+      themes/claro/css/theme/bootstrap-styles.dark.css: {}
   dependencies:
     - system/admin
     - core/jquery

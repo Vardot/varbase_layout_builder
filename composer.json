@@ -82,7 +82,6 @@
         "https://www.drupal.org/files/issues/2021-01-11/bootstrap_styles-1-0-2--3192061-7.patch",
         "Issue #3189081: Fix Theme Suggestions Overriding Templates":
         "https://git.drupalcode.org/project/bootstrap_styles/-/merge_requests/22.diff"
-
       }
     }
   }
