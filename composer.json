@@ -67,14 +67,6 @@
         "Issue #3150012: Fix RuntimeException: Callable LayoutBuilderAccessCheck::access requires a value for the $section_storage argument":
         "https://www.drupal.org/files/issues/2020-10-11/3150012-12_0.patch"
       },
-      "drupal/bootstrap_styles": {
-        "Issue #3191446: Fix base path issues with multilingual websites and if drupal was located in a sub-directory":
-        "https://www.drupal.org/files/issues/2021-01-07/3191446-2.patch",
-        "Issue #3189081: Fix Theme Suggestions Overriding Templates":
-        "https://git.drupalcode.org/project/bootstrap_styles/-/merge_requests/22.diff",
-        "Issue #3192061: Have the option to use other admin themes like Claro or Gin":
-        "https://www.drupal.org/files/issues/2021-01-11/3192061-6.patch"
-      },
       "drupal/bootstrap_layout_builder": {
         "Issue #3188729: Fix Error when choosing or editing a layout for a section":
         "https://www.drupal.org/files/issues/2021-01-07/3188729-8.patch"
@@ -82,6 +74,15 @@
       "drupal/layout_builder_blocks": {
         "Issue #3183443: Fix Unable to add a block in layout and it gives ajax error":
         "https://www.drupal.org/files/issues/2021-01-07/3183443-9.patch"
+      },
+      "drupal/bootstrap_styles": {
+        "Issue #3191446: Fix base path issues with multilingual websites and if drupal was located in a sub-directory":
+        "https://www.drupal.org/files/issues/2021-01-07/3191446-2.patch",
+        "Issue #3192061: Have the option to use other admin themes like Claro or Gin":
+        "https://www.drupal.org/files/issues/2021-01-11/bootstrap_styles-1-0-2--3192061-7.patch",
+        "Issue #3189081: Fix Theme Suggestions Overriding Templates":
+        "https://git.drupalcode.org/project/bootstrap_styles/-/merge_requests/22.diff"
+
       }
     }
   }
