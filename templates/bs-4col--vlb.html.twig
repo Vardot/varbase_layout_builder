@@ -26,7 +26,6 @@
 
 {% set section_title_attributes = create_attribute() %}
 {% set section_title_attributes = section_title_attributes.addClass('section-title') %}
-{% set section_title_attributes = section_title_attributes.addClass('text-center') %}
 
 {% set section_attributes = create_attribute() %}
 {% set section_attributes = section_attributes.addClass('vlb-section') %}
@@ -138,6 +137,12 @@
 {# When we do have width classes and not using the advacned mode #}
 {% if settings.vlb_section_config.vlb_width_classes and settings.vlb_section_config.vlb_use_advanced != 1 %}
   {% set attributes = attributes.addClass(settings.vlb_section_config.vlb_width_classes) %}
+{% endif %}
+
+{# Add classes to section wrapper #}
+{% if settings.vlb_section_config.vlb_classes %}
+  {% set classes = settings.vlb_section_config.vlb_classes %}
+  {% set section_attributes = section_attributes.addClass(classes) %}
 {% endif %}
 
 {# Varbase Layout Builder Section #}

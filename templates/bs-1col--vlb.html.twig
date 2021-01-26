@@ -136,6 +136,12 @@
   {% set attributes = attributes.addClass(settings.vlb_section_config.vlb_width_classes) %}
 {% endif %}
 
+{# Add classes to section wrapper #}
+{% if settings.vlb_section_config.vlb_classes %}
+  {% set classes = settings.vlb_section_config.vlb_classes %}
+  {% set section_attributes = section_attributes.addClass(classes) %}
+{% endif %}
+
 {# Varbase Layout Builder Section #}
 <div{{ section_attributes }}>
 

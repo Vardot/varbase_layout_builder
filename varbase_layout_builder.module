@@ -199,24 +199,6 @@ function varbase_layout_builder_preprocess_layout(&$variables) {
         }
       }
 
-      // Add custom Varbase Layout Builder classes.
-      if (isset($current_vlb_section_config) && $current_vlb_section_config_id == 'vlb_classes') {
-        $final_classes = explode(' ', $current_vlb_section_config);
-
-        // Add the final list of css classes to the class attribute.
-        if (!empty($final_classes)) {
-
-          // Convert class attributes to array and reset it if it was not array.
-          if (!isset($variables['attributes']['class'])
-            || !is_array($variables['attributes']['class'])) {
-
-            $variables['attributes']['class'] = [];
-          }
-
-          $variables['attributes']['class'] = array_merge($variables['attributes']['class'], $final_classes);
-        }
-      }
-
     }
   }
 }
