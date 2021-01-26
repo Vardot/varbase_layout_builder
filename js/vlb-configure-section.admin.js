@@ -41,13 +41,13 @@
 
   // Fix CKEditor text fields disabled when using inside layout builder modal.
   Drupal.behaviors.varbaseLayoutBuilderCkeditoreWithModal = {
-    attach: function(...args) {
+    attach: function(context) {
       const origAllowInteraction = $.ui.dialog.prototype._allowInteraction;
       $.ui.dialog.prototype._allowInteraction = function(event) {
         if ($(event.target).closest(".cke_dialog").length) {
           return true;
         }
-        return origAllowInteraction.apply(this, args);
+        return origAllowInteraction.apply(this, arguments);
       };
     }
   };
