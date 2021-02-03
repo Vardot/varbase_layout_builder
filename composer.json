@@ -70,7 +70,7 @@
       },
       "drupal/bootstrap_styles": {
         "Issue #3192061: Have the option to use other admin themes like Claro or Gin":
-        "https://www.drupal.org/files/issues/2021-01-11/bootstrap_styles-1-0-2--3192061-7.patch"
+        "https://www.drupal.org/files/issues/2021-02-03/bootstrap_styles-1-0-3--3192061-9.patch"
       }
     }
   }
