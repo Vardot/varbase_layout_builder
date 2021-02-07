@@ -47,7 +47,7 @@ class BackgroundEdgeToEdge extends StylePluginBase {
           'class' => ['field-background-edge-to-edge'],
         ],
         '#access' => FALSE,
-        '#default_value' => TRUE,
+        '#default_value' => FALSE,
       ];
     }
 
