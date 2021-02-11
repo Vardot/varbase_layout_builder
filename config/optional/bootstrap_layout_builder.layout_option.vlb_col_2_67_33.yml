@@ -10,5 +10,5 @@ breakpoints:
   breakpoint_lg: breakpoint_lg
   breakpoint_md: breakpoint_md
   breakpoint_sm: breakpoint_sm
-  breakpoint_xs: breakpoint_xs
+  breakpoint_xs: 0
 weight: '-6'
