@@ -1,7 +1,0 @@
-langcode: en
-status: true
-dependencies: {  }
-id: varbase_modal_block
-label: Modal
-revision: 1
-description: 'A modal block contains a title and modal button title, body and footer.'
