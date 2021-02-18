@@ -63,8 +63,6 @@
       "drupal/lb_ux": {
         "Issue #3173730: Remove the change of default for auto-submit controller on the existing route to have a better behavior when adding a new section":
         "https://www.drupal.org/files/issues/2020-09-29/3173730-2.patch",
-        "Issue #3143804: Add support for Layout Builder Component Attributes extension integration with Layout Builder UX":
-        "https://www.drupal.org/files/issues/2020-09-30/3143804-3.patch",
         "Issue #3150012: Fix RuntimeException: Callable LayoutBuilderAccessCheck::access requires a value for the $section_storage argument":
         "https://www.drupal.org/files/issues/2020-10-11/3150012-12_0.patch"
       },

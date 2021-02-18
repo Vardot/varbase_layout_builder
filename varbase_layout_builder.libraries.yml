@@ -6,9 +6,6 @@ enhancements:
 
 # Varbase Layout Builder theme of configure section.
 configure-section.admin:
-  css:
-    theme:
-      css/theme/vlb-configure-section.admin.theme.css: { }
   js:
     js/vlb-configure-section.admin.js: { }
 
