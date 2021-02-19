@@ -30,7 +30,7 @@ class BackgroundEdgeToEdge extends StylePluginBase {
       $form['background_edgetoedge'] = [
         '#type' => 'checkbox',
         '#title' => $this->t('Edge to Edge Background'),
-        '#default_value' => ((isset($storage['background_edgetoedge'])) ? $storage['background_edgetoedge'] : NULL),
+        '#default_value' => ((isset($storage['background_edgetoedge'])) ? $storage['background_edgetoedge'] : TRUE),
         '#validated' => TRUE,
         '#attributes' => [
           'class' => ['field-background-edge-to-edge'],
@@ -72,11 +72,21 @@ class BackgroundEdgeToEdge extends StylePluginBase {
       && $storage['background_edgetoedge'] == 1
       && isset($storage['background']['background_type'])) {
 
-      if ($storage['background']['background_type'] == 'video') {
-        $build['#theme_wrappers']['bs_video_background']['#attributes']['class'][] = 'bg-edge2edge';
-      }
-      else {
+      if ($storage['background']['background_type'] == 'color'
+        && !empty($storage['background_color']['class'])
+        && $storage['background_color']['class'] !== '_none') {
+
         $build = $this->addClassesToBuild($build, ['bg-edge2edge'], $theme_wrapper);
+      }
+      else if ($storage['background']['background_type'] == 'image'
+        && !empty($storage['background_media']['image']['media_id'])) {
+
+        $build = $this->addClassesToBuild($build, ['bg-edge2edge'], $theme_wrapper);
+      }
+      else if ($storage['background']['background_type'] == 'video'
+        && !empty($storage['background_media']['image']['media_id'])) {
+
+        $build['#theme_wrappers']['bs_video_background']['#attributes']['class'][] = 'bg-edge2edge';
       }
     }
     return $build;
