@@ -158,3 +158,10 @@ function _varbase_layout_builder_form_node_form_submit(array &$form, FormStateIn
 function varbase_layout_builder_element_plugin_alter(array &$definitions) {
   $definitions['layout_builder']['class'] = VarbaseLayoutBuilderUX::class;
 }
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function varbase_layout_builder_preprocess_blb_container_wrapper(&$variables) {
+  $variables['attributes']['class'][] = 'vlb-section';
+}
