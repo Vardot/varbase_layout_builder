@@ -84,7 +84,7 @@ class BackgroundEdgeToEdge extends StylePluginBase {
         $build = $this->addClassesToBuild($build, ['bg-edge2edge'], $theme_wrapper);
       }
       else if ($storage['background']['background_type'] == 'video'
-        && !empty($storage['background_media']['image']['media_id'])) {
+        && !empty($storage['background_media']['video']['media_id'])) {
 
         $build['#theme_wrappers']['bs_video_background']['#attributes']['class'][] = 'bg-edge2edge';
       }
