@@ -72,7 +72,7 @@
       },
       "drupal/bootstrap_layout_builder": {
         "Issue #3199224: Fix Container type and Gutters layouts rendering":
-        "https://www.drupal.org/files/issues/2021-03-02/3199224-21.patch"
+        "https://www.drupal.org/files/issues/2021-03-02/3199224-22.patch"
       }
     }
   }
