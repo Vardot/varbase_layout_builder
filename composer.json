@@ -69,10 +69,6 @@
       "drupal/bootstrap_styles": {
         "Issue #3192061: Have the option to use other admin themes like Claro or Gin":
         "https://www.drupal.org/files/issues/2021-02-03/bootstrap_styles-1-0-3--3192061-9.patch"
-      },
-      "drupal/bootstrap_layout_builder": {
-        "Issue #3199224: Fix Container type and Gutters layouts rendering":
-        "https://www.drupal.org/files/issues/2021-03-02/3199224-22.patch"
       }
     }
   }
