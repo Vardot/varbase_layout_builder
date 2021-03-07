@@ -353,7 +353,7 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
     $form['ui']['tab_content']['layout']['section_title'] = [
       '#type' => 'textfield',
       '#default_value' => !empty($this->configuration['section_title']) ? $this->configuration['section_title'] : '',
-      '#title' => $this->t('Section Title'),
+      '#title' => $this->t('Section title'),
     ];
 
     $container_types = [
