@@ -380,11 +380,28 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
       '#type' => 'radios',
       '#title' => $this->t('Gutters'),
       '#options' => $gutter_types,
-      '#default_value' => (int) !empty($this->configuration['remove_gutters']) ? 1 : 1,
+      '#default_value' => ((isset($this->configuration['remove_gutters'])) ? $this->configuration['remove_gutters'] : TRUE),
       '#attributes' => [
         'class' => ['blb_gutter_type'],
       ],
     ];
+
+    if (count($this->getPluginDefinition()->getRegionNames()) > 1) {
+      $form['ui']['tab_content']['layout']['gutters_between'] = [
+        '#type' => 'checkbox',
+        '#title' => $this->t('Keep gutters between columns'),
+        '#default_value' => ((isset($this->configuration['gutters_between'])) ? $this->configuration['gutters_between'] : TRUE),
+        '#validated' => TRUE,
+        '#attributes' => [
+          'class' => ['field-gutters-between'],
+        ],
+        '#states' => [
+          'visible' => [
+            ':input[name="layout_settings[ui][tab_content][layout][remove_gutters]"]' => ['value' => '1'],
+          ],
+        ],
+      ];
+    }
 
     // Add icons to the gutter types.
     foreach ($form['ui']['tab_content']['layout']['remove_gutters']['#options'] as $key => $value) {
@@ -507,6 +524,59 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
     // Attach the Bootstrap Layout Builder base library.
     $form['#attached']['library'][] = 'bootstrap_layout_builder/layout_builder_form_style';
     return $form;
+  }
+
+/**
+   * {@inheritdoc}
+   */
+  public function submitConfigurationForm(array &$form, FormStateInterface $form_state) {
+    parent::submitConfigurationForm($form, $form_state);
+    // The tabs structure.
+    $layout_tab = ['ui', 'tab_content', 'layout'];
+    $style_tab = ['ui', 'tab_content', 'appearance'];
+    $settings_tab = ['ui', 'tab_content', 'settings'];
+
+    // Save sction label.
+    $this->configuration['label'] = $form_state->getValue(array_merge($settings_tab, ['label']));
+
+    // Container type.
+    $this->configuration['container'] = $form_state->getValue(array_merge($layout_tab, ['container_type']));
+
+    // Styles tab.
+    $this->configuration['container_wrapper']['bootstrap_styles'] = $this->stylesGroupManager->submitStylesFormElements($form['ui']['tab_content']['appearance'], $form_state, $style_tab, $this->configuration['container_wrapper']['bootstrap_styles'], 'bootstrap_layout_builder.styles');
+
+    // Container classes from advanced mode.
+    if (!$this->sectionSettingsIsHidden()) {
+      $this->configuration['container_wrapper_classes'] = $form_state->getValue(array_merge($settings_tab, ['container', 'container_wrapper_classes']));
+      $this->configuration['container_wrapper_attributes'] = Yaml::decode($form_state->getValue(array_merge($settings_tab, ['container', 'container_wrapper_attributes'])));
+    }
+
+    // Gutter Classes.
+    $this->configuration['remove_gutters'] = $form_state->getValue(array_merge($layout_tab, ['remove_gutters']));
+
+    // Gutters between.
+    $this->configuration['gutters_between'] = $form_state->getValue(array_merge($layout_tab, ['gutters_between']));
+
+    // Row classes from advanced mode.
+    if (!$this->sectionSettingsIsHidden()) {
+      $this->configuration['section_classes'] = $form_state->getValue(array_merge($settings_tab, ['row', 'section_classes']));
+      $this->configuration['section_attributes'] = Yaml::decode($form_state->getValue(array_merge($settings_tab, ['row', 'section_attributes'])));
+    }
+
+    $breakpoints = $form_state->getValue(array_merge($layout_tab, ['breakpoints']));
+    // Save breakpoints configuration.
+    if ($breakpoints) {
+      $this->saveBreakpoints($breakpoints);
+      foreach ($this->getPluginDefinition()->getRegionNames() as $key => $region_name) {
+        // Save layout region classes.
+        $this->configuration['layout_regions_classes'][$region_name] = $this->getRegionClasses($key, $breakpoints);
+        // Cols classes from advanced mode.
+        if (!$this->sectionSettingsIsHidden()) {
+          $this->configuration['regions_classes'][$region_name] = $form_state->getValue(array_merge($settings_tab, ['regions', $region_name . '_classes']));
+          $this->configuration['regions_attributes'][$region_name] = Yaml::decode($form_state->getValue(array_merge($settings_tab, ['regions', $region_name . '_attributes'])));
+        }
+      }
+    }
   }
 
 }

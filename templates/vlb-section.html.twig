@@ -13,8 +13,12 @@
 {% set classes = [
   'layout',
   'row',
-  content['#settings']['remove_gutters'] is same as('1') ? 'no-gutters' : '',
+  content['#settings']['remove_gutters'] is same as('1') ? 'gx-0' : '',
   'layout-builder__layout'
+] %}
+
+{% set region_classes = [
+    (content['#settings']['gutters_between'] is same as('1')) and (content['#settings']['remove_gutters'] is same as('1')) ? 'gx-3' : '',
 ] %}
 
 {% if content %}
@@ -23,7 +27,7 @@
     {% for i in 1..12 %}
       {% set region = "blb_region_col_" ~ i %}
       {% if content[region] %}
-        <div {{ region_attributes[region] }}>
+        <div {{ region_attributes[region].addClass(region_classes) }}>
           {{ content[region] }}
         </div>
       {% endif %}
