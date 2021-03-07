@@ -177,3 +177,30 @@ function varbase_layout_builder_layout_alter(&$definitions) {
 function varbase_layout_builder_preprocess_blb_container_wrapper(&$variables) {
   $variables['attributes']['class'][] = 'vlb-section';
 }
+
+/**
+ * Implements hook_theme().
+ */
+function varbase_layout_builder_theme() {
+  return [
+    'blb_container_wrapper' => [
+      'template' => 'vlb-container-wrapper',
+      'variables' => [
+        'attributes' => [],
+        'children' => [],
+      ],
+    ],
+    'blb_container' => [
+      'template' => 'vlb-container',
+      'variables' => [
+        'attributes' => [],
+        'children' => [],
+      ],
+    ],
+    'blb_section' => [
+      'template' => 'vlb-section',
+      'render element' => 'content',
+      'base hook' => 'layout',
+    ],
+  ];
+}
