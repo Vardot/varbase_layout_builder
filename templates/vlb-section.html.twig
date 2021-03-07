@@ -22,6 +22,11 @@
 ] %}
 
 {% if content %}
+
+  {% if content['#settings']['section_title'] %}
+    <h2 class="section-title">{{ content['#settings']['section_title'] }}</h2>
+  {% endif %}
+
   <div {{ attributes.addClass(classes) }}>
     {{ title_prefix }}
     {% for i in 1..12 %}

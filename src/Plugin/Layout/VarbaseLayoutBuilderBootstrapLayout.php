@@ -350,6 +350,12 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
       ];
     }
 
+    $form['ui']['tab_content']['layout']['section_title'] = [
+      '#type' => 'textfield',
+      '#default_value' => !empty($this->configuration['section_title']) ? $this->configuration['section_title'] : '',
+      '#title' => $this->t('Section Title'),
+    ];
+
     $container_types = [
       'container-fluid' => $this->t('Full'),
       'w-100' => $this->t('Edge to Edge'),
@@ -538,6 +544,9 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
 
     // Save sction label.
     $this->configuration['label'] = $form_state->getValue(array_merge($settings_tab, ['label']));
+
+    // Save sction title.
+    $this->configuration['section_title'] = $form_state->getValue(array_merge($layout_tab, ['section_title']));
 
     // Container type.
     $this->configuration['container'] = $form_state->getValue(array_merge($layout_tab, ['container_type']));
