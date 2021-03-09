@@ -1,24 +1,29 @@
-body .layout-builder__add-section {
+body .layout-builder {
+  margin: -3px;
+  padding: 3px;
+}
+
+body .layout-builder .layout-builder__add-section {
   padding: 1em;
   text-align: center;
   outline: 1px dashed #555;
   font-weight: bold;
 }
 
-body .layout-builder__add-section:hover,
-body .layout-builder__add-section:active,
-body .layout-builder__add-section:focus {
+body .layout-builder .layout-builder__add-section:hover,
+body .layout-builder .layout-builder__add-section:active,
+body .layout-builder .layout-builder__add-section:focus {
   outline: 1px solid #000;
 }
 
-body .layout-builder__add-section .layout-builder__link--add {
+body .layout-builder .layout-builder__add-section .layout-builder__link--add {
   display: inline;
   color: #007bff;
 }
 
-body .layout-builder__add-section .layout-builder__link--add:hover,
-body .layout-builder__add-section .layout-builder__link--add:active,
-body .layout-builder__add-section .layout-builder__link--add:focus {
+body .layout-builder .layout-builder__add-section .layout-builder__link--add:hover,
+body .layout-builder .layout-builder__add-section .layout-builder__link--add:active,
+body .layout-builder .layout-builder__add-section .layout-builder__link--add:focus {
   text-decoration: underline;
   color: #0056b3;
   background: url(../../images/icons/787878/plus.svg) transparent center left/1em no-repeat;
@@ -26,14 +31,14 @@ body .layout-builder__add-section .layout-builder__link--add:focus {
   background-position: 10px center;
 }
 
-body .layout-builder-block {
+body .layout-builder .layout-builder-block {
   margin: 0;
   padding: 0;
   background: transparent;
   background-color: transparent;
 }
 
-body .layout-builder__link--import-from-library {
+body .layout-builder .layout-builder__link--import-from-library {
   margin: 0;
   padding-top: 0.5em;
   padding-right: 0.5em;
@@ -46,16 +51,16 @@ body .layout-builder__link--import-from-library {
   font-size: 12px;
 }
 
-body .layout-builder__link--import-from-library:hover,
-body .layout-builder__link--import-from-library:active,
-body .layout-builder__link--import-from-library:focus {
+body .layout-builder .layout-builder__link--import-from-library:hover,
+body .layout-builder .layout-builder__link--import-from-library:active,
+body .layout-builder .layout-builder__link--import-from-library:focus {
   text-decoration: underline;
   color: #0056b3;
   background-color: transparent;
 }
 
-body .layout-builder__add-block {
-  width: 10rem;
+body .layout-builder .layout-builder__add-block {
+  width: 9rem;
   max-width: 60%;
   margin: 10px auto;
   text-align: center;
@@ -64,15 +69,15 @@ body .layout-builder__add-block {
   background-color: #eff6fcc9;
 }
 
-body .layout-builder__add-block .layout-builder__link--add {
+body .layout-builder .layout-builder__add-block .layout-builder__link--add {
   margin-right: 15px;
   margin-left: 15px;
   color: #007bff;
 }
 
-body .layout-builder__add-block .layout-builder__link--add:hover,
-body .layout-builder__add-block .layout-builder__link--add:active,
-body .layout-builder__add-block .layout-builder__link--add:focus {
+body .layout-builder .layout-builder__add-block .layout-builder__link--add:hover,
+body .layout-builder .layout-builder__add-block .layout-builder__link--add:active,
+body .layout-builder .layout-builder__add-block .layout-builder__link--add:focus {
   color: #0056b3;
   border-radius: 8px;
   background: url(../../images/icons/787878/plus.svg) transparent center left/1em no-repeat;
@@ -80,27 +85,91 @@ body .layout-builder__add-block .layout-builder__link--add:focus {
   background-position: 10px center;
 }
 
-body .layout-builder__link--add-section-to-library {
+body .layout-builder .layout-builder__link--add-section-to-library {
+  color: #007bff;
   background: url(../../images/icons/ffffff/save.svg) transparent center left/1.3em no-repeat;
 }
 
-body .layout-builder__link--add-section-to-library:hover,
-body .layout-builder__link--add-section-to-library:active,
-body .layout-builder__link--add-section-to-library:focus {
+body .layout-builder .layout-builder__link--add-section-to-library:hover,
+body .layout-builder .layout-builder__link--add-section-to-library:active,
+body .layout-builder .layout-builder__link--add-section-to-library:focus {
   text-decoration: underline;
   color: #0056b3;
   background-color: transparent;
 }
 
-[dir=rtl] body .layout-builder__link--add,
-[dir=rtl] body .layout-builder__link--import-from-library {
+body .layout-builder .layout-builder__link--add-template-to-library {
+  text-transform: uppercase;
+  color: #007bff;
+  background: #eee;
+  background-color: #eee;
+  font-weight: bold;
+}
+
+body .layout-builder .layout-builder__link--add-template-to-library:hover,
+body .layout-builder .layout-builder__link--add-template-to-library:active,
+body .layout-builder .layout-builder__link--add-template-to-library:focus {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+body .layout-builder .layout-builder__region > .layout-builder-block:hover:not(.ui-state-drop) .layout-builder__actions__block,
+body .layout-builder .layout-builder__region > .layout-builder-block:focus:not(.ui-state-drop) .layout-builder__actions__block {
+  z-index: 1;
+}
+
+body .layout-builder .layout-builder__region > .layout-builder-block {
+  margin: 0;
+  padding: 0;
+}
+
+body .layout-builder .layout-builder__actions .layout-builder__link--layout_builder_block_attributes {
+  background: url("../../images/icons/ffffff/droplet-fill.svg") center center/12px 12px no-repeat;
+}
+
+body .layout-builder .layout-builder__section {
+  padding: 0;
+  outline: 2px dashed #555;
+}
+
+body .layout-builder .layout-builder__section:hover,
+body .layout-builder .layout-builder__section:active body .layout-builder .layout-builder__section:focus {
+  outline: 2px solid #000;
+}
+
+body .layout-builder .layout-builder__section:hover .layout-builder__actions__section,
+body .layout-builder .layout-builder__section:active body .layout-builder .layout-builder__section:focus .layout-builder__actions__section {
+  z-index: 1;
+}
+
+body .layout-builder .layout-builder__section .contextual {
+  display: none;
+}
+
+body .layout-builder .layout-builder__actions__section {
+  top: -25px;
+  left: -2px;
+}
+
+body .layout-builder .layout-builder__actions__block {
+  top: 0;
+  left: 0;
+}
+
+[dir=rtl] body .layout-builder .layout-builder__link--add,
+[dir=rtl] body .layout-builder .layout-builder__link--import-from-library {
   padding-right: 30px;
   padding-left: 0.5em;
 }
 
-.layout-builder {
-  margin: -3px;
-  padding: 3px;
+[dir=rtl] body .layout-builder .layout-builder__actions__section {
+  right: -2px;
+  left: auto;
+}
+
+[dir=rtl] body .layout-builder .layout-builder__actions__block {
+  right: 0;
+  left: auto;
 }
 
 .toolbar-fixed .js-messages__wrapper {
@@ -109,42 +178,4 @@ body .layout-builder__link--add-section-to-library:focus {
 
 .toolbar-horizontal.toolbar-tray-open .js-messages__wrapper {
   top: 0 !important;
-}
-
-.layout-builder__region > .layout-builder-block:hover:not(.ui-state-drop) .layout-builder__actions__block,
-.layout-builder__region > .layout-builder-block:focus:not(.ui-state-drop) .layout-builder__actions__block {
-  z-index: 1;
-}
-
-.layout-builder__region > .layout-builder-block {
-  margin: 0;
-  padding: 0;
-}
-
-.layout-builder__actions .layout-builder__link--layout_builder_block_attributes {
-  background: url("../../images/icons/ffffff/droplet-fill.svg") center center/12px 12px no-repeat;
-}
-
-.layout-builder__section {
-  padding: 0;
-  outline: 2px dashed #555;
-}
-
-.layout-builder__section:hover,
-.layout-builder__section:active .layout-builder__section:focus {
-  outline: 2px solid #000;
-}
-
-.layout-builder__section:hover .layout-builder__actions__section,
-.layout-builder__section:active .layout-builder__section:focus .layout-builder__actions__section {
-  z-index: 1;
-}
-
-.layout-builder__section .contextual {
-  display: none;
-}
-
-.layout-builder__actions__block {
-  top: -25px;
-  left: -2px;
 }
