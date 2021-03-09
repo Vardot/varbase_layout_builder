@@ -6,6 +6,7 @@
  * Available variables:
  * - content: The content for this layout.
  * - attributes: HTML attributes for the layout <div>.
+ * - section_title_attributes: HTML attributes for the section title <h2>. 
  *
  * @ingroup themeable
  */
@@ -21,11 +22,7 @@
 {% if content %}
 
   {% if content['#settings']['section_title'] %}
-
-    {% set section_title_attributes = create_attribute() %}
-    {% set section_title_attributes = section_title_attributes.addClass('section-title') %}
-
-    <h2{{ section_title_attributes }}>{{ content['#settings']['section_title'] }}</h2>
+    <h2{{ content['#settings']['section_title_attributes'] }}>{{ content['#settings']['section_title'] }}</h2>
   {% endif %}
 
   <div {{ attributes.addClass(classes) }}>

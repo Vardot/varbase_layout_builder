@@ -179,3 +179,38 @@ body .layout-builder .layout-builder__actions__block {
 .toolbar-horizontal.toolbar-tray-open .js-messages__wrapper {
   top: 0 !important;
 }
+
+#drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label,
+#drupal-off-canvas .field-section-title-alignment .fieldset-wrapper > div > div input + label {
+  text-indent: -999em;
+  font-size: 0;
+}
+
+#drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon,
+#drupal-off-canvas .field-section-title-alignment .fieldset-wrapper > div > div input + label .input-icon {
+  margin-bottom: 0;
+}
+
+#drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="left"],
+#drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="start"],
+#drupal-off-canvas .field-section-title-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="left"],
+#drupal-off-canvas .field-section-title-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="start"] {
+  background-image: url("../../images/plugins/text-alignment/text-start.svg");
+}
+
+#drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="center"],
+#drupal-off-canvas .field-section-title-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="center"] {
+  background-image: url("../../images/plugins/text-alignment/text-center.svg");
+}
+
+#drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="right"],
+#drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="end"],
+#drupal-off-canvas .field-section-title-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="right"],
+#drupal-off-canvas .field-section-title-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="end"] {
+  background-image: url("../../images/plugins/text-alignment/text-end.svg");
+}
+
+#drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="justify"],
+#drupal-off-canvas .field-section-title-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="justify"] {
+  background-image: url("../../images/plugins/text-alignment/text-justify.svg");
+}

@@ -198,3 +198,41 @@ body {
     }
   } 
 }
+
+// Section Title Alignment.
+// Body Alignment.
+#drupal-off-canvas {
+  .field-text-alignment,
+  .field-section-title-alignment {
+    .fieldset-wrapper > div > div {
+      input {
+        + label {
+          font-size: 0;
+          text-indent: -999em;
+    
+          .input-icon {
+            margin-bottom: 0;
+    
+            &[class*="left"],
+            &[class*="start"] {
+              background-image: url('../../images/plugins/text-alignment/text-start.svg');
+            }
+    
+            &[class*="center"] {
+              background-image: url('../../images/plugins/text-alignment/text-center.svg');
+            }
+    
+            &[class*="right"],
+            &[class*="end"] {
+              background-image: url('../../images/plugins/text-alignment/text-end.svg');
+            }
+    
+            &[class*="justify"] {
+              background-image: url('../../images/plugins/text-alignment/text-justify.svg');
+            }
+          }
+        }
+      }
+    }
+  }
+}
