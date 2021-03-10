@@ -237,25 +237,6 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
   public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
     $form = parent::buildConfigurationForm($form, $form_state);
 
-    $tabs = [
-      [
-        'machine_name' => 'layout',
-        'icon' => 'layout.svg',
-        'title' => $this->t('Layout'),
-        'active' => TRUE,
-      ],
-      [
-        'machine_name' => 'appearance',
-        'icon' => 'appearance.svg',
-        'title' => $this->t('Style'),
-      ],
-      [
-        'machine_name' => 'settings',
-        'icon' => 'settings.svg',
-        'title' => $this->t('Settings'),
-      ],
-    ];
-
     $form['ui']['tab_content']['layout']['section_title'] = [
       '#type' => 'textfield',
       '#default_value' => !empty($this->configuration['section_title']) ? $this->configuration['section_title'] : '',
@@ -352,9 +333,6 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
         ];
       }
     }
-
-    // Container wrapper styling.
-    $form['ui']['tab_content']['appearance'] = $this->stylesGroupManager->buildStylesFormElements($form['ui']['tab_content']['appearance'], $form_state, $this->configuration['container_wrapper']['bootstrap_styles'], 'bootstrap_layout_builder.styles');
 
     return $form;
   }
