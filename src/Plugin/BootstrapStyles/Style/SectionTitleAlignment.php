@@ -71,8 +71,6 @@ class SectionTitleAlignment extends StylePluginBase {
       "#weight" => -20
     ];
 
-
-
     // Add icons to the container types.
     foreach ($form['section_title_alignment']['#options'] as $key => $value) {
       $form['section_title_alignment']['#options'][$key] = '<span class="input-icon ' . $key . '"></span>' . $value;
