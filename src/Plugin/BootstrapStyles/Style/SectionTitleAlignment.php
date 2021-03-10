@@ -62,7 +62,7 @@ class SectionTitleAlignment extends StylePluginBase {
     $form['section_title_alignment'] = [
       '#type' => 'radios',
       '#options' => $this->getStyleOptions('section_title_alignment'),
-      '#title' => $this->t('Section title Alignment'),
+      '#title' => $this->t('Section title alignment'),
       '#default_value' => $storage['section_title_alignment']['class'] ?? NULL,
       '#validated' => TRUE,
       '#attributes' => [
