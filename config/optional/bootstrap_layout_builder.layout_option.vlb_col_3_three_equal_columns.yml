@@ -1,14 +1,17 @@
+uuid: 05d9e310-70b3-447f-80be-e42b2ed0617f
 langcode: en
 status: true
 dependencies: {  }
+_core:
+  default_config_hash: oDLACOo1-iR8WI0LolONqZ9BiFVYWbFP5IrqICfQPog
 id: vlb_col_3_three_equal_columns
 layout_id: blb_col_3
 label: 'Three equal columns'
 structure: '4 4 4'
 breakpoints:
-  breakpoint_xl: breakpoint_xl
   breakpoint_lg: breakpoint_lg
   breakpoint_md: breakpoint_md
   breakpoint_sm: breakpoint_sm
+  breakpoint_xl: 0
   breakpoint_xs: 0
 weight: '-10'

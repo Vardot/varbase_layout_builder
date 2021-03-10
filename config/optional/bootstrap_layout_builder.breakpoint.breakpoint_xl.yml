@@ -1,6 +1,9 @@
+uuid: f0c0c793-4b4f-483e-8c11-878cac74aa42
 langcode: en
-status: 1
+status: 0
 dependencies: {  }
+_core:
+  default_config_hash: lMuI09WgOdPNJ6U4haB8VxFQUAVWL_Jfaub8phzNXLQ
 id: breakpoint_xl
 label: 'Extra large devices (Large desktops)'
 base_class: col-xl

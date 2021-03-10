@@ -1,0 +1,15 @@
+uuid: 2883a827-6660-47f9-bc1e-1485978bed7f
+langcode: en
+status: true
+dependencies: {  }
+id: vlb_col_6_three_equal_columns
+layout_id: blb_col_6
+label: 'Three equal columns'
+structure: '4 4 4'
+breakpoints:
+  breakpoint_md: breakpoint_md
+  breakpoint_sm: breakpoint_sm
+  breakpoint_xl: 0
+  breakpoint_lg: 0
+  breakpoint_xs: 0
+weight: '-9'

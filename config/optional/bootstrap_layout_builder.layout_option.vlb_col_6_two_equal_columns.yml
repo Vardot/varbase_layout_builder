@@ -1,17 +1,15 @@
-uuid: e2d9b53e-2b3f-44da-b563-acdeaa1f65ee
+uuid: 0b14f4b0-a05a-42c0-a0ed-2298f46c070d
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: NAW_JG0KWs2Bh8m-Fmzonh7Z0jTQGXT_LlaqffXDjNE
-id: vlb_col_6_full_width
+id: vlb_col_6_two_equal_columns
 layout_id: blb_col_6
-label: 'Full width'
-structure: '12'
+label: 'Two equal columns'
+structure: '6 6'
 breakpoints:
   breakpoint_sm: breakpoint_sm
   breakpoint_xs: breakpoint_xs
   breakpoint_xl: 0
   breakpoint_lg: 0
   breakpoint_md: 0
-weight: '-7'
+weight: '-8'
