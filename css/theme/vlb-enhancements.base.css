@@ -60,8 +60,7 @@ body .layout-builder .layout-builder__link--import-from-library:focus {
 }
 
 body .layout-builder .layout-builder__add-block {
-  width: 9rem;
-  max-width: 60%;
+  width: 9.1rem;
   margin: 10px auto;
   text-align: center;
   color: #007bff;

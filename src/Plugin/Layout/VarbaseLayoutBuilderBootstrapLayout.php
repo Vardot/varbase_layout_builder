@@ -316,6 +316,9 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
         if ($this->configuration['breakpoints'] && isset($this->configuration['breakpoints'][$breakpoint_id])) {
           $default_value = $this->configuration['breakpoints'][$breakpoint_id];
         }
+        else if ($breakpoint_id == "breakpoint_sm" || $breakpoint_id == "breakpoint_xs") {
+          $default_value = array_key_last($layout_options);
+        }
         else if (count($layout_options) > 0) {
           $default_value = array_key_first($layout_options);
         }
@@ -353,6 +356,32 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
     // Gutters between.
     $this->configuration['gutters_between'] = $form_state->getValue(array_merge($layout_tab, ['gutters_between']));
 
+    $breakpoints = $form_state->getValue(array_merge($layout_tab, ['breakpoints']));
+    // Save breakpoints configuration.
+    if ($breakpoints) {
+
+      $first_layout_region_classes = [];
+      foreach ($this->getPluginDefinition()->getRegionNames() as $key => $region_name) {
+
+        $this->configuration['layout_regions_classes'][$region_name] = $this->getRegionClasses($key, $breakpoints);
+
+        if (count($first_layout_region_classes) < 1 ) {
+          $first_layout_region_classes = $this->configuration['layout_regions_classes'][$region_name];
+        }
+        else {
+          foreach ($this->configuration['layout_regions_classes'][$region_name] as $region_key => $region_class) {
+            if ($region_class == "col-xl-"
+              || $region_class == "col-lg-"
+              || $region_class == "col-md-"
+              || $region_class == "col-sm-"
+              || $region_class == "col-") {
+                $this->configuration['layout_regions_classes'][$region_name] = $first_layout_region_classes;
+              break;
+            }
+          }
+        }
+      }
+    }
   }
 
 }
