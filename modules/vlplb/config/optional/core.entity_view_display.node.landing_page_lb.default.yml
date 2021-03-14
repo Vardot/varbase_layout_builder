@@ -282,7 +282,6 @@ third_party_settings:
         - 'bootstrap_layout_builder:blb_col_2'
         - 'bootstrap_layout_builder:blb_col_3'
         - 'bootstrap_layout_builder:blb_col_4'
-        - 'bootstrap_layout_builder:blb_col_5'
         - 'bootstrap_layout_builder:blb_col_6'
       whitelisted_blocks: {  }
       blacklisted_blocks: {  }
