@@ -26,3 +26,4 @@ install:
   - varbase_html_code_block
   - varbase_media_block
   - varbase_gallery_block
+  - varbase_heading_block

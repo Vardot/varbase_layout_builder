@@ -19,11 +19,13 @@
 ] %}
 
 {% if content %}
-
-  {% if content['#settings']['section_title'] %}
-    <h2{{ content['#settings']['section_title_attributes'] }}>{{ content['#settings']['section_title'] }}</h2>
+  {% if content['section_header'] %}
+  <div class="vlb-section-header row">
+    <div {{ region_attributes['section_header'].addClass(['col-12']) }}>
+      {{ content['section_header'] }}
+    </div>
+  </div>
   {% endif %}
-
   <div {{ attributes.addClass(classes) }}>
     {{ title_prefix }}
     {% for i in 1..12 %}

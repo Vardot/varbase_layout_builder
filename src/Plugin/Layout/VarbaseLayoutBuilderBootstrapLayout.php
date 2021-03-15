@@ -18,7 +18,7 @@ use Drupal\bootstrap_layout_builder\Plugin\Layout\BootstrapLayout;
  *
  * @Layout(
  *   id = "bootstrap_layout_builder",
- *   deriver = "Drupal\bootstrap_layout_builder\Plugin\Deriver\BootstrapLayoutDeriver"
+ *   deriver = "Drupal\varbase_layout_builder\Plugin\Deriver\VarbaseLayoutBuilderBootstrapLayoutDeriver"
  * )
  */
 class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
@@ -28,6 +28,26 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
    */
   public function build(array $regions) {
     $build = parent::build($regions);
+
+    // Regions classes and attributes.
+    if ($this->configuration['regions_classes']) {
+
+      $region_classes = $this->configuration['regions_classes']['section_header'];
+      if ($this->configuration['layout_regions_classes'] && isset($this->configuration['layout_regions_classes']['section_header'])) {
+        $build['section_header']['#attributes']['class'] = $this->configuration['layout_regions_classes']['section_header'];
+      }
+      $build['section_header']['#attributes']['class'][] = $region_classes;
+
+    }
+
+    if ($this->configuration['regions_attributes']) {
+
+      $region_attributes = $this->configuration['regions_attributes']['section_header'];
+      if (!empty($region_attributes)) {
+        $build['section_header']['#attributes'] = NestedArray::mergeDeep($build['section_header']['#attributes'] ?? [], $region_attributes);
+      }
+
+    }
 
 
     // Container.
@@ -237,13 +257,6 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
   public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
     $form = parent::buildConfigurationForm($form, $form_state);
 
-    $form['ui']['tab_content']['layout']['section_title'] = [
-      '#type' => 'textfield',
-      '#default_value' => !empty($this->configuration['section_title']) ? $this->configuration['section_title'] : '',
-      '#title' => $this->t('Section title'),
-      "#weight" => -50,
-    ];
-
     $container_types = [
       'container-fluid' => $this->t('Full'),
       'w-100' => $this->t('Edge to Edge'),
@@ -299,7 +312,6 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
         "#weight" => -20,
       ];
     }
-    
 
     // Add icons to the gutter types.
     foreach ($form['ui']['tab_content']['layout']['remove_gutters']['#options'] as $key => $value) {
@@ -337,6 +349,24 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
       }
     }
 
+    $form['ui']['tab_content']['settings']['regions']['section_header_classes'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Section header classes'),
+      '#default_value' => $this->configuration['regions_classes']['section_header'],
+      "#weight" => -30,
+    ];
+
+    $region_attributes = $this->configuration['regions_attributes']['section_header'];
+    $form['ui']['tab_content']['settings']['regions']['section_header_attributes'] = [
+      '#type' => 'textarea',
+      '#title' => $this->t('Section header attributes (YAML)'),
+      '#default_value' => empty($region_attributes) ? '' : Yaml::encode($region_attributes),
+      '#attributes' => ['class' => ['auto-size']],
+      '#rows' => 1,
+      '#element_validate' => [[$this, 'validateYaml']],
+      "#weight" => -20,
+    ];
+
     return $form;
   }
 
@@ -350,11 +380,19 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
     $style_tab = ['ui', 'tab_content', 'appearance'];
     $settings_tab = ['ui', 'tab_content', 'settings'];
 
-    // Save section title.
-    $this->configuration['section_title'] = $form_state->getValue(array_merge($layout_tab, ['section_title']));
-
     // Gutters between.
     $this->configuration['gutters_between'] = $form_state->getValue(array_merge($layout_tab, ['gutters_between']));
+
+    // Section header region classes
+    $this->configuration['layout_regions_classes']['section_header'] = $form_state->getValue(array_merge($settings_tab, ['section_header_classes']));
+
+    // Section header region classes
+    $this->configuration['layout_regions_classes']['section_header'] = $form_state->getValue(array_merge($settings_tab, ['section_header_classes']));
+
+    if (!$this->sectionSettingsIsHidden()) {
+      $this->configuration['regions_classes']['section_header'] = $form_state->getValue(array_merge($settings_tab, ['regions', 'section_header_classes']));
+      $this->configuration['regions_attributes']['section_header'] = Yaml::decode($form_state->getValue(array_merge($settings_tab, ['regions', 'section_header_attributes'])));
+    }
 
     $breakpoints = $form_state->getValue(array_merge($layout_tab, ['breakpoints']));
     // Save breakpoints configuration.
@@ -363,20 +401,27 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
       $first_layout_region_classes = [];
       foreach ($this->getPluginDefinition()->getRegionNames() as $key => $region_name) {
 
-        $this->configuration['layout_regions_classes'][$region_name] = $this->getRegionClasses($key, $breakpoints);
-
-        if (count($first_layout_region_classes) < 1 ) {
-          $first_layout_region_classes = $this->configuration['layout_regions_classes'][$region_name];
+        if ($region_name == 'section_header') {
+          foreach($breakpoints as $breakpoint_key => $breakpoint_id) {
+            $this->configuration['layout_regions_classes']['section_header'][$breakpoint_key] = 'col-12';
+          }
         }
         else {
-          foreach ($this->configuration['layout_regions_classes'][$region_name] as $region_key => $region_class) {
-            if ($region_class == "col-xl-"
-              || $region_class == "col-lg-"
-              || $region_class == "col-md-"
-              || $region_class == "col-sm-"
-              || $region_class == "col-") {
-                $this->configuration['layout_regions_classes'][$region_name] = $first_layout_region_classes;
-              break;
+          $this->configuration['layout_regions_classes'][$region_name] = $this->getRegionClasses($key, $breakpoints);
+
+          if (count($first_layout_region_classes) < 1 ) {
+            $first_layout_region_classes = $this->configuration['layout_regions_classes'][$region_name];
+          }
+          else {
+            foreach ($this->configuration['layout_regions_classes'][$region_name] as $region_key => $region_class) {
+              if ($region_class == "col-xl-"
+                || $region_class == "col-lg-"
+                || $region_class == "col-md-"
+                || $region_class == "col-sm-"
+                || $region_class == "col-") {
+                  $this->configuration['layout_regions_classes'][$region_name] = $first_layout_region_classes;
+                break;
+              }
             }
           }
         }

@@ -1,0 +1,112 @@
+<?php
+
+/**
+ * @file
+ * Contains varbase_layout_builder.module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\block_content\BlockContentInterface;
+use Drupal\media\Entity\Media;
+use Drupal\media\MediaInterface;
+
+
+
+// function varbase_heading_block_block_plugin_form_alter(array &$form, FormStateInterface &$form_state, string $block_type) {
+//   if ($block_type == 'varbase_heading_block') {
+//     $form['settings']['label_display']['#default_value'] = TRUE;
+//     $form['settings']['label_display']['#access'] = FALSE;
+//   }
+// }
+
+/**
+ * Implements hook_block_type_form_alter().
+ */
+// function varbase_heading_block_block_type_form_alter(array &$form, FormStateInterface &$form_state, string $block_type) {
+//   if ($block_type == 'varbase_heading_block') {
+//     $form['settings']['label_display']['#default_value'] = TRUE;
+//     $form['settings']['label_display']['#access'] = FALSE;
+//   }
+// }
+
+
+/**
+ * Implements hook_form_alter().
+ */
+// function varbase_heading_block_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+//   $form_ids = ['layout_builder_update_block', 'layout_builder_add_block'];
+
+//   if (!in_array($form_id, $form_ids)) {
+//     return;
+//   }
+//   echo $form_id;
+//   die(' con');
+
+//   // echo "<pre>";
+//   // print_r(array_keys($form['settings']['label_display']['#default_value']));
+//   // die(' con');
+
+//   $form['settings']['label_display']['#default_value'] = TRUE;
+//   $form['settings']['label_display']['#access'] = FALSE;
+// }
+
+/**
+ * Implements hook_theme().
+ */
+function varbase_heading_block_theme($existing, $type, $theme, $path) {
+
+  $templates = $path . '/templates';
+  $theme_templates = [];
+
+  $theme_templates['block__inline_block__varbase_heading_block'] = [
+    'template' => 'block--inline-block--varbase-heading-block',
+    'path' => $templates,
+    'base hook' => 'block',
+  ];
+
+  $theme_templates['block__block_content__varbase_heading_block'] = [
+    'template' => 'block--block-content--varbase-heading-block',
+    'path' => $templates,
+    'base hook' => 'block',
+  ];
+
+  return $theme_templates;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function varbase_heading_block_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+
+  if (isset($variables['elements']['content']['#block_content'])
+      && $variables['elements']['content']['#block_content']->bundle() == 'varbase_heading_block'
+      && $variables['elements']['content']['#block_content'] instanceof BlockContentInterface) {
+
+    $block_type_suggestion = 'block__block_content__varbase_heading_block';
+    $suggestions_rev = array_reverse($suggestions);
+    $index = array_search('block__block_content', $suggestions_rev);
+    if (is_numeric($index)) {
+      array_splice($suggestions_rev, $index, 0, $block_type_suggestion);
+      $suggestions = array_reverse($suggestions_rev);
+    }
+    else {
+      $suggestions[] = $block_type_suggestion;
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_block().
+ */
+function varbase_heading_block_preprocess_block(&$variables) {
+
+  if (isset($variables['content']['field_varbase_heading_size'])) {
+    $variables['heading_size'] = $variables['content']['field_varbase_heading_size'];
+    unset($variables['content']['field_varbase_heading_size']);
+  }
+  elseif (isset($variables['content']['content']['field_varbase_heading_size'])) {
+    $variables['heading_size'] = $variables['content']['content']['field_varbase_heading_size'];
+    unset($variables['content']['content']['field_varbase_heading_size']);
+  }
+
+}

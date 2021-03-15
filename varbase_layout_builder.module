@@ -6,6 +6,8 @@
  */
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Render\Element;
+use Drupal\Core\Template\Attribute;
 use Drupal\varbase_layout_builder\Element\VarbaseLayoutBuilderUX;
 
 /**
@@ -203,4 +205,14 @@ function varbase_layout_builder_theme() {
       'base hook' => 'layout',
     ],
   ];
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function varbase_layout_builder_preprocess_blb_section(&$variables) {
+
+  if (isset($variables['content']['section_header']['#attributes'])) {
+    $variables['region_attributes']['section_header'] = new Attribute($variables['content']['section_header']['#attributes']);
+  }
 }

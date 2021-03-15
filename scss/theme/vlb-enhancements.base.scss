@@ -167,10 +167,15 @@ body {
 }
 [dir=rtl] body {
   .layout-builder {
-    .layout-builder__link--add,
+    .layout-builder__link--add {
+      padding-right: 30px;
+      padding-left: 0.5em;
+    }
+
     .layout-builder__link--import-from-library {
       padding-right: 30px;
       padding-left: 0.5em;
+      background: url(../../images/icons/787878/import.svg) transparent center right/1em no-repeat;
     }
 
     .layout-builder__actions__section {
@@ -180,6 +185,43 @@ body {
     .layout-builder__actions__block {
       left: auto;
       right: 0;
+    }
+
+    .layout-builder__link--add-section-to-library {
+      background: url(../../images/icons/ffffff/save.svg) transparent center right/1.3em no-repeat;
+    }
+
+    .layout-builder__add-section {
+      .layout-builder__link--add {
+        &:hover,
+        &:active,
+        &:focus {
+          background: url(../../images/icons/787878/plus.svg) transparent center right/1em no-repeat;
+        }
+      }
+    }
+
+    .layout-builder__add-block {
+      .layout-builder__link--add {
+        &:hover,
+        &:active,
+        &:focus {
+          background: url(../../images/icons/787878/plus.svg) transparent center right/1em no-repeat;
+        }
+      }
+    }
+  }
+
+  #drupal-off-canvas,
+  #layout-builder-modal {
+    .bs-group-title {
+      margin-left: auto;
+      margin-right: 15px;
+
+      img,
+      svg {
+        margin-left: 1rem;
+      }
     }
   }
 }
@@ -198,11 +240,10 @@ body {
   } 
 }
 
-// Section Title Alignment.
-// Body Alignment.
-#drupal-off-canvas {
-  .field-text-alignment,
-  .field-section-title-alignment {
+// Alignment.
+#drupal-off-canvas,
+#layout-builder-modal {
+  .field-text-alignment {
     .fieldset-wrapper > div > div {
       input {
         + label {

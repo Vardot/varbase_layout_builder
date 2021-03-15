@@ -1,0 +1,30 @@
+uuid: c72065fb-f96a-419d-b519-9dfc34cb6194
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.varbase_heading_block
+    - field.field.block_content.varbase_heading_block.field_varbase_heading_size
+  module:
+    - ds
+    - options
+id: block_content.varbase_heading_block.default
+targetEntityType: block_content
+bundle: varbase_heading_block
+mode: default
+content:
+  field_varbase_heading_size:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    type: list_key
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

@@ -1,0 +1,28 @@
+uuid: 1c6e7440-c37f-4808-a8de-c78228cf6d82
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.varbase_heading_block
+    - field.field.block_content.varbase_heading_block.field_varbase_heading_size
+id: block_content.varbase_heading_block.default
+targetEntityType: block_content
+bundle: varbase_heading_block
+mode: default
+content:
+  field_varbase_heading_size:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  langcode: true

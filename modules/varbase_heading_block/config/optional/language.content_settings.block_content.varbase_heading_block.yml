@@ -1,0 +1,11 @@
+uuid: 83fd96a8-048d-4397-9016-ca5b29cc4d2a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.varbase_heading_block
+id: block_content.varbase_heading_block
+target_entity_type_id: block_content
+target_bundle: varbase_heading_block
+default_langcode: site_default
+language_alterable: false
