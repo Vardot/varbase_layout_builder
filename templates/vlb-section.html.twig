@@ -19,9 +19,9 @@
 ] %}
 
 {% if content %}
-  {% if content['section_header'] %}
+  {% if content['section_header']|render|striptags %}
   <div class="vlb-section-header row">
-    <div {{ region_attributes['section_header'].addClass(['col-12']) }}>
+    <div {{ region_attributes['section_header'] }}>
       {{ content['section_header'] }}
     </div>
   </div>

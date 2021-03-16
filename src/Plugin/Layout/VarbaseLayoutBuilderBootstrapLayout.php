@@ -29,30 +29,61 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
   public function build(array $regions) {
     $build = parent::build($regions);
 
+    // Row classes and attributes.
+    $section_classes = [];
+    if ($this->configuration['section_classes']) {
+      $section_classes = explode(' ', $this->configuration['section_classes']);
+      $build['#attributes']['class'] = $section_classes;
+    }
+
+    if (!empty($this->configuration['section_attributes'])) {
+      $section_attributes = $this->configuration['section_attributes'];
+      $build['#attributes'] = NestedArray::mergeDeep($build['#attributes'] ?? [], $section_attributes);
+    }
+
+    // The default section header one col layout.
+    $blb_settings = $this->configFactory->get('bootstrap_layout_builder.settings');
+    $one_col_layout_class = 'col-12';
+    if ($blb_settings->get('one_col_layout_class')) {
+      $one_col_layout_class = $blb_settings->get('one_col_layout_class');
+    }
+
+    
+    $this->configuration['layout_regions_classes']['section_header'][] = $one_col_layout_class;
+
+    // The default one col layout class.
+    if (count($this->getPluginDefinition()->getRegionNames()) == 2) {
+      $this->configuration['layout_regions_classes']['blb_region_col_1'][] = $one_col_layout_class;
+    }
+
     // Regions classes and attributes.
     if ($this->configuration['regions_classes']) {
-
-      $region_classes = $this->configuration['regions_classes']['section_header'];
-      if ($this->configuration['layout_regions_classes'] && isset($this->configuration['layout_regions_classes']['section_header'])) {
-        $build['section_header']['#attributes']['class'] = $this->configuration['layout_regions_classes']['section_header'];
+      foreach ($this->getPluginDefinition()->getRegionNames() as $region_name) {
+        $region_classes = $this->configuration['regions_classes'][$region_name];
+        if ($this->configuration['layout_regions_classes'] && isset($this->configuration['layout_regions_classes'][$region_name])) {
+          $build[$region_name]['#attributes']['class'] = $this->configuration['layout_regions_classes'][$region_name];
+        }
+        $build[$region_name]['#attributes']['class'][] = $region_classes;
       }
-      $build['section_header']['#attributes']['class'][] = $region_classes;
 
     }
 
     if ($this->configuration['regions_attributes']) {
-
-      $region_attributes = $this->configuration['regions_attributes']['section_header'];
-      if (!empty($region_attributes)) {
-        $build['section_header']['#attributes'] = NestedArray::mergeDeep($build['section_header']['#attributes'] ?? [], $region_attributes);
+      foreach ($this->getPluginDefinition()->getRegionNames() as $region_name) {
+        $region_attributes = $this->configuration['regions_attributes'][$region_name];
+        if (!empty($region_attributes)) {
+          $build[$region_name]['#attributes'] = NestedArray::mergeDeep($build[$region_name]['#attributes'] ?? [], $region_attributes);
+        }
       }
 
+      $section_header_region_attributes = $this->configuration['regions_attributes']['section_header'];
+      if (!empty($section_header_region_attributes)) {
+        $build['section_header']['#attributes'] = NestedArray::mergeDeep($build['section_header']['#attributes'] ?? [], $section_header_region_attributes);
+      }
     }
-
 
     // Container.
     if ($this->configuration['container']) {
-
 
       // Edge2Edge Background.
       $background_classes = [];
@@ -86,7 +117,7 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
 
       // 1 column.
       $one_column = TRUE;
-      if (count($this->getPluginDefinition()->getRegionNames()) > 1) {
+      if (count($this->getPluginDefinition()->getRegionNames()) > 2) {
         // 2 columns.
         $one_column = FALSE;
       }
@@ -295,7 +326,7 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
       "#weight" => -30,
     ];
 
-    if (count($this->getPluginDefinition()->getRegionNames()) > 1) {
+    if (count($this->getPluginDefinition()->getRegionNames()) > 2) {
       $form['ui']['tab_content']['layout']['gutters_between'] = [
         '#type' => 'checkbox',
         '#title' => $this->t('Keep gutters between columns'),
@@ -402,8 +433,15 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
       foreach ($this->getPluginDefinition()->getRegionNames() as $key => $region_name) {
 
         if ($region_name == 'section_header') {
+
+          $blb_settings = $this->configFactory->get('bootstrap_layout_builder.settings');
+          $one_col_layout_class = 'col-12';
+          if ($blb_settings->get('one_col_layout_class')) {
+            $one_col_layout_class = $blb_settings->get('one_col_layout_class');
+          }
+
           foreach($breakpoints as $breakpoint_key => $breakpoint_id) {
-            $this->configuration['layout_regions_classes']['section_header'][$breakpoint_key] = 'col-12';
+            $this->configuration['layout_regions_classes']['section_header'][$breakpoint_key] = $one_col_layout_class;
           }
         }
         else {
