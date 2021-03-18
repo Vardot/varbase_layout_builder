@@ -323,7 +323,7 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
       '#attributes' => [
         'class' => ['blb_gutter_type'],
       ],
-      "#weight" => -30,
+      "#weight" => 50,
     ];
 
     if (count($this->getPluginDefinition()->getRegionNames()) > 2) {
@@ -340,7 +340,7 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
             ':input[name="layout_settings[ui][tab_content][layout][remove_gutters]"]' => ['value' => '1'],
           ],
         ],
-        "#weight" => -20,
+        "#weight" => 55,
       ];
     }
 

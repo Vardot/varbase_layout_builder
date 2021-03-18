@@ -1,12 +1,12 @@
 layout_builder_theme: dark
-background_colors: "bg-primary|Primary\r\nbg-secondary|Secondary\r\nbg-success|Success\r\nbg-danger|Danger\r\nbg-warning|Warning\r\nbg-info|Info\r\nbg-light|Light\r\nbg-dark|Dark\r\nbg-white|White\r\nbg-transparent|Transparent"
+background_colors: "bg-primary|Primary\r\nbg-secondary|Secondary\r\nbg-light|Light\r\nbg-dark|Dark\r\n#bg-info|Info\r\n#bg-white|White\r\n#bg-transparent|Transparent\r\n#bg-success|Success\r\n#bg-danger|Danger\r\n#bg-warning|Warning"
 background_image:
   bundle: image
   field: field_media_image
 background_local_video:
   bundle: video
   field: field_media_video_file
-text_colors: "text-primary|Primary\r\ntext-secondary|Secondary\r\ntext-success|Success\r\ntext-danger|Danger\r\ntext-warning|Warning\r\ntext-info|Info\r\ntext-light|Light\r\ntext-dark|Dark\r\ntext-body|Body\r\ntext-muted|Muted\r\ntext-white|White\r\ntext-black-50|Black-50\r\ntext-white-50|White-50"
+text_colors: "text-light|Light\r\ntext-dark|Dark\r\ntext-body|Body\r\ntext-white|White\r\n#text-muted|Muted\r\n#text-primary|Primary\r\n#text-secondary|Secondary\r\n#text-success|Success\r\n#text-danger|Danger\r\n#text-warning|Warning\r\n#text-info|Info\r\n#text-black-50|Black-50\r\n#text-white-50|White-50"
 text_alignment: "text-start|Start\r\ntext-center|Center\r\ntext-end|End\r\ntext-justify|Justify"
 padding: "p-1|Padding 1\r\np-2|Padding 2\r\np-3|Padding 3\r\np-4|Padding 4\r\np-5|Padding 5"
 padding_left: "ps-1|Padding Left 1\r\nps-2|Padding Left 2\r\nps-3|Padding Left 3\r\nps-4|Padding Left 4\r\nps-5|Padding Left 5"
@@ -44,4 +44,3 @@ data_key: aos
 scroll_effects_attr_type: 1
 scroll_effects_data_key: data-aos
 scroll_effects_library_type: external
-section_title_alignment: "text-start|Start\r\ntext-center|Center\r\ntext-end|End\r\ntext-justify|Justify"
