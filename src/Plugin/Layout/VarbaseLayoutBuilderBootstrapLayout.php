@@ -405,66 +405,104 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
    * {@inheritdoc}
    */
   public function submitConfigurationForm(array &$form, FormStateInterface $form_state) {
-    parent::submitConfigurationForm($form, $form_state);
+
     // The tabs structure.
     $layout_tab = ['ui', 'tab_content', 'layout'];
     $style_tab = ['ui', 'tab_content', 'appearance'];
     $settings_tab = ['ui', 'tab_content', 'settings'];
 
+    // Save section label.
+    $this->configuration['label'] = $form_state->getValue(array_merge($settings_tab, ['label']));
+
+    // Container type.
+    $this->configuration['container'] = $form_state->getValue(array_merge($layout_tab, ['container_type']));
+
+    // Styles tab.
+    $this->configuration['container_wrapper']['bootstrap_styles'] = $this->stylesGroupManager->submitStylesFormElements($form['ui']['tab_content']['appearance'], $form_state, $style_tab, $this->configuration['container_wrapper']['bootstrap_styles'], 'bootstrap_layout_builder.styles');
+
+    // Container classes from advanced mode.
+    if (!$this->sectionSettingsIsHidden()) {
+      $this->configuration['container_wrapper_classes'] = $form_state->getValue(array_merge($settings_tab, ['container', 'container_wrapper_classes']));
+      $this->configuration['container_wrapper_attributes'] = Yaml::decode($form_state->getValue(array_merge($settings_tab, ['container', 'container_wrapper_attributes'])));
+    }
+
+    // Gutter Classes.
+    $this->configuration['remove_gutters'] = $form_state->getValue(array_merge($layout_tab, ['remove_gutters']));
+
+    // Row classes from advanced mode.
+    if (!$this->sectionSettingsIsHidden()) {
+      $this->configuration['section_classes'] = $form_state->getValue(array_merge($settings_tab, ['row', 'section_classes']));
+      $this->configuration['section_attributes'] = Yaml::decode($form_state->getValue(array_merge($settings_tab, ['row', 'section_attributes'])));
+    }
+
     // Gutters between.
     $this->configuration['gutters_between'] = $form_state->getValue(array_merge($layout_tab, ['gutters_between']));
 
-    // Section header region classes
+
+
+    $breakpoints = $form_state->getValue(array_merge($layout_tab, ['breakpoints']));
+    // Save breakpoints configuration.
+    if ($breakpoints) {
+      $this->saveBreakpoints($breakpoints);
+      foreach ($this->getPluginDefinition()->getRegionNames() as $key => $region_name) {
+        // Save layout region classes.
+        $this->configuration['layout_regions_classes'][$region_name] = $this->getRegionClasses($key, $breakpoints);
+        // Cols classes from advanced mode.
+        if (!$this->sectionSettingsIsHidden()) {
+          $this->configuration['regions_classes'][$region_name] = $form_state->getValue(array_merge($settings_tab, ['regions', $region_name . '_classes']));
+          $this->configuration['regions_attributes'][$region_name] = Yaml::decode($form_state->getValue(array_merge($settings_tab, ['regions', $region_name . '_attributes'])));
+        }
+      }
+    }
+
+
+    // Section header region classes.
     $this->configuration['layout_regions_classes']['section_header'] = $form_state->getValue(array_merge($settings_tab, ['section_header_classes']));
 
-    // Section header region classes
-    $this->configuration['layout_regions_classes']['section_header'] = $form_state->getValue(array_merge($settings_tab, ['section_header_classes']));
+    // Section header region attributes.
+    $this->configuration['regions_attributes']['section_header'] = $form_state->getValue(array_merge($settings_tab, ['section_header_attributes']));
 
     if (!$this->sectionSettingsIsHidden()) {
       $this->configuration['regions_classes']['section_header'] = $form_state->getValue(array_merge($settings_tab, ['regions', 'section_header_classes']));
       $this->configuration['regions_attributes']['section_header'] = Yaml::decode($form_state->getValue(array_merge($settings_tab, ['regions', 'section_header_attributes'])));
     }
 
-    $breakpoints = $form_state->getValue(array_merge($layout_tab, ['breakpoints']));
-    // Save breakpoints configuration.
-    if ($breakpoints) {
+    $blb_settings = $this->configFactory->get('bootstrap_layout_builder.settings');
+    $one_col_layout_class = 'col-12';
+    if ($blb_settings->get('one_col_layout_class')) {
+      $one_col_layout_class = $blb_settings->get('one_col_layout_class');
+    }
 
-      $first_layout_region_classes = [];
-      foreach ($this->getPluginDefinition()->getRegionNames() as $key => $region_name) {
+    foreach($breakpoints as $breakpoint_key => $breakpoint_id) {
+      $this->configuration['layout_regions_classes']['section_header'][] = $one_col_layout_class;
+    }
 
-        if ($region_name == 'section_header') {
+    // Cols classes from advanced mode.
+    if (!$this->sectionSettingsIsHidden()) {
+      $this->configuration['regions_classes']['section_header'] = $form_state->getValue(array_merge($settings_tab, ['regions', 'section_header_classes']));
+      $this->configuration['regions_attributes']['section_header'] = Yaml::decode($form_state->getValue(array_merge($settings_tab, ['regions', 'section_header_attributes'])));
+    }
 
-          $blb_settings = $this->configFactory->get('bootstrap_layout_builder.settings');
-          $one_col_layout_class = 'col-12';
-          if ($blb_settings->get('one_col_layout_class')) {
-            $one_col_layout_class = $blb_settings->get('one_col_layout_class');
-          }
+    $first_layout_region_classes = [];
+    foreach ($this->getPluginDefinition()->getRegionNames() as $key => $region_name) {
 
-          foreach($breakpoints as $breakpoint_key => $breakpoint_id) {
-            $this->configuration['layout_regions_classes']['section_header'][$breakpoint_key] = $one_col_layout_class;
-          }
-        }
-        else {
-          $this->configuration['layout_regions_classes'][$region_name] = $this->getRegionClasses($key, $breakpoints);
+      if (count($first_layout_region_classes) < 1 ) {
+        $first_layout_region_classes = $this->configuration['layout_regions_classes'][$region_name];
+      }
+      else {
+        foreach ($this->configuration['layout_regions_classes'][$region_name] as $region_key => $region_class) {
+          if ($region_class == "col-xl-"
+            || $region_class == "col-lg-"
+            || $region_class == "col-md-"
+            || $region_class == "col-sm-"
+            || $region_class == "col-") {
 
-          if (count($first_layout_region_classes) < 1 ) {
-            $first_layout_region_classes = $this->configuration['layout_regions_classes'][$region_name];
-          }
-          else {
-            foreach ($this->configuration['layout_regions_classes'][$region_name] as $region_key => $region_class) {
-              if ($region_class == "col-xl-"
-                || $region_class == "col-lg-"
-                || $region_class == "col-md-"
-                || $region_class == "col-sm-"
-                || $region_class == "col-") {
-                  $this->configuration['layout_regions_classes'][$region_name] = $first_layout_region_classes;
-                break;
-              }
-            }
+            $this->configuration['layout_regions_classes'][$region_name][$region_key] = $first_layout_region_classes[$region_key];
           }
         }
       }
     }
+
   }
 
 }

@@ -106,16 +106,16 @@ class VarbaseLayoutBuilderBootstrapLayoutDeriver extends DeriverBase implements 
   private function getRegions(int $columns_count) {
     $regions = [];
 
-    $regions['section_header'] = [
-      'label' => $this->t('Section header')
-    ];
-
     for ($i = 1; $i <= $columns_count; $i++) {
       $key = 'blb_region_col_' . $i;
       $regions[$key] = [
         'label' => $this->t('Col') . ' ' . $i,
       ];
     }
+
+    $regions['section_header'] = [
+      'label' => $this->t('Section header')
+    ];
 
     return $regions;
   }
