@@ -118,7 +118,7 @@ body {
         .layout-builder-block:hover:not(.ui-state-drop),
         .layout-builder-block:focus:not(.ui-state-drop) {
           .layout-builder__actions__block {
-            z-index: 1;
+            z-index: 4;
           }
         }
       }

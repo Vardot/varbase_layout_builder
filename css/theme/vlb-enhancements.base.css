@@ -114,7 +114,7 @@ body .layout-builder .layout-builder__link--add-template-to-library:focus {
 
 body .layout-builder .layout-builder__region > .layout-builder-block:hover:not(.ui-state-drop) .layout-builder__actions__block,
 body .layout-builder .layout-builder__region > .layout-builder-block:focus:not(.ui-state-drop) .layout-builder__actions__block {
-  z-index: 1;
+  z-index: 4;
 }
 
 body .layout-builder .layout-builder__region > .layout-builder-block {
