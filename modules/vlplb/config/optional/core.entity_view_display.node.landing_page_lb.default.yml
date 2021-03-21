@@ -107,18 +107,23 @@ third_party_settings:
                   class: _none
               scroll_effects:
                 class: null
+              background_edgetoedge: 1
           container_wrapper_bg_color_class: ''
           container_wrapper_bg_media: null
-          container: container
+          container: container-fluid
           section_classes: ''
           section_attributes: null
           regions_classes:
             blb_region_col_1: ''
+            section_header: ''
           regions_attributes:
             blb_region_col_1: {  }
+            section_header: null
           breakpoints: {  }
-          layout_regions_classes: {  }
-          remove_gutters: '0'
+          layout_regions_classes:
+            section_header: null
+          remove_gutters: '1'
+          gutters_between: null
         components:
           a625a1e9-278b-4e0f-a140-b3359dfa43b9:
             uuid: a625a1e9-278b-4e0f-a140-b3359dfa43b9

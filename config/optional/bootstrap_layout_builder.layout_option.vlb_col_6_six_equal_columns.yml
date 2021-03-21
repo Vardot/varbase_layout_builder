@@ -1,9 +1,6 @@
-uuid: adb97a9e-e9e7-4486-b548-652b067d4499
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: 73rgTRP39soUfI8ytBOW1EwDt15RooDripKc-zzfDVQ
 id: vlb_col_6_six_equal_columns
 layout_id: blb_col_6
 label: 'Six equal columns'

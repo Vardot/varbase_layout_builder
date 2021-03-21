@@ -1,9 +1,6 @@
-uuid: a6920254-cdaa-4ad4-a455-03b0884d4111
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: DoAJGrTRKGfS2uQOzR7OWx2FCm84GgLAE-V0rvWWUdo
 id: vlb_col_5_4_2_2_2_2
 layout_id: blb_col_5
 label: '4/12 2/12 2/12 2/12 2/12'

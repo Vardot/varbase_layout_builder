@@ -1,9 +1,6 @@
-uuid: 750c0573-12be-4596-b50b-a333c92a7d34
 langcode: en
 status: true
 dependencies: {  }
-_core:
-  default_config_hash: uiILGWeO8N9eCr5Nzt-iZunZqI70X13zj2XLKI_T27U
 id: vlb_col_2_two_equal_columns
 layout_id: blb_col_2
 label: 'Two equal columns'
