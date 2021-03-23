@@ -21,7 +21,6 @@ install:
   - layout_builder_component_attributes
   - lb_ux
   - layout_library
-  - block_library
   - section_library
   - bootstrap_styles
   - bootstrap_layout_builder
