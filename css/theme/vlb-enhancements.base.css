@@ -60,7 +60,7 @@ body .layout-builder .layout-builder__link--import-from-library:focus {
 }
 
 body .layout-builder .layout-builder__add-block {
-  width: 9.1rem;
+  width: 9.5rem;
   margin: 10px auto;
   text-align: center;
   color: #007bff;
@@ -246,6 +246,18 @@ body .layout-builder .layout-builder__actions__block {
 #drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="justify"],
 #layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="justify"] {
   background-image: url("../../images/plugins/text-alignment/text-justify.svg");
+}
+
+#drupal-off-canvas .fieldgroup.form-composite.form-wrapper,
+#layout-builder-modal .fieldgroup.form-composite.form-wrapper {
+  width: 100%;
+}
+
+#drupal-off-canvas button.button--primary,
+#drupal-off-canvas input[type="submit"].button--primary,
+#layout-builder-modal button.button--primary,
+#layout-builder-modal input[type="submit"].button--primary {
+  text-align: center;
 }
 
 #layout-builder-modal .form-item--editor-format .form-element--editor-format {

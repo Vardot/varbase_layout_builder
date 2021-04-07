@@ -62,7 +62,7 @@ body {
 
     .layout-builder__add-block {
       margin: 10px auto;
-      width: 9.1rem;
+      width: 9.5rem;
       background-color: #eff6fcc9;
       border-radius: 8px;
       text-align: center;
@@ -273,6 +273,21 @@ body {
           }
         }
       }
+    }
+  }
+
+  .fieldgroup {
+    &.form-composite {
+      &.form-wrapper {
+        width: 100%;
+      }
+    }
+  }
+
+  button,
+  input[type="submit"] {
+    &.button--primary {
+      text-align: center;
     }
   }
 }
