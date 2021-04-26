@@ -281,3 +281,142 @@ body .layout-builder .layout-builder__actions__block {
 #layout-builder-modal .form-item--editor-format .form-element--editor-format:focus {
   background-color: #fff;
 }
+
+#drupal-off-canvas .fieldgroup.blb_container_type .fieldset-wrapper > div > div .input-icon:after,
+#layout-builder-modal .fieldgroup.blb_container_type .fieldset-wrapper > div > div .input-icon:after {
+  cursor: pointer;
+}
+
+#drupal-off-canvas .fieldgroup.vlb_content_width .fieldset-wrapper > div,
+#layout-builder-modal .fieldgroup.vlb_content_width .fieldset-wrapper > div {
+  display: flex;
+}
+
+#drupal-off-canvas .fieldgroup.vlb_content_width .fieldset-wrapper > div > div,
+#layout-builder-modal .fieldgroup.vlb_content_width .fieldset-wrapper > div > div {
+  position: relative;
+  flex: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#drupal-off-canvas .fieldgroup.vlb_content_width .fieldset-wrapper > div > div input,
+#layout-builder-modal .fieldgroup.vlb_content_width .fieldset-wrapper > div > div input {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  white-space: nowrap;
+  border: 0;
+}
+
+#drupal-off-canvas .fieldgroup.vlb_content_width .fieldset-wrapper > div > div input + label,
+#layout-builder-modal .fieldgroup.vlb_content_width .fieldset-wrapper > div > div input + label {
+  display: flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+  justify-content: center;
+  justify-content: center;
+  width: 100%;
+  width: calc(100% - 4px);
+  height: 70px;
+  margin: 2px;
+  padding: 8px;
+  padding: 8px;
+  cursor: pointer;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  text-align: center;
+  border-radius: 0;
+  background-color: #292c32;
+  font-size: 10px;
+  font-weight: normal;
+}
+
+#drupal-off-canvas .fieldgroup.vlb_content_width .fieldset-wrapper > div > div input + label:hover,
+#layout-builder-modal .fieldgroup.vlb_content_width .fieldset-wrapper > div > div input + label:hover {
+  background-color: #4b515c;
+}
+
+#drupal-off-canvas .fieldgroup.vlb_content_width .fieldset-wrapper > div > div input + label:hover:after,
+#layout-builder-modal .fieldgroup.vlb_content_width .fieldset-wrapper > div > div input + label:hover:after {
+  border-color: #2f3138;
+}
+
+#drupal-off-canvas .fieldgroup.vlb_content_width .fieldset-wrapper > div > div input:checked + label,
+#layout-builder-modal .fieldgroup.vlb_content_width .fieldset-wrapper > div > div input:checked + label {
+  color: #41a5ff;
+  background-color: #5c606b;
+  font-weight: bold;
+}
+
+#drupal-off-canvas .fieldgroup.vlb_content_width .fieldset-wrapper > div > div input:checked + label svg *,
+#layout-builder-modal .fieldgroup.vlb_content_width .fieldset-wrapper > div > div input:checked + label svg * {
+  color: inherit;
+}
+
+#drupal-off-canvas .fieldgroup.vlb_content_width .fieldset-wrapper > div > div input:checked + label:after,
+#layout-builder-modal .fieldgroup.vlb_content_width .fieldset-wrapper > div > div input:checked + label:after {
+  border-color: #2f3138;
+}
+
+#drupal-off-canvas .fieldgroup.vlb_content_width .fieldset-wrapper > div > div input:checked + label .input-icon:after,
+#layout-builder-modal .fieldgroup.vlb_content_width .fieldset-wrapper > div > div input:checked + label .input-icon:after {
+  background-image: url("../../images/layout/container-active.svg");
+}
+
+#drupal-off-canvas .fieldgroup.vlb_content_width .fieldset-wrapper > div > div .input-icon,
+#layout-builder-modal .fieldgroup.vlb_content_width .fieldset-wrapper > div > div .input-icon {
+  width: 50px !important;
+  height: 26px;
+  margin-bottom: 10px;
+  background: url("../../images/layout/stripe-sm.svg") center top repeat;
+}
+
+#drupal-off-canvas .fieldgroup.vlb_content_width .fieldset-wrapper > div > div .input-icon:after,
+#layout-builder-modal .fieldgroup.vlb_content_width .fieldset-wrapper > div > div .input-icon:after {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto 1rem auto;
+  content: "";
+  cursor: pointer;
+  background-color: #292c32;
+  background-image: url("../../images/layout/container.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 26px;
+}
+
+#drupal-off-canvas .fieldgroup.vlb_content_width .fieldset-wrapper > div > div .input-icon._none:after,
+#layout-builder-modal .fieldgroup.vlb_content_width .fieldset-wrapper > div > div .input-icon._none:after {
+  background-image: url("../../images/layout/none.svg");
+  background-size: 50% 100%;
+}
+
+#drupal-off-canvas .fieldgroup.vlb_content_width .fieldset-wrapper > div > div .input-icon.wide:after,
+#layout-builder-modal .fieldgroup.vlb_content_width .fieldset-wrapper > div > div .input-icon.wide:after {
+  width: 83.33333%;
+}
+
+#drupal-off-canvas .fieldgroup.vlb_content_width .fieldset-wrapper > div > div .input-icon.medium:after,
+#layout-builder-modal .fieldgroup.vlb_content_width .fieldset-wrapper > div > div .input-icon.medium:after {
+  width: 66.66667%;
+}
+
+#drupal-off-canvas .fieldgroup.vlb_content_width .fieldset-wrapper > div > div .input-icon.narrow:after,
+#layout-builder-modal .fieldgroup.vlb_content_width .fieldset-wrapper > div > div .input-icon.narrow:after {
+  width: 50%;
+}
+
+#drupal-off-canvas .fieldgroup.vlb_content_width .fieldset-wrapper > div > div .input-icon.tiny:after,
+#layout-builder-modal .fieldgroup.vlb_content_width .fieldset-wrapper > div > div .input-icon.tiny:after {
+  width: 33.33333%;
+}

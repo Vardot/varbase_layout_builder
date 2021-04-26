@@ -115,6 +115,21 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
         $this->configuration['container'] == 'container-fluid';
       }
 
+      if (isset($this->configuration['content_width'])) {
+
+        $content_widths = [
+          'wide' => 'col-md-10 offset-md-1',
+          'medium' => 'col-md-8 offset-md-2',
+          'narrow' => 'col-md-6 offset-md-3 col-sm-10 offset-sm-1',
+          'tiny' => 'col-md-4 offset-md-4 col-sm-8 offset-sm-2'
+        ];
+
+        if (isset($content_widths[$this->configuration['content_width']])) {
+          $content_classes[] = $content_widths[$this->configuration['content_width']];
+        }
+
+      }
+
       // 1 column.
       $one_column = TRUE;
       if (count($this->getPluginDefinition()->getRegionNames()) > 2) {
@@ -288,6 +303,7 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
   public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
     $form = parent::buildConfigurationForm($form, $form_state);
 
+    // Container types.
     $container_types = [
       'container-fluid' => $this->t('Full'),
       'w-100' => $this->t('Edge to Edge'),
@@ -308,6 +324,36 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
     // Add icons to the container types.
     foreach ($form['ui']['tab_content']['layout']['container_type']['#options'] as $key => $value) {
       $form['ui']['tab_content']['layout']['container_type']['#options'][$key] = '<span class="input-icon ' . $key . '"></span>' . $value;
+    }
+
+    $content_widths = [
+      '_none' => $this->t('N/A'),
+      'wide' => $this->t('Wide'),
+      'medium' => $this->t('Medium'),
+      'narrow' => $this->t('Narrow'),
+      'tiny' => $this->t('Tiny'),
+    ];
+
+    // Content width for Boxed container type.
+    $form['ui']['tab_content']['layout']['content_width'] = [
+      '#type' => 'radios',
+      '#title' => $this->t('Content width'),
+      '#options' => $content_widths,
+      '#default_value' => !empty($this->configuration['content_width']) ? $this->configuration['content_width'] : '',
+      '#attributes' => [
+        'class' => ['vlb_content_width'],
+      ],
+      '#states' => [
+        'visible' => [
+          ':input[name="layout_settings[ui][tab_content][layout][container_type]"]' => ['value' => 'container'],
+        ],
+      ],
+      "#weight" => -39,
+    ];
+
+    // Add icons to Content width.
+    foreach ($form['ui']['tab_content']['layout']['content_width']['#options'] as $key => $value) {
+      $form['ui']['tab_content']['layout']['content_width']['#options'][$key] = '<span class="input-icon ' . $key . '"></span>' . $value;
     }
 
     $gutter_types = [
@@ -416,6 +462,13 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
 
     // Container type.
     $this->configuration['container'] = $form_state->getValue(array_merge($layout_tab, ['container_type']));
+
+    if ($this->configuration['container'] == 'container') {
+      $this->configuration['content_width'] = $form_state->getValue(array_merge($layout_tab, ['content_width']));
+    }
+    else {
+      $this->configuration['content_width'] = '';
+    }
 
     // Styles tab.
     $this->configuration['container_wrapper']['bootstrap_styles'] = $this->stylesGroupManager->submitStylesFormElements($form['ui']['tab_content']['appearance'], $form_state, $style_tab, $this->configuration['container_wrapper']['bootstrap_styles'], 'bootstrap_layout_builder.styles');
