@@ -7,10 +7,10 @@ container_type:
     'w-100': 'Edge to Edge'
     'container': 'Boxed'
   build_options:
-    'container-fluid': 'Full'
-    'w-100': 'Edge to Edge'
-    'container': 'Boxed'
-content_width:
+    'container-fluid': 'container-fluid'
+    'w-100': 'w-100'
+    'container': 'container'
+container_width:
   field_type: radios
   weight: '-39'
   default_value: 'wide'

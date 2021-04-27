@@ -115,20 +115,20 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
         $this->configuration['container'] == 'container-fluid';
       }
 
-      if (isset($this->configuration['content_width'])) {
+      if (isset($this->configuration['container_width'])) {
 
         // Get Varbase Layout Builder custom layout options and defaults.
         $config_layout_options = \Drupal::config('varbase_layout_builder.layout_options');
 
-        // Content width layout configs.
-        $content_width_layout_options = $config_layout_options->get('content_width');
-        $content_widths = [];
-        if (isset($content_width_layout_options['build_options'])) {
-          $content_widths = $content_width_layout_options['build_options'];
+        // Container width layout configs.
+        $container_width_layout_options = $config_layout_options->get('container_width');
+        $container_widths = [];
+        if (isset($container_width_layout_options['build_options'])) {
+          $container_widths = $container_width_layout_options['build_options'];
         }
 
-        if (isset($content_widths[$this->configuration['content_width']])) {
-          $content_classes[] = $content_widths[$this->configuration['content_width']];
+        if (isset($container_widths[$this->configuration['container_width']])) {
+          $content_classes[] = $container_widths[$this->configuration['container_width']];
         }
 
       }
@@ -309,7 +309,7 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
     // Get Varbase Layout Builder custom layout options and defaults.
     $config_layout_options = \Drupal::config('varbase_layout_builder.layout_options');
 
-    // Content width layout configs.
+    // Container type layout configs.
     $container_type_layout_options = $config_layout_options->get('container_type');
 
     // Container types.
@@ -349,50 +349,50 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
       $form['ui']['tab_content']['layout']['container_type']['#options'][$key] = '<span class="input-icon ' . $key . '"></span>' . $value;
     }
 
-    // Content width layout configs.
-    $content_width_layout_options = $config_layout_options->get('content_width');
+    // Container width layout configs.
+    $container_width_layout_options = $config_layout_options->get('container_width');
 
-    // Content width options.
-    $content_widths = [];
-    if (isset($content_width_layout_options['form_options'])) {
-      $content_widths = $content_width_layout_options['form_options'];
+    // Container width options.
+    $container_widths = [];
+    if (isset($container_width_layout_options['form_options'])) {
+      $container_widths = $container_width_layout_options['form_options'];
     }
 
-    // Content width default value.  
-    $content_width_default_value = '';
-    if (!empty($this->configuration['content_width'])) {
-      $content_width_default_value = $this->configuration['content_width'];
+    // Container width default value.  
+    $container_width_default_value = '';
+    if (!empty($this->configuration['container_width'])) {
+      $container_width_default_value = $this->configuration['container_width'];
     }
-    else if (isset($content_width_layout_options['default_value'])) {
-      $content_width_default_value = $content_width_layout_options['default_value'];
-    }
-
-    // Content width weight.
-    $content_width_weight = '';
-    if (isset($content_width_layout_options['weight'])) {
-      $content_width_weight = $content_width_layout_options['weight'];
+    else if (isset($container_width_layout_options['default_value'])) {
+      $container_width_default_value = $container_width_layout_options['default_value'];
     }
 
-    // Content width for Boxed container type.
-    $form['ui']['tab_content']['layout']['content_width'] = [
+    // Container width weight.
+    $container_width_weight = '';
+    if (isset($container_width_layout_options['weight'])) {
+      $container_width_weight = $container_width_layout_options['weight'];
+    }
+
+    // Container width for Boxed container type.
+    $form['ui']['tab_content']['layout']['container_width'] = [
       '#type' => 'radios',
-      '#title' => $this->t('Content width'),
-      '#options' => $content_widths,
-      '#default_value' => $content_width_default_value,
+      '#title' => $this->t('Container width'),
+      '#options' => $container_widths,
+      '#default_value' => $container_width_default_value,
       '#attributes' => [
-        'class' => ['vlb_content_width'],
+        'class' => ['vlb_container_width'],
       ],
       '#states' => [
         'visible' => [
-          ':input[name="layout_settings[ui][tab_content][layout][container_type]"]' => ['value' => 'container'],
+          ':input[name="layout_settings[ui][tab_content][layout][container_type]"]' => ['value' => (string) 'container'],
         ],
       ],
-      "#weight" => $content_width_weight,
+      "#weight" => $container_width_weight,
     ];
 
-    // Add icons to Content width.
-    foreach ($form['ui']['tab_content']['layout']['content_width']['#options'] as $key => $value) {
-      $form['ui']['tab_content']['layout']['content_width']['#options'][$key] = '<span class="input-icon ' . $key . '"></span>' . $value;
+    // Add icons to Container width.
+    foreach ($form['ui']['tab_content']['layout']['container_width']['#options'] as $key => $value) {
+      $form['ui']['tab_content']['layout']['container_width']['#options'][$key] = '<span class="input-icon ' . $key . '"></span>' . $value;
     }
 
     // Remove Gutters layout configs.
@@ -464,7 +464,7 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
         '#default_value' => $gutters_between_default_value,
         '#validated' => TRUE,
         '#attributes' => [
-          'class' => ['field-gutters-between'],
+          'class' => ['vlb_gutters_between'],
         ],
         '#states' => [
           'visible' => [
@@ -546,10 +546,10 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
     $this->configuration['container'] = $form_state->getValue(array_merge($layout_tab, ['container_type']));
 
     if ($this->configuration['container'] == 'container') {
-      $this->configuration['content_width'] = $form_state->getValue(array_merge($layout_tab, ['content_width']));
+      $this->configuration['container_width'] = $form_state->getValue(array_merge($layout_tab, ['container_width']));
     }
     else {
-      $this->configuration['content_width'] = '';
+      $this->configuration['container_width'] = '';
     }
 
     // Styles tab.
