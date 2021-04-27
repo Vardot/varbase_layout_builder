@@ -117,12 +117,15 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
 
       if (isset($this->configuration['content_width'])) {
 
-        $content_widths = [
-          'wide' => 'col-md-10 offset-md-1',
-          'medium' => 'col-md-8 offset-md-2',
-          'narrow' => 'col-md-6 offset-md-3 col-sm-10 offset-sm-1',
-          'tiny' => 'col-md-4 offset-md-4 col-sm-8 offset-sm-2'
-        ];
+        // Get Varbase Layout Builder custom layout options and defaults.
+        $config_layout_options = \Drupal::config('varbase_layout_builder.layout_options');
+
+        // Content width layout configs.
+        $content_width_layout_options = $config_layout_options->get('content_width');
+        $content_widths = [];
+        if (isset($content_width_layout_options['build_options'])) {
+          $content_widths = $content_width_layout_options['build_options'];
+        }
 
         if (isset($content_widths[$this->configuration['content_width']])) {
           $content_classes[] = $content_widths[$this->configuration['content_width']];
@@ -303,22 +306,42 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
   public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
     $form = parent::buildConfigurationForm($form, $form_state);
 
+    // Get Varbase Layout Builder custom layout options and defaults.
+    $config_layout_options = \Drupal::config('varbase_layout_builder.layout_options');
+
+    // Content width layout configs.
+    $container_type_layout_options = $config_layout_options->get('container_type');
+
     // Container types.
-    $container_types = [
-      'container-fluid' => $this->t('Full'),
-      'w-100' => $this->t('Edge to Edge'),
-      'container' => $this->t('Boxed'),
-    ];
+    $container_types = [];
+    if (isset($container_type_layout_options['form_options'])) {
+      $container_types = $container_type_layout_options['form_options'];
+    }
+
+    // Container type default value.
+    $container_type_default_value = '';
+    if (!empty($this->configuration['container'])) {
+      $container_type_default_value = $this->configuration['container'];
+    }
+    else if (isset($container_type_layout_options['default_value'])) {
+      $container_type_default_value = $container_type_layout_options['default_value'];
+    }
+
+    // Container type weight.
+    $container_type_weight = '';
+    if (isset($container_type_layout_options['weight'])) {
+      $container_type_weight = $container_type_layout_options['weight'];
+    }
 
     $form['ui']['tab_content']['layout']['container_type'] = [
       '#type' => 'radios',
       '#title' => $this->t('Container type'),
       '#options' => $container_types,
-      '#default_value' => !empty($this->configuration['container']) ? $this->configuration['container'] : 'container-fluid',
+      '#default_value' => $container_type_default_value,
       '#attributes' => [
         'class' => ['blb_container_type'],
       ],
-      "#weight" => -40,
+      "#weight" => $container_type_weight,
     ];
 
     // Add icons to the container types.
@@ -326,20 +349,36 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
       $form['ui']['tab_content']['layout']['container_type']['#options'][$key] = '<span class="input-icon ' . $key . '"></span>' . $value;
     }
 
-    $content_widths = [
-      '_none' => $this->t('N/A'),
-      'wide' => $this->t('Wide'),
-      'medium' => $this->t('Medium'),
-      'narrow' => $this->t('Narrow'),
-      'tiny' => $this->t('Tiny'),
-    ];
+    // Content width layout configs.
+    $content_width_layout_options = $config_layout_options->get('content_width');
+
+    // Content width options.
+    $content_widths = [];
+    if (isset($content_width_layout_options['form_options'])) {
+      $content_widths = $content_width_layout_options['form_options'];
+    }
+
+    // Content width default value.  
+    $content_width_default_value = '';
+    if (!empty($this->configuration['content_width'])) {
+      $content_width_default_value = $this->configuration['content_width'];
+    }
+    else if (isset($content_width_layout_options['default_value'])) {
+      $content_width_default_value = $content_width_layout_options['default_value'];
+    }
+
+    // Content width weight.
+    $content_width_weight = '';
+    if (isset($content_width_layout_options['weight'])) {
+      $content_width_weight = $content_width_layout_options['weight'];
+    }
 
     // Content width for Boxed container type.
     $form['ui']['tab_content']['layout']['content_width'] = [
       '#type' => 'radios',
       '#title' => $this->t('Content width'),
       '#options' => $content_widths,
-      '#default_value' => !empty($this->configuration['content_width']) ? $this->configuration['content_width'] : '',
+      '#default_value' => $content_width_default_value,
       '#attributes' => [
         'class' => ['vlb_content_width'],
       ],
@@ -348,7 +387,7 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
           ':input[name="layout_settings[ui][tab_content][layout][container_type]"]' => ['value' => 'container'],
         ],
       ],
-      "#weight" => -39,
+      "#weight" => $content_width_weight,
     ];
 
     // Add icons to Content width.
@@ -356,27 +395,73 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
       $form['ui']['tab_content']['layout']['content_width']['#options'][$key] = '<span class="input-icon ' . $key . '"></span>' . $value;
     }
 
-    $gutter_types = [
-      1 => $this->t('No Gutters'),
-      0 => $this->t('With Gutters'),
-    ];
+    // Remove Gutters layout configs.
+    $remove_gutters_layout_options = $config_layout_options->get('remove_gutters');
+
+    // Remove Gutters options.
+    $remove_gutters_options = [];
+    if (isset($remove_gutters_layout_options['form_options'])) {
+      $remove_gutters_options = $remove_gutters_layout_options['form_options'];
+    }
+
+    // Remove Gutters default value.  
+    $remove_gutters_default_value = TRUE;
+    if (!empty($this->configuration['remove_gutters'])) {
+      $remove_gutters_default_value = $this->configuration['remove_gutters'];
+    }
+    else if (isset($remove_gutters_layout_options['default_value'])) {
+      $remove_gutters_default_value = $remove_gutters_layout_options['default_value'];
+    }
+
+    // Remove Gutters weight.
+    $remove_gutters_weight = '';
+    if (isset($remove_gutters_layout_options['weight'])) {
+      $remove_gutters_weight = $remove_gutters_layout_options['weight'];
+    }
 
     $form['ui']['tab_content']['layout']['remove_gutters'] = [
       '#type' => 'radios',
       '#title' => $this->t('Gutters'),
-      '#options' => $gutter_types,
-      '#default_value' => ((isset($this->configuration['remove_gutters'])) ? $this->configuration['remove_gutters'] : TRUE),
+      '#options' => $remove_gutters_options,
+      '#default_value' => $remove_gutters_default_value,
       '#attributes' => [
         'class' => ['blb_gutter_type'],
       ],
-      "#weight" => 50,
+      "#weight" => $remove_gutters_weight,
     ];
 
+    // Add icons to the gutter types.
+    foreach ($form['ui']['tab_content']['layout']['remove_gutters']['#options'] as $key => $value) {
+      $form['ui']['tab_content']['layout']['remove_gutters']['#options'][$key] = '<span class="input-icon gutter-icon-' . $key . '"></span>' . $value;
+    }
+
+    // When number of coloumns for the layout is 2 and more.
+    // And Removes Gutters was checked.
+    // Then show the Gutters between checkbox.
     if (count($this->getPluginDefinition()->getRegionNames()) > 2) {
+
+      // Gutters between layout configs.
+      $gutters_between_layout_options = $config_layout_options->get('gutters_between');
+
+      // Gutters between default value.  
+      $gutters_between_default_value = TRUE;
+      if (!empty($this->configuration['gutters_between'])) {
+        $gutters_between_default_value = $this->configuration['gutters_between'];
+      }
+      else if (isset($gutters_between_layout_options['default_value'])) {
+        $gutters_between_default_value = $gutters_between_layout_options['default_value'];
+      }
+
+      // Gutters between weight.
+      $gutters_between_weight = '';
+      if (isset($gutters_between_layout_options['weight'])) {
+        $gutters_between_weight = $gutters_between_layout_options['weight'];
+      }
+
       $form['ui']['tab_content']['layout']['gutters_between'] = [
         '#type' => 'checkbox',
         '#title' => $this->t('Keep gutters between columns'),
-        '#default_value' => ((isset($this->configuration['gutters_between'])) ? $this->configuration['gutters_between'] : TRUE),
+        '#default_value' => $gutters_between_default_value,
         '#validated' => TRUE,
         '#attributes' => [
           'class' => ['field-gutters-between'],
@@ -386,14 +471,11 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
             ':input[name="layout_settings[ui][tab_content][layout][remove_gutters]"]' => ['value' => '1'],
           ],
         ],
-        "#weight" => 55,
+        "#weight" => $gutters_between_weight,
       ];
     }
 
-    // Add icons to the gutter types.
-    foreach ($form['ui']['tab_content']['layout']['remove_gutters']['#options'] as $key => $value) {
-      $form['ui']['tab_content']['layout']['remove_gutters']['#options'][$key] = '<span class="input-icon gutter-icon-' . $key . '"></span>' . $value;
-    }
+
 
     $layout_id = $this->getPluginDefinition()->id();
     $breakpoints = $this->entityTypeManager->getStorage('blb_breakpoint')->getQuery()->sort('weight', 'ASC')->execute();
