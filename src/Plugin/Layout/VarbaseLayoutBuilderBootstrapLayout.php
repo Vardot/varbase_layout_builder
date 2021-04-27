@@ -384,7 +384,7 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
       ],
       '#states' => [
         'visible' => [
-          ':input[name="layout_settings[ui][tab_content][layout][container_type]"]' => ['value' => (string) 'container'],
+          ':input[name="layout_settings[ui][tab_content][layout][container_type]"]' => ['value' => 'container'],
         ],
       ],
       "#weight" => $container_width_weight,
@@ -405,8 +405,9 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
     }
 
     // Remove Gutters default value.  
-    $remove_gutters_default_value = TRUE;
-    if (!empty($this->configuration['remove_gutters'])) {
+    $remove_gutters_default_value = 1;
+    if (isset($this->configuration['remove_gutters'])
+      && $this->configuration['remove_gutters'] !== NULL) {
       $remove_gutters_default_value = $this->configuration['remove_gutters'];
     }
     else if (isset($remove_gutters_layout_options['default_value'])) {
@@ -563,6 +564,7 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
 
     // Gutter Classes.
     $this->configuration['remove_gutters'] = $form_state->getValue(array_merge($layout_tab, ['remove_gutters']));
+
 
     // Row classes from advanced mode.
     if (!$this->sectionSettingsIsHidden()) {

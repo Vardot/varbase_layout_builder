@@ -29,8 +29,8 @@ remove_gutters:
   weight: '50'
   default_value: 1
   form_options:
-    '1': 'No Gutters'
-    '0': 'With Gutters'
+    1: 'No Gutters'
+    0: 'With Gutters'
 gutters_between:
   field_type: checkbox
   weight: '55'

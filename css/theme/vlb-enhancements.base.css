@@ -265,13 +265,13 @@ body .layout-builder .layout-builder__actions__block {
   cursor: pointer;
 }
 
-#drupal-off-canvas .fieldgroup.vlb_content_width .fieldset-wrapper > div,
-#layout-builder-modal .fieldgroup.vlb_content_width .fieldset-wrapper > div {
+#drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div,
+#layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div {
   display: flex;
 }
 
-#drupal-off-canvas .fieldgroup.vlb_content_width .fieldset-wrapper > div > div,
-#layout-builder-modal .fieldgroup.vlb_content_width .fieldset-wrapper > div > div {
+#drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div,
+#layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div {
   position: relative;
   flex: 100%;
   width: 100%;
@@ -279,8 +279,8 @@ body .layout-builder .layout-builder__actions__block {
   padding: 0;
 }
 
-#drupal-off-canvas .fieldgroup.vlb_content_width .fieldset-wrapper > div > div input,
-#layout-builder-modal .fieldgroup.vlb_content_width .fieldset-wrapper > div > div input {
+#drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input,
+#layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input {
   position: absolute;
   overflow: hidden;
   clip: rect(0, 0, 0, 0);
@@ -292,8 +292,8 @@ body .layout-builder .layout-builder__actions__block {
   border: 0;
 }
 
-#drupal-off-canvas .fieldgroup.vlb_content_width .fieldset-wrapper > div > div input + label,
-#layout-builder-modal .fieldgroup.vlb_content_width .fieldset-wrapper > div > div input + label {
+#drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input + label,
+#layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input + label {
   display: flex;
   display: flex;
   flex-direction: column;
@@ -318,48 +318,48 @@ body .layout-builder .layout-builder__actions__block {
   font-weight: normal;
 }
 
-#drupal-off-canvas .fieldgroup.vlb_content_width .fieldset-wrapper > div > div input + label:hover,
-#layout-builder-modal .fieldgroup.vlb_content_width .fieldset-wrapper > div > div input + label:hover {
+#drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input + label:hover,
+#layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input + label:hover {
   background-color: #4b515c;
 }
 
-#drupal-off-canvas .fieldgroup.vlb_content_width .fieldset-wrapper > div > div input + label:hover:after,
-#layout-builder-modal .fieldgroup.vlb_content_width .fieldset-wrapper > div > div input + label:hover:after {
+#drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input + label:hover:after,
+#layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input + label:hover:after {
   border-color: #2f3138;
 }
 
-#drupal-off-canvas .fieldgroup.vlb_content_width .fieldset-wrapper > div > div input:checked + label,
-#layout-builder-modal .fieldgroup.vlb_content_width .fieldset-wrapper > div > div input:checked + label {
+#drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input:checked + label,
+#layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input:checked + label {
   color: #41a5ff;
   background-color: #5c606b;
   font-weight: bold;
 }
 
-#drupal-off-canvas .fieldgroup.vlb_content_width .fieldset-wrapper > div > div input:checked + label svg *,
-#layout-builder-modal .fieldgroup.vlb_content_width .fieldset-wrapper > div > div input:checked + label svg * {
+#drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input:checked + label svg *,
+#layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input:checked + label svg * {
   color: inherit;
 }
 
-#drupal-off-canvas .fieldgroup.vlb_content_width .fieldset-wrapper > div > div input:checked + label:after,
-#layout-builder-modal .fieldgroup.vlb_content_width .fieldset-wrapper > div > div input:checked + label:after {
+#drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input:checked + label:after,
+#layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input:checked + label:after {
   border-color: #2f3138;
 }
 
-#drupal-off-canvas .fieldgroup.vlb_content_width .fieldset-wrapper > div > div input:checked + label .input-icon:after,
-#layout-builder-modal .fieldgroup.vlb_content_width .fieldset-wrapper > div > div input:checked + label .input-icon:after {
+#drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input:checked + label .input-icon:after,
+#layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input:checked + label .input-icon:after {
   background-image: url("../../images/layout/container-active.svg");
 }
 
-#drupal-off-canvas .fieldgroup.vlb_content_width .fieldset-wrapper > div > div .input-icon,
-#layout-builder-modal .fieldgroup.vlb_content_width .fieldset-wrapper > div > div .input-icon {
+#drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon,
+#layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon {
   width: 50px !important;
   height: 26px;
   margin-bottom: 10px;
   background: url("../../images/layout/stripe-sm.svg") center top repeat;
 }
 
-#drupal-off-canvas .fieldgroup.vlb_content_width .fieldset-wrapper > div > div .input-icon:after,
-#layout-builder-modal .fieldgroup.vlb_content_width .fieldset-wrapper > div > div .input-icon:after {
+#drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon:after,
+#layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon:after {
   display: block;
   width: 100%;
   height: 100%;
@@ -373,29 +373,29 @@ body .layout-builder .layout-builder__actions__block {
   background-size: 100% 26px;
 }
 
-#drupal-off-canvas .fieldgroup.vlb_content_width .fieldset-wrapper > div > div .input-icon._none:after,
-#layout-builder-modal .fieldgroup.vlb_content_width .fieldset-wrapper > div > div .input-icon._none:after {
+#drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon._none:after,
+#layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon._none:after {
   background-image: url("../../images/layout/none.svg");
   background-size: 50% 100%;
 }
 
-#drupal-off-canvas .fieldgroup.vlb_content_width .fieldset-wrapper > div > div .input-icon.wide:after,
-#layout-builder-modal .fieldgroup.vlb_content_width .fieldset-wrapper > div > div .input-icon.wide:after {
+#drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon.wide:after,
+#layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon.wide:after {
   width: 83.33333%;
 }
 
-#drupal-off-canvas .fieldgroup.vlb_content_width .fieldset-wrapper > div > div .input-icon.medium:after,
-#layout-builder-modal .fieldgroup.vlb_content_width .fieldset-wrapper > div > div .input-icon.medium:after {
+#drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon.medium:after,
+#layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon.medium:after {
   width: 66.66667%;
 }
 
-#drupal-off-canvas .fieldgroup.vlb_content_width .fieldset-wrapper > div > div .input-icon.narrow:after,
-#layout-builder-modal .fieldgroup.vlb_content_width .fieldset-wrapper > div > div .input-icon.narrow:after {
+#drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon.narrow:after,
+#layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon.narrow:after {
   width: 50%;
 }
 
-#drupal-off-canvas .fieldgroup.vlb_content_width .fieldset-wrapper > div > div .input-icon.tiny:after,
-#layout-builder-modal .fieldgroup.vlb_content_width .fieldset-wrapper > div > div .input-icon.tiny:after {
+#drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon.tiny:after,
+#layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon.tiny:after {
   width: 33.33333%;
 }
 
