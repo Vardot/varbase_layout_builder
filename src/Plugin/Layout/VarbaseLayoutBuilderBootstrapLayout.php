@@ -112,25 +112,7 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
       $edge2edge_content = FALSE;
       if ($this->configuration['container'] == 'w-100') {
         $edge2edge_content = TRUE;
-        $this->configuration['container'] == 'container-fluid';
-      }
-
-      if (isset($this->configuration['container_width'])) {
-
-        // Get Varbase Layout Builder custom layout options and defaults.
-        $config_layout_options = \Drupal::config('varbase_layout_builder.layout_options');
-
-        // Container width layout configs.
-        $container_width_layout_options = $config_layout_options->get('container_width');
-        $container_widths = [];
-        if (isset($container_width_layout_options['build_options'])) {
-          $container_widths = $container_width_layout_options['build_options'];
-        }
-
-        if (isset($container_widths[$this->configuration['container_width']])) {
-          $content_classes[] = $container_widths[$this->configuration['container_width']];
-        }
-
+        $this->configuration['container'] = 'container-fluid';
       }
 
       // 1 column.

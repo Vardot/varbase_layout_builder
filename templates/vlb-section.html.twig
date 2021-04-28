@@ -10,15 +10,17 @@
  * @ingroup themeable
  */
 #}
-{% set classes = [
-  'layout',
-  'row',
-  content['#settings']['remove_gutters'] == 1 and content['#settings']['gutters_between'] == 1 ? 'gx-0' : '',
-  content['#settings']['remove_gutters'] == 1 and content['#settings']['gutters_between'] == 0 ? 'no-gutters' : '',
-  'layout-builder__layout'
-] %}
-
 {% if content %}
+
+  {% set classes = [
+    'layout',
+    'row',
+    content['#settings']['remove_gutters'] == 1 and content['#settings']['gutters_between'] == 1 ? 'gx-0' : '',
+    content['#settings']['remove_gutters'] == 1 and content['#settings']['gutters_between'] == 0 ? 'no-gutters' : '',
+    content['#settings']['container_width_classes'] ? content['#settings']['container_width_classes'] : '',
+    'layout-builder__layout'
+  ] %}
+
   {% if content['section_header']|render|striptags %}
   <div class="vlb-section-header row">
     <div {{ region_attributes['section_header'] }}>

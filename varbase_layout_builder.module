@@ -215,4 +215,23 @@ function varbase_layout_builder_preprocess_blb_section(&$variables) {
   if (isset($variables['content']['section_header']['#attributes'])) {
     $variables['region_attributes']['section_header'] = new Attribute($variables['content']['section_header']['#attributes']);
   }
+
+  if (isset($variables['content']['#settings']['container_width'])
+   && $variables['content']['#settings']['container_width'] !== '') {
+
+    // Get Varbase Layout Builder custom layout options and defaults.
+    $config_layout_options = \Drupal::config('varbase_layout_builder.layout_options');
+
+    // Container width layout configs.
+    $container_width_layout_options = $config_layout_options->get('container_width');
+    $container_widths = [];
+    if (isset($container_width_layout_options['build_options'])) {
+      $container_widths = $container_width_layout_options['build_options'];
+    }
+
+    if (isset($container_widths[$variables['content']['#settings']['container_width']])) {
+      $variables['content']['#settings']['container_width_classes'] = $container_widths[$variables['content']['#settings']['container_width']];
+    }
+
+  }
 }
