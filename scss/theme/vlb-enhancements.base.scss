@@ -164,6 +164,14 @@ body {
       left: 0;
     }
   }
+
+  .layout-builder__layout,
+  .layout-builder-block,
+  .layout-builder__add-block {
+    &.is-layout-builder-highlighted {
+      margin: auto;
+    }
+  }
 }
 [dir=rtl] body {
   .layout-builder {
