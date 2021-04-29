@@ -288,11 +288,11 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
   public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
     $form = parent::buildConfigurationForm($form, $form_state);
 
-    // Get Varbase Layout Builder custom layout options and defaults.
-    $config_layout_options = \Drupal::config('varbase_layout_builder.layout_options');
+    // VLB layout defaults.
+    $vlb_layout_defaults = \Drupal::config('varbase_layout_builder.layout_defaults');
 
     // Container type layout configs.
-    $container_type_layout_options = $config_layout_options->get('container_type');
+    $container_type_layout_options = $vlb_layout_defaults->get('container_type');
 
     // Container types.
     $container_types = [];
@@ -331,8 +331,8 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
       $form['ui']['tab_content']['layout']['container_type']['#options'][$key] = '<span class="input-icon ' . $key . '"></span>' . $value;
     }
 
-    // Container width layout configs.
-    $container_width_layout_options = $config_layout_options->get('container_width');
+    // Container width defaults.
+    $container_width_layout_options = $vlb_layout_defaults->get('container_width');
 
     // Container width options.
     $container_widths = [];
@@ -377,16 +377,16 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
       $form['ui']['tab_content']['layout']['container_width']['#options'][$key] = '<span class="input-icon ' . $key . '"></span>' . $value;
     }
 
-    // Remove Gutters layout configs.
-    $remove_gutters_layout_options = $config_layout_options->get('remove_gutters');
+    // Remove gutters defaults.
+    $remove_gutters_layout_options = $vlb_layout_defaults->get('remove_gutters');
 
-    // Remove Gutters options.
-    $remove_gutters_options = [];
+    // Gutters types.
+    $gutter_types = [];
     if (isset($remove_gutters_layout_options['form_options'])) {
-      $remove_gutters_options = $remove_gutters_layout_options['form_options'];
+      $gutter_types = $remove_gutters_layout_options['form_options'];
     }
 
-    // Remove Gutters default value.  
+    // Remove gutters default value.  
     $remove_gutters_default_value = 1;
     if (isset($this->configuration['remove_gutters'])
       && $this->configuration['remove_gutters'] !== NULL) {
@@ -396,7 +396,7 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
       $remove_gutters_default_value = $remove_gutters_layout_options['default_value'];
     }
 
-    // Remove Gutters weight.
+    // Remove gutters weight.
     $remove_gutters_weight = '';
     if (isset($remove_gutters_layout_options['weight'])) {
       $remove_gutters_weight = $remove_gutters_layout_options['weight'];
@@ -405,7 +405,7 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
     $form['ui']['tab_content']['layout']['remove_gutters'] = [
       '#type' => 'radios',
       '#title' => $this->t('Gutters'),
-      '#options' => $remove_gutters_options,
+      '#options' => $gutter_types,
       '#default_value' => $remove_gutters_default_value,
       '#attributes' => [
         'class' => ['blb_gutter_type'],
@@ -423,8 +423,8 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
     // Then show the Gutters between checkbox.
     if (count($this->getPluginDefinition()->getRegionNames()) > 2) {
 
-      // Gutters between layout configs.
-      $gutters_between_layout_options = $config_layout_options->get('gutters_between');
+      // Gutters between defaults.
+      $gutters_between_layout_options = $vlb_layout_defaults->get('gutters_between');
 
       // Gutters between default value.  
       $gutters_between_default_value = TRUE;
@@ -488,6 +488,16 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
           ],
           "#weight" => -10,
         ];
+      }
+    }
+
+    if (isset($form['ui']['tab_content']['layout']['breakpoints'])) {
+      // Breakpoints defaults.
+      $breakpoints_defaults = $vlb_layout_defaults->get('breakpoints');
+
+      // Breakpoints weight.
+      if (isset($breakpoints_defaults['weight'])) {
+        $form['ui']['tab_content']['layout']['breakpoints']['#weight'] = $breakpoints_defaults['weight'];
       }
     }
 

@@ -1,5 +1,4 @@
 container_type:
-  field_type: radios
   weight: '-40'
   default_value: 'container-fluid'
   form_options:
@@ -11,7 +10,6 @@ container_type:
     'w-100': 'w-100'
     'container': 'container'
 container_width:
-  field_type: radios
   weight: '-39'
   default_value: 'wide'
   form_options:
@@ -24,14 +22,14 @@ container_width:
     'medium': 'col-md-8 offset-md-2'
     'narrow': 'col-md-6 offset-md-3 col-sm-10 offset-sm-1'
     'tiny': 'col-md-4 offset-md-4 col-sm-8 offset-sm-2'
+breakpoints:
+  weight: '40'
 remove_gutters:
-  field_type: radios
   weight: '50'
   default_value: 1
   form_options:
     1: 'No Gutters'
     0: 'With Gutters'
 gutters_between:
-  field_type: checkbox
   weight: '55'
   default_value: TRUE
