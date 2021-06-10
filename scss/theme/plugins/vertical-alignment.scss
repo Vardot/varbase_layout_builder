@@ -1,0 +1,34 @@
+$vertical_alignment_icon_path: '../../../images/plugins/vertical-alignment/';
+
+#drupal-off-canvas,
+#layout-builder-modal {
+
+  // Vertical alignment.
+  .field-vertical-alignment .fieldset-wrapper > div > div {
+    input {
+      + label {
+        font-size: 0;
+        text-indent: -999em;
+        height: 40px;
+
+        .input-icon {
+          margin-bottom: 0;
+
+          &[class*="align-items-start"] {
+            background-image: url($vertical_alignment_icon_path + 'align-top.svg');
+          }
+
+          &[class*="align-items-center"] {
+            background-image: url($vertical_alignment_icon_path + 'align-middle.svg');
+          }
+
+          &[class*="align-items-end"] {
+            background-image: url($vertical_alignment_icon_path + 'align-bottom.svg');
+          }
+
+        }
+      }
+    }
+  }
+
+}

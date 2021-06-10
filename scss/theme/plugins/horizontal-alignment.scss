@@ -1,0 +1,34 @@
+$horizontal_alignment_icon_path: '../../../images/plugins/horizontal-alignment/';
+
+#drupal-off-canvas,
+#layout-builder-modal {
+
+  // Horizontal Alignment.
+  .field-horizontal-alignment .fieldset-wrapper > div > div {
+    input {
+      + label {
+        font-size: 0;
+        text-indent: -999em;
+        height: 40px;
+
+        .input-icon {
+          margin-bottom: 0;
+
+          &[class*="justify-content-start"] {
+            background-image: url($horizontal_alignment_icon_path + 'align-start.svg');
+          }
+
+          &[class*="justify-content-center"] {
+            background-image: url($horizontal_alignment_icon_path + 'align-center.svg');
+          }
+
+          &[class*="justify-content-end"] {
+            background-image: url($horizontal_alignment_icon_path + 'align-end.svg');
+          }
+
+        }
+      }
+    }
+  }
+
+}

@@ -8,6 +8,9 @@ enhancements:
 configure-section.admin:
   js:
     js/vlb-configure-section.admin.js: { }
+  dependencies:
+    - varbase_layout_builder/plugin.horizontal_alignment.layout_builder_form
+    - varbase_layout_builder/plugin.vertical_alignment.layout_builder_form
 
 # Layout builder modal claro theme 
 claro:
@@ -57,3 +60,15 @@ claro:
     - core/jquery
     - core/drupal
     - core/modernizr
+
+# Horizontal alignment.
+plugin.horizontal_alignment.layout_builder_form:
+  css:
+    theme:
+      css/theme/plugins/horizontal-alignment.css: { }
+
+# Vertical alignment.
+plugin.vertical_alignment.layout_builder_form:
+  css:
+    theme:
+      css/theme/plugins/vertical-alignment.css: { }

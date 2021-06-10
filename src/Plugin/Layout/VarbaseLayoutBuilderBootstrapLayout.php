@@ -48,7 +48,7 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
       $one_col_layout_class = $blb_settings->get('one_col_layout_class');
     }
 
-    
+
     $this->configuration['layout_regions_classes']['section_header'][] = $one_col_layout_class;
 
     // The default one col layout class.

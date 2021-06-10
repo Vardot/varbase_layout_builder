@@ -1,0 +1,26 @@
+#drupal-off-canvas .field-horizontal-alignment .fieldset-wrapper > div > div input + label,
+#layout-builder-modal .field-horizontal-alignment .fieldset-wrapper > div > div input + label {
+  height: 50px;
+  text-indent: -999em;
+  font-size: 0;
+}
+
+#drupal-off-canvas .field-horizontal-alignment .fieldset-wrapper > div > div input + label .input-icon,
+#layout-builder-modal .field-horizontal-alignment .fieldset-wrapper > div > div input + label .input-icon {
+  margin-bottom: 0;
+}
+
+#drupal-off-canvas .field-horizontal-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="justify-content-start"],
+#layout-builder-modal .field-horizontal-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="justify-content-start"] {
+  background-image: url("../../../images/plugins/horizontal-alignment/align-start.svg");
+}
+
+#drupal-off-canvas .field-horizontal-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="justify-content-center"],
+#layout-builder-modal .field-horizontal-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="justify-content-center"] {
+  background-image: url("../../../images/plugins/horizontal-alignment/align-center.svg");
+}
+
+#drupal-off-canvas .field-horizontal-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="justify-content-end"],
+#layout-builder-modal .field-horizontal-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="justify-content-end"] {
+  background-image: url("../../../images/plugins/horizontal-alignment/align-end.svg");
+}
