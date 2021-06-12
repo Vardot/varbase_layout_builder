@@ -44,3 +44,5 @@ data_key: aos
 scroll_effects_attr_type: 1
 scroll_effects_data_key: data-aos
 scroll_effects_library_type: external
+horizontal_alignment: "justify-content-start|Align start\r\njustify-content-center|Align center\r\njustify-content-end|Align end"
+vertical_alignment: "align-items-start|Align top\r\nalign-items-center|Align middle\r\nalign-items-end|Align bottom"
