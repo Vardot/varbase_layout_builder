@@ -84,20 +84,4 @@ class HorizontalAlignment extends StylePluginBase {
     ];
   }
 
-  /**
-   * {@inheritdoc}
-   */
-  public function build(array $build, array $storage, $theme_wrapper = NULL) {
-
-    if (isset($storage['horizontal_alignment']['class'])) {
-
-      // $d = array_keys($build);
-      // print_r($d);
-      // die(' con');
-      $build['#theme_wrappers']['blb_section']['#attributes']['class'][] = $storage['horizontal_alignment']['class'];
-    }
-
-    return $build;
-  }
-
 }

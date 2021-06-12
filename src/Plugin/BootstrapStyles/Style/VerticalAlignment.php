@@ -84,19 +84,4 @@ class VerticalAlignment extends StylePluginBase {
     ];
   }
 
- /** 
-  * {@inheritdoc}
-  */
- public function build(array $build, array $storage, $theme_wrapper = NULL) {
-
-   if (isset($storage['vertical_alignment']['class'])) {
-    // $d = array_keys($build['#theme_wrappers']);
-    // print_r($d);
-    // die(' con');
-    $build['#theme_wrappers']['blb_section']['#attributes']['class'][] = $storage['vertical_alignment']['class'];
-   }
-
-   return $build;
- }
-
 }

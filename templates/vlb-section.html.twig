@@ -17,6 +17,8 @@
     'row',
     content['#settings']['remove_gutters'] == 1 and content['#settings']['gutters_between'] == 1 ? 'gx-0' : '',
     content['#settings']['remove_gutters'] == 1 and content['#settings']['gutters_between'] == 0 ? 'no-gutters' : '',
+    content['#settings']['container_wrapper']['bootstrap_styles']['horizontal_alignment']['class'] ? content['#settings']['container_wrapper']['bootstrap_styles']['horizontal_alignment']['class'] : '',
+    content['#settings']['container_wrapper']['bootstrap_styles']['vertical_alignment']['class'] ? content['#settings']['container_wrapper']['bootstrap_styles']['vertical_alignment']['class'] : '',
     'layout-builder__layout'
   ] %}
 
@@ -39,8 +41,10 @@
 
       {% set container_width_row_attributes = create_attribute() %}
       {% set container_width_row_attributes = container_width_row_attributes.addClass('row') %}
-      {% set container_width_row_attributes = container_width_row_attributes.addClass(content['#settings']['horizontal_alignment']['class']) %}
-      {% set container_width_row_attributes = container_width_row_attributes.addClass(content['#settings']['vertical_alignment']['class']) %}
+
+      {% if content['#settings']['container_wrapper']['bootstrap_styles']['vertical_alignment']['class'] %}
+        {% set container_width_row_attributes = container_width_row_attributes.addClass(content['#settings']['container_wrapper']['bootstrap_styles']['vertical_alignment']['class']) %}
+      {% endif %}
 
       <div {{ container_width_attributes }}>
         <div {{ container_width_container_attributes }}>
