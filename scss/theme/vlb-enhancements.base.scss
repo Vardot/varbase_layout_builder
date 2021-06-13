@@ -231,7 +231,20 @@ body {
         margin-left: 1rem;
       }
     }
+
+    .bs_input-circles,
+    .bs_input-boxes {
+      .fieldset-wrapper > div {
+        flex-direction: row-reverse;
+      }
+
+      fieldset > legend {
+        text-align: right;
+      }
+    }
+
   }
+
 }
 
 .toolbar-fixed {

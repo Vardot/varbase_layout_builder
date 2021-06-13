@@ -211,6 +211,20 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
   margin-left: 1rem;
 }
 
+[dir=rtl] body #drupal-off-canvas .bs_input-circles .fieldset-wrapper > div,
+[dir=rtl] body #drupal-off-canvas .bs_input-boxes .fieldset-wrapper > div,
+[dir=rtl] body #layout-builder-modal .bs_input-circles .fieldset-wrapper > div,
+[dir=rtl] body #layout-builder-modal .bs_input-boxes .fieldset-wrapper > div {
+  flex-direction: row-reverse;
+}
+
+[dir=rtl] body #drupal-off-canvas .bs_input-circles fieldset > legend,
+[dir=rtl] body #drupal-off-canvas .bs_input-boxes fieldset > legend,
+[dir=rtl] body #layout-builder-modal .bs_input-circles fieldset > legend,
+[dir=rtl] body #layout-builder-modal .bs_input-boxes fieldset > legend {
+  text-align: right;
+}
+
 .toolbar-fixed .js-messages__wrapper {
   top: 0 !important;
 }
