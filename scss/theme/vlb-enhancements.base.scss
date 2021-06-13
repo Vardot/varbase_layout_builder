@@ -477,7 +477,14 @@ body {
         }
       }
     }
-  }  
+  }
+
+  form.layout-builder-configure-block {
+    [data-drupal-selector^="edit-appearance-alignment"] {
+      display: none !important;
+    }
+  }
+
 }
 
 #layout-builder-modal {

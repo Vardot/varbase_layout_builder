@@ -4,6 +4,7 @@ namespace Drupal\varbase_layout_builder\Plugin\BootstrapStyles\Style;
 
 use Drupal\bootstrap_styles\Style\StylePluginBase;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\layout_builder\Form\ConfigureSectionForm;
 
 /**
  * Class HorizontalAlignment.
@@ -51,24 +52,30 @@ class HorizontalAlignment extends StylePluginBase {
    */
   public function buildStyleFormElements(array &$form, FormStateInterface $form_state, $storage) {
 
-    $form['horizontal_alignment'] = [
-      '#type' => 'radios',
-      '#options' => $this->getStyleOptions('horizontal_alignment'),
-      '#title' => $this->t('Horizontal alignment'),
-      '#default_value' => $storage['horizontal_alignment']['class'] ?? NULL,
-      '#validated' => TRUE,
-      '#attributes' => [
-        'class' => ['field-horizontal-alignment', 'bs_input-boxes'],
-      ],
-    ];
+    $form_object = $form_state->getFormObject();
+    if ($form_object instanceof ConfigureSectionForm) {
 
-    // Add icons to the container types.
-    foreach ($form['horizontal_alignment']['#options'] as $key => $value) {
-      $form['horizontal_alignment']['#options'][$key] = '<span class="input-icon ' . $key . '"></span>' . $value;
+      $form['horizontal_alignment'] = [
+        '#type' => 'radios',
+        '#options' => $this->getStyleOptions('horizontal_alignment'),
+        '#title' => $this->t('Horizontal alignment'),
+        '#default_value' => $storage['horizontal_alignment']['class'] ?? NULL,
+        '#validated' => TRUE,
+        '#attributes' => [
+          'class' => ['field-horizontal-alignment', 'bs_input-boxes'],
+        ],
+      ];
+
+      // Add icons to the container types.
+      foreach ($form['horizontal_alignment']['#options'] as $key => $value) {
+        $form['horizontal_alignment']['#options'][$key] = '<span class="input-icon ' . $key . '"></span>' . $value;
+      }
+
+      // Attach the Layout Builder form style for this plugin.
+      $form['#attached']['library'][] = 'varbase_layout_builder/plugin.horizontal_alignment.layout_builder_form';
+
+  
     }
-
-    // Attach the Layout Builder form style for this plugin.
-    $form['#attached']['library'][] = 'varbase_layout_builder/plugin.horizontal_alignment.layout_builder_form';
 
     return $form;
   }

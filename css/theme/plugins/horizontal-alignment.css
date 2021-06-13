@@ -1,6 +1,5 @@
 #drupal-off-canvas .field-horizontal-alignment .fieldset-wrapper > div > div input + label,
 #layout-builder-modal .field-horizontal-alignment .fieldset-wrapper > div > div input + label {
-  height: 40px;
   text-indent: -999em;
   font-size: 0;
 }
