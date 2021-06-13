@@ -32,3 +32,24 @@ $horizontal_alignment_icon_path: '../../../images/plugins/horizontal-alignment/'
   }
 
 }
+
+[dir=rtl] body  {
+  #drupal-off-canvas,
+  #layout-builder-modal {
+    .field-horizontal-alignment .fieldset-wrapper > div > div {
+      input {
+        + label {
+          .input-icon {
+            &[class*="justify-content-start"] {
+              background-image: url($horizontal_alignment_icon_path + 'align-end.svg');
+            }
+
+            &[class*="justify-content-end"] {
+              background-image: url($horizontal_alignment_icon_path + 'align-start.svg');
+            }
+          }
+        }
+      }
+    }
+  }
+}

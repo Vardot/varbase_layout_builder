@@ -24,3 +24,13 @@
 #layout-builder-modal .field-horizontal-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="justify-content-end"] {
   background-image: url("../../../images/plugins/horizontal-alignment/align-end.svg");
 }
+
+[dir=rtl] body #drupal-off-canvas .field-horizontal-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="justify-content-start"],
+[dir=rtl] body #layout-builder-modal .field-horizontal-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="justify-content-start"] {
+  background-image: url("../../../images/plugins/horizontal-alignment/align-end.svg");
+}
+
+[dir=rtl] body #drupal-off-canvas .field-horizontal-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="justify-content-end"],
+[dir=rtl] body #layout-builder-modal .field-horizontal-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="justify-content-end"] {
+  background-image: url("../../../images/plugins/horizontal-alignment/align-start.svg");
+}

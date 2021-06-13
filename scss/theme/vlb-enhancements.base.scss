@@ -238,8 +238,31 @@ body {
         flex-direction: row-reverse;
       }
 
-      fieldset > legend {
+      legend {
         text-align: right;
+      }
+    }
+
+    // Alignment RTL.
+    .field-text-alignment {
+      .fieldset-wrapper > div > div {
+        input {
+          + label {
+            .input-icon {
+
+              &[class*="left"],
+              &[class*="start"] {
+                background-image: url('../../images/plugins/text-alignment/text-end.svg');
+              }
+
+              &[class*="right"],
+              &[class*="end"] {
+                background-image: url('../../images/plugins/text-alignment/text-start.svg');
+              }
+
+            }
+          }
+        }
       }
     }
 

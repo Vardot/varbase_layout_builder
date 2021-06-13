@@ -218,11 +218,25 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
   flex-direction: row-reverse;
 }
 
-[dir=rtl] body #drupal-off-canvas .bs_input-circles fieldset > legend,
-[dir=rtl] body #drupal-off-canvas .bs_input-boxes fieldset > legend,
-[dir=rtl] body #layout-builder-modal .bs_input-circles fieldset > legend,
-[dir=rtl] body #layout-builder-modal .bs_input-boxes fieldset > legend {
+[dir=rtl] body #drupal-off-canvas .bs_input-circles legend,
+[dir=rtl] body #drupal-off-canvas .bs_input-boxes legend,
+[dir=rtl] body #layout-builder-modal .bs_input-circles legend,
+[dir=rtl] body #layout-builder-modal .bs_input-boxes legend {
   text-align: right;
+}
+
+[dir=rtl] body #drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="left"],
+[dir=rtl] body #drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="start"],
+[dir=rtl] body #layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="left"],
+[dir=rtl] body #layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="start"] {
+  background-image: url("../../images/plugins/text-alignment/text-end.svg");
+}
+
+[dir=rtl] body #drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="right"],
+[dir=rtl] body #drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="end"],
+[dir=rtl] body #layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="right"],
+[dir=rtl] body #layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="end"] {
+  background-image: url("../../images/plugins/text-alignment/text-start.svg");
 }
 
 .toolbar-fixed .js-messages__wrapper {
