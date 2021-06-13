@@ -266,6 +266,12 @@ body {
       }
     }
 
+    .layout-selection li a {
+      padding-left: auto;
+      padding-right: 25px;
+      flex-direction: row-reverse;
+    }
+
   }
 
 }

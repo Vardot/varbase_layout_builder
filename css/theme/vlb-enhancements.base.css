@@ -239,6 +239,13 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
   background-image: url("../../images/plugins/text-alignment/text-start.svg");
 }
 
+[dir=rtl] body #drupal-off-canvas .layout-selection li a,
+[dir=rtl] body #layout-builder-modal .layout-selection li a {
+  flex-direction: row-reverse;
+  padding-right: 25px;
+  padding-left: auto;
+}
+
 .toolbar-fixed .js-messages__wrapper {
   top: 0 !important;
 }
