@@ -20,8 +20,8 @@ container_width:
   build_options:
     'wide': 'col-md-10'
     'medium': 'col-md-8'
-    'narrow': 'col-md-6 col-sm-10'
-    'tiny': 'col-md-4 col-sm-8'
+    'narrow': 'col-sm-10 col-md-6'
+    'tiny': 'col-sm-8 col-md-4'
 breakpoints:
   weight: '40'
 remove_gutters:

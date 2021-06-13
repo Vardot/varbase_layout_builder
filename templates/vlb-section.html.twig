@@ -36,9 +36,6 @@
       {% set container_width_attributes = create_attribute() %}
       {% set container_width_attributes = container_width_attributes.addClass(content['#settings']['container_width_classes']) %}
 
-      {% set container_width_container_attributes = create_attribute() %}
-      {% set container_width_container_attributes = container_width_container_attributes.addClass('container-fluid') %}
-
       {% set container_width_row_attributes = create_attribute() %}
       {% set container_width_row_attributes = container_width_row_attributes.addClass('row') %}
 
@@ -47,8 +44,7 @@
       {% endif %}
 
       <div {{ container_width_attributes }}>
-        <div {{ container_width_container_attributes }}>
-          <div {{ container_width_row_attributes }}>
+        <div {{ container_width_row_attributes }}>
     {% endif %}
 
     {{ title_prefix }}
@@ -63,7 +59,6 @@
     {{ title_suffix }}
 
     {% if content['#settings']['container_width_classes'] %}
-          </div>
         </div>
       </div>
     {% endif %}
