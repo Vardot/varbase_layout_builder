@@ -12,13 +12,20 @@
 #}
 {% if content %}
 
+  {% set gutters_between_on = content['#settings']['remove_gutters'] == 1 and content['#settings']['gutters_between'] == 1 %}
+  {% set gutters_between_off = content['#settings']['remove_gutters'] == 1 and content['#settings']['gutters_between'] == 0 %}
+  {% set horizontal_alignment_classes = content['#settings']['container_wrapper']['bootstrap_styles']['horizontal_alignment']['class'] %}
+  {% set vertical_alignment_classes = content['#settings']['container_wrapper']['bootstrap_styles']['vertical_alignment']['class'] %}
+  {% set has_container_width = content['#settings']['container_width_classes'] ? 1 : 0 %}
+  {% set has_2_or_more_cols = content[region].count > 1 %}
+
   {% set classes = [
     'layout',
     'row',
-    content['#settings']['remove_gutters'] == 1 and content['#settings']['gutters_between'] == 1 ? 'gx-0' : '',
-    content['#settings']['remove_gutters'] == 1 and content['#settings']['gutters_between'] == 0 ? 'no-gutters' : '',
-    content['#settings']['container_wrapper']['bootstrap_styles']['horizontal_alignment']['class'] ? content['#settings']['container_wrapper']['bootstrap_styles']['horizontal_alignment']['class'] : '',
-    content['#settings']['container_wrapper']['bootstrap_styles']['vertical_alignment']['class'] ? content['#settings']['container_wrapper']['bootstrap_styles']['vertical_alignment']['class'] : '',
+    gutters_between_on ? 'gx-0' : '',
+    gutters_between_off and has_container_width == 0 ? 'no-gutters' : '',
+    horizontal_alignment_classes ? horizontal_alignment_classes : '',
+    vertical_alignment_classes and not has_2_or_more_cols ? vertical_alignment_classes : '',
     'layout-builder__layout'
   ] %}
 
@@ -31,7 +38,7 @@
   {% endif %}
   <div {{ attributes.addClass(classes) }}>
 
-    {% if content['#settings']['container_width_classes'] %}
+    {% if has_container_width %}
 
       {% set container_width_attributes = create_attribute() %}
       {% set container_width_attributes = container_width_attributes.addClass(content['#settings']['container_width_classes']) %}
@@ -39,8 +46,8 @@
       {% set container_width_row_attributes = create_attribute() %}
       {% set container_width_row_attributes = container_width_row_attributes.addClass('row') %}
 
-      {% if content['#settings']['container_wrapper']['bootstrap_styles']['vertical_alignment']['class'] %}
-        {% set container_width_row_attributes = container_width_row_attributes.addClass(content['#settings']['container_wrapper']['bootstrap_styles']['vertical_alignment']['class']) %}
+      {% if vertical_alignment_classes and has_2_or_more_cols %}
+        {% set container_width_row_attributes = container_width_row_attributes.addClass(vertical_alignment_classes) %}
       {% endif %}
 
       <div {{ container_width_attributes }}>
@@ -58,7 +65,7 @@
     {% endfor %}
     {{ title_suffix }}
 
-    {% if content['#settings']['container_width_classes'] %}
+    {% if has_container_width %}
         </div>
       </div>
     {% endif %}
