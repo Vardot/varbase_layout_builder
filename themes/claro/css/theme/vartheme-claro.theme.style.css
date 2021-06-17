@@ -4,6 +4,12 @@
  * Maintainers: the import statement presumes a relative location of core css.
  * The location may need to be adjusted depending on your setup.
  */
+#layout-builder-modal html,
+.media-library-widget-modal html,
+form.media-form html {
+  font-size: 90%;
+  /* Make the elements smaller for Varbase admin */
+}
 
 #layout-builder-modal input[type="text"],
 .media-library-widget-modal input[type="text"],
@@ -56,7 +62,6 @@ form.media-form body.path-admin .panel.dashboard-block {
   border: 1px solid rgba(216, 217, 224, 0.8);
   border-radius: 2px;
   background-color: #fff;
-  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -76,13 +81,6 @@ form.media-form .block-views-blockvarbase-google-analytics-summary-sessions-and-
 .media-library-widget-modal .node-form div.autocomplete-deluxe-container,
 form.media-form .node-form div.autocomplete-deluxe-container {
   width: 65%;
-  padding: 0.68rem 1.875rem 0.68rem 0.93rem;
-  color: #222330;
-  border: 1px solid #8e929c;
-  border-radius: 0.125rem;
-  background: #fff;
-  -webkit-box-shadow: none;
-  box-shadow: none;
 }
 
 @media screen and (max-width: 81.25rem) {
@@ -93,61 +91,10 @@ form.media-form .node-form div.autocomplete-deluxe-container {
   }
 }
 
-#layout-builder-modal .node-form div.autocomplete-deluxe-container:not(.autocomplete-deluxe-multiple),
-.media-library-widget-modal .node-form div.autocomplete-deluxe-container:not(.autocomplete-deluxe-multiple),
-form.media-form .node-form div.autocomplete-deluxe-container:not(.autocomplete-deluxe-multiple) {
-  padding: 0;
-}
-
 #layout-builder-modal .node-form div.autocomplete-deluxe-container:not(.autocomplete-deluxe-multiple) input.autocomplete-deluxe-form,
 .media-library-widget-modal .node-form div.autocomplete-deluxe-container:not(.autocomplete-deluxe-multiple) input.autocomplete-deluxe-form,
 form.media-form .node-form div.autocomplete-deluxe-container:not(.autocomplete-deluxe-multiple) input.autocomplete-deluxe-form {
   width: 100%;
-  min-height: 3rem;
-  padding: 0.68rem 1.875rem 0.68rem 0.93rem;
-  background: white;
-}
-
-#layout-builder-modal .node-form div.autocomplete-deluxe-container:not(.autocomplete-deluxe-multiple) .autocomplete-deluxe-throbber,
-.media-library-widget-modal .node-form div.autocomplete-deluxe-container:not(.autocomplete-deluxe-multiple) .autocomplete-deluxe-throbber,
-form.media-form .node-form div.autocomplete-deluxe-container:not(.autocomplete-deluxe-multiple) .autocomplete-deluxe-throbber {
-  top: 0.93rem;
-}
-
-#layout-builder-modal .node-form div.autocomplete-deluxe-container .autocomplete-deluxe-item,
-.media-library-widget-modal .node-form div.autocomplete-deluxe-container .autocomplete-deluxe-item,
-form.media-form .node-form div.autocomplete-deluxe-container .autocomplete-deluxe-item {
-  margin: 0 0.31rem 0.18rem 0;
-}
-
-#layout-builder-modal .node-form div.autocomplete-deluxe-container input.autocomplete-deluxe-form,
-.media-library-widget-modal .node-form div.autocomplete-deluxe-container input.autocomplete-deluxe-form,
-form.media-form .node-form div.autocomplete-deluxe-container input.autocomplete-deluxe-form {
-  min-height: 1.25rem;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-#layout-builder-modal .node-form div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber,
-.media-library-widget-modal .node-form div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber,
-form.media-form .node-form div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber {
-  position: absolute;
-  top: 0.875rem;
-  right: 0.625rem;
-  width: 1.875rem;
-  height: 100%;
-}
-
-#layout-builder-modal .node-form div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber.autocomplete-deluxe-open,
-.media-library-widget-modal .node-form div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber.autocomplete-deluxe-open,
-form.media-form .node-form div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber.autocomplete-deluxe-open {
-  background: url("../images/search-autocompleting.svg") no-repeat;
-}
-
-#layout-builder-modal .node-form div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber.autocomplete-deluxe-closed,
-.media-library-widget-modal .node-form div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber.autocomplete-deluxe-closed,
-form.media-form .node-form div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber.autocomplete-deluxe-closed {
-  background: url("../images/search-autocomplete.svg") no-repeat;
 }
 
 #layout-builder-modal .node-form .claro-autocomplete,
@@ -231,7 +178,6 @@ form.media-form .media-library-item .media-library-item__remove.button:first-chi
   width: 25px;
   height: 25px;
   border: 2px solid #ccc !important;
-  -webkit-background-size: 13px 13px;
   background-size: 13px;
   font-size: 0;
 }
@@ -242,7 +188,6 @@ form.media-form .media-library-item .media-library-item__remove.button:first-chi
 .media-library-widget-modal .media-library-item .media-library-item__remove.button:first-child:not(:focus),
 form.media-form .media-library-item .media-library-edit__link:not(:focus),
 form.media-form .media-library-item .media-library-item__remove.button:first-child:not(:focus) {
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
@@ -269,7 +214,6 @@ form.media-form .media-library-item .media-library-item__remove.button:first-chi
 form.media-form .media-library-item .media-library-edit__link:active,
 form.media-form .media-library-item .media-library-item__remove.button:first-child:active {
   outline: 2px dotted transparent;
-  -webkit-box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769;
   box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769;
 }
 
@@ -285,4 +229,44 @@ form.media-form .focal-point-preview-link {
 form.media-form .layout-region-node-secondary .media-library-item.media-library-item--grid {
   width: 200px;
   max-width: 200px;
+}
+
+#layout-builder-modal fieldset.fieldset,
+.media-library-widget-modal fieldset.fieldset,
+form.media-form fieldset.fieldset {
+  border-color: #d8d9e0;
+}
+
+@media screen and (min-width: 61rem) {
+  #layout-builder-modal .layout-region--node-main,
+  .media-library-widget-modal .layout-region--node-main,
+  form.media-form .layout-region--node-main {
+    width: 65%;
+  }
+  #layout-builder-modal .layout-region--node-main .layout-region__content,
+  .media-library-widget-modal .layout-region--node-main .layout-region__content,
+  form.media-form .layout-region--node-main .layout-region__content {
+    max-width: 100%;
+  }
+  #layout-builder-modal .layout-region--node-footer .layout-region__content,
+  .media-library-widget-modal .layout-region--node-footer .layout-region__content,
+  form.media-form .layout-region--node-footer .layout-region__content {
+    max-width: 100%;
+  }
+  #layout-builder-modal .layout-region--node-secondary,
+  .media-library-widget-modal .layout-region--node-secondary,
+  form.media-form .layout-region--node-secondary {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 37.5rem) {
+  #layout-builder-modal td > .form-item > .form-element,
+  #layout-builder-modal td > .ajax-new-content > .form-item > .form-element,
+  .media-library-widget-modal td > .form-item > .form-element,
+  .media-library-widget-modal td > .ajax-new-content > .form-item > .form-element,
+  form.media-form td > .form-item > .form-element,
+  form.media-form td > .ajax-new-content > .form-item > .form-element {
+    width: inherit;
+  }
 }
