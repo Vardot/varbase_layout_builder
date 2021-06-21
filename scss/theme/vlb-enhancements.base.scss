@@ -508,8 +508,14 @@ body {
     background-color: #fff !important;
   }
 
-  .section-library-add-section-to-library {
-    padding: 1rem;
+  form.section-library-add-section-to-library {
+    padding: 1rem 0;
+
+    .form-type-textfield {
+      input[type="text"] {
+        width: 100% !important;
+      }
+    }
   }
 
 }

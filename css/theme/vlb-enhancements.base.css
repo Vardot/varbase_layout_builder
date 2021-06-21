@@ -484,9 +484,14 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
   background-color: #fff !important;
 }
 
-#drupal-off-canvas .section-library-add-section-to-library,
-#layout-builder-modal .section-library-add-section-to-library {
-  padding: 1rem;
+#drupal-off-canvas form.section-library-add-section-to-library,
+#layout-builder-modal form.section-library-add-section-to-library {
+  padding: 1rem 0;
+}
+
+#drupal-off-canvas form.section-library-add-section-to-library .form-type-textfield input[type="text"],
+#layout-builder-modal form.section-library-add-section-to-library .form-type-textfield input[type="text"] {
+  width: 100% !important;
 }
 
 #layout-builder-modal .form-item--editor-format .form-element--editor-format {

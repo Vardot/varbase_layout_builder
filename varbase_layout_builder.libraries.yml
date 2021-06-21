@@ -88,7 +88,7 @@ claro:
       themes/claro/css/theme/colors.css: {}
       themes/claro/css/theme/media-library.css: {}
       themes/claro/css/theme/field-ui.admin.css: {}
-      themes/claro/css/theme/filter.theme: {}
+      themes/claro/css/theme/filter.theme.css: {}
       themes/claro/css/theme/vartheme-claro.theme.style.css: {}
       themes/claro/css/theme/bootstrap-styles.dark.css: {}
   dependencies:
