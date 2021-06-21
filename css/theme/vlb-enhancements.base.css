@@ -445,6 +445,50 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
   display: none !important;
 }
 
+#drupal-off-canvas ul li,
+#drupal-off-canvas ol li,
+#layout-builder-modal ul li,
+#layout-builder-modal ol li {
+  border-bottom: 0;
+}
+
+#drupal-off-canvas .form-select,
+#drupal-off-canvas .form-text,
+#drupal-off-canvas input[type="text"],
+#drupal-off-canvas .form-tel,
+#drupal-off-canvas .form-email,
+#drupal-off-canvas .form-url,
+#drupal-off-canvas .form-search,
+#drupal-off-canvas .form-number,
+#drupal-off-canvas .form-color,
+#drupal-off-canvas .form-file,
+#drupal-off-canvas .form-textarea,
+#drupal-off-canvas input[type="textarea"],
+#drupal-off-canvas .form-date,
+#drupal-off-canvas .form-time,
+#layout-builder-modal .form-select,
+#layout-builder-modal .form-text,
+#layout-builder-modal input[type="text"],
+#layout-builder-modal .form-tel,
+#layout-builder-modal .form-email,
+#layout-builder-modal .form-url,
+#layout-builder-modal .form-search,
+#layout-builder-modal .form-number,
+#layout-builder-modal .form-color,
+#layout-builder-modal .form-file,
+#layout-builder-modal .form-textarea,
+#layout-builder-modal input[type="textarea"],
+#layout-builder-modal .form-date,
+#layout-builder-modal .form-time {
+  color: #222330 !important;
+  background-color: #fff !important;
+}
+
+#drupal-off-canvas .section-library-add-section-to-library,
+#layout-builder-modal .section-library-add-section-to-library {
+  padding: 1rem;
+}
+
 #layout-builder-modal .form-item--editor-format .form-element--editor-format {
   width: auto;
   min-height: 1.5rem;
@@ -465,4 +509,9 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
 #layout-builder-modal .form-item--editor-format .form-element--editor-format:hover #layout-builder-modal .form-item--editor-format .form-element--editor-format:active,
 #layout-builder-modal .form-item--editor-format .form-element--editor-format:focus {
   background-color: #fff;
+}
+
+#layout-builder-modal .bs_input-boxes--box-model .fieldset-wrapper > div > div input ~ label,
+#layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label {
+  height: 60px;
 }

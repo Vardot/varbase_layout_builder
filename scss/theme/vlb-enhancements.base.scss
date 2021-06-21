@@ -485,6 +485,33 @@ body {
     }
   }
 
+  ul li,
+  ol li {
+    border-bottom: 0;
+  }
+
+  .form-select,
+  .form-text,
+  input[type="text"],
+  .form-tel,
+  .form-email,
+  .form-url,
+  .form-search,
+  .form-number,
+  .form-color,
+  .form-file,
+  .form-textarea,
+  input[type="textarea"],
+  .form-date,
+  .form-time {
+    color: #222330 !important;
+    background-color: #fff !important;
+  }
+
+  .section-library-add-section-to-library {
+    padding: 1rem;
+  }
+
 }
 
 #layout-builder-modal {
@@ -512,5 +539,10 @@ body {
         background-color: #fff;
       }
     }
+  }
+
+  .bs_input-boxes--box-model .fieldset-wrapper > div > div input ~ label,
+  .field-text-alignment .fieldset-wrapper > div > div input + label  {
+    height: 60px;
   }
 }

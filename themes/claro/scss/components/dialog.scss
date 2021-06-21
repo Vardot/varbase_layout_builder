@@ -8,13 +8,6 @@
 
 @import "../../../../../core/themes/claro/css/components/dialog";
 
-[dir="rtl"] {
-  .ui-dialog {
-    .ui-dialog-title {
-      float: right;
-    }
-  }
-}
 .ui-dialog {
   .ui-dialog-titlebar-close {
     width: 30px;
@@ -23,5 +16,26 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 15px 15px;
+  }
+
+  &.ui-layout-builder-modal {
+    .ui-dialog-titlebar-close {
+      right: 0 !important;
+    }
+  }
+}
+
+[dir="rtl"] {
+  .ui-dialog {
+    .ui-dialog-title {
+      float: right;
+    }
+
+    &.ui-layout-builder-modal {
+      .ui-dialog-titlebar-close {
+        right: auto !important;
+        left: 0 !important;
+      }
+    }
   }
 }
