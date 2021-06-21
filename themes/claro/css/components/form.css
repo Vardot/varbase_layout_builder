@@ -382,38 +382,9 @@ form.media-form ::-webkit-file-upload-button {
   -webkit-appearance: push-button;
 }
 
-#layout-builder-modal legend,
-.media-library-widget-modal legend,
-form.media-form legend {
-  width: auto;
-  font-size: initial;
-  font-weight: bold;
-}
-
-#layout-builder-modal .form-control:focus,
-.media-library-widget-modal .form-control:focus,
-form.media-form .form-control:focus {
-  outline: 2px dotted transparent;
-  box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769;
-}
-
-#layout-builder-modal .label,
-.media-library-widget-modal .label,
-form.media-form .label {
-  text-transform: inherit;
-  color: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-}
-
-#layout-builder-modal .form-actions,
-.media-library-widget-modal .form-actions,
-form.media-form .form-actions {
-  align-items: center;
-}
-
-[dir="rtl"] #layout-builder-modal tr .form-item,
-[dir="rtl"] .media-library-widget-modal tr .form-item,
-[dir="rtl"] form.media-form tr .form-item {
-  text-align: right;
+#layout-builder-modal .form-required::after,
+.media-library-widget-modal .form-required::after,
+form.media-form .form-required::after {
+  vertical-align: baseline;
+  background-image: none;
 }

@@ -9,16 +9,4 @@
 .media-library-widget-modal,
 form.media-form {
   @import "../../../../../core/themes/claro/css/components/tables";
-  @import "../../../../../core/themes/claro/css/components/tabledrag";
-  .tabledrag-cell-content {
-    display: flex;
-    align-items: center;
-    .tabledrag-handle {
-      overflow: visible;
-      &:after {
-        width: 100%;
-        height: 100%;
-      }
-    }
-  }
 }
