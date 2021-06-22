@@ -110,3 +110,31 @@ function varbase_layout_builder_update_8103() {
     \Drupal::service('module_installer')->install(['layout_builder_component_attributes'], FALSE);
   }
 }
+
+/**
+ * Issue #3210657: Add Boxed options ( Wide, Medium, Narrow, Tiny )
+ */
+function varbase_layout_builder_update_10001() {
+  $module_path = Drupal::service('module_handler')->getModule('varbase_layout_builder')->getPath();
+
+  // Install configs path.
+  $install_path = $module_path . '/' . InstallStorage::CONFIG_INSTALL_DIRECTORY;
+  if (is_dir($install_path)) {
+
+    // Have forced configs import.
+    $forced_configs_import = [
+      'varbase_layout_builder.layout_defaults',
+    ];
+
+    foreach ($forced_configs_import as $config_name) {
+
+      $config_path = $install_path . '/' . $config_name . '.yml';
+      if (file_exists($config_path)) {
+        $config_content = file_get_contents($config_path);
+        $config_data = (array) Yaml::parse($config_content);
+        $config_factory = \Drupal::configFactory()->getEditable($config_name);
+        $config_factory->setData($config_data)->save(TRUE);
+      }
+    }
+  }
+}
