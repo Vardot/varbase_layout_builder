@@ -25,14 +25,11 @@ class Alignment extends StylesGroupPluginBase {
    */
   public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
 
-    $form_object = $form_state->getFormObject();
-    if ($form_object instanceof ConfigureSectionForm) {
-      $form['alignment'] = [
-        '#type' => 'details',
-        '#title' => $this->t('Blocks alignment'),
-        '#open' => FALSE,
-      ];
-    }
+    $form['alignment'] = [
+      '#type' => 'details',
+      '#title' => $this->t('Blocks alignment'),
+      '#open' => FALSE,
+    ];
 
     return $form;
   }

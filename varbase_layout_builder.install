@@ -138,3 +138,13 @@ function varbase_layout_builder_update_10001() {
     }
   }
 }
+
+/**
+ * Issue #3218194: Add Vertical and Horizontal alignments to section styling settings
+ */
+function varbase_layout_builder_update_10002() {
+  $config_factory = \Drupal::configFactory()->getEditable('bootstrap_styles.settings');
+  $config_factory->set('horizontal_alignment', "justify-content-start|Align start\r\njustify-content-center|Align center\r\njustify-content-end|Align end");
+  $config_factory->set('vertical_alignment', "align-items-start|Align top\r\nalign-items-center|Align middle\r\nalign-items-end|Align bottom");
+  $config_factory->save();
+}
