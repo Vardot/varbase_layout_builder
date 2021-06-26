@@ -108,6 +108,10 @@ third_party_settings:
               scroll_effects:
                 class: null
               background_edgetoedge: 1
+              horizontal_alignment:
+                class: null
+              vertical_alignment:
+                class: null
           container_wrapper_bg_color_class: ''
           container_wrapper_bg_media: null
           container: container-fluid
@@ -124,6 +128,8 @@ third_party_settings:
             section_header: null
           remove_gutters: '1'
           gutters_between: null
+          container_width: ''
+          context_mapping: {  }
         components:
           a625a1e9-278b-4e0f-a140-b3359dfa43b9:
             uuid: a625a1e9-278b-4e0f-a140-b3359dfa43b9
@@ -133,6 +139,9 @@ third_party_settings:
               label: 'Moderation control'
               provider: layout_builder
               label_display: '0'
+              formatter:
+                settings: {  }
+                third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
             additional:
@@ -152,6 +161,7 @@ third_party_settings:
                       background_repeat: no-repeat
                       background_attachment: not_fixed
                       background_size: cover
+                  background_edgetoedge: null
                   text_color:
                     class: null
                   text_alignment:
