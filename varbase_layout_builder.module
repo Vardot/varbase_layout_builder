@@ -8,7 +8,6 @@
 use Drupal\Core\Url;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Render\Element;
 use Drupal\Core\Template\Attribute;
 use Drupal\varbase_layout_builder\Element\VarbaseLayoutBuilderUX;
 
@@ -53,7 +52,6 @@ function varbase_layout_builder_form_alter(&$form, FormStateInterface $form_stat
 
     // Attache the Varbase Layout Builder configure section admin libraray.
     $form['#attached']['library'][] = 'varbase_layout_builder/configure-section.admin';
-
 
     // No revision information or revision log message.
     if (isset($form['revision_information'])) {

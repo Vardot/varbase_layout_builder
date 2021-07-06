@@ -4,7 +4,6 @@ namespace Drupal\varbase_layout_builder\Plugin\Deriver;
 
 use Drupal\Component\Plugin\Derivative\DeriverBase;
 use Drupal\Core\Layout\LayoutDefinition;
-use Drupal\bootstrap_layout_builder\Plugin\Layout\BootstrapLayout;
 use Drupal\Core\StringTranslation\StringTranslationTrait;
 use Drupal\Core\Plugin\Discovery\ContainerDeriverInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
@@ -114,7 +113,7 @@ class VarbaseLayoutBuilderBootstrapLayoutDeriver extends DeriverBase implements 
     }
 
     $regions['section_header'] = [
-      'label' => $this->t('Section header')
+      'label' => $this->t('Section header'),
     ];
 
     return $regions;

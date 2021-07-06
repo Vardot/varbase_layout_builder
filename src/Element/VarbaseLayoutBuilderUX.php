@@ -58,7 +58,7 @@ class VarbaseLayoutBuilderUX extends LayoutBuilder {
       'remove' => $build['remove'],
     ];
 
-    if(\Drupal::moduleHandler()->moduleExists('section_library')) {
+    if (\Drupal::moduleHandler()->moduleExists('section_library')) {
       $build['actions']['add_section_to_library'] = [
         '#type' => 'link',
         '#title' => $this->t('<span class="visually-hidden">Add section to library @section</span>', ['@section' => $section_label]),
@@ -158,7 +158,7 @@ class VarbaseLayoutBuilderUX extends LayoutBuilder {
           'content' => $build['layout-builder__section'][$region][$uuid]['content'],
         ];
 
-        if(\Drupal::moduleHandler()->moduleExists('layout_builder_component_attributes')) {
+        if (\Drupal::moduleHandler()->moduleExists('layout_builder_component_attributes')) {
           $build['layout-builder__section'][$region][$uuid]['content']['actions']['layout_builder_block_attributes'] = [
             '#type' => 'link',
             '#title' => $this->t('<span class="visually-hidden">Manage attributes @block</span>', ['@block' => $preview_fallback_string]),

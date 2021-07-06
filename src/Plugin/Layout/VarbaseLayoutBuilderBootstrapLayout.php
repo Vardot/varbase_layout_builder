@@ -3,14 +3,8 @@
 namespace Drupal\varbase_layout_builder\Plugin\Layout;
 
 use Drupal\Component\Utility\NestedArray;
-use Drupal\Core\Layout\LayoutDefault;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Config\ConfigFactoryInterface;
-use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Drupal\Core\Serialization\Yaml;
-use Symfony\Component\DependencyInjection\ContainerInterface;
-use Drupal\Core\Entity\EntityTypeManagerInterface;
-use Drupal\bootstrap_styles\StylesGroup\StylesGroupManager;
 use Drupal\bootstrap_layout_builder\Plugin\Layout\BootstrapLayout;
 
 /**
@@ -47,7 +41,6 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
     if ($blb_settings->get('one_col_layout_class')) {
       $one_col_layout_class = $blb_settings->get('one_col_layout_class');
     }
-
 
     $this->configuration['layout_regions_classes']['section_header'][] = $one_col_layout_class;
 
@@ -97,11 +90,11 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
           && $this->configuration['container_wrapper']['bootstrap_styles']['background_color']['class'] !== '_none') {
           $edge2edge_background = TRUE;
         }
-        else if ($this->configuration['container_wrapper']['bootstrap_styles']['background']['background_type'] == 'image'
+        elseif ($this->configuration['container_wrapper']['bootstrap_styles']['background']['background_type'] == 'image'
           && !empty($this->configuration['container_wrapper']['bootstrap_styles']['background_media']['image']['media_id'])) {
           $edge2edge_background = TRUE;
         }
-        else if ($this->configuration['container_wrapper']['bootstrap_styles']['background']['background_type'] == 'video'
+        elseif ($this->configuration['container_wrapper']['bootstrap_styles']['background']['background_type'] == 'video'
           && !empty($this->configuration['container_wrapper']['bootstrap_styles']['background_media']['video']['media_id'])) {
           $edge2edge_background = TRUE;
         }
@@ -162,7 +155,7 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
         }
       }
       // Normal Background and Edge2Edge Content.
-      else if ($edge2edge_content) {
+      elseif ($edge2edge_content) {
         // 1 Column.
         if ($one_column) {
           // With Gutter.
@@ -189,7 +182,7 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
         }
       }
       // Edge2Edge Background and Full-width Content.
-      else if ($edge2edge_background) {
+      elseif ($edge2edge_background) {
         // 1 Column.
         if ($one_column) {
           // With Gutter.
@@ -305,7 +298,7 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
     if (!empty($this->configuration['container'])) {
       $container_type_default_value = $this->configuration['container'];
     }
-    else if (isset($container_type_defaults['default_value'])) {
+    elseif (isset($container_type_defaults['default_value'])) {
       $container_type_default_value = $container_type_defaults['default_value'];
     }
 
@@ -340,12 +333,12 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
       $container_widths = $container_width_defaults['form_options'];
     }
 
-    // Container width default value.  
+    // Container width default value.
     $container_width_default_value = '';
     if (!empty($this->configuration['container_width'])) {
       $container_width_default_value = $this->configuration['container_width'];
     }
-    else if (isset($container_width_defaults['default_value'])) {
+    elseif (isset($container_width_defaults['default_value'])) {
       $container_width_default_value = $container_width_defaults['default_value'];
     }
 
@@ -386,13 +379,13 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
       $gutter_types = $remove_gutters_defaults['form_options'];
     }
 
-    // Remove gutters default value.  
+    // Remove gutters default value.
     $remove_gutters_default_value = 1;
     if (isset($this->configuration['remove_gutters'])
       && $this->configuration['remove_gutters'] !== NULL) {
       $remove_gutters_default_value = $this->configuration['remove_gutters'];
     }
-    else if (isset($remove_gutters_defaults['default_value'])) {
+    elseif (isset($remove_gutters_defaults['default_value'])) {
       $remove_gutters_default_value = $remove_gutters_defaults['default_value'];
     }
 
@@ -426,12 +419,12 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
       // Gutters between defaults.
       $gutters_between_defaults = $vlb_layout_defaults->get('gutters_between');
 
-      // Gutters between default value.  
+      // Gutters between default value.
       $gutters_between_default_value = TRUE;
       if (!empty($this->configuration['gutters_between'])) {
         $gutters_between_default_value = $this->configuration['gutters_between'];
       }
-      else if (isset($gutters_between_defaults['default_value'])) {
+      elseif (isset($gutters_between_defaults['default_value'])) {
         $gutters_between_default_value = $gutters_between_defaults['default_value'];
       }
 
@@ -458,7 +451,6 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
       ];
     }
 
-
     $layout_id = $this->getPluginDefinition()->id();
     $breakpoints = $this->entityTypeManager->getStorage('blb_breakpoint')->getQuery()->sort('weight', 'ASC')->execute();
     foreach ($breakpoints as $breakpoint_id) {
@@ -469,10 +461,10 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
         if ($this->configuration['breakpoints'] && isset($this->configuration['breakpoints'][$breakpoint_id])) {
           $default_value = $this->configuration['breakpoints'][$breakpoint_id];
         }
-        else if ($breakpoint_id == "breakpoint_sm" || $breakpoint_id == "breakpoint_xs") {
+        elseif ($breakpoint_id == "breakpoint_sm" || $breakpoint_id == "breakpoint_xs") {
           $default_value = array_key_last($layout_options);
         }
-        else if (count($layout_options) > 0) {
+        elseif (count($layout_options) > 0) {
           $default_value = array_key_first($layout_options);
         }
 
@@ -579,7 +571,6 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
       }
     }
 
-
     // Section header region classes.
     $this->configuration['layout_regions_classes']['section_header'] = $form_state->getValue(array_merge($settings_tab, ['section_header_classes']));
 
@@ -597,8 +588,10 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
       $one_col_layout_class = $blb_settings->get('one_col_layout_class');
     }
 
-    foreach($breakpoints as $breakpoint_key => $breakpoint_id) {
-      $this->configuration['layout_regions_classes']['section_header'][] = $one_col_layout_class;
+    if (isset($breakpoints) && is_array($breakpoints) && count($breakpoints) > 0) {
+      foreach ($breakpoints as $breakpoint_key => $breakpoint_id) {
+        $this->configuration['layout_regions_classes']['section_header'][] = $one_col_layout_class;
+      }
     }
 
     // Cols classes from advanced mode.
@@ -610,18 +603,36 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
     $first_layout_region_classes = [];
     foreach ($this->getPluginDefinition()->getRegionNames() as $key => $region_name) {
 
-      if (count($first_layout_region_classes) < 1 ) {
-        $first_layout_region_classes = $this->configuration['layout_regions_classes'][$region_name];
-      }
-      else {
-        foreach ($this->configuration['layout_regions_classes'][$region_name] as $region_key => $region_class) {
-          if ($region_class == "col-xl-"
-            || $region_class == "col-lg-"
-            || $region_class == "col-md-"
-            || $region_class == "col-sm-"
-            || $region_class == "col-") {
+      if (is_countable($first_layout_region_classes)) {
+        if (count($first_layout_region_classes) < 1) {
+          if (isset($this->configuration['layout_regions_classes'])
+            && isset($this->configuration['layout_regions_classes'][$region_name])
+            && is_array($this->configuration['layout_regions_classes'][$region_name])
+            && count($this->configuration['layout_regions_classes'][$region_name]) > 0) {
 
-            $this->configuration['layout_regions_classes'][$region_name][$region_key] = $first_layout_region_classes[$region_key];
+            $first_layout_region_classes = $this->configuration['layout_regions_classes'][$region_name];
+          }
+        }
+        else {
+          if (isset($this->configuration['layout_regions_classes'])
+            && isset($this->configuration['layout_regions_classes'][$region_name])
+            && is_array($this->configuration['layout_regions_classes'][$region_name])
+            && count($this->configuration['layout_regions_classes'][$region_name]) > 0) {
+
+            foreach ($this->configuration['layout_regions_classes'][$region_name] as $region_key => $region_class) {
+              if ($region_class == "col-xl-"
+                || $region_class == "col-lg-"
+                || $region_class == "col-md-"
+                || $region_class == "col-sm-"
+                || $region_class == "col-") {
+
+                if (isset($this->configuration['layout_regions_classes'][$region_name][$region_key])
+                  && isset($first_layout_region_classes[$region_key])) {
+
+                  $this->configuration['layout_regions_classes'][$region_name][$region_key] = $first_layout_region_classes[$region_key];
+                }
+              }
+            }
           }
         }
       }

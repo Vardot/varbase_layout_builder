@@ -7,7 +7,7 @@ use Drupal\Core\Form\FormStateInterface;
 use Drupal\layout_builder\Form\ConfigureSectionForm;
 
 /**
- * Class VerticalAlignment.
+ * Vertical Alignment.
  *
  * @package Drupal\varbase_layout_builder\Plugin\Style
  *

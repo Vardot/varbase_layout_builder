@@ -4,10 +4,9 @@ namespace Drupal\varbase_layout_builder\Plugin\BootstrapStyles\StylesGroup;
 
 use Drupal\bootstrap_styles\StylesGroup\StylesGroupPluginBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\layout_builder\Form\ConfigureSectionForm;
 
 /**
- * Class Alignment.
+ * Blocks alignment.
  *
  * @package Drupal\varbase_layout_builder\Plugin\StylesGroup
  *
