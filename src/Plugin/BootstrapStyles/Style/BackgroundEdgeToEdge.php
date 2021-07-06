@@ -37,6 +37,18 @@ class BackgroundEdgeToEdge extends StylePluginBase {
         ],
       ];
     }
+    else {
+      $form['background_edgetoedge'] = [
+        '#type' => 'checkbox',
+        '#title' => $this->t('Edge to Edge Background'),
+        '#validated' => TRUE,
+        '#attributes' => [
+          'class' => ['field-background-edge-to-edge'],
+        ],
+        '#access' => FALSE,
+        '#default_value' => FALSE,
+      ];
+    }
 
     return $form;
   }
