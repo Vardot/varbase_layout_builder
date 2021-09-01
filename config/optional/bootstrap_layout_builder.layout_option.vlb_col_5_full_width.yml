@@ -1,14 +1,14 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: vlb_col_5_full_width
 layout_id: blb_col_5
-label: 'Full width'
-structure: '12'
+label: "Full width"
+structure: "12"
 breakpoints:
   breakpoint_xl: 0
   breakpoint_lg: 0
   breakpoint_md: 0
   breakpoint_sm: 0
   breakpoint_xs: 0
-weight: '0'
+weight: "0"

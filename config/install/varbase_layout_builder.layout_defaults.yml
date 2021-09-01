@@ -1,35 +1,35 @@
 container_type:
-  weight: '-40'
-  default_value: 'container-fluid'
+  weight: "-40"
+  default_value: "container-fluid"
   form_options:
-    'container-fluid': 'Full'
-    'w-100': 'Edge to Edge'
-    'container': 'Boxed'
+    "container-fluid": "Full"
+    "w-100": "Edge to Edge"
+    "container": "Boxed"
   build_options:
-    'container-fluid': 'container-fluid'
-    'w-100': 'w-100'
-    'container': 'container'
+    "container-fluid": "container-fluid"
+    "w-100": "w-100"
+    "container": "container"
 container_width:
-  weight: '-39'
-  default_value: 'wide'
+  weight: "-39"
+  default_value: "wide"
   form_options:
-    'wide': 'Wide'
-    'medium': 'Medium'
-    'narrow': 'Narrow'
-    'tiny': 'Tiny'
+    "wide": "Wide"
+    "medium": "Medium"
+    "narrow": "Narrow"
+    "tiny": "Tiny"
   build_options:
-    'wide': 'col-md-10'
-    'medium': 'col-md-8'
-    'narrow': 'col-sm-10 col-md-6'
-    'tiny': 'col-sm-8 col-md-4'
+    "wide": "col-md-10"
+    "medium": "col-md-8"
+    "narrow": "col-sm-10 col-md-6"
+    "tiny": "col-sm-8 col-md-4"
 breakpoints:
-  weight: '40'
+  weight: "40"
 remove_gutters:
-  weight: '50'
+  weight: "50"
   default_value: 1
   form_options:
-    1: 'No Gutters'
-    0: 'With Gutters'
+    1: "No Gutters"
+    0: "With Gutters"
 gutters_between:
-  weight: '55'
+  weight: "55"
   default_value: TRUE

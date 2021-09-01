@@ -38,7 +38,7 @@ content:
         ft:
           id: reset
           settings:
-            lb: ''
+            lb: ""
     region: content
 hidden:
   created: true

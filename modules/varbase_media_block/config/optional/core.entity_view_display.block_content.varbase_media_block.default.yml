@@ -21,9 +21,9 @@ content:
       trim_length: 80
       url_only: false
       url_plain: false
-      rel: ''
-      target: ''
-    third_party_settings: {  }
+      rel: ""
+      target: ""
+    third_party_settings: {}
     type: link
     region: content
   field_media:
@@ -38,17 +38,17 @@ content:
         ft:
           id: default
           settings:
-            lb: ''
+            lb: ""
             lb-col: false
-            classes: {  }
+            classes: {}
     region: content
   field_media_view_mode:
     type: entity_reference_entity_id
     weight: 1
     region: content
     label: hidden
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
 hidden:
   langcode: true
   search_api_excerpt: true

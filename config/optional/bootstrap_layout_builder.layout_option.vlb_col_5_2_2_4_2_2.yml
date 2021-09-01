@@ -1,14 +1,14 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: vlb_col_5_2_2_4_2_2
 layout_id: blb_col_5
-label: '2/12 2/12 4/12 2/12 2/12'
-structure: '2 2 4 2 2'
+label: "2/12 2/12 4/12 2/12 2/12"
+structure: "2 2 4 2 2"
 breakpoints:
   breakpoint_xl: 0
   breakpoint_lg: 0
   breakpoint_md: 0
   breakpoint_sm: 0
   breakpoint_xs: 0
-weight: '-8'
+weight: "-8"

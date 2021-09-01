@@ -15,13 +15,13 @@ content:
   field_varbase_heading_size:
     weight: 1
     label: hidden
-    settings: {  }
+    settings: {}
     third_party_settings:
       ds:
         ft:
           id: reset
           settings:
-            lb: ''
+            lb: ""
     type: list_key
     region: content
 hidden:

@@ -56,8 +56,8 @@ function varbase_layout_builder_form_alter(&$form, FormStateInterface $form_stat
     // No revision information or revision log message.
     if (isset($form['revision_information'])) {
       $form['revision_information']['#disabled'] = TRUE;
-      $form['revision_information']['#attributes']['style'][] = 'display:none;';
-      $form['revision_information']['#prefix'] = '<div style="display:none;">';
+      $form['revision_information']['#attributes']['style'][] = 'display: none;';
+      $form['revision_information']['#prefix'] = '<div style="display: none;">';
       $form['revision_information']['#suffix'] = '</div>';
     }
 

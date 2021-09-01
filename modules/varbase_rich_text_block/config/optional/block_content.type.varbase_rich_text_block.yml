@@ -1,7 +1,7 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: varbase_rich_text_block
-label: 'Rich text'
+label: "Rich text"
 revision: 1
-description: 'A rich text block contains a title and a body with a rich text format.'
+description: "A rich text block contains a title and a body with a rich text format."

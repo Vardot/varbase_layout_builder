@@ -14,8 +14,8 @@ content:
   body:
     weight: 0
     label: hidden
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: text_default
     region: content
 hidden:

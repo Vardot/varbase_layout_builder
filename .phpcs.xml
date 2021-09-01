@@ -3,7 +3,6 @@
   <description>Default PHP CodeSniffer configuration for custom code.</description>
   <arg name="extensions" value="inc,install,module,php,profile,test,theme,yml,css"/>
 
-  <exclude-pattern>./assets/vendor/*</exclude-pattern>
   <!--Exclude folders used by common frontend tools. These folders match the file_scan_ignore_directories setting in default.settings.php-->
   <exclude-pattern>*/node_modules/*</exclude-pattern>
   <exclude-pattern>*/bower_components/*</exclude-pattern>

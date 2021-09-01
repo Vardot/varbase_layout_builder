@@ -1,14 +1,14 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: vlb_col_2_75_25
 layout_id: blb_col_2
-label: '75% 25%'
-structure: '9 3'
+label: "75% 25%"
+structure: "9 3"
 breakpoints:
   breakpoint_lg: breakpoint_lg
   breakpoint_md: breakpoint_md
   breakpoint_xl: 0
   breakpoint_sm: 0
   breakpoint_xs: 0
-weight: '-7'
+weight: "-7"

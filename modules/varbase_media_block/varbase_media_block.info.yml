@@ -1,7 +1,7 @@
-name: 'Varbase Media (image/video) block'
-description: 'A media block contains a title and media.'
+name: "Varbase Media (image/video) block"
+description: "A media block contains a title and media."
 type: module
-package: 'Varbase Blocks'
+package: "Varbase Blocks"
 core_version_requirement: ^9
 dependencies:
   - drupal:block

@@ -8,13 +8,13 @@ id: block_content.varbase_media_block.field_media_view_mode
 field_name: field_media_view_mode
 entity_type: block_content
 bundle: varbase_media_block
-label: 'Media View Mode'
-description: ''
+label: "Media View Mode"
+description: ""
 required: false
 translatable: false
-default_value: {  }
-default_value_callback: ''
+default_value: {}
+default_value_callback: ""
 settings:
-  handler: 'default:entity_view_mode'
-  handler_settings: {  }
+  handler: "default:entity_view_mode"
+  handler_settings: {}
 field_type: entity_reference

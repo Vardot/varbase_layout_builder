@@ -436,12 +436,6 @@
     "selector-pseudo-element-colon-notation": null,
     "shorthand-property-no-redundant-values": null,
     "string-quotes": "double",
-    "unit-whitelist": ["deg", "em", "ex", "ms", "rem", "%", "s", "px", "vw", "vh"],
-    "font-family-no-missing-generic-family-keyword": [true, {
-      "ignoreFontFamilies": [
-        "Font Awesome 5 Brands",
-        "Font Awesome 5 Free"
-      ]
-    }]
+    "unit-allowed-list": ["deg", "em", "ex", "ms", "rem", "%", "s", "px", "vw", "vh"]
   }
 }

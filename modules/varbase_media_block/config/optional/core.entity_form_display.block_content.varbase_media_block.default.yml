@@ -19,12 +19,12 @@ content:
   field_link:
     weight: 3
     settings:
-      placeholder_url: ''
-      placeholder_title: ''
+      placeholder_url: ""
+      placeholder_title: ""
     third_party_settings:
       maxlength:
         maxlength_js: null
-        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+        maxlength_js_label: "Content limited to @limit characters, remaining: <strong>@remaining</strong>"
     type: link_default
     region: content
   field_media:
@@ -39,12 +39,12 @@ content:
         - video
     third_party_settings:
       media_library_edit:
-        show_edit: '1'
+        show_edit: "1"
     region: content
   field_media_view_mode:
     weight: 2
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     type: options_select
     region: content
   info:
@@ -53,8 +53,8 @@ content:
     region: content
     settings:
       size: 60
-      placeholder: ''
-    third_party_settings: {  }
+      placeholder: ""
+    third_party_settings: {}
 hidden:
   langcode: true
   translation: true

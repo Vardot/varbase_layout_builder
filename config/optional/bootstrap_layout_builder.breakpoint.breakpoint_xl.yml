@@ -1,7 +1,7 @@
 langcode: en
 status: 0
-dependencies: {  }
+dependencies: {}
 id: breakpoint_xl
-label: 'Extra large devices (Large desktops)'
+label: "Extra large devices (Large desktops)"
 base_class: col-xl
-weight: '-10'
+weight: "-10"

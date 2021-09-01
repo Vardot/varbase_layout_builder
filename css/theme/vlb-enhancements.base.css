@@ -44,6 +44,8 @@ body .layout-builder .layout-builder__link--import-from-library {
   padding-right: 0.5em;
   padding-bottom: 0.5em;
   padding-left: 30px;
+  -webkit-transition: all 100ms linear;
+  -o-transition: all 100ms linear;
   transition: all 100ms linear;
   text-transform: uppercase;
   color: #007bff;
@@ -215,7 +217,11 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
 [dir=rtl] body #drupal-off-canvas .bs_input-boxes .fieldset-wrapper > div,
 [dir=rtl] body #layout-builder-modal .bs_input-circles .fieldset-wrapper > div,
 [dir=rtl] body #layout-builder-modal .bs_input-boxes .fieldset-wrapper > div {
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
   flex-direction: row-reverse;
+  -webkit-box-direction: reverse;
+  -webkit-box-orient: horizontal;
 }
 
 [dir=rtl] body #drupal-off-canvas .bs_input-circles legend,
@@ -241,7 +247,11 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
 
 [dir=rtl] body #drupal-off-canvas .layout-selection li a,
 [dir=rtl] body #layout-builder-modal .layout-selection li a {
+  -webkit-flex-direction: row-reverse;
+  -ms-flex-direction: row-reverse;
   flex-direction: row-reverse;
+  -webkit-box-direction: reverse;
+  -webkit-box-orient: horizontal;
   padding-right: 25px;
   padding-left: auto;
 }
@@ -308,12 +318,18 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
 
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
 }
 
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div {
   position: relative;
+  -webkit-box-flex: 100%;
+  -webkit-flex: 100%;
+  -ms-flex: 100%;
   flex: 100%;
   width: 100%;
   margin: 0;
@@ -335,23 +351,33 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
 
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input + label,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input + label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -ms-flex-pack: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
-  align-items: center;
-  justify-content: center;
+  -webkit-justify-content: center;
+  -webkit-box-pack: center;
   justify-content: center;
   width: 100%;
   width: calc(100% - 4px);
   height: 70px;
   margin: 2px;
   padding: 8px;
-  padding: 8px;
   cursor: pointer;
-  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  text-align: center;
   text-align: center;
   border-radius: 0;
   background-color: #292c32;
@@ -411,12 +437,14 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
   background-image: url("../../images/layout/container.svg");
   background-repeat: no-repeat;
   background-position: center center;
+  -webkit-background-size: 100% 26px;
   background-size: 100% 26px;
 }
 
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon._none:after,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon._none:after {
   background-image: url("../../images/layout/none.svg");
+  -webkit-background-size: 50% 100%;
   background-size: 50% 100%;
 }
 
@@ -506,6 +534,7 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 9'%3E%3Cpath fill='none' stroke-width='1.5' d='M1 1L7 7L13 1' stroke='%23545560'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
   background-position: 100% 50%;
+  -webkit-background-size: 1.75rem 0.4375rem;
   background-size: 1.75rem 0.4375rem;
   font-size: 0.889rem;
   line-height: 1.2rem;

@@ -18,11 +18,10 @@ third_party_settings:
     allow_custom: true
     enabled: true
     sections:
-      -
-        layout_id: 'bootstrap_layout_builder:blb_col_1'
+      - layout_id: "bootstrap_layout_builder:blb_col_1"
         layout_settings:
-          label: ''
-          container_wrapper_classes: ''
+          label: ""
+          container_wrapper_classes: ""
           container_wrapper_attributes: null
           container_wrapper:
             bootstrap_styles:
@@ -112,36 +111,36 @@ third_party_settings:
                 class: null
               vertical_alignment:
                 class: null
-          container_wrapper_bg_color_class: ''
+          container_wrapper_bg_color_class: ""
           container_wrapper_bg_media: null
           container: container-fluid
-          section_classes: ''
+          section_classes: ""
           section_attributes: null
           regions_classes:
-            blb_region_col_1: ''
-            section_header: ''
+            blb_region_col_1: ""
+            section_header: ""
           regions_attributes:
-            blb_region_col_1: {  }
+            blb_region_col_1: {}
             section_header: null
-          breakpoints: {  }
+          breakpoints: {}
           layout_regions_classes:
             section_header: null
-          remove_gutters: '1'
+          remove_gutters: "1"
           gutters_between: null
-          container_width: ''
-          context_mapping: {  }
+          container_width: ""
+          context_mapping: {}
         components:
           a625a1e9-278b-4e0f-a140-b3359dfa43b9:
             uuid: a625a1e9-278b-4e0f-a140-b3359dfa43b9
             region: blb_region_col_1
             configuration:
-              id: 'extra_field_block:node:landing_page_lb:content_moderation_control'
-              label: 'Moderation control'
+              id: "extra_field_block:node:landing_page_lb:content_moderation_control"
+              label: "Moderation control"
               provider: layout_builder
-              label_display: '0'
+              label_display: "0"
               formatter:
-                settings: {  }
-                third_party_settings: {  }
+                settings: {}
+                third_party_settings: {}
               context_mapping:
                 entity: layout_builder.entity
             additional:
@@ -230,77 +229,77 @@ third_party_settings:
                   scroll_effects:
                     class: null
             weight: 0
-        third_party_settings: {  }
+        third_party_settings: {}
   layout_library:
     enable: true
   layout_builder_restrictions:
     entity_view_mode_restriction:
       allowed_blocks:
-        'Chaos Tools':
-          - 'entity_view:node'
+        "Chaos Tools":
+          - "entity_view:node"
         Content:
-          - 'entity_field:node:field_media'
-        'Content fields':
-          - 'field_block:node:landing_page_lb:uid'
-          - 'field_block:node:landing_page_lb:created'
-          - 'field_block:node:landing_page_lb:field_description'
-          - 'field_block:node:landing_page_lb:title'
-        'Custom block types':
+          - "entity_field:node:field_media"
+        "Content fields":
+          - "field_block:node:landing_page_lb:uid"
+          - "field_block:node:landing_page_lb:created"
+          - "field_block:node:landing_page_lb:field_description"
+          - "field_block:node:landing_page_lb:title"
+        "Custom block types":
           - varbase_carousel_block
           - varbase_gallery_block
           - varbase_html_code_block
           - varbase_media_block
           - varbase_rich_text_block
           - varbase_simple_text_block
-        Dashboard: {  }
-        Devel: {  }
-        'Entity Block':
-          - 'entity_block:block'
-          - 'entity_block:node'
-          - 'entity_block:block_content'
-          - 'entity_block:media'
-          - 'entity_block:taxonomy_term'
-          - 'entity_block:user'
-        Forms: {  }
-        Help: {  }
-        'Inline blocks':
-          - 'inline_block:varbase_carousel_block'
-          - 'inline_block:varbase_html_code_block'
-          - 'inline_block:varbase_media_block'
-          - 'inline_block:varbase_plain_text_block'
-          - 'inline_block:varbase_rich_text_block'
-          - 'inline_block:varbase_simple_text_block'
-          - 'inline_block:varbase_gallery_block'
-        'Lists (Views)':
-          - 'views_block:varbase_blog-blog_listing_block'
-          - 'views_block:varbase_blog-blog_listing_by_blog_category_block'
-          - 'views_block:varbase_blog-blog_listing_by_tags_block'
-          - 'views_block:varbase_blog-homepage_blog_block'
-          - 'views_block:content_recent-block_1'
-          - 'views_block:taxonomy_term-terms_list_block'
-          - 'views_block:who_s_online-who_s_online_block'
-        Menus: {  }
-        'Responsive Preview': {  }
-        'Social Auth': {  }
+        Dashboard: {}
+        Devel: {}
+        "Entity Block":
+          - "entity_block:block"
+          - "entity_block:node"
+          - "entity_block:block_content"
+          - "entity_block:media"
+          - "entity_block:taxonomy_term"
+          - "entity_block:user"
+        Forms: {}
+        Help: {}
+        "Inline blocks":
+          - "inline_block:varbase_carousel_block"
+          - "inline_block:varbase_html_code_block"
+          - "inline_block:varbase_media_block"
+          - "inline_block:varbase_plain_text_block"
+          - "inline_block:varbase_rich_text_block"
+          - "inline_block:varbase_simple_text_block"
+          - "inline_block:varbase_gallery_block"
+        "Lists (Views)":
+          - "views_block:varbase_blog-blog_listing_block"
+          - "views_block:varbase_blog-blog_listing_by_blog_category_block"
+          - "views_block:varbase_blog-blog_listing_by_tags_block"
+          - "views_block:varbase_blog-homepage_blog_block"
+          - "views_block:content_recent-block_1"
+          - "views_block:taxonomy_term-terms_list_block"
+          - "views_block:who_s_online-who_s_online_block"
+        Menus: {}
+        "Responsive Preview": {}
+        "Social Auth": {}
         System:
           - system_breadcrumb_block
           - system_main_block
           - system_branding_block
-        User: {  }
-        'User fields': {  }
+        User: {}
+        "User fields": {}
         Webform:
           - webform_block
         core:
           - page_title_block
       allowed_layouts:
-        - 'bootstrap_layout_builder:blb_col_1'
-        - 'bootstrap_layout_builder:blb_col_2'
-        - 'bootstrap_layout_builder:blb_col_3'
-        - 'bootstrap_layout_builder:blb_col_4'
-        - 'bootstrap_layout_builder:blb_col_6'
-      whitelisted_blocks: {  }
-      blacklisted_blocks: {  }
-    allowed_block_categories: {  }
+        - "bootstrap_layout_builder:blb_col_1"
+        - "bootstrap_layout_builder:blb_col_2"
+        - "bootstrap_layout_builder:blb_col_3"
+        - "bootstrap_layout_builder:blb_col_4"
+        - "bootstrap_layout_builder:blb_col_6"
+      whitelisted_blocks: {}
+      blacklisted_blocks: {}
+    allowed_block_categories: {}
 id: node.landing_page_lb.default
 targetEntityType: node
 bundle: landing_page_lb
@@ -308,8 +307,8 @@ mode: default
 content:
   content_moderation_control:
     weight: -20
-    settings: {  }
-    third_party_settings: {  }
+    settings: {}
+    third_party_settings: {}
     region: content
 hidden:
   field_description: true

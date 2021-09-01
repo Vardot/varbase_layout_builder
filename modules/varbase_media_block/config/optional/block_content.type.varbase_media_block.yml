@@ -1,7 +1,7 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: varbase_media_block
-label: 'Media (image/video)'
+label: "Media (image/video)"
 revision: 1
-description: 'A media block contains a title and media.'
+description: "A media block contains a title and media."

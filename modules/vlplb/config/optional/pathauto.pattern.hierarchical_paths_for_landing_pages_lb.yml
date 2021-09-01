@@ -4,9 +4,9 @@ dependencies:
   module:
     - node
 id: hierarchical_paths_for_landing_pages_lb
-label: 'Hierarchical paths for landing pages (Layout Builder)'
-type: 'canonical_entities:node'
-pattern: '[node:menu-link:parents:join-path]/[node:title]'
+label: "Hierarchical paths for landing pages (Layout Builder)"
+type: "canonical_entities:node"
+pattern: "[node:menu-link:parents:join-path]/[node:title]"
 selection_criteria:
   cae0d0d3-058c-4b4b-8e8a-3a1a5b71813e:
     id: node_type
@@ -18,4 +18,4 @@ selection_criteria:
     uuid: cae0d0d3-058c-4b4b-8e8a-3a1a5b71813e
 selection_logic: and
 weight: 0
-relationships: {  }
+relationships: {}

@@ -11,12 +11,11 @@ field_name: field_varbase_heading_size
 entity_type: block_content
 bundle: varbase_heading_block
 label: Size
-description: ''
+description: ""
 required: false
 translatable: true
 default_value:
-  -
-    value: h2
-default_value_callback: ''
-settings: {  }
+  - value: h2
+default_value_callback: ""
+settings: {}
 field_type: list_string

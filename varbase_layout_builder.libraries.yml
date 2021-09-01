@@ -2,17 +2,17 @@
 enhancements:
   css:
     theme:
-      css/theme/vlb-enhancements.base.css: { }
+      css/theme/vlb-enhancements.base.css: {}
 
 # Varbase Layout Builder theme of configure section.
 configure-section.admin:
   js:
-    js/vlb-configure-section.admin.js: { }
+    js/vlb-configure-section.admin.js: {}
   dependencies:
     - varbase_layout_builder/plugin.horizontal_alignment.layout_builder_form
     - varbase_layout_builder/plugin.vertical_alignment.layout_builder_form
 
-# Layout builder modal claro theme 
+# Layout builder modal claro theme.
 claro:
   version: VERSION
   css:
@@ -101,10 +101,10 @@ claro:
 plugin.horizontal_alignment.layout_builder_form:
   css:
     theme:
-      css/theme/plugins/horizontal-alignment.css: { }
+      css/theme/plugins/horizontal-alignment.css: {}
 
 # Vertical alignment.
 plugin.vertical_alignment.layout_builder_form:
   css:
     theme:
-      css/theme/plugins/vertical-alignment.css: { }
+      css/theme/plugins/vertical-alignment.css: {}

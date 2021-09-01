@@ -1,7 +1,7 @@
 langcode: en
 status: 1
-dependencies: {  }
+dependencies: {}
 id: breakpoint_sm
-label: 'Small devices (Landscape phones)'
+label: "Small devices (Landscape phones)"
 base_class: col-sm
-weight: '-7'
+weight: "-7"

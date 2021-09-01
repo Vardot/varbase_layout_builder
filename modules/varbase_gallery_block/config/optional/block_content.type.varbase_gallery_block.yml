@@ -1,7 +1,7 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: varbase_gallery_block
-label: 'Gallery'
+label: "Gallery"
 revision: 1
-description: 'A gallery block contains a title and a gallery of images and videos.'
+description: "A gallery block contains a title and a gallery of images and videos."

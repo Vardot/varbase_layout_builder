@@ -1,7 +1,7 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: varbase_html_code_block
-label: 'HTML code'
+label: "HTML code"
 revision: 1
-description: 'An HTML Code block contains a title and a body with an HTML text format.'
+description: "An HTML Code block contains a title and a body with an HTML text format."

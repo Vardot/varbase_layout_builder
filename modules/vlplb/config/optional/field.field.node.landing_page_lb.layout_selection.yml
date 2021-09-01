@@ -9,12 +9,12 @@ field_name: layout_selection
 entity_type: node
 bundle: landing_page_lb
 label: Layout
-description: ''
+description: ""
 required: false
 translatable: true
-default_value: {  }
-default_value_callback: ''
+default_value: {}
+default_value_callback: ""
 settings:
   handler: layout_library
-  handler_settings: {  }
+  handler_settings: {}
 field_type: entity_reference

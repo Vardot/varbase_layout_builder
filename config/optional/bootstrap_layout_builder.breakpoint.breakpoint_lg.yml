@@ -1,7 +1,7 @@
 langcode: en
 status: 1
-dependencies: {  }
+dependencies: {}
 id: breakpoint_lg
-label: 'Large devices (Desktops)'
+label: "Large devices (Desktops)"
 base_class: col-lg
-weight: '-9'
+weight: "-9"

@@ -10,19 +10,19 @@ dependencies:
 third_party_settings:
   allowed_formats:
     code_html: code_html
-    full_html: '0'
-    basic_html: '0'
-    plain_text: '0'
+    full_html: "0"
+    basic_html: "0"
+    plain_text: "0"
 id: block_content.varbase_html_code_block.body
 field_name: body
 entity_type: block_content
 bundle: varbase_html_code_block
 label: Body
-description: ''
+description: ""
 required: true
 translatable: true
-default_value: {  }
-default_value_callback: ''
+default_value: {}
+default_value_callback: ""
 settings:
   display_summary: false
   required_summary: false

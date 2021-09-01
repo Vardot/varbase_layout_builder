@@ -1,14 +1,14 @@
 langcode: en
 status: true
-dependencies: {  }
+dependencies: {}
 id: vlb_col_6_three_equal_columns
 layout_id: blb_col_6
-label: 'Three equal columns'
-structure: '4 4 4'
+label: "Three equal columns"
+structure: "4 4 4"
 breakpoints:
   breakpoint_md: breakpoint_md
   breakpoint_sm: breakpoint_sm
   breakpoint_xl: 0
   breakpoint_lg: 0
   breakpoint_xs: 0
-weight: '-9'
+weight: "-9"
