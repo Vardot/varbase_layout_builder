@@ -67,7 +67,9 @@
       },
       "drupal/bootstrap_styles": {
         "Issue #3192061: Have the option to use other admin themes like Claro or Gin":
-        "https://www.drupal.org/files/issues/2021-02-03/bootstrap_styles-1-0-3--3192061-9.patch"
+        "https://www.drupal.org/files/issues/2021-02-03/bootstrap_styles-1-0-3--3192061-9.patch",
+        "Issue #3230802: Fix Border styling with Bootstrap library hard overrides over borders":
+        "https://www.drupal.org/files/issues/2021-09-01/3230802-4.patch"
       },
       "drupal/layout_library": {
         "Issue #3082434: When creating a new layout override for a node, alter core's behavior of cloning the node type's default layout to instead cloning the node's currently selected layout":
