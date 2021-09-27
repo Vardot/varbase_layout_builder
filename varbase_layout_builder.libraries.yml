@@ -108,3 +108,15 @@ plugin.vertical_alignment.layout_builder_form:
   css:
     theme:
       css/theme/plugins/vertical-alignment.css: {}
+
+# local library for
+# AOS - Animate on scroll library.
+# From https://michalsnik.github.io/aos
+# Which located at /libraries/aos
+aso.local:
+  js:
+    /libraries/aos/dist/aos.js: { weight: -3, minified: true }
+    js/plugins/scroll_effects/build.js: {}
+  css:
+    theme:
+      /libraries/aos/dist/aos.css: { minified: true }
