@@ -269,7 +269,43 @@ function varbase_layout_builder_preprocess_blb_section(&$variables) {
  */
 function varbase_layout_builder_library_info_alter(&$libraries, $extension) {
 
-  if ($extension == 'bootstrap_layout_builder'
+  if ($extension == 'bootstrap_styles'
+    && isset($libraries['plugin.scroll_effects.build'])) {
+
+    if (isset($libraries['plugin.scroll_effects.build']['remote'])) {
+      unset($libraries['plugin.scroll_effects.build']['remote']);
+    }
+    if (isset($libraries['plugin.scroll_effects.build']['version'])) {
+      unset($libraries['plugin.scroll_effects.build']['version']);
+    }
+    if (isset($libraries['plugin.scroll_effects.build']['license'])) {
+      unset($libraries['plugin.scroll_effects.build']['license']);
+    }
+    if (isset($libraries['plugin.scroll_effects.build']['js'])) {
+      unset($libraries['plugin.scroll_effects.build']['js']);
+    }
+    if (isset($libraries['plugin.scroll_effects.build']['css'])) {
+      unset($libraries['plugin.scroll_effects.build']['css']);
+    }
+
+    $libraries['plugin.scroll_effects.build'] = [
+     'js' => [
+      '/libraries/aos/dist/aos.js' => [
+          'weight' => -3,
+          'minified' => TRUE,
+        ],
+        'js/plugins/scroll_effects/build.js' => [],
+      ],
+      'css' => [
+        'theme' => [
+          '/libraries/aos/dist/aos.css' => [
+            'minified' => TRUE,
+          ],
+        ],
+      ],
+    ];
+  }
+  elseif ($extension == 'bootstrap_layout_builder'
      && isset($libraries['layout_builder_form_style'])) {
 
     $new_path = '/' . drupal_get_path('module', 'varbase_layout_builder') . '/js';

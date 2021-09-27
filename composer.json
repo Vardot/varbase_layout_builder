@@ -51,7 +51,8 @@
     "drupal/section_library": "~1.0",
     "drupal/bootstrap_styles": "1.0.3",
     "drupal/bootstrap_layout_builder": "2.0.1",
-    "drupal/length_indicator": "~1.0"
+    "drupal/length_indicator": "~1.0",
+    "npm-asset/aos": "~2.0"
   },
   "extra": {
     "installer-types": [
