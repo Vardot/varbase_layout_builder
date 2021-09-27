@@ -9,6 +9,7 @@ use Symfony\Component\Yaml\Yaml;
 use Drupal\Core\Config\InstallStorage;
 use Drupal\Core\Config\StorageInterface;
 use Drupal\Core\Config\FileStorage;
+use Vardot\Entity\EntityDefinitionUpdateManager;
 
 /**
  * Implements hook_install().
@@ -61,5 +62,12 @@ function varbase_html_code_block_install() {
       }
     }
   }
+
   // --------------------------------------------------------------------------.
+  // Entity updates to clear up any mismatched entity and/or field definitions
+  // And Fix changes were detected in the entity type and field definitions.
+  \Drupal::classResolver()
+    ->getInstanceFromDefinition(EntityDefinitionUpdateManager::class)
+    ->applyUpdates();
+
 }
