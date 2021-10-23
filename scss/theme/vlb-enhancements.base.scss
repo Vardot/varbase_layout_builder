@@ -9,7 +9,7 @@ body {
       outline: 1px dashed #555555;
       padding: 1em;
       font-weight: bold;
-    
+
       &:hover,
       &:active,
       &:focus {
@@ -31,14 +31,14 @@ body {
         }
       }
     }
-    
+
     .layout-builder-block {
       margin: 0;
       padding: 0;
       background: transparent;
       background-color: transparent;
     }
-    
+
     .layout-builder__link--import-from-library {
       margin: 0;
       padding-top: 0.5em;
@@ -127,13 +127,13 @@ body {
         margin: 0;
         padding: 0;
       }
-    } 
+    }
 
     .layout-builder__actions {
       .layout-builder__link--layout_builder_block_attributes {
         background: url("../../images/icons/ffffff/droplet-fill.svg") center center/12px 12px no-repeat;
       }
-    } 
+    }
 
     .layout-builder__section {
       padding: 0;
@@ -287,7 +287,7 @@ body {
     .js-messages__wrapper {
       top: 0 !important;
     }
-  } 
+  }
 }
 
 
@@ -301,24 +301,24 @@ body {
         + label {
           font-size: 0;
           text-indent: -999em;
-    
+
           .input-icon {
             margin-bottom: 0;
-    
+
             &[class*="left"],
             &[class*="start"] {
               background-image: url('../../images/plugins/text-alignment/text-start.svg');
             }
-    
+
             &[class*="center"] {
               background-image: url('../../images/plugins/text-alignment/text-center.svg');
             }
-    
+
             &[class*="right"],
             &[class*="end"] {
               background-image: url('../../images/plugins/text-alignment/text-end.svg');
             }
-    
+
             &[class*="justify"] {
               background-image: url('../../images/plugins/text-alignment/text-justify.svg');
             }
@@ -397,10 +397,10 @@ body {
               text-align: center;
               cursor: pointer;
               border-radius: 0;
-  
+
               &:hover {
                 background-color: #4b515c;
-  
+
                 &:after {
                   border-color: #2F3138;
                 }
@@ -546,4 +546,35 @@ body {
   .field-text-alignment .fieldset-wrapper > div > div input + label  {
     height: 60px;
   }
+
+  .tabledrag-toggle-weight-wrapper {
+   margin-top: 0;
+  }
+
+  .tabledrag-cell,
+  .tabledrag-cell-content {
+    max-width: 1rem;
+    min-width: 1rem;
+  }
+
+  .draggable {
+    a {
+      &.tabledrag-handle {
+        overflow: visible;
+      }
+    }
+  }
+
+  .tabledrag-handle {
+    &::after {
+      margin-left: 0;
+    }
+  }
+
+  .ief-entity-table {
+    td {
+      border: 0;
+    }
+  }
+
 }

@@ -549,3 +549,25 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
 #layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label {
   height: 60px;
 }
+
+#layout-builder-modal .tabledrag-toggle-weight-wrapper {
+  margin-top: 0;
+}
+
+#layout-builder-modal .tabledrag-cell,
+#layout-builder-modal .tabledrag-cell-content {
+  min-width: 1rem;
+  max-width: 1rem;
+}
+
+#layout-builder-modal .draggable a.tabledrag-handle {
+  overflow: visible;
+}
+
+#layout-builder-modal .tabledrag-handle::after {
+  margin-left: 0;
+}
+
+#layout-builder-modal .ief-entity-table td {
+  border: 0;
+}
