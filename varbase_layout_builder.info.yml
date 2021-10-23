@@ -25,3 +25,4 @@ install:
   - section_library
   - bootstrap_styles
   - bootstrap_layout_builder
+  - block_library
