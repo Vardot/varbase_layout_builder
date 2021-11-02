@@ -12,7 +12,6 @@
 #}
 {% if content %}
 
-  {% set gutters_between_on = content['#settings']['remove_gutters'] == 1 and content['#settings']['gutters_between'] == 1 %}
   {% set gutters_between_off = content['#settings']['remove_gutters'] == 1 and content['#settings']['gutters_between'] == 0 %}
   {% set horizontal_alignment_classes = content['#settings']['container_wrapper']['bootstrap_styles']['horizontal_alignment']['class'] %}
   {% set vertical_alignment_classes = content['#settings']['container_wrapper']['bootstrap_styles']['vertical_alignment']['class'] %}
@@ -21,8 +20,7 @@
   {% set classes = [
     'layout',
     'row',
-    gutters_between_on ? 'gx-0' : '',
-    gutters_between_off and has_container_width == 0 ? 'no-gutters g-0' : '',
+    gutters_between_off and has_container_width == 0 ? 'no-gutters gx-0' : '',
     horizontal_alignment_classes ? horizontal_alignment_classes : '',
     vertical_alignment_classes ? vertical_alignment_classes : '',
     'layout-builder__layout'
