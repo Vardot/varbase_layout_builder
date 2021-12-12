@@ -421,8 +421,7 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
 
       // Gutters between default value.
       $gutters_between_default_value = TRUE;
-      if (isset($this->configuration['gutters_between'])
-        && $this->configuration['gutters_between'] !== NULL) {
+      if (!empty($this->configuration['gutters_between'])) {
         $gutters_between_default_value = $this->configuration['gutters_between'];
       }
       elseif (isset($gutters_between_defaults['default_value'])) {
