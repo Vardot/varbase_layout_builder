@@ -59,10 +59,12 @@ class VarbaseLayoutBuilderUX extends LayoutBuilder {
     ];
 
     if (\Drupal::moduleHandler()->moduleExists('section_library')) {
+      $add_section_url = Url::fromRoute('section_library.add_section_to_library', $build['configure']['#url']->getRouteParameters());
       $build['actions']['add_section_to_library'] = [
         '#type' => 'link',
         '#title' => $this->t('<span class="visually-hidden">Add section to library @section</span>', ['@section' => $section_label]),
-        '#url' => Url::fromRoute('section_library.add_section_to_library', $build['configure']['#url']->getRouteParameters()),
+        '#url' => $add_section_url,
+        '#access' => $add_section_url->access(),
         '#attributes' => [
           'class' => [
             'use-ajax',
