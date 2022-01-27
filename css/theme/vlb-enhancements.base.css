@@ -256,6 +256,11 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
   padding-left: auto;
 }
 
+[dir=rtl] body #drupal-off-canvas .blb_breakpoint_cols .fieldset-wrapper .form-type-radio .option,
+[dir=rtl] body #layout-builder-modal .blb_breakpoint_cols .fieldset-wrapper .form-type-radio .option {
+  direction: rtl;
+}
+
 .toolbar-fixed .js-messages__wrapper {
   top: 0 !important;
 }

@@ -272,6 +272,16 @@ body {
       flex-direction: row-reverse;
     }
 
+    // Breakpoints cols RTL.
+    .blb_breakpoint_cols {
+      .fieldset-wrapper {
+        .form-type-radio {
+          .option {
+            direction: rtl;
+          }
+        }
+      }
+    }
   }
 
 }
