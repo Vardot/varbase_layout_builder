@@ -124,8 +124,10 @@ function varbase_media_block_preprocess_block(&$variables) {
       $variables['content']['field_media'] = $field_media_output_with_selected_view_mode;
       unset($variables['content']['field_media_view_mode']);
 
-      $variables['media_link'] = $variables['content']['field_link'];
-      unset($variables['content']['field_link']);
+      if (isset($variables['content']['field_link'])) {
+        $variables['media_link'] = $variables['content']['field_link'];
+        unset($variables['content']['field_link']);
+      }
     }
 
   }
@@ -149,8 +151,10 @@ function varbase_media_block_preprocess_block(&$variables) {
       $variables['content']['content']['field_media'] = $field_media_output_with_selected_view_mode;
       unset($variables['content']['content']['field_media_view_mode']);
 
-      $variables['media_link'] = $variables['content']['content']['field_link'];
-      unset($variables['content']['content']['field_link']);
+      if (isset($variables['content']['content']['field_link'])) {
+        $variables['media_link'] = $variables['content']['content']['field_link'];
+        unset($variables['content']['content']['field_link']);
+      }
     }
   }
 
