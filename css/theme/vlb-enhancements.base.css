@@ -485,6 +485,11 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
   border-bottom: 0;
 }
 
+#drupal-off-canvas .inline-block-list li:last-child,
+#layout-builder-modal .inline-block-list li:last-child {
+  padding-bottom: 1rem;
+}
+
 #drupal-off-canvas .form-select,
 #drupal-off-canvas .form-text,
 #drupal-off-canvas input[type="text"],
