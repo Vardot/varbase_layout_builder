@@ -6,6 +6,7 @@ use Drupal\Component\Utility\NestedArray;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Serialization\Yaml;
 use Drupal\bootstrap_layout_builder\Plugin\Layout\BootstrapLayout;
+use Drupal\Component\Utility\Html;
 
 /**
  * A layout from our bootstrap layout builder.
@@ -251,6 +252,11 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
         ],
       ];
 
+      if (!empty($this->configuration['container_wrapper_id'])) {
+        $container_wrapper_id = $this->configuration['container_wrapper_id'];
+        $theme_wrappers['blb_container_wrapper']['#attributes']['id'] = $container_wrapper_id;
+      }
+
       if ($this->configuration['container_wrapper_classes']) {
         $theme_wrappers['blb_container_wrapper']['#attributes']['class'][] = $this->configuration['container_wrapper_classes'];
       }
@@ -492,6 +498,14 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
       }
     }
 
+    $form['ui']['tab_content']['settings']['container']['container_wrapper_id'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Container wrapper ID'),
+      '#description' => $this->t('A unique identifier for the container.<br>Allowed characters are letters, numbers, underscores, and dashes.'),
+      '#default_value' => $this->configuration['container_wrapper_id'],
+      '#weight' => -1,
+    ];
+
     $form['ui']['tab_content']['settings']['regions']['section_header_classes'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Section header classes'),
@@ -550,6 +564,9 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
 
     // Gutters between.
     $this->configuration['gutters_between'] = $form_state->getValue(array_merge($layout_tab, ['gutters_between']));
+
+    // Container wrapper ID
+    $this->configuration['container_wrapper_id'] = HTML::cleanCssIdentifier($form_state->getValue(array_merge($settings_tab, ['container', 'container_wrapper_id'])), [' ' => '-']);
 
     // Row classes from advanced mode.
     if (!$this->sectionSettingsIsHidden()) {
