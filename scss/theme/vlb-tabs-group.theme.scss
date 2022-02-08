@@ -1,0 +1,72 @@
+$tabs-border-color: #727579;
+$tabs-background: #292c32;
+$tabs-link-color: #aeb0b3;
+$tabs-selected-background: #46484e;
+$tabs-selected-color: #41a5ff;
+$white: #fff;
+$red: #dc3545;
+
+// Tabs Fixing for layout builder.
+#layout-builder-modal {
+  .field-group-tabs-wrapper {
+    .horizontal-tabs {
+      border-color: $tabs-border-color;
+
+      .horizontal-tabs-list {
+        list-style-type: none;
+        margin: 0;
+        border-color: $tabs-border-color;
+        background: $tabs-background;
+
+        .horizontal-tab-button {
+          background-color: $tabs-background;
+          border-color: $tabs-border-color;
+
+          a {
+            color: $tabs-link-color;
+            transition: color .2s ease;
+
+            &:hover {
+              background-color: inherit;
+              color: $white;
+            }
+          }
+
+          &.selected {
+            background-color: $tabs-selected-background;
+            border-bottom: 2px solid $tabs-selected-color;
+
+            a {
+              color: $tabs-selected-color;
+
+              &:hover {
+                color: inherit;
+              }
+            }
+          }
+        }
+
+        .form-required {
+          &::after {
+            display: inline-block;
+            margin-right: 0.15em;
+            margin-left: 0.15em;
+            content: "*";
+            color: $red;
+            font-size: 0.875rem;
+          }
+        }
+      }
+    }
+  }
+
+  .claro-details.horizontal-tabs-pane {
+    padding: 0 1em;
+    border: 0;
+    box-shadow: unset;
+
+    > summary {
+      display: none;
+    }
+  }
+}
