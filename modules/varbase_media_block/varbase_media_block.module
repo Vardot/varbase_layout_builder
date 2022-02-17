@@ -110,7 +110,7 @@ function varbase_media_block_preprocess_block(&$variables) {
     $media_id = $block_field_media->first()->getValue()['target_id'];
     $media = Media::load($media_id);
 
-    if ($media instanceof MediaInterface) {
+    if ($media instanceof MediaInterface && $block_field_media_view_mode->first() !== NULL) {
 
       $media_view_mode = $block_field_media_view_mode->first()
         ->getValue()['target_id'];
@@ -140,7 +140,7 @@ function varbase_media_block_preprocess_block(&$variables) {
     $media_id = $block_field_media->first()->getValue()['target_id'];
     $media = Media::load($media_id);
 
-    if ($media instanceof MediaInterface) {
+    if ($media instanceof MediaInterface && $block_field_media_view_mode->first() !== NULL) {
 
       $media_view_mode = $block_field_media_view_mode->first()->getValue()['target_id'];
       $media_view_mode = str_replace('media.', '', $media_view_mode);
