@@ -110,7 +110,9 @@ function varbase_media_block_preprocess_block(&$variables) {
     $media_id = $block_field_media->first()->getValue()['target_id'];
     $media = Media::load($media_id);
 
-    if ($media instanceof MediaInterface && $block_field_media_view_mode->first() !== NULL) {
+    if ($media instanceof MediaInterface
+      && isset($block_field_media_view_mode)
+      && $block_field_media_view_mode->first() !== NULL) {
 
       $media_view_mode = $block_field_media_view_mode->first()
         ->getValue()['target_id'];
@@ -118,13 +120,24 @@ function varbase_media_block_preprocess_block(&$variables) {
 
       $view_builder = \Drupal::entityTypeManager()
         ->getViewBuilder($media->getEntityTypeId());
-      $field_media_output_with_selected_view_mode = $view_builder->view($media, $media_view_mode);
-      $variables['content']['field_media'] = $field_media_output_with_selected_view_mode;
 
-      $variables['content']['field_media'] = $field_media_output_with_selected_view_mode;
+      // Get the media with the selected media view mode.
+      $variables['content']['field_media'] = $view_builder->view($media, $media_view_mode);
+
+      // Assign the filed_link as media_link.
+      if (isset($variables['content']['field_link'])) {
+        $variables['media_link'] = $variables['content']['field_link'];
+      }
+
+    }
+
+    // Unset the media view mode field. Not to render it out in the template.
+    if (isset($variables['content']['field_media_view_mode'])) {
       unset($variables['content']['field_media_view_mode']);
+    }
 
-      $variables['media_link'] = $variables['content']['field_link'];
+    // Unset the link field. Not to render it out in the template.
+    if (isset($variables['content']['field_link'])) {
       unset($variables['content']['field_link']);
     }
 
@@ -135,21 +148,39 @@ function varbase_media_block_preprocess_block(&$variables) {
     $block_field_media = $variables['content']['content']['#block_content']->get('field_media');
     $block_field_media_view_mode = $variables['content']['content']['#block_content']->get('field_media_view_mode');
 
-    $media_id = $block_field_media->first()->getValue()['target_id'];
-    $media = Media::load($media_id);
+    if (isset($block_field_media)
+      && $block_field_media->first() !== NULL) {
 
-    if ($media instanceof MediaInterface && $block_field_media_view_mode->first() !== NULL) {
+      $media_id = $block_field_media->first()->getValue()['target_id'];
+      $media = Media::load($media_id);
 
-      $media_view_mode = $block_field_media_view_mode->first()->getValue()['target_id'];
-      $media_view_mode = str_replace('media.', '', $media_view_mode);
+      if ($media instanceof MediaInterface
+        && isset($block_field_media_view_mode)
+        && $block_field_media_view_mode->first() !== NULL) {
 
-      $view_builder = \Drupal::entityTypeManager()->getViewBuilder($media->getEntityTypeId());
-      $field_media_output_with_selected_view_mode = $view_builder->view($media, $media_view_mode);
+        $media_view_mode = $block_field_media_view_mode->first()->getValue()['target_id'];
+        $media_view_mode = str_replace('media.', '', $media_view_mode);
 
-      $variables['content']['content']['field_media'] = $field_media_output_with_selected_view_mode;
+        $view_builder = \Drupal::entityTypeManager()->getViewBuilder($media->getEntityTypeId());
+
+        // Get the media with the selected media view mode.
+        $variables['content']['content']['field_media'] = $view_builder->view($media, $media_view_mode);
+
+        // Assign the filed_link as media_link.
+        if (isset($variables['content']['content']['field_link'])) {
+          $variables['media_link'] = $variables['content']['content']['field_link'];
+        }
+
+      }
+    }
+
+    // Unset the media view mode field. Not to render it out in the template.
+    if (isset($variables['content']['content']['field_media_view_mode'])) {
       unset($variables['content']['content']['field_media_view_mode']);
+    }
 
-      $variables['media_link'] = $variables['content']['content']['field_link'];
+    // Unset the link field.  Not to render it out in the template.
+    if (isset($variables['content']['content']['field_link'])) {
       unset($variables['content']['content']['field_link']);
     }
   }
