@@ -189,7 +189,7 @@ function varbase_layout_builder_update_10003() {
   $new_border_right_color = "border-end border-end-primary|Primary\r\nborder-end border-end-secondary|Secondary\r\nborder-end border-end-success|Success\r\nborder-end border-end-danger|Danger\r\nborder-end border-end-warning|Warning\r\nborder-end border-end-info|Info\r\nborder-end border-end-light|Light\r\nborder-end border-end-dark|Dark\r\nborder-end border-end-white|White";
   if ($current_border_right_color === $old_border_right_color) {
     $config_factory->set('border_right_color', $new_border_right_color);
-    $config_factory->save(); 
+    $config_factory->save();
   }
 
   // Only update if the border_bottom_color current config value is not changed from the old config.
@@ -198,6 +198,6 @@ function varbase_layout_builder_update_10003() {
   $new_border_bottom_color = "border-bottom border-bottom-primary|Primary\r\nborder-bottom border-bottom-secondary|Secondary\r\nborder-bottom border-bottom-success|Success\r\nborder-bottom border-bottom-danger|Danger\r\nborder-bottom border-bottom-warning|Warning\r\nborder-bottom border-bottom-info|Info\r\nborder-bottom border-bottom-light|Light\r\nborder-bottom border-bottom-dark|Dark\r\nborder-bottom border-bottom-white|White";
   if ($current_border_bottom_color === $old_border_bottom_color) {
     $config_factory->set('border_bottom_color', $new_border_bottom_color);
-    $config_factory->save();  
+    $config_factory->save();
   }
 }
