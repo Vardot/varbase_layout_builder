@@ -16,7 +16,7 @@ use Vardot\Installer\ModuleInstallerFactory;
  */
 function varbase_gallery_block_install() {
 
-  // Processer for install: in varbase_media_block.info.yml file.
+  // Processer for install: in varbase_gallery_block.info.yml file.
   // --------------------------------------------------------------------------.
   ModuleInstallerFactory::installList('varbase_gallery_block');
 
