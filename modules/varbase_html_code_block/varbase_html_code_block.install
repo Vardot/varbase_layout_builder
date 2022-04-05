@@ -13,13 +13,13 @@ use Vardot\Installer\ModuleInstallerFactory;
  */
 function varbase_html_code_block_install() {
 
-  // Processer for install: in varbase_html_code.info.yml file.
+  // Processer for install: in varbase_html_code_block.info.yml file.
   // --------------------------------------------------------------------------.
-  ModuleInstallerFactory::installList('varbase_html_code');
+  ModuleInstallerFactory::installList('varbase_html_code_block');
 
   // Install optional configs.
-  ModuleInstallerFactory::importConfigsFromScanedDirectory('varbase_html_code', '/^field.storage.*\\.(yml)$/i');
-  ModuleInstallerFactory::importConfigsFromScanedDirectory('varbase_html_code', '/^.*(settings.yml)$/i');
+  ModuleInstallerFactory::importConfigsFromScanedDirectory('varbase_html_code_block', '/^field.storage.*\\.(yml)$/i');
+  ModuleInstallerFactory::importConfigsFromScanedDirectory('varbase_html_code_block', '/^.*(settings.yml)$/i');
 
   // --------------------------------------------------------------------------.
   // Entity updates to clear up any mismatched entity and/or field definitions
