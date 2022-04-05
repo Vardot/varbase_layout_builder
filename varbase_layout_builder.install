@@ -180,3 +180,22 @@ function varbase_layout_builder_update_10004() {
   // To make sure that any hook or event subscriber workes after all used modules.
   ModuleInstallerFactory::setModuleWeightAfterInstallation('varbase_layout_builder');
 }
+
+/**
+ * Issue #3272221: Prevent anonymous users from accessing.
+ *
+ * The Sections Library page.
+ */
+function varbase_layout_builder_update_10005() {
+  $moduleHandler = \Drupal::service('module_handler');
+  $viewSectionLibrary = \Drupal::service('config.factory')->getEditable('views.view.section_library');
+  $permission = $viewSectionLibrary->get('display.default.display_options.access.options.perm');
+
+  if ($moduleHandler->moduleExists('varbase_layout_builder')
+    && $moduleHandler->moduleExists('section_library')) {
+
+    if ($permission === 'access content') {
+      $viewSectionLibrary->set('display.default.display_options.access.options.perm', 'view section library templates')->save(TRUE);
+    }
+  }
+}
