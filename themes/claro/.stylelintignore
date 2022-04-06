@@ -14,3 +14,13 @@ config/**/*.yml
 *.svg
 *.ico
 *.json
+*.make
+*.md
+*.po
+*.xml
+*.js
+*.install
+*.module
+*.twig
+*.lock
+*.php

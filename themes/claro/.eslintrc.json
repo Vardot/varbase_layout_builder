@@ -1,11 +1,13 @@
 {
   "extends": [
-    "airbnb",
+    "airbnb-base",
     "plugin:prettier/recommended"
   ],
   "root": true,
   "env": {
-    "browser": true
+    "browser": true,
+    "es6": true,
+    "node": true
   },
   "globals": {
     "Drupal": true,

@@ -13,6 +13,17 @@ config/**/*.yml
 *.svg
 *.ico
 *.json
+*.make
+*.md
+*.po
+*.xml
+*.js
+*.install
+*.module
+*.twig
+*.lock
+*.php
+package
 themes/claro/scss/*
 themes/claro/css/*
 themes/claro/node_modules/**/*.css
