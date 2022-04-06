@@ -2,25 +2,21 @@ body .layout-builder {
   margin: -3px;
   padding: 3px;
 }
-
 body .layout-builder .layout-builder__add-section {
   padding: 1em;
   text-align: center;
   outline: 1px dashed #555;
   font-weight: bold;
 }
-
 body .layout-builder .layout-builder__add-section:hover,
 body .layout-builder .layout-builder__add-section:active,
 body .layout-builder .layout-builder__add-section:focus {
   outline: 1px solid #000;
 }
-
 body .layout-builder .layout-builder__add-section .layout-builder__link--add {
   display: inline;
   color: #007bff;
 }
-
 body .layout-builder .layout-builder__add-section .layout-builder__link--add:hover,
 body .layout-builder .layout-builder__add-section .layout-builder__link--add:active,
 body .layout-builder .layout-builder__add-section .layout-builder__link--add:focus {
@@ -30,29 +26,24 @@ body .layout-builder .layout-builder__add-section .layout-builder__link--add:foc
   background-color: transparent;
   background-position: 10px center;
 }
-
 body .layout-builder .layout-builder-block {
   margin: 0;
   padding: 0;
   background: transparent;
   background-color: transparent;
 }
-
 body .layout-builder .layout-builder__link--import-from-library {
   margin: 0;
   padding-top: 0.5em;
   padding-right: 0.5em;
   padding-bottom: 0.5em;
   padding-left: 30px;
-  -webkit-transition: all 100ms linear;
-  -o-transition: all 100ms linear;
   transition: all 100ms linear;
   text-transform: uppercase;
   color: #007bff;
   background-position: 10px center;
   font-size: 12px;
 }
-
 body .layout-builder .layout-builder__link--import-from-library:hover,
 body .layout-builder .layout-builder__link--import-from-library:active,
 body .layout-builder .layout-builder__link--import-from-library:focus {
@@ -60,22 +51,19 @@ body .layout-builder .layout-builder__link--import-from-library:focus {
   color: #0056b3;
   background-color: transparent;
 }
-
 body .layout-builder .layout-builder__add-block {
   width: 9.5rem;
   margin: 10px auto;
   text-align: center;
   color: #007bff;
   border-radius: 8px;
-  background-color: #eff6fcc9;
+  background-color: rgba(239, 246, 252, 0.7882352941);
 }
-
 body .layout-builder .layout-builder__add-block .layout-builder__link--add {
   margin-right: 15px;
   margin-left: 15px;
   color: #007bff;
 }
-
 body .layout-builder .layout-builder__add-block .layout-builder__link--add:hover,
 body .layout-builder .layout-builder__add-block .layout-builder__link--add:active,
 body .layout-builder .layout-builder__add-block .layout-builder__link--add:focus {
@@ -85,12 +73,10 @@ body .layout-builder .layout-builder__add-block .layout-builder__link--add:focus
   background-color: transparent;
   background-position: 10px center;
 }
-
 body .layout-builder .layout-builder__link--add-section-to-library {
   color: #007bff;
   background: url(../../images/icons/ffffff/save.svg) transparent center left/1.3em no-repeat;
 }
-
 body .layout-builder .layout-builder__link--add-section-to-library:hover,
 body .layout-builder .layout-builder__link--add-section-to-library:active,
 body .layout-builder .layout-builder__link--add-section-to-library:focus {
@@ -98,7 +84,6 @@ body .layout-builder .layout-builder__link--add-section-to-library:focus {
   color: #0056b3;
   background-color: transparent;
 }
-
 body .layout-builder .layout-builder__link--add-template-to-library {
   text-transform: uppercase;
   color: #007bff;
@@ -106,57 +91,46 @@ body .layout-builder .layout-builder__link--add-template-to-library {
   background-color: #eee;
   font-weight: bold;
 }
-
 body .layout-builder .layout-builder__link--add-template-to-library:hover,
 body .layout-builder .layout-builder__link--add-template-to-library:active,
 body .layout-builder .layout-builder__link--add-template-to-library:focus {
   text-decoration: underline;
   color: #0056b3;
 }
-
 body .layout-builder .layout-builder__region > .layout-builder-block:hover:not(.ui-state-drop) .layout-builder__actions__block,
 body .layout-builder .layout-builder__region > .layout-builder-block:focus:not(.ui-state-drop) .layout-builder__actions__block {
   z-index: 4;
 }
-
 body .layout-builder .layout-builder__region > .layout-builder-block {
   margin: 0;
   padding: 0;
 }
-
 body .layout-builder .layout-builder__actions .layout-builder__link--layout_builder_block_attributes {
   background: url("../../images/icons/ffffff/droplet-fill.svg") center center/12px 12px no-repeat;
 }
-
 body .layout-builder .layout-builder__section {
   padding: 0;
   outline: 2px dashed #555;
 }
-
 body .layout-builder .layout-builder__section:hover,
 body .layout-builder .layout-builder__section:active body .layout-builder .layout-builder__section:focus {
   outline: 2px solid #000;
 }
-
 body .layout-builder .layout-builder__section:hover .layout-builder__actions__section,
 body .layout-builder .layout-builder__section:active body .layout-builder .layout-builder__section:focus .layout-builder__actions__section {
   z-index: 1;
 }
-
 body .layout-builder .layout-builder__section .contextual {
   display: none;
 }
-
 body .layout-builder .layout-builder__actions__section {
   top: -25px;
   left: -2px;
 }
-
 body .layout-builder .layout-builder__actions__block {
   top: 0;
   left: 0;
 }
-
 body .layout-builder__layout.is-layout-builder-highlighted,
 body .layout-builder-block.is-layout-builder-highlighted,
 body .layout-builder__add-block.is-layout-builder-highlighted {
@@ -167,95 +141,73 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
   padding-right: 30px;
   padding-left: 0.5em;
 }
-
 [dir=rtl] body .layout-builder .layout-builder__link--import-from-library {
   padding-right: 30px;
   padding-left: 0.5em;
   background: url(../../images/icons/787878/import.svg) transparent center right/1em no-repeat;
 }
-
 [dir=rtl] body .layout-builder .layout-builder__actions__section {
   right: -2px;
   left: auto;
 }
-
 [dir=rtl] body .layout-builder .layout-builder__actions__block {
   right: 0;
   left: auto;
 }
-
 [dir=rtl] body .layout-builder .layout-builder__link--add-section-to-library {
   background: url(../../images/icons/ffffff/save.svg) transparent center right/1.3em no-repeat;
 }
-
 [dir=rtl] body .layout-builder .layout-builder__add-section .layout-builder__link--add:hover,
 [dir=rtl] body .layout-builder .layout-builder__add-section .layout-builder__link--add:active,
 [dir=rtl] body .layout-builder .layout-builder__add-section .layout-builder__link--add:focus {
   background: url(../../images/icons/787878/plus.svg) transparent center right/1em no-repeat;
 }
-
 [dir=rtl] body .layout-builder .layout-builder__add-block .layout-builder__link--add:hover,
 [dir=rtl] body .layout-builder .layout-builder__add-block .layout-builder__link--add:active,
 [dir=rtl] body .layout-builder .layout-builder__add-block .layout-builder__link--add:focus {
   background: url(../../images/icons/787878/plus.svg) transparent center right/1em no-repeat;
 }
-
 [dir=rtl] body #drupal-off-canvas .bs-group-title,
 [dir=rtl] body #layout-builder-modal .bs-group-title {
   margin-right: 15px;
   margin-left: auto;
 }
-
 [dir=rtl] body #drupal-off-canvas .bs-group-title img,
 [dir=rtl] body #drupal-off-canvas .bs-group-title svg,
 [dir=rtl] body #layout-builder-modal .bs-group-title img,
 [dir=rtl] body #layout-builder-modal .bs-group-title svg {
   margin-left: 1rem;
 }
-
 [dir=rtl] body #drupal-off-canvas .bs_input-circles .fieldset-wrapper > div,
 [dir=rtl] body #drupal-off-canvas .bs_input-boxes .fieldset-wrapper > div,
 [dir=rtl] body #layout-builder-modal .bs_input-circles .fieldset-wrapper > div,
 [dir=rtl] body #layout-builder-modal .bs_input-boxes .fieldset-wrapper > div {
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
   flex-direction: row-reverse;
-  -webkit-box-direction: reverse;
-  -webkit-box-orient: horizontal;
 }
-
 [dir=rtl] body #drupal-off-canvas .bs_input-circles legend,
 [dir=rtl] body #drupal-off-canvas .bs_input-boxes legend,
 [dir=rtl] body #layout-builder-modal .bs_input-circles legend,
 [dir=rtl] body #layout-builder-modal .bs_input-boxes legend {
   text-align: right;
 }
-
-[dir=rtl] body #drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="left"],
-[dir=rtl] body #drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="start"],
-[dir=rtl] body #layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="left"],
-[dir=rtl] body #layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="start"] {
+[dir=rtl] body #drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=left],
+[dir=rtl] body #drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=start],
+[dir=rtl] body #layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=left],
+[dir=rtl] body #layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=start] {
   background-image: url("../../images/plugins/text-alignment/text-end.svg");
 }
-
-[dir=rtl] body #drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="right"],
-[dir=rtl] body #drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="end"],
-[dir=rtl] body #layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="right"],
-[dir=rtl] body #layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="end"] {
+[dir=rtl] body #drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=right],
+[dir=rtl] body #drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=end],
+[dir=rtl] body #layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=right],
+[dir=rtl] body #layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=end] {
   background-image: url("../../images/plugins/text-alignment/text-start.svg");
 }
-
 [dir=rtl] body #drupal-off-canvas .layout-selection li a,
 [dir=rtl] body #layout-builder-modal .layout-selection li a {
-  -webkit-flex-direction: row-reverse;
-  -ms-flex-direction: row-reverse;
   flex-direction: row-reverse;
-  -webkit-box-direction: reverse;
-  -webkit-box-orient: horizontal;
   padding-right: 25px;
   padding-left: auto;
 }
-
 [dir=rtl] body #drupal-off-canvas .blb_breakpoint_cols .fieldset-wrapper .form-type-radio .option,
 [dir=rtl] body #layout-builder-modal .blb_breakpoint_cols .fieldset-wrapper .form-type-radio .option {
   direction: rtl;
@@ -274,73 +226,56 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
   text-indent: -999em;
   font-size: 0;
 }
-
 #drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon,
 #layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon {
   margin-bottom: 0;
 }
-
-#drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="left"],
-#drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="start"],
-#layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="left"],
-#layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="start"] {
+#drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=left],
+#drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=start],
+#layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=left],
+#layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=start] {
   background-image: url("../../images/plugins/text-alignment/text-start.svg");
 }
-
-#drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="center"],
-#layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="center"] {
+#drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=center],
+#layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=center] {
   background-image: url("../../images/plugins/text-alignment/text-center.svg");
 }
-
-#drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="right"],
-#drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="end"],
-#layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="right"],
-#layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="end"] {
+#drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=right],
+#drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=end],
+#layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=right],
+#layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=end] {
   background-image: url("../../images/plugins/text-alignment/text-end.svg");
 }
-
-#drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="justify"],
-#layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*="justify"] {
+#drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=justify],
+#layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=justify] {
   background-image: url("../../images/plugins/text-alignment/text-justify.svg");
 }
-
 #drupal-off-canvas button.button--primary,
-#drupal-off-canvas input[type="submit"].button--primary,
+#drupal-off-canvas input[type=submit].button--primary,
 #layout-builder-modal button.button--primary,
-#layout-builder-modal input[type="submit"].button--primary {
+#layout-builder-modal input[type=submit].button--primary {
   text-align: center;
 }
-
 #drupal-off-canvas .fieldgroup.form-composite.form-wrapper,
 #layout-builder-modal .fieldgroup.form-composite.form-wrapper {
   width: 100%;
 }
-
 #drupal-off-canvas .fieldgroup.blb_container_type .fieldset-wrapper > div > div .input-icon:after,
 #layout-builder-modal .fieldgroup.blb_container_type .fieldset-wrapper > div > div .input-icon:after {
   cursor: pointer;
 }
-
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
 }
-
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div {
   position: relative;
-  -webkit-box-flex: 100%;
-  -webkit-flex: 100%;
-  -ms-flex: 100%;
   flex: 100%;
   width: 100%;
   margin: 0;
   padding: 0;
 }
-
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input {
   position: absolute;
@@ -353,26 +288,11 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
   white-space: nowrap;
   border: 0;
 }
-
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input + label,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input + label {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-direction: normal;
-  -webkit-box-orient: vertical;
-  -ms-flex-pack: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
-  -webkit-justify-content: center;
-  -webkit-box-pack: center;
   justify-content: center;
   width: 100%;
   width: calc(100% - 4px);
@@ -380,8 +300,6 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
   margin: 2px;
   padding: 8px;
   cursor: pointer;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   text-align: center;
   border-radius: 0;
@@ -389,39 +307,32 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
   font-size: 10px;
   font-weight: normal;
 }
-
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input + label:hover,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input + label:hover {
   background-color: #4b515c;
 }
-
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input + label:hover:after,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input + label:hover:after {
   border-color: #2f3138;
 }
-
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input:checked + label,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input:checked + label {
   color: #41a5ff;
   background-color: #5c606b;
   font-weight: bold;
 }
-
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input:checked + label svg *,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input:checked + label svg * {
   color: inherit;
 }
-
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input:checked + label:after,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input:checked + label:after {
   border-color: #2f3138;
 }
-
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input:checked + label .input-icon:after,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input:checked + label .input-icon:after {
   background-image: url("../../images/layout/container-active.svg");
 }
-
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon {
   width: 50px !important;
@@ -429,7 +340,6 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
   margin-bottom: 10px;
   background: url("../../images/layout/stripe-sm.svg") center top repeat;
 }
-
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon:after,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon:after {
   display: block;
@@ -442,57 +352,46 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
   background-image: url("../../images/layout/container.svg");
   background-repeat: no-repeat;
   background-position: center center;
-  -webkit-background-size: 100% 26px;
   background-size: 100% 26px;
 }
-
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon._none:after,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon._none:after {
   background-image: url("../../images/layout/none.svg");
-  -webkit-background-size: 50% 100%;
   background-size: 50% 100%;
 }
-
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon.wide:after,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon.wide:after {
   width: 83.33333%;
 }
-
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon.medium:after,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon.medium:after {
   width: 66.66667%;
 }
-
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon.narrow:after,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon.narrow:after {
   width: 50%;
 }
-
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon.tiny:after,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon.tiny:after {
   width: 33.33333%;
 }
-
-#drupal-off-canvas form.layout-builder-configure-block [data-drupal-selector^="edit-appearance-alignment"],
-#layout-builder-modal form.layout-builder-configure-block [data-drupal-selector^="edit-appearance-alignment"] {
+#drupal-off-canvas form.layout-builder-configure-block [data-drupal-selector^=edit-appearance-alignment],
+#layout-builder-modal form.layout-builder-configure-block [data-drupal-selector^=edit-appearance-alignment] {
   display: none !important;
 }
-
 #drupal-off-canvas ul li,
 #drupal-off-canvas ol li,
 #layout-builder-modal ul li,
 #layout-builder-modal ol li {
   border-bottom: 0;
 }
-
 #drupal-off-canvas .inline-block-list li:last-child,
 #layout-builder-modal .inline-block-list li:last-child {
   padding-bottom: 1rem;
 }
-
 #drupal-off-canvas .form-select,
 #drupal-off-canvas .form-text,
-#drupal-off-canvas input[type="text"],
+#drupal-off-canvas input[type=text],
 #drupal-off-canvas .form-tel,
 #drupal-off-canvas .form-email,
 #drupal-off-canvas .form-url,
@@ -501,12 +400,12 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
 #drupal-off-canvas .form-color,
 #drupal-off-canvas .form-file,
 #drupal-off-canvas .form-textarea,
-#drupal-off-canvas input[type="textarea"],
+#drupal-off-canvas input[type=textarea],
 #drupal-off-canvas .form-date,
 #drupal-off-canvas .form-time,
 #layout-builder-modal .form-select,
 #layout-builder-modal .form-text,
-#layout-builder-modal input[type="text"],
+#layout-builder-modal input[type=text],
 #layout-builder-modal .form-tel,
 #layout-builder-modal .form-email,
 #layout-builder-modal .form-url,
@@ -515,20 +414,18 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
 #layout-builder-modal .form-color,
 #layout-builder-modal .form-file,
 #layout-builder-modal .form-textarea,
-#layout-builder-modal input[type="textarea"],
+#layout-builder-modal input[type=textarea],
 #layout-builder-modal .form-date,
 #layout-builder-modal .form-time {
   color: #222330 !important;
   background-color: #fff !important;
 }
-
 #drupal-off-canvas form.section-library-add-section-to-library,
 #layout-builder-modal form.section-library-add-section-to-library {
   padding: 1rem 0;
 }
-
-#drupal-off-canvas form.section-library-add-section-to-library .form-type-textfield input[type="text"],
-#layout-builder-modal form.section-library-add-section-to-library .form-type-textfield input[type="text"] {
+#drupal-off-canvas form.section-library-add-section-to-library .form-type-textfield input[type=text],
+#layout-builder-modal form.section-library-add-section-to-library .form-type-textfield input[type=text] {
   width: 100% !important;
 }
 
@@ -544,40 +441,32 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 9'%3E%3Cpath fill='none' stroke-width='1.5' d='M1 1L7 7L13 1' stroke='%23545560'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
   background-position: 100% 50%;
-  -webkit-background-size: 1.75rem 0.4375rem;
   background-size: 1.75rem 0.4375rem;
   font-size: 0.889rem;
   line-height: 1.2rem;
 }
-
 #layout-builder-modal .form-item--editor-format .form-element--editor-format:hover #layout-builder-modal .form-item--editor-format .form-element--editor-format:active,
 #layout-builder-modal .form-item--editor-format .form-element--editor-format:focus {
   background-color: #fff;
 }
-
 #layout-builder-modal .bs_input-boxes--box-model .fieldset-wrapper > div > div input ~ label,
 #layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label {
   height: 60px;
 }
-
 #layout-builder-modal .tabledrag-toggle-weight-wrapper {
   margin-top: 0;
 }
-
 #layout-builder-modal .tabledrag-cell,
 #layout-builder-modal .tabledrag-cell-content {
   min-width: 1rem;
   max-width: 1rem;
 }
-
 #layout-builder-modal .draggable a.tabledrag-handle {
   overflow: visible;
 }
-
 #layout-builder-modal .tabledrag-handle::after {
   margin-left: 0;
 }
-
 #layout-builder-modal .ief-entity-table td {
   border: 0;
 }

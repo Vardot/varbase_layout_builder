@@ -1,6 +1,6 @@
 node_modules/**/*.css
 vendor/**/*.css
-**/*.min.css"
+**/*.min.css
 /css/variables.css
 /css/mixins/
 scss/*
@@ -32,7 +32,7 @@ themes/claro/scss/*
 themes/claro/css/*
 themes/claro/node_modules/**/*.css
 themes/claro/vendor/**/*.css
-themes/claro/**/*.min.css"
+themes/claro/**/*.min.css
 themes/claro/scss/*
 themes/claro/images/*
 themes/claro/fonts/*
