@@ -1,6 +1,6 @@
 node_modules/**/*.css
 vendor/**/*.css
-**/*.min.css"
+**/*.min.css
 /css/variables.css
 /css/mixins/
 scss/*

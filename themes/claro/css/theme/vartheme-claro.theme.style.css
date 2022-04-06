@@ -10,34 +10,39 @@ form.media-form html {
   font-size: 90%;
   /* Make the elements smaller for Varbase admin */
 }
-
-#layout-builder-modal input[type="text"],
-.media-library-widget-modal input[type="text"],
-form.media-form input[type="text"] {
+#layout-builder-modal input[type=text],
+.media-library-widget-modal input[type=text],
+form.media-form input[type=text] {
   max-width: 100%;
 }
-
-#layout-builder-modal #edit-created-from,
-#layout-builder-modal #edit-created-to,
-#layout-builder-modal #edit-user-created-from,
-#layout-builder-modal #edit-user-created-to,
-#layout-builder-modal #edit-content-created-from,
-#layout-builder-modal #edit-content-created-to,
-.media-library-widget-modal #edit-created-from,
-.media-library-widget-modal #edit-created-to,
-.media-library-widget-modal #edit-user-created-from,
-.media-library-widget-modal #edit-user-created-to,
-.media-library-widget-modal #edit-content-created-from,
-.media-library-widget-modal #edit-content-created-to,
-form.media-form #edit-created-from,
-form.media-form #edit-created-to,
-form.media-form #edit-user-created-from,
-form.media-form #edit-user-created-to,
-form.media-form #edit-content-created-from,
-form.media-form #edit-content-created-to {
-  width: 150px;
+#layout-builder-modal .views-exposed-form__item [id*=edit-created-from],
+#layout-builder-modal .views-exposed-form__item [id*=edit-created-to],
+#layout-builder-modal .views-exposed-form__item [id*=edit-user-created-from],
+#layout-builder-modal .views-exposed-form__item [id*=edit-user-created-to],
+#layout-builder-modal .views-exposed-form__item [id*=edit-content-created-from],
+#layout-builder-modal .views-exposed-form__item [id*=edit-content-created-to],
+.media-library-widget-modal .views-exposed-form__item [id*=edit-created-from],
+.media-library-widget-modal .views-exposed-form__item [id*=edit-created-to],
+.media-library-widget-modal .views-exposed-form__item [id*=edit-user-created-from],
+.media-library-widget-modal .views-exposed-form__item [id*=edit-user-created-to],
+.media-library-widget-modal .views-exposed-form__item [id*=edit-content-created-from],
+.media-library-widget-modal .views-exposed-form__item [id*=edit-content-created-to],
+form.media-form .views-exposed-form__item [id*=edit-created-from],
+form.media-form .views-exposed-form__item [id*=edit-created-to],
+form.media-form .views-exposed-form__item [id*=edit-user-created-from],
+form.media-form .views-exposed-form__item [id*=edit-user-created-to],
+form.media-form .views-exposed-form__item [id*=edit-content-created-from],
+form.media-form .views-exposed-form__item [id*=edit-content-created-to] {
+  width: 9rem;
 }
-
+#layout-builder-modal .views-exposed-form__item [id*=edit-langcode],
+#layout-builder-modal .views-exposed-form__item [id*=edit-uid],
+.media-library-widget-modal .views-exposed-form__item [id*=edit-langcode],
+.media-library-widget-modal .views-exposed-form__item [id*=edit-uid],
+form.media-form .views-exposed-form__item [id*=edit-langcode],
+form.media-form .views-exposed-form__item [id*=edit-uid] {
+  width: 12rem;
+}
 #layout-builder-modal .node-form .field--name-title input,
 .media-library-widget-modal .node-form .field--name-title input,
 form.media-form .node-form .field--name-title input {
@@ -45,13 +50,11 @@ form.media-form .node-form .field--name-title input {
   min-height: 4rem;
   font-size: 1.6em;
 }
-
 #layout-builder-modal .node-form .field--name-title .length-indicator,
 .media-library-widget-modal .node-form .field--name-title .length-indicator,
 form.media-form .node-form .field--name-title .length-indicator {
   margin-top: -1rem;
 }
-
 #layout-builder-modal body.path-admin .panel.dashboard-block,
 .media-library-widget-modal body.path-admin .panel.dashboard-block,
 form.media-form body.path-admin .panel.dashboard-block {
@@ -64,25 +67,21 @@ form.media-form body.path-admin .panel.dashboard-block {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 #layout-builder-modal .block-views-blockvarbase-google-analytics-summary-sessions-and-pageviews .panel__title,
 .media-library-widget-modal .block-views-blockvarbase-google-analytics-summary-sessions-and-pageviews .panel__title,
 form.media-form .block-views-blockvarbase-google-analytics-summary-sessions-and-pageviews .panel__title {
   display: block;
 }
-
 #layout-builder-modal .block-views-blockvarbase-google-analytics-summary-sessions-and-pageviews .description,
 .media-library-widget-modal .block-views-blockvarbase-google-analytics-summary-sessions-and-pageviews .description,
 form.media-form .block-views-blockvarbase-google-analytics-summary-sessions-and-pageviews .description {
   padding: 20px;
 }
-
 #layout-builder-modal .node-form div.autocomplete-deluxe-container,
 .media-library-widget-modal .node-form div.autocomplete-deluxe-container,
 form.media-form .node-form div.autocomplete-deluxe-container {
   width: 65%;
 }
-
 @media screen and (max-width: 81.25rem) {
   #layout-builder-modal .node-form div.autocomplete-deluxe-container,
   .media-library-widget-modal .node-form div.autocomplete-deluxe-container,
@@ -90,32 +89,27 @@ form.media-form .node-form div.autocomplete-deluxe-container {
     width: 100%;
   }
 }
-
 #layout-builder-modal .node-form div.autocomplete-deluxe-container:not(.autocomplete-deluxe-multiple) input.autocomplete-deluxe-form,
 .media-library-widget-modal .node-form div.autocomplete-deluxe-container:not(.autocomplete-deluxe-multiple) input.autocomplete-deluxe-form,
 form.media-form .node-form div.autocomplete-deluxe-container:not(.autocomplete-deluxe-multiple) input.autocomplete-deluxe-form {
   width: 100%;
 }
-
 #layout-builder-modal .node-form .claro-autocomplete,
 .media-library-widget-modal .node-form .claro-autocomplete,
 form.media-form .node-form .claro-autocomplete {
   width: 65%;
 }
-
 #layout-builder-modal .node-form .claro-autocomplete .claro-autocomplete__message,
 .media-library-widget-modal .node-form .claro-autocomplete .claro-autocomplete__message,
 form.media-form .node-form .claro-autocomplete .claro-autocomplete__message {
   display: none;
 }
-
 #layout-builder-modal .node-form .claro-autocomplete input,
 .media-library-widget-modal .node-form .claro-autocomplete input,
 form.media-form .node-form .claro-autocomplete input {
   width: 100%;
   padding-right: 1.875rem;
 }
-
 @media screen and (max-width: 81.25rem) {
   #layout-builder-modal .node-form .claro-autocomplete,
   .media-library-widget-modal .node-form .claro-autocomplete,
@@ -123,37 +117,31 @@ form.media-form .node-form .claro-autocomplete input {
     width: 100%;
   }
 }
-
 #layout-builder-modal .node-form .accordion .claro-autocomplete,
 .media-library-widget-modal .node-form .accordion .claro-autocomplete,
 form.media-form .node-form .accordion .claro-autocomplete {
   width: 100%;
 }
-
 #layout-builder-modal .node-form .js input.form-autocomplete,
 .media-library-widget-modal .node-form .js input.form-autocomplete,
 form.media-form .node-form .js input.form-autocomplete {
   background: url("../images/search-autocomplete.svg") no-repeat 100% 50%;
 }
-
 #layout-builder-modal .node-form .js input.form-autocomplete.ui-autocomplete-loading,
 .media-library-widget-modal .node-form .js input.form-autocomplete.ui-autocomplete-loading,
 form.media-form .node-form .js input.form-autocomplete.ui-autocomplete-loading {
   background: url("../images/search-autocompleting.svg") no-repeat 100% 50%;
 }
-
 #layout-builder-modal .node-form .js .is-autocompleting + .claro-autocomplete__message,
 .media-library-widget-modal .node-form .js .is-autocompleting + .claro-autocomplete__message,
 form.media-form .node-form .js .is-autocompleting + .claro-autocomplete__message {
   display: none;
 }
-
 #layout-builder-modal .node-form .field--type-yoast-seo input,
 .media-library-widget-modal .node-form .field--type-yoast-seo input,
 form.media-form .node-form .field--type-yoast-seo input {
   width: 66%;
 }
-
 @media screen and (max-width: 81.25rem) {
   #layout-builder-modal .node-form .field--type-yoast-seo input,
   .media-library-widget-modal .node-form .field--type-yoast-seo input,
@@ -161,13 +149,11 @@ form.media-form .node-form .field--type-yoast-seo input {
     width: 100%;
   }
 }
-
 #layout-builder-modal .media-library-item .media-library-edit__link,
 .media-library-widget-modal .media-library-item .media-library-edit__link,
 form.media-form .media-library-item .media-library-edit__link {
   right: 40px;
 }
-
 #layout-builder-modal .media-library-item .media-library-edit__link,
 #layout-builder-modal .media-library-item .media-library-item__remove.button:first-child,
 .media-library-widget-modal .media-library-item .media-library-edit__link,
@@ -181,7 +167,6 @@ form.media-form .media-library-item .media-library-item__remove.button:first-chi
   background-size: 13px;
   font-size: 0;
 }
-
 #layout-builder-modal .media-library-item .media-library-edit__link:not(:focus),
 #layout-builder-modal .media-library-item .media-library-item__remove.button:first-child:not(:focus),
 .media-library-widget-modal .media-library-item .media-library-edit__link:not(:focus),
@@ -190,7 +175,6 @@ form.media-form .media-library-item .media-library-edit__link:not(:focus),
 form.media-form .media-library-item .media-library-item__remove.button:first-child:not(:focus) {
   box-shadow: none;
 }
-
 #layout-builder-modal .media-library-item .media-library-edit__link:hover,
 #layout-builder-modal .media-library-item .media-library-edit__link:focus,
 #layout-builder-modal .media-library-item .media-library-item__remove.button:first-child:hover,
@@ -206,7 +190,6 @@ form.media-form .media-library-item .media-library-item__remove.button:first-chi
   color: transparent;
   border-color: #40b6ff !important;
 }
-
 #layout-builder-modal .media-library-item .media-library-edit__link:active,
 #layout-builder-modal .media-library-item .media-library-item__remove.button:first-child:active,
 .media-library-widget-modal .media-library-item .media-library-edit__link:active,
@@ -216,27 +199,23 @@ form.media-form .media-library-item .media-library-item__remove.button:first-chi
   outline: 2px dotted transparent;
   box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769;
 }
-
 #layout-builder-modal .focal-point-preview-link,
 .media-library-widget-modal .focal-point-preview-link,
 form.media-form .focal-point-preview-link {
   padding: 1.2rem;
   text-decoration: none;
 }
-
 #layout-builder-modal .layout-region-node-secondary .media-library-item.media-library-item--grid,
 .media-library-widget-modal .layout-region-node-secondary .media-library-item.media-library-item--grid,
 form.media-form .layout-region-node-secondary .media-library-item.media-library-item--grid {
   width: 200px;
   max-width: 200px;
 }
-
 #layout-builder-modal fieldset.fieldset,
 .media-library-widget-modal fieldset.fieldset,
 form.media-form fieldset.fieldset {
-  border-color: #d8d9e0;
+  border-color: rgb(216, 217, 224);
 }
-
 @media screen and (min-width: 61rem) {
   #layout-builder-modal .layout-region--node-main,
   .media-library-widget-modal .layout-region--node-main,
@@ -259,7 +238,6 @@ form.media-form fieldset.fieldset {
     width: 35%;
   }
 }
-
 @media screen and (max-width: 37.5rem) {
   #layout-builder-modal td > .form-item > .form-element,
   #layout-builder-modal td > .ajax-new-content > .form-item > .form-element,

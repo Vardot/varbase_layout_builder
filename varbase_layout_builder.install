@@ -116,7 +116,7 @@ function varbase_layout_builder_update_10001() {
 }
 
 /**
- * Issue #3218194: Add Vertical and Horizontal alignments to section styling settings
+ * Issue #3218194: Add Vertical and Horizontal alignments to section styling settings.
  */
 function varbase_layout_builder_update_10002() {
   $config_factory = \Drupal::configFactory()->getEditable('bootstrap_styles.settings');
