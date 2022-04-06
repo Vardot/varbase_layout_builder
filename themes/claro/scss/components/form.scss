@@ -8,36 +8,9 @@
 .media-library-widget-modal,
 form.media-form {
   @import "../../../../../core/themes/claro/css/components/form";
-  legend {
-    width: auto;
-    font-size: initial;
-    font-weight: bold;
-  }
-  .form-control {
-    &:focus {
-      outline: 2px dotted transparent;
-      box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769;
-    }
-  }
-  .label {
-    text-transform: inherit;
-    color: inherit;
-    font-size: inherit;
-    font-weight: inherit;
-  }
-  .form-actions {
-    align-items: center;
-  }
-}
 
-[dir="rtl"] {
-  #layout-builder-modal,
-  .media-library-widget-modal,
-  form.media-form {
-    tr {
-      .form-item {
-        text-align: right;
-      }
-    }
+  .form-required::after {
+    background-image: none;
+    vertical-align: baseline;
   }
 }

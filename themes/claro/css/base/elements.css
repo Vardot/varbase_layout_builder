@@ -4,23 +4,21 @@
  * Maintainers: the import statement presumes a relative location of core css.
  * The location may need to be adjusted depending on your setup.
  */
-
-html #layout-builder-modal,
-html .media-library-widget-modal {
+#layout-builder-modal html,
+.media-library-widget-modal html,
+form.media-form html {
   font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-size: 100%;
   font-weight: normal;
   font-style: normal;
   line-height: 1.5;
 }
-
-body #layout-builder-modal,
-body .media-library-widget-modal,
-body form.media-form {
-  color: #222330;
+#layout-builder-modal body,
+.media-library-widget-modal body,
+form.media-form body {
+  color: #232429;
   background: #fff;
 }
-
 #layout-builder-modal a,
 #layout-builder-modal .link,
 .media-library-widget-modal a,
@@ -29,7 +27,6 @@ form.media-form a,
 form.media-form .link {
   color: #003cc5;
 }
-
 #layout-builder-modal a:hover,
 #layout-builder-modal a:focus,
 #layout-builder-modal .link:hover,
@@ -45,7 +42,6 @@ form.media-form .link:focus {
   text-decoration: none;
   outline: 0;
 }
-
 #layout-builder-modal a:hover,
 #layout-builder-modal .link:hover,
 .media-library-widget-modal a:hover,
@@ -54,7 +50,6 @@ form.media-form a:hover,
 form.media-form .link:hover {
   color: #0036b1;
 }
-
 #layout-builder-modal a:active,
 #layout-builder-modal .link:active,
 .media-library-widget-modal a:active,
@@ -63,7 +58,6 @@ form.media-form a:active,
 form.media-form .link:active {
   color: #00339a;
 }
-
 #layout-builder-modal hr,
 .media-library-widget-modal hr,
 form.media-form hr {
@@ -73,13 +67,11 @@ form.media-form hr {
   border: none;
   background: rgba(142, 146, 156, 0.5);
 }
-
 #layout-builder-modal summary,
 .media-library-widget-modal summary,
 form.media-form summary {
   font-weight: bold;
 }
-
 #layout-builder-modal h1,
 #layout-builder-modal .heading-a,
 .media-library-widget-modal h1,
@@ -91,7 +83,6 @@ form.media-form .heading-a {
   font-weight: bold;
   line-height: 1.3;
 }
-
 #layout-builder-modal h2,
 #layout-builder-modal .heading-b,
 .media-library-widget-modal h2,
@@ -103,7 +94,6 @@ form.media-form .heading-b {
   font-weight: bold;
   line-height: 1.3;
 }
-
 #layout-builder-modal h3,
 #layout-builder-modal .heading-c,
 .media-library-widget-modal h3,
@@ -115,7 +105,6 @@ form.media-form .heading-c {
   font-weight: bold;
   line-height: 1.3;
 }
-
 #layout-builder-modal h4,
 #layout-builder-modal .heading-d,
 .media-library-widget-modal h4,
@@ -127,7 +116,6 @@ form.media-form .heading-d {
   font-weight: bold;
   line-height: 1.3;
 }
-
 #layout-builder-modal h5,
 #layout-builder-modal .heading-e,
 .media-library-widget-modal h5,
@@ -139,7 +127,6 @@ form.media-form .heading-e {
   font-weight: bold;
   line-height: 1.3;
 }
-
 #layout-builder-modal h6,
 #layout-builder-modal .heading-f,
 .media-library-widget-modal h6,
@@ -151,60 +138,52 @@ form.media-form .heading-f {
   font-weight: bold;
   line-height: 1.3;
 }
-
 #layout-builder-modal p,
 .media-library-widget-modal p,
 form.media-form p {
   margin: 1em 0;
 }
-
 #layout-builder-modal dl,
 .media-library-widget-modal dl,
 form.media-form dl {
-  margin: 0 0 20px;
+  margin: 0 0 1.25rem;
 }
-
 #layout-builder-modal dl dd,
 #layout-builder-modal dl dl,
 .media-library-widget-modal dl dd,
 .media-library-widget-modal dl dl,
 form.media-form dl dd,
 form.media-form dl dl {
-  margin-bottom: 10px;
-  margin-left: 20px;
+  margin-bottom: 0.625rem;
+  margin-left: 1.25rem;
   /* LTR */
 }
-
-#layout-builder-modal [dir="rtl"] dl dd,
-#layout-builder-modal [dir="rtl"] dl dl,
-.media-library-widget-modal [dir="rtl"] dl dd,
-.media-library-widget-modal [dir="rtl"] dl dl,
-form.media-form [dir="rtl"] dl dd,
-form.media-form [dir="rtl"] dl dl {
-  margin-right: 20px;
+#layout-builder-modal [dir=rtl] dl dd,
+#layout-builder-modal [dir=rtl] dl dl,
+.media-library-widget-modal [dir=rtl] dl dd,
+.media-library-widget-modal [dir=rtl] dl dl,
+form.media-form [dir=rtl] dl dd,
+form.media-form [dir=rtl] dl dl {
+  margin-right: 1.25rem;
 }
-
 #layout-builder-modal blockquote,
 .media-library-widget-modal blockquote,
 form.media-form blockquote {
-  margin: 1em 40px;
+  margin: 1em 2.5rem;
 }
-
 #layout-builder-modal address,
 .media-library-widget-modal address,
 form.media-form address {
   font-style: italic;
 }
-
 #layout-builder-modal u,
 #layout-builder-modal ins,
 .media-library-widget-modal u,
 .media-library-widget-modal ins,
 form.media-form u,
 form.media-form ins {
-  text-decoration: none;
+  text-decoration: underline;
 }
-
 #layout-builder-modal s,
 #layout-builder-modal strike,
 #layout-builder-modal del,
@@ -216,19 +195,16 @@ form.media-form strike,
 form.media-form del {
   text-decoration: line-through;
 }
-
 #layout-builder-modal big,
 .media-library-widget-modal big,
 form.media-form big {
   font-size: larger;
 }
-
 #layout-builder-modal small,
 .media-library-widget-modal small,
 form.media-form small {
   font-size: smaller;
 }
-
 #layout-builder-modal sub,
 .media-library-widget-modal sub,
 form.media-form sub {
@@ -236,7 +212,6 @@ form.media-form sub {
   font-size: smaller;
   line-height: normal;
 }
-
 #layout-builder-modal sup,
 .media-library-widget-modal sup,
 form.media-form sup {
@@ -244,7 +219,6 @@ form.media-form sup {
   font-size: smaller;
   line-height: normal;
 }
-
 #layout-builder-modal abbr,
 #layout-builder-modal acronym,
 .media-library-widget-modal abbr,
@@ -253,7 +227,6 @@ form.media-form abbr,
 form.media-form acronym {
   border-bottom: dotted 1px;
 }
-
 #layout-builder-modal ul,
 .media-library-widget-modal ul,
 form.media-form ul {
@@ -263,21 +236,18 @@ form.media-form ul {
   list-style-type: disc;
   list-style-image: none;
 }
-
-#layout-builder-modal [dir="rtl"] ul,
-.media-library-widget-modal [dir="rtl"] ul,
-form.media-form [dir="rtl"] ul {
+#layout-builder-modal [dir=rtl] ul,
+.media-library-widget-modal [dir=rtl] ul,
+form.media-form [dir=rtl] ul {
   margin-right: 1.5em;
   margin-left: 0;
   padding-right: 0;
 }
-
-#layout-builder-modal [dir="rtl"] .messages__list,
-.media-library-widget-modal [dir="rtl"] .messages__list,
-form.media-form [dir="rtl"] .messages__list {
+#layout-builder-modal [dir=rtl] .messages__list,
+.media-library-widget-modal [dir=rtl] .messages__list,
+form.media-form [dir=rtl] .messages__list {
   margin-right: 0;
 }
-
 #layout-builder-modal ol,
 .media-library-widget-modal ol,
 form.media-form ol {
@@ -286,58 +256,49 @@ form.media-form ol {
   padding: 0;
   list-style-type: decimal;
 }
-
-#layout-builder-modal [dir="rtl"] ol,
-.media-library-widget-modal [dir="rtl"] ol,
-form.media-form [dir="rtl"] ol {
+#layout-builder-modal [dir=rtl] ol,
+.media-library-widget-modal [dir=rtl] ol,
+form.media-form [dir=rtl] ol {
   margin-right: 2em;
   margin-left: 0;
 }
-
 #layout-builder-modal abbr[title],
 .media-library-widget-modal abbr[title],
 form.media-form abbr[title] {
   text-decoration: none;
 }
-
 #layout-builder-modal code,
 .media-library-widget-modal code,
 form.media-form code {
   margin: 0.5em 0;
 }
-
 #layout-builder-modal pre,
 .media-library-widget-modal pre,
 form.media-form pre {
   margin: 0.5em 0;
   white-space: pre-wrap;
 }
-
 #layout-builder-modal details,
 .media-library-widget-modal details,
 form.media-form details {
-  line-height: 1.295em;
+  line-height: 1.295rem;
 }
-
 #layout-builder-modal details summary,
 .media-library-widget-modal details summary,
 form.media-form details summary {
   padding: 0.95em 1.45em;
 }
-
 #layout-builder-modal details summary:focus,
 .media-library-widget-modal details summary:focus,
 form.media-form details summary:focus {
   outline: none;
 }
-
 #layout-builder-modal img,
 .media-library-widget-modal img,
 form.media-form img {
   max-width: 100%;
   height: auto;
 }
-
 #layout-builder-modal .page-wrapper *:focus,
 #layout-builder-modal .ui-dialog *:focus,
 .media-library-widget-modal .page-wrapper *:focus,
@@ -345,7 +306,6 @@ form.media-form img {
 form.media-form .page-wrapper *:focus,
 form.media-form .ui-dialog *:focus {
   outline: 2px dotted transparent;
-  -webkit-box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769;
   box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769;
 }
 

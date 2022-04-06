@@ -4,9 +4,8 @@
  * Maintainers: the import statement presumes a relative location of core css.
  * The location may need to be adjusted depending on your setup.
  */
-
 #layout-builder-modal .help p,
 .media-library-widget-modal .help p,
 form.media-form .help p {
-  margin: 0 0 10px;
+  margin: 0 0 0.625rem;
 }

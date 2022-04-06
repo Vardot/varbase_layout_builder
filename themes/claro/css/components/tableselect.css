@@ -1,0 +1,29 @@
+@charset "UTF-8";
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/components/tableselect.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal td.checkbox,
+#layout-builder-modal th.checkbox,
+.media-library-widget-modal td.checkbox,
+.media-library-widget-modal th.checkbox,
+form.media-form td.checkbox,
+form.media-form th.checkbox {
+  text-align: center;
+}
+#layout-builder-modal [dir=rtl] td.checkbox,
+#layout-builder-modal [dir=rtl] th.checkbox,
+.media-library-widget-modal [dir=rtl] td.checkbox,
+.media-library-widget-modal [dir=rtl] th.checkbox,
+form.media-form [dir=rtl] td.checkbox,
+form.media-form [dir=rtl] th.checkbox {
+  /* This is required to win over specificity of [dir="rtl"] td */
+  text-align: center;
+}
+#layout-builder-modal tr.selected td,
+.media-library-widget-modal tr.selected td,
+form.media-form tr.selected td {
+  background-color: #e6ecf8;
+}

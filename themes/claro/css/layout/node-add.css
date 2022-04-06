@@ -1,0 +1,72 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/layout/node-add.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal .layout-region,
+.media-library-widget-modal .layout-region,
+form.media-form .layout-region {
+  box-sizing: border-box;
+}
+#layout-builder-modal .layout-region--node-footer .layout-region__content,
+.media-library-widget-modal .layout-region--node-footer .layout-region__content,
+form.media-form .layout-region--node-footer .layout-region__content {
+  margin-top: 1.5rem;
+}
+@media screen and (min-width: 61rem) {
+  #layout-builder-modal .layout-region--node-main,
+  #layout-builder-modal .layout-region--node-footer,
+  .media-library-widget-modal .layout-region--node-main,
+  .media-library-widget-modal .layout-region--node-footer,
+  form.media-form .layout-region--node-main,
+  form.media-form .layout-region--node-footer {
+    float: left;
+    /* LTR */
+    width: calc(100% - 22.5rem);
+    padding-right: 1.5rem;
+    /* LTR */
+  }
+  #layout-builder-modal [dir=rtl] .layout-region--node-main,
+  #layout-builder-modal [dir=rtl] .layout-region--node-footer,
+  .media-library-widget-modal [dir=rtl] .layout-region--node-main,
+  .media-library-widget-modal [dir=rtl] .layout-region--node-footer,
+  form.media-form [dir=rtl] .layout-region--node-main,
+  form.media-form [dir=rtl] .layout-region--node-footer {
+    float: right;
+    padding-right: 0;
+    padding-left: 1.5rem;
+  }
+  #layout-builder-modal .layout-region--node-main .layout-region__content,
+  #layout-builder-modal .layout-region--node-footer .layout-region__content,
+  .media-library-widget-modal .layout-region--node-main .layout-region__content,
+  .media-library-widget-modal .layout-region--node-footer .layout-region__content,
+  form.media-form .layout-region--node-main .layout-region__content,
+  form.media-form .layout-region--node-footer .layout-region__content {
+    max-width: 48rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  #layout-builder-modal .layout-region--node-footer .layout-region__content,
+  .media-library-widget-modal .layout-region--node-footer .layout-region__content,
+  form.media-form .layout-region--node-footer .layout-region__content {
+    margin-top: 0.5rem;
+  }
+  #layout-builder-modal .layout-region--node-secondary,
+  .media-library-widget-modal .layout-region--node-secondary,
+  form.media-form .layout-region--node-secondary {
+    float: right;
+    /* LTR */
+    width: 22.5rem;
+  }
+  #layout-builder-modal [dir=rtl] .layout-region--node-secondary,
+  .media-library-widget-modal [dir=rtl] .layout-region--node-secondary,
+  form.media-form [dir=rtl] .layout-region--node-secondary {
+    float: left;
+  }
+  #layout-builder-modal .layout-region--node-secondary,
+  .media-library-widget-modal .layout-region--node-secondary,
+  form.media-form .layout-region--node-secondary {
+    margin-top: 1.5rem;
+  }
+}

@@ -1,0 +1,86 @@
+/**
+ * Wrapped content from core/themes/claro/css/theme/field-ui.admin.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal .field-ui-overview .region-title td,
+.media-library-widget-modal .field-ui-overview .region-title td,
+form.media-form .field-ui-overview .region-title td {
+  font-weight: bold;
+}
+#layout-builder-modal .field-ui-overview .region-message td,
+.media-library-widget-modal .field-ui-overview .region-message td,
+form.media-form .field-ui-overview .region-message td {
+  font-style: italic;
+}
+#layout-builder-modal .field-plugin-summary,
+.media-library-widget-modal .field-plugin-summary,
+form.media-form .field-plugin-summary {
+  float: left;
+  /* LTR */
+  font-size: 0.889rem;
+}
+#layout-builder-modal [dir=rtl] .field-plugin-summary,
+.media-library-widget-modal [dir=rtl] .field-plugin-summary,
+form.media-form [dir=rtl] .field-plugin-summary {
+  float: right;
+}
+#layout-builder-modal .field-plugin-summary-cell .warning,
+.media-library-widget-modal .field-plugin-summary-cell .warning,
+form.media-form .field-plugin-summary-cell .warning {
+  display: block;
+  float: left;
+  /* LTR */
+  margin-right: 0.5em;
+  /* LTR */
+}
+#layout-builder-modal [dir=rtl] .field-plugin-summary-cell .warning,
+.media-library-widget-modal [dir=rtl] .field-plugin-summary-cell .warning,
+form.media-form [dir=rtl] .field-plugin-summary-cell .warning {
+  float: right;
+  margin-right: 0;
+  margin-left: 0.5em;
+}
+#layout-builder-modal .field-plugin-settings-edit-wrapper,
+.media-library-widget-modal .field-plugin-settings-edit-wrapper,
+form.media-form .field-plugin-settings-edit-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+#layout-builder-modal .field-plugin-settings-edit,
+.media-library-widget-modal .field-plugin-settings-edit,
+form.media-form .field-plugin-settings-edit {
+  width: 1rem;
+  margin: 0;
+  padding: 1px 0.5rem;
+}
+#layout-builder-modal .field-plugin-settings-edit-wrapper .ajax-progress--throbber,
+.media-library-widget-modal .field-plugin-settings-edit-wrapper .ajax-progress--throbber,
+form.media-form .field-plugin-settings-edit-wrapper .ajax-progress--throbber {
+  margin-right: 0;
+  margin-left: 0;
+}
+#layout-builder-modal .draggable.field-plugin-settings-editing,
+#layout-builder-modal .draggable.drag-previous.field-plugin-settings-editing,
+.media-library-widget-modal .draggable.field-plugin-settings-editing,
+.media-library-widget-modal .draggable.drag-previous.field-plugin-settings-editing,
+form.media-form .draggable.field-plugin-settings-editing,
+form.media-form .draggable.drag-previous.field-plugin-settings-editing {
+  background: #d5e9f2;
+}
+#layout-builder-modal .field-plugin-settings-editing td,
+.media-library-widget-modal .field-plugin-settings-editing td,
+form.media-form .field-plugin-settings-editing td {
+  vertical-align: top;
+}
+#layout-builder-modal .field-plugin-settings-editing .field-plugin-type,
+.media-library-widget-modal .field-plugin-settings-editing .field-plugin-type,
+form.media-form .field-plugin-settings-editing .field-plugin-type {
+  display: none;
+}
+#layout-builder-modal .field-plugin-settings-edit-form .plugin-name,
+.media-library-widget-modal .field-plugin-settings-edit-form .plugin-name,
+form.media-form .field-plugin-settings-edit-form .plugin-name {
+  font-weight: bold;
+}

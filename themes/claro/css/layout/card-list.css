@@ -1,0 +1,172 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/layout/card-list.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal .card-list,
+.media-library-widget-modal .card-list,
+form.media-form .card-list {
+  display: flex;
+  flex-direction: column;
+}
+#layout-builder-modal .card-list--two-cols,
+#layout-builder-modal .card-list--four-cols,
+.media-library-widget-modal .card-list--two-cols,
+.media-library-widget-modal .card-list--four-cols,
+form.media-form .card-list--two-cols,
+form.media-form .card-list--four-cols {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+#layout-builder-modal .card-list__item,
+.media-library-widget-modal .card-list__item,
+form.media-form .card-list__item {
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+#layout-builder-modal .card-list--two-cols .card-list__item,
+#layout-builder-modal .card-list--four-cols .card-list__item,
+.media-library-widget-modal .card-list--two-cols .card-list__item,
+.media-library-widget-modal .card-list--four-cols .card-list__item,
+form.media-form .card-list--two-cols .card-list__item,
+form.media-form .card-list--four-cols .card-list__item {
+  flex-basis: 100%;
+}
+@media screen and (min-width: 36.75rem) {
+  #layout-builder-modal .card-list--four-cols .card-list__item,
+  .media-library-widget-modal .card-list--four-cols .card-list__item,
+  form.media-form .card-list--four-cols .card-list__item {
+    flex-basis: calc(49.95% - 0.5rem);
+    max-width: calc(49.95% - 0.5rem);
+  }
+  #layout-builder-modal .card-list--four-cols .card-list__item,
+  .media-library-widget-modal .card-list--four-cols .card-list__item,
+  form.media-form .card-list--four-cols .card-list__item {
+    margin-right: 1rem;
+  }
+  #layout-builder-modal [dir=rtl] .card-list--four-cols .card-list__item,
+  .media-library-widget-modal [dir=rtl] .card-list--four-cols .card-list__item,
+  form.media-form [dir=rtl] .card-list--four-cols .card-list__item {
+    margin-right: 0;
+    margin-left: 1rem;
+  }
+  #layout-builder-modal .card-list--four-cols .card-list__item:nth-child(even),
+  .media-library-widget-modal .card-list--four-cols .card-list__item:nth-child(even),
+  form.media-form .card-list--four-cols .card-list__item:nth-child(even) {
+    margin-right: 0;
+  }
+  #layout-builder-modal [dir=rtl] .card-list--four-cols .card-list__item:nth-child(even),
+  .media-library-widget-modal [dir=rtl] .card-list--four-cols .card-list__item:nth-child(even),
+  form.media-form [dir=rtl] .card-list--four-cols .card-list__item:nth-child(even) {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 53.75rem) {
+  #layout-builder-modal .toolbar-tray-open.toolbar-vertical.toolbar-fixed .card-list--four-cols .card-list__item,
+  .media-library-widget-modal .toolbar-tray-open.toolbar-vertical.toolbar-fixed .card-list--four-cols .card-list__item,
+  form.media-form .toolbar-tray-open.toolbar-vertical.toolbar-fixed .card-list--four-cols .card-list__item {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+@media screen and (min-width: 70rem) {
+  #layout-builder-modal .card-list--four-cols .card-list__item,
+  .media-library-widget-modal .card-list--four-cols .card-list__item,
+  form.media-form .card-list--four-cols .card-list__item {
+    flex-basis: calc(33.3% - 0.66667rem);
+    max-width: calc(33.3% - 0.66667rem);
+  }
+  #layout-builder-modal .card-list--four-cols .card-list__item:nth-child(even),
+  .media-library-widget-modal .card-list--four-cols .card-list__item:nth-child(even),
+  form.media-form .card-list--four-cols .card-list__item:nth-child(even) {
+    margin-right: 1rem;
+  }
+  #layout-builder-modal [dir=rtl] .card-list--four-cols .card-list__item:nth-child(even),
+  .media-library-widget-modal [dir=rtl] .card-list--four-cols .card-list__item:nth-child(even),
+  form.media-form [dir=rtl] .card-list--four-cols .card-list__item:nth-child(even) {
+    margin-right: 0;
+    margin-left: 1rem;
+  }
+  #layout-builder-modal .card-list--four-cols .card-list__item:nth-child(3n),
+  .media-library-widget-modal .card-list--four-cols .card-list__item:nth-child(3n),
+  form.media-form .card-list--four-cols .card-list__item:nth-child(3n) {
+    margin-right: 0;
+  }
+  #layout-builder-modal [dir=rtl] .card-list--four-cols .card-list__item:nth-child(3n),
+  .media-library-widget-modal [dir=rtl] .card-list--four-cols .card-list__item:nth-child(3n),
+  form.media-form [dir=rtl] .card-list--four-cols .card-list__item:nth-child(3n) {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+@media screen and (min-width: 85.375rem) {
+  #layout-builder-modal .card-list--two-cols .card-list__item,
+  .media-library-widget-modal .card-list--two-cols .card-list__item,
+  form.media-form .card-list--two-cols .card-list__item {
+    flex-basis: calc(49.95% - 0.5rem);
+    max-width: calc(49.95% - 0.5rem);
+    margin-right: 1rem;
+  }
+  #layout-builder-modal [dir=rtl] .card-list--two-cols .card-list__item,
+  .media-library-widget-modal [dir=rtl] .card-list--two-cols .card-list__item,
+  form.media-form [dir=rtl] .card-list--two-cols .card-list__item {
+    margin-right: 0;
+    margin-left: 1rem;
+  }
+  #layout-builder-modal .card-list--two-cols .card-list__item:nth-child(even),
+  .media-library-widget-modal .card-list--two-cols .card-list__item:nth-child(even),
+  form.media-form .card-list--two-cols .card-list__item:nth-child(even) {
+    margin-right: 0;
+  }
+  #layout-builder-modal [dir=rtl] .card-list--two-cols .card-list__item:nth-child(even),
+  .media-library-widget-modal [dir=rtl] .card-list--two-cols .card-list__item:nth-child(even),
+  form.media-form [dir=rtl] .card-list--two-cols .card-list__item:nth-child(even) {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  #layout-builder-modal .card-list--four-cols .card-list__item,
+  .media-library-widget-modal .card-list--four-cols .card-list__item,
+  form.media-form .card-list--four-cols .card-list__item {
+    flex-basis: calc(24.975% - 0.75rem);
+    max-width: calc(24.975% - 0.75rem);
+  }
+  #layout-builder-modal .card-list--four-cols .card-list__item:nth-child(even),
+  .media-library-widget-modal .card-list--four-cols .card-list__item:nth-child(even),
+  form.media-form .card-list--four-cols .card-list__item:nth-child(even) {
+    margin-right: 1rem;
+  }
+  #layout-builder-modal [dir=rtl] .card-list--four-cols .card-list__item:nth-child(even),
+  .media-library-widget-modal [dir=rtl] .card-list--four-cols .card-list__item:nth-child(even),
+  form.media-form [dir=rtl] .card-list--four-cols .card-list__item:nth-child(even) {
+    margin-right: 0;
+    margin-left: 1rem;
+  }
+  #layout-builder-modal .card-list--four-cols .card-list__item:nth-child(3n),
+  .media-library-widget-modal .card-list--four-cols .card-list__item:nth-child(3n),
+  form.media-form .card-list--four-cols .card-list__item:nth-child(3n) {
+    margin-right: 1rem;
+  }
+  #layout-builder-modal [dir=rtl] .card-list--four-cols .card-list__item:nth-child(3n),
+  .media-library-widget-modal [dir=rtl] .card-list--four-cols .card-list__item:nth-child(3n),
+  form.media-form [dir=rtl] .card-list--four-cols .card-list__item:nth-child(3n) {
+    margin-right: 0;
+    margin-left: 1rem;
+  }
+  #layout-builder-modal .card-list--four-cols .card-list__item:nth-child(4n),
+  .media-library-widget-modal .card-list--four-cols .card-list__item:nth-child(4n),
+  form.media-form .card-list--four-cols .card-list__item:nth-child(4n) {
+    margin-right: 0;
+  }
+  #layout-builder-modal [dir=rtl] .card-list--four-cols .card-list__item:nth-child(4n),
+  .media-library-widget-modal [dir=rtl] .card-list--four-cols .card-list__item:nth-child(4n),
+  form.media-form [dir=rtl] .card-list--four-cols .card-list__item:nth-child(4n) {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}

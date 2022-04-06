@@ -1,0 +1,11 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/layout/breadcrumb.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal .region-breadcrumb,
+.media-library-widget-modal .region-breadcrumb,
+form.media-form .region-breadcrumb {
+  min-height: 1.25rem;
+}

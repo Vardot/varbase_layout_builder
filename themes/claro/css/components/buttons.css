@@ -4,7 +4,6 @@
  * Maintainers: the import statement presumes a relative location of core css.
  * The location may need to be adjusted depending on your setup.
  */
-
 #layout-builder-modal .button,
 .media-library-widget-modal .button,
 form.media-form .button {
@@ -12,57 +11,50 @@ form.media-form .button {
   margin: 1rem 0.75rem 1rem 0;
   /* LTR */
   padding: calc(1rem - 1px) calc(1.5rem - 1px);
+  -webkit-appearance: none;
+  appearance: none;
   /* 1 */
   cursor: pointer;
   text-align: center;
   text-decoration: none;
-  color: #222330;
+  color: #232429;
   border: 1px solid transparent !important;
   /* 2 */
   border-radius: 2px;
-  background-color: #d4d4d8;
+  background-color: #d3d4d9;
   font-size: 1rem;
   font-weight: 700;
   line-height: 1rem;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+
   -webkit-font-smoothing: antialiased;
   /* 3 */
 }
-
-#layout-builder-modal [dir="rtl"] .button,
-.media-library-widget-modal [dir="rtl"] .button,
-form.media-form [dir="rtl"] .button {
+#layout-builder-modal [dir=rtl] .button,
+.media-library-widget-modal [dir=rtl] .button,
+form.media-form [dir=rtl] .button {
   margin: 1rem 0 1rem 0.75rem;
 }
-
 #layout-builder-modal .button:not(:focus),
 .media-library-widget-modal .button:not(:focus),
 form.media-form .button:not(:focus) {
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
 }
-
 #layout-builder-modal .button:hover,
 .media-library-widget-modal .button:hover,
 form.media-form .button:hover {
   text-decoration: none;
-  background-color: #c2c3ca;
+  background-color: #c1c2c7;
 }
-
 #layout-builder-modal .button:focus,
 .media-library-widget-modal .button:focus,
 form.media-form .button:focus {
   text-decoration: none;
 }
-
 #layout-builder-modal .button:active,
 .media-library-widget-modal .button:active,
 form.media-form .button:active {
   background-color: #adaeb3;
 }
-
 #layout-builder-modal .no-touchevents .button--small,
 .media-library-widget-modal .no-touchevents .button--small,
 form.media-form .no-touchevents .button--small {
@@ -72,7 +64,6 @@ form.media-form .no-touchevents .button--small {
   /* 1 */
   font-size: 0.79rem;
 }
-
 #layout-builder-modal .no-touchevents .button--extrasmall,
 .media-library-widget-modal .no-touchevents .button--extrasmall,
 form.media-form .no-touchevents .button--extrasmall {
@@ -82,23 +73,20 @@ form.media-form .no-touchevents .button--extrasmall {
   /* 1 */
   font-size: 0.79rem;
 }
-
-#layout-builder-modal [dir="rtl"].no-touchevents .button--small,
-#layout-builder-modal [dir="rtl"].no-touchevents .button--extrasmall,
-.media-library-widget-modal [dir="rtl"].no-touchevents .button--small,
-.media-library-widget-modal [dir="rtl"].no-touchevents .button--extrasmall,
-form.media-form [dir="rtl"].no-touchevents .button--small,
-form.media-form [dir="rtl"].no-touchevents .button--extrasmall {
+#layout-builder-modal [dir=rtl].no-touchevents .button--small,
+#layout-builder-modal [dir=rtl].no-touchevents .button--extrasmall,
+.media-library-widget-modal [dir=rtl].no-touchevents .button--small,
+.media-library-widget-modal [dir=rtl].no-touchevents .button--extrasmall,
+form.media-form [dir=rtl].no-touchevents .button--small,
+form.media-form [dir=rtl].no-touchevents .button--extrasmall {
   margin-right: 0;
   margin-left: 0.5rem;
 }
-
 #layout-builder-modal .button--action,
 .media-library-widget-modal .button--action,
 form.media-form .button--action {
   margin: 0;
 }
-
 #layout-builder-modal .button--action::before,
 .media-library-widget-modal .button--action::before,
 form.media-form .button--action::before {
@@ -109,45 +97,39 @@ form.media-form .button--action::before {
   content: "+";
   font-weight: 900;
 }
-
-#layout-builder-modal [dir="rtl"] .button--action::before,
-.media-library-widget-modal [dir="rtl"] .button--action::before,
-form.media-form [dir="rtl"] .button--action::before {
+#layout-builder-modal [dir=rtl] .button--action::before,
+.media-library-widget-modal [dir=rtl] .button--action::before,
+form.media-form [dir=rtl] .button--action::before {
   margin-right: -0.25em;
   margin-left: 0;
   padding-right: 0;
   padding-left: 0.25em;
 }
-
 #layout-builder-modal a.button:hover,
 #layout-builder-modal a.button:active,
 .media-library-widget-modal a.button:hover,
 .media-library-widget-modal a.button:active,
 form.media-form a.button:hover,
 form.media-form a.button:active {
-  color: #222330;
+  color: #232429;
 }
-
 #layout-builder-modal .button--primary,
 .media-library-widget-modal .button--primary,
 form.media-form .button--primary {
   color: #fff;
   background-color: #003cc5;
 }
-
 #layout-builder-modal .button--primary:hover,
 .media-library-widget-modal .button--primary:hover,
 form.media-form .button--primary:hover {
   color: #fff;
   background-color: #0036b1;
 }
-
 #layout-builder-modal .button--primary:active,
 .media-library-widget-modal .button--primary:active,
 form.media-form .button--primary:active {
   background-color: #00339a;
 }
-
 #layout-builder-modal a.button--primary:hover,
 #layout-builder-modal a.button--primary:active,
 .media-library-widget-modal a.button--primary:hover,
@@ -156,27 +138,23 @@ form.media-form a.button--primary:hover,
 form.media-form a.button--primary:active {
   color: #fff;
 }
-
 #layout-builder-modal .button--danger,
 .media-library-widget-modal .button--danger,
 form.media-form .button--danger {
   color: #fff;
   background-color: #d72222;
 }
-
 #layout-builder-modal .button--danger:hover,
 .media-library-widget-modal .button--danger:hover,
 form.media-form .button--danger:hover {
   color: #fff;
   background-color: #c11f1f;
 }
-
 #layout-builder-modal .button--danger:active,
 .media-library-widget-modal .button--danger:active,
 form.media-form .button--danger:active {
   background-color: #ab1b1b;
 }
-
 #layout-builder-modal a.button--danger:hover,
 #layout-builder-modal a.button--danger:active,
 .media-library-widget-modal a.button--danger:hover,
@@ -185,57 +163,49 @@ form.media-form a.button--danger:hover,
 form.media-form a.button--danger:active {
   color: #fff;
 }
-
 #layout-builder-modal .button:disabled,
 #layout-builder-modal .button.is-disabled,
 .media-library-widget-modal .button:disabled,
 .media-library-widget-modal .button.is-disabled,
 form.media-form .button:disabled,
 form.media-form .button.is-disabled {
-  color: #8e929c;
+  color: #919297;
   background-color: #ebebed;
 }
-
 #layout-builder-modal .button--primary:disabled,
 #layout-builder-modal .button--primary.is-disabled,
 .media-library-widget-modal .button--primary:disabled,
 .media-library-widget-modal .button--primary.is-disabled,
 form.media-form .button--primary:disabled,
 form.media-form .button--primary.is-disabled {
-  color: #82828c;
-  background-color: #d4d4d8;
+  color: #828388;
+  background-color: #d3d4d9;
 }
-
 #layout-builder-modal .button.is-disabled,
 .media-library-widget-modal .button.is-disabled,
 form.media-form .button.is-disabled {
   -webkit-user-select: none;
-  -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
   pointer-events: none;
 }
-
 #layout-builder-modal .link,
 .media-library-widget-modal .link,
 form.media-form .link {
   display: inline;
   padding: 0;
+  -webkit-appearance: none;
+  appearance: none;
   cursor: pointer;
   text-decoration: underline;
   border: 0;
   background: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
 }
-
 #layout-builder-modal .button--primary,
 .media-library-widget-modal .button--primary,
 form.media-form .button--primary {
   background: #003cc5;
 }
-
 #layout-builder-modal .button--primary:hover,
 #layout-builder-modal .button--primary:active,
 .media-library-widget-modal .button--primary:hover,
@@ -244,7 +214,6 @@ form.media-form .button--primary:hover,
 form.media-form .button--primary:active {
   background: #0036b1;
 }
-
 #layout-builder-modal .button,
 .media-library-widget-modal .button,
 form.media-form .button {
@@ -252,19 +221,16 @@ form.media-form .button {
   height: auto;
   background-image: none;
 }
-
 #layout-builder-modal .button.form-element,
 .media-library-widget-modal .button.form-element,
 form.media-form .button.form-element {
   background: #d4d4d8;
 }
-
 #layout-builder-modal .js-hide,
 .media-library-widget-modal .js-hide,
 form.media-form .js-hide {
   display: none;
 }
-
 #layout-builder-modal .button--extrasmall,
 #layout-builder-modal .button--small,
 .media-library-widget-modal .button--extrasmall,
@@ -275,7 +241,6 @@ form.media-form .button--small {
   padding: calc(0.25rem - 1px) calc(0.75rem - 1px);
   font-size: 0.79rem;
 }
-
 #layout-builder-modal .field-add-more-submit,
 .media-library-widget-modal .field-add-more-submit,
 form.media-form .field-add-more-submit {

@@ -2,11 +2,9 @@
   color: #fff;
   background-color: #338ec7;
 }
-
 .vlb_color_01 a {
   color: #fff;
 }
-
 .vlb_color_01 a:hover,
 .vlb_color_01 a:focus,
 .vlb_color_01 a:active,
@@ -19,11 +17,9 @@
   color: #fff;
   background-color: #2c3e50;
 }
-
 .vlb_color_02 a {
   color: #fff;
 }
-
 .vlb_color_02 a:hover,
 .vlb_color_02 a:focus,
 .vlb_color_02 a:active,
@@ -36,11 +32,9 @@
   color: #fff;
   background-color: #a4a4a4;
 }
-
 .vlb_color_03 a {
   color: #fff;
 }
-
 .vlb_color_03 a:hover,
 .vlb_color_03 a:focus,
 .vlb_color_03 a:active,
@@ -53,11 +47,9 @@
   color: #000;
   background-color: #d3d3d3;
 }
-
 .vlb_color_04 a {
   color: #000;
 }
-
 .vlb_color_04 a:hover,
 .vlb_color_04 a:focus,
 .vlb_color_04 a:active,
@@ -70,11 +62,9 @@
   color: #fff;
   background-color: #cc3c2d;
 }
-
 .vlb_color_05 a {
   color: #fff;
 }
-
 .vlb_color_05 a:hover,
 .vlb_color_05 a:focus,
 .vlb_color_05 a:active,
@@ -87,11 +77,9 @@
   color: #fff;
   background-color: #338ec7;
 }
-
 #drupal-off-canvas .vlb_color_01 a {
   color: #fff;
 }
-
 #drupal-off-canvas .vlb_color_01 a:hover,
 #drupal-off-canvas .vlb_color_01 a:focus,
 #drupal-off-canvas .vlb_color_01 a:active,
@@ -99,16 +87,13 @@
 #drupal-off-canvas .vlb_color_01 a.active {
   color: #fff;
 }
-
 #drupal-off-canvas .vlb_color_02 {
   color: #fff;
   background-color: #2c3e50;
 }
-
 #drupal-off-canvas .vlb_color_02 a {
   color: #fff;
 }
-
 #drupal-off-canvas .vlb_color_02 a:hover,
 #drupal-off-canvas .vlb_color_02 a:focus,
 #drupal-off-canvas .vlb_color_02 a:active,
@@ -116,16 +101,13 @@
 #drupal-off-canvas .vlb_color_02 a.active {
   color: #fff;
 }
-
 #drupal-off-canvas .vlb_color_03 {
   color: #fff;
   background-color: #a4a4a4;
 }
-
 #drupal-off-canvas .vlb_color_03 a {
   color: #fff;
 }
-
 #drupal-off-canvas .vlb_color_03 a:hover,
 #drupal-off-canvas .vlb_color_03 a:focus,
 #drupal-off-canvas .vlb_color_03 a:active,
@@ -133,16 +115,13 @@
 #drupal-off-canvas .vlb_color_03 a.active {
   color: #fff;
 }
-
 #drupal-off-canvas .vlb_color_04 {
   color: #000;
   background-color: #d3d3d3;
 }
-
 #drupal-off-canvas .vlb_color_04 a {
   color: #000;
 }
-
 #drupal-off-canvas .vlb_color_04 a:hover,
 #drupal-off-canvas .vlb_color_04 a:focus,
 #drupal-off-canvas .vlb_color_04 a:active,
@@ -150,16 +129,13 @@
 #drupal-off-canvas .vlb_color_04 a.active {
   color: #000;
 }
-
 #drupal-off-canvas .vlb_color_05 {
   color: #fff;
   background-color: #cc3c2d;
 }
-
 #drupal-off-canvas .vlb_color_05 a {
   color: #fff;
 }
-
 #drupal-off-canvas .vlb_color_05 a:hover,
 #drupal-off-canvas .vlb_color_05 a:focus,
 #drupal-off-canvas .vlb_color_05 a:active,

@@ -4,7 +4,6 @@
  * Maintainers: the import statement presumes a relative location of core css.
  * The location may need to be adjusted depending on your setup.
  */
-
 #layout-builder-modal .container-inline div,
 #layout-builder-modal .container-inline label,
 .media-library-widget-modal .container-inline div,
@@ -13,7 +12,6 @@ form.media-form .container-inline div,
 form.media-form .container-inline label {
   display: inline-block;
 }
-
 #layout-builder-modal .form-items-inline,
 .media-library-widget-modal .form-items-inline,
 form.media-form .form-items-inline {
@@ -21,7 +19,6 @@ form.media-form .form-items-inline {
   /* 2px */
   margin-bottom: -0.125em;
 }
-
 #layout-builder-modal .form-items-inline > .form-item,
 .media-library-widget-modal .form-items-inline > .form-item,
 form.media-form .form-items-inline > .form-item {

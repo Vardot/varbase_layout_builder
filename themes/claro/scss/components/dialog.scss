@@ -8,23 +8,7 @@
 
 @import "../../../../../core/themes/claro/css/components/dialog";
 
-.ui-dialog-off-canvas #drupal-off-canvas {
-  padding: 1rem;
-  background: #444;
-}
-
-[dir="rtl"] {
-  .ui-dialog {
-    .ui-dialog-title {
-      float: right;
-    }
-  }
-}
 .ui-dialog {
-  .ui-dialog-titlebar {
-    padding: 15px 49px 15px 15px !important;
-    border: 0;
-  }
   .ui-dialog-titlebar-close {
     width: 30px;
     height: 30px;
@@ -33,25 +17,24 @@
     background-position: center;
     background-size: 15px 15px;
   }
-  &.ui-widget-content {
-    margin: 0;
-    padding: 0;
-    border: 0 !important;
-    border-radius: initial;
-    background: transparent;
-    a {
-      color: #003cc5;
+
+  &.ui-layout-builder-modal {
+    .ui-dialog-titlebar-close {
+      right: 0 !important;
     }
   }
-  .ui-dialog-buttonpane {
-    .button {
-      padding: calc(1rem - 1px) calc(1.5rem - 1px);
-      color: white;
-      border-radius: 0;
-      background: #003cc5;
-      &:hover,
-      &:active {
-        background: #0036b1;
+}
+
+[dir="rtl"] {
+  .ui-dialog {
+    .ui-dialog-title {
+      float: right;
+    }
+
+    &.ui-layout-builder-modal {
+      .ui-dialog-titlebar-close {
+        right: auto !important;
+        left: 0 !important;
       }
     }
   }

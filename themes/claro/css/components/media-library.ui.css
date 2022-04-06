@@ -1,0 +1,11 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/components/media-library.ui.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal .media-library-selected-count,
+.media-library-widget-modal .media-library-selected-count,
+form.media-form .media-library-selected-count {
+  margin: 0 1.5rem;
+}

@@ -1,12 +1,15 @@
 node_modules/**/*.css
 vendor/**/*.css
-**/*.min.css"
-node_modules/**/*.css
+**/*.min.css
+/css/variables.css
+/css/mixins/
 scss/*
 images/*
 fonts/*
 js/*
+src/*
 tests/*
+scripts/*
 config/**/*.yml
 *.yml
 .*
@@ -24,3 +27,4 @@ config/**/*.yml
 *.twig
 *.lock
 *.php
+package
