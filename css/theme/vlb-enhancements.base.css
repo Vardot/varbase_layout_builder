@@ -428,6 +428,10 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
 #layout-builder-modal form.section-library-add-section-to-library .form-type-textfield input[type=text] {
   width: 100% !important;
 }
+#drupal-off-canvas fieldset.form-type-search,
+#layout-builder-modal fieldset.form-type-search {
+  width: 100% !important;
+}
 
 #layout-builder-modal .form-item--editor-format .form-element--editor-format {
   width: auto;

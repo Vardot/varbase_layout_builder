@@ -529,6 +529,12 @@ body {
     }
   }
 
+  // To make varbase layout builder search blocks field take a full width.
+  fieldset {
+    &.form-type-search {
+      width: 100% !important;
+    }
+  }
 }
 
 #layout-builder-modal {
