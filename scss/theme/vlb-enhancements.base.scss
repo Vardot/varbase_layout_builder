@@ -599,4 +599,18 @@ body {
     }
   }
 
+  fieldset.fieldset {
+    background-color: #383a40;
+
+    .media-library-widget-empty-text,
+    .fieldset__description,
+    .form-item__description {
+      color: #fff !important;
+    }
+  }
+
+  .fieldset__label {
+    color: #fff !important;
+  }
+
 }
