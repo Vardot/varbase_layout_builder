@@ -474,3 +474,14 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
 #layout-builder-modal .ief-entity-table td {
   border: 0;
 }
+#layout-builder-modal fieldset.fieldset {
+  background-color: #383a40;
+}
+#layout-builder-modal fieldset.fieldset .media-library-widget-empty-text,
+#layout-builder-modal fieldset.fieldset .fieldset__description,
+#layout-builder-modal fieldset.fieldset .form-item__description {
+  color: #fff !important;
+}
+#layout-builder-modal .fieldset__label {
+  color: #fff !important;
+}
