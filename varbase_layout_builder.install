@@ -44,6 +44,13 @@ function varbase_layout_builder_install() {
     ->getInstanceFromDefinition(EntityDefinitionUpdateManager::class)
     ->applyUpdates();
 
+  // Have forced configs import.
+  $forced_configs = [
+    'views.view.section_library',
+  ];
+
+  ModuleInstallerFactory::importConfigsFromList('varbase_layout_builder', $forced_configs, InstallStorage::CONFIG_OPTIONAL_DIRECTORY);
+
 }
 
 /**
@@ -187,12 +194,9 @@ function varbase_layout_builder_update_10004() {
  * The Sections Library page.
  */
 function varbase_layout_builder_update_10005() {
-  $moduleHandler = \Drupal::service('module_handler');
-  $viewSectionLibrary = \Drupal::service('config.factory')->getEditable('views.view.section_library');
-  $permission = $viewSectionLibrary->get('display.default.display_options.access.options.perm');
-
-  if ($moduleHandler->moduleExists('varbase_layout_builder')
-    && $moduleHandler->moduleExists('section_library')) {
+  if (\Drupal::service('module_handler')->moduleExists('section_library')) {
+    $viewSectionLibrary = \Drupal::service('config.factory')->getEditable('views.view.section_library');
+    $permission = $viewSectionLibrary->get('display.default.display_options.access.options.perm');
 
     if ($permission === 'access content') {
       $viewSectionLibrary->set('display.default.display_options.access.options.perm', 'view section library templates')->save(TRUE);
