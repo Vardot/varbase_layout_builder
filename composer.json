@@ -80,7 +80,9 @@
       },
       "drupal/layout_library": {
         "Issue #3075067: Duplicate entry for key 'block_content_field__uuid__value'":
-        "https://git.drupalcode.org/project/layout_library/-/merge_requests/1.diff"
+        "https://git.drupalcode.org/project/layout_library/-/merge_requests/1.diff",
+        "Issue #3273160: Support inline blocks in layout":
+        "https://git.drupalcode.org/project/layout_library/-/merge_requests/7.diff"
       }
     }
   }
