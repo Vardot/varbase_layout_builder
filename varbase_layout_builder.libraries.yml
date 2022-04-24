@@ -4,6 +4,7 @@ enhancements:
     theme:
       css/theme/vlb-enhancements.base.css: {}
       css/theme/vlb-tabs-group.theme.css: {}
+      css/theme/vlb-media-library.theme.css: {}
 
 # Varbase Layout Builder theme of configure section.
 configure-section.admin:
