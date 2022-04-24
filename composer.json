@@ -48,7 +48,7 @@
     "drupal/layout_builder_at": "~2.0",
     "drupal/layout_builder_component_attributes": "~2.0",
     "drupal/lb_ux": "1.x-dev",
-    "drupal/layout_library": "~1.0",
+    "drupal/layout_library": "1.0-beta3",
     "drupal/section_library": "~1.0",
     "drupal/bootstrap_styles": "1.0.3",
     "drupal/bootstrap_layout_builder": "2.0.1",
@@ -77,6 +77,10 @@
         "https://www.drupal.org/files/issues/2021-09-01/3230802-4.patch",
         "Issue #3213112: Add a specific class when having sections with background color, image, or video option":
         "https://www.drupal.org/files/issues/2022-02-01/bootstrap_styles-tag-1-0-3--3213112-20.patch"
+      },
+      "drupal/layout_library": {
+        "Issue #3075067: Duplicate entry for key 'block_content_field__uuid__value'":
+        "https://git.drupalcode.org/project/layout_library/-/merge_requests/1.diff"
       }
     }
   }
