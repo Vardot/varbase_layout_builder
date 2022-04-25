@@ -165,6 +165,13 @@ body {
     }
   }
 
+  // Remvoe warning message location icon in layout builder.
+  .layout-builder__message--overrides {
+    .messages {
+      background-image: none;
+    }
+  }
+
   .layout-builder__layout,
   .layout-builder-block,
   .layout-builder__add-block {

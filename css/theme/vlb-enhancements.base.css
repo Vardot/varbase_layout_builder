@@ -131,6 +131,9 @@ body .layout-builder .layout-builder__actions__block {
   top: 0;
   left: 0;
 }
+body .layout-builder__message--overrides .messages {
+  background-image: none;
+}
 body .layout-builder__layout.is-layout-builder-highlighted,
 body .layout-builder-block.is-layout-builder-highlighted,
 body .layout-builder__add-block.is-layout-builder-highlighted {
