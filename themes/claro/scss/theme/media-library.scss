@@ -8,3 +8,7 @@
 form.media-form {
   @import "../../../../../core/themes/claro/css/theme/media-library";
 }
+
+[dir="rtl"] .media-library-menu {
+  padding-right: 0;
+}
