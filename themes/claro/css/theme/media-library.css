@@ -1015,3 +1015,6 @@ form.media-form .media-library-add-form__remove-button.button:disabled {
 form.media-form .views-live-preview .media-library-view div.views-row + div.views-row {
   margin-top: 0;
 }
+[dir=rtl] .media-library-menu {
+  padding-right: 0;
+}
