@@ -12,3 +12,15 @@ form.media-form {
 [dir="rtl"] .media-library-menu {
   padding-right: 0;
 }
+
+[dir="rtl"] .media-library-widget-modal {
+  .media-library-menu__item {
+    margin-right: 1px;
+
+    a.active {
+      &::before {
+        border-left-width: 0;
+      }
+    }
+  }
+}
