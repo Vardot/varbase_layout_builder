@@ -1,0 +1,7 @@
+langcode: en
+status: 0
+dependencies: {}
+id: breakpoint_xxl
+label: "Extra extra large devices (Extra large desktops)"
+base_class: col-xxl
+weight: "-11"
