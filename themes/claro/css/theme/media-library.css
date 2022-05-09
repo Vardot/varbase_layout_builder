@@ -1018,3 +1018,9 @@ form.media-form .views-live-preview .media-library-view div.views-row + div.view
 [dir=rtl] .media-library-menu {
   padding-right: 0;
 }
+[dir=rtl] .media-library-widget-modal .media-library-menu__item {
+  margin-right: 1px;
+}
+[dir=rtl] .media-library-widget-modal .media-library-menu__item a.active::before {
+  border-left-width: 0;
+}
