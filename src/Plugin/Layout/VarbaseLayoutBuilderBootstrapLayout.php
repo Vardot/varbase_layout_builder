@@ -638,7 +638,8 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
             && count($this->configuration['layout_regions_classes'][$region_name]) > 0) {
 
             foreach ($this->configuration['layout_regions_classes'][$region_name] as $region_key => $region_class) {
-              if ($region_class == "col-xl-"
+              if ($region_class == "col-xxl-"
+                || $region_class == "col-xl-"
                 || $region_class == "col-lg-"
                 || $region_class == "col-md-"
                 || $region_class == "col-sm-"
