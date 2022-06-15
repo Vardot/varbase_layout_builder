@@ -45,7 +45,7 @@ function varbase_layout_builder_entity_operation(EntityInterface $entity) {
 function varbase_layout_builder_form_alter(&$form, FormStateInterface $form_state, $form_id) {
 
   // Only for layout builder forms.
-  if (strpos($form_id, '_layout_builder_form') !== FALSE) {
+  if (isset($form_id) && strpos($form_id, '_layout_builder_form') !== FALSE) {
 
     // Attache the Varbase Layout Builder enhancements libraray.
     $form['#attached']['library'][] = 'varbase_layout_builder/enhancements';

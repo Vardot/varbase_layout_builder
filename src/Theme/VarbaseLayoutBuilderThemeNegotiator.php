@@ -76,7 +76,7 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
       && !version_compare(\Drupal::VERSION, '8.8.0', 'lt')) {
 
       $route_name = $route_match->getRouteName();
-      if (strpos($route_name, 'layout_builder') !== FALSE) {
+      if (isset($route_name) && strpos($route_name, 'layout_builder') !== FALSE) {
         if ($this->themeHandler->themeExists('claro')) {
           return TRUE;
         }
@@ -102,7 +102,7 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
       && !version_compare(\Drupal::VERSION, '8.8.0', 'lt')) {
 
       $route_name = $route_match->getRouteName();
-      if (strpos($route_name, 'layout_builder') !== FALSE) {
+      if (isset($route_name) && strpos($route_name, 'layout_builder') !== FALSE) {
 
         if ($this->themeHandler->themeExists('claro')) {
           if ($this->requestStack->getCurrentRequest()->request->get('dialogOptions')) {
