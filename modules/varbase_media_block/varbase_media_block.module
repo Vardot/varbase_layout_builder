@@ -38,13 +38,13 @@ function varbase_media_block_block_type_form_alter(array &$form, FormStateInterf
 /**
  * After build callback for media field element in the Varbase Media Block form.
  *
- * @param mixed $element
+ * @param array $element
  *   Element definition for the Varbase Media Block field_media field.
  * @param \Drupal\Core\Form\FormStateInterface $form_state
  *   Form state of the Varbase Media Block form.
  *
  * @return array
- *   The updated form.
+ *   The updated element.
  */
 function _varbase_media_block_field_media_after_build(array $element, FormStateInterface $form_state): array {
 
@@ -68,7 +68,7 @@ function _varbase_media_block_field_media_after_build(array $element, FormStateI
 /**
  * After build callback in the Varbase Media Block form.
  *
- * @param mixed $form
+ * @param array $form
  *   Form definition for the Varbase Media Block form.
  * @param \Drupal\Core\Form\FormStateInterface $form_state
  *   Form state of the Varbase Media Block form.
