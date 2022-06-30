@@ -29,3 +29,15 @@ function varbase_media_block_install() {
     ->applyUpdates();
 
 }
+
+/**
+ * Issue #3284568: Hide media (image/video) field link title input.
+ */
+function varbase_media_block_update_90001() {
+  $block_content_field_link = \Drupal::service('config.factory')->getEditable('field.field.block_content.varbase_media_block.field_link');
+  $block_content_field_link_title = $block_content_field_link->get('settings.title');
+
+  if ($block_content_field_link_title === 1) {
+    $block_content_field_link->set('settings.title', 0)->save(TRUE);
+  }
+}
