@@ -17,44 +17,44 @@ bundle: varbase_media_block
 mode: default
 content:
   field_link:
+    type: link_default
     weight: 3
+    region: content
     settings:
-      placeholder_url: ""
-      placeholder_title: ""
+      placeholder_url: ''
+      placeholder_title: ''
     third_party_settings:
       maxlength:
         maxlength_js: null
-        maxlength_js_label: "Content limited to @limit characters, remaining: <strong>@remaining</strong>"
-    type: link_default
-    region: content
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
   field_media:
     type: media_library_widget
     weight: 1
+    region: content
     settings:
       media_types:
+        - image
+        - video
+        - remote_video
         - audio
         - file
-        - image
-        - remote_video
-        - video
     third_party_settings:
       media_library_edit:
-        show_edit: "1"
-    region: content
+        show_edit: 0
   field_media_view_mode:
-    weight: 2
-    settings: {}
-    third_party_settings: {}
     type: options_select
+    weight: 2
     region: content
+    settings: {  }
+    third_party_settings: {  }
   info:
     type: string_textfield
     weight: 0
     region: content
     settings:
       size: 60
-      placeholder: ""
-    third_party_settings: {}
+      placeholder: ''
+    third_party_settings: {  }
 hidden:
   langcode: true
   translation: true

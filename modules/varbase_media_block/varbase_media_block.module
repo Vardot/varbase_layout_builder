@@ -20,7 +20,81 @@ function varbase_media_block_block_type_form_alter(array &$form, FormStateInterf
 
       $form['field_media_view_mode']['widget']['#options'] = _varbase_media_block_active_media_view_mode_options();
     }
+
+    if (isset($form['field_media']) && isset($form['field_link'])) {
+      $form['#attached']['library'][] = 'core/drupal.states';
+      $form['field_media']['#after_build'][] = '_varbase_media_block_field_media_after_build';
+      $form['#after_build'][] = '_varbase_media_block_after_build';
+
+      $form['field_link']['#states'] = [
+        'visible' => [
+          ':input[name="settings[block_form][field_media][media_library_selection]"]' => ['value' => 'image'],
+        ],
+      ];
+    }
   }
+}
+
+/**
+ * After build callback for media field element in the Varbase Media Block form.
+ *
+ * @param mixed $element
+ *   Element definition for the Varbase Media Block field_media field.
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ *   Form state of the Varbase Media Block form.
+ *
+ * @return array
+ *   The updated form.
+ */
+function _varbase_media_block_field_media_after_build(array $element, FormStateInterface $form_state): array {
+
+  if (isset($element['widget'])
+    && isset($element['widget']['media_library_selection'])
+    && isset($element['widget']['media_library_selection']['#value'])) {
+
+    $media_id = $element['widget']['media_library_selection']['#value'];
+
+    if ($media_id) {
+      $media = Media::load($media_id);
+      if ($media) {
+        $element['widget']['media_library_selection']['#attributes']['value'] = $media->bundle();
+      }
+    }
+  }
+
+  return $element;
+}
+
+/**
+ * After build callback in the Varbase Media Block form.
+ *
+ * @param mixed $form
+ *   Form definition for the Varbase Media Block form.
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ *   Form state of the Varbase Media Block form.
+ *
+ * @return array
+ *   The updated form.
+ */
+function _varbase_media_block_after_build(array $form, FormStateInterface $form_state): array {
+
+  if (isset($form['field_media']['widget'])
+    && isset($form['field_media']['widget']['selection'])
+    && isset($form['field_media']['widget']['selection'][0])
+    && isset($form['field_media']['widget']['selection'][0]['target_id'])
+    && isset($form['field_media']['widget']['selection'][0]['target_id']['#value'])) {
+
+    $media_id = $form['field_media']['widget']['selection'][0]['target_id']['#value'];
+
+    if ($media_id) {
+      $media = Media::load($media_id);
+      if ($media) {
+        $form['field_media']['widget']['media_library_selection']['#attributes']['value'] = $media->bundle();
+      }
+    }
+  }
+
+  return $form;
 }
 
 /**
@@ -125,7 +199,8 @@ function varbase_media_block_preprocess_block(&$variables) {
       $variables['content']['field_media'] = $view_builder->view($media, $media_view_mode);
 
       // Assign the filed_link as media_link.
-      if (isset($variables['content']['field_link'])) {
+      if ($media->bundle() == 'image'
+        && isset($variables['content']['field_link'])) {
         $variables['media_link'] = $variables['content']['field_link'];
       }
 
@@ -167,7 +242,8 @@ function varbase_media_block_preprocess_block(&$variables) {
         $variables['content']['content']['field_media'] = $view_builder->view($media, $media_view_mode);
 
         // Assign the filed_link as media_link.
-        if (isset($variables['content']['content']['field_link'])) {
+        if ($media->bundle() == 'image'
+          && isset($variables['content']['content']['field_link'])) {
           $variables['media_link'] = $variables['content']['content']['field_link'];
         }
 
