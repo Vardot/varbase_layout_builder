@@ -39,7 +39,7 @@
     "drupal/allowed_formats": "~1.0",
     "drupal/block_content_permissions": "~1.0",
     "drupal/entity_block": "~1.0",
-    "drupal/block_form_alter": "~1.0",
+    "drupal/block_form_alter": "~2.0",
     "drupal/media_library_form_element": "~2.0",
     "drupal/bootstrap_layouts": "~5.0",
     "drupal/layout_builder_blocks": "~1.0",
