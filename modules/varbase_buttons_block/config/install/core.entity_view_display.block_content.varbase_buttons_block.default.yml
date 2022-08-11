@@ -1,0 +1,58 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.varbase_buttons_block
+    - field.field.block_content.varbase_buttons_block.field_buttons
+  module:
+    - ds
+third_party_settings:
+  ds:
+    layout:
+      id: ds_reset
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes:
+          layout_class: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        label: ''
+    regions:
+      ds_content:
+        - field_buttons
+id: block_content.varbase_buttons_block.default
+targetEntityType: block_content
+bundle: varbase_buttons_block
+mode: default
+content:
+  field_buttons:
+    type: varbase_bootstrap_button_link_formatter
+    label: hidden
+    settings:
+      color: _none
+      size: _none
+      target: 0
+      block_level: 0
+      disabled: 0
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: reset
+          settings:
+            lb: ''
+    weight: 0
+    region: ds_content
+hidden:
+  langcode: true
+  search_api_excerpt: true

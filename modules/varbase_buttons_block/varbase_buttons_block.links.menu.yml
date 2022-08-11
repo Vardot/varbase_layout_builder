@@ -1,0 +1,5 @@
+varbase_buttons_block.settings:
+  title: "Varbase Buttons Block Settings"
+  description: "Configuring Varbase Buttons Block site wide default options."
+  parent: varbase_core.settings_index
+  route_name: varbase_buttons_block.settings

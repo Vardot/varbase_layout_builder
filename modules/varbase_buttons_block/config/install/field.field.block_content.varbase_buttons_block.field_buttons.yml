@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.varbase_buttons_block
+    - field.storage.block_content.field_buttons
+  module:
+    - link
+id: block_content.varbase_buttons_block.field_buttons
+field_name: field_buttons
+entity_type: block_content
+bundle: varbase_buttons_block
+label: Button(s)
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 2
+  link_type: 17
+field_type: link

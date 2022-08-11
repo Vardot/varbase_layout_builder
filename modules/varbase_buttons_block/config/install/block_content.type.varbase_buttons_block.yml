@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: varbase_buttons_block
+label: Button(s)
+revision: 1
+description: 'A button block will contain a button with flexible styling.'

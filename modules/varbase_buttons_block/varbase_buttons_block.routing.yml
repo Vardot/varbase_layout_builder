@@ -1,0 +1,7 @@
+varbase_buttons_block.settings:
+  path: '/admin/config/varbase/varbase-buttons-block-settings'
+  defaults:
+    _form: '\Drupal\varbase_buttons_block\Form\VarbaseButtonsBlockSettingsForm'
+    _title: 'Varbase Buttons Block Settings'
+  requirements:
+    _permission: 'administer varbase buttons block settings'

@@ -1,0 +1,4 @@
+varbase_buttons_block.settings:
+  title: "Varbase Buttons Block settings"
+  route_name: varbase_core.settings_index
+  base_route: varbase_buttons_block.settings

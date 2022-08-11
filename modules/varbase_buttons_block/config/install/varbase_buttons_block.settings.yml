@@ -1,0 +1,26 @@
+colors:
+  btn-primary: 'Primary'
+  btn-secondary: 'Secondary'
+  btn-success: 'Success'
+  btn-danger: 'Danger'
+  btn-warning: 'Warning'
+  btn-info: 'Info'
+  btn-light: 'Light'
+  btn-dark: 'Dark'
+  btn-link: 'Link'
+sizes:
+  btn-sm: 'Small'
+  btn-lg: 'Large'
+default:
+  color: _none
+  size: _none
+  outline: 0
+  target: 0
+  block_level: 0
+  disabled: 0
+override_color: 1
+override_size: 1
+override_outline: 1
+override_target: 1
+override_block_level: 1
+override_disabled: 1

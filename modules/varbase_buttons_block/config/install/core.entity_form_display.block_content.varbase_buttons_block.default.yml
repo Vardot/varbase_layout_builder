@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.varbase_buttons_block
+    - field.field.block_content.varbase_buttons_block.field_buttons
+id: block_content.varbase_buttons_block.default
+targetEntityType: block_content
+bundle: varbase_buttons_block
+mode: default
+content:
+  field_buttons:
+    type: varbase_bootstrap_button_link_widget
+    weight: 0
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+hidden:
+  info: true
+  langcode: true
