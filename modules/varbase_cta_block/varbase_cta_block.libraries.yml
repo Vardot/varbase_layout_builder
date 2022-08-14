@@ -1,0 +1,4 @@
+cta-block-style:
+  css:
+    component:
+      css/components/varbase-cta-block.component.css: { }

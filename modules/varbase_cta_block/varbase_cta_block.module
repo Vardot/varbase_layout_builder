@@ -1,0 +1,53 @@
+<?php
+
+/**
+ * @file
+ * Contains varbase_cta_block.module.
+ */
+
+use Drupal\block_content\BlockContentInterface;
+
+/**
+ * Implements hook_theme().
+ */
+function varbase_cta_block_theme($existing, $type, $theme, $path) {
+
+  $templates = $path . '/templates';
+  $theme_templates = [];
+
+  $theme_templates['block__inline_block__varbase_cta_block'] = [
+    'template' => 'block--inline-block--varbase-cta-block',
+    'path' => $templates,
+    'base hook' => 'block',
+  ];
+
+  $theme_templates['block__block_content__varbase_cta_block'] = [
+    'template' => 'block--block-content--varbase-cta-block',
+    'path' => $templates,
+    'base hook' => 'block',
+  ];
+
+  return $theme_templates;
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function varbase_cta_block_theme_suggestions_block_alter(array &$suggestions, array $variables) {
+
+  if (isset($variables['elements']['content']['#block_content'])
+      && $variables['elements']['content']['#block_content']->bundle() == 'varbase_cta_block'
+      && $variables['elements']['content']['#block_content'] instanceof BlockContentInterface) {
+
+    $block_type_suggestion = 'block__block_content__varbase_cta_block';
+    $suggestions_rev = array_reverse($suggestions);
+    $index = array_search('block__block_content', $suggestions_rev);
+    if (is_numeric($index)) {
+      array_splice($suggestions_rev, $index, 0, $block_type_suggestion);
+      $suggestions = array_reverse($suggestions_rev);
+    }
+    else {
+      $suggestions[] = $block_type_suggestion;
+    }
+  }
+}

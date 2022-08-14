@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.varbase_cta_block
+id: block_content--varbase_cta_block
+disabled: true
+path: block_content/varbase_cta_block
+resourceType: block_content--varbase_cta_block
+resourceFields: {  }

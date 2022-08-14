@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: varbase_cta_block
+label: CTA
+revision: 1
+description: 'A CTA block contains a button link that navigates to the desired destination.'

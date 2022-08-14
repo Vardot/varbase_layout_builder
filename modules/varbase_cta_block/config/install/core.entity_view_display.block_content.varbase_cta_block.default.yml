@@ -1,0 +1,92 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.varbase_cta_block
+    - field.field.block_content.varbase_cta_block.body
+    - field.field.block_content.varbase_cta_block.field_buttons
+  module:
+    - ds
+    - text
+    - varbase_buttons_block
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        label: ''
+    regions:
+      content:
+        - body
+        - field_buttons
+id: block_content.varbase_cta_block.default
+targetEntityType: block_content
+bundle: varbase_cta_block
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    weight: 0
+    region: content
+  field_buttons:
+    type: varbase_bootstrap_button_link_formatter
+    label: hidden
+    settings:
+      color: btn-primary
+      size: _none
+      trim_length: '80'
+      url_only: ''
+      url_plain: ''
+      rel: ''
+      target: 0
+      outline: 0
+      block_level: 0
+      disabled: 0
+    third_party_settings:
+      ds:
+        ds_limit: ''
+        ft:
+          id: expert
+          settings:
+            lb: ''
+            lbw: false
+            lbw-el: ''
+            lbw-cl: ''
+            lbw-at: ''
+            lb-col: false
+            ow: true
+            ow-el: ''
+            ow-cl: field--name-field-buttons
+            ow-at: ''
+            ow-def-at: true
+            ow-def-cl: true
+            fis: false
+            fis-el: ''
+            fis-cl: ''
+            fis-at: ''
+            fis-def-at: false
+            fi: false
+            fi-el: ''
+            fi-cl: ''
+            fi-at: ''
+            fi-def-at: false
+            prefix: ''
+            suffix: ''
+    weight: 1
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true
