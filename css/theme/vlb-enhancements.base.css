@@ -435,6 +435,11 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
 #layout-builder-modal fieldset.form-type-search {
   width: 100% !important;
 }
+#drupal-off-canvas .block-categories .links li,
+#layout-builder-modal .block-categories .links li {
+  margin: 0.3125rem 0;
+  padding: 0;
+}
 
 #layout-builder-modal .form-item--editor-format .form-element--editor-format {
   width: auto;

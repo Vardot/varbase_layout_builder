@@ -542,6 +542,13 @@ body {
       width: 100% !important;
     }
   }
+
+  .block-categories {
+    .links li {
+      padding: 0;
+      margin: 0.3125rem 0;
+    }
+  }
 }
 
 #layout-builder-modal {
