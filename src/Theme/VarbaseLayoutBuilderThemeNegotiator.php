@@ -72,8 +72,7 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
    */
   public function applies(RouteMatchInterface $route_match) {
     $use_claro = $this->configFactory->get('varbase_layout_builder.settings')->get('use_claro');
-    if (isset($use_claro) && $use_claro == 1
-      && !version_compare(\Drupal::VERSION, '8.8.0', 'lt')) {
+    if (isset($use_claro) && $use_claro == 1) {
 
       $route_name = $route_match->getRouteName();
       if (isset($route_name) && strpos($route_name, 'layout_builder') !== FALSE) {
@@ -98,8 +97,7 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
   public function determineActiveTheme(RouteMatchInterface $route_match) {
     $use_claro = $this->configFactory->get('varbase_layout_builder.settings')->get('use_claro');
 
-    if (isset($use_claro) && $use_claro == 1
-      && !version_compare(\Drupal::VERSION, '8.8.0', 'lt')) {
+    if (isset($use_claro) && $use_claro == 1) {
 
       $route_name = $route_match->getRouteName();
       if (isset($route_name) && strpos($route_name, 'layout_builder') !== FALSE) {

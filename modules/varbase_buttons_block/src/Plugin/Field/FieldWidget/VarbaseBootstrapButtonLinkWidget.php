@@ -70,7 +70,7 @@ class VarbaseBootstrapButtonLinkWidget extends LinkWidget {
   public function formElement(FieldItemListInterface $items, $delta, array $element, array &$form, FormStateInterface $form_state) {
     $element = parent::formElement($items, $delta, $element, $form, $form_state);
 
-    $_none = ['_none' => $this->t(' -  None  - ')];
+    $_none = ['_none' => ' ' . $this->t('-  None  -') . ' '];
 
     $button_colors = $_none + $this->varbaseBootstrapButtonLinkConfigs->get('colors');
     $button_sizes = $_none + $this->varbaseBootstrapButtonLinkConfigs->get('sizes');

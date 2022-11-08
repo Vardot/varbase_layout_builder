@@ -10,7 +10,7 @@
       // Graphical Layout Columns
       $(".blb_breakpoint_cols", context).each(function () {
         const numOfCols = 12;
-        // .custom-control, .custom-radio to solve Bario issues.
+        // .custom-control, .custom-radio to solve issues.
         $(this)
           .find(".form-item, .custom-control, .custom-radio")
           .each(function () {
@@ -58,7 +58,7 @@
           });
       });
 
-      // Auto-sized textareas.
+      // Auto-sized text areas.
       $("textarea.blb-auto-size", context).each(function () {
         this.setAttribute(
           "style",

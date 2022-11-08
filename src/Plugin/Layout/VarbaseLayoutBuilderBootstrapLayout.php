@@ -417,7 +417,7 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
       $form['ui']['tab_content']['layout']['remove_gutters']['#options'][$key] = '<span class="input-icon gutter-icon-' . $key . '"></span>' . $value;
     }
 
-    // When number of coloumns for the layout is 2 and more.
+    // When number of columns for the layout is 2 and more.
     // And Removes Gutters was checked.
     // Then show the Gutters between checkbox.
     if (count($this->getPluginDefinition()->getRegionNames()) > 2) {

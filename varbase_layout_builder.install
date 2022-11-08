@@ -15,7 +15,7 @@ use Vardot\Installer\ModuleInstallerFactory;
  */
 function varbase_layout_builder_install() {
 
-  // Processer for install: in varbase_layout_builder.info.yml file.
+  // Processor for install: in varbase_layout_builder.info.yml file.
   // --------------------------------------------------------------------------.
   ModuleInstallerFactory::installList('varbase_layout_builder');
 
@@ -184,7 +184,7 @@ function varbase_layout_builder_update_10003() {
  */
 function varbase_layout_builder_update_10004() {
   // Set the weight of the module after installation of list of modules.
-  // To make sure that any hook or event subscriber workes after all used modules.
+  // To make sure that any hook or event subscriber works after all used modules.
   ModuleInstallerFactory::setModuleWeightAfterInstallation('varbase_layout_builder');
 }
 

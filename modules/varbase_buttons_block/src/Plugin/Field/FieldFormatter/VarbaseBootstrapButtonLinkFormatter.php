@@ -96,7 +96,7 @@ class VarbaseBootstrapButtonLinkFormatter extends LinkFormatter {
       'outline' => 0,
       'target' => 0,
       'block_level' => 0,
-      'disabled' => 0
+      'disabled' => 0,
     ] + parent::defaultSettings();
   }
 
@@ -106,7 +106,7 @@ class VarbaseBootstrapButtonLinkFormatter extends LinkFormatter {
   public function settingsForm(array $form, FormStateInterface $form_state) {
     $elements = parent::settingsForm($form, $form_state);
 
-    $_none = ['_none' => $this->t(' -  None  - ')];
+    $_none = ['_none' => ' ' . $this->t('-  None  -') . ' '];
 
     $button_colors_options = $_none + $this->varbaseBootstrapButtonLinkConfigs->get('colors');
     $button_sizes_options = $_none + $this->varbaseBootstrapButtonLinkConfigs->get('sizes');
@@ -176,12 +176,12 @@ class VarbaseBootstrapButtonLinkFormatter extends LinkFormatter {
   public function settingsSummary() {
     $summary = [];
 
-    $summary[] = $this->t('Color: @text', ['@text' => (($this->getSetting('color') !== '_none') ? $this->getSetting('color') : $this->t('None') )]);
-    $summary[] = $this->t('Outline: @text', ['@text' => (($this->getSetting('outline')) ? $this->t('Yes') : $this->t('No') )]);
-    $summary[] = $this->t('Size: @text', ['@text' => (($this->getSetting('size') !== '_none') ? $this->getSetting('size') : $this->t('None') )]);
+    $summary[] = $this->t('Color: @text', ['@text' => (($this->getSetting('color') !== '_none') ? $this->getSetting('color') : $this->t('None'))]);
+    $summary[] = $this->t('Outline: @text', ['@text' => (($this->getSetting('outline')) ? $this->t('Yes') : $this->t('No'))]);
+    $summary[] = $this->t('Size: @text', ['@text' => (($this->getSetting('size') !== '_none') ? $this->getSetting('size') : $this->t('None'))]);
     $summary[] = $this->t('Target: @text', ['@text' => (($this->getSetting('target')) ? $this->t('Open in a new window') : $this->t('Open in the same window'))]);
-    $summary[] = $this->t('Block level: @text', ['@text' => (($this->getSetting('block_level')) ? $this->t('Yes') : $this->t('No') )]);
-    $summary[] = $this->t('Disabled: @text', ['@text' => (($this->getSetting('disabled')) ? $this->t('Yes') : $this->t('No') )]);
+    $summary[] = $this->t('Block level: @text', ['@text' => (($this->getSetting('block_level')) ? $this->t('Yes') : $this->t('No'))]);
+    $summary[] = $this->t('Disabled: @text', ['@text' => (($this->getSetting('disabled')) ? $this->t('Yes') : $this->t('No'))]);
 
     return $summary;
   }
@@ -216,12 +216,12 @@ class VarbaseBootstrapButtonLinkFormatter extends LinkFormatter {
 
       if (!empty($button_link_color)) {
 
-          // Add button outline.
-          $button_link_outline = (empty($options['outline']) || $options['outline'] == 0) ? $settings['outline'] : $options['outline'];
+        // Add button outline.
+        $button_link_outline = (empty($options['outline']) || $options['outline'] == 0) ? $settings['outline'] : $options['outline'];
 
-          if ($button_link_outline == 1) {
-            $button_link_color =  substr_replace($button_link_color, 'btn-outline-', 0, strlen('btn-'));
-          }
+        if ($button_link_outline == 1) {
+          $button_link_color = substr_replace($button_link_color, 'btn-outline-', 0, strlen('btn-'));
+        }
 
         $btn_class += ['btn', $button_link_color];
       }

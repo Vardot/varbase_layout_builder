@@ -5,9 +5,9 @@ namespace Drupal\varbase_buttons_block;
 use Drupal\Component\Utility\Html;
 
 /**
- * Class varbaseBootstrapButtonLinkHelper.
+ * Class Varbase Bootstrap Button Link Helper.
  */
-class varbaseBootstrapButtonLinkHelper {
+class VarbaseBootstrapButtonLinkHelper {
 
   /**
    * Parse style options array from string value.

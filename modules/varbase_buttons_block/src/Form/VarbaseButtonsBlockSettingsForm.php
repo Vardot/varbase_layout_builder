@@ -5,7 +5,7 @@ namespace Drupal\varbase_buttons_block\Form;
 use Drupal\Core\Cache\Cache;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\varbase_buttons_block\varbaseBootstrapButtonLinkHelper;
+use Drupal\varbase_buttons_block\VarbaseBootstrapButtonLinkHelper;
 
 /**
  * Defines a form that configures varbase button link settings.
@@ -33,10 +33,10 @@ class VarbaseButtonsBlockSettingsForm extends ConfigFormBase {
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
     $configs = $this->config('varbase_buttons_block.settings');
- 
+
     $button_colors = $configs->get('colors');
-    
-    $button_colors_value = varbaseBootstrapButtonLinkHelper::makeValueFromConfigs($button_colors);
+
+    $button_colors_value = VarbaseBootstrapButtonLinkHelper::makeValueFromConfigs($button_colors);
 
     $form['colors'] = [
       '#type' => 'textarea',
@@ -47,7 +47,7 @@ class VarbaseButtonsBlockSettingsForm extends ConfigFormBase {
     ];
 
     $button_sizes = $configs->get('sizes');
-    $button_sizes_value = varbaseBootstrapButtonLinkHelper::makeValueFromConfigs($button_sizes);
+    $button_sizes_value = VarbaseBootstrapButtonLinkHelper::makeValueFromConfigs($button_sizes);
 
     $form['sizes'] = [
       '#type' => 'textarea',
@@ -113,7 +113,7 @@ class VarbaseButtonsBlockSettingsForm extends ConfigFormBase {
 
     // Validate the Bootstrap Button color options and save.
     try {
-      $button_colors_options = varbaseBootstrapButtonLinkHelper::parseConfigsFromValueWithCleanCssIdentifier($values['colors']);
+      $button_colors_options = VarbaseBootstrapButtonLinkHelper::parseConfigsFromValueWithCleanCssIdentifier($values['colors']);
     }
     catch (\Exception $e) {
       switch ($e->getCode()) {
@@ -137,7 +137,7 @@ class VarbaseButtonsBlockSettingsForm extends ConfigFormBase {
 
     // Validate the Bootstrap Button sizes options and save.
     try {
-      $button_sizes_options = varbaseBootstrapButtonLinkHelper::parseConfigsFromValueWithCleanCssIdentifier($values['sizes']);
+      $button_sizes_options = VarbaseBootstrapButtonLinkHelper::parseConfigsFromValueWithCleanCssIdentifier($values['sizes']);
     }
     catch (\Exception $e) {
       switch ($e->getCode()) {
