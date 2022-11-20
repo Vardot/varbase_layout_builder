@@ -20,7 +20,6 @@ install:
   - layout_builder_block_sanitizer
   - layout_builder_at
   - layout_builder_component_attributes
-  - lb_ux
   - layout_library
   - section_library
   - bootstrap_styles

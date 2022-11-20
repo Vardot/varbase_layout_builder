@@ -47,7 +47,6 @@
     "drupal/layout_builder_block_sanitizer": "~1.0",
     "drupal/layout_builder_at": "~2.0",
     "drupal/layout_builder_component_attributes": "~2.0",
-    "drupal/lb_ux": "1.x-dev",
     "drupal/layout_library": "1.0-beta3",
     "drupal/section_library": "~1.0",
     "drupal/bootstrap_styles": "1.0.3",
@@ -64,12 +63,6 @@
     "enable-patching": true,
     "composer-exit-on-patch-failure": true,
     "patches": {
-      "drupal/lb_ux": {
-        "Issue #3173730: Remove the change of default for auto-submit controller on the existing route to have a better behavior when adding a new section":
-        "https://www.drupal.org/files/issues/2020-09-29/3173730-2.patch",
-        "Issue #3150012: Fix RuntimeException: Callable LayoutBuilderAccessCheck::access requires a value for the $section_storage argument":
-        "https://www.drupal.org/files/issues/2020-10-11/3150012-12_0.patch"
-      },
       "drupal/bootstrap_styles": {
         "Issue #3192061: Have the option to use other admin themes like Claro or Gin":
         "https://www.drupal.org/files/issues/2021-02-03/bootstrap_styles-1-0-3--3192061-9.patch",
