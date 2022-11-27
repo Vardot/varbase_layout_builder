@@ -1,0 +1,129 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.varbase_featured_card_block
+    - field.field.block_content.varbase_featured_card_block.body
+    - field.field.block_content.varbase_featured_card_block.field_image
+    - field.field.block_content.varbase_featured_card_block.field_link
+  module:
+    - ds
+    - link
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_featuredCard
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+          settings:
+            card_attributes: ''
+            row_attributes: ''
+            left_column_attributes: ''
+            right_column_attributes: ''
+            columns_sm_size: '12_12'
+            columns_md_size: '6_6'
+            columns_lg_size: ''
+            columns_xl_size: ''
+            columns_xxl_size: ''
+            image_position: left
+    regions:
+      image:
+        - field_image
+      content:
+        - block_description
+        - body
+        - field_link
+    fields:
+      block_description:
+        plugin_id: block_description
+        weight: 1
+        label: hidden
+        formatter: default
+id: block_content.varbase_featured_card_block.default
+targetEntityType: block_content
+bundle: varbase_featured_card_block
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    weight: 0
+    region: image
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings:
+      ds:
+        ft:
+          id: pattern
+          settings:
+            pattern: link
+            pattern_mapping:
+              'ds_field_template:field_link':
+                destination: link
+                weight: 0
+                plugin: ds_field_template
+                source: field_link
+              'ds_field_template:field_link__uri':
+                destination: url
+                weight: 1
+                plugin: ds_field_template
+                source: field_link__uri
+              'ds_field_template:field_link__options':
+                destination: options
+                weight: 2
+                plugin: ds_field_template
+                source: field_link__options
+              'ds_field_template:field_link__title':
+                destination: title
+                weight: 3
+                plugin: ds_field_template
+                source: field_link__title
+            pattern_settings:
+              link:
+                attributes: ''
+              featuredCard:
+                card_attributes: ''
+                row_attributes: ''
+                left_column_attributes: ''
+                right_column_attributes: ''
+                columns_sm_size: '6_6'
+                columns_md_size: ''
+                columns_lg_size: ''
+                columns_xl_size: ''
+                columns_xxl_size: ''
+                image_position: left
+    weight: 3
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

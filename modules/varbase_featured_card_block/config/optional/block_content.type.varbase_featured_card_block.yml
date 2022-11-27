@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: varbase_featured_card_block
+label: 'Featured Card'
+revision: 1
+description: 'A horizontal card contains 2 columns (image, title, body and link).'
