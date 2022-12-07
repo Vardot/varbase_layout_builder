@@ -9,6 +9,7 @@ use Drupal\Core\Url;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Template\Attribute;
+use Drupal\varbase_layout_builder\Element\VarbaseLayoutBuilderUX;
 
 /**
  * Implements hook_entity_operation().
@@ -46,10 +47,10 @@ function varbase_layout_builder_form_alter(&$form, FormStateInterface $form_stat
   // Only for layout builder forms.
   if (isset($form_id) && strpos($form_id, '_layout_builder_form') !== FALSE) {
 
-    // Attache the Varbase Layout Builder enhancements libraray.
+    // Attache the Varbase Layout Builder enhancements library.
     $form['#attached']['library'][] = 'varbase_layout_builder/enhancements';
 
-    // Attache the Varbase Layout Builder configure section admin libraray.
+    // Attache the Varbase Layout Builder configure section admin library.
     $form['#attached']['library'][] = 'varbase_layout_builder/configure-section.admin';
 
     // No revision information or revision log message.
@@ -179,6 +180,13 @@ function _varbase_layout_builder_form_node_form_submit(array &$form, FormStateIn
       $form_state->setRedirectUrl($edit_layout_url);
     }
   }
+}
+
+/**
+ * Implements hook_element_plugin_alter().
+ */
+function varbase_layout_builder_element_plugin_alter(array &$definitions) {
+  $definitions['layout_builder']['class'] = VarbaseLayoutBuilderUX::class;
 }
 
 /**
