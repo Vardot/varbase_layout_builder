@@ -4,11 +4,134 @@ body {
     margin: -3px;
     padding: 3px;
 
+    .layout-builder__add-section {
+      text-align: center;
+      outline: 1px dashed #555555;
+      padding: 1em;
+      font-weight: bold;
+
+      &:hover,
+      &:active,
+      &:focus {
+        outline: 1px solid #000000;
+      }
+
+      .layout-builder__link--add {
+        display: inline;
+        color: var(--bs-link-color);
+
+        &:hover,
+        &:active,
+        &:focus {
+          text-decoration: underline;
+          color: var(--bs-link-hover-color);
+          background-color: transparent;
+          background:  url(../../images/icons/787878/plus.svg) transparent center left/1em no-repeat;
+        }
+      }
+    }
+
     .layout-builder-block {
       margin: 0;
       padding: 0;
       background: transparent;
       background-color: transparent;
+    }
+
+    .layout-builder__add-block {
+      margin: 10px auto;
+      padding: 0.5em 0;
+      width: 10rem;
+      background-color: #eff6fcc9;
+      border-radius: 8px;
+      text-align: center;
+      color: var(--bs-link-color);
+
+      .layout-builder__link--add {
+        color: var(--bs-link-color);
+        margin-right: 15px;
+        margin-left: 15px;
+
+        &:hover,
+        &:active,
+        &:focus {
+          background-color: transparent;
+          border-radius: 8px;
+          color: var(--bs-link-hover-color);
+          background: url(../../images/icons/787878/plus.svg) transparent center left/1em no-repeat;
+        }
+      }
+    }
+
+    .layout-builder__region {
+
+      > .layout-builder-block {
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    .layout-builder__actions {
+      .layout-builder__link--layout_builder_block_attributes {
+        background: url("../../images/icons/ffffff/droplet-fill.svg") center center/12px 12px no-repeat;
+      }
+    }
+
+    .layout-builder__section {
+      padding: 0;
+      outline: 2px dashed #555555;
+
+      &:hover,
+      &:active
+      &:focus {
+        outline: 2px solid #000000;
+      }
+
+    }
+
+    .layout-builder__actions__section {
+      top: -25px;
+      left: -2px;
+    }
+
+  }
+
+  .layout-builder__link--add-section-to-library {
+    color: var(--bs-link-color);
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: underline;
+      color: var(--bs-link-hover-color);
+      background-color: transparent;
+    }
+  }
+
+  .layout-builder__link--add-template-to-library {
+    text-transform: uppercase;
+    color: var(--bs-link-color);
+    background: #eeeeee;
+    background-color: #eeeeee;
+    font-weight: bold;
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: underline;
+      color: var(--bs-link-hover-color);
+    }
+  }
+
+  .layout-builder__link--import-from-library {
+    color: var(--bs-link-color);
+    font-weight: bold;
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: underline;
+      color: var(--bs-link-hover-color);
     }
   }
 
@@ -20,6 +143,49 @@ body {
   }
 }
 [dir=rtl] body {
+  .layout-builder {
+    .layout-builder__link--add {
+      padding-right: 30px;
+      padding-left: 0.5em;
+    }
+
+
+
+    .layout-builder__actions__section {
+      left: auto;
+      right: -2px;
+    }
+    .layout-builder__actions__block {
+      left: auto;
+      right: 0;
+    }
+
+    .layout-builder__add-section {
+      .layout-builder__link--add {
+        &:hover,
+        &:active,
+        &:focus {
+          background: url(../../images/icons/787878/plus.svg) transparent center right/1em no-repeat;
+        }
+      }
+    }
+
+    .layout-builder__add-block {
+      .layout-builder__link--add {
+        &:hover,
+        &:active,
+        &:focus {
+          background: url(../../images/icons/787878/plus.svg) transparent center right/1em no-repeat;
+        }
+      }
+    }
+  }
+
+  .layout-builder__link--import-from-library {
+    padding-right: 30px;
+    padding-left: 0.5em;
+    background: url(../../images/icons/787878/import.svg) transparent center right/1em no-repeat;
+  }
 
   #drupal-off-canvas,
   #layout-builder-modal {
@@ -85,20 +251,6 @@ body {
     }
   }
 
-}
-
-.toolbar-fixed {
-  .js-messages__wrapper {
-    top: 0 !important;
-  }
-}
-
-.toolbar-horizontal {
-  &.toolbar-tray-open {
-    .js-messages__wrapper {
-      top: 0 !important;
-    }
-  }
 }
 
 #drupal-off-canvas,
