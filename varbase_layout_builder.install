@@ -15,7 +15,7 @@ use Vardot\Installer\ModuleInstallerFactory;
  */
 function varbase_layout_builder_install() {
 
-  // Processer for install: in varbase_layout_builder.info.yml file.
+  // Processor for install: in varbase_layout_builder.info.yml file.
   // --------------------------------------------------------------------------.
   ModuleInstallerFactory::installList('varbase_layout_builder');
 
@@ -141,10 +141,10 @@ function varbase_layout_builder_update_10003() {
   $config_factory = \Drupal::configFactory()->getEditable('bootstrap_styles.settings');
 
   // Only update if the border_left_color current config value is not changed from the old config.
-  $crrent_border_left_color = $config_factory->get('border_left_color');
+  $current_border_left_color = $config_factory->get('border_left_color');
   $old_border_left_color = "border-start border-primary|Primary\r\nborder-start border-secondary|Secondary\r\nborder-start border-success|Success\r\nborder-start border-danger|Danger\r\nborder-start border-warning|Warning\r\nborder-start border-info|Info\r\nborder-start border-light|Light\r\nborder-start border-dark|Dark\r\nborder-start border-white|White";
   $new_border_left_color = "border-start border-start-primary|Primary\r\nborder-start border-start-secondary|Secondary\r\nborder-start border-start-success|Success\r\nborder-start border-start-danger|Danger\r\nborder-start border-start-warning|Warning\r\nborder-start border-start-info|Info\r\nborder-start border-start-light|Light\r\nborder-start border-start-dark|Dark\r\nborder-start border-start-white|White";
-  if ($crrent_border_left_color === $old_border_left_color) {
+  if ($current_border_left_color === $old_border_left_color) {
     $config_factory->set('border_left_color', $new_border_left_color);
     $config_factory->save();
   }
@@ -184,7 +184,7 @@ function varbase_layout_builder_update_10003() {
  */
 function varbase_layout_builder_update_10004() {
   // Set the weight of the module after installation of list of modules.
-  // To make sure that any hook or event subscriber workes after all used modules.
+  // To make sure that any hook or event subscriber workers after all used modules.
   ModuleInstallerFactory::setModuleWeightAfterInstallation('varbase_layout_builder');
 }
 
@@ -201,5 +201,19 @@ function varbase_layout_builder_update_10005() {
     if ($permission === 'access content') {
       $viewSectionLibrary->set('display.default.display_options.access.options.perm', 'view section library templates')->save(TRUE);
     }
+  }
+}
+
+/**
+ * Issue #3326408: Switch from Layout Builder Modal module to Layout Builder iFrame Modal module.
+ */
+function varbase_layout_builder_update_10006() {
+
+  if (!\Drupal::moduleHandler()->moduleExists('layout_builder_modal')) {
+    \Drupal::service('module_installer')->uninstall(['layout_builder_modal']);
+  }
+
+  if (!\Drupal::moduleHandler()->moduleExists('layout_builder_iframe_modal')) {
+    \Drupal::service('module_installer')->install(['layout_builder_iframe_modal'], FALSE);
   }
 }
