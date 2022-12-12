@@ -28,17 +28,3 @@ config/**/*.yml
 *.lock
 *.php
 package
-themes/claro/scss/*
-themes/claro/css/*
-themes/claro/node_modules/**/*.css
-themes/claro/vendor/**/*.css
-themes/claro/**/*.min.css
-themes/claro/scss/*
-themes/claro/images/*
-themes/claro/fonts/*
-themes/claro/js/*
-themes/claro/tests/*
-themes/claro/*.png
-themes/claro/*.svg
-themes/claro/*.ico
-themes/claro/*.json

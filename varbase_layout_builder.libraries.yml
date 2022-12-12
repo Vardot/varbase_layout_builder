@@ -3,8 +3,6 @@ enhancements:
   css:
     theme:
       css/theme/vlb-enhancements.base.css: {}
-      css/theme/vlb-tabs-group.theme.css: {}
-      css/theme/vlb-media-library.theme.css: {}
 
 # Varbase Layout Builder theme of configure section.
 configure-section.admin:
@@ -13,91 +11,6 @@ configure-section.admin:
   dependencies:
     - varbase_layout_builder/plugin.horizontal_alignment.layout_builder_form
     - varbase_layout_builder/plugin.vertical_alignment.layout_builder_form
-
-# Layout builder modal claro theme.
-claro:
-  version: VERSION
-  css:
-    base:
-      themes/claro/css/base/elements.css: {}
-      themes/claro/css/base/off-canvas.theme.css: {}
-      themes/claro/css/base/typography.css: {}
-    component:
-      themes/claro/css/components/accordion.css: {}
-      themes/claro/css/components/action-link.css: {}
-      themes/claro/css/components/ajax-progress.module.css: {}
-      themes/claro/css/components/autocomplete-loading.module.css: {}
-      themes/claro/css/components/breadcrumb.css: {}
-      themes/claro/css/components/container-inline.css: {}
-      themes/claro/css/components/container-inline.module.css: {}
-      themes/claro/css/components/content-header.css: {}
-      themes/claro/css/components/buttons.css: {}
-      themes/claro/css/components/card.css: {}
-      themes/claro/css/components/details.css: {}
-      themes/claro/css/components/divider.css: {}
-      themes/claro/css/components/dropbutton.css: {}
-      themes/claro/css/components/dialog.css: {}
-      themes/claro/css/components/messages.css: {}
-      themes/claro/css/components/page-title.css: {}
-      themes/claro/css/components/entity-meta.css: {}
-      themes/claro/css/components/fieldset.css: {}
-      themes/claro/css/components/file.css: {}
-      themes/claro/css/components/form.css: {}
-      themes/claro/css/components/form--checkbox-radio.css: {}
-      themes/claro/css/components/form--checkbox-radio--ie.css: {}
-      themes/claro/css/components/form--field-multiple.css: {}
-      themes/claro/css/components/form--managed-file.css: {}
-      themes/claro/css/components/form--password-confirm.css: {}
-      themes/claro/css/components/form--text.css: {}
-      themes/claro/css/components/form--select.css: {}
-      themes/claro/css/components/help.css: {}
-      themes/claro/css/components/icon-link.css: {}
-      themes/claro/css/components/image-preview.css: {}
-      themes/claro/css/components/media-library.ui.css: {}
-      themes/claro/css/components/media.css: {}
-      themes/claro/css/components/menus-and-lists.css: {}
-      themes/claro/css/components/pager.css: {}
-      themes/claro/css/components/progress.css: {}
-      themes/claro/css/components/skip-link.css: {}
-      themes/claro/css/components/system-admin--admin-list.css: {}
-      themes/claro/css/components/system-admin--links.css: {}
-      themes/claro/css/components/system-admin--modules.css: {}
-      themes/claro/css/components/system-admin--panel.css: {}
-      themes/claro/css/components/system-admin--status-report.css: {}
-      themes/claro/css/components/system-status-counter.css: {}
-      themes/claro/css/components/system-status-report-counters.css: {}
-      themes/claro/css/components/system-status-report-general-info.css: {}
-      themes/claro/css/components/system-status-report.css: {}
-      themes/claro/css/components/tabledrag.css: {}
-      themes/claro/css/components/tables.css: {}
-      themes/claro/css/components/tableselect.css: {}
-      themes/claro/css/components/table--file-multiple-widget.css: {}
-      themes/claro/css/components/tablesort-indicator.css: {}
-      themes/claro/css/components/tabs.css: {}
-      themes/claro/css/components/vertical-tabs.css: {}
-      themes/claro/css/components/views_ui.admin.css: {}
-      themes/claro/css/components/views-exposed-form.css: {}
-      themes/claro/css/components/views-ui.css: {}
-    layout:
-      themes/claro/css/layout/breadcrumb.css: {}
-      themes/claro/css/layout/card-list.css: {}
-      themes/claro/css/layout/layout.css: {}
-      themes/claro/css/layout/local-actions.css: {}
-      themes/claro/css/layout/node-add.css: {}
-      themes/claro/css/layout/system-admin--layout.css: {}
-    theme:
-      themes/claro/css/theme/js.css: {}
-      themes/claro/css/theme/colors.css: {}
-      themes/claro/css/theme/media-library.css: {}
-      themes/claro/css/theme/field-ui.admin.css: {}
-      themes/claro/css/theme/filter.theme.css: {}
-      themes/claro/css/theme/vartheme-claro.theme.style.css: {}
-      themes/claro/css/theme/bootstrap-styles.dark.css: {}
-  dependencies:
-    - system/admin
-    - core/jquery
-    - core/drupal
-    - core/modernizr
 
 # Horizontal alignment.
 plugin.horizontal_alignment.layout_builder_form:
