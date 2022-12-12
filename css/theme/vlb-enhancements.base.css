@@ -313,3 +313,36 @@ body .layout-builder__message--overrides .messages {
   margin: 0.3125rem 0;
   padding: 0;
 }
+#drupal-off-canvas .layout-selection li {
+  padding-bottom: 0;
+}
+#drupal-off-canvas .layout-selection li a {
+  display: flex;
+  margin: 0 -20px;
+  padding: 15px 0;
+  padding-left: 25px; /* LTR */
+}
+#drupal-off-canvas .layout-selection li a:hover {
+  background-color: #333;
+}
+#drupal-off-canvas .layout-selection li a svg {
+  margin-right: 1em; /* LTR */
+  background-color: inherit;
+}
+#drupal-off-canvas .layout-selection li a div {
+  padding-top: 0.55em;
+  background-color: inherit;
+}
+
+[dir=rtl] #drupal-off-canvas .layout-selection li a {
+  padding-right: 25px;
+  padding-left: 0;
+}
+[dir=rtl] #drupal-off-canvas .layout-selection li a svg {
+  margin-right: 0;
+  margin-left: 1em;
+}
+
+.layout-builder__actions {
+  font-size: 12px;
+}

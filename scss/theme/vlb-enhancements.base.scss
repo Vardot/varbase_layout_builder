@@ -447,4 +447,50 @@ body {
       margin: 0.3125rem 0;
     }
   }
+
+  // Layout Selection.
+  .layout-selection li {
+    padding-bottom: 0;
+
+    a {
+      display: flex;
+      margin: 0 -20px;
+      padding: 15px 0;
+      padding-left: 25px; /* LTR */
+
+      &:hover {
+        background-color: #333;
+      }
+
+      svg {
+        margin-right: 1em; /* LTR */
+        background-color: inherit;
+      }
+
+      div {
+        padding-top: 0.55em;
+        background-color: inherit;
+      }
+    }
+  }
+}
+
+[dir="rtl"] #drupal-off-canvas {
+  .layout-selection {
+    li {
+      a {
+        padding-right: 25px;
+        padding-left: 0;
+
+        svg {
+          margin-right: 0;
+          margin-left: 1em;
+        }
+      }
+    }
+  }
+}
+
+.layout-builder__actions {
+  font-size: 12px;
 }
