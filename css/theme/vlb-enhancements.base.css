@@ -2,6 +2,7 @@ body .layout-builder__add-section {
   padding: 1em;
   text-align: center;
   outline: 1px dashed #555;
+  font-size: 12px;
   font-weight: bold;
 }
 body .layout-builder__add-section:hover,
@@ -36,6 +37,7 @@ body .layout-builder__add-block .layout-builder__link--add {
   margin-left: 15px;
   text-transform: uppercase;
   color: var(--bs-link-color);
+  font-size: 12px;
 }
 body .layout-builder__add-block .layout-builder__link--add:hover,
 body .layout-builder__add-block .layout-builder__link--add:active,
@@ -70,6 +72,7 @@ body .layout-builder__link--add-template-to-library,
 body .layout-builder__link--import-from-library {
   text-transform: uppercase;
   color: var(--bs-link-color);
+  font-size: 12px;
   font-weight: bold;
 }
 body .layout-builder__link--configure:hover,

@@ -5,6 +5,7 @@ body {
     outline: 1px dashed #555555;
     padding: 1em;
     font-weight: bold;
+    font-size: 12px;
 
     &:hover,
     &:active,
@@ -38,6 +39,7 @@ body {
     color: var(--bs-link-color);
 
     .layout-builder__link--add {
+      font-size: 12px;
       text-transform: uppercase;
       color: var(--bs-link-color);
       margin-right: 15px;
@@ -92,6 +94,7 @@ body {
     text-transform: uppercase;
     color: var(--bs-link-color);
     font-weight: bold;
+    font-size: 12px;
 
     &:hover,
     &:active,
