@@ -28,13 +28,6 @@ body {
     }
   }
 
-  // .layout-builder-block {
-  //   margin: 0;
-  //   padding: 0;
-  //   background: transparent;
-  //   background-color: transparent;
-  // }
-
   .layout-builder__add-block {
     margin: 10px auto;
     padding: 0.5em 0;
@@ -156,8 +149,7 @@ body {
     background: url(../../images/icons/787878/import.svg) transparent center right/1em no-repeat;
   }
 
-  #drupal-off-canvas,
-  #layout-builder-modal {
+  #drupal-off-canvas {
     .bs-group-title {
       margin-left: auto;
       margin-right: 15px;
@@ -222,8 +214,7 @@ body {
 
 }
 
-#drupal-off-canvas,
-#layout-builder-modal {
+#drupal-off-canvas {
 
   // Alignment.
   .field-text-alignment {
@@ -453,82 +444,4 @@ body {
       margin: 0.3125rem 0;
     }
   }
-}
-
-#layout-builder-modal {
-  .form-item--editor-format {
-    .form-element--editor-format {
-      width: auto;
-      border-radius: inherit;
-      border: 2px solid #727579;
-      background-color: #fff;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 9'%3E%3Cpath fill='none' stroke-width='1.5' d='M1 1L7 7L13 1' stroke='%23545560'/%3E%3C/svg%3E%0A");
-      background-repeat: no-repeat;
-      background-position: 100% 50%;
-      min-height: 1.5rem;
-      padding: calc(0.15rem - 1px) calc(0.5rem - 1px);
-      padding-right: calc(1.5rem - 1px);
-      -webkit-background-size: 1.75rem 0.4375rem;
-      background-size: 1.75rem 0.4375rem;
-      font-size: 0.889rem;
-      line-height: 1.2rem;
-      color:#222330;
-
-      &:hover
-      &:active,
-      &:focus {
-        background-color: #fff;
-      }
-    }
-  }
-
-  .bs_input-boxes--box-model .fieldset-wrapper > div > div input ~ label,
-  .field-text-alignment .fieldset-wrapper > div > div input + label  {
-    height: 60px;
-  }
-
-  .tabledrag-toggle-weight-wrapper {
-   margin-top: 0;
-  }
-
-  .tabledrag-cell,
-  .tabledrag-cell-content {
-    max-width: 1rem;
-    min-width: 1rem;
-  }
-
-  .draggable {
-    a {
-      &.tabledrag-handle {
-        overflow: visible;
-      }
-    }
-  }
-
-  .tabledrag-handle {
-    &::after {
-      margin-left: 0;
-    }
-  }
-
-  .ief-entity-table {
-    td {
-      border: 0;
-    }
-  }
-
-  fieldset.fieldset {
-    background-color: #383a40;
-
-    .media-library-widget-empty-text,
-    .fieldset__description,
-    .form-item__description {
-      color: #fff !important;
-    }
-  }
-
-  .fieldset__label {
-    color: #fff !important;
-  }
-
 }

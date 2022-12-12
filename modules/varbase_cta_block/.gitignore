@@ -1,7 +1,6 @@
 # Ignore node modules
 node_modules
 /*/node_modules
-/*/themes/claro/node_modules
 
 # Ignore Variables
 /css/bootstrap-variables.css
