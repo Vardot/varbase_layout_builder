@@ -1,0 +1,121 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.varbase_impressed_card_block
+    - field.field.block_content.varbase_impressed_card_block.body
+    - field.field.block_content.varbase_impressed_card_block.field_image
+    - field.field.block_content.varbase_impressed_card_block.field_link
+  module:
+    - advanced_text_formatter
+    - field_group
+    - length_indicator
+    - link
+    - maxlength
+    - media_library
+    - text
+third_party_settings:
+  field_group:
+    group_tabs:
+      children:
+        - group_bas
+        - group_media
+      label: Tabs
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: 640
+    group_media:
+      children:
+        - field_image
+      label: Media
+      region: content
+      parent_name: group_tabs
+      weight: 21
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_bas:
+      children:
+        - body
+        - field_link
+      label: 'Basic Information'
+      region: content
+      parent_name: group_tabs
+      weight: 20
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: open
+        description: ''
+        required_fields: true
+id: block_content.varbase_impressed_card_block.default
+targetEntityType: block_content
+bundle: varbase_impressed_card_block
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  field_image:
+    type: media_library_widget
+    weight: 3
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_link:
+    type: link_default
+    weight: 3
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings:
+      maxlength:
+        maxlength_js: null
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+        maxlength_js_enforce: false
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings:
+      length_indicator:
+        indicator: false
+        indicator_opt:
+          optimin: 10
+          optimax: 15
+          tolerance: 5
+      maxlength:
+        maxlength_js: null
+        maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
+        maxlength_js_enforce: false
+      advanced_text_formatter:
+        show_token_tree: 0
+hidden:
+  langcode: true
+  translation: true

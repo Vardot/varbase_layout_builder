@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: varbase_impressed_card_block
+label: 'Impressed Card'
+revision: 1
+description: "A vertical card contains (an image, title, body and link)."
