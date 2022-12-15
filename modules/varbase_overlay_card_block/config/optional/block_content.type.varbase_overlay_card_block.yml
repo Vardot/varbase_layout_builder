@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: varbase_overlay_card_block
+label: 'Overlay card'
+revision: 1
+description: 'A card block that contains background image and (title, body and link) fields'

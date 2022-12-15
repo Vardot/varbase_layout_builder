@@ -1,0 +1,105 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.varbase_overlay_card_block
+    - field.field.block_content.varbase_overlay_card_block.body
+    - field.field.block_content.varbase_overlay_card_block.field_image
+    - field.field.block_content.varbase_overlay_card_block.field_link
+  module:
+    - ds
+    - link
+    - smart_trim
+third_party_settings:
+  ds:
+    layout:
+      id: pattern_overlayCard
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        pattern:
+          field_templates: default
+          settings:
+            card_attributes: ''
+            content_attributes: ''
+            card_classes: ''
+            horizontal_alignment: center
+            vertical_alignment: center
+    regions:
+      image:
+        - field_image
+      content:
+        - block_description
+        - body
+        - field_link
+    fields:
+      block_description:
+        plugin_id: block_description
+        weight: 1
+        label: hidden
+        formatter: default
+id: block_content.varbase_overlay_card_block.default
+targetEntityType: block_content
+bundle: varbase_overlay_card_block
+mode: default
+content:
+  body:
+    type: smart_trim
+    label: hidden
+    settings:
+      trim_length: 120
+      trim_type: chars
+      trim_suffix: ...
+      wrap_output: false
+      wrap_class: trimmed
+      more_link: false
+      more_class: more-link
+      more_text: More
+      more_aria_label: 'Read more about [node:title]'
+      summary_handler: full
+      trim_options:
+        text: true
+        trim_zero: false
+        replace_tokens: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    weight: 2
+    region: content
+  field_image:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: media_04_03
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    weight: 0
+    region: image
+  field_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true
