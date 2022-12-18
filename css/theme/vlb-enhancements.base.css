@@ -257,6 +257,7 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
 #drupal-off-canvas input[type=submit].button--primary,
 #layout-builder-modal button.button--primary,
 #layout-builder-modal input[type=submit].button--primary {
+  width: auto;
   text-align: center;
 }
 #drupal-off-canvas .fieldgroup.form-composite.form-wrapper,
@@ -388,9 +389,24 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
 #layout-builder-modal ol li {
   border-bottom: 0;
 }
+#drupal-off-canvas .inline-block-create-button,
+#drupal-off-canvas .inline-block-list__item,
+#layout-builder-modal .inline-block-create-button,
+#layout-builder-modal .inline-block-list__item {
+  width: auto;
+}
+#drupal-off-canvas .inline-block-list li,
+#layout-builder-modal .inline-block-list li {
+  width: 45%;
+  padding: 0 0.5rem 2.5rem 0.5rem;
+}
 #drupal-off-canvas .inline-block-list li:last-child,
 #layout-builder-modal .inline-block-list li:last-child {
   padding-bottom: 1rem;
+}
+#drupal-off-canvas .inline-block-list .inline-block-list__item,
+#layout-builder-modal .inline-block-list .inline-block-list__item {
+  width: 100%;
 }
 #drupal-off-canvas .form-select,
 #drupal-off-canvas .form-text,
