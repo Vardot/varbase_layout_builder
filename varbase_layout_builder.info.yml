@@ -16,7 +16,7 @@ install:
   - media_library_form_element
   - bootstrap_layouts
   - layout_builder_blocks
-  - layout_builder_iframe_modal
+  - layout_builder_modal
   - layout_builder_block_sanitizer
   - layout_builder_at
   - layout_builder_component_attributes

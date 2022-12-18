@@ -1,0 +1,15 @@
+/**
+ * @file
+ * Content from core/themes/stable/css/system/components/js.module.css
+ * This is modified so that the #layout-builder-modal is inside .js.
+ */
+.js #layout-builder-modal .js-hide,
+.media-library-widget-modal .js-hide,
+form.media-form .js-hide {
+  display: none;
+}
+.js #layout-builder-modal .js-show,
+.media-library-widget-modal .js-show,
+form.media-form .js-show {
+  display: block;
+}

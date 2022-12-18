@@ -1,0 +1,53 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/components/entity-meta.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal .entity-meta__header,
+.media-library-widget-modal .entity-meta__header,
+form.media-form .entity-meta__header {
+  padding: 0.5rem 1rem 1rem;
+  color: #232429;
+  border: 1px solid #dedfe4;
+  border-radius: 2px;
+  background-color: #fff;
+}
+@media screen and (min-width: 48em) {
+  #layout-builder-modal .entity-meta__header,
+  .media-library-widget-modal .entity-meta__header,
+  form.media-form .entity-meta__header {
+    padding: 1rem 1.5rem 1.5rem;
+  }
+}
+#layout-builder-modal .entity-meta__header .form-item,
+.media-library-widget-modal .entity-meta__header .form-item,
+form.media-form .entity-meta__header .form-item {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+#layout-builder-modal .entity-meta__title,
+.media-library-widget-modal .entity-meta__title,
+form.media-form .entity-meta__title {
+  margin: 0.25em 0;
+  text-shadow: 0 1px 0 #fff;
+  font-size: 1.231em;
+  font-weight: bold;
+}
+#layout-builder-modal .entity-meta__revision,
+.media-library-widget-modal .entity-meta__revision,
+form.media-form .entity-meta__revision {
+  margin-top: 1.5rem;
+}
+#layout-builder-modal .entity-meta__header .form-type--item .form-item__label,
+.media-library-widget-modal .entity-meta__header .form-type--item .form-item__label,
+form.media-form .entity-meta__header .form-type--item .form-item__label {
+  display: inline-block;
+  margin: 0;
+  font-size: 1rem;
+}
+#layout-builder-modal .entity-meta__header .form-type--item .form-item__label::after,
+.media-library-widget-modal .entity-meta__header .form-type--item .form-item__label::after,
+form.media-form .entity-meta__header .form-type--item .form-item__label::after {
+  content: ":";
+}

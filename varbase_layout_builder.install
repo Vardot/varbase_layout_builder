@@ -203,17 +203,3 @@ function varbase_layout_builder_update_10005() {
     }
   }
 }
-
-/**
- * Issue #3326408: Switch from Layout Builder Modal module to Layout Builder iFrame Modal module.
- */
-function varbase_layout_builder_update_10006() {
-
-  if (!\Drupal::moduleHandler()->moduleExists('layout_builder_modal')) {
-    \Drupal::service('module_installer')->uninstall(['layout_builder_modal']);
-  }
-
-  if (!\Drupal::moduleHandler()->moduleExists('layout_builder_iframe_modal')) {
-    \Drupal::service('module_installer')->install(['layout_builder_iframe_modal'], FALSE);
-  }
-}

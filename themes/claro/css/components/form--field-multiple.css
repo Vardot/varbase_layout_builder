@@ -1,0 +1,18 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/components/form--field-multiple.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal .field-multiple-table,
+.media-library-widget-modal .field-multiple-table,
+form.media-form .field-multiple-table {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+#layout-builder-modal .form-item--multiple .field-add-more-submit,
+.media-library-widget-modal .form-item--multiple .field-add-more-submit,
+form.media-form .form-item--multiple .field-add-more-submit {
+  margin-top: 0;
+  margin-bottom: 0;
+}

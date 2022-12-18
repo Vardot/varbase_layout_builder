@@ -1,16 +1,21 @@
-#drupal-off-canvas .field-vertical-alignment .fieldset-wrapper > div > div input + label {
+#drupal-off-canvas .field-vertical-alignment .fieldset-wrapper > div > div input + label,
+#layout-builder-modal .field-vertical-alignment .fieldset-wrapper > div > div input + label {
   text-indent: -999em;
   font-size: 0;
 }
-#drupal-off-canvas .field-vertical-alignment .fieldset-wrapper > div > div input + label .input-icon {
+#drupal-off-canvas .field-vertical-alignment .fieldset-wrapper > div > div input + label .input-icon,
+#layout-builder-modal .field-vertical-alignment .fieldset-wrapper > div > div input + label .input-icon {
   margin-bottom: 0;
 }
-#drupal-off-canvas .field-vertical-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=align-items-start] {
+#drupal-off-canvas .field-vertical-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=align-items-start],
+#layout-builder-modal .field-vertical-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=align-items-start] {
   background-image: url("../../../images/plugins/vertical-alignment/align-top.svg");
 }
-#drupal-off-canvas .field-vertical-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=align-items-center] {
+#drupal-off-canvas .field-vertical-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=align-items-center],
+#layout-builder-modal .field-vertical-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=align-items-center] {
   background-image: url("../../../images/plugins/vertical-alignment/align-middle.svg");
 }
-#drupal-off-canvas .field-vertical-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=align-items-end] {
+#drupal-off-canvas .field-vertical-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=align-items-end],
+#layout-builder-modal .field-vertical-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=align-items-end] {
   background-image: url("../../../images/plugins/vertical-alignment/align-bottom.svg");
 }

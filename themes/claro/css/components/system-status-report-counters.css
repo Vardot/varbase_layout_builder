@@ -1,0 +1,36 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/components/system-status-counter.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal .system-status-report-counters__item,
+.media-library-widget-modal .system-status-report-counters__item,
+form.media-form .system-status-report-counters__item {
+  width: 100%;
+  margin: 0.625rem 0;
+}
+@media screen and (min-width: 60em) {
+  #layout-builder-modal .system-status-report-counters__item,
+  .media-library-widget-modal .system-status-report-counters__item,
+  form.media-form .system-status-report-counters__item {
+    margin-bottom: 1.25rem;
+  }
+  #layout-builder-modal .system-status-report-counters,
+  .media-library-widget-modal .system-status-report-counters,
+  form.media-form .system-status-report-counters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  #layout-builder-modal .system-status-report-counters__item--half-width,
+  .media-library-widget-modal .system-status-report-counters__item--half-width,
+  form.media-form .system-status-report-counters__item--half-width {
+    width: 49%;
+  }
+  #layout-builder-modal .system-status-report-counters__item--third-width,
+  .media-library-widget-modal .system-status-report-counters__item--third-width,
+  form.media-form .system-status-report-counters__item--third-width {
+    width: 32%;
+  }
+}

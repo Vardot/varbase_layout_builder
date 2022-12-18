@@ -1,0 +1,28 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/components/skip-link.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal .skip-link,
+.media-library-widget-modal .skip-link,
+form.media-form .skip-link {
+  z-index: 50;
+  left: 50%;
+  padding: 1px 0.625rem 2px;
+  transform: translateX(-50%);
+  color: #fff;
+  border-radius: 0 0 0.625rem 0.625rem;
+  background: #444;
+  font-size: 0.94em;
+}
+#layout-builder-modal .skip-link:focus,
+.media-library-widget-modal .skip-link:focus,
+form.media-form .skip-link:focus {
+  text-decoration: none;
+}
+#layout-builder-modal .skip-link.visually-hidden.focusable:focus,
+.media-library-widget-modal .skip-link.visually-hidden.focusable:focus,
+form.media-form .skip-link.visually-hidden.focusable:focus {
+  position: absolute !important;
+}

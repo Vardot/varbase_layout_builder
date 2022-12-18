@@ -1,0 +1,23 @@
+/**
+ * Wrapped content from core/themes/claro/css/theme/colors.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal .color-success,
+.media-library-widget-modal .color-success,
+form.media-form .color-success {
+  color: #325e1c;
+  background-color: #f3faef;
+}
+#layout-builder-modal .color-warning,
+.media-library-widget-modal .color-warning,
+form.media-form .color-warning {
+  color: #734c00;
+  background-color: #fdf8ed;
+}
+#layout-builder-modal .color-error,
+.media-library-widget-modal .color-error,
+form.media-form .color-error {
+  color: #a51b00;
+  background-color: #fcf4f2;
+}

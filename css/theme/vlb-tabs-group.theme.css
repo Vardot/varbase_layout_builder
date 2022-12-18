@@ -1,0 +1,47 @@
+#layout-builder-modal .field-group-tabs-wrapper .horizontal-tabs {
+  border-color: #727579;
+}
+#layout-builder-modal .field-group-tabs-wrapper .horizontal-tabs .horizontal-tabs-list {
+  margin: 0;
+  list-style-type: none;
+  border-color: #727579;
+  background: #292c32;
+}
+#layout-builder-modal .field-group-tabs-wrapper .horizontal-tabs .horizontal-tabs-list .horizontal-tab-button {
+  border-color: #727579;
+  background-color: #292c32;
+}
+#layout-builder-modal .field-group-tabs-wrapper .horizontal-tabs .horizontal-tabs-list .horizontal-tab-button a {
+  transition: color 0.2s ease;
+  color: #aeb0b3;
+}
+#layout-builder-modal .field-group-tabs-wrapper .horizontal-tabs .horizontal-tabs-list .horizontal-tab-button a:hover {
+  color: #fff;
+  background-color: inherit;
+}
+#layout-builder-modal .field-group-tabs-wrapper .horizontal-tabs .horizontal-tabs-list .horizontal-tab-button.selected {
+  border-bottom: 2px solid #41a5ff;
+  background-color: #46484e;
+}
+#layout-builder-modal .field-group-tabs-wrapper .horizontal-tabs .horizontal-tabs-list .horizontal-tab-button.selected a {
+  color: #41a5ff;
+}
+#layout-builder-modal .field-group-tabs-wrapper .horizontal-tabs .horizontal-tabs-list .horizontal-tab-button.selected a:hover {
+  color: inherit;
+}
+#layout-builder-modal .field-group-tabs-wrapper .horizontal-tabs .horizontal-tabs-list .form-required::after {
+  display: inline-block;
+  margin-right: 0.15em;
+  margin-left: 0.15em;
+  content: "*";
+  color: #dc3545;
+  font-size: 0.875rem;
+}
+#layout-builder-modal .claro-details.horizontal-tabs-pane {
+  padding: 0 1em;
+  border: 0;
+  box-shadow: unset;
+}
+#layout-builder-modal .claro-details.horizontal-tabs-pane > summary {
+  display: none;
+}

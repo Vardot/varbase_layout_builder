@@ -1,0 +1,74 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/components/views-exposed-form.css.
+ * This has been modified to remove the .seven-details class,
+ * as it would not be present in this context.
+ */
+#layout-builder-modal .views-exposed-form.views-exposed-form,
+.media-library-widget-modal .views-exposed-form.views-exposed-form,
+form.media-form .views-exposed-form.views-exposed-form {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 0.5rem 1.5rem 1.5rem 1.5rem;
+  border: 1px solid #dedfe4;
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#layout-builder-modal .views-exposed-form--preview.views-exposed-form--preview,
+.media-library-widget-modal .views-exposed-form--preview.views-exposed-form--preview,
+form.media-form .views-exposed-form--preview.views-exposed-form--preview {
+  margin-top: 0;
+}
+#layout-builder-modal .views-exposed-form__item.views-exposed-form__item,
+.media-library-widget-modal .views-exposed-form__item.views-exposed-form__item,
+form.media-form .views-exposed-form__item.views-exposed-form__item {
+  max-width: 100%;
+  margin: 0.75rem 0.5rem 0 0;
+  /* LTR */
+}
+#layout-builder-modal [dir=rtl] .views-exposed-form__item.views-exposed-form__item,
+.media-library-widget-modal [dir=rtl] .views-exposed-form__item.views-exposed-form__item,
+form.media-form [dir=rtl] .views-exposed-form__item.views-exposed-form__item {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+#layout-builder-modal .views-exposed-form__item--preceding-actions.views-exposed-form__item--preceding-actions,
+.media-library-widget-modal .views-exposed-form__item--preceding-actions.views-exposed-form__item--preceding-actions,
+form.media-form .views-exposed-form__item--preceding-actions.views-exposed-form__item--preceding-actions {
+  margin-right: 1rem;
+  /* LTR */
+}
+#layout-builder-modal [dir=rtl] .views-exposed-form__item--preceding-actions.views-exposed-form__item--preceding-actions,
+.media-library-widget-modal [dir=rtl] .views-exposed-form__item--preceding-actions.views-exposed-form__item--preceding-actions,
+form.media-form [dir=rtl] .views-exposed-form__item--preceding-actions.views-exposed-form__item--preceding-actions {
+  margin-right: 0;
+  margin-left: 1rem;
+}
+#layout-builder-modal .views-exposed-form__item--actions.views-exposed-form__item--actions .button,
+.media-library-widget-modal .views-exposed-form__item--actions.views-exposed-form__item--actions .button,
+form.media-form .views-exposed-form__item--actions.views-exposed-form__item--actions .button {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#layout-builder-modal .views-exposed-form__item--actions.views-exposed-form__item--actions .button:last-child,
+.media-library-widget-modal .views-exposed-form__item--actions.views-exposed-form__item--actions .button:last-child,
+form.media-form .views-exposed-form__item--actions.views-exposed-form__item--actions .button:last-child {
+  margin-right: 0;
+}
+#layout-builder-modal [dir=rtl] .views-exposed-form__item--actions.views-exposed-form__item--actions:last-child,
+.media-library-widget-modal [dir=rtl] .views-exposed-form__item--actions.views-exposed-form__item--actions:last-child,
+form.media-form [dir=rtl] .views-exposed-form__item--actions.views-exposed-form__item--actions:last-child {
+  margin-left: 0;
+}
+#layout-builder-modal .views-exposed-form .form-item--no-label,
+#layout-builder-modal .views-exposed-form__item.views-exposed-form__item.views-exposed-form__item--actions,
+.media-library-widget-modal .views-exposed-form .form-item--no-label,
+.media-library-widget-modal .views-exposed-form__item.views-exposed-form__item.views-exposed-form__item--actions,
+form.media-form .views-exposed-form .form-item--no-label,
+form.media-form .views-exposed-form__item.views-exposed-form__item.views-exposed-form__item--actions {
+  /* Line height of a label + existing margin for the element + margin for label */
+  margin-top: 2.375rem;
+}

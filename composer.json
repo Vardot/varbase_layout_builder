@@ -44,7 +44,6 @@
     "drupal/bootstrap_layouts": "~5.0",
     "drupal/layout_builder_blocks": "~1.0",
     "drupal/layout_builder_modal": "~1.0",
-    "drupal/layout_builder_iframe_modal": "1.0.x-dev",
     "drupal/layout_builder_block_sanitizer": "~1.0",
     "drupal/layout_builder_at": "~2.0",
     "drupal/layout_builder_component_attributes": "~2.0",
@@ -72,6 +71,8 @@
         "https://www.drupal.org/files/issues/2020-10-11/3150012-12_0.patch"
       },
       "drupal/bootstrap_styles": {
+        "Issue #3192061: Have the option to use other admin themes like Claro or Gin":
+        "https://www.drupal.org/files/issues/2021-02-03/bootstrap_styles-1-0-3--3192061-9.patch",
         "Issue #3230802: Fix Border styling with Bootstrap library hard overrides over borders":
         "https://www.drupal.org/files/issues/2021-09-01/3230802-4.patch",
         "Issue #3213112: Add a specific class when having sections with background color, image, or video option":

@@ -1,0 +1,114 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/components/views_ui.admin.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal .views-admin pre,
+.media-library-widget-modal .views-admin pre,
+form.media-form .views-admin pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  white-space: pre-wrap;
+}
+#layout-builder-modal .views-display-deleted > details > summary,
+#layout-builder-modal .views-display-deleted .details-wrapper > .views-ui-display-tab-bucket > *,
+#layout-builder-modal .views-display-deleted .views-display-columns,
+.media-library-widget-modal .views-display-deleted > details > summary,
+.media-library-widget-modal .views-display-deleted .details-wrapper > .views-ui-display-tab-bucket > *,
+.media-library-widget-modal .views-display-deleted .views-display-columns,
+form.media-form .views-display-deleted > details > summary,
+form.media-form .views-display-deleted .details-wrapper > .views-ui-display-tab-bucket > *,
+form.media-form .views-display-deleted .views-display-columns {
+  opacity: 0.25;
+}
+#layout-builder-modal .views-display-disabled > details > summary,
+#layout-builder-modal .views-display-disabled .details-wrapper > .views-ui-display-tab-bucket > *,
+#layout-builder-modal .views-display-disabled .views-display-columns,
+.media-library-widget-modal .views-display-disabled > details > summary,
+.media-library-widget-modal .views-display-disabled .details-wrapper > .views-ui-display-tab-bucket > *,
+.media-library-widget-modal .views-display-disabled .views-display-columns,
+form.media-form .views-display-disabled > details > summary,
+form.media-form .views-display-disabled .details-wrapper > .views-ui-display-tab-bucket > *,
+form.media-form .views-display-disabled .views-display-columns {
+  opacity: 0.5;
+}
+#layout-builder-modal .views-display-tab .details-wrapper > .views-ui-display-tab-bucket .actions,
+.media-library-widget-modal .views-display-tab .details-wrapper > .views-ui-display-tab-bucket .actions,
+form.media-form .views-display-tab .details-wrapper > .views-ui-display-tab-bucket .actions {
+  opacity: 1;
+}
+#layout-builder-modal .views-display-column,
+.media-library-widget-modal .views-display-column,
+form.media-form .views-display-column {
+  box-sizing: border-box;
+}
+#layout-builder-modal .views-display-columns > *,
+.media-library-widget-modal .views-display-columns > *,
+form.media-form .views-display-columns > * {
+  float: none;
+  width: auto;
+  margin: 0 0 var(--space-l) 0;
+}
+@media screen and (min-width: 60rem) {
+  #layout-builder-modal .views-display-columns > *,
+  .media-library-widget-modal .views-display-columns > *,
+  form.media-form .views-display-columns > * {
+    float: left;
+    /* LTR */
+    width: 32%;
+    margin-bottom: 0;
+    margin-left: 2%;
+    /* LTR */
+  }
+  #layout-builder-modal [dir=rtl] .views-display-columns > *,
+  .media-library-widget-modal [dir=rtl] .views-display-columns > *,
+  form.media-form [dir=rtl] .views-display-columns > * {
+    float: right;
+    margin-right: 2%;
+    margin-left: 0;
+  }
+  #layout-builder-modal .views-display-columns > *:first-child,
+  .media-library-widget-modal .views-display-columns > *:first-child,
+  form.media-form .views-display-columns > *:first-child {
+    margin-left: 0;
+    /* LTR */
+  }
+  #layout-builder-modal [dir=rtl] .views-display-columns > *:first-child,
+  .media-library-widget-modal [dir=rtl] .views-display-columns > *:first-child,
+  form.media-form [dir=rtl] .views-display-columns > *:first-child {
+    margin-right: 0;
+  }
+}
+#layout-builder-modal .views-ui-dialog .scroll,
+.media-library-widget-modal .views-ui-dialog .scroll,
+form.media-form .views-ui-dialog .scroll {
+  overflow: auto;
+  padding: 1em;
+}
+#layout-builder-modal .views-ui-dialog .views-messages,
+.media-library-widget-modal .views-ui-dialog .views-messages,
+form.media-form .views-ui-dialog .views-messages {
+  overflow: auto;
+  max-height: 12.5rem;
+}
+#layout-builder-modal .form-item--options-value-all,
+.media-library-widget-modal .form-item--options-value-all,
+form.media-form .form-item--options-value-all {
+  display: none;
+}
+#layout-builder-modal .js-only,
+.media-library-widget-modal .js-only,
+form.media-form .js-only {
+  display: none;
+}
+#layout-builder-modal html.js .js-only,
+.media-library-widget-modal html.js .js-only,
+form.media-form html.js .js-only {
+  display: inherit;
+}
+#layout-builder-modal html.js span.js-only,
+.media-library-widget-modal html.js span.js-only,
+form.media-form html.js span.js-only {
+  display: inline;
+}

@@ -1,0 +1,17 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/components/details.css.
+ * This has been modified to remove the .seven-details class,
+ * as it would not be present in this context.
+ */
+#layout-builder-modal,
+.media-library-widget-modal,
+form.media-form {
+  @import "../../../../../../../core/themes/claro/css/components/details";
+  details {
+    border: 0;
+    .details-wrapper {
+      padding: 0;
+    }
+  }
+}

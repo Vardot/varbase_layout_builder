@@ -1,0 +1,14 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/components/content-header.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal .content-header,
+.media-library-widget-modal .content-header,
+form.media-form .content-header {
+  overflow: hidden;
+  margin-bottom: 0.75rem;
+  padding: 1.5rem 0 0;
+  background-color: #f3f4f9;
+}

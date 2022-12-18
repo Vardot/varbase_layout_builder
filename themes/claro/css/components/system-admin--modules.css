@@ -1,0 +1,219 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/components/system-admin--modules.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal .modules-table-filter,
+.media-library-widget-modal .modules-table-filter,
+form.media-form .modules-table-filter {
+  padding: 0.25rem 1.5rem;
+  border: 1px solid #d3d4d9;
+  border-radius: 2px 2px 0 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#layout-builder-modal .modules-table-filter .form-item__description,
+.media-library-widget-modal .modules-table-filter .form-item__description,
+form.media-form .modules-table-filter .form-item__description {
+  position: absolute !important;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  word-wrap: normal;
+}
+#layout-builder-modal .claro-details.claro-details--package-listing,
+#layout-builder-modal .claro-details.module-list__module-details,
+.media-library-widget-modal .claro-details.claro-details--package-listing,
+.media-library-widget-modal .claro-details.module-list__module-details,
+form.media-form .claro-details.claro-details--package-listing,
+form.media-form .claro-details.module-list__module-details {
+  margin-top: 2rem;
+  margin-bottom: 0;
+  border: none;
+  box-shadow: none;
+}
+#layout-builder-modal .claro-details__wrapper.claro-details__wrapper--package-listing,
+.media-library-widget-modal .claro-details__wrapper.claro-details__wrapper--package-listing,
+form.media-form .claro-details__wrapper.claro-details__wrapper--package-listing {
+  margin: 0;
+}
+#layout-builder-modal .claro-details__summary.claro-details__summary--package-listing,
+.media-library-widget-modal .claro-details__summary.claro-details__summary--package-listing,
+form.media-form .claro-details__summary.claro-details__summary--package-listing {
+  color: #232429;
+  border-radius: 0.25rem;
+  background: #f3f4f9;
+  font-size: 1.125rem;
+  /* 18px */
+  line-height: 1.424rem;
+  /* 23px */
+}
+#layout-builder-modal .module-list,
+.media-library-widget-modal .module-list,
+form.media-form .module-list {
+  margin-top: 0;
+}
+#layout-builder-modal .module-list__module,
+.media-library-widget-modal .module-list__module,
+form.media-form .module-list__module {
+  color: #232429;
+  border-bottom: 1px solid #d3d4d9;
+  background: none;
+}
+#layout-builder-modal .module-list__module:hover,
+.media-library-widget-modal .module-list__module:hover,
+form.media-form .module-list__module:hover {
+  background: none;
+}
+#layout-builder-modal .module-list__module td,
+.media-library-widget-modal .module-list__module td,
+form.media-form .module-list__module td {
+  height: auto;
+  padding: 1rem calc(1rem - 2px);
+  vertical-align: top;
+}
+@media screen and (min-width: 60em) {
+  #layout-builder-modal td.module-list__module,
+  .media-library-widget-modal td.module-list__module,
+  form.media-form td.module-list__module {
+    width: 25%;
+  }
+}
+#layout-builder-modal .module-list__module-name,
+.media-library-widget-modal .module-list__module-name,
+form.media-form .module-list__module-name {
+  font-weight: bold;
+}
+#layout-builder-modal .module-list__checkbox,
+.media-library-widget-modal .module-list__checkbox,
+form.media-form .module-list__checkbox {
+  padding-left: 0.6875rem;
+  /* LTR */
+  text-align: left;
+  /* LTR */
+}
+#layout-builder-modal [dir=rtl] .module-list__checkbox,
+.media-library-widget-modal [dir=rtl] .module-list__checkbox,
+form.media-form [dir=rtl] .module-list__checkbox {
+  padding-right: 0.6875rem;
+  padding-left: calc(1rem - 2px);
+  text-align: right;
+}
+#layout-builder-modal .module-list__checkbox .form-type--checkbox,
+.media-library-widget-modal .module-list__checkbox .form-type--checkbox,
+form.media-form .module-list__checkbox .form-type--checkbox {
+  margin: 0;
+  line-height: 1.295rem;
+}
+#layout-builder-modal .module-list__checkbox .form-checkbox:not([disabled]),
+.media-library-widget-modal .module-list__checkbox .form-checkbox:not([disabled]),
+form.media-form .module-list__checkbox .form-checkbox:not([disabled]) {
+  cursor: pointer;
+}
+#layout-builder-modal td.module-list__checkbox,
+.media-library-widget-modal td.module-list__checkbox,
+form.media-form td.module-list__checkbox {
+  width: 4%;
+}
+#layout-builder-modal td.module-list__description,
+.media-library-widget-modal td.module-list__description,
+form.media-form td.module-list__description {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+}
+#layout-builder-modal .claro-details.module-list__module-details,
+.media-library-widget-modal .claro-details.module-list__module-details,
+form.media-form .claro-details.module-list__module-details {
+  margin: 0;
+}
+#layout-builder-modal .claro-details__summary.module-list__module-summary,
+.media-library-widget-modal .claro-details__summary.module-list__module-summary,
+form.media-form .claro-details__summary.module-list__module-summary {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-weight: normal;
+  line-height: 1.295rem;
+}
+#layout-builder-modal .claro-details__summary.module-list__module-summary::before,
+.media-library-widget-modal .claro-details__summary.module-list__module-summary::before,
+form.media-form .claro-details__summary.module-list__module-summary::before {
+  top: 1.75rem;
+}
+#layout-builder-modal .module-details__description,
+.media-library-widget-modal .module-details__description,
+form.media-form .module-details__description {
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+}
+#layout-builder-modal .claro-details__wrapper.module-details__wrapper,
+.media-library-widget-modal .claro-details__wrapper.module-details__wrapper,
+form.media-form .claro-details__wrapper.module-details__wrapper {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#layout-builder-modal .module-details__requirements,
+.media-library-widget-modal .module-details__requirements,
+form.media-form .module-details__requirements {
+  margin-bottom: 1rem;
+}
+#layout-builder-modal .module-details__links,
+.media-library-widget-modal .module-details__links,
+form.media-form .module-details__links {
+  position: relative;
+  /* Negative margin matches the value of action link's top padding. */
+  margin-top: -0.375rem;
+  margin-bottom: 1rem;
+}
+#layout-builder-modal .module-details__links .action-link + .action-link,
+.media-library-widget-modal .module-details__links .action-link + .action-link,
+form.media-form .module-details__links .action-link + .action-link {
+  margin-left: 0;
+  /* LTR */
+}
+#layout-builder-modal [dir=rtl] .module-details__links .action-link + .action-link,
+.media-library-widget-modal [dir=rtl] .module-details__links .action-link + .action-link,
+form.media-form [dir=rtl] .module-details__links .action-link + .action-link {
+  margin-right: 0;
+}
+#layout-builder-modal .claro-details .tableresponsive-toggle,
+.media-library-widget-modal .claro-details .tableresponsive-toggle,
+form.media-form .claro-details .tableresponsive-toggle {
+  padding: 1rem 1rem 1rem 0;
+}
+#layout-builder-modal .claro-details .tableresponsive-toggle::before,
+.media-library-widget-modal .claro-details .tableresponsive-toggle::before,
+form.media-form .claro-details .tableresponsive-toggle::before {
+  /* This adjustment is necessary for better alignment with the adjacent button
+   text. */
+  position: relative;
+  top: -1px;
+  display: inline-block;
+  width: 2rem;
+  height: 1.25rem;
+  content: "";
+  cursor: pointer;
+  vertical-align: text-top;
+  background: url("data:image/svg+xml,%3csvg height='16' stroke='%23545560' stroke-width='2' width='16' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3 8h10M8 3v10'/%3e%3c/svg%3e") no-repeat center;
+  background-size: contain;
+}
+#layout-builder-modal .claro-details .tableresponsive-toggle:hover,
+.media-library-widget-modal .claro-details .tableresponsive-toggle:hover,
+form.media-form .claro-details .tableresponsive-toggle:hover {
+  color: #0036b1;
+  background-color: #f0f5fd;
+}
+#layout-builder-modal .claro-details .tableresponsive-toggle:hover::before,
+.media-library-widget-modal .claro-details .tableresponsive-toggle:hover::before,
+form.media-form .claro-details .tableresponsive-toggle:hover::before {
+  background-image: url("data:image/svg+xml,%3csvg height='16' stroke='%230036b1' stroke-width='2' width='16' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M3 8h10M8 3v10'/%3e%3c/svg%3e");
+}
+#layout-builder-modal .claro-details .tableresponsive-toggle-columns button,
+.media-library-widget-modal .claro-details .tableresponsive-toggle-columns button,
+form.media-form .claro-details .tableresponsive-toggle-columns button {
+  margin-top: 0.5rem;
+  text-decoration: none;
+  color: #55565b;
+  font-weight: bold;
+}

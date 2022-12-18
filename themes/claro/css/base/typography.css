@@ -1,0 +1,46 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/base/typography.pcss.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal .leader,
+.media-library-widget-modal .leader,
+form.media-form .leader {
+  margin-top: 1.538rem;
+}
+#layout-builder-modal .leader-double,
+.media-library-widget-modal .leader-double,
+form.media-form .leader-double {
+  margin-top: 3.076rem;
+}
+#layout-builder-modal .leader-triple,
+.media-library-widget-modal .leader-triple,
+form.media-form .leader-triple {
+  margin-top: 4.614rem;
+}
+#layout-builder-modal .leader-quadruple,
+.media-library-widget-modal .leader-quadruple,
+form.media-form .leader-quadruple {
+  margin-top: 6.152rem;
+}
+#layout-builder-modal .trailer,
+.media-library-widget-modal .trailer,
+form.media-form .trailer {
+  margin-bottom: 1.538rem;
+}
+#layout-builder-modal .trailer-double,
+.media-library-widget-modal .trailer-double,
+form.media-form .trailer-double {
+  margin-bottom: 3.076rem;
+}
+#layout-builder-modal .trailer-triple,
+.media-library-widget-modal .trailer-triple,
+form.media-form .trailer-triple {
+  margin-bottom: 4.614rem;
+}
+#layout-builder-modal .trailer-quadruple,
+.media-library-widget-modal .trailer-quadruple,
+form.media-form .trailer-quadruple {
+  margin-bottom: 6.152rem;
+}

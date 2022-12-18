@@ -1,0 +1,53 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/components/breadcrumb.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal .breadcrumb,
+.media-library-widget-modal .breadcrumb,
+form.media-form .breadcrumb {
+  padding: 0;
+  color: #232429;
+  font-size: 0.79rem;
+}
+#layout-builder-modal .breadcrumb__list,
+#layout-builder-modal [dir=rtl] .breadcrumb__list,
+.media-library-widget-modal .breadcrumb__list,
+.media-library-widget-modal [dir=rtl] .breadcrumb__list,
+form.media-form .breadcrumb__list,
+form.media-form [dir=rtl] .breadcrumb__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+#layout-builder-modal .breadcrumb__item,
+#layout-builder-modal .breadcrumb__link,
+.media-library-widget-modal .breadcrumb__item,
+.media-library-widget-modal .breadcrumb__link,
+form.media-form .breadcrumb__item,
+form.media-form .breadcrumb__link {
+  display: inline;
+  text-decoration: none;
+  color: #232429;
+  font-weight: bold;
+}
+#layout-builder-modal .breadcrumb__item + .breadcrumb__item::before,
+.media-library-widget-modal .breadcrumb__item + .breadcrumb__item::before,
+form.media-form .breadcrumb__item + .breadcrumb__item::before {
+  padding: 0 0.75rem;
+  content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' height='8' width='5'%3e%3cpath fill='currentColor' d='M1.207.647L.5 1.354 3.146 4 .5 6.647l.707.707L4.561 4z'/%3e%3c/svg%3e");
+}
+#layout-builder-modal [dir=rtl] .breadcrumb__item + .breadcrumb__item::before,
+.media-library-widget-modal [dir=rtl] .breadcrumb__item + .breadcrumb__item::before,
+form.media-form [dir=rtl] .breadcrumb__item + .breadcrumb__item::before {
+  content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='5' height='8'%3e%3cpath fill='currentColor' d='M3.793.647l.707.707L1.854 4 4.5 6.647l-.707.707L.439 4z'/%3e%3c/svg%3e");
+}
+#layout-builder-modal .breadcrumb__link:hover,
+#layout-builder-modal .breadcrumb__link:focus,
+.media-library-widget-modal .breadcrumb__link:hover,
+.media-library-widget-modal .breadcrumb__link:focus,
+form.media-form .breadcrumb__link:hover,
+form.media-form .breadcrumb__link:focus {
+  text-decoration: none;
+}

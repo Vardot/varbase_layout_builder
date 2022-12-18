@@ -1,0 +1,95 @@
+/**
+ * Wrapped content from core/themes/claro/css/theme/filter.theme.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal .text-full > .form-item,
+.media-library-widget-modal .text-full > .form-item,
+form.media-form .text-full > .form-item {
+  margin-bottom: 0;
+}
+#layout-builder-modal .form-element--editor-format,
+.media-library-widget-modal .form-element--editor-format,
+form.media-form .form-element--editor-format {
+  vertical-align: top;
+}
+@media screen and (max-width: 37.5rem) {
+  #layout-builder-modal .form-element.form-element--editor-format,
+  .media-library-widget-modal .form-element.form-element--editor-format,
+  form.media-form .form-element.form-element--editor-format {
+    width: auto;
+  }
+}
+#layout-builder-modal .filter-wrapper,
+.media-library-widget-modal .filter-wrapper,
+form.media-form .filter-wrapper {
+  margin-top: 0.5em;
+  /* (8 / 16) */
+  margin-bottom: 0.5em;
+  /* (8 / 16) */
+}
+#layout-builder-modal .filter-wrapper .form-item,
+.media-library-widget-modal .filter-wrapper .form-item,
+form.media-form .filter-wrapper .form-item {
+  margin: 0;
+}
+#layout-builder-modal .filter-help,
+.media-library-widget-modal .filter-help,
+form.media-form .filter-help {
+  float: right;
+  /* LTR */
+  padding-top: 0.25em;
+  /* (3 / 12), because font size is 12px */
+  padding-bottom: 0.25em;
+  /* (3 / 12) */
+  font-size: 0.75em;
+  /* (12 / 16), inherited font size is 16px */
+}
+#layout-builder-modal [dir=rtl] .filter-help,
+.media-library-widget-modal [dir=rtl] .filter-help,
+form.media-form [dir=rtl] .filter-help {
+  float: left;
+}
+#layout-builder-modal .compose-tips__item,
+.media-library-widget-modal .compose-tips__item,
+form.media-form .compose-tips__item {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+#layout-builder-modal .filter-guidelines__item,
+.media-library-widget-modal .filter-guidelines__item,
+form.media-form .filter-guidelines__item {
+  margin-top: 0.5em;
+  /* (6 / 12) */
+  color: #55565b;
+  font-size: 0.75em;
+  /* (12 / 16) */
+}
+#layout-builder-modal .filter-guidelines p,
+.media-library-widget-modal .filter-guidelines p,
+form.media-form .filter-guidelines p {
+  margin-top: 0.3333em;
+  /* (4 / 12) */
+  margin-bottom: 0;
+}
+#layout-builder-modal .filter-tips--long,
+.media-library-widget-modal .filter-tips--long,
+form.media-form .filter-tips--long {
+  margin-bottom: 1.5em;
+}
+#layout-builder-modal .filter-tips__item,
+#layout-builder-modal .filter-tips--long p,
+.media-library-widget-modal .filter-tips__item,
+.media-library-widget-modal .filter-tips--long p,
+form.media-form .filter-tips__item,
+form.media-form .filter-tips--long p {
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+}
+#layout-builder-modal .filter-tips__item--short,
+.media-library-widget-modal .filter-tips__item--short,
+form.media-form .filter-tips__item--short {
+  margin-top: 0.3333em;
+  /* (4 / 12) */
+  margin-bottom: 0;
+}

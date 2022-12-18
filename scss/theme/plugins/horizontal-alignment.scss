@@ -1,6 +1,7 @@
 $horizontal_alignment_icon_path: '../../../images/plugins/horizontal-alignment/';
 
-#drupal-off-canvas {
+#drupal-off-canvas,
+#layout-builder-modal {
 
   // Horizontal Alignment.
   .field-horizontal-alignment .fieldset-wrapper > div > div {
@@ -31,8 +32,9 @@ $horizontal_alignment_icon_path: '../../../images/plugins/horizontal-alignment/'
 
 }
 
-[dir=rtl] body {
-  #drupal-off-canvas {
+[dir=rtl] body  {
+  #drupal-off-canvas,
+  #layout-builder-modal {
     .field-horizontal-alignment .fieldset-wrapper > div > div {
       input {
         + label {

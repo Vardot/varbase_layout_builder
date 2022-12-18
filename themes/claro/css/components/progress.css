@@ -1,0 +1,91 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/components/progress.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal .progress::after,
+.media-library-widget-modal .progress::after,
+form.media-form .progress::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+#layout-builder-modal .progress--small .progress__track,
+.media-library-widget-modal .progress--small .progress__track,
+form.media-form .progress--small .progress__track {
+  height: calc(0.5rem - 2px);
+}
+#layout-builder-modal .progress--small .progress__bar,
+.media-library-widget-modal .progress--small .progress__bar,
+form.media-form .progress--small .progress__bar {
+  width: calc(0.5rem - 2px);
+  min-width: calc(0.5rem - 2px);
+  height: calc(0.5rem - 2px);
+}
+#layout-builder-modal .progress--small .progress__label,
+.media-library-widget-modal .progress--small .progress__label,
+form.media-form .progress--small .progress__label {
+  font-size: 0.889rem;
+}
+#layout-builder-modal .progress__track,
+.media-library-widget-modal .progress__track,
+form.media-form .progress__track {
+  height: calc(1rem - 2px);
+  margin-top: 0;
+  border: 1px #919297 solid;
+  border-radius: 1rem;
+  background-color: #d3d4d9;
+}
+#layout-builder-modal .progress__bar,
+.media-library-widget-modal .progress__bar,
+form.media-form .progress__bar {
+  width: calc(1rem - 2px);
+  min-width: calc(1rem - 2px);
+  height: calc(1rem - 2px);
+  margin-top: -1px;
+  margin-left: -1px;
+  /* LTR */
+  transition: width 0.5s ease-out;
+  border: 1px #003cc5 solid;
+  border-radius: 1rem;
+  background-color: #003cc5;
+}
+#layout-builder-modal [dir=rtl] .progress__bar,
+.media-library-widget-modal [dir=rtl] .progress__bar,
+form.media-form [dir=rtl] .progress__bar {
+  margin-right: -1px;
+  margin-left: 0;
+}
+@media screen and (-ms-high-contrast: active) {
+  #layout-builder-modal .progress__bar,
+  .media-library-widget-modal .progress__bar,
+  form.media-form .progress__bar {
+    background-color: windowText;
+  }
+}
+#layout-builder-modal .progress__label,
+.media-library-widget-modal .progress__label,
+form.media-form .progress__label {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+#layout-builder-modal .progress__description,
+#layout-builder-modal .progress__percentage,
+.media-library-widget-modal .progress__description,
+.media-library-widget-modal .progress__percentage,
+form.media-form .progress__description,
+form.media-form .progress__percentage {
+  overflow: hidden;
+  margin-top: 0.5rem;
+  color: #55565b;
+  font-size: 0.79rem;
+}
+@media screen and (prefers-reduced-motion: reduce) {
+  #layout-builder-modal .progress__bar,
+  .media-library-widget-modal .progress__bar,
+  form.media-form .progress__bar {
+    transition: none;
+  }
+}

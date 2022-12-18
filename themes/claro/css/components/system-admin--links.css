@@ -1,0 +1,26 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/components/system-admin--links.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal .compact-link,
+.media-library-widget-modal .compact-link,
+form.media-form .compact-link {
+  margin: 0 0 0.5em 0;
+}
+#layout-builder-modal small .admin-link:before,
+.media-library-widget-modal small .admin-link:before,
+form.media-form small .admin-link:before {
+  content: " [";
+}
+#layout-builder-modal small .admin-link:after,
+.media-library-widget-modal small .admin-link:after,
+form.media-form small .admin-link:after {
+  content: "]";
+}
+#layout-builder-modal .system-cron-settings__link,
+.media-library-widget-modal .system-cron-settings__link,
+form.media-form .system-cron-settings__link {
+  word-wrap: break-word;
+}

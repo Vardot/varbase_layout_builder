@@ -1,0 +1,28 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/components/container-inline.module.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal .container-inline div,
+#layout-builder-modal .container-inline label,
+.media-library-widget-modal .container-inline div,
+.media-library-widget-modal .container-inline label,
+form.media-form .container-inline div,
+form.media-form .container-inline label {
+  display: inline-block;
+}
+#layout-builder-modal .form-items-inline,
+.media-library-widget-modal .form-items-inline,
+form.media-form .form-items-inline {
+  margin-top: -0.125em;
+  /* 2px */
+  margin-bottom: -0.125em;
+}
+#layout-builder-modal .form-items-inline > .form-item,
+.media-library-widget-modal .form-items-inline > .form-item,
+form.media-form .form-items-inline > .form-item {
+  display: inline-block;
+  margin-top: 0.125em;
+  margin-bottom: 0.125em;
+}

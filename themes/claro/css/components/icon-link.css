@@ -1,0 +1,40 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/components/icon-link.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal .icon-link,
+.media-library-widget-modal .icon-link,
+form.media-form .icon-link {
+  display: flex;
+  padding: 0;
+  border: 1px solid #d3d4d9;
+  border-radius: 50%;
+  background-color: #fff;
+}
+#layout-builder-modal .icon-link:hover,
+.media-library-widget-modal .icon-link:hover,
+form.media-form .icon-link:hover {
+  border-color: rgba(212, 212, 218, 0.8);
+  background-color: #f0f5fd;
+}
+#layout-builder-modal .icon-link:focus,
+.media-library-widget-modal .icon-link:focus,
+form.media-form .icon-link:focus {
+  box-shadow: 0 0 0 1.5px #fff, 0 0 0 3.5px #26a769;
+}
+#layout-builder-modal .icon-link:active,
+#layout-builder-modal .open > .icon-link,
+.media-library-widget-modal .icon-link:active,
+.media-library-widget-modal .open > .icon-link,
+form.media-form .icon-link:active,
+form.media-form .open > .icon-link {
+  border-color: #003cc5;
+  background-color: #003cc5;
+}
+#layout-builder-modal .icon-link--small:focus,
+.media-library-widget-modal .icon-link--small:focus,
+form.media-form .icon-link--small:focus {
+  box-shadow: 0 0 0 1px #fff, 0 0 0 3px #26a769;
+}
