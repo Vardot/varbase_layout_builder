@@ -409,9 +409,24 @@ body {
     border-bottom: 0;
   }
 
+  .inline-block-create-button,
+  .inline-block-list__item {
+    width: auto;
+  }
+
   .inline-block-list {
-    li:last-child {
-      padding-bottom: 1rem;
+    
+    li {
+      padding: 0 0.5rem 2.5rem 0.5rem;
+      width: 45%;
+
+      &:last-child { 
+        padding-bottom: 1rem;
+      }
+    }
+
+    .inline-block-list__item {
+      width: 100%;
     }
   }
 

@@ -286,8 +286,19 @@ body .layout-builder__message--overrides .messages {
 #drupal-off-canvas ol li {
   border-bottom: 0;
 }
+#drupal-off-canvas .inline-block-create-button,
+#drupal-off-canvas .inline-block-list__item {
+  width: auto;
+}
+#drupal-off-canvas .inline-block-list li {
+  width: 45%;
+  padding: 0 0.5rem 2.5rem 0.5rem;
+}
 #drupal-off-canvas .inline-block-list li:last-child {
   padding-bottom: 1rem;
+}
+#drupal-off-canvas .inline-block-list .inline-block-list__item {
+  width: 100%;
 }
 #drupal-off-canvas .form-select,
 #drupal-off-canvas .form-text,
