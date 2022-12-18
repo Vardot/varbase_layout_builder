@@ -508,10 +508,27 @@ body {
   }
 
   .inline-block-list {
-    
+
     li {
       padding: 0 0.5rem 2.5rem 0.5rem;
-      width: 45%;
+
+      width: 100%;
+
+      @media (min-width: 576px) {
+        width: 41%;
+      }
+
+      @media (min-width: 768px) {
+        width: 42%;
+      }
+
+      @media (min-width: 992px) {
+        width: 43%;
+      }
+
+      @media (min-width: 1200px) {
+        width: 45%;
+      }
 
       &:last-child { 
         padding-bottom: 1rem;

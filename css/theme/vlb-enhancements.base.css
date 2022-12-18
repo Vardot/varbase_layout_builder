@@ -397,8 +397,32 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
 }
 #drupal-off-canvas .inline-block-list li,
 #layout-builder-modal .inline-block-list li {
-  width: 45%;
+  width: 100%;
   padding: 0 0.5rem 2.5rem 0.5rem;
+}
+@media (min-width: 576px) {
+  #drupal-off-canvas .inline-block-list li,
+  #layout-builder-modal .inline-block-list li {
+    width: 41%;
+  }
+}
+@media (min-width: 768px) {
+  #drupal-off-canvas .inline-block-list li,
+  #layout-builder-modal .inline-block-list li {
+    width: 42%;
+  }
+}
+@media (min-width: 992px) {
+  #drupal-off-canvas .inline-block-list li,
+  #layout-builder-modal .inline-block-list li {
+    width: 43%;
+  }
+}
+@media (min-width: 1200px) {
+  #drupal-off-canvas .inline-block-list li,
+  #layout-builder-modal .inline-block-list li {
+    width: 45%;
+  }
 }
 #drupal-off-canvas .inline-block-list li:last-child,
 #layout-builder-modal .inline-block-list li:last-child {
