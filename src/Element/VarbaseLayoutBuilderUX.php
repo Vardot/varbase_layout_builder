@@ -32,7 +32,29 @@ class VarbaseLayoutBuilderUX extends LayoutBuilder {
 
     foreach ($layout_definition->getRegions() as $region => $info) {
       if ($region == 'section_header') {
-        $build['layout-builder__section'][$region]['layout_builder_add_block']['link']['#title'] = $this->t('Add heading <span class="visually-hidden">in @section, @region region</span>', ['@section' => $section_label, '@region' => $region_labels[$region]]);
+        $build['layout-builder__section'][$region]['layout_builder_add_block']['link'] = [
+          '#type' => 'link',
+          '#title' => $this->t('Add heading <span class="visually-hidden">in @section, @region region</span>', ['@section' => $section_label, '@region' => $region_labels[$region]]),
+          '#url' => Url::fromRoute('layout_builder.choose_block',
+            [
+              'section_storage_type' => $storage_type,
+              'section_storage' => $storage_id,
+              'delta' => $delta,
+              'region' => $region,
+            ],
+            [
+              'attributes' => [
+                'class' => [
+                  'use-ajax',
+                  'layout-builder__link',
+                  'layout-builder__link--add',
+                ],
+                'data-dialog-type' => 'dialog',
+                'data-dialog-renderer' => 'off_canvas',
+              ],
+            ]
+          ),
+        ];
       }
     }
 
