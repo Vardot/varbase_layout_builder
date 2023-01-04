@@ -27,27 +27,54 @@
     'layout-builder__layout'
   ] %}
 
+  {% set header_classes = [
+    'vlb-section-header',
+    'row',
+    gutters_between_off and has_container_width == 0 ? 'no-gutters gx-0' : '',
+    horizontal_alignment_classes ? horizontal_alignment_classes : '',
+    vertical_alignment_classes ? vertical_alignment_classes : '',
+  ] %}
+
+  {% set header_attributes = create_attribute() %}
+  {% set header_attributes = header_attributes.addClass(header_classes) %}
+
+  {% if has_container_width %}
+
+    {% set container_width_attributes = create_attribute() %}
+    {% set container_width_attributes = container_width_attributes.addClass(content['#settings']['container_width_classes']) %}
+
+    {% set container_width_row_attributes = create_attribute() %}
+    {% set container_width_row_attributes = container_width_row_attributes.addClass('row') %}
+
+    {% if vertical_alignment_classes %}
+      {% set container_width_row_attributes = container_width_row_attributes.addClass(vertical_alignment_classes) %}
+    {% endif %}
+
+  {% endif %}
+
   {% if content['section_header']|render|striptags %}
-  <div class="vlb-section-header row">
+  <div {{ header_attributes }}>
+
+    {% if has_container_width %}
+      <div {{ container_width_attributes }}>
+        <div {{ container_width_row_attributes }}>
+    {% endif %}
+
     <div {{ region_attributes['section_header'] }}>
       {{ content['section_header'] }}
     </div>
+
+    {% if has_container_width %}
+        </div>
+      </div>
+    {% endif %}
+
   </div>
   {% endif %}
+
   <div {{ attributes.addClass(classes) }}>
 
     {% if has_container_width %}
-
-      {% set container_width_attributes = create_attribute() %}
-      {% set container_width_attributes = container_width_attributes.addClass(content['#settings']['container_width_classes']) %}
-
-      {% set container_width_row_attributes = create_attribute() %}
-      {% set container_width_row_attributes = container_width_row_attributes.addClass('row') %}
-
-      {% if vertical_alignment_classes %}
-        {% set container_width_row_attributes = container_width_row_attributes.addClass(vertical_alignment_classes) %}
-      {% endif %}
-
       <div {{ container_width_attributes }}>
         <div {{ container_width_row_attributes }}>
     {% endif %}
