@@ -4,6 +4,7 @@ namespace Drupal\varbase_layout_builder\Element;
 
 use Drupal\layout_builder\Element\LayoutBuilder;
 use Drupal\layout_builder\SectionStorageInterface;
+use Drupal\Core\Url;
 
 /**
  * Alters the Layout Builder UI element.
