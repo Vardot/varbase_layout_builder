@@ -34,7 +34,7 @@
     vertical_alignment_classes ? vertical_alignment_classes : '',
   ] %}
 
-  {% set header_attributes = create_attribute() %}
+  {% set header_attributes = attributes %}
   {% set header_attributes = header_attributes.addClass(header_classes) %}
 
   {% if has_container_width %}
