@@ -48,7 +48,7 @@
     "drupal/layout_builder_at": "~2.0",
     "drupal/layout_builder_component_attributes": "~2.0",
     "drupal/lb_ux": "1.x-dev",
-    "drupal/layout_library": "1.0-beta3",
+    "drupal/layout_library": "1.0-beta4",
     "drupal/section_library": "~1.0",
     "drupal/bootstrap_styles": "1.0.3",
     "drupal/bootstrap_layout_builder": "2.0.1",
@@ -80,9 +80,9 @@
       },
       "drupal/layout_library": {
         "Issue #3075067: Duplicate entry for key 'block_content_field__uuid__value'":
-        "https://git.drupalcode.org/project/layout_library/-/merge_requests/1.diff",
+        "https://www.drupal.org/files/issues/2023-01-05/3075067-19.patch",
         "Issue #3273160: Support inline blocks in layout":
-        "https://git.drupalcode.org/project/layout_library/-/merge_requests/7.diff"
+        "https://www.drupal.org/files/issues/2022-12-14/3273160-9.patch"
       }
     }
   }
