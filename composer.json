@@ -76,7 +76,7 @@
         "Issue #3230802: Fix Border styling with Bootstrap library hard overrides over borders":
         "https://www.drupal.org/files/issues/2021-09-01/3230802-4.patch",
         "Issue #3213112: Add a specific class when having sections with background color, image, or video option":
-        "https://www.drupal.org/files/issues/2023-01-17/3213112-22.patch"
+        "https://www.drupal.org/files/issues/2023-01-19/3213112-23.patch"
       },
       "drupal/layout_library": {
         "Issue #3075067: Duplicate entry for key 'block_content_field__uuid__value'":
