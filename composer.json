@@ -70,7 +70,9 @@
         "Issue #3213112: Add a specific class when having sections with background color, image, or video option":
         "https://www.drupal.org/files/issues/2023-01-19/3213112-23.patch",
         "Issue #3282082: Support Bootstrap 5 on bootstrap_styles module":
-        "https://www.drupal.org/files/issues/2022-06-14/Fix-support-bootstrap-5-on-bootstrap-styles-3282082-%233.patch"
+        "https://www.drupal.org/files/issues/2022-06-14/Fix-support-bootstrap-5-on-bootstrap-styles-3282082-%233.patch",
+        "Issue #3315218: Fix not loading bootstrap_styles/aos.local or bootstrap_styles/aos.remote library":
+        "https://www.drupal.org/files/issues/2023-01-25/3315218-17--1-0-x.patch"
       },
       "drupal/layout_library": {
         "Issue #3075067: Duplicate entry for key 'block_content_field__uuid__value'":
