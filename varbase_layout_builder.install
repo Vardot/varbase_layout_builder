@@ -212,7 +212,7 @@ function varbase_layout_builder_update_10005() {
 function varbase_layout_builder_update_10006() {
   if (\Drupal::service('module_handler')->moduleExists('bootstrap_styles')) {
     $bootstrap_styles_settings = \Drupal::service('config.factory')->getEditable('bootstrap_styles.settings');
-    $bootstrap_styles_settings->set('box_shadow', 'shadow-sm|Small\r\nshadow|Regular\r\nshadow-lg|Large')->save(TRUE);
+    $bootstrap_styles_settings->set('box_shadow', "shadow-sm|Small\r\nshadow|Regular\r\nshadow-lg|Large")->save(TRUE);
   }
 }
 
