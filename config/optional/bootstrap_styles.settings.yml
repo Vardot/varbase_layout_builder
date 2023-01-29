@@ -38,6 +38,7 @@ rounded_corner_top_left: "bs-border-radius-top-left-1|Rounded 1\r\nbs-border-rad
 rounded_corner_top_right: "bs-border-radius-top-right-1|Rounded 1\r\nbs-border-radius-top-right-2|Rounded 2\r\nbs-border-radius-top-right-3|Rounded 3"
 rounded_corner_bottom_left: "bs-border-radius-bottom-left-1|Rounded 1\r\nbs-border-radius-bottom-left-2|Rounded 2\r\nbs-border-radius-bottom-left-3|Rounded 3"
 rounded_corner_bottom_right: "bs-border-radius-bottom-right-1|Rounded 1\r\nbs-border-radius-bottom-right-2|Rounded 2\r\nbs-border-radius-bottom-right-3|Rounded 3"
+box_shadow: "shadow-sm|Small\r\nshadow|Regular\r\nshadow-lg|Large"
 scroll_effects: "fade-up|Fade Up\r\nfade-down|Fade Down\r\nfade-left|Fade Left\r\nfade-right|Fade Right\r\nfade-up-right|Fade Up Right\r\nfade-up-left|Fade Up Left\r\nfade-down-right|Fade Down Right\r\nfade-down-left|Fade Down Left\r\nflip-left|Flip Left\r\nflip-right|Flip Right\r\nflip-up|Flip Up\r\nflip-down|Flip Down\r\nzoom-in|Zoom In\r\nzoom-in-up|Zoom In Up\r\nzoom-in-down|Zoom In Down\r\nzoom-in-left|Zoom In Left\r\nzoom-in-right|Zoom In Right\r\nzoom-out|Zoom Out\r\nzoom-out-up|Zoom Out Up\r\nzoom-out-down|Zoom Out Down\r\nzoom-out-right|Zoom Out Right\r\nzoom-out-left|Zoom Out Left"
 attribute_type: data
 data_key: aos

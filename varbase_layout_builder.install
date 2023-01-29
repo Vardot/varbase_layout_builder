@@ -205,9 +205,21 @@ function varbase_layout_builder_update_10005() {
 }
 
 /**
- * Issue #3326408: Switch from Layout Builder Modal module to Layout Builder iFrame Modal module.
+ * Issue #3337351: Fix empty/missing box shadow configs.
+ *
+ * For the Bootstrap Styles.
  */
 function varbase_layout_builder_update_10006() {
+  if (\Drupal::service('module_handler')->moduleExists('bootstrap_styles')) {
+    $bootstrap_styles_settings = \Drupal::service('config.factory')->getEditable('bootstrap_styles.settings');
+    $bootstrap_styles_settings->set('box_shadow', 'shadow-sm|Small\r\nshadow|Regular\r\nshadow-lg|Large')->save(TRUE);
+  }
+}
+
+/**
+ * Issue #3326408: Switch from Layout Builder Modal module to Layout Builder iFrame Modal module.
+ */
+function varbase_layout_builder_update_10101() {
 
   if (!\Drupal::moduleHandler()->moduleExists('layout_builder_modal')) {
     \Drupal::service('module_installer')->uninstall(['layout_builder_modal']);
