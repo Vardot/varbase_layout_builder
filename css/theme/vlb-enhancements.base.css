@@ -324,6 +324,9 @@ body .layout-builder__message--overrides .messages {
   margin: 0.3125rem 0;
   padding: 0;
 }
+#drupal-off-canvas #bs_nav-tabs {
+  position: relative !important;
+}
 #drupal-off-canvas .layout-selection li {
   padding-bottom: 0;
 }
