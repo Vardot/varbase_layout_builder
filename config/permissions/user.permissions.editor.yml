@@ -1,4 +1,3 @@
 id: editor
 permissions:
-  - 'configure all landing_page_lb node layout overrides'
   - 'create and edit custom blocks'

@@ -1,5 +1,4 @@
 id: site_admin
 permissions:
-  - 'configure all landing_page_lb node layout overrides'
   - 'create and edit custom blocks'
   - 'view restricted block content'

@@ -3,3 +3,4 @@ permissions:
   - 'create landing_page_lb content'
   - 'edit any landing_page_lb content'
   - 'view landing_page_lb revisions'
+  - 'configure all landing_page_lb node layout overrides'
