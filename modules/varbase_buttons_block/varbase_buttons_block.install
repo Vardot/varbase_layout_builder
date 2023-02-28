@@ -1,3 +1,5 @@
+<?php
+
 /**
  * @file
  * Install, update and uninstall functions for Varbase Buttons Block module.
