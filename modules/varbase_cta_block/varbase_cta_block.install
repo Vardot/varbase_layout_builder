@@ -1,0 +1,17 @@
+/**
+ * @file
+ * Install, update and uninstall functions for Varbase CTA block module.
+ */
+
+use Vardot\Entity\EntityDefinitionUpdateManager;
+use Vardot\Installer\ModuleInstallerFactory;
+
+/**
+ * Implements hook_install().
+ */
+function varbase_cta_block_install() {
+
+  // Add permissions.
+  ModuleInstallerFactory::addPermissions('varbase_cta_block');
+
+}

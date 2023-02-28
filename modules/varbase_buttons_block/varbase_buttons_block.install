@@ -1,0 +1,17 @@
+/**
+ * @file
+ * Install, update and uninstall functions for Varbase Buttons Block module.
+ */
+
+use Vardot\Entity\EntityDefinitionUpdateManager;
+use Vardot\Installer\ModuleInstallerFactory;
+
+/**
+ * Implements hook_install().
+ */
+function varbase_buttons_block_install() {
+
+  // Add permissions.
+  ModuleInstallerFactory::addPermissions('varbase_buttons_block');
+
+}

@@ -1,0 +1,5 @@
+id: seo_admin
+permissions:
+  - 'create varbase_cta_block block content'
+  - 'delete any varbase_cta_block block content'
+  - 'update any varbase_cta_block block content'

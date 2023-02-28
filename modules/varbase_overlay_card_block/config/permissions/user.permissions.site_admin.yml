@@ -1,0 +1,5 @@
+id: site_admin
+permissions:
+  - 'create varbase_overlay_card_block block content'
+  - 'delete any varbase_overlay_card_block block content'
+  - 'update any varbase_overlay_card_block block content'

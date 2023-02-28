@@ -1,0 +1,5 @@
+id: site_admin
+permissions:
+  - 'create varbase_gallery_block block content'
+  - 'delete any varbase_gallery_block block content'
+  - 'update any varbase_gallery_block block content'

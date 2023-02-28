@@ -4,15 +4,4 @@ type: module
 package: "Varbase Blocks"
 core_version_requirement: ^9 || ^10
 dependencies:
-  - drupal:block
-  - drupal:block_content
-  - drupal:text
-  - drupal:field
-  - drupal:user
-  - drupal:options
-  - drupal:link
-  - drupal:filter
-  - ctools:ctools_block
-  - allowed_formats:allowed_formats
-  - block_content_permissions:block_content_permissions
-  - varbase_media:varbase_media
+  - varbase_layout_builder:varbase_layout_builder

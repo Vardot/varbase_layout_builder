@@ -16,7 +16,6 @@ use Vardot\Installer\ModuleInstallerFactory;
 function varbase_layout_builder_install() {
 
   // Processor for install: in varbase_layout_builder.info.yml file.
-  // --------------------------------------------------------------------------.
   ModuleInstallerFactory::installList('varbase_layout_builder');
 
   // Remove BLB layout options to use VLB layout options.
@@ -37,7 +36,6 @@ function varbase_layout_builder_install() {
   // Have the list of layout builder style options configs into active config.
   ModuleInstallerFactory::importConfigsFromScanedDirectory('varbase_layout_builder', '/^layout_builder.style.options.*\\.(yml)$/i');
 
-  // --------------------------------------------------------------------------.
   // Entity updates to clear up any mismatched entity and/or field definitions
   // And Fix changes were detected in the entity type and field definitions.
   \Drupal::classResolver()
@@ -50,6 +48,9 @@ function varbase_layout_builder_install() {
   ];
 
   ModuleInstallerFactory::importConfigsFromList('varbase_layout_builder', $forced_configs, InstallStorage::CONFIG_OPTIONAL_DIRECTORY);
+
+  // Add permissions.
+  ModuleInstallerFactory::addPermissions('varbase_layout_builder');
 
 }
 

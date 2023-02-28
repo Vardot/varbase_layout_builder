@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Install, update and uninstall functions for the Varbase Media block.
+ * Install, update and uninstall functions for the Varbase Heading block module.
  */
 
 use Vardot\Entity\EntityDefinitionUpdateManager;
@@ -13,19 +13,19 @@ use Vardot\Installer\ModuleInstallerFactory;
  */
 function varbase_heading_block_install() {
 
-  // Processer for install: in varbase_heading_block.info.yml file.
-  // --------------------------------------------------------------------------.
+  // Processor for install: in varbase_heading_block.info.yml file.
   ModuleInstallerFactory::installList('varbase_heading_block');
 
   // Install optional configs.
   ModuleInstallerFactory::importConfigsFromScanedDirectory('varbase_heading_block', '/^field.storage.*\\.(yml)$/i');
   ModuleInstallerFactory::importConfigsFromScanedDirectory('varbase_heading_block', '/^.*(settings.yml)$/i');
 
-  // --------------------------------------------------------------------------.
   // Entity updates to clear up any mismatched entity and/or field definitions
   // And Fix changes were detected in the entity type and field definitions.
   \Drupal::classResolver()
     ->getInstanceFromDefinition(EntityDefinitionUpdateManager::class)
     ->applyUpdates();
 
+  // Add permissions.
+  ModuleInstallerFactory::addPermissions('varbase_heading_block');
 }
