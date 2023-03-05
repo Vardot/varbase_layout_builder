@@ -12,7 +12,7 @@ install:
   - text
   - options
   - link
-  - ckeditor
+  - ckeditor5
   - block
   - field
   - field_group
