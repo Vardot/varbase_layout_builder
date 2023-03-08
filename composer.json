@@ -75,6 +75,10 @@
         "Issue #3330458: [Drupal 10] Change of JS jquery/once to drupal core/once, migrate JS API":
         "https://www.drupal.org/files/issues/2023-03-07/bootstrap_styles-3330458-8.patch"
       },
+      "drupal/bootstrap_layout_builder": {
+        "Issue #3335356: Fix Module does not work in D10":
+        "https://www.drupal.org/files/issues/2023-01-25/issue_3335356_drupal10.patch"
+      },
       "drupal/layout_library": {
         "Issue #3075067: Duplicate entry for key 'block_content_field__uuid__value'":
         "https://www.drupal.org/files/issues/2023-01-05/3075067-19.patch",
