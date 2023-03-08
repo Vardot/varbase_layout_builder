@@ -245,8 +245,7 @@ function varbase_layout_builder_library_info_alter(&$libraries, $extension) {
   }
   elseif ($extension == 'bootstrap_layout_builder'
      && isset($libraries['layout_builder_form_style'])) {
-
-    $new_path = '/' . drupal_get_path('module', 'varbase_layout_builder') . '/js';
+    $new_path = '/' . \Drupal::service('extension.list.module')->getPath('varbase_layout_builder') . '/js';
     $new_js = [];
     $replacements = [
       'js/layout-tab-scripts.js' => $new_path . '/vlb-layout-tab-scripts.js',
