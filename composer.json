@@ -71,7 +71,9 @@
         "Issue #3282082: Support Bootstrap 5 on bootstrap_styles module":
         "https://www.drupal.org/files/issues/2022-06-14/Fix-support-bootstrap-5-on-bootstrap-styles-3282082-%233.patch",
         "Issue #3315218: Fix not loading bootstrap_styles/aos.local or bootstrap_styles/aos.remote library":
-        "https://www.drupal.org/files/issues/2023-01-25/3315218-17--1-0-x.patch"
+        "https://www.drupal.org/files/issues/2023-01-25/3315218-17--1-0-x.patch",
+        "Issue #3330458: [Drupal 10] Change of JS jquery/once to drupal core/once, migrate JS API":
+        "https://www.drupal.org/files/issues/2023-03-07/bootstrap_styles-3330458-8.patch"
       },
       "drupal/layout_library": {
         "Issue #3075067: Duplicate entry for key 'block_content_field__uuid__value'":
