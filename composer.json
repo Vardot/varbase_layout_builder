@@ -77,7 +77,9 @@
       },
       "drupal/bootstrap_layout_builder": {
         "Issue #3335356: Fix Module does not work in D10":
-        "https://www.drupal.org/files/issues/2023-01-25/issue_3335356_drupal10.patch"
+        "https://www.drupal.org/files/issues/2023-01-25/issue_3335356_drupal10.patch",
+        "":
+        ""
       },
       "drupal/layout_library": {
         "Issue #3075067: Duplicate entry for key 'block_content_field__uuid__value'":
