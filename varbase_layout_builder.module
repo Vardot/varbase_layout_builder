@@ -307,14 +307,3 @@ function varbase_layout_builder_element_info_alter(array &$info) {
     }
   }
 }
-
-/**
- * Implements hook_module_implements_alter().
- */
-function varbase_layout_builder_module_implements_alter(&$implementations, $hook) {
-  if (\Drupal::service('theme.manager')->getActiveTheme()->getName() == \Drupal::config('system.theme')->get('admin')) {
-    if (isset($implementations['layout_builder_blocks']) && $hook == 'form_alter') {
-      unset($implementations['layout_builder_blocks']);
-    }
-  }
-}
