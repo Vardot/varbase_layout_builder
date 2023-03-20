@@ -1,109 +1,4 @@
 body {
-
-  .layout-builder__add-section {
-    text-align: center;
-    outline: 1px dashed #555555;
-    padding: 1em;
-    font-weight: bold;
-    font-size: 12px;
-
-    &:hover,
-    &:active,
-    &:focus {
-      outline: 1px solid #000000;
-    }
-
-    .layout-builder__link--add {
-      text-transform: uppercase;
-      display: inline;
-      color: var(--bs-link-color);
-
-      &:hover,
-      &:active,
-      &:focus {
-        text-decoration: underline;
-        color: var(--bs-link-hover-color);
-        background-color: transparent;
-        background:  url(../../images/icons/787878/plus.svg) transparent center left/1em no-repeat;
-      }
-    }
-  }
-
-  .layout-builder__add-block {
-    margin: 10px auto;
-    padding: 0.5em 0;
-    width: 10rem;
-    background-color: #eff6fcc9;
-    border-radius: 8px;
-    text-align: center;
-    color: var(--bs-link-color);
-
-    .layout-builder__link--add {
-      font-size: 12px;
-      text-transform: uppercase;
-      color: var(--bs-link-color);
-      margin-right: 15px;
-      margin-left: 15px;
-
-      &:hover,
-      &:active,
-      &:focus {
-        background-color: transparent;
-        border-radius: 8px;
-        color: var(--bs-link-hover-color);
-        background: url(../../images/icons/787878/plus.svg) transparent center left/1em no-repeat;
-      }
-    }
-  }
-
-  .layout-builder__region {
-
-    > .layout-builder-block {
-      margin: 0;
-      padding: 0;
-    }
-  }
-
-  .layout-builder__actions {
-    .layout-builder__link--layout_builder_block_attributes {
-      background: url("../../images/icons/ffffff/droplet-fill.svg") center center/12px 12px no-repeat;
-    }
-  }
-
-  .layout-builder__section {
-    padding: 0;
-    outline: 2px dashed #555555;
-
-    &:hover,
-    &:active
-    &:focus {
-      outline: 2px solid #000000;
-    }
-
-  }
-
-  .layout-builder__actions__section {
-    top: -25px;
-    left: -2px;
-  }
-
-  .layout-builder__link--configure,
-  .layout-builder__link--add-section-to-library,
-  .layout-builder__link--add-template-to-library,
-  .layout-builder__link--import-from-library {
-    text-transform: uppercase;
-    color: var(--bs-link-color);
-    font-weight: bold;
-    font-size: 12px;
-
-    &:hover,
-    &:active,
-    &:focus {
-      text-decoration: underline;
-      color: var(--bs-link-hover-color);
-    }
-  }
-
   // Remove warning message location icon in layout builder.
   .layout-builder__message--overrides {
     .messages {
@@ -111,113 +6,9 @@ body {
     }
   }
 }
-[dir=rtl] body {
-  .layout-builder__link--add {
-    padding-right: 30px;
-    padding-left: 0.5em;
-  }
 
-  .layout-builder__actions__section {
-    left: auto;
-    right: -2px;
-  }
-  .layout-builder__actions__block {
-    left: auto;
-    right: 0;
-  }
-
-  .layout-builder__add-section {
-    .layout-builder__link--add {
-      &:hover,
-      &:active,
-      &:focus {
-        background: url(../../images/icons/787878/plus.svg) transparent center right/1em no-repeat;
-      }
-    }
-  }
-
-  .layout-builder__add-block {
-    .layout-builder__link--add {
-      &:hover,
-      &:active,
-      &:focus {
-        background: url(../../images/icons/787878/plus.svg) transparent center right/1em no-repeat;
-      }
-    }
-  }
-
-  .layout-builder__link--import-from-library {
-    padding-right: 30px;
-    padding-left: 0.5em;
-    background: url(../../images/icons/787878/import.svg) transparent center right/1em no-repeat;
-  }
-
-  #drupal-off-canvas {
-    .bs-group-title {
-      margin-left: auto;
-      margin-right: 15px;
-
-      img,
-      svg {
-        margin-left: 1rem;
-      }
-    }
-
-    .bs_input-circles,
-    .bs_input-boxes {
-      .fieldset-wrapper > div {
-        flex-direction: row-reverse;
-      }
-
-      legend {
-        text-align: right;
-      }
-    }
-
-    // Alignment RTL.
-    .field-text-alignment {
-      .fieldset-wrapper > div > div {
-        input {
-          + label {
-            .input-icon {
-
-              &[class*="left"],
-              &[class*="start"] {
-                background-image: url('../../images/plugins/text-alignment/text-end.svg');
-              }
-
-              &[class*="right"],
-              &[class*="end"] {
-                background-image: url('../../images/plugins/text-alignment/text-start.svg');
-              }
-
-            }
-          }
-        }
-      }
-    }
-
-    .layout-selection li a {
-      padding-left: auto;
-      padding-right: 25px;
-      flex-direction: row-reverse;
-    }
-
-    // Breakpoints cols RTL.
-    .blb_breakpoint_cols {
-      .fieldset-wrapper {
-        .form-type-radio {
-          .option {
-            direction: rtl;
-          }
-        }
-      }
-    }
-  }
-
-}
-
-#drupal-off-canvas {
+#drupal-off-canvas,
+.dialog-off-canvas-main-canvas {
 
   // Alignment.
   .field-text-alignment {
@@ -430,25 +221,6 @@ body {
     }
   }
 
-
-  .form-select,
-  .form-text,
-  input[type="text"],
-  .form-tel,
-  .form-email,
-  .form-url,
-  .form-search,
-  .form-number,
-  .form-color,
-  .form-file,
-  .form-textarea,
-  input[type="textarea"],
-  .form-date,
-  .form-time {
-    color: #222330 !important;
-    background-color: #fff !important;
-  }
-
   // To make varbase layout builder search blocks field take a full width.
   fieldset {
     &.form-type-search {
@@ -494,7 +266,8 @@ body {
   }
 }
 
-[dir="rtl"] #drupal-off-canvas {
+[dir="rtl"] #drupal-off-canvas,
+[dir="rtl"] .dialog-off-canvas-main-canvas {
   .layout-selection {
     li {
       a {
@@ -508,8 +281,4 @@ body {
       }
     }
   }
-}
-
-.layout-builder__actions {
-  font-size: 12px;
 }
