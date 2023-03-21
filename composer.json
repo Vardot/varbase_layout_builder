@@ -48,7 +48,7 @@
     "drupal/layout_builder_at": "~2.0",
     "drupal/layout_builder_component_attributes": "~2.0",
     "drupal/layout_library": "1.0-beta4",
-    "drupal/section_library": "~1.0",
+    "drupal/section_library": "1.1.0",
     "drupal/bootstrap_styles": "1.1.0",
     "drupal/bootstrap_layout_builder": "2.1.1",
     "drupal/block_library": "~1.0",
@@ -90,6 +90,10 @@
       "drupal/layout_builder_blocks": {
         "Issue #3349066: Limit Layout Builder Blocks to the front-end theme":
         "https://www.drupal.org/files/issues/2023-03-20/3349066-5.patch"
+      },
+      "drupal/section_library": {
+        "Issue #3348151: Fix Drupal 10 Errors for $(...).once is not a function":
+        "https://www.drupal.org/files/issues/2023-03-16/3348151-5.patch"
       }
     }
   }
