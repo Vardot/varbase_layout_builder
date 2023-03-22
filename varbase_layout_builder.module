@@ -301,9 +301,40 @@ function varbase_layout_builder_element_info_alter(array &$info) {
       foreach ($info['layout_builder']['#pre_render'] as $key => $class_name) {
         if ($class_name === '\Drupal\section_library\SectionLibraryRender::preRender') {
           unset($info[$key]);
-          $info['layout_builder']['#pre_render'][$key] = '\Drupal\varbase_layout_builder\ThemeCondition\VarbaseSectionLibraryRender::preRender';
+          $info['layout_builder']['#pre_render'][$key] = '\Drupal\varbase_layout_builder\Theme\VarbaseSectionLibraryRender::preRender';
         }
       }
     }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function varbase_layout_builder_preprocess_html(&$variables) {
+  $route_name = \Drupal::routeMatch()->getRouteName();
+
+  if (\Drupal::service('layout_builder_iframe_modal.helper')->isModalRoute($route_name)) {
+    // Removes regions and elements not needed for the block edit form.
+
+    unset($variables['page']['top_bar']);
+    unset($variables['page']['navbar_branding']);
+    unset($variables['page']['navigation']);
+    unset($variables['page']['highlighted']);
+    unset($variables['page']['content_above']);
+    unset($variables['page']['primary_sidebar']);
+    unset($variables['page']['secondary_sidebar']);
+    unset($variables['page']['content_below']);
+    unset($variables['page']['footer_top']);
+    unset($variables['page']['footer_bottom']);
+
+    unset($variables['page']['header']);
+    unset($variables['page']['pre_content']);
+    unset($variables['page']['breadcrumb']);
+    unset($variables['page']['help']);
+    unset($variables['page']['page_top']);
+    unset($variables['page']['page_bottom']);
+    unset($variables['page']['sidebar_first']);
+
   }
 }

@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\varbase_layout_builder\ThemeCondition;
+namespace Drupal\varbase_layout_builder\Theme;
 
 use Drupal\section_library\SectionLibraryRender;
 
