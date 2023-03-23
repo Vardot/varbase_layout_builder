@@ -156,81 +156,11 @@ body .layout-builder__message--overrides .messages {
 .dialog-off-canvas-main-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon.tiny:after {
   width: 33.33333%;
 }
-#drupal-off-canvas form.layout-builder-configure-block [data-drupal-selector^=edit-appearance-alignment],
-.dialog-off-canvas-main-canvas form.layout-builder-configure-block [data-drupal-selector^=edit-appearance-alignment] {
-  display: none !important;
-}
-#drupal-off-canvas ul li,
-#drupal-off-canvas ol li,
-.dialog-off-canvas-main-canvas ul li,
-.dialog-off-canvas-main-canvas ol li {
-  border-bottom: 0;
-}
-#drupal-off-canvas .inline-block-create-button,
-#drupal-off-canvas .inline-block-list__item,
-.dialog-off-canvas-main-canvas .inline-block-create-button,
-.dialog-off-canvas-main-canvas .inline-block-list__item {
-  width: auto;
-}
-#drupal-off-canvas .inline-block-list li,
-.dialog-off-canvas-main-canvas .inline-block-list li {
-  width: 45%;
-  padding: 0 0.5rem 2.5rem 0.5rem;
-}
-#drupal-off-canvas .inline-block-list li:last-child,
-.dialog-off-canvas-main-canvas .inline-block-list li:last-child {
-  padding-bottom: 1rem;
-}
-#drupal-off-canvas .inline-block-list .inline-block-list__item,
-.dialog-off-canvas-main-canvas .inline-block-list .inline-block-list__item {
-  width: 100%;
-}
 #drupal-off-canvas fieldset.form-type-search,
 .dialog-off-canvas-main-canvas fieldset.form-type-search {
   width: 100% !important;
 }
-#drupal-off-canvas .block-categories .links li,
-.dialog-off-canvas-main-canvas .block-categories .links li {
-  margin: 0.3125rem 0;
-  padding: 0;
-}
 #drupal-off-canvas #bs_nav-tabs,
 .dialog-off-canvas-main-canvas #bs_nav-tabs {
   position: relative !important;
-}
-#drupal-off-canvas .layout-selection li,
-.dialog-off-canvas-main-canvas .layout-selection li {
-  padding-bottom: 0;
-}
-#drupal-off-canvas .layout-selection li a,
-.dialog-off-canvas-main-canvas .layout-selection li a {
-  display: flex;
-  margin: 0 -20px;
-  padding: 15px 0;
-  padding-left: 25px; /* LTR */
-}
-#drupal-off-canvas .layout-selection li a:hover,
-.dialog-off-canvas-main-canvas .layout-selection li a:hover {
-  background-color: #333;
-}
-#drupal-off-canvas .layout-selection li a svg,
-.dialog-off-canvas-main-canvas .layout-selection li a svg {
-  margin-right: 1em; /* LTR */
-  background-color: inherit;
-}
-#drupal-off-canvas .layout-selection li a div,
-.dialog-off-canvas-main-canvas .layout-selection li a div {
-  padding-top: 0.55em;
-  background-color: inherit;
-}
-
-[dir=rtl] #drupal-off-canvas .layout-selection li a,
-[dir=rtl] .dialog-off-canvas-main-canvas .layout-selection li a {
-  padding-right: 25px;
-  padding-left: 0;
-}
-[dir=rtl] #drupal-off-canvas .layout-selection li a svg,
-[dir=rtl] .dialog-off-canvas-main-canvas .layout-selection li a svg {
-  margin-right: 0;
-  margin-left: 1em;
 }

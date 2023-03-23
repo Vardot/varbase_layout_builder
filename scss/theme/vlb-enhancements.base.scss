@@ -189,38 +189,6 @@ body {
     }
   }
 
-  form.layout-builder-configure-block {
-    [data-drupal-selector^="edit-appearance-alignment"] {
-      display: none !important;
-    }
-  }
-
-  ul li,
-  ol li {
-    border-bottom: 0;
-  }
-
-  .inline-block-create-button,
-  .inline-block-list__item {
-    width: auto;
-  }
-
-  .inline-block-list {
-    
-    li {
-      padding: 0 0.5rem 2.5rem 0.5rem;
-      width: 45%;
-
-      &:last-child { 
-        padding-bottom: 1rem;
-      }
-    }
-
-    .inline-block-list__item {
-      width: 100%;
-    }
-  }
-
   // To make varbase layout builder search blocks field take a full width.
   fieldset {
     &.form-type-search {
@@ -228,57 +196,7 @@ body {
     }
   }
 
-  .block-categories {
-    .links li {
-      padding: 0;
-      margin: 0.3125rem 0;
-    }
-  }
-
   #bs_nav-tabs {
     position:relative !important;
-  }
-
-  // Layout Selection.
-  .layout-selection li {
-    padding-bottom: 0;
-
-    a {
-      display: flex;
-      margin: 0 -20px;
-      padding: 15px 0;
-      padding-left: 25px; /* LTR */
-
-      &:hover {
-        background-color: #333;
-      }
-
-      svg {
-        margin-right: 1em; /* LTR */
-        background-color: inherit;
-      }
-
-      div {
-        padding-top: 0.55em;
-        background-color: inherit;
-      }
-    }
-  }
-}
-
-[dir="rtl"] #drupal-off-canvas,
-[dir="rtl"] .dialog-off-canvas-main-canvas {
-  .layout-selection {
-    li {
-      a {
-        padding-right: 25px;
-        padding-left: 0;
-
-        svg {
-          margin-right: 0;
-          margin-left: 1em;
-        }
-      }
-    }
   }
 }
