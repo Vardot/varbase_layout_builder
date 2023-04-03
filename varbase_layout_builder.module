@@ -17,31 +17,28 @@ use Drupal\Core\Asset\AttachedAssetsInterface;
  * Implements hook_entity_operation().
  */
 function varbase_layout_builder_entity_operation(EntityInterface $entity) {
-  if (\Drupal::service('theme.manager')->getActiveTheme()->getName() !== \Drupal::config('system.theme')->get('admin')) {
-    $account = \Drupal::currentUser();
-    $entity_type_id = $entity->getEntityTypeId();
+  $account = \Drupal::currentUser();
+  $entity_type_id = $entity->getEntityTypeId();
 
-    $route_name = "layout_builder.overrides.$entity_type_id.view";
-    $route_parameters = [
-      $entity_type_id => $entity->id(),
-    ];
+  $route_name = "layout_builder.overrides.$entity_type_id.view";
+  $route_parameters = [
+    $entity_type_id => $entity->id(),
+  ];
 
-    // If current user has access to route, then add the operation link. The
-    // access check will only return TRUE if the bundle is Layout Builder-
-    // enabled, overrides are allowed, and user has necessary permissions.
-    $access_manager = \Drupal::service('access_manager');
-    if (!$access_manager->checkNamedRoute($route_name, $route_parameters, $account)) {
-      return;
-    }
-
-    $operations['layout'] = [
-      'title' => t('Layout'),
-      'url' => Url::fromRoute($route_name, $route_parameters),
-      'weight' => 50,
-    ];
-    return $operations;
+  // If current user has access to route, then add the operation link. The
+  // access check will only return TRUE if the bundle is Layout Builder-
+  // enabled, overrides are allowed, and user has necessary permissions.
+  $access_manager = \Drupal::service('access_manager');
+  if (!$access_manager->checkNamedRoute($route_name, $route_parameters, $account)) {
+    return;
   }
-  return;
+
+  $operations['layout'] = [
+    'title' => t('Layout'),
+    'url' => Url::fromRoute($route_name, $route_parameters),
+    'weight' => 50,
+  ];
+  return $operations;
 }
 
 /**
