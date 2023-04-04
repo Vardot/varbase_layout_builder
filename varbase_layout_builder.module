@@ -80,6 +80,11 @@ function varbase_layout_builder_form_alter(&$form, FormStateInterface $form_stat
       if (isset($form['rabbit_hole'])) {
         $form['rabbit_hole']['#access'] = FALSE;
       }
+
+      if (isset($form['actions']['rebuild-layout'])) {
+        $form['actions']['rebuild-layout']['#attributes']['class'][] = 'btn btn-primary';
+      }
+
     }
   }
 

@@ -200,3 +200,32 @@ body {
     position:relative !important;
   }
 }
+
+.dialog-off-canvas-main-canvas {
+  .block-help {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border: 1px solid #dee2e6;
+  }
+}
+
+#drupal-off-canvas {
+  button.button--primary,
+  input[type="submit"].button--primary,
+  .button--primary[type=submit] {
+    color: var(--bs-btn-color);
+  }
+}
+
+#drupal-off-canvas-wrapper {
+  z-index: 502;
+
+  .inline-block-list {
+    li {
+      padding: 0 0.5rem 1rem 0.5rem;
+      width: 50%;
+      height: 50%;
+      display: flow-root;
+    }
+  }
+}
