@@ -381,8 +381,8 @@ function varbase_layout_builder_css_alter(&$css, AttachedAssetsInterface $assets
     unset($css['core/misc/dialog/off-canvas/css/table.css']);
     unset($css['core/misc/dialog/off-canvas/css/utility.css']);
     unset($css['core/misc/dialog/off-canvas/css/drupal.css']);
-    unset($css['core/misc/dialog/off-canvas/css/tabledrag.css']);
-    unset($css['core/misc/dialog/off-canvas/css/throbber.css']);
+    // unset($css['core/misc/dialog/off-canvas/css/tabledrag.css']);
+    // unset($css['core/misc/dialog/off-canvas/css/throbber.css']);
 
     unset($css['core/modules/layout_builder/css/off-canvas.css']);
  

@@ -228,4 +228,34 @@ body {
       display: flow-root;
     }
   }
+
+  .layout-selection {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      position: relative;
+      padding: calc(0.25 * var(--off-canvas-vertical-spacing-unit));
+      border-bottom: 1px solid var(--off-canvas-border-color);
+
+      &:last-child {
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+    }
+
+    a {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.625rem;
+      padding: 0.625rem;
+    }
+  }
+
+  .layout-icon__region {
+    fill: var(--off-canvas-text-color);
+    stroke: transparent;
+  }
 }

@@ -186,3 +186,29 @@ body .layout-builder__message--overrides .messages {
   height: 50%;
   padding: 0 0.5rem 1rem 0.5rem;
 }
+#drupal-off-canvas-wrapper .layout-selection {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#drupal-off-canvas-wrapper .layout-selection li {
+  position: relative;
+  padding: calc(0.25 * var(--off-canvas-vertical-spacing-unit));
+  border-bottom: 1px solid var(--off-canvas-border-color);
+}
+#drupal-off-canvas-wrapper .layout-selection li:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+#drupal-off-canvas-wrapper .layout-selection a {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0.625rem;
+
+  gap: 0.625rem;
+}
+#drupal-off-canvas-wrapper .layout-icon__region {
+  fill: var(--off-canvas-text-color);
+  stroke: transparent;
+}
