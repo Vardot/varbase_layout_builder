@@ -28,3 +28,7 @@ install:
   - varbase_gallery_block
   - varbase_heading_block
   - varbase_buttons_block
+  - varbase_cta_block
+  - varbase_featured_card_block
+  - varbase_impressed_card_block
+  - varbase_overlay_card_block

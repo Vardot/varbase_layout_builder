@@ -180,12 +180,6 @@ body .layout-builder__message--overrides .messages {
 #drupal-off-canvas-wrapper {
   z-index: 502;
 }
-#drupal-off-canvas-wrapper .inline-block-list li {
-  display: flow-root;
-  width: 50%;
-  height: 50%;
-  padding: 0 0.5rem 1rem 0.5rem;
-}
 #drupal-off-canvas-wrapper .layout-selection {
   margin: 0;
   padding: 0;
@@ -193,7 +187,6 @@ body .layout-builder__message--overrides .messages {
 }
 #drupal-off-canvas-wrapper .layout-selection li {
   position: relative;
-  padding: calc(0.25 * var(--off-canvas-vertical-spacing-unit));
   border-bottom: 1px solid var(--off-canvas-border-color);
 }
 #drupal-off-canvas-wrapper .layout-selection li:last-child {
@@ -205,10 +198,22 @@ body .layout-builder__message--overrides .messages {
   flex-wrap: wrap;
   align-items: center;
   padding: 0.625rem;
+  text-decoration: none;
 
   gap: 0.625rem;
+}
+#drupal-off-canvas-wrapper .layout-selection a:hover,
+#drupal-off-canvas-wrapper .layout-selection a:focus,
+#drupal-off-canvas-wrapper .layout-selection a:active {
+  opacity: 0.7;
 }
 #drupal-off-canvas-wrapper .layout-icon__region {
   fill: var(--off-canvas-text-color);
   stroke: transparent;
+}
+#drupal-off-canvas-wrapper .inline-block-list li {
+  display: flow-root;
+  width: 50%;
+  height: 50%;
+  padding: 0 0.5rem 1rem 0.5rem;
 }

@@ -220,15 +220,6 @@ body {
 #drupal-off-canvas-wrapper {
   z-index: 502;
 
-  .inline-block-list {
-    li {
-      padding: 0 0.5rem 1rem 0.5rem;
-      width: 50%;
-      height: 50%;
-      display: flow-root;
-    }
-  }
-
   .layout-selection {
     margin: 0;
     padding: 0;
@@ -236,7 +227,6 @@ body {
 
     li {
       position: relative;
-      padding: calc(0.25 * var(--off-canvas-vertical-spacing-unit));
       border-bottom: 1px solid var(--off-canvas-border-color);
 
       &:last-child {
@@ -251,11 +241,27 @@ body {
       align-items: center;
       gap: 0.625rem;
       padding: 0.625rem;
+      text-decoration: none;
+
+      &:hover,
+      &:focus,
+      &:active {
+        opacity: 0.7;
+      }
     }
   }
 
   .layout-icon__region {
     fill: var(--off-canvas-text-color);
     stroke: transparent;
+  }
+
+  .inline-block-list {
+    li {
+      padding: 0 0.5rem 1rem 0.5rem;
+      width: 50%;
+      height: 50%;
+      display: flow-root;
+    }
   }
 }

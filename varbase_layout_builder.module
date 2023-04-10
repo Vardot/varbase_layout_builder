@@ -347,7 +347,7 @@ function varbase_layout_builder_preprocess_html(&$variables) {
  */
 function varbase_layout_builder_css_alter(&$css, AttachedAssetsInterface $assets) {
 
-  if (vlb_is_layout_builder_route()) {
+  if (_is_layout_builder_route()) {
     if (\Drupal::service('theme_handler')->themeExists('stable9')) {
       $stable_theme_css = \Drupal::service('extension.list.theme')->getPath('stable9') . '/css';
       unset($css[$stable_theme_css . '/layout_builder/layout-builder.css']);
@@ -361,14 +361,6 @@ function varbase_layout_builder_css_alter(&$css, AttachedAssetsInterface $assets
       unset($css[$stable_theme_css . '/core/dialog/off-canvas.button.css']);
     }
 
-    unset($css['core/misc/dialog/off-canvas.theme.css']);
-    unset($css['core/misc/dialog/off-canvas.base.css']);
-    unset($css['core/misc/dialog/off-canvas.reset.css']);
-    unset($css['core/misc/dialog/off-canvas.table.css']);
-    unset($css['core/misc/dialog/off-canvas.tabledrag.css']);
-    unset($css['core/misc/dialog/off-canvas.details.css']);
-    unset($css['core/misc/dialog/off-canvas.form.css']);
-    unset($css['core/misc/dialog/off-canvas.button.css']);
     unset($css['core/misc/dialog/off-canvas/css/reset.css']);
     unset($css['core/misc/dialog/off-canvas/css/wrapper.css']);
     unset($css['core/misc/dialog/off-canvas/css/titlebar.css']);
@@ -379,12 +371,14 @@ function varbase_layout_builder_css_alter(&$css, AttachedAssetsInterface $assets
     unset($css['core/misc/dialog/off-canvas/css/button.css']);
     unset($css['core/misc/dialog/off-canvas/css/base.css']);
     unset($css['core/misc/dialog/off-canvas/css/table.css']);
-    unset($css['core/misc/dialog/off-canvas/css/utility.css']);
-    unset($css['core/misc/dialog/off-canvas/css/drupal.css']);
+    // unset($css['core/misc/dialog/off-canvas/css/utility.css']);
+    // unset($css['core/misc/dialog/off-canvas/css/drupal.css']);
     // unset($css['core/misc/dialog/off-canvas/css/tabledrag.css']);
     // unset($css['core/misc/dialog/off-canvas/css/throbber.css']);
 
-    unset($css['core/modules/layout_builder/css/off-canvas.css']);
+    if (\Drupal::service('theme.manager')->getActiveTheme()->getName() !== \Drupal::config('system.theme')->get('admin')) {
+      unset($css['core/modules/layout_builder/css/off-canvas.css']);
+    }
  
   }
 }
@@ -395,17 +389,21 @@ function varbase_layout_builder_css_alter(&$css, AttachedAssetsInterface $assets
  * @return bool
  *   Returns true for layout builder routes.
  */
-function vlb_is_layout_builder_route() {
-  $vlb_is_layout_builder_route = drupal_static(__FUNCTION__);
-  if ($vlb_is_layout_builder_route !== NULL) {
-    return $vlb_is_layout_builder_route;
+function _is_layout_builder_route() {
+  $layout_builder_route = drupal_static(__FUNCTION__);
+  if ($layout_builder_route !== NULL) {
+    return $layout_builder_route;
   }
 
   $route_name = \Drupal::routeMatch()->getRouteName();
-  $vlb_is_layout_builder_route = FALSE;
+  $layout_builder_route = FALSE;
+
   if ($route_name !== NULL && preg_match('/^(layout_builder\.([^.]+\.)?)/', $route_name)) {
-    $vlb_is_layout_builder_route = TRUE;
+    $layout_builder_route = TRUE;
   }
-  \Drupal::moduleHandler()->alter('gin_lb_is_layout_builder_route', $vlb_is_layout_builder_route, $context);
-  return $vlb_is_layout_builder_route;
+
+  $context = null;
+  \Drupal::moduleHandler()->alter('_is_layout_builder_route', $layout_builder_route, $context);
+  unset($context);
+  return $layout_builder_route;
 }
