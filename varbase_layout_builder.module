@@ -85,9 +85,34 @@ function varbase_layout_builder_form_alter(&$form, FormStateInterface $form_stat
         $form['actions']['rebuild-layout']['#attributes']['class'][] = 'btn btn-primary';
       }
 
+      $config = \Drupal::config('varbase_layout_builder.settings');
+      $use_claro = $config->get('use_claro');
+
+      if (isset($use_claro) && $use_claro == 1) {
+        $current_path = \Drupal::service('path.current')->getPath();
+        $url_object = \Drupal::service('path.validator')->getUrlIfValid($current_path);
+        $route_name = '';
+        if (isset($url_object) && is_object($url_object)) {
+          $route_name = $url_object->getRouteName();
+        }
+
+        $applicable_forms = [
+          'layout_builder_add_block',
+          'layout_builder_update_block',
+          'media_image_edit_form',
+        ];
+
+        if (in_array($form_id, $applicable_forms)
+          || $route_name === 'layout_builder.overrides.node.view') {
+
+          if ($form_id !== 'layout_builder_configure_section') {
+            // Add claro theme libraries.
+            $form['#attached']['library'][] = 'varbase_layout_builder/claro';
+          }
+        }
+      }
     }
   }
-
 }
 
 /**

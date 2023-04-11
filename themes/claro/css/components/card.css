@@ -1,0 +1,158 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/components/card.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal .card,
+.media-library-widget-modal .card,
+form.media-form .card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-items: flex-start;
+  padding: 0;
+  border: 1px solid rgba(212, 212, 218, 0.8);
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+@media screen and (min-width: 36.75rem) {
+  #layout-builder-modal .card--horizontal,
+  .media-library-widget-modal .card--horizontal,
+  form.media-form .card--horizontal {
+    flex-direction: row;
+  }
+  #layout-builder-modal .toolbar-tray-open.toolbar-vertical.toolbar-fixed .card--horizontal,
+  .media-library-widget-modal .toolbar-tray-open.toolbar-vertical.toolbar-fixed .card--horizontal,
+  form.media-form .toolbar-tray-open.toolbar-vertical.toolbar-fixed .card--horizontal {
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 53.75rem) {
+  #layout-builder-modal .toolbar-tray-open.toolbar-vertical.toolbar-fixed .card--horizontal,
+  .media-library-widget-modal .toolbar-tray-open.toolbar-vertical.toolbar-fixed .card--horizontal,
+  form.media-form .toolbar-tray-open.toolbar-vertical.toolbar-fixed .card--horizontal {
+    flex-direction: row;
+  }
+}
+#layout-builder-modal .card__image,
+.media-library-widget-modal .card__image,
+form.media-form .card__image {
+  overflow: hidden;
+  border-radius: 1px 1px 0 0;
+  line-height: 0;
+}
+@media screen and (min-width: 36.75rem) {
+  #layout-builder-modal .card--horizontal .card__image,
+  .media-library-widget-modal .card--horizontal .card__image,
+  form.media-form .card--horizontal .card__image {
+    flex-basis: 35%;
+    border-radius: 1px 0 0 1px;
+    /* LTR */
+  }
+  #layout-builder-modal [dir=rtl] .card--horizontal .card__image,
+  .media-library-widget-modal [dir=rtl] .card--horizontal .card__image,
+  form.media-form [dir=rtl] .card--horizontal .card__image {
+    border-radius: 0 1px 1px 0;
+  }
+}
+@media screen and (max-width: 53.75rem) {
+  #layout-builder-modal .toolbar-tray-open.toolbar-vertical.toolbar-fixed .card--horizontal .card__image,
+  .media-library-widget-modal .toolbar-tray-open.toolbar-vertical.toolbar-fixed .card--horizontal .card__image,
+  form.media-form .toolbar-tray-open.toolbar-vertical.toolbar-fixed .card--horizontal .card__image {
+    flex-basis: auto;
+  }
+}
+@media screen and (min-width: 85.375rem) {
+  #layout-builder-modal .card--horizontal .card__image,
+  .media-library-widget-modal .card--horizontal .card__image,
+  form.media-form .card--horizontal .card__image {
+    flex-basis: 45%;
+  }
+}
+#layout-builder-modal .card__content-wrapper,
+.media-library-widget-modal .card__content-wrapper,
+form.media-form .card__content-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  padding: 1.5rem;
+}
+@media screen and (min-width: 36.75rem) {
+  #layout-builder-modal .card--horizontal .card__content-wrapper,
+  .media-library-widget-modal .card--horizontal .card__content-wrapper,
+  form.media-form .card--horizontal .card__content-wrapper {
+    flex-basis: 65%;
+  }
+  #layout-builder-modal .card--horizontal .card__image ~ .card__content-wrapper,
+  .media-library-widget-modal .card--horizontal .card__image ~ .card__content-wrapper,
+  form.media-form .card--horizontal .card__image ~ .card__content-wrapper {
+    padding-left: 1rem;
+  }
+  #layout-builder-modal [dir=rtl] .card--horizontal .card__image ~ .card__content-wrapper,
+  .media-library-widget-modal [dir=rtl] .card--horizontal .card__image ~ .card__content-wrapper,
+  form.media-form [dir=rtl] .card--horizontal .card__image ~ .card__content-wrapper {
+    padding-right: 1rem;
+    padding-left: 1.5rem;
+  }
+}
+@media screen and (max-width: 53.75rem) {
+  #layout-builder-modal .toolbar-tray-open.toolbar-vertical.toolbar-fixed .card--horizontal .card__content-wrapper,
+  .media-library-widget-modal .toolbar-tray-open.toolbar-vertical.toolbar-fixed .card--horizontal .card__content-wrapper,
+  form.media-form .toolbar-tray-open.toolbar-vertical.toolbar-fixed .card--horizontal .card__content-wrapper {
+    flex-basis: auto;
+  }
+}
+@media screen and (min-width: 85.375rem) {
+  #layout-builder-modal .card--horizontal .card__content-wrapper,
+  .media-library-widget-modal .card--horizontal .card__content-wrapper,
+  form.media-form .card--horizontal .card__content-wrapper {
+    flex-basis: 55%;
+  }
+}
+#layout-builder-modal .card__content,
+.media-library-widget-modal .card__content,
+form.media-form .card__content {
+  flex-grow: 1;
+}
+#layout-builder-modal .card__content-item,
+.media-library-widget-modal .card__content-item,
+form.media-form .card__content-item {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+#layout-builder-modal .card__content-item:last-child,
+.media-library-widget-modal .card__content-item:last-child,
+form.media-form .card__content-item:last-child {
+  margin-bottom: 0;
+}
+#layout-builder-modal .card__footer,
+.media-library-widget-modal .card__footer,
+form.media-form .card__footer {
+  /**
+   * Without specifying flex-shrink, IE11 will increase footer height if an
+   * interactive element inside is hovered or focused.
+   */
+  flex-shrink: 0;
+  order: 100;
+  margin-top: 1.5rem;
+}
+#layout-builder-modal .card__footer .action-links,
+#layout-builder-modal [dir=rtl] .card__footer .action-links,
+.media-library-widget-modal .card__footer .action-links,
+.media-library-widget-modal [dir=rtl] .card__footer .action-links,
+form.media-form .card__footer .action-links,
+form.media-form [dir=rtl] .card__footer .action-links {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: right;
+  /* LTR */
+}
+#layout-builder-modal [dir=rtl] .card__footer .action-links,
+.media-library-widget-modal [dir=rtl] .card__footer .action-links,
+form.media-form [dir=rtl] .card__footer .action-links {
+  text-align: left;
+}

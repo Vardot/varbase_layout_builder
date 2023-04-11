@@ -1,0 +1,87 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/components/system-admin--admin-list.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal .admin-list,
+.media-library-widget-modal .admin-list,
+form.media-form .admin-list {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  padding: 0;
+}
+#layout-builder-modal .admin-list--panel,
+.media-library-widget-modal .admin-list--panel,
+form.media-form .admin-list--panel {
+  margin: -1em -1.5em;
+}
+#layout-builder-modal .admin-item,
+.media-library-widget-modal .admin-item,
+form.media-form .admin-item {
+  padding: 0.75em 1.5em 0.75em 3em;
+}
+#layout-builder-modal [dir=rtl] .admin-item,
+.media-library-widget-modal [dir=rtl] .admin-item,
+form.media-form [dir=rtl] .admin-item {
+  padding-right: 3em;
+  padding-left: 1.5em;
+}
+#layout-builder-modal .admin-item:not(:last-child),
+.media-library-widget-modal .admin-item:not(:last-child),
+form.media-form .admin-item:not(:last-child) {
+  border-bottom: 0.0625em solid #d3d4d9;
+}
+#layout-builder-modal .admin-item__title,
+.media-library-widget-modal .admin-item__title,
+form.media-form .admin-item__title {
+  font-weight: bold;
+}
+#layout-builder-modal .admin-item__link,
+.media-library-widget-modal .admin-item__link,
+form.media-form .admin-item__link {
+  position: relative;
+  display: inline-block;
+  margin-left: -1.5em;
+  padding-left: 1.5em;
+  text-decoration: none;
+}
+#layout-builder-modal [dir=rtl] .admin-item__link,
+.media-library-widget-modal [dir=rtl] .admin-item__link,
+form.media-form [dir=rtl] .admin-item__link {
+  margin-right: -1.5em;
+  margin-left: 0;
+  padding-right: 1.5em;
+  padding-left: 0;
+}
+#layout-builder-modal .admin-item__link::before,
+.media-library-widget-modal .admin-item__link::before,
+form.media-form .admin-item__link::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 1em;
+  height: 1.5em;
+  content: "";
+  background: transparent no-repeat 50% 50%;
+  background-image: url("data:image/svg+xml,%3csvg width='9' height='14' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1.71.314L.29 1.723l5.302 5.353L.289 12.43l1.422 1.408 6.697-6.762z' fill='%23004adc'/%3e%3c/svg%3e");
+}
+#layout-builder-modal [dir=rtl] .admin-item__link::before,
+.media-library-widget-modal [dir=rtl] .admin-item__link::before,
+form.media-form [dir=rtl] .admin-item__link::before {
+  right: 0;
+  left: auto;
+  background-image: url("data:image/svg+xml,%3csvg width='9' height='14' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M6.986.314l1.422 1.409-5.303 5.353 5.303 5.354-1.422 1.408L.29 7.076z' fill='%23004adc'/%3e%3c/svg%3e");
+}
+#layout-builder-modal .admin-item__description,
+.media-library-widget-modal .admin-item__description,
+form.media-form .admin-item__description {
+  margin: 0.5em 0 0.25em;
+  color: #55565b;
+}
+#layout-builder-modal [dir=rtl] .admin-item__description,
+.media-library-widget-modal [dir=rtl] .admin-item__description,
+form.media-form [dir=rtl] .admin-item__description {
+  margin-right: 0;
+}

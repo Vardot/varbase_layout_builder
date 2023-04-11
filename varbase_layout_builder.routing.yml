@@ -1,0 +1,7 @@
+varbase_layout_builder.settings:
+  path: "/admin/config/varbase/varbase-layout-builder"
+  defaults:
+    _form: '\Drupal\varbase_layout_builder\Form\VarbaseLayoutBuilderSettingsForm'
+    _title: "Varbase Layout Builder settings"
+  requirements:
+    _permission: "administer varbase layout builder settings"

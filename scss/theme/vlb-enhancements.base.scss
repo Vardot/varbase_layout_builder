@@ -8,6 +8,7 @@ body {
 }
 
 #drupal-off-canvas,
+#layout-builder-modal,
 .dialog-off-canvas-main-canvas {
 
   // Alignment.
@@ -209,7 +210,8 @@ body {
   }
 }
 
-#drupal-off-canvas {
+#drupal-off-canvas,
+#layout-builder-modal {
   button.button--primary,
   input[type="submit"].button--primary,
   .button--primary[type=submit] {
@@ -262,6 +264,112 @@ body {
       width: 50%;
       height: 50%;
       display: flow-root;
+    }
+  }
+}
+
+#layout-builder-modal {
+  .form-item--editor-format {
+    .form-element--editor-format {
+      width: auto;
+      border-radius: inherit;
+      border: 2px solid #727579;
+      background-color: #fff;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 9'%3E%3Cpath fill='none' stroke-width='1.5' d='M1 1L7 7L13 1' stroke='%23545560'/%3E%3C/svg%3E%0A");
+      background-repeat: no-repeat;
+      background-position: 100% 50%;
+      min-height: 1.5rem;
+      padding: calc(0.15rem - 1px) calc(0.5rem - 1px);
+      padding-right: calc(1.5rem - 1px);
+      -webkit-background-size: 1.75rem 0.4375rem;
+      background-size: 1.75rem 0.4375rem;
+      font-size: 0.889rem;
+      line-height: 1.2rem;
+      color:#222330;
+
+      &:hover
+      &:active,
+      &:focus {
+        background-color: #fff;
+      }
+    }
+  }
+
+  .bs_input-boxes--box-model .fieldset-wrapper > div > div input ~ label,
+  .field-text-alignment .fieldset-wrapper > div > div input + label  {
+    height: 60px;
+  }
+
+  .tabledrag-toggle-weight-wrapper {
+   margin-top: 0;
+  }
+
+  .tabledrag-cell,
+  .tabledrag-cell-content {
+    max-width: 1rem;
+    min-width: 1rem;
+  }
+
+  .draggable {
+    a {
+      &.tabledrag-handle {
+        overflow: visible;
+      }
+    }
+  }
+
+  .tabledrag-handle {
+    &::after {
+      margin-left: 0;
+    }
+  }
+
+  .ief-entity-table {
+    td {
+      border: 0;
+    }
+  }
+
+  fieldset.fieldset {
+    background-color: #383a40;
+
+    .media-library-widget-empty-text,
+    .fieldset__description,
+    .form-item__description {
+      color: #fff !important;
+    }
+  }
+
+  .fieldset__label {
+    color: #fff !important;
+  }
+
+  .ck {
+    &.ck-editor {
+      color: var(--ck-color-text);
+    }
+  }
+
+  .form-element--type-text {
+    color: var(--gin-color-text) !important;
+    background-color: var(--gin-bg-input) !important;
+  }
+
+}
+
+body {
+  .ui-dialog {
+    .ui-dialog-titlebar-close {
+      margin-top: 0.08rem !important;
+      height: 2rem !important;
+      width: 2rem !important;
+      background: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9JzMwMHB4JyB3aWR0aD0nMzAwcHgnICBmaWxsPSIjZmZmZmZmIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgODUuODEyIDg1LjgxMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgODUuODEyIDg1LjgxMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PHBhdGggZD0iTTcwLjY5LDE0LjEyMWMtMTUuNjIxLTE1LjYyLTQwLjk0NS0xNS42Mi01Ni41NjgsMGMtMTUuNjIxLDE1LjYyLTE1LjYyLDQwLjk0NiwwLDU2LjU2NyAgIGMxNS42MjQsMTUuNjIzLDQwLjk0OSwxNS42MjMsNTYuNTY5LDAuMDAyQzg2LjMxMiw1NS4wNzEsODYuMzEzLDI5Ljc0NCw3MC42OSwxNC4xMjF6IE01NC44NzEsNTkuMjlMNDIuNDA2LDQ2LjgyNUwyOS45NDIsNTkuMjkgICBjLTEuMjIzLDEuMjIzLTMuMjAyLDEuMjIyLTQuNDIyLDAuMDAyYy0xLjIyMy0xLjIyNC0xLjIyMS0zLjIsMC00LjQyMmwxMi40NjYtMTIuNDY2TDI1LjUyMiwyOS45NDEgICBjLTEuMjIzLTEuMjIzLTEuMjIzLTMuMjAxLDAtNC40MjFjMS4yMTktMS4yMjIsMy4xOTktMS4yMjMsNC40MiwwbDEyLjQ2NSwxMi40NjRMNTQuODcsMjUuNTJjMS4yMjItMS4yMjIsMy4xOTktMS4yMjIsNC40MiwwLjAwMSAgIGMxLjIyMSwxLjIxOSwxLjIyMiwzLjE5OCwwLjAwMSw0LjQxOUw0Ni44MjYsNDIuNDA0bDEyLjQ2NSwxMi40NjZjMS4yMjIsMS4yMjIsMS4yMjIsMy4yMDEsMCw0LjQyMlM1Ni4wOTMsNjAuNTEyLDU0Ljg3MSw1OS4yOXoiPjwvcGF0aD48L2c+PC9zdmc+) center center no-repeat;
+      background-size: 2rem 2rem;
+    }
+
+    .ui-widget-content.ui-dialog-content {
+      padding-left: var(--gin-spacing-m);
+      padding-right: var(--gin-spacing-m);
     }
   }
 }

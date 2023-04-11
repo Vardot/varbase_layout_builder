@@ -1,0 +1,32 @@
+@charset "UTF-8";
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/components/page-title.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal .block-page-title-block,
+.media-library-widget-modal .block-page-title-block,
+form.media-form .block-page-title-block {
+  margin-bottom: 0.75rem;
+}
+#layout-builder-modal .block-page-title-block:last-child,
+.media-library-widget-modal .block-page-title-block:last-child,
+form.media-form .block-page-title-block:last-child {
+  margin-bottom: 1.5rem;
+}
+#layout-builder-modal .region-header > .page-title,
+.media-library-widget-modal .region-header > .page-title,
+form.media-form .region-header > .page-title {
+  margin-top: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+#layout-builder-modal .page-title,
+.media-library-widget-modal .page-title,
+form.media-form .page-title {
+  display: inline-block;
+  margin: 0;
+  font-size: 2.027rem;
+
+  -webkit-font-smoothing: antialiased;
+}

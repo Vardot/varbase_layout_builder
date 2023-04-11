@@ -1,0 +1,27 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/components/file.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal .file,
+.media-library-widget-modal .file,
+form.media-form .file {
+  min-height: 1.0625rem;
+  padding-left: 1.5rem;
+  /* LTR */
+  background-position: left 0.0625rem;
+  background-size: 1rem 1rem;
+  font-size: 0.889rem;
+  line-height: 1.125rem;
+}
+#layout-builder-modal [dir=rtl] .file,
+.media-library-widget-modal [dir=rtl] .file,
+form.media-form [dir=rtl] .file {
+  padding-right: 1.5rem;
+}
+#layout-builder-modal .file__size,
+.media-library-widget-modal .file__size,
+form.media-form .file__size {
+  color: #55565b;
+}

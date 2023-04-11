@@ -1,0 +1,74 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/components/menus-and-lists.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal .item-list ul,
+.media-library-widget-modal .item-list ul,
+form.media-form .item-list ul {
+  margin: 0.25em 0 0.25em 1.5em;
+  /* LTR */
+  list-style-type: disc;
+  list-style-image: none;
+}
+#layout-builder-modal [dir=rtl] .item-list ul,
+.media-library-widget-modal [dir=rtl] .item-list ul,
+form.media-form [dir=rtl] .item-list ul {
+  margin: 0.25em 1.5em 0.25em 0;
+}
+#layout-builder-modal .item-list ul li,
+#layout-builder-modal .menu-item,
+.media-library-widget-modal .item-list ul li,
+.media-library-widget-modal .menu-item,
+form.media-form .item-list ul li,
+form.media-form .menu-item {
+  list-style-type: disc;
+  list-style-image: none;
+}
+#layout-builder-modal .menu-item,
+.media-library-widget-modal .menu-item,
+form.media-form .menu-item {
+  margin: 0;
+}
+#layout-builder-modal .item-list ul li.collapsed,
+#layout-builder-modal .menu-item--collapsed,
+.media-library-widget-modal .item-list ul li.collapsed,
+.media-library-widget-modal .menu-item--collapsed,
+form.media-form .item-list ul li.collapsed,
+form.media-form .menu-item--collapsed {
+  list-style-type: disc;
+  list-style-image: url(../../images/menu-collapsed.png);
+}
+#layout-builder-modal .item-list ul li.expanded,
+#layout-builder-modal .menu-item--expanded,
+.media-library-widget-modal .item-list ul li.expanded,
+.media-library-widget-modal .menu-item--expanded,
+form.media-form .item-list ul li.expanded,
+form.media-form .menu-item--expanded {
+  list-style-type: circle;
+  list-style-image: url(../../images/menu-expanded.png);
+}
+#layout-builder-modal ul.links li,
+#layout-builder-modal ul.inline li,
+.media-library-widget-modal ul.links li,
+.media-library-widget-modal ul.inline li,
+form.media-form ul.links li,
+form.media-form ul.inline li {
+  padding-right: 1em;
+  /* LTR */
+}
+#layout-builder-modal [dir=rtl] ul.links li,
+#layout-builder-modal [dir=rtl] ul.inline li,
+.media-library-widget-modal [dir=rtl] ul.links li,
+.media-library-widget-modal [dir=rtl] ul.inline li,
+form.media-form [dir=rtl] ul.links li,
+form.media-form [dir=rtl] ul.inline li {
+  padding-right: 0;
+  padding-left: 1em;
+}
+#layout-builder-modal ul.inline li,
+.media-library-widget-modal ul.inline li,
+form.media-form ul.inline li {
+  display: inline;
+}

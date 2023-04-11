@@ -1,0 +1,5 @@
+varbase_layout_builder.settings:
+  title: "Varbase Layout Builder settings"
+  description: "Configuring Varbase Layout Builder."
+  parent: varbase_core.settings_index
+  route_name: varbase_layout_builder.settings

@@ -1,0 +1,337 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/components/tables.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal table,
+.media-library-widget-modal table,
+form.media-form table {
+  width: 100%;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-collapse: collapse;
+}
+#layout-builder-modal .sticky-header,
+.media-library-widget-modal .sticky-header,
+form.media-form .sticky-header {
+  min-width: 0;
+}
+#layout-builder-modal caption,
+.media-library-widget-modal caption,
+form.media-form caption {
+  text-align: left;
+  /* LTR */
+}
+#layout-builder-modal [dir=rtl] caption,
+.media-library-widget-modal [dir=rtl] caption,
+form.media-form [dir=rtl] caption {
+  text-align: right;
+}
+#layout-builder-modal th,
+.media-library-widget-modal th,
+form.media-form th {
+  position: relative;
+  box-sizing: border-box;
+  height: 3rem;
+  padding: 0.5rem 1rem;
+  text-align: left;
+  /* LTR */
+  color: #232429;
+  background: #f3f4f9;
+  line-height: 1.25rem;
+  /* 20px */
+}
+#layout-builder-modal [dir=rtl] th,
+.media-library-widget-modal [dir=rtl] th,
+form.media-form [dir=rtl] th {
+  text-align: right;
+}
+#layout-builder-modal .sortable-heading,
+.media-library-widget-modal .sortable-heading,
+form.media-form .sortable-heading {
+  padding: 0 1rem;
+}
+#layout-builder-modal .sortable-heading > a,
+.media-library-widget-modal .sortable-heading > a,
+form.media-form .sortable-heading > a {
+  display: block;
+  padding: 0.5rem 1.5rem 0.5rem 0;
+  /* LTR */
+  text-decoration: none;
+  color: inherit;
+}
+#layout-builder-modal [dir=rtl] .sortable-heading > a,
+.media-library-widget-modal [dir=rtl] .sortable-heading > a,
+form.media-form [dir=rtl] .sortable-heading > a {
+  padding-right: 0;
+  padding-left: 1.5rem;
+}
+#layout-builder-modal .sortable-heading > a::before,
+.media-library-widget-modal .sortable-heading > a::before,
+form.media-form .sortable-heading > a::before {
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  right: 1rem;
+  bottom: 0;
+  left: 1rem;
+  display: block;
+  content: "";
+  border-bottom: 0.125rem solid transparent;
+}
+#layout-builder-modal _:-ms-fullscreen,
+#layout-builder-modal .sortable-heading > a::before,
+.media-library-widget-modal _:-ms-fullscreen,
+.media-library-widget-modal .sortable-heading > a::before,
+form.media-form _:-ms-fullscreen,
+form.media-form .sortable-heading > a::before {
+  top: auto;
+  height: 100%;
+}
+#layout-builder-modal .sortable-heading > a::after,
+.media-library-widget-modal .sortable-heading > a::after,
+form.media-form .sortable-heading > a::after {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  width: 0.875rem;
+  height: 1rem;
+  margin-top: -0.5rem;
+  content: "";
+  opacity: 0.5;
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8'%3e%3cpath d='M1.75.25v1.5h10.5V.25zm0 3v1.5h7.5v-1.5zm0 3v1.5h4.5v-1.5z' fill='%23222330'/%3e%3c/svg%3e") no-repeat 50% 50%;
+  background-size: contain;
+}
+#layout-builder-modal _:-ms-fullscreen,
+#layout-builder-modal .sortable-heading > a::after,
+.media-library-widget-modal _:-ms-fullscreen,
+.media-library-widget-modal .sortable-heading > a::after,
+form.media-form _:-ms-fullscreen,
+form.media-form .sortable-heading > a::after {
+  position: static;
+  float: right;
+  margin-top: 0.125rem;
+  /* 2px */
+  margin-right: -1.5rem;
+  /* -24px */
+}
+#layout-builder-modal [dir=rtl] .sortable-heading > a::after,
+.media-library-widget-modal [dir=rtl] .sortable-heading > a::after,
+form.media-form [dir=rtl] .sortable-heading > a::after {
+  right: auto;
+  left: 1rem;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8'%3e%3cpath d='M12.25.25v1.5H1.75V.25zm0 3v1.5h-7.5v-1.5zm0 3v1.5h-4.5v-1.5z' fill='%23222330'/%3e%3c/svg%3e");
+}
+#layout-builder-modal _:-ms-fullscreen,
+#layout-builder-modal [dir=rtl] .sortable-heading > a::after,
+.media-library-widget-modal _:-ms-fullscreen,
+.media-library-widget-modal [dir=rtl] .sortable-heading > a::after,
+form.media-form _:-ms-fullscreen,
+form.media-form [dir=rtl] .sortable-heading > a::after {
+  float: left;
+  margin-right: 0;
+  margin-left: -1.5rem;
+  /* -24px */
+}
+#layout-builder-modal .sortable-heading > a:focus,
+#layout-builder-modal .sortable-heading > a:hover,
+.media-library-widget-modal .sortable-heading > a:focus,
+.media-library-widget-modal .sortable-heading > a:hover,
+form.media-form .sortable-heading > a:focus,
+form.media-form .sortable-heading > a:hover {
+  text-decoration: none;
+}
+#layout-builder-modal .sortable-heading > a:focus::before,
+#layout-builder-modal .sortable-heading > a:hover::before,
+.media-library-widget-modal .sortable-heading > a:focus::before,
+.media-library-widget-modal .sortable-heading > a:hover::before,
+form.media-form .sortable-heading > a:focus::before,
+form.media-form .sortable-heading > a:hover::before {
+  border-color: inherit;
+}
+#layout-builder-modal .sortable-heading > a:focus::after,
+#layout-builder-modal .sortable-heading > a:hover::after,
+.media-library-widget-modal .sortable-heading > a:focus::after,
+.media-library-widget-modal .sortable-heading > a:hover::after,
+form.media-form .sortable-heading > a:focus::after,
+form.media-form .sortable-heading > a:hover::after {
+  opacity: 1;
+}
+#layout-builder-modal .sortable-heading.is-active > a,
+.media-library-widget-modal .sortable-heading.is-active > a,
+form.media-form .sortable-heading.is-active > a {
+  color: #003cc5;
+}
+#layout-builder-modal .sortable-heading.is-active > a::before,
+.media-library-widget-modal .sortable-heading.is-active > a::before,
+form.media-form .sortable-heading.is-active > a::before {
+  border-bottom: 0.1875rem solid #003cc5;
+}
+#layout-builder-modal .sortable-heading.is-active > a::after,
+.media-library-widget-modal .sortable-heading.is-active > a::after,
+form.media-form .sortable-heading.is-active > a::after {
+  content: none;
+}
+#layout-builder-modal tr,
+.media-library-widget-modal tr,
+form.media-form tr {
+  border-bottom: 0.0625rem solid #d3d4d9;
+}
+#layout-builder-modal tr,
+#layout-builder-modal .draggable-table.tabledrag-disabled tr,
+.media-library-widget-modal tr,
+.media-library-widget-modal .draggable-table.tabledrag-disabled tr,
+form.media-form tr,
+form.media-form .draggable-table.tabledrag-disabled tr {
+  color: #232429;
+  background: #fff;
+}
+#layout-builder-modal thead tr,
+.media-library-widget-modal thead tr,
+form.media-form thead tr {
+  border: 0;
+}
+#layout-builder-modal tr:hover,
+#layout-builder-modal tr:focus,
+.media-library-widget-modal tr:hover,
+.media-library-widget-modal tr:focus,
+form.media-form tr:hover,
+form.media-form tr:focus {
+  color: #232429;
+  background: #f0f5fd;
+}
+#layout-builder-modal tr.color-warning:hover,
+#layout-builder-modal tr.color-warning:focus,
+.media-library-widget-modal tr.color-warning:hover,
+.media-library-widget-modal tr.color-warning:focus,
+form.media-form tr.color-warning:hover,
+form.media-form tr.color-warning:focus {
+  color: #232429;
+  background: #fdf8ed;
+}
+#layout-builder-modal tr.color-error:hover,
+#layout-builder-modal tr.color-error:focus,
+.media-library-widget-modal tr.color-error:hover,
+.media-library-widget-modal tr.color-error:focus,
+form.media-form tr.color-error:hover,
+form.media-form tr.color-error:focus {
+  color: #232429;
+  background: #fcf4f2;
+}
+#layout-builder-modal td,
+.media-library-widget-modal td,
+form.media-form td {
+  box-sizing: border-box;
+  height: 4rem;
+  padding: 0.5rem 1rem;
+  text-align: left;
+  /* LTR */
+}
+#layout-builder-modal [dir=rtl] td,
+.media-library-widget-modal [dir=rtl] td,
+form.media-form [dir=rtl] td {
+  text-align: right;
+}
+#layout-builder-modal td .item-list ul,
+.media-library-widget-modal td .item-list ul,
+form.media-form td .item-list ul {
+  margin: 0;
+}
+#layout-builder-modal [dir=rtl] td .item-list ul,
+.media-library-widget-modal [dir=rtl] td .item-list ul,
+form.media-form [dir=rtl] td .item-list ul {
+  margin: 0;
+}
+#layout-builder-modal td.is-active,
+.media-library-widget-modal td.is-active,
+form.media-form td.is-active {
+  background: none;
+}
+#layout-builder-modal td > .form-item > .form-element,
+#layout-builder-modal td > .ajax-new-content > .form-item > .form-element,
+.media-library-widget-modal td > .form-item > .form-element,
+.media-library-widget-modal td > .ajax-new-content > .form-item > .form-element,
+form.media-form td > .form-item > .form-element,
+form.media-form td > .ajax-new-content > .form-item > .form-element {
+  width: 100%;
+}
+#layout-builder-modal th.is-disabled.is-disabled,
+.media-library-widget-modal th.is-disabled.is-disabled,
+form.media-form th.is-disabled.is-disabled {
+  color: #828388;
+}
+#layout-builder-modal th.select-all,
+.media-library-widget-modal th.select-all,
+form.media-form th.select-all {
+  width: 1px;
+}
+#layout-builder-modal .caption,
+.media-library-widget-modal .caption,
+form.media-form .caption {
+  margin-bottom: 1.25rem;
+  /* 20px */
+}
+#layout-builder-modal tfoot,
+.media-library-widget-modal tfoot,
+form.media-form tfoot {
+  font-weight: bold;
+}
+#layout-builder-modal tfoot tr:last-child,
+.media-library-widget-modal tfoot tr:last-child,
+form.media-form tfoot tr:last-child {
+  border-bottom: 0;
+}
+#layout-builder-modal tfoot tr:first-child td,
+.media-library-widget-modal tfoot tr:first-child td,
+form.media-form tfoot tr:first-child td {
+  border-top: 0.0625rem solid #919297;
+}
+#layout-builder-modal th.priority-low,
+#layout-builder-modal th.priority-medium,
+#layout-builder-modal td.priority-low,
+#layout-builder-modal td.priority-medium,
+.media-library-widget-modal th.priority-low,
+.media-library-widget-modal th.priority-medium,
+.media-library-widget-modal td.priority-low,
+.media-library-widget-modal td.priority-medium,
+form.media-form th.priority-low,
+form.media-form th.priority-medium,
+form.media-form td.priority-low,
+form.media-form td.priority-medium {
+  display: none;
+}
+@media screen and (min-width: 38em) {
+  #layout-builder-modal th.priority-medium,
+  #layout-builder-modal td.priority-medium,
+  .media-library-widget-modal th.priority-medium,
+  .media-library-widget-modal td.priority-medium,
+  form.media-form th.priority-medium,
+  form.media-form td.priority-medium {
+    display: table-cell;
+  }
+}
+@media screen and (min-width: 60em) {
+  #layout-builder-modal th.priority-low,
+  #layout-builder-modal td.priority-low,
+  .media-library-widget-modal th.priority-low,
+  .media-library-widget-modal td.priority-low,
+  form.media-form th.priority-low,
+  form.media-form td.priority-low {
+    display: table-cell;
+  }
+}
+#layout-builder-modal .tabledrag-toggle-weight-wrapper,
+.media-library-widget-modal .tabledrag-toggle-weight-wrapper,
+form.media-form .tabledrag-toggle-weight-wrapper {
+  margin-top: 1.5rem;
+  line-height: 1.75rem;
+}
+#layout-builder-modal .tabledrag-toggle-weight-wrapper + table,
+#layout-builder-modal .tabledrag-toggle-weight-wrapper + .tableresponsive-toggle-columns + table,
+.media-library-widget-modal .tabledrag-toggle-weight-wrapper + table,
+.media-library-widget-modal .tabledrag-toggle-weight-wrapper + .tableresponsive-toggle-columns + table,
+form.media-form .tabledrag-toggle-weight-wrapper + table,
+form.media-form .tabledrag-toggle-weight-wrapper + .tableresponsive-toggle-columns + table {
+  margin-top: 0;
+}

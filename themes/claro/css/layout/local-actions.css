@@ -1,0 +1,54 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/layout/local-actions.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal .local-actions,
+.media-library-widget-modal .local-actions,
+form.media-form .local-actions {
+  margin: 1rem 0;
+  padding: 0;
+  list-style: none;
+}
+#layout-builder-modal [dir=rtl] .local-actions,
+.media-library-widget-modal [dir=rtl] .local-actions,
+form.media-form [dir=rtl] .local-actions {
+  margin-right: 0;
+}
+#layout-builder-modal .local-actions__item,
+.media-library-widget-modal .local-actions__item,
+form.media-form .local-actions__item {
+  display: inline-block;
+  margin: 0 0.25rem;
+}
+#layout-builder-modal .local-actions__item:first-child,
+.media-library-widget-modal .local-actions__item:first-child,
+form.media-form .local-actions__item:first-child {
+  margin-left: 0;
+  /* LTR */
+}
+#layout-builder-modal [dir=rtl] .local-actions__item:first-child,
+.media-library-widget-modal [dir=rtl] .local-actions__item:first-child,
+form.media-form [dir=rtl] .local-actions__item:first-child {
+  margin-right: 0;
+  margin-left: 0.25rem;
+}
+#layout-builder-modal .local-actions__item:last-child,
+.media-library-widget-modal .local-actions__item:last-child,
+form.media-form .local-actions__item:last-child {
+  margin-right: 0;
+  /* LTR */
+}
+#layout-builder-modal [dir=rtl] .local-actions__item:last-child,
+.media-library-widget-modal [dir=rtl] .local-actions__item:last-child,
+form.media-form [dir=rtl] .local-actions__item:last-child {
+  margin-right: 0.25rem;
+  margin-left: 0;
+}
+#layout-builder-modal [dir=rtl] .local-actions__item:only-child,
+.media-library-widget-modal [dir=rtl] .local-actions__item:only-child,
+form.media-form [dir=rtl] .local-actions__item:only-child {
+  margin-right: 0;
+  margin-left: 0;
+}

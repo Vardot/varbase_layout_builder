@@ -1,0 +1,12 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/components/views-ui.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+
+#layout-builder-modal,
+.media-library-widget-modal,
+form.media-form {
+  @import "../../../../../core/themes/claro/css/components/views-ui";
+}

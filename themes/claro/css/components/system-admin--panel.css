@@ -1,0 +1,31 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/components/system-admin--panel.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal .panel,
+.media-library-widget-modal .panel,
+form.media-form .panel {
+  margin-top: 1em;
+  margin-bottom: 3em;
+  padding: 0;
+  border-bottom: 0.0625em solid #d3d4d9;
+}
+#layout-builder-modal .panel__title,
+.media-library-widget-modal .panel__title,
+form.media-form .panel__title {
+  margin: 0;
+  padding: 0.66667em 1.33333em;
+  background: #f3f4f9;
+  font-size: 1.125em;
+  line-height: 1.33333em;
+}
+#layout-builder-modal .panel__content,
+#layout-builder-modal .panel__description,
+.media-library-widget-modal .panel__content,
+.media-library-widget-modal .panel__description,
+form.media-form .panel__content,
+form.media-form .panel__description {
+  padding: 1em 1.5em;
+}

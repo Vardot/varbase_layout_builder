@@ -1,0 +1,22 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/components/container-inline.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal .container-inline .form-radios label:after,
+.media-library-widget-modal .container-inline .form-radios label:after,
+form.media-form .container-inline .form-radios label:after {
+  content: "";
+}
+#layout-builder-modal .container-inline .form-radios .form-type-radio,
+.media-library-widget-modal .container-inline .form-radios .form-type-radio,
+form.media-form .container-inline .form-radios .form-type-radio {
+  margin-right: 1em;
+}
+#layout-builder-modal [dir=rtl] .container-inline .form-radios .form-type-radio,
+.media-library-widget-modal [dir=rtl] .container-inline .form-radios .form-type-radio,
+form.media-form [dir=rtl] .container-inline .form-radios .form-type-radio {
+  margin-right: 0;
+  margin-left: 1em;
+}

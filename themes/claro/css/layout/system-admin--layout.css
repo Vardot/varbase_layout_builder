@@ -1,0 +1,126 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/layout/system-admin--layout.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal .layout-container,
+.media-library-widget-modal .layout-container,
+form.media-form .layout-container {
+  margin-right: 1em;
+  margin-left: 1em;
+}
+#layout-builder-modal .layout-container::after,
+.media-library-widget-modal .layout-container::after,
+form.media-form .layout-container::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+@media screen and (min-width: 38em) {
+  #layout-builder-modal .toolbar-tray-open:not(.toolbar-vertical) .layout-container,
+  #layout-builder-modal body:not(.toolbar-tray-open) .layout-container,
+  .media-library-widget-modal .toolbar-tray-open:not(.toolbar-vertical) .layout-container,
+  .media-library-widget-modal body:not(.toolbar-tray-open) .layout-container,
+  form.media-form .toolbar-tray-open:not(.toolbar-vertical) .layout-container,
+  form.media-form body:not(.toolbar-tray-open) .layout-container {
+    margin-right: 3em;
+    margin-left: 3em;
+  }
+  #layout-builder-modal .toolbar-tray-open:not(.toolbar-vertical) .layout-row,
+  #layout-builder-modal body:not(.toolbar-tray-open) .layout-row,
+  .media-library-widget-modal .toolbar-tray-open:not(.toolbar-vertical) .layout-row,
+  .media-library-widget-modal body:not(.toolbar-tray-open) .layout-row,
+  form.media-form .toolbar-tray-open:not(.toolbar-vertical) .layout-row,
+  form.media-form body:not(.toolbar-tray-open) .layout-row {
+    margin-right: -1.5em;
+    margin-left: -1.5em;
+  }
+  #layout-builder-modal .toolbar-tray-open:not(.toolbar-vertical) .layout-column,
+  #layout-builder-modal body:not(.toolbar-tray-open) .layout-column,
+  .media-library-widget-modal .toolbar-tray-open:not(.toolbar-vertical) .layout-column,
+  .media-library-widget-modal body:not(.toolbar-tray-open) .layout-column,
+  form.media-form .toolbar-tray-open:not(.toolbar-vertical) .layout-column,
+  form.media-form body:not(.toolbar-tray-open) .layout-column {
+    float: left;
+    /* LTR */
+    box-sizing: border-box;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+  }
+  #layout-builder-modal [dir=rtl] .toolbar-tray-open:not(.toolbar-vertical) .layout-column,
+  #layout-builder-modal [dir=rtl] body:not(.toolbar-tray-open) .layout-column,
+  .media-library-widget-modal [dir=rtl] .toolbar-tray-open:not(.toolbar-vertical) .layout-column,
+  .media-library-widget-modal [dir=rtl] body:not(.toolbar-tray-open) .layout-column,
+  form.media-form [dir=rtl] .toolbar-tray-open:not(.toolbar-vertical) .layout-column,
+  form.media-form [dir=rtl] body:not(.toolbar-tray-open) .layout-column {
+    float: right;
+  }
+  #layout-builder-modal .toolbar-tray-open:not(.toolbar-vertical) .layout-column--half,
+  #layout-builder-modal body:not(.toolbar-tray-open) .layout-column--half,
+  .media-library-widget-modal .toolbar-tray-open:not(.toolbar-vertical) .layout-column--half,
+  .media-library-widget-modal body:not(.toolbar-tray-open) .layout-column--half,
+  form.media-form .toolbar-tray-open:not(.toolbar-vertical) .layout-column--half,
+  form.media-form body:not(.toolbar-tray-open) .layout-column--half {
+    width: 50%;
+  }
+  #layout-builder-modal .toolbar-tray-open:not(.toolbar-vertical) .layout-column--quarter,
+  #layout-builder-modal body:not(.toolbar-tray-open) .layout-column--quarter,
+  .media-library-widget-modal .toolbar-tray-open:not(.toolbar-vertical) .layout-column--quarter,
+  .media-library-widget-modal body:not(.toolbar-tray-open) .layout-column--quarter,
+  form.media-form .toolbar-tray-open:not(.toolbar-vertical) .layout-column--quarter,
+  form.media-form body:not(.toolbar-tray-open) .layout-column--quarter {
+    width: 25%;
+  }
+  #layout-builder-modal .toolbar-tray-open:not(.toolbar-vertical) .layout-column--three-quarter,
+  #layout-builder-modal body:not(.toolbar-tray-open) .layout-column--three-quarter,
+  .media-library-widget-modal .toolbar-tray-open:not(.toolbar-vertical) .layout-column--three-quarter,
+  .media-library-widget-modal body:not(.toolbar-tray-open) .layout-column--three-quarter,
+  form.media-form .toolbar-tray-open:not(.toolbar-vertical) .layout-column--three-quarter,
+  form.media-form body:not(.toolbar-tray-open) .layout-column--three-quarter {
+    width: 75%;
+  }
+}
+@media screen and (min-width: 60em) {
+  #layout-builder-modal .layout-container,
+  .media-library-widget-modal .layout-container,
+  form.media-form .layout-container {
+    margin-right: 3em;
+    margin-left: 3em;
+  }
+  #layout-builder-modal .layout-row,
+  .media-library-widget-modal .layout-row,
+  form.media-form .layout-row {
+    margin-right: -1.5em;
+    margin-left: -1.5em;
+  }
+  #layout-builder-modal .layout-column,
+  .media-library-widget-modal .layout-column,
+  form.media-form .layout-column {
+    float: left;
+    /* LTR */
+    box-sizing: border-box;
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+  }
+  #layout-builder-modal [dir=rtl] .layout-column,
+  .media-library-widget-modal [dir=rtl] .layout-column,
+  form.media-form [dir=rtl] .layout-column {
+    float: right;
+  }
+  #layout-builder-modal .layout-column--half,
+  .media-library-widget-modal .layout-column--half,
+  form.media-form .layout-column--half {
+    width: 50%;
+  }
+  #layout-builder-modal .layout-column--quarter,
+  .media-library-widget-modal .layout-column--quarter,
+  form.media-form .layout-column--quarter {
+    width: 25%;
+  }
+  #layout-builder-modal .layout-column--three-quarter,
+  .media-library-widget-modal .layout-column--three-quarter,
+  form.media-form .layout-column--three-quarter {
+    width: 75%;
+  }
+}

@@ -1,0 +1,359 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/components/vertical-tabs.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal .vertical-tabs,
+.media-library-widget-modal .vertical-tabs,
+form.media-form .vertical-tabs {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  border-top: 1px solid transparent;
+  /* Need to hide the pane wrapper clearfix's height */
+}
+@media screen and (-ms-high-contrast: active) {
+  #layout-builder-modal .vertical-tabs,
+  .media-library-widget-modal .vertical-tabs,
+  form.media-form .vertical-tabs {
+    border-color: transparent;
+  }
+}
+#layout-builder-modal .vertical-tabs__menu,
+.media-library-widget-modal .vertical-tabs__menu,
+form.media-form .vertical-tabs__menu {
+  position: relative;
+  display: none;
+  float: left;
+  /* LTR */
+  width: 20em;
+  margin: 0;
+  padding-top: 0.5rem;
+  list-style: none;
+  color: #232429;
+}
+#layout-builder-modal [dir=rtl] .vertical-tabs__menu,
+.media-library-widget-modal [dir=rtl] .vertical-tabs__menu,
+form.media-form [dir=rtl] .vertical-tabs__menu {
+  float: right;
+  margin: 0;
+}
+@media screen and (min-width: 85em) {
+  #layout-builder-modal .vertical-tabs__menu,
+  .media-library-widget-modal .vertical-tabs__menu,
+  form.media-form .vertical-tabs__menu {
+    display: block;
+    width: 20em;
+  }
+}
+#layout-builder-modal .vertical-tabs__menu-item,
+.media-library-widget-modal .vertical-tabs__menu-item,
+form.media-form .vertical-tabs__menu-item {
+  overflow: hidden;
+  margin: -1rem -1px -0.5rem -0.5rem;
+  /* LTR */
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  /* LTR */
+}
+#layout-builder-modal [dir=rtl] .vertical-tabs__menu-item,
+.media-library-widget-modal [dir=rtl] .vertical-tabs__menu-item,
+form.media-form [dir=rtl] .vertical-tabs__menu-item {
+  margin-right: -0.5rem;
+  margin-left: -1px;
+  padding-right: 0.5rem;
+  padding-left: 0;
+}
+#layout-builder-modal .vertical-tabs__menu-item::before,
+#layout-builder-modal .vertical-tabs__menu-item::after,
+.media-library-widget-modal .vertical-tabs__menu-item::before,
+.media-library-widget-modal .vertical-tabs__menu-item::after,
+form.media-form .vertical-tabs__menu-item::before,
+form.media-form .vertical-tabs__menu-item::after {
+  position: absolute;
+  z-index: 1;
+  /* The line should be kept above the vertical tabs menu link to keep it visible even if the link is hovered and gets the 'hover' background color. */
+  display: block;
+  width: 100%;
+  margin-top: -1px;
+  border-top: 1px solid #d3d4d9;
+}
+#layout-builder-modal .vertical-tabs__menu-item::after,
+.media-library-widget-modal .vertical-tabs__menu-item::after,
+form.media-form .vertical-tabs__menu-item::after {
+  z-index: 2;
+  border-color: #fff;
+}
+#layout-builder-modal .vertical-tabs__menu-item:not(.vertical-tabs__menu-item--hidden) ~ .vertical-tabs__menu-item::before,
+.media-library-widget-modal .vertical-tabs__menu-item:not(.vertical-tabs__menu-item--hidden) ~ .vertical-tabs__menu-item::before,
+form.media-form .vertical-tabs__menu-item:not(.vertical-tabs__menu-item--hidden) ~ .vertical-tabs__menu-item::before {
+  content: "";
+}
+#layout-builder-modal .vertical-tabs__menu-item:focus,
+.media-library-widget-modal .vertical-tabs__menu-item:focus,
+form.media-form .vertical-tabs__menu-item:focus {
+  outline: 0;
+  box-shadow: none;
+}
+#layout-builder-modal .vertical-tabs__menu-item.is-selected::before,
+#layout-builder-modal .vertical-tabs__menu-item:not(.vertical-tabs__menu-item--hidden) ~ .vertical-tabs__menu-item.is-selected::before,
+.media-library-widget-modal .vertical-tabs__menu-item.is-selected::before,
+.media-library-widget-modal .vertical-tabs__menu-item:not(.vertical-tabs__menu-item--hidden) ~ .vertical-tabs__menu-item.is-selected::before,
+form.media-form .vertical-tabs__menu-item.is-selected::before,
+form.media-form .vertical-tabs__menu-item:not(.vertical-tabs__menu-item--hidden) ~ .vertical-tabs__menu-item.is-selected::before {
+  content: normal;
+}
+#layout-builder-modal .vertical-tabs__menu-item.is-selected::after,
+.media-library-widget-modal .vertical-tabs__menu-item.is-selected::after,
+form.media-form .vertical-tabs__menu-item.is-selected::after {
+  content: "";
+}
+#layout-builder-modal .vertical-tabs__menu-link,
+.media-library-widget-modal .vertical-tabs__menu-link,
+form.media-form .vertical-tabs__menu-link {
+  position: relative;
+  display: block;
+  margin-top: -1px;
+  padding: 0.75rem 0.75rem 0.75rem 1.25rem;
+  /* LTR */
+  text-decoration: none;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  color: #232429;
+  border: 1px solid transparent;
+  border-width: 1px 0 1px 4px;
+  /* LTR */
+  border-radius: 2px 0 0 2px;
+
+  -ms-hyphens: auto;
+  /* LTR */
+}
+#layout-builder-modal [dir=rtl] .vertical-tabs__menu-link,
+.media-library-widget-modal [dir=rtl] .vertical-tabs__menu-link,
+form.media-form [dir=rtl] .vertical-tabs__menu-link {
+  padding-right: 1.25rem;
+  padding-left: 0.75rem;
+  border-width: 1px 4px 1px 0;
+  border-radius: 0 2px 2px 0;
+}
+@media screen and (-ms-high-contrast: active) {
+  #layout-builder-modal .vertical-tabs__menu-link,
+  .media-library-widget-modal .vertical-tabs__menu-link,
+  form.media-form .vertical-tabs__menu-link {
+    border-color: transparent;
+  }
+}
+#layout-builder-modal .vertical-tabs__menu-link:focus,
+.media-library-widget-modal .vertical-tabs__menu-link:focus,
+form.media-form .vertical-tabs__menu-link:focus {
+  z-index: 4;
+  /* Focus state should be on the highest level to make the focus effect be fully visible. This also means that it should have bigger z-index than the selected link. */
+  text-decoration: none;
+  box-shadow: none;
+}
+#layout-builder-modal .vertical-tabs__menu-link:hover,
+.media-library-widget-modal .vertical-tabs__menu-link:hover,
+form.media-form .vertical-tabs__menu-link:hover {
+  text-decoration: none;
+  color: #003cc5;
+}
+#layout-builder-modal .vertical-tabs__menu-link::before,
+.media-library-widget-modal .vertical-tabs__menu-link::before,
+form.media-form .vertical-tabs__menu-link::before {
+  position: absolute;
+  z-index: 0;
+  /* This should be on a lower level than the menu-item separator lines. */
+  top: -1px;
+  right: 0;
+  /* LTR */
+  bottom: -1px;
+  left: -0.25rem;
+  /* LTR */
+  content: "";
+  pointer-events: none;
+  background-clip: padding-box;
+}
+#layout-builder-modal [dir=rtl] .vertical-tabs__menu-link::before,
+.media-library-widget-modal [dir=rtl] .vertical-tabs__menu-link::before,
+form.media-form [dir=rtl] .vertical-tabs__menu-link::before {
+  right: -0.25rem;
+  left: 0;
+}
+#layout-builder-modal .vertical-tabs__menu-link:hover::before,
+.media-library-widget-modal .vertical-tabs__menu-link:hover::before,
+form.media-form .vertical-tabs__menu-link:hover::before {
+  background: #f0f5fd;
+}
+#layout-builder-modal .vertical-tabs__menu-link:focus::after,
+.media-library-widget-modal .vertical-tabs__menu-link:focus::after,
+form.media-form .vertical-tabs__menu-link:focus::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: -1px -0.25rem;
+  content: "";
+  pointer-events: none;
+  border: 3px solid #26a769;
+  border-radius: 2px;
+}
+#layout-builder-modal .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link,
+.media-library-widget-modal .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link,
+form.media-form .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link {
+  z-index: 3;
+  /* The selected menu link should be on a higher level than the white masking line that hides the gray separator. */
+  color: #003cc5;
+  border-color: #dedfe4 transparent;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#layout-builder-modal .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:hover,
+.media-library-widget-modal .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:hover,
+form.media-form .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:hover {
+  color: #0036b1;
+  background-color: #f0f5fd;
+}
+#layout-builder-modal .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link::before,
+.media-library-widget-modal .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link::before,
+form.media-form .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link::before {
+  z-index: 1;
+  /* The blue active-tab indication should be on a higher level than the green focus border. */
+  border-left: 4px solid #003cc5;
+  /* LTR */
+  border-radius: 2px 0 0 2px;
+  /* LTR */
+}
+#layout-builder-modal [dir=rtl] .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link::before,
+.media-library-widget-modal [dir=rtl] .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link::before,
+form.media-form [dir=rtl] .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link::before {
+  border-right: 4px solid #003cc5;
+  border-left: 0;
+  border-radius: 0 2px 2px 0;
+}
+#layout-builder-modal .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:hover::before,
+.media-library-widget-modal .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:hover::before,
+form.media-form .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:hover::before {
+  background: none;
+}
+@media screen and (-ms-high-contrast: active) {
+  #layout-builder-modal .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link,
+  .media-library-widget-modal .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link,
+  form.media-form .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link {
+    border-color: windowText transparent;
+  }
+  #layout-builder-modal .vertical-tabs__menu-link:focus::after,
+  .media-library-widget-modal .vertical-tabs__menu-link:focus::after,
+  form.media-form .vertical-tabs__menu-link:focus::after {
+    border-color: transparent;
+  }
+  #layout-builder-modal .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link::before,
+  .media-library-widget-modal .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link::before,
+  form.media-form .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link::before {
+    border-color: windowText;
+  }
+}
+#layout-builder-modal .vertical-tabs__menu-link-content,
+.media-library-widget-modal .vertical-tabs__menu-link-content,
+form.media-form .vertical-tabs__menu-link-content {
+  position: relative;
+  z-index: 1;
+  /* We are using a pseudo element for displaying the hover state's background, and we have to keep the link content above that pseudo element. Without this, the text would be covered by the background. */
+}
+#layout-builder-modal .vertical-tabs__menu-link-summary,
+.media-library-widget-modal .vertical-tabs__menu-link-summary,
+form.media-form .vertical-tabs__menu-link-summary {
+  display: block;
+  color: #55565b;
+  font-size: 0.889rem;
+  font-weight: normal;
+}
+#layout-builder-modal .vertical-tabs__items,
+.media-library-widget-modal .vertical-tabs__items,
+form.media-form .vertical-tabs__items {
+  box-sizing: border-box;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  color: #232429;
+  border: 1px solid #dedfe4;
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#layout-builder-modal .vertical-tabs__items--processed,
+.media-library-widget-modal .vertical-tabs__items--processed,
+form.media-form .vertical-tabs__items--processed {
+  position: relative;
+  z-index: 1;
+  /* The wrapper of the details of the vertical tabs should be on a higher level than the vertical tabs menu */
+  top: -1px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#layout-builder-modal .vertical-tabs__items--processed::after,
+.media-library-widget-modal .vertical-tabs__items--processed::after,
+form.media-form .vertical-tabs__items--processed::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+@media screen and (min-width: 85em) {
+  #layout-builder-modal .vertical-tabs__items--processed,
+  .media-library-widget-modal .vertical-tabs__items--processed,
+  form.media-form .vertical-tabs__items--processed {
+    margin-left: 20em;
+    /* LTR */
+    border-top-left-radius: 0;
+    /* LTR */
+  }
+  #layout-builder-modal .js[dir=rtl] .vertical-tabs__items--processed,
+  .media-library-widget-modal .js[dir=rtl] .vertical-tabs__items--processed,
+  form.media-form .js[dir=rtl] .vertical-tabs__items--processed {
+    margin-right: 20em;
+    margin-left: 0;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 0;
+  }
+}
+#layout-builder-modal .vertical-tabs__item,
+.media-library-widget-modal .vertical-tabs__item,
+form.media-form .vertical-tabs__item {
+  /* Render on top of the border of vertical-tabs__items. */
+  margin: -1px -1px 0;
+  border-radius: 0;
+}
+#layout-builder-modal .vertical-tabs__item--first,
+.media-library-widget-modal .vertical-tabs__item--first,
+form.media-form .vertical-tabs__item--first {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+#layout-builder-modal .vertical-tabs__item--last,
+.media-library-widget-modal .vertical-tabs__item--last,
+form.media-form .vertical-tabs__item--last {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+@media screen and (min-width: 85em) {
+  #layout-builder-modal .js .vertical-tabs__item,
+  .media-library-widget-modal .js .vertical-tabs__item,
+  form.media-form .js .vertical-tabs__item {
+    overflow: hidden;
+    margin: 0;
+    border: 0;
+  }
+  #layout-builder-modal .js .vertical-tabs__item--first,
+  #layout-builder-modal .js .vertical-tabs__item--last,
+  .media-library-widget-modal .js .vertical-tabs__item--first,
+  .media-library-widget-modal .js .vertical-tabs__item--last,
+  form.media-form .js .vertical-tabs__item--first,
+  form.media-form .js .vertical-tabs__item--last {
+    border-radius: 0;
+  }
+  #layout-builder-modal .js .vertical-tabs__item > summary,
+  .media-library-widget-modal .js .vertical-tabs__item > summary,
+  form.media-form .js .vertical-tabs__item > summary {
+    display: none;
+  }
+}

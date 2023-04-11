@@ -1,0 +1,47 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/components/accordion.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal .accordion,
+.media-library-widget-modal .accordion,
+form.media-form .accordion {
+  color: #232429;
+  border: 1px solid #dedfe4;
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#layout-builder-modal .accordion__item,
+.media-library-widget-modal .accordion__item,
+form.media-form .accordion__item {
+  margin: 0 -1px;
+  border-radius: 0;
+}
+#layout-builder-modal .accordion__item:first-child,
+.media-library-widget-modal .accordion__item:first-child,
+form.media-form .accordion__item:first-child {
+  margin-top: -1px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+}
+#layout-builder-modal .accordion__item + .accordion__item,
+.media-library-widget-modal .accordion__item + .accordion__item,
+form.media-form .accordion__item + .accordion__item {
+  margin-top: -1px;
+}
+#layout-builder-modal .accordion__item:last-child,
+.media-library-widget-modal .accordion__item:last-child,
+form.media-form .accordion__item:last-child {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+#layout-builder-modal .accordion__item .claro-details__summary .summary,
+.media-library-widget-modal .accordion__item .claro-details__summary .summary,
+form.media-form .accordion__item .claro-details__summary .summary {
+  display: block;
+  color: #55565b;
+  font-weight: normal;
+}

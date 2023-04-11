@@ -1,0 +1,93 @@
+@charset "UTF-8";
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/components/autocomplete-loading.module.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal .js .form-autocomplete,
+.media-library-widget-modal .js .form-autocomplete,
+form.media-form .js .form-autocomplete {
+  background-image: url("data:image/svg+xml,%3csvg width='40' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M8 1C3.46.827-.188 5.787 1.313 10.068c1.176 4.384 6.993 6.417 10.637 3.7.326-.39.565.276.846.442l3.74 3.739 1.413-1.414-4.35-4.35c2.811-3.468 1.15-9.247-3.062-10.71A7.003 7.003 0 008 1zm0 2c3.242-.123 5.849 3.42 4.777 6.477-.842 3.132-4.994 4.58-7.6 2.65-2.745-1.73-2.9-6.125-.285-8.044A5.006 5.006 0 018 3z' fill='%23868686'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+}
+#layout-builder-modal .js .form-autocomplete::-ms-clear,
+.media-library-widget-modal .js .form-autocomplete::-ms-clear,
+form.media-form .js .form-autocomplete::-ms-clear {
+  display: none;
+}
+#layout-builder-modal .js[dir=rtl] .form-autocomplete,
+.media-library-widget-modal .js[dir=rtl] .form-autocomplete,
+form.media-form .js[dir=rtl] .form-autocomplete {
+  background-image: url("data:image/svg+xml,%3csvg width='40' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12 1c4.54-.173 8.188 4.787 6.687 9.068-1.176 4.384-6.993 6.417-10.637 3.7-.326-.39-.565.276-.846.442l-3.74 3.739-1.413-1.414 4.35-4.35C3.59 8.717 5.25 2.938 9.462 1.475A7.003 7.003 0 0112 1zm0 2c-3.242-.123-5.849 3.42-4.777 6.477.842 3.132 4.994 4.58 7.6 2.65 2.745-1.73 2.9-6.125.285-8.044A5.006 5.006 0 0012 3z' fill='%23868686'/%3e%3c/svg%3e");
+  background-position: 0 50%;
+}
+#layout-builder-modal .js .form-autocomplete.is-autocompleting,
+.media-library-widget-modal .js .form-autocomplete.is-autocompleting,
+form.media-form .js .form-autocomplete.is-autocompleting {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' height='20' width='40'%3e%3cstyle%3e%40keyframes s%7b0%25%7btransform:rotate(0deg) translate(-50%25,-50%25)%7d50%25%7btransform:rotate(430deg) translate(-50%25,-50%25);stroke-dashoffset:20%7dto%7btransform:rotate(720deg) translate(-50%25,-50%25)%7d%7d%3c/style%3e%3ccircle fill='none' cy='5' cx='5' stroke='%23004adc' stroke-dashoffset='6.125' stroke-dasharray='25' style='animation:s 1s linear infinite' r='4'/%3e%3c/svg%3e");
+}
+#layout-builder-modal .js[dir=rtl] .form-autocomplete.is-autocompleting,
+.media-library-widget-modal .js[dir=rtl] .form-autocomplete.is-autocompleting,
+form.media-form .js[dir=rtl] .form-autocomplete.is-autocompleting {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 10' height='20' width='40'%3e%3cstyle%3e%40keyframes s%7b0%25%7btransform:rotate(0deg) translate(-50%25,-50%25)%7d50%25%7btransform:rotate(-430deg) translate(-50%25,-50%25);stroke-dashoffset:20%7dto%7btransform:rotate(-720deg) translate(-50%25,-50%25)%7d%7d%3c/style%3e%3ccircle fill='none' cy='5' cx='5' stroke='%23004adc' stroke-dashoffset='6.125' stroke-dasharray='25' style='animation:s 1s linear infinite' r='4'/%3e%3c/svg%3e");
+}
+#layout-builder-modal _:-ms-fullscreen,
+#layout-builder-modal .js .form-autocomplete.is-autocompleting,
+.media-library-widget-modal _:-ms-fullscreen,
+.media-library-widget-modal .js .form-autocomplete.is-autocompleting,
+form.media-form _:-ms-fullscreen,
+form.media-form .js .form-autocomplete.is-autocompleting {
+  background-image: url("../../images/spinner-ltr.gif");
+  background-size: 2.5rem 1.25rem;
+}
+#layout-builder-modal _:-ms-fullscreen,
+#layout-builder-modal .js[dir=rtl] .form-autocomplete.is-autocompleting,
+.media-library-widget-modal _:-ms-fullscreen,
+.media-library-widget-modal .js[dir=rtl] .form-autocomplete.is-autocompleting,
+form.media-form _:-ms-fullscreen,
+form.media-form .js[dir=rtl] .form-autocomplete.is-autocompleting {
+  background-image: url("../../images/spinner-rtl.gif");
+}
+#layout-builder-modal .claro-autocomplete,
+.media-library-widget-modal .claro-autocomplete,
+form.media-form .claro-autocomplete {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+}
+#layout-builder-modal .claro-autocomplete__message,
+.media-library-widget-modal .claro-autocomplete__message,
+form.media-form .claro-autocomplete__message {
+  position: absolute;
+  right: 0;
+  bottom: 100%;
+  max-width: 100%;
+  margin-bottom: 0.15rem;
+  color: #003cc5;
+  font-size: 0.702rem;
+  /* ~11px */
+  font-weight: bold;
+  line-height: 1.125rem;
+  /* 18px */
+}
+#layout-builder-modal [dir=rtl] .claro-autocomplete__message,
+.media-library-widget-modal [dir=rtl] .claro-autocomplete__message,
+form.media-form [dir=rtl] .claro-autocomplete__message {
+  right: auto;
+  left: 0;
+}
+#layout-builder-modal .form-autocomplete,
+.media-library-widget-modal .form-autocomplete,
+form.media-form .form-autocomplete {
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m8,0.999781c-4.5394538,-0.1723607 -8.18800628,4.7870352 -6.6873554,9.068641 1.1767997,4.383903 6.9938335,6.416563 10.6372244,3.700244 0.325764,-0.391006 0.56541,0.275384 0.84585,0.440896 1.246479,1.246479 2.492958,2.492959 3.739437,3.739438 0.471354,-0.471354 0.942709,-0.942709 1.414063,-1.414063 -1.44987,-1.44987 -2.89974,-2.899739 -4.34961,-4.349609C16.410345,8.7174615 14.748115,2.9379071 10.536504,1.4755074 9.7302231,1.1615612 8.8650587,0.99941873 8,0.999781Z m0,2c3.242467,-0.1231148 5.848576,3.4193109 4.776682,6.477601 -0.841211,3.131959 -4.9939918,4.58038 -7.5998944,2.649077C2.4322236,10.397214 2.2765833,6.0022025 4.8919502,4.0831465 5.7667487,3.38528 6.8811016,2.996997 8,2.999781Z' fill='%23868686' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position-y: center;
+}
+
+[dir=rtl] #layout-builder-modal .ui-autocomplete,
+[dir=rtl] .media-library-widget-modal .ui-autocomplete,
+[dir=rtl] form.media-form .ui-autocomplete {
+  right: 0;
+}

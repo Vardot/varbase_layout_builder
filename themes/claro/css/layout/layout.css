@@ -1,0 +1,25 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/layout/layout.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal .page-content,
+.media-library-widget-modal .page-content,
+form.media-form .page-content {
+  margin-top: 1.5rem;
+  margin-bottom: 5rem;
+}
+@media screen and (min-width: 38em) {
+  #layout-builder-modal .page-content,
+  .media-library-widget-modal .page-content,
+  form.media-form .page-content {
+    margin-top: 2rem;
+  }
+}
+#layout-builder-modal .layout-icon__region,
+.media-library-widget-modal .layout-icon__region,
+form.media-form .layout-icon__region {
+  fill: #f5f5f2;
+  stroke: #666;
+}

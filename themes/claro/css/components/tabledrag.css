@@ -1,0 +1,395 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/components/tabledrag.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal body.drag,
+.media-library-widget-modal body.drag,
+form.media-form body.drag {
+  cursor: move;
+}
+#layout-builder-modal .region-title,
+.media-library-widget-modal .region-title,
+form.media-form .region-title {
+  font-weight: bold;
+}
+#layout-builder-modal .region-message,
+.media-library-widget-modal .region-message,
+form.media-form .region-message {
+  color: #828388;
+}
+#layout-builder-modal .region-message.region-populated,
+.media-library-widget-modal .region-message.region-populated,
+form.media-form .region-message.region-populated {
+  display: none;
+}
+#layout-builder-modal .tabledrag-changed.tabledrag-changed,
+.media-library-widget-modal .tabledrag-changed.tabledrag-changed,
+form.media-form .tabledrag-changed.tabledrag-changed {
+  border-bottom: none;
+}
+#layout-builder-modal .add-new .tabledrag-changed,
+.media-library-widget-modal .add-new .tabledrag-changed,
+form.media-form .add-new .tabledrag-changed {
+  display: none;
+}
+#layout-builder-modal .draggable .tabledrag-changed,
+.media-library-widget-modal .draggable .tabledrag-changed,
+form.media-form .draggable .tabledrag-changed {
+  position: relative;
+  left: -0.5rem;
+  /* LTR */
+}
+#layout-builder-modal [dir=rtl] .draggable .tabledrag-changed,
+.media-library-widget-modal [dir=rtl] .draggable .tabledrag-changed,
+form.media-form [dir=rtl] .draggable .tabledrag-changed {
+  right: -0.5rem;
+  /* LTR */
+  left: auto;
+}
+#layout-builder-modal .tabledrag-cell--only-drag .tabledrag-changed,
+.media-library-widget-modal .tabledrag-cell--only-drag .tabledrag-changed,
+form.media-form .tabledrag-cell--only-drag .tabledrag-changed {
+  width: 1.5rem;
+  min-width: 1.5rem;
+}
+#layout-builder-modal .draggable.drag,
+#layout-builder-modal .draggable.drag:focus,
+.media-library-widget-modal .draggable.drag,
+.media-library-widget-modal .draggable.drag:focus,
+form.media-form .draggable.drag,
+form.media-form .draggable.drag:focus {
+  background-color: #fe7;
+}
+#layout-builder-modal .draggable.drag-previous,
+.media-library-widget-modal .draggable.drag-previous,
+form.media-form .draggable.drag-previous {
+  background-color: #ffb;
+}
+#layout-builder-modal .draggable-table td:first-child ~ td,
+#layout-builder-modal .draggable-table th:first-child ~ th,
+.media-library-widget-modal .draggable-table td:first-child ~ td,
+.media-library-widget-modal .draggable-table th:first-child ~ th,
+form.media-form .draggable-table td:first-child ~ td,
+form.media-form .draggable-table th:first-child ~ th {
+  padding-left: 0;
+}
+#layout-builder-modal [dir=rtl] .draggable-table td:first-child ~ td,
+#layout-builder-modal [dir=rtl] .draggable-table th:first-child ~ th,
+.media-library-widget-modal [dir=rtl] .draggable-table td:first-child ~ td,
+.media-library-widget-modal [dir=rtl] .draggable-table th:first-child ~ th,
+form.media-form [dir=rtl] .draggable-table td:first-child ~ td,
+form.media-form [dir=rtl] .draggable-table th:first-child ~ th {
+  padding-right: 0;
+  padding-left: 1rem;
+}
+#layout-builder-modal .draggable td .form-element--type-select[name$="][_weight]"],
+#layout-builder-modal .draggable td .term-weight,
+#layout-builder-modal .draggable td .field-weight,
+.media-library-widget-modal .draggable td .form-element--type-select[name$="][_weight]"],
+.media-library-widget-modal .draggable td .term-weight,
+.media-library-widget-modal .draggable td .field-weight,
+form.media-form .draggable td .form-element--type-select[name$="][_weight]"],
+form.media-form .draggable td .term-weight,
+form.media-form .draggable td .field-weight {
+  width: auto;
+}
+#layout-builder-modal .tabledrag-handle,
+.media-library-widget-modal .tabledrag-handle,
+form.media-form .tabledrag-handle {
+  position: relative;
+  z-index: 1;
+  overflow: visible;
+  cursor: move;
+  text-align: center;
+  vertical-align: text-top;
+}
+#layout-builder-modal .tabledrag-handle::after,
+.media-library-widget-modal .tabledrag-handle::after,
+form.media-form .tabledrag-handle::after {
+  display: inline-block;
+  width: 1.0625rem;
+  height: 1.0625rem;
+  margin-left: -1rem;
+  /* LTR */
+  padding: 0.5rem 1rem;
+  content: "";
+  transition: transform 0.1s ease-in-out 0s;
+  background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 16 16'%3e%3cpath fill='%23222330' d='M14.103 5.476a.5.5 0 00-.701-.053.526.526 0 00-.082.713l1.1 1.346H8.512V1.62l1.32 1.113a.501.501 0 00.732-.054.528.528 0 00-.085-.744L8.328.119a.5.5 0 00-.647 0L5.529 1.935a.527.527 0 00-.085.744.504.504 0 00.732.054l1.32-1.113v5.862H1.588L2.68 6.136a.526.526 0 00-.1-.68.5.5 0 00-.675.02L.117 7.67a.525.525 0 000 .66l1.788 2.194a.5.5 0 00.702.053.526.526 0 00.081-.713l-1.1-1.346h5.908v5.862l-1.32-1.113a.501.501 0 00-.698.082.526.526 0 00.051.716l2.152 1.817v-.001a.5.5 0 00.647 0l2.151-1.816a.526.526 0 00.052-.716.501.501 0 00-.699-.082l-1.32 1.113V8.518h5.908l-1.091 1.346a.527.527 0 00.022.776.504.504 0 00.752-.116l1.78-2.194a.527.527 0 000-.66z'/%3e%3c/svg%3e") no-repeat center;
+}
+#layout-builder-modal [dir=rtl] .tabledrag-handle::after,
+.media-library-widget-modal [dir=rtl] .tabledrag-handle::after,
+form.media-form [dir=rtl] .tabledrag-handle::after {
+  margin-right: -1rem;
+  margin-left: 0;
+}
+@media screen and (-ms-high-contrast: active) {
+  #layout-builder-modal .tabledrag-handle::after,
+  .media-library-widget-modal .tabledrag-handle::after,
+  form.media-form .tabledrag-handle::after {
+    content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 16 16'%3e%3cpath fill='currentColor' d='M14.103 5.476a.5.5 0 00-.701-.053.526.526 0 00-.082.713l1.1 1.346H8.512V1.62l1.32 1.113a.501.501 0 00.732-.054.528.528 0 00-.085-.744L8.328.119a.5.5 0 00-.647 0L5.529 1.935a.527.527 0 00-.085.744.504.504 0 00.732.054l1.32-1.113v5.862H1.588L2.68 6.136a.526.526 0 00-.1-.68.5.5 0 00-.675.02L.117 7.67a.525.525 0 000 .66l1.788 2.194a.5.5 0 00.702.053.526.526 0 00.081-.713l-1.1-1.346h5.908v5.862l-1.32-1.113a.501.501 0 00-.698.082.526.526 0 00.051.716l2.152 1.817v-.001a.5.5 0 00.647 0l2.151-1.816a.526.526 0 00.052-.716.501.501 0 00-.699-.082l-1.32 1.113V8.518h5.908l-1.091 1.346a.527.527 0 00.022.776.504.504 0 00.752-.116l1.78-2.194a.527.527 0 000-.66z'/%3e%3c/svg%3e");
+    background: none;
+  }
+}
+#layout-builder-modal .tabledrag-handle::after,
+#layout-builder-modal .tabledrag-disabled .tabledrag-handle.tabledrag-handle.tabledrag-handle::after,
+.media-library-widget-modal .tabledrag-handle::after,
+.media-library-widget-modal .tabledrag-disabled .tabledrag-handle.tabledrag-handle.tabledrag-handle::after,
+form.media-form .tabledrag-handle::after,
+form.media-form .tabledrag-disabled .tabledrag-handle.tabledrag-handle.tabledrag-handle::after {
+  transform: scale(1);
+}
+#layout-builder-modal .tabledrag-handle:hover::after,
+#layout-builder-modal .tabledrag-handle:focus::after,
+#layout-builder-modal .draggable.drag .tabledrag-handle::after,
+.media-library-widget-modal .tabledrag-handle:hover::after,
+.media-library-widget-modal .tabledrag-handle:focus::after,
+.media-library-widget-modal .draggable.drag .tabledrag-handle::after,
+form.media-form .tabledrag-handle:hover::after,
+form.media-form .tabledrag-handle:focus::after,
+form.media-form .draggable.drag .tabledrag-handle::after {
+  transform: scale(1.25);
+}
+#layout-builder-modal .tabledrag-handle:focus,
+.media-library-widget-modal .tabledrag-handle:focus,
+form.media-form .tabledrag-handle:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+#layout-builder-modal .tabledrag-handle:focus::before,
+.media-library-widget-modal .tabledrag-handle:focus::before,
+form.media-form .tabledrag-handle:focus::before {
+  display: block;
+  width: 2rem;
+  /* Same as height. */
+  height: 2rem;
+  /* Hande svg height + its vertical padding */
+  margin: 0 -0.5rem -2rem;
+  /* Bottom: handle height as negative value. */
+  content: "";
+  border-radius: 2px;
+  outline: 2px dotted transparent;
+  box-shadow: 0 0 0 3px #26a769;
+}
+#layout-builder-modal .tabledrag-disabled .tabledrag-handle,
+.media-library-widget-modal .tabledrag-disabled .tabledrag-handle,
+form.media-form .tabledrag-disabled .tabledrag-handle {
+  cursor: default;
+  opacity: 0.4;
+}
+#layout-builder-modal .tabledrag-disabled .tabledrag-handle.tabledrag-handle::before,
+.media-library-widget-modal .tabledrag-disabled .tabledrag-handle.tabledrag-handle::before,
+form.media-form .tabledrag-disabled .tabledrag-handle.tabledrag-handle::before {
+  content: normal;
+}
+#layout-builder-modal .touchevents .tabledrag-handle::after,
+.media-library-widget-modal .touchevents .tabledrag-handle::after,
+form.media-form .touchevents .tabledrag-handle::after {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+#layout-builder-modal .touchevents .draggable .menu-item__link,
+.media-library-widget-modal .touchevents .draggable .menu-item__link,
+form.media-form .touchevents .draggable .menu-item__link {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+#layout-builder-modal .tabledrag-toggle-weight-wrapper,
+.media-library-widget-modal .tabledrag-toggle-weight-wrapper,
+form.media-form .tabledrag-toggle-weight-wrapper {
+  text-align: right;
+  /* LTR */
+}
+#layout-builder-modal [dir=rtl] .tabledrag-toggle-weight-wrapper,
+.media-library-widget-modal [dir=rtl] .tabledrag-toggle-weight-wrapper,
+form.media-form [dir=rtl] .tabledrag-toggle-weight-wrapper {
+  text-align: left;
+}
+#layout-builder-modal .draggable-table .tabledrag-toggle-weight-wrapper,
+.media-library-widget-modal .draggable-table .tabledrag-toggle-weight-wrapper,
+form.media-form .draggable-table .tabledrag-toggle-weight-wrapper {
+  display: none;
+}
+#layout-builder-modal .tabledrag-cell,
+.media-library-widget-modal .tabledrag-cell,
+form.media-form .tabledrag-cell {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+#layout-builder-modal .tabledrag-cell--only-drag,
+.media-library-widget-modal .tabledrag-cell--only-drag,
+form.media-form .tabledrag-cell--only-drag {
+  width: 1px;
+  /* This forces this cell to use the smallest possible width. */
+  padding-right: 0;
+  /* LTR */
+}
+#layout-builder-modal [dir=rtl] .tabledrag-cell--only-drag,
+.media-library-widget-modal [dir=rtl] .tabledrag-cell--only-drag,
+form.media-form [dir=rtl] .tabledrag-cell--only-drag {
+  padding-right: 1rem;
+  padding-left: 0;
+}
+#layout-builder-modal .tabledrag-cell-content,
+.media-library-widget-modal .tabledrag-cell-content,
+form.media-form .tabledrag-cell-content {
+  display: table;
+  height: 100%;
+}
+#layout-builder-modal .tabledrag-cell-content > *,
+.media-library-widget-modal .tabledrag-cell-content > *,
+form.media-form .tabledrag-cell-content > * {
+  display: table-cell;
+  vertical-align: middle;
+}
+#layout-builder-modal .tabledrag-cell-content__item,
+.media-library-widget-modal .tabledrag-cell-content__item,
+form.media-form .tabledrag-cell-content__item {
+  padding-right: 0.5rem;
+  /* LTR */
+}
+#layout-builder-modal [dir=rtl] .tabledrag-cell-content__item,
+.media-library-widget-modal [dir=rtl] .tabledrag-cell-content__item,
+form.media-form [dir=rtl] .tabledrag-cell-content__item {
+  padding-right: 0;
+  padding-left: 0.5rem;
+}
+#layout-builder-modal .tabledrag-cell-content__item:empty,
+.media-library-widget-modal .tabledrag-cell-content__item:empty,
+form.media-form .tabledrag-cell-content__item:empty {
+  display: none;
+}
+#layout-builder-modal .tabledrag-cell-content .indentation,
+#layout-builder-modal [dir=rtl] .tabledrag-cell-content .indentation,
+.media-library-widget-modal .tabledrag-cell-content .indentation,
+.media-library-widget-modal [dir=rtl] .tabledrag-cell-content .indentation,
+form.media-form .tabledrag-cell-content .indentation,
+form.media-form [dir=rtl] .tabledrag-cell-content .indentation {
+  float: none;
+  overflow: hidden;
+  height: 100%;
+}
+#layout-builder-modal .tabledrag-cell-content .tree,
+.media-library-widget-modal .tabledrag-cell-content .tree,
+form.media-form .tabledrag-cell-content .tree {
+  min-height: 100%;
+  /* Using simply 'height: 100%' would make IE11 rendering ugly. */
+}
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    #layout-builder-modal .tabledrag-cell-content .tree,
+    .media-library-widget-modal .tabledrag-cell-content .tree,
+    form.media-form .tabledrag-cell-content .tree {
+      overflow: visible;
+      min-height: 0;
+    }
+  }
+}
+#layout-builder-modal .tabledrag-cell-content .tabledrag-handle::after,
+.media-library-widget-modal .tabledrag-cell-content .tabledrag-handle::after,
+form.media-form .tabledrag-cell-content .tabledrag-handle::after {
+  vertical-align: middle;
+}
+#layout-builder-modal .indentation,
+.media-library-widget-modal .indentation,
+form.media-form .indentation {
+  position: relative;
+  left: -0.25rem;
+  /* LTR */
+  float: left;
+  /* LTR */
+  width: 1.5625rem;
+  /* 25px */
+  height: 1.5625rem;
+  /* 25px */
+  background: none !important;
+  line-height: 0;
+}
+#layout-builder-modal [dir=rtl] .indentation,
+.media-library-widget-modal [dir=rtl] .indentation,
+form.media-form [dir=rtl] .indentation {
+  right: -0.25rem;
+  left: auto;
+  float: right;
+}
+#layout-builder-modal .tree,
+.media-library-widget-modal .tree,
+form.media-form .tree {
+  width: 1.5625rem;
+  /* 25px */
+  height: 1.5625rem;
+  /* 25px */
+}
+#layout-builder-modal .tree__item,
+.media-library-widget-modal .tree__item,
+form.media-form .tree__item {
+  display: none;
+}
+#layout-builder-modal .tree-child path:not(.tree__item-child-ltr),
+.media-library-widget-modal .tree-child path:not(.tree__item-child-ltr),
+form.media-form .tree-child path:not(.tree__item-child-ltr) {
+  display: none;
+}
+#layout-builder-modal .tree-child path.tree__item-child-ltr,
+.media-library-widget-modal .tree-child path.tree__item-child-ltr,
+form.media-form .tree-child path.tree__item-child-ltr {
+  display: block;
+}
+#layout-builder-modal [dir=rtl] .tree-child path:not(.tree__item-child-rtl),
+.media-library-widget-modal [dir=rtl] .tree-child path:not(.tree__item-child-rtl),
+form.media-form [dir=rtl] .tree-child path:not(.tree__item-child-rtl) {
+  display: none;
+}
+#layout-builder-modal [dir=rtl] .tree-child path.tree__item-child-rtl,
+.media-library-widget-modal [dir=rtl] .tree-child path.tree__item-child-rtl,
+form.media-form [dir=rtl] .tree-child path.tree__item-child-rtl {
+  display: block;
+}
+#layout-builder-modal .tree-child-last path:not(.tree__item-child-last-ltr),
+.media-library-widget-modal .tree-child-last path:not(.tree__item-child-last-ltr),
+form.media-form .tree-child-last path:not(.tree__item-child-last-ltr) {
+  display: none;
+}
+#layout-builder-modal .tree-child-last path.tree__item-child-last-ltr,
+.media-library-widget-modal .tree-child-last path.tree__item-child-last-ltr,
+form.media-form .tree-child-last path.tree__item-child-last-ltr {
+  display: block;
+}
+#layout-builder-modal [dir=rtl] .tree-child-last path:not(.tree__item-child-last-rtl),
+.media-library-widget-modal [dir=rtl] .tree-child-last path:not(.tree__item-child-last-rtl),
+form.media-form [dir=rtl] .tree-child-last path:not(.tree__item-child-last-rtl) {
+  display: none;
+}
+#layout-builder-modal [dir=rtl] .tree-child-last path.tree__item-child-last-rtl,
+.media-library-widget-modal [dir=rtl] .tree-child-last path.tree__item-child-last-rtl,
+form.media-form [dir=rtl] .tree-child-last path.tree__item-child-last-rtl {
+  display: block;
+}
+#layout-builder-modal .tree-child-horizontal path:not(.tree__item-horizontal),
+.media-library-widget-modal .tree-child-horizontal path:not(.tree__item-horizontal),
+form.media-form .tree-child-horizontal path:not(.tree__item-horizontal) {
+  display: none;
+}
+#layout-builder-modal .tree-child-horizontal path.tree__item-horizontal,
+.media-library-widget-modal .tree-child-horizontal path.tree__item-horizontal,
+form.media-form .tree-child-horizontal path.tree__item-horizontal {
+  display: block;
+}
+#layout-builder-modal .tabledrag-cell-content,
+.media-library-widget-modal .tabledrag-cell-content,
+form.media-form .tabledrag-cell-content {
+  display: flex;
+  align-items: center;
+}
+#layout-builder-modal .tabledrag-cell-content .tabledrag-handle,
+.media-library-widget-modal .tabledrag-cell-content .tabledrag-handle,
+form.media-form .tabledrag-cell-content .tabledrag-handle {
+  overflow: visible;
+}
+#layout-builder-modal .tabledrag-cell-content .tabledrag-handle:after,
+.media-library-widget-modal .tabledrag-cell-content .tabledrag-handle:after,
+form.media-form .tabledrag-cell-content .tabledrag-handle:after {
+  width: 100%;
+  height: 100%;
+}

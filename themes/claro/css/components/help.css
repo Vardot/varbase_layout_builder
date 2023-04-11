@@ -1,0 +1,11 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/components/help.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal .help p,
+.media-library-widget-modal .help p,
+form.media-form .help p {
+  margin: 0 0 0.625rem;
+}

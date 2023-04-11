@@ -1,0 +1,290 @@
+/**
+ * Wrapped content from core/themes/claro/css/components/form.css.
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+#layout-builder-modal :-ms-input-placeholder,
+.media-library-widget-modal :-ms-input-placeholder,
+form.media-form :-ms-input-placeholder {
+  color: #919297;
+}
+#layout-builder-modal :-ms-input-placeholder,
+.media-library-widget-modal :-ms-input-placeholder,
+form.media-form :-ms-input-placeholder {
+  color: #919297;
+}
+#layout-builder-modal ::placeholder,
+.media-library-widget-modal ::placeholder,
+form.media-form ::placeholder {
+  color: #919297;
+}
+#layout-builder-modal :-ms-input-placeholder,
+.media-library-widget-modal :-ms-input-placeholder,
+form.media-form :-ms-input-placeholder {
+  color: #919297 !important;
+}
+#layout-builder-modal .form-item,
+.media-library-widget-modal .form-item,
+form.media-form .form-item {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+#layout-builder-modal tr .form-item,
+#layout-builder-modal .container-inline .form-item,
+.media-library-widget-modal tr .form-item,
+.media-library-widget-modal .container-inline .form-item,
+form.media-form tr .form-item,
+form.media-form .container-inline .form-item {
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+#layout-builder-modal .form-item__label,
+.media-library-widget-modal .form-item__label,
+form.media-form .form-item__label {
+  display: table;
+  margin-top: 0.25rem;
+  /* 4px */
+  margin-bottom: 0.25rem;
+  /* 4px */
+  font-size: 0.889rem;
+  /* ~14px */
+  font-weight: bold;
+  line-height: 1.125rem;
+}
+#layout-builder-modal .form-item__label--multiple-value-form,
+.media-library-widget-modal .form-item__label--multiple-value-form,
+form.media-form .form-item__label--multiple-value-form {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+#layout-builder-modal .form-item__label[for],
+.media-library-widget-modal .form-item__label[for],
+form.media-form .form-item__label[for] {
+  cursor: pointer;
+}
+#layout-builder-modal .form-item__label.option,
+.media-library-widget-modal .form-item__label.option,
+form.media-form .form-item__label.option {
+  display: inline;
+  font-weight: normal;
+}
+#layout-builder-modal .form-item__label.has-error,
+.media-library-widget-modal .form-item__label.has-error,
+form.media-form .form-item__label.has-error {
+  color: #d72222;
+}
+#layout-builder-modal .form-item__label.option.has-error,
+.media-library-widget-modal .form-item__label.option.has-error,
+form.media-form .form-item__label.option.has-error {
+  color: inherit;
+}
+#layout-builder-modal .form-item__label.is-disabled,
+.media-library-widget-modal .form-item__label.is-disabled,
+form.media-form .form-item__label.is-disabled {
+  cursor: default;
+  /* @todo ...or auto? */
+  color: #828388;
+}
+#layout-builder-modal .form-item__label.form-required::after,
+#layout-builder-modal .fieldset__label.form-required::after,
+.media-library-widget-modal .form-item__label.form-required::after,
+.media-library-widget-modal .fieldset__label.form-required::after,
+form.media-form .form-item__label.form-required::after,
+form.media-form .fieldset__label.form-required::after {
+  display: inline-block;
+  margin-right: 0.15em;
+  margin-left: 0.15em;
+  content: "*";
+  color: #d72222;
+  font-size: 0.875rem;
+}
+#layout-builder-modal .form-item__description,
+.media-library-widget-modal .form-item__description,
+form.media-form .form-item__description {
+  margin-top: 0.375rem;
+  /* 6px */
+  margin-bottom: 0.375rem;
+  /* 6px */
+  color: #55565b;
+  font-size: 0.79rem;
+  /* ~13px */
+  line-height: 1.0625rem;
+  /* 17px */
+}
+#layout-builder-modal .form-item__description.is-disabled,
+.media-library-widget-modal .form-item__description.is-disabled,
+form.media-form .form-item__description.is-disabled {
+  color: #828388;
+}
+#layout-builder-modal .form-item__error-message,
+.media-library-widget-modal .form-item__error-message,
+form.media-form .form-item__error-message {
+  margin-top: 0.375rem;
+  /* 6px */
+  margin-bottom: 0.375rem;
+  /* 6px */
+  color: #d72222;
+  font-size: 0.79rem;
+  /* ~13px */
+  font-weight: normal;
+  line-height: 1.0625rem;
+  /* 17px */
+}
+#layout-builder-modal .form-item__prefix.is-disabled,
+#layout-builder-modal .form-item__suffix.is-disabled,
+.media-library-widget-modal .form-item__prefix.is-disabled,
+.media-library-widget-modal .form-item__suffix.is-disabled,
+form.media-form .form-item__prefix.is-disabled,
+form.media-form .form-item__suffix.is-disabled {
+  color: #828388;
+}
+@media screen and (min-width: 37.5625rem) {
+  #layout-builder-modal .form-item__suffix,
+  .media-library-widget-modal .form-item__suffix,
+  form.media-form .form-item__suffix {
+    margin-left: 0.5rem;
+    /* LTR */
+  }
+  #layout-builder-modal [dir=rtl] .form-item__suffix,
+  .media-library-widget-modal [dir=rtl] .form-item__suffix,
+  form.media-form [dir=rtl] .form-item__suffix {
+    margin-right: 0.5rem;
+    margin-left: 0;
+  }
+}
+#layout-builder-modal .form-actions,
+.media-library-widget-modal .form-actions,
+form.media-form .form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+#layout-builder-modal .form-actions .button,
+#layout-builder-modal .form-actions .action-link,
+.media-library-widget-modal .form-actions .button,
+.media-library-widget-modal .form-actions .action-link,
+form.media-form .form-actions .button,
+form.media-form .form-actions .action-link {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+#layout-builder-modal .form-actions .ajax-progress--throbber,
+.media-library-widget-modal .form-actions .ajax-progress--throbber,
+form.media-form .form-actions .ajax-progress--throbber {
+  align-self: center;
+
+  -ms-grid-row-align: center;
+}
+#layout-builder-modal .confirm-parent,
+#layout-builder-modal .password-parent,
+.media-library-widget-modal .confirm-parent,
+.media-library-widget-modal .password-parent,
+form.media-form .confirm-parent,
+form.media-form .password-parent {
+  overflow: visible;
+  width: auto;
+}
+#layout-builder-modal .form-item-options-group-info-identifier,
+#layout-builder-modal .form-item-pass .description,
+.media-library-widget-modal .form-item-options-group-info-identifier,
+.media-library-widget-modal .form-item-pass .description,
+form.media-form .form-item-options-group-info-identifier,
+form.media-form .form-item-pass .description {
+  clear: both;
+}
+#layout-builder-modal .form-item--editor-format,
+.media-library-widget-modal .form-item--editor-format,
+form.media-form .form-item--editor-format {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 100%;
+}
+#layout-builder-modal .form-item--editor-format .form-item__label,
+#layout-builder-modal .form-item--editor-format .form-item__prefix,
+#layout-builder-modal .form-item--editor-format .form-item__suffix,
+#layout-builder-modal .form-item--editor-format .form-element--editor-format,
+.media-library-widget-modal .form-item--editor-format .form-item__label,
+.media-library-widget-modal .form-item--editor-format .form-item__prefix,
+.media-library-widget-modal .form-item--editor-format .form-item__suffix,
+.media-library-widget-modal .form-item--editor-format .form-element--editor-format,
+form.media-form .form-item--editor-format .form-item__label,
+form.media-form .form-item--editor-format .form-item__prefix,
+form.media-form .form-item--editor-format .form-item__suffix,
+form.media-form .form-item--editor-format .form-element--editor-format {
+  min-width: 1px;
+}
+#layout-builder-modal .form-item--editor-format .form-item__label,
+#layout-builder-modal .form-item--editor-format .form-item__prefix,
+#layout-builder-modal .form-item--editor-format .form-item__suffix,
+.media-library-widget-modal .form-item--editor-format .form-item__label,
+.media-library-widget-modal .form-item--editor-format .form-item__prefix,
+.media-library-widget-modal .form-item--editor-format .form-item__suffix,
+form.media-form .form-item--editor-format .form-item__label,
+form.media-form .form-item--editor-format .form-item__prefix,
+form.media-form .form-item--editor-format .form-item__suffix {
+  margin-right: 0.5rem;
+  /* LTR */
+}
+#layout-builder-modal [dir=rtl] .form-item--editor-format .form-item__label,
+#layout-builder-modal [dir=rtl] .form-item--editor-format .form-item__prefix,
+#layout-builder-modal [dir=rtl] .form-item--editor-format .form-item__suffix,
+.media-library-widget-modal [dir=rtl] .form-item--editor-format .form-item__label,
+.media-library-widget-modal [dir=rtl] .form-item--editor-format .form-item__prefix,
+.media-library-widget-modal [dir=rtl] .form-item--editor-format .form-item__suffix,
+form.media-form [dir=rtl] .form-item--editor-format .form-item__label,
+form.media-form [dir=rtl] .form-item--editor-format .form-item__prefix,
+form.media-form [dir=rtl] .form-item--editor-format .form-item__suffix {
+  margin-right: 0;
+  margin-left: 0.5rem;
+}
+#layout-builder-modal .form-item--editor-format .form-item__description,
+#layout-builder-modal .form-item--editor-format .form-item__error-message,
+.media-library-widget-modal .form-item--editor-format .form-item__description,
+.media-library-widget-modal .form-item--editor-format .form-item__error-message,
+form.media-form .form-item--editor-format .form-item__description,
+form.media-form .form-item--editor-format .form-item__error-message {
+  flex: 0 1 100%;
+  min-width: 1px;
+}
+@media screen and (max-width: 37.5rem) {
+  #layout-builder-modal .password-strength,
+  .media-library-widget-modal .password-strength,
+  form.media-form .password-strength {
+    width: 100%;
+  }
+  #layout-builder-modal div.form-item div.password-suggestions,
+  .media-library-widget-modal div.form-item div.password-suggestions,
+  form.media-form div.form-item div.password-suggestions {
+    float: none;
+  }
+}
+#layout-builder-modal button,
+.media-library-widget-modal button,
+form.media-form button {
+  line-height: 1.125rem;
+}
+#layout-builder-modal input,
+#layout-builder-modal optgroup,
+.media-library-widget-modal input,
+.media-library-widget-modal optgroup,
+form.media-form input,
+form.media-form optgroup {
+  line-height: 1.5rem;
+}
+#layout-builder-modal ::-webkit-file-upload-button,
+.media-library-widget-modal ::-webkit-file-upload-button,
+form.media-form ::-webkit-file-upload-button {
+  -webkit-appearance: push-button;
+}
+#layout-builder-modal .form-required::after,
+.media-library-widget-modal .form-required::after,
+form.media-form .form-required::after {
+  vertical-align: baseline;
+  background-image: none;
+}
