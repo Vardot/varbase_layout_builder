@@ -1,0 +1,41 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/components/dialog.css.
+ * .js class attribute removed, as it is "above" #layout-builder-modal
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+
+@import "../../../../../core/themes/claro/css/components/dialog";
+
+.ui-dialog {
+  .ui-dialog-titlebar-close {
+    width: 30px;
+    height: 30px;
+    background-image: url(../../icons/close.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 15px 15px;
+  }
+
+  &.ui-layout-builder-modal {
+    .ui-dialog-titlebar-close {
+      right: 0 !important;
+    }
+  }
+}
+
+[dir="rtl"] {
+  .ui-dialog {
+    .ui-dialog-title {
+      float: right;
+    }
+
+    &.ui-layout-builder-modal {
+      .ui-dialog-titlebar-close {
+        right: auto !important;
+        left: 0 !important;
+      }
+    }
+  }
+}

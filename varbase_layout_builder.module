@@ -106,8 +106,19 @@ function varbase_layout_builder_form_alter(&$form, FormStateInterface $form_stat
           || $route_name === 'layout_builder.overrides.node.view') {
 
           if ($form_id !== 'layout_builder_configure_section') {
-            // Add claro theme libraries.
-            $form['#attached']['library'][] = 'varbase_layout_builder/claro';
+
+            $active_theme = \Drupal::theme()->getActiveTheme()->getName();
+            $base_theme_extensions = \Drupal::theme()->getActiveTheme()->getBaseThemeExtensions();
+
+            if ($active_theme === 'gin' || in_array('gin', array_keys($base_theme_extensions))) {
+              // Add claro theme libraries.
+              $form['#attached']['library'][] = 'varbase_layout_builder/gin';
+            }
+            elseif ($active_theme === 'claro' || in_array('claro', array_keys($base_theme_extensions))) {
+                // Add claro theme libraries.
+              $form['#attached']['library'][] = 'varbase_layout_builder/claro';
+            }
+
           }
         }
       }

@@ -120,3 +120,88 @@ claro:
     - core/jquery
     - core/drupal
     - core/modernizr
+
+# Layout builder modal Gin theme.
+gin:
+  version: VERSION
+  css:
+    base:
+      themes/gin/css/base/elements.css: {}
+      themes/gin/css/base/typography.css: {}
+      themes/gin/css/base/variables.css: {}
+    component:
+      themes/gin/css/components/accordion.css: {}
+      themes/gin/css/components/action-link.css: {}
+      themes/gin/css/components/ajax-progress.module.css: {}
+      themes/gin/css/components/autocomplete-loading.module.css: {}
+      themes/gin/css/components/breadcrumb.css: {}
+      themes/gin/css/components/container-inline.css: {}
+      themes/gin/css/components/container-inline.module.css: {}
+      themes/gin/css/components/content-header.css: {}
+      themes/gin/css/components/buttons.css: {}
+      themes/gin/css/components/card.css: {}
+      themes/gin/css/components/details.css: {}
+      themes/gin/css/components/divider.css: {}
+      themes/gin/css/components/dropbutton.css: {}
+      themes/gin/css/components/dialog.css: {}
+      themes/gin/css/components/messages.css: {}
+      themes/gin/css/components/page-title.css: {}
+      themes/gin/css/components/entity-meta.css: {}
+      themes/gin/css/components/fieldset.css: {}
+      themes/gin/css/components/file.css: {}
+      themes/gin/css/components/form.css: {}
+      themes/gin/css/components/form--checkbox-radio.css: {}
+      themes/gin/css/components/form--checkbox-radio--ie.css: {}
+      themes/gin/css/components/form--field-multiple.css: {}
+      themes/gin/css/components/form--managed-file.css: {}
+      themes/gin/css/components/form--password-confirm.css: {}
+      themes/gin/css/components/form--text.css: {}
+      themes/gin/css/components/form--select.css: {}
+      themes/gin/css/components/help.css: {}
+      themes/gin/css/components/icon-link.css: {}
+      themes/gin/css/components/image-preview.css: {}
+      themes/gin/css/components/media-library.ui.css: {}
+      themes/gin/css/components/media.css: {}
+      themes/gin/css/components/menus-and-lists.css: {}
+      themes/gin/css/components/pager.css: {}
+      themes/gin/css/components/progress.css: {}
+      themes/gin/css/components/skip-link.css: {}
+      themes/gin/css/components/system-admin--admin-list.css: {}
+      themes/gin/css/components/system-admin--links.css: {}
+      themes/gin/css/components/system-admin--modules.css: {}
+      themes/gin/css/components/system-admin--panel.css: {}
+      themes/gin/css/components/system-admin--status-report.css: {}
+      themes/gin/css/components/system-status-counter.css: {}
+      themes/gin/css/components/system-status-report-counters.css: {}
+      themes/gin/css/components/system-status-report-general-info.css: {}
+      themes/gin/css/components/system-status-report.css: {}
+      themes/gin/css/components/tabledrag.css: {}
+      themes/gin/css/components/tables.css: {}
+      themes/gin/css/components/tableselect.css: {}
+      themes/gin/css/components/table--file-multiple-widget.css: {}
+      themes/gin/css/components/tablesort-indicator.css: {}
+      themes/gin/css/components/tabs.css: {}
+      themes/gin/css/components/vertical-tabs.css: {}
+      themes/gin/css/components/views_ui.admin.css: {}
+      themes/gin/css/components/views-exposed-form.css: {}
+      themes/gin/css/components/views-ui.css: {}
+    layout:
+      themes/gin/css/layout/breadcrumb.css: {}
+      themes/gin/css/layout/card-list.css: {}
+      themes/gin/css/layout/layout.css: {}
+      themes/gin/css/layout/local-actions.css: {}
+      themes/gin/css/layout/node-add.css: {}
+      themes/gin/css/layout/system-admin--layout.css: {}
+    theme:
+      themes/gin/css/theme/js.css: {}
+      themes/gin/css/theme/colors.css: {}
+      themes/gin/css/theme/media-library.css: {}
+      themes/gin/css/theme/field-ui.admin.css: {}
+      themes/gin/css/theme/filter.theme.css: {}
+      themes/gin/css/theme/vartheme-gin.theme.style.css: {}
+      themes/gin/css/theme/bootstrap-styles.dark.css: {}
+  dependencies:
+    - system/admin
+    - core/jquery
+    - core/drupal
+    - core/modernizr

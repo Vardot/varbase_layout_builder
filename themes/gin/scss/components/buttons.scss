@@ -1,0 +1,44 @@
+/**
+ * @file
+ * Wrapped content from core/themes/claro/css/components/button.css
+ * Maintainers: the import statement presumes a relative location of core css.
+ * The location may need to be adjusted depending on your setup.
+ */
+
+#layout-builder-modal,
+.media-library-widget-modal,
+form.media-form {
+  @import "../../../../../core/themes/claro/css/components/button";
+
+  .button--primary {
+    background: #003cc5;
+    &:hover,
+    &:active {
+      background: #0036b1;
+    }
+  }
+
+  .button {
+    width: auto;
+    height: auto;
+    background-image: none;
+    &.form-element {
+      background: #d4d4d8;
+    }
+  }
+
+  .js-hide {
+    display: none;
+  }
+
+  .button--extrasmall,
+  .button--small {
+    margin: 0.5rem 0.5rem 0.5rem 0;
+    padding: calc(0.25rem - 1px) calc(0.75rem - 1px);
+    font-size: 0.79rem;
+  }
+
+  .field-add-more-submit {
+    display: inline-block !important;
+  }
+}

@@ -71,12 +71,14 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
    *   To proceed with changing the theme.
    */
   public function applies(RouteMatchInterface $route_match) {
-
     $use_claro = $this->configFactory->get('varbase_layout_builder.settings')->get('use_claro');
     if (isset($use_claro) && $use_claro == 1) {
+
       $route_name = $route_match->getRouteName();
       if (isset($route_name) && strpos($route_name, 'layout_builder') !== FALSE) {
-        return TRUE;
+        if ($this->themeHandler->themeExists('gin') || $this->themeHandler->themeExists('claro')) {
+          return TRUE;
+        }
       }
     }
 
@@ -93,21 +95,26 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
    *   The selected active theme.
    */
   public function determineActiveTheme(RouteMatchInterface $route_match) {
-
     $use_claro = $this->configFactory->get('varbase_layout_builder.settings')->get('use_claro');
+
     if (isset($use_claro) && $use_claro == 1) {
 
       $route_name = $route_match->getRouteName();
       if (isset($route_name) && strpos($route_name, 'layout_builder') !== FALSE) {
 
-        $request_query_wrapper_format = $this->requestStack->getCurrentRequest()->query->get('_wrapper_format');
-        if (isset($request_query_wrapper_format)) {
-          if ($request_query_wrapper_format == 'drupal_dialog.off_canvas') {
-            return $this->configFactory->get('system.theme')->get('default');
+        if ($this->themeHandler->themeExists('gin') || $this->themeHandler->themeExists('claro')) {
+          $request_query_wrapper_format = $this->requestStack->getCurrentRequest()->query->get('_wrapper_format');
+          if (isset($request_query_wrapper_format)) {
+            if ($request_query_wrapper_format == 'drupal_dialog.off_canvas') {
+              return $this->configFactory->get('system.theme')->get('default');
+            }
+            else {
+              return $this->configFactory->get('system.theme')->get('admin');
+            }
           }
-          else {
-            return $this->configFactory->get('system.theme')->get('admin');
-          }
+        }
+        else {
+          return $this->configFactory->get('system.theme')->get('admin');
         }
       }
     }
