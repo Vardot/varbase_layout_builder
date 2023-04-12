@@ -7,7 +7,8 @@
 #layout-builder-modal,
 .media-library-widget-modal,
 form.media-form {
-  @import "../../../../../../../core/themes/claro/css/components/details";
+  @import "../../../../../core/themes/claro/css/components/details";
+
   details {
     border: 0;
     .details-wrapper {

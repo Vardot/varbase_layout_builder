@@ -4,26 +4,26 @@
  * The location may need to be adjusted depending on your setup.
  */
 #layout-builder-modal {
-  color: #fff !important;
-  background: #383a40 !important;
+  color: #ffffff !important;
+  background: #383A40 !important;
 }
 
 #layout-builder-modal details,
 #layout-builder-modal summary,
 #layout-builder-modal .ui-dialog-content {
-  color: #fff !important;
   outline: 0;
-  background: #383a40 !important;
+  color: #ffffff !important;
+  background: #383A40 !important;
 }
 
 #layout-builder-modal details,
 #layout-builder-modal summary,
 #layout-builder-modal .details-wrapper {
   padding: 0 1rem;
-  -webkit-appearance: none;
-  color: #fff !important;
-  background: #383a40 !important;
   background-image: none;
+  -webkit-appearance: none;
+  color: #ffffff !important;
+  background: #383A40 !important;
 }
 
 #layout-builder-modal .claro-details__summary::after,
