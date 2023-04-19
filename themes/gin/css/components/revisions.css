@@ -1,0 +1,32 @@
+#layout-builder-modal .revision-current,
+.media-library-widget-modal .revision-current,
+form.media-form .revision-current {
+  background-color: transparent;
+}
+#layout-builder-modal .revision-current td:first-of-type,
+.media-library-widget-modal .revision-current td:first-of-type,
+form.media-form .revision-current td:first-of-type {
+  position: relative;
+}
+#layout-builder-modal .revision-current td:first-of-type::before,
+.media-library-widget-modal .revision-current td:first-of-type::before,
+form.media-form .revision-current td:first-of-type::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  width: 1px;
+  height: 100%;
+}
+#layout-builder-modal [dir=ltr] .revision-current td:first-of-type::before,
+.media-library-widget-modal [dir=ltr] .revision-current td:first-of-type::before,
+form.media-form [dir=ltr] .revision-current td:first-of-type::before {
+  left: 0;
+  border-left: 6px solid var(--gin-color-green);
+}
+#layout-builder-modal [dir=rtl] .revision-current td:first-of-type::before,
+.media-library-widget-modal [dir=rtl] .revision-current td:first-of-type::before,
+form.media-form [dir=rtl] .revision-current td:first-of-type::before {
+  right: 0;
+  border-right: 6px solid var(--gin-color-green);
+}

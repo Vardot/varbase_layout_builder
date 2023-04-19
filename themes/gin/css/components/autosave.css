@@ -1,0 +1,17 @@
+#layout-builder-modal #autosave-notification,
+.media-library-widget-modal #autosave-notification,
+form.media-form #autosave-notification {
+  font-size: var(--gin-font-size-s);
+  bottom: var(--gin-spacing-xs);
+  border-radius: var(--gin-border-xs);
+}
+#layout-builder-modal [dir=ltr] #autosave-notification,
+.media-library-widget-modal [dir=ltr] #autosave-notification,
+form.media-form [dir=ltr] #autosave-notification {
+  right: var(--gin-spacing-xs);
+}
+#layout-builder-modal [dir=rtl] #autosave-notification,
+.media-library-widget-modal [dir=rtl] #autosave-notification,
+form.media-form [dir=rtl] #autosave-notification {
+  left: var(--gin-spacing-xs);
+}

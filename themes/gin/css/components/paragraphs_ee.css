@@ -1,0 +1,386 @@
+#layout-builder-modal .js .paragraphs-add-dialog--categorized .category-title,
+#layout-builder-modal .js .paragraphs-add-dialog--categorized.paragraphs-style-list .paragraphs-label,
+#layout-builder-modal .js .paragraphs-add-dialog--categorized .paragraphs-label,
+.media-library-widget-modal .js .paragraphs-add-dialog--categorized .category-title,
+.media-library-widget-modal .js .paragraphs-add-dialog--categorized.paragraphs-style-list .paragraphs-label,
+.media-library-widget-modal .js .paragraphs-add-dialog--categorized .paragraphs-label,
+form.media-form .js .paragraphs-add-dialog--categorized .category-title,
+form.media-form .js .paragraphs-add-dialog--categorized.paragraphs-style-list .paragraphs-label,
+form.media-form .js .paragraphs-add-dialog--categorized .paragraphs-label {
+  color: var(--gin-color-text);
+}
+#layout-builder-modal .js .paragraphs-add-dialog--categorized .paragraphs-button--add-more:hover .paragraphs-label,
+.media-library-widget-modal .js .paragraphs-add-dialog--categorized .paragraphs-button--add-more:hover .paragraphs-label,
+form.media-form .js .paragraphs-add-dialog--categorized .paragraphs-button--add-more:hover .paragraphs-label {
+  color: var(--gin-color-button-text);
+}
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .category-title,
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .paragraphs-label,
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized.paragraphs-style-list .paragraphs-label,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .category-title,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .paragraphs-label,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized.paragraphs-style-list .paragraphs-label,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .category-title,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .paragraphs-label,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized.paragraphs-style-list .paragraphs-label {
+  color: #fff;
+}
+#layout-builder-modal .js .paragraphs-add-dialog--categorized .paragraphs-description,
+.media-library-widget-modal .js .paragraphs-add-dialog--categorized .paragraphs-description,
+form.media-form .js .paragraphs-add-dialog--categorized .paragraphs-description {
+  color: var(--gin-color-text-light);
+}
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .paragraphs-description,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .paragraphs-description,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .paragraphs-description {
+  color: #ddd;
+}
+#layout-builder-modal .js .paragraphs-add-dialog--categorized .display-toggle,
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .display-toggle,
+#layout-builder-modal .js .paragraphs-add-dialog--categorized.paragraphs-style-list .display-toggle.style-tiles:active,
+#layout-builder-modal .js .paragraphs-add-dialog--categorized.paragraphs-style-list .display-toggle.style-tiles:focus,
+#layout-builder-modal .js .paragraphs-add-dialog--categorized.paragraphs-style-list .display-toggle.style-tiles:hover,
+#layout-builder-modal .js .paragraphs-add-dialog--categorized.paragraphs-style-list .display-toggle.style-list:active,
+#layout-builder-modal .js .paragraphs-add-dialog--categorized.paragraphs-style-list .display-toggle.style-list:focus,
+#layout-builder-modal .js .paragraphs-add-dialog--categorized.paragraphs-style-list .display-toggle.style-list:hover,
+#layout-builder-modal .js .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .display-toggle.style-tiles:active,
+#layout-builder-modal .js .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .display-toggle.style-tiles:focus,
+#layout-builder-modal .js .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .display-toggle.style-tiles:hover,
+#layout-builder-modal .js .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .display-toggle.style-list:active,
+#layout-builder-modal .js .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .display-toggle.style-list:focus,
+#layout-builder-modal .js .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .display-toggle.style-list:hover,
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized.paragraphs-style-list .display-toggle.style-tiles:active,
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized.paragraphs-style-list .display-toggle.style-tiles:focus,
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized.paragraphs-style-list .display-toggle.style-tiles:hover,
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized.paragraphs-style-list .display-toggle.style-list:active,
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized.paragraphs-style-list .display-toggle.style-list:focus,
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized.paragraphs-style-list .display-toggle.style-list:hover,
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .display-toggle.style-tiles:active,
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .display-toggle.style-tiles:focus,
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .display-toggle.style-tiles:hover,
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .display-toggle.style-list:active,
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .display-toggle.style-list:focus,
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .display-toggle.style-list:hover,
+#layout-builder-modal .js .paragraphs-add-dialog--categorized.paragraphs-style-list .style-list,
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized.paragraphs-style-list .style-list,
+.media-library-widget-modal .js .paragraphs-add-dialog--categorized .display-toggle,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .display-toggle,
+.media-library-widget-modal .js .paragraphs-add-dialog--categorized.paragraphs-style-list .display-toggle.style-tiles:active,
+.media-library-widget-modal .js .paragraphs-add-dialog--categorized.paragraphs-style-list .display-toggle.style-tiles:focus,
+.media-library-widget-modal .js .paragraphs-add-dialog--categorized.paragraphs-style-list .display-toggle.style-tiles:hover,
+.media-library-widget-modal .js .paragraphs-add-dialog--categorized.paragraphs-style-list .display-toggle.style-list:active,
+.media-library-widget-modal .js .paragraphs-add-dialog--categorized.paragraphs-style-list .display-toggle.style-list:focus,
+.media-library-widget-modal .js .paragraphs-add-dialog--categorized.paragraphs-style-list .display-toggle.style-list:hover,
+.media-library-widget-modal .js .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .display-toggle.style-tiles:active,
+.media-library-widget-modal .js .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .display-toggle.style-tiles:focus,
+.media-library-widget-modal .js .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .display-toggle.style-tiles:hover,
+.media-library-widget-modal .js .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .display-toggle.style-list:active,
+.media-library-widget-modal .js .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .display-toggle.style-list:focus,
+.media-library-widget-modal .js .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .display-toggle.style-list:hover,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized.paragraphs-style-list .display-toggle.style-tiles:active,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized.paragraphs-style-list .display-toggle.style-tiles:focus,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized.paragraphs-style-list .display-toggle.style-tiles:hover,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized.paragraphs-style-list .display-toggle.style-list:active,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized.paragraphs-style-list .display-toggle.style-list:focus,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized.paragraphs-style-list .display-toggle.style-list:hover,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .display-toggle.style-tiles:active,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .display-toggle.style-tiles:focus,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .display-toggle.style-tiles:hover,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .display-toggle.style-list:active,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .display-toggle.style-list:focus,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .display-toggle.style-list:hover,
+.media-library-widget-modal .js .paragraphs-add-dialog--categorized.paragraphs-style-list .style-list,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized.paragraphs-style-list .style-list,
+form.media-form .js .paragraphs-add-dialog--categorized .display-toggle,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .display-toggle,
+form.media-form .js .paragraphs-add-dialog--categorized.paragraphs-style-list .display-toggle.style-tiles:active,
+form.media-form .js .paragraphs-add-dialog--categorized.paragraphs-style-list .display-toggle.style-tiles:focus,
+form.media-form .js .paragraphs-add-dialog--categorized.paragraphs-style-list .display-toggle.style-tiles:hover,
+form.media-form .js .paragraphs-add-dialog--categorized.paragraphs-style-list .display-toggle.style-list:active,
+form.media-form .js .paragraphs-add-dialog--categorized.paragraphs-style-list .display-toggle.style-list:focus,
+form.media-form .js .paragraphs-add-dialog--categorized.paragraphs-style-list .display-toggle.style-list:hover,
+form.media-form .js .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .display-toggle.style-tiles:active,
+form.media-form .js .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .display-toggle.style-tiles:focus,
+form.media-form .js .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .display-toggle.style-tiles:hover,
+form.media-form .js .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .display-toggle.style-list:active,
+form.media-form .js .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .display-toggle.style-list:focus,
+form.media-form .js .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .display-toggle.style-list:hover,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized.paragraphs-style-list .display-toggle.style-tiles:active,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized.paragraphs-style-list .display-toggle.style-tiles:focus,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized.paragraphs-style-list .display-toggle.style-tiles:hover,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized.paragraphs-style-list .display-toggle.style-list:active,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized.paragraphs-style-list .display-toggle.style-list:focus,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized.paragraphs-style-list .display-toggle.style-list:hover,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .display-toggle.style-tiles:active,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .display-toggle.style-tiles:focus,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .display-toggle.style-tiles:hover,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .display-toggle.style-list:active,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .display-toggle.style-list:focus,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .display-toggle.style-list:hover,
+form.media-form .js .paragraphs-add-dialog--categorized.paragraphs-style-list .style-list,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized.paragraphs-style-list .style-list {
+  margin-top: 10px;
+  background: var(--gin-color-primary);
+  border: 0 none;
+  box-shadow: none;
+}
+#layout-builder-modal .paragraphs-button--icon,
+.media-library-widget-modal .paragraphs-button--icon,
+form.media-form .paragraphs-button--icon {
+  position: relative;
+  background-size: contain;
+}
+#layout-builder-modal .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon:not(.image-default),
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon:not(.image-default),
+.media-library-widget-modal .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon:not(.image-default),
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon:not(.image-default),
+form.media-form .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon:not(.image-default),
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon:not(.image-default) {
+  background-color: #fff;
+}
+#layout-builder-modal .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::before, #layout-builder-modal .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::after,
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::before,
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::after,
+.media-library-widget-modal .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::before,
+.media-library-widget-modal .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::after,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::before,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::after,
+form.media-form .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::before,
+form.media-form .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::after,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::before,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::after {
+  content: "";
+  opacity: 0;
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 48px;
+  height: 48px;
+  margin: 0;
+  background-image: none !important;
+  border-radius: 50%;
+  transition: opacity 500ms ease-in-out;
+}
+#layout-builder-modal [dir=ltr] .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::before, #layout-builder-modal [dir=ltr] .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::after, #layout-builder-modal [dir=ltr] .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::before, #layout-builder-modal [dir=ltr] .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::after,
+.media-library-widget-modal [dir=ltr] .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::before,
+.media-library-widget-modal [dir=ltr] .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::after,
+.media-library-widget-modal [dir=ltr] .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::before,
+.media-library-widget-modal [dir=ltr] .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::after,
+form.media-form [dir=ltr] .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::before,
+form.media-form [dir=ltr] .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::after,
+form.media-form [dir=ltr] .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::before,
+form.media-form [dir=ltr] .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::after {
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#layout-builder-modal [dir=rtl] .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::before, #layout-builder-modal [dir=rtl] .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::after, #layout-builder-modal [dir=rtl] .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::before, #layout-builder-modal [dir=rtl] .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::after,
+.media-library-widget-modal [dir=rtl] .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::before,
+.media-library-widget-modal [dir=rtl] .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::after,
+.media-library-widget-modal [dir=rtl] .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::before,
+.media-library-widget-modal [dir=rtl] .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::after,
+form.media-form [dir=rtl] .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::before,
+form.media-form [dir=rtl] .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::after,
+form.media-form [dir=rtl] .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::before,
+form.media-form [dir=rtl] .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::after {
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+#layout-builder-modal .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::after,
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::after,
+.media-library-widget-modal .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::after,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::after,
+form.media-form .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::after,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::after {
+  z-index: 1;
+  background: var(--gin-color-primary);
+}
+#layout-builder-modal .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::before,
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::before,
+.media-library-widget-modal .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::before,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::before,
+form.media-form .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::before,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more .paragraphs-button--icon::before {
+  z-index: 2;
+  background: var(--gin-color-button-text);
+  -webkit-mask-image: url("../../media/sprite.svg#add-view");
+  mask-image: url("../../media/sprite.svg#add-view");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-size: 32px 32px;
+  mask-size: 32px 32px;
+}
+#layout-builder-modal .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:active .paragraphs-button--icon::before, #layout-builder-modal .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:active .paragraphs-button--icon::after, #layout-builder-modal .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:focus .paragraphs-button--icon::before, #layout-builder-modal .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:focus .paragraphs-button--icon::after, #layout-builder-modal .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:hover .paragraphs-button--icon::before, #layout-builder-modal .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:hover .paragraphs-button--icon::after,
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:active .paragraphs-button--icon::before,
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:active .paragraphs-button--icon::after,
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:focus .paragraphs-button--icon::before,
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:focus .paragraphs-button--icon::after,
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:hover .paragraphs-button--icon::before,
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:hover .paragraphs-button--icon::after,
+.media-library-widget-modal .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:active .paragraphs-button--icon::before,
+.media-library-widget-modal .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:active .paragraphs-button--icon::after,
+.media-library-widget-modal .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:focus .paragraphs-button--icon::before,
+.media-library-widget-modal .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:focus .paragraphs-button--icon::after,
+.media-library-widget-modal .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:hover .paragraphs-button--icon::before,
+.media-library-widget-modal .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:hover .paragraphs-button--icon::after,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:active .paragraphs-button--icon::before,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:active .paragraphs-button--icon::after,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:focus .paragraphs-button--icon::before,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:focus .paragraphs-button--icon::after,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:hover .paragraphs-button--icon::before,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:hover .paragraphs-button--icon::after,
+form.media-form .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:active .paragraphs-button--icon::before,
+form.media-form .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:active .paragraphs-button--icon::after,
+form.media-form .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:focus .paragraphs-button--icon::before,
+form.media-form .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:focus .paragraphs-button--icon::after,
+form.media-form .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:hover .paragraphs-button--icon::before,
+form.media-form .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:hover .paragraphs-button--icon::after,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:active .paragraphs-button--icon::before,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:active .paragraphs-button--icon::after,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:focus .paragraphs-button--icon::before,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:focus .paragraphs-button--icon::after,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:hover .paragraphs-button--icon::before,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:hover .paragraphs-button--icon::after {
+  opacity: 1;
+}
+#layout-builder-modal .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:active .paragraphs-button--icon::before, #layout-builder-modal .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:focus .paragraphs-button--icon::before, #layout-builder-modal .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:hover .paragraphs-button--icon::before,
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:active .paragraphs-button--icon::before,
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:focus .paragraphs-button--icon::before,
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:hover .paragraphs-button--icon::before,
+.media-library-widget-modal .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:active .paragraphs-button--icon::before,
+.media-library-widget-modal .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:focus .paragraphs-button--icon::before,
+.media-library-widget-modal .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:hover .paragraphs-button--icon::before,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:active .paragraphs-button--icon::before,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:focus .paragraphs-button--icon::before,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:hover .paragraphs-button--icon::before,
+form.media-form .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:active .paragraphs-button--icon::before,
+form.media-form .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:focus .paragraphs-button--icon::before,
+form.media-form .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:hover .paragraphs-button--icon::before,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:active .paragraphs-button--icon::before,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:focus .paragraphs-button--icon::before,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized:not(.paragraphs-style-list) .paragraphs-button--add-more:hover .paragraphs-button--icon::before {
+  background-image: none;
+}
+#layout-builder-modal .js .paragraphs-add-dialog--categorized .paragraphs-button--icon,
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .paragraphs-button--icon,
+.media-library-widget-modal .js .paragraphs-add-dialog--categorized .paragraphs-button--icon,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .paragraphs-button--icon,
+form.media-form .js .paragraphs-add-dialog--categorized .paragraphs-button--icon,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .paragraphs-button--icon {
+  width: 196px;
+  background-size: contain;
+}
+#layout-builder-modal .js .paragraphs-add-dialog--categorized .item-filter,
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .item-filter,
+.media-library-widget-modal .js .paragraphs-add-dialog--categorized .item-filter,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .item-filter,
+form.media-form .js .paragraphs-add-dialog--categorized .item-filter,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .item-filter {
+  font-family: inherit;
+  font-size: var(--gin-font-size);
+  padding: 12px;
+  background: white;
+  border: 1px solid #8e929c;
+  border-radius: var(--gin-border-m);
+}
+#layout-builder-modal .js .paragraphs-add-dialog--categorized .search-description label,
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .search-description label,
+.media-library-widget-modal .js .paragraphs-add-dialog--categorized .search-description label,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .search-description label,
+form.media-form .js .paragraphs-add-dialog--categorized .search-description label,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .search-description label {
+  font-size: var(--gin-font-size-xxs);
+}
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .search-description label,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .search-description label,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .search-description label {
+  color: var(--gin-color-button-text);
+}
+#layout-builder-modal .js .paragraphs-add-dialog--categorized .paragraphs-add-dialog-row button,
+.media-library-widget-modal .js .paragraphs-add-dialog--categorized .paragraphs-add-dialog-row button,
+form.media-form .js .paragraphs-add-dialog--categorized .paragraphs-add-dialog-row button {
+  padding: var(--gin-spacing-xs);
+  max-width: 215px;
+}
+#layout-builder-modal .js .paragraphs-add-dialog--categorized .paragraphs-label,
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .paragraphs-label,
+.media-library-widget-modal .js .paragraphs-add-dialog--categorized .paragraphs-label,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .paragraphs-label,
+form.media-form .js .paragraphs-add-dialog--categorized .paragraphs-label,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .paragraphs-label {
+  max-width: 180px;
+}
+#layout-builder-modal .js .paragraphs-add-dialog--categorized .dialog-header,
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .dialog-header,
+.media-library-widget-modal .js .paragraphs-add-dialog--categorized .dialog-header,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .dialog-header,
+form.media-form .js .paragraphs-add-dialog--categorized .dialog-header,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .dialog-header {
+  margin: var(--gin-spacing-m) 0;
+}
+#layout-builder-modal .js .paragraphs-add-dialog--categorized .paragraphs-add-dialog-list,
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .paragraphs-add-dialog-list,
+.media-library-widget-modal .js .paragraphs-add-dialog--categorized .paragraphs-add-dialog-list,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .paragraphs-add-dialog-list,
+form.media-form .js .paragraphs-add-dialog--categorized .paragraphs-add-dialog-list,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .paragraphs-add-dialog-list {
+  max-width: unset;
+  margin: 0 calc(var(--gin-spacing-xs) * -1);
+  width: calc(100% + var(--gin-spacing-m));
+}
+#layout-builder-modal .js .paragraphs-add-dialog--categorized .paragraphs-add-dialog-row,
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .paragraphs-add-dialog-row,
+.media-library-widget-modal .js .paragraphs-add-dialog--categorized .paragraphs-add-dialog-row,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .paragraphs-add-dialog-row,
+form.media-form .js .paragraphs-add-dialog--categorized .paragraphs-add-dialog-row,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .paragraphs-add-dialog-row {
+  flex-basis: auto;
+}
+#layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .paragraphs-add-dialog-row,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .paragraphs-add-dialog-row,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized .paragraphs-add-dialog-row {
+  padding: 0;
+  margin: var(--gin-spacing-xs);
+}
+#layout-builder-modal .js .paragraphs-add-dialog--categorized.paragraphs-style-list .paragraphs-add-dialog-row, #layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized.paragraphs-style-list .paragraphs-add-dialog-row,
+.media-library-widget-modal .js .paragraphs-add-dialog--categorized.paragraphs-style-list .paragraphs-add-dialog-row,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized.paragraphs-style-list .paragraphs-add-dialog-row,
+form.media-form .js .paragraphs-add-dialog--categorized.paragraphs-style-list .paragraphs-add-dialog-row,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized.paragraphs-style-list .paragraphs-add-dialog-row {
+  width: auto;
+}
+#layout-builder-modal .js .paragraphs-add-dialog--categorized.paragraphs-style-list .paragraphs-button--add-more, #layout-builder-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized.paragraphs-style-list .paragraphs-button--add-more,
+.media-library-widget-modal .js .paragraphs-add-dialog--categorized.paragraphs-style-list .paragraphs-button--add-more,
+.media-library-widget-modal .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized.paragraphs-style-list .paragraphs-button--add-more,
+form.media-form .js .paragraphs-add-dialog--categorized.paragraphs-style-list .paragraphs-button--add-more,
+form.media-form .ui-dialog.ui-dialog-off-canvas.paragraphs-ee-off-canvas--browser #drupal-off-canvas .paragraphs-add-dialog--categorized.paragraphs-style-list .paragraphs-button--add-more {
+  max-width: 100%;
+}
+#layout-builder-modal .paragraphs_ee__add-in-between__row:last-of-type .paragraphs_ee__add-in-between__wrapper,
+.media-library-widget-modal .paragraphs_ee__add-in-between__row:last-of-type .paragraphs_ee__add-in-between__wrapper,
+form.media-form .paragraphs_ee__add-in-between__row:last-of-type .paragraphs_ee__add-in-between__wrapper {
+  box-shadow: 0 1px 2px var(--gin-color-primary-light);
+}
+#layout-builder-modal .js .paragraphs_ee__add-in-between__wrapper .paragraphs_ee__add-in-between__button,
+.media-library-widget-modal .js .paragraphs_ee__add-in-between__wrapper .paragraphs_ee__add-in-between__button,
+form.media-form .js .paragraphs_ee__add-in-between__wrapper .paragraphs_ee__add-in-between__button {
+  color: var(--gin-color-text);
+}
+#layout-builder-modal .js .paragraphs_ee__add-in-between__wrapper .paragraphs_ee__add-in-between__button::before,
+#layout-builder-modal .js .paragraphs_ee__add-in-between__wrapper .paragraphs_ee__add-in-between__button.last::before,
+.media-library-widget-modal .js .paragraphs_ee__add-in-between__wrapper .paragraphs_ee__add-in-between__button::before,
+.media-library-widget-modal .js .paragraphs_ee__add-in-between__wrapper .paragraphs_ee__add-in-between__button.last::before,
+form.media-form .js .paragraphs_ee__add-in-between__wrapper .paragraphs_ee__add-in-between__button::before,
+form.media-form .js .paragraphs_ee__add-in-between__wrapper .paragraphs_ee__add-in-between__button.last::before {
+  border: 1px solid var(--gin-color-primary) !important;
+  box-shadow: 0 0 1px var(--gin-color-primary);
+}
+#layout-builder-modal .js .paragraphs_ee__add-in-between__wrapper .paragraphs_ee__add-in-between__button:focus::before,
+#layout-builder-modal .js .paragraphs_ee__add-in-between__wrapper .paragraphs_ee__add-in-between__button.last:focus::before,
+.media-library-widget-modal .js .paragraphs_ee__add-in-between__wrapper .paragraphs_ee__add-in-between__button:focus::before,
+.media-library-widget-modal .js .paragraphs_ee__add-in-between__wrapper .paragraphs_ee__add-in-between__button.last:focus::before,
+form.media-form .js .paragraphs_ee__add-in-between__wrapper .paragraphs_ee__add-in-between__button:focus::before,
+form.media-form .js .paragraphs_ee__add-in-between__wrapper .paragraphs_ee__add-in-between__button.last:focus::before {
+  box-shadow: 0 0 0 1px var(--gin-color-focus-border), 0 0 0 4px var(--gin-color-focus);
+}

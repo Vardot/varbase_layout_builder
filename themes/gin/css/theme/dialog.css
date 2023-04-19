@@ -1,0 +1,1339 @@
+#layout-builder-modal .ui-dialog a,
+#layout-builder-modal .ui-dialog .link,
+#layout-builder-modal .ui-dialog button.link,
+#layout-builder-modal .ui-dialog .tabs__link.is-active,
+#layout-builder-modal .ui-dialog [open] .claro-details__summary--accordion,
+#layout-builder-modal .ui-dialog [open] .claro-details__summary--accordion-item,
+#layout-builder-modal .ui-dialog [open] .claro-details__summary--vertical-tabs-item,
+#layout-builder-modal .ui-dialog .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link,
+.media-library-widget-modal .ui-dialog a,
+.media-library-widget-modal .ui-dialog .link,
+.media-library-widget-modal .ui-dialog button.link,
+.media-library-widget-modal .ui-dialog .tabs__link.is-active,
+.media-library-widget-modal .ui-dialog [open] .claro-details__summary--accordion,
+.media-library-widget-modal .ui-dialog [open] .claro-details__summary--accordion-item,
+.media-library-widget-modal .ui-dialog [open] .claro-details__summary--vertical-tabs-item,
+.media-library-widget-modal .ui-dialog .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link,
+form.media-form .ui-dialog a,
+form.media-form .ui-dialog .link,
+form.media-form .ui-dialog button.link,
+form.media-form .ui-dialog .tabs__link.is-active,
+form.media-form .ui-dialog [open] .claro-details__summary--accordion,
+form.media-form .ui-dialog [open] .claro-details__summary--accordion-item,
+form.media-form .ui-dialog [open] .claro-details__summary--vertical-tabs-item,
+form.media-form .ui-dialog .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link {
+  color: var(--gin-color-primary);
+  text-decoration: none;
+}
+#layout-builder-modal .ui-dialog a:hover,
+#layout-builder-modal .ui-dialog .link:hover,
+#layout-builder-modal .ui-dialog button.link:hover,
+#layout-builder-modal .ui-dialog .tabs__link.is-active:hover,
+#layout-builder-modal .ui-dialog [open] .claro-details__summary--accordion:hover,
+#layout-builder-modal .ui-dialog [open] .claro-details__summary--accordion-item:hover,
+#layout-builder-modal .ui-dialog [open] .claro-details__summary--vertical-tabs-item:hover,
+#layout-builder-modal .ui-dialog .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:hover,
+.media-library-widget-modal .ui-dialog a:hover,
+.media-library-widget-modal .ui-dialog .link:hover,
+.media-library-widget-modal .ui-dialog button.link:hover,
+.media-library-widget-modal .ui-dialog .tabs__link.is-active:hover,
+.media-library-widget-modal .ui-dialog [open] .claro-details__summary--accordion:hover,
+.media-library-widget-modal .ui-dialog [open] .claro-details__summary--accordion-item:hover,
+.media-library-widget-modal .ui-dialog [open] .claro-details__summary--vertical-tabs-item:hover,
+.media-library-widget-modal .ui-dialog .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:hover,
+form.media-form .ui-dialog a:hover,
+form.media-form .ui-dialog .link:hover,
+form.media-form .ui-dialog button.link:hover,
+form.media-form .ui-dialog .tabs__link.is-active:hover,
+form.media-form .ui-dialog [open] .claro-details__summary--accordion:hover,
+form.media-form .ui-dialog [open] .claro-details__summary--accordion-item:hover,
+form.media-form .ui-dialog [open] .claro-details__summary--vertical-tabs-item:hover,
+form.media-form .ui-dialog .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:hover {
+  color: var(--gin-color-primary-hover);
+}
+#layout-builder-modal .ui-dialog a:active,
+#layout-builder-modal .ui-dialog .link:active,
+#layout-builder-modal .ui-dialog button.link:active,
+#layout-builder-modal .ui-dialog .tabs__link.is-active:active,
+#layout-builder-modal .ui-dialog [open] .claro-details__summary--accordion:active,
+#layout-builder-modal .ui-dialog [open] .claro-details__summary--accordion-item:active,
+#layout-builder-modal .ui-dialog [open] .claro-details__summary--vertical-tabs-item:active,
+#layout-builder-modal .ui-dialog .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:active,
+.media-library-widget-modal .ui-dialog a:active,
+.media-library-widget-modal .ui-dialog .link:active,
+.media-library-widget-modal .ui-dialog button.link:active,
+.media-library-widget-modal .ui-dialog .tabs__link.is-active:active,
+.media-library-widget-modal .ui-dialog [open] .claro-details__summary--accordion:active,
+.media-library-widget-modal .ui-dialog [open] .claro-details__summary--accordion-item:active,
+.media-library-widget-modal .ui-dialog [open] .claro-details__summary--vertical-tabs-item:active,
+.media-library-widget-modal .ui-dialog .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:active,
+form.media-form .ui-dialog a:active,
+form.media-form .ui-dialog .link:active,
+form.media-form .ui-dialog button.link:active,
+form.media-form .ui-dialog .tabs__link.is-active:active,
+form.media-form .ui-dialog [open] .claro-details__summary--accordion:active,
+form.media-form .ui-dialog [open] .claro-details__summary--accordion-item:active,
+form.media-form .ui-dialog [open] .claro-details__summary--vertical-tabs-item:active,
+form.media-form .ui-dialog .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:active {
+  color: var(--gin-color-primary-active);
+}
+#layout-builder-modal .ui-dialog .is-horizontal .tabs__link:hover,
+#layout-builder-modal .ui-dialog .claro-details__summary:hover,
+#layout-builder-modal .ui-dialog .action-link:hover,
+.media-library-widget-modal .ui-dialog .is-horizontal .tabs__link:hover,
+.media-library-widget-modal .ui-dialog .claro-details__summary:hover,
+.media-library-widget-modal .ui-dialog .action-link:hover,
+form.media-form .ui-dialog .is-horizontal .tabs__link:hover,
+form.media-form .ui-dialog .claro-details__summary:hover,
+form.media-form .ui-dialog .action-link:hover {
+  color: var(--gin-color-primary-hover);
+}
+#layout-builder-modal .ui-dialog .claro-details[open] > .claro-details__summary:focus,
+.media-library-widget-modal .ui-dialog .claro-details[open] > .claro-details__summary:focus,
+form.media-form .ui-dialog .claro-details[open] > .claro-details__summary:focus {
+  color: var(--gin-color-primary-active);
+}
+#layout-builder-modal .ui-dialog .form-boolean--type-checkbox:checked,
+#layout-builder-modal .ui-dialog .form-boolean--type-radio:checked:not(:disabled),
+#layout-builder-modal .ui-dialog .is-horizontal .tabs__link.is-active::before,
+#layout-builder-modal .ui-dialog .tabs__tab.is-active::before,
+#layout-builder-modal .ui-dialog [open] > .claro-details__summary--accordion:not(:focus):not(:active)::after,
+#layout-builder-modal .ui-dialog [open] > .claro-details__summary--accordion-item:not(:focus):not(:active)::after,
+#layout-builder-modal .ui-dialog .collapse-processed[open] > .claro-details__summary--accordion .details-title:not(:focus)::after,
+#layout-builder-modal .ui-dialog .collapse-processed[open] > .claro-details__summary--accordion-item .details-title:not(:focus)::after,
+#layout-builder-modal .ui-dialog [open] > .claro-details__summary--vertical-tabs-item:not(:focus):not(:active)::after,
+#layout-builder-modal .ui-dialog .collapse-processed[open] > .claro-details__summary--vertical-tabs-item .details-title:not(:focus)::after,
+#layout-builder-modal .ui-dialog .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link::before,
+.media-library-widget-modal .ui-dialog .form-boolean--type-checkbox:checked,
+.media-library-widget-modal .ui-dialog .form-boolean--type-radio:checked:not(:disabled),
+.media-library-widget-modal .ui-dialog .is-horizontal .tabs__link.is-active::before,
+.media-library-widget-modal .ui-dialog .tabs__tab.is-active::before,
+.media-library-widget-modal .ui-dialog [open] > .claro-details__summary--accordion:not(:focus):not(:active)::after,
+.media-library-widget-modal .ui-dialog [open] > .claro-details__summary--accordion-item:not(:focus):not(:active)::after,
+.media-library-widget-modal .ui-dialog .collapse-processed[open] > .claro-details__summary--accordion .details-title:not(:focus)::after,
+.media-library-widget-modal .ui-dialog .collapse-processed[open] > .claro-details__summary--accordion-item .details-title:not(:focus)::after,
+.media-library-widget-modal .ui-dialog [open] > .claro-details__summary--vertical-tabs-item:not(:focus):not(:active)::after,
+.media-library-widget-modal .ui-dialog .collapse-processed[open] > .claro-details__summary--vertical-tabs-item .details-title:not(:focus)::after,
+.media-library-widget-modal .ui-dialog .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link::before,
+form.media-form .ui-dialog .form-boolean--type-checkbox:checked,
+form.media-form .ui-dialog .form-boolean--type-radio:checked:not(:disabled),
+form.media-form .ui-dialog .is-horizontal .tabs__link.is-active::before,
+form.media-form .ui-dialog .tabs__tab.is-active::before,
+form.media-form .ui-dialog [open] > .claro-details__summary--accordion:not(:focus):not(:active)::after,
+form.media-form .ui-dialog [open] > .claro-details__summary--accordion-item:not(:focus):not(:active)::after,
+form.media-form .ui-dialog .collapse-processed[open] > .claro-details__summary--accordion .details-title:not(:focus)::after,
+form.media-form .ui-dialog .collapse-processed[open] > .claro-details__summary--accordion-item .details-title:not(:focus)::after,
+form.media-form .ui-dialog [open] > .claro-details__summary--vertical-tabs-item:not(:focus):not(:active)::after,
+form.media-form .ui-dialog .collapse-processed[open] > .claro-details__summary--vertical-tabs-item .details-title:not(:focus)::after,
+form.media-form .ui-dialog .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link::before {
+  border-color: var(--gin-color-primary);
+}
+#layout-builder-modal .ui-dialog .form-boolean--type-checkbox:checked:hover,
+#layout-builder-modal .ui-dialog .form-boolean--type-radio:checked:not(:disabled):hover,
+#layout-builder-modal .ui-dialog .is-horizontal .tabs__link.is-active::before:hover,
+#layout-builder-modal .ui-dialog .tabs__tab.is-active::before:hover,
+#layout-builder-modal .ui-dialog [open] > .claro-details__summary--accordion:not(:focus):not(:active)::after:hover,
+#layout-builder-modal .ui-dialog [open] > .claro-details__summary--accordion-item:not(:focus):not(:active)::after:hover,
+#layout-builder-modal .ui-dialog .collapse-processed[open] > .claro-details__summary--accordion .details-title:not(:focus)::after:hover,
+#layout-builder-modal .ui-dialog .collapse-processed[open] > .claro-details__summary--accordion-item .details-title:not(:focus)::after:hover,
+#layout-builder-modal .ui-dialog [open] > .claro-details__summary--vertical-tabs-item:not(:focus):not(:active)::after:hover,
+#layout-builder-modal .ui-dialog .collapse-processed[open] > .claro-details__summary--vertical-tabs-item .details-title:not(:focus)::after:hover,
+#layout-builder-modal .ui-dialog .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link::before:hover,
+.media-library-widget-modal .ui-dialog .form-boolean--type-checkbox:checked:hover,
+.media-library-widget-modal .ui-dialog .form-boolean--type-radio:checked:not(:disabled):hover,
+.media-library-widget-modal .ui-dialog .is-horizontal .tabs__link.is-active::before:hover,
+.media-library-widget-modal .ui-dialog .tabs__tab.is-active::before:hover,
+.media-library-widget-modal .ui-dialog [open] > .claro-details__summary--accordion:not(:focus):not(:active)::after:hover,
+.media-library-widget-modal .ui-dialog [open] > .claro-details__summary--accordion-item:not(:focus):not(:active)::after:hover,
+.media-library-widget-modal .ui-dialog .collapse-processed[open] > .claro-details__summary--accordion .details-title:not(:focus)::after:hover,
+.media-library-widget-modal .ui-dialog .collapse-processed[open] > .claro-details__summary--accordion-item .details-title:not(:focus)::after:hover,
+.media-library-widget-modal .ui-dialog [open] > .claro-details__summary--vertical-tabs-item:not(:focus):not(:active)::after:hover,
+.media-library-widget-modal .ui-dialog .collapse-processed[open] > .claro-details__summary--vertical-tabs-item .details-title:not(:focus)::after:hover,
+.media-library-widget-modal .ui-dialog .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link::before:hover,
+form.media-form .ui-dialog .form-boolean--type-checkbox:checked:hover,
+form.media-form .ui-dialog .form-boolean--type-radio:checked:not(:disabled):hover,
+form.media-form .ui-dialog .is-horizontal .tabs__link.is-active::before:hover,
+form.media-form .ui-dialog .tabs__tab.is-active::before:hover,
+form.media-form .ui-dialog [open] > .claro-details__summary--accordion:not(:focus):not(:active)::after:hover,
+form.media-form .ui-dialog [open] > .claro-details__summary--accordion-item:not(:focus):not(:active)::after:hover,
+form.media-form .ui-dialog .collapse-processed[open] > .claro-details__summary--accordion .details-title:not(:focus)::after:hover,
+form.media-form .ui-dialog .collapse-processed[open] > .claro-details__summary--accordion-item .details-title:not(:focus)::after:hover,
+form.media-form .ui-dialog [open] > .claro-details__summary--vertical-tabs-item:not(:focus):not(:active)::after:hover,
+form.media-form .ui-dialog .collapse-processed[open] > .claro-details__summary--vertical-tabs-item .details-title:not(:focus)::after:hover,
+form.media-form .ui-dialog .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link::before:hover {
+  border-color: var(--gin-color-primary-hover);
+}
+#layout-builder-modal .ui-dialog .form-boolean--type-checkbox:checked:active,
+#layout-builder-modal .ui-dialog .form-boolean--type-radio:checked:not(:disabled):active,
+#layout-builder-modal .ui-dialog .is-horizontal .tabs__link.is-active::before:active,
+#layout-builder-modal .ui-dialog .tabs__tab.is-active::before:active,
+#layout-builder-modal .ui-dialog [open] > .claro-details__summary--accordion:not(:focus):not(:active)::after:active,
+#layout-builder-modal .ui-dialog [open] > .claro-details__summary--accordion-item:not(:focus):not(:active)::after:active,
+#layout-builder-modal .ui-dialog .collapse-processed[open] > .claro-details__summary--accordion .details-title:not(:focus)::after:active,
+#layout-builder-modal .ui-dialog .collapse-processed[open] > .claro-details__summary--accordion-item .details-title:not(:focus)::after:active,
+#layout-builder-modal .ui-dialog [open] > .claro-details__summary--vertical-tabs-item:not(:focus):not(:active)::after:active,
+#layout-builder-modal .ui-dialog .collapse-processed[open] > .claro-details__summary--vertical-tabs-item .details-title:not(:focus)::after:active,
+#layout-builder-modal .ui-dialog .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link::before:active,
+.media-library-widget-modal .ui-dialog .form-boolean--type-checkbox:checked:active,
+.media-library-widget-modal .ui-dialog .form-boolean--type-radio:checked:not(:disabled):active,
+.media-library-widget-modal .ui-dialog .is-horizontal .tabs__link.is-active::before:active,
+.media-library-widget-modal .ui-dialog .tabs__tab.is-active::before:active,
+.media-library-widget-modal .ui-dialog [open] > .claro-details__summary--accordion:not(:focus):not(:active)::after:active,
+.media-library-widget-modal .ui-dialog [open] > .claro-details__summary--accordion-item:not(:focus):not(:active)::after:active,
+.media-library-widget-modal .ui-dialog .collapse-processed[open] > .claro-details__summary--accordion .details-title:not(:focus)::after:active,
+.media-library-widget-modal .ui-dialog .collapse-processed[open] > .claro-details__summary--accordion-item .details-title:not(:focus)::after:active,
+.media-library-widget-modal .ui-dialog [open] > .claro-details__summary--vertical-tabs-item:not(:focus):not(:active)::after:active,
+.media-library-widget-modal .ui-dialog .collapse-processed[open] > .claro-details__summary--vertical-tabs-item .details-title:not(:focus)::after:active,
+.media-library-widget-modal .ui-dialog .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link::before:active,
+form.media-form .ui-dialog .form-boolean--type-checkbox:checked:active,
+form.media-form .ui-dialog .form-boolean--type-radio:checked:not(:disabled):active,
+form.media-form .ui-dialog .is-horizontal .tabs__link.is-active::before:active,
+form.media-form .ui-dialog .tabs__tab.is-active::before:active,
+form.media-form .ui-dialog [open] > .claro-details__summary--accordion:not(:focus):not(:active)::after:active,
+form.media-form .ui-dialog [open] > .claro-details__summary--accordion-item:not(:focus):not(:active)::after:active,
+form.media-form .ui-dialog .collapse-processed[open] > .claro-details__summary--accordion .details-title:not(:focus)::after:active,
+form.media-form .ui-dialog .collapse-processed[open] > .claro-details__summary--accordion-item .details-title:not(:focus)::after:active,
+form.media-form .ui-dialog [open] > .claro-details__summary--vertical-tabs-item:not(:focus):not(:active)::after:active,
+form.media-form .ui-dialog .collapse-processed[open] > .claro-details__summary--vertical-tabs-item .details-title:not(:focus)::after:active,
+form.media-form .ui-dialog .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link::before:active {
+  border-color: var(--gin-color-primary-active);
+}
+#layout-builder-modal .ui-dialog .button,
+#layout-builder-modal .ui-dialog .dropbutton__item:first-of-type > *,
+#layout-builder-modal .ui-dialog .dropbutton__toggle,
+.media-library-widget-modal .ui-dialog .button,
+.media-library-widget-modal .ui-dialog .dropbutton__item:first-of-type > *,
+.media-library-widget-modal .ui-dialog .dropbutton__toggle,
+form.media-form .ui-dialog .button,
+form.media-form .ui-dialog .dropbutton__item:first-of-type > *,
+form.media-form .ui-dialog .dropbutton__toggle {
+  font-size: var(--gin-font-size-s);
+  font-weight: var(--gin-font-weight-semibold);
+  color: var(--gin-color-primary);
+  background-color: transparent;
+  box-shadow: none;
+  transition: var(--gin-transition);
+}
+@media (min-width: 80em) {
+  #layout-builder-modal .ui-dialog .button,
+  #layout-builder-modal .ui-dialog .dropbutton__item:first-of-type > *,
+  #layout-builder-modal .ui-dialog .dropbutton__toggle,
+  .media-library-widget-modal .ui-dialog .button,
+  .media-library-widget-modal .ui-dialog .dropbutton__item:first-of-type > *,
+  .media-library-widget-modal .ui-dialog .dropbutton__toggle,
+  form.media-form .ui-dialog .button,
+  form.media-form .ui-dialog .dropbutton__item:first-of-type > *,
+  form.media-form .ui-dialog .dropbutton__toggle {
+    font-size: var(--gin-font-size);
+  }
+}
+#layout-builder-modal .ui-dialog .button:hover,
+#layout-builder-modal .ui-dialog .dropbutton__item:first-of-type > *:hover,
+#layout-builder-modal .ui-dialog .dropbutton__toggle:hover,
+.media-library-widget-modal .ui-dialog .button:hover,
+.media-library-widget-modal .ui-dialog .dropbutton__item:first-of-type > *:hover,
+.media-library-widget-modal .ui-dialog .dropbutton__toggle:hover,
+form.media-form .ui-dialog .button:hover,
+form.media-form .ui-dialog .dropbutton__item:first-of-type > *:hover,
+form.media-form .ui-dialog .dropbutton__toggle:hover {
+  background-color: var(--gin-color-primary-hover);
+}
+#layout-builder-modal .ui-dialog .button:active, #layout-builder-modal .ui-dialog .button:focus,
+#layout-builder-modal .ui-dialog .dropbutton__item:first-of-type > *:active,
+#layout-builder-modal .ui-dialog .dropbutton__item:first-of-type > *:focus,
+#layout-builder-modal .ui-dialog .dropbutton__toggle:active,
+#layout-builder-modal .ui-dialog .dropbutton__toggle:focus,
+.media-library-widget-modal .ui-dialog .button:active,
+.media-library-widget-modal .ui-dialog .button:focus,
+.media-library-widget-modal .ui-dialog .dropbutton__item:first-of-type > *:active,
+.media-library-widget-modal .ui-dialog .dropbutton__item:first-of-type > *:focus,
+.media-library-widget-modal .ui-dialog .dropbutton__toggle:active,
+.media-library-widget-modal .ui-dialog .dropbutton__toggle:focus,
+form.media-form .ui-dialog .button:active,
+form.media-form .ui-dialog .button:focus,
+form.media-form .ui-dialog .dropbutton__item:first-of-type > *:active,
+form.media-form .ui-dialog .dropbutton__item:first-of-type > *:focus,
+form.media-form .ui-dialog .dropbutton__toggle:active,
+form.media-form .ui-dialog .dropbutton__toggle:focus {
+  background-color: var(--gin-color-primary-active);
+}
+#layout-builder-modal .ui-dialog .button:hover, #layout-builder-modal .ui-dialog .button:active, #layout-builder-modal .ui-dialog .button:focus,
+#layout-builder-modal .ui-dialog .dropbutton__item:first-of-type > *:hover,
+#layout-builder-modal .ui-dialog .dropbutton__item:first-of-type > *:active,
+#layout-builder-modal .ui-dialog .dropbutton__item:first-of-type > *:focus,
+#layout-builder-modal .ui-dialog .dropbutton__toggle:hover,
+#layout-builder-modal .ui-dialog .dropbutton__toggle:active,
+#layout-builder-modal .ui-dialog .dropbutton__toggle:focus,
+.media-library-widget-modal .ui-dialog .button:hover,
+.media-library-widget-modal .ui-dialog .button:active,
+.media-library-widget-modal .ui-dialog .button:focus,
+.media-library-widget-modal .ui-dialog .dropbutton__item:first-of-type > *:hover,
+.media-library-widget-modal .ui-dialog .dropbutton__item:first-of-type > *:active,
+.media-library-widget-modal .ui-dialog .dropbutton__item:first-of-type > *:focus,
+.media-library-widget-modal .ui-dialog .dropbutton__toggle:hover,
+.media-library-widget-modal .ui-dialog .dropbutton__toggle:active,
+.media-library-widget-modal .ui-dialog .dropbutton__toggle:focus,
+form.media-form .ui-dialog .button:hover,
+form.media-form .ui-dialog .button:active,
+form.media-form .ui-dialog .button:focus,
+form.media-form .ui-dialog .dropbutton__item:first-of-type > *:hover,
+form.media-form .ui-dialog .dropbutton__item:first-of-type > *:active,
+form.media-form .ui-dialog .dropbutton__item:first-of-type > *:focus,
+form.media-form .ui-dialog .dropbutton__toggle:hover,
+form.media-form .ui-dialog .dropbutton__toggle:active,
+form.media-form .ui-dialog .dropbutton__toggle:focus {
+  color: var(--gin-color-button-text);
+}
+#layout-builder-modal .ui-dialog .button,
+#layout-builder-modal .ui-dialog .button:not(:focus),
+#layout-builder-modal .ui-dialog .form-actions .button,
+#layout-builder-modal .ui-dialog .action-link--icon-trash.action-link,
+.media-library-widget-modal .ui-dialog .button,
+.media-library-widget-modal .ui-dialog .button:not(:focus),
+.media-library-widget-modal .ui-dialog .form-actions .button,
+.media-library-widget-modal .ui-dialog .action-link--icon-trash.action-link,
+form.media-form .ui-dialog .button,
+form.media-form .ui-dialog .button:not(:focus),
+form.media-form .ui-dialog .form-actions .button,
+form.media-form .ui-dialog .action-link--icon-trash.action-link {
+  padding: calc(var(--gin-spacing-m) - 2px) calc(var(--gin-spacing-l) - 2px);
+  border: 2px solid var(--gin-color-primary) !important;
+  border-radius: var(--gin-border-m);
+  box-shadow: 0 1px 2px var(--gin-color-primary-light);
+  transition: var(--gin-transition);
+}
+#layout-builder-modal .gin--dark-mode .ui-dialog .button,
+#layout-builder-modal .gin--dark-mode .ui-dialog .button:not(:focus),
+#layout-builder-modal .gin--dark-mode .ui-dialog .form-actions .button,
+#layout-builder-modal .gin--dark-mode .ui-dialog .action-link--icon-trash.action-link,
+.media-library-widget-modal .gin--dark-mode .ui-dialog .button,
+.media-library-widget-modal .gin--dark-mode .ui-dialog .button:not(:focus),
+.media-library-widget-modal .gin--dark-mode .ui-dialog .form-actions .button,
+.media-library-widget-modal .gin--dark-mode .ui-dialog .action-link--icon-trash.action-link,
+form.media-form .gin--dark-mode .ui-dialog .button,
+form.media-form .gin--dark-mode .ui-dialog .button:not(:focus),
+form.media-form .gin--dark-mode .ui-dialog .form-actions .button,
+form.media-form .gin--dark-mode .ui-dialog .action-link--icon-trash.action-link {
+  box-shadow: 0 2px 18px var(--gin-shadow-button);
+}
+#layout-builder-modal .ui-dialog .button:hover,
+#layout-builder-modal .ui-dialog .button:not(:focus):hover,
+#layout-builder-modal .ui-dialog .form-actions .button:hover,
+#layout-builder-modal .ui-dialog .action-link--icon-trash.action-link:hover,
+.media-library-widget-modal .ui-dialog .button:hover,
+.media-library-widget-modal .ui-dialog .button:not(:focus):hover,
+.media-library-widget-modal .ui-dialog .form-actions .button:hover,
+.media-library-widget-modal .ui-dialog .action-link--icon-trash.action-link:hover,
+form.media-form .ui-dialog .button:hover,
+form.media-form .ui-dialog .button:not(:focus):hover,
+form.media-form .ui-dialog .form-actions .button:hover,
+form.media-form .ui-dialog .action-link--icon-trash.action-link:hover {
+  background-color: var(--gin-color-primary-hover);
+  border-color: var(--gin-color-primary-hover) !important;
+}
+#layout-builder-modal .ui-dialog .button:active, #layout-builder-modal .ui-dialog .button:focus,
+#layout-builder-modal .ui-dialog .button:not(:focus):active,
+#layout-builder-modal .ui-dialog .button:not(:focus):focus,
+#layout-builder-modal .ui-dialog .form-actions .button:active,
+#layout-builder-modal .ui-dialog .form-actions .button:focus,
+#layout-builder-modal .ui-dialog .action-link--icon-trash.action-link:active,
+#layout-builder-modal .ui-dialog .action-link--icon-trash.action-link:focus,
+.media-library-widget-modal .ui-dialog .button:active,
+.media-library-widget-modal .ui-dialog .button:focus,
+.media-library-widget-modal .ui-dialog .button:not(:focus):active,
+.media-library-widget-modal .ui-dialog .button:not(:focus):focus,
+.media-library-widget-modal .ui-dialog .form-actions .button:active,
+.media-library-widget-modal .ui-dialog .form-actions .button:focus,
+.media-library-widget-modal .ui-dialog .action-link--icon-trash.action-link:active,
+.media-library-widget-modal .ui-dialog .action-link--icon-trash.action-link:focus,
+form.media-form .ui-dialog .button:active,
+form.media-form .ui-dialog .button:focus,
+form.media-form .ui-dialog .button:not(:focus):active,
+form.media-form .ui-dialog .button:not(:focus):focus,
+form.media-form .ui-dialog .form-actions .button:active,
+form.media-form .ui-dialog .form-actions .button:focus,
+form.media-form .ui-dialog .action-link--icon-trash.action-link:active,
+form.media-form .ui-dialog .action-link--icon-trash.action-link:focus {
+  border-color: var(--gin-color-primary-active) !important;
+}
+#layout-builder-modal .ui-dialog .button:hover, #layout-builder-modal .ui-dialog .button:active, #layout-builder-modal .ui-dialog .button:focus, #layout-builder-modal .ui-dialog .button:hover:focus,
+#layout-builder-modal .ui-dialog .button:not(:focus):hover,
+#layout-builder-modal .ui-dialog .button:not(:focus):active,
+#layout-builder-modal .ui-dialog .button:not(:focus):focus,
+#layout-builder-modal .ui-dialog .button:not(:focus):hover:focus,
+#layout-builder-modal .ui-dialog .form-actions .button:hover,
+#layout-builder-modal .ui-dialog .form-actions .button:active,
+#layout-builder-modal .ui-dialog .form-actions .button:focus,
+#layout-builder-modal .ui-dialog .form-actions .button:hover:focus,
+#layout-builder-modal .ui-dialog .action-link--icon-trash.action-link:hover,
+#layout-builder-modal .ui-dialog .action-link--icon-trash.action-link:active,
+#layout-builder-modal .ui-dialog .action-link--icon-trash.action-link:focus,
+#layout-builder-modal .ui-dialog .action-link--icon-trash.action-link:hover:focus,
+.media-library-widget-modal .ui-dialog .button:hover,
+.media-library-widget-modal .ui-dialog .button:active,
+.media-library-widget-modal .ui-dialog .button:focus,
+.media-library-widget-modal .ui-dialog .button:hover:focus,
+.media-library-widget-modal .ui-dialog .button:not(:focus):hover,
+.media-library-widget-modal .ui-dialog .button:not(:focus):active,
+.media-library-widget-modal .ui-dialog .button:not(:focus):focus,
+.media-library-widget-modal .ui-dialog .button:not(:focus):hover:focus,
+.media-library-widget-modal .ui-dialog .form-actions .button:hover,
+.media-library-widget-modal .ui-dialog .form-actions .button:active,
+.media-library-widget-modal .ui-dialog .form-actions .button:focus,
+.media-library-widget-modal .ui-dialog .form-actions .button:hover:focus,
+.media-library-widget-modal .ui-dialog .action-link--icon-trash.action-link:hover,
+.media-library-widget-modal .ui-dialog .action-link--icon-trash.action-link:active,
+.media-library-widget-modal .ui-dialog .action-link--icon-trash.action-link:focus,
+.media-library-widget-modal .ui-dialog .action-link--icon-trash.action-link:hover:focus,
+form.media-form .ui-dialog .button:hover,
+form.media-form .ui-dialog .button:active,
+form.media-form .ui-dialog .button:focus,
+form.media-form .ui-dialog .button:hover:focus,
+form.media-form .ui-dialog .button:not(:focus):hover,
+form.media-form .ui-dialog .button:not(:focus):active,
+form.media-form .ui-dialog .button:not(:focus):focus,
+form.media-form .ui-dialog .button:not(:focus):hover:focus,
+form.media-form .ui-dialog .form-actions .button:hover,
+form.media-form .ui-dialog .form-actions .button:active,
+form.media-form .ui-dialog .form-actions .button:focus,
+form.media-form .ui-dialog .form-actions .button:hover:focus,
+form.media-form .ui-dialog .action-link--icon-trash.action-link:hover,
+form.media-form .ui-dialog .action-link--icon-trash.action-link:active,
+form.media-form .ui-dialog .action-link--icon-trash.action-link:focus,
+form.media-form .ui-dialog .action-link--icon-trash.action-link:hover:focus {
+  color: var(--gin-color-button-text);
+}
+#layout-builder-modal [dir=ltr] .ui-dialog .form-actions .button,
+.media-library-widget-modal [dir=ltr] .ui-dialog .form-actions .button,
+form.media-form [dir=ltr] .ui-dialog .form-actions .button {
+  margin-right: var(--gin-spacing-xs);
+}
+#layout-builder-modal [dir=rtl] .ui-dialog .form-actions .button,
+.media-library-widget-modal [dir=rtl] .ui-dialog .form-actions .button,
+form.media-form [dir=rtl] .ui-dialog .form-actions .button {
+  margin-left: var(--gin-spacing-xs);
+}
+#layout-builder-modal .ui-dialog .button.button--small,
+.media-library-widget-modal .ui-dialog .button.button--small,
+form.media-form .ui-dialog .button.button--small {
+  padding: var(--gin-spacing-xs) var(--gin-spacing-m);
+  border-radius: var(--gin-border-s);
+}
+#layout-builder-modal .ui-dialog .button.button--extrasmall,
+.media-library-widget-modal .ui-dialog .button.button--extrasmall,
+form.media-form .ui-dialog .button.button--extrasmall {
+  padding: var(--gin-spacing-xxs) var(--gin-spacing-s);
+  border-radius: var(--gin-border-s);
+}
+#layout-builder-modal .ui-dialog .button--primary,
+#layout-builder-modal .ui-dialog .button--primary:not(:focus),
+#layout-builder-modal .ui-dialog .ief-entity-submit,
+.media-library-widget-modal .ui-dialog .button--primary,
+.media-library-widget-modal .ui-dialog .button--primary:not(:focus),
+.media-library-widget-modal .ui-dialog .ief-entity-submit,
+form.media-form .ui-dialog .button--primary,
+form.media-form .ui-dialog .button--primary:not(:focus),
+form.media-form .ui-dialog .ief-entity-submit {
+  background: var(--gin-color-primary);
+}
+#layout-builder-modal [dir=ltr] .ui-dialog .button--primary,
+#layout-builder-modal [dir=ltr] .ui-dialog .button--primary:not(:focus),
+#layout-builder-modal [dir=ltr] .ui-dialog .ief-entity-submit,
+.media-library-widget-modal [dir=ltr] .ui-dialog .button--primary,
+.media-library-widget-modal [dir=ltr] .ui-dialog .button--primary:not(:focus),
+.media-library-widget-modal [dir=ltr] .ui-dialog .ief-entity-submit,
+form.media-form [dir=ltr] .ui-dialog .button--primary,
+form.media-form [dir=ltr] .ui-dialog .button--primary:not(:focus),
+form.media-form [dir=ltr] .ui-dialog .ief-entity-submit {
+  box-shadow: 0.1em 0.25em 0.5em var(--gin-color-primary-light);
+}
+#layout-builder-modal [dir=rtl] .ui-dialog .button--primary,
+#layout-builder-modal [dir=rtl] .ui-dialog .button--primary:not(:focus),
+#layout-builder-modal [dir=rtl] .ui-dialog .ief-entity-submit,
+.media-library-widget-modal [dir=rtl] .ui-dialog .button--primary,
+.media-library-widget-modal [dir=rtl] .ui-dialog .button--primary:not(:focus),
+.media-library-widget-modal [dir=rtl] .ui-dialog .ief-entity-submit,
+form.media-form [dir=rtl] .ui-dialog .button--primary,
+form.media-form [dir=rtl] .ui-dialog .button--primary:not(:focus),
+form.media-form [dir=rtl] .ui-dialog .ief-entity-submit {
+  box-shadow: -0.1em 0.25em 0.5em var(--gin-color-primary-light);
+}
+#layout-builder-modal .ui-dialog .button--primary:hover,
+#layout-builder-modal .ui-dialog .button--primary:not(:focus):hover,
+#layout-builder-modal .ui-dialog .ief-entity-submit:hover,
+.media-library-widget-modal .ui-dialog .button--primary:hover,
+.media-library-widget-modal .ui-dialog .button--primary:not(:focus):hover,
+.media-library-widget-modal .ui-dialog .ief-entity-submit:hover,
+form.media-form .ui-dialog .button--primary:hover,
+form.media-form .ui-dialog .button--primary:not(:focus):hover,
+form.media-form .ui-dialog .ief-entity-submit:hover {
+  background-color: var(--gin-color-primary-hover);
+}
+#layout-builder-modal .ui-dialog .button--primary:active, #layout-builder-modal .ui-dialog .button--primary:focus,
+#layout-builder-modal .ui-dialog .button--primary:not(:focus):active,
+#layout-builder-modal .ui-dialog .button--primary:not(:focus):focus,
+#layout-builder-modal .ui-dialog .ief-entity-submit:active,
+#layout-builder-modal .ui-dialog .ief-entity-submit:focus,
+.media-library-widget-modal .ui-dialog .button--primary:active,
+.media-library-widget-modal .ui-dialog .button--primary:focus,
+.media-library-widget-modal .ui-dialog .button--primary:not(:focus):active,
+.media-library-widget-modal .ui-dialog .button--primary:not(:focus):focus,
+.media-library-widget-modal .ui-dialog .ief-entity-submit:active,
+.media-library-widget-modal .ui-dialog .ief-entity-submit:focus,
+form.media-form .ui-dialog .button--primary:active,
+form.media-form .ui-dialog .button--primary:focus,
+form.media-form .ui-dialog .button--primary:not(:focus):active,
+form.media-form .ui-dialog .button--primary:not(:focus):focus,
+form.media-form .ui-dialog .ief-entity-submit:active,
+form.media-form .ui-dialog .ief-entity-submit:focus {
+  background-color: var(--gin-color-primary-active);
+}
+#layout-builder-modal .ui-dialog .button--primary, #layout-builder-modal .ui-dialog .button--primary:hover, #layout-builder-modal .ui-dialog .button--primary:active, #layout-builder-modal .ui-dialog .button--primary:focus,
+#layout-builder-modal .ui-dialog .button--primary:not(:focus),
+#layout-builder-modal .ui-dialog .button--primary:not(:focus):hover,
+#layout-builder-modal .ui-dialog .button--primary:not(:focus):active,
+#layout-builder-modal .ui-dialog .button--primary:not(:focus):focus,
+#layout-builder-modal .ui-dialog .ief-entity-submit,
+#layout-builder-modal .ui-dialog .ief-entity-submit:hover,
+#layout-builder-modal .ui-dialog .ief-entity-submit:active,
+#layout-builder-modal .ui-dialog .ief-entity-submit:focus,
+.media-library-widget-modal .ui-dialog .button--primary,
+.media-library-widget-modal .ui-dialog .button--primary:hover,
+.media-library-widget-modal .ui-dialog .button--primary:active,
+.media-library-widget-modal .ui-dialog .button--primary:focus,
+.media-library-widget-modal .ui-dialog .button--primary:not(:focus),
+.media-library-widget-modal .ui-dialog .button--primary:not(:focus):hover,
+.media-library-widget-modal .ui-dialog .button--primary:not(:focus):active,
+.media-library-widget-modal .ui-dialog .button--primary:not(:focus):focus,
+.media-library-widget-modal .ui-dialog .ief-entity-submit,
+.media-library-widget-modal .ui-dialog .ief-entity-submit:hover,
+.media-library-widget-modal .ui-dialog .ief-entity-submit:active,
+.media-library-widget-modal .ui-dialog .ief-entity-submit:focus,
+form.media-form .ui-dialog .button--primary,
+form.media-form .ui-dialog .button--primary:hover,
+form.media-form .ui-dialog .button--primary:active,
+form.media-form .ui-dialog .button--primary:focus,
+form.media-form .ui-dialog .button--primary:not(:focus),
+form.media-form .ui-dialog .button--primary:not(:focus):hover,
+form.media-form .ui-dialog .button--primary:not(:focus):active,
+form.media-form .ui-dialog .button--primary:not(:focus):focus,
+form.media-form .ui-dialog .ief-entity-submit,
+form.media-form .ui-dialog .ief-entity-submit:hover,
+form.media-form .ui-dialog .ief-entity-submit:active,
+form.media-form .ui-dialog .ief-entity-submit:focus {
+  color: var(--gin-color-button-text);
+}
+#layout-builder-modal .ui-dialog a.button:hover,
+#layout-builder-modal .ui-dialog a.button:active,
+.media-library-widget-modal .ui-dialog a.button:hover,
+.media-library-widget-modal .ui-dialog a.button:active,
+form.media-form .ui-dialog a.button:hover,
+form.media-form .ui-dialog a.button:active {
+  color: var(--gin-color-button-text);
+}
+#layout-builder-modal .gin--dark-mode .ui-dialog a.button--primary:hover,
+#layout-builder-modal .gin--dark-mode .ui-dialog a.button--primary:active,
+#layout-builder-modal .gin--dark-mode .ui-dialog a.button--primary:focus,
+#layout-builder-modal .gin--dark-mode .ui-dialog a.button--primary:focus:hover,
+.media-library-widget-modal .gin--dark-mode .ui-dialog a.button--primary:hover,
+.media-library-widget-modal .gin--dark-mode .ui-dialog a.button--primary:active,
+.media-library-widget-modal .gin--dark-mode .ui-dialog a.button--primary:focus,
+.media-library-widget-modal .gin--dark-mode .ui-dialog a.button--primary:focus:hover,
+form.media-form .gin--dark-mode .ui-dialog a.button--primary:hover,
+form.media-form .gin--dark-mode .ui-dialog a.button--primary:active,
+form.media-form .gin--dark-mode .ui-dialog a.button--primary:focus,
+form.media-form .gin--dark-mode .ui-dialog a.button--primary:focus:hover {
+  color: var(--gin-bg-app);
+}
+#layout-builder-modal .ui-dialog .button.button:disabled, #layout-builder-modal .ui-dialog .button.button:disabled:hover, #layout-builder-modal .ui-dialog .button.button:disabled:active, #layout-builder-modal .ui-dialog .button.button:disabled:focus, #layout-builder-modal .ui-dialog .button.button.is-disabled, #layout-builder-modal .ui-dialog .button.button.is-disabled:hover, #layout-builder-modal .ui-dialog .button.button.is-disabled:active, #layout-builder-modal .ui-dialog .button.button.is-disabled:focus,
+.media-library-widget-modal .ui-dialog .button.button:disabled,
+.media-library-widget-modal .ui-dialog .button.button:disabled:hover,
+.media-library-widget-modal .ui-dialog .button.button:disabled:active,
+.media-library-widget-modal .ui-dialog .button.button:disabled:focus,
+.media-library-widget-modal .ui-dialog .button.button.is-disabled,
+.media-library-widget-modal .ui-dialog .button.button.is-disabled:hover,
+.media-library-widget-modal .ui-dialog .button.button.is-disabled:active,
+.media-library-widget-modal .ui-dialog .button.button.is-disabled:focus,
+form.media-form .ui-dialog .button.button:disabled,
+form.media-form .ui-dialog .button.button:disabled:hover,
+form.media-form .ui-dialog .button.button:disabled:active,
+form.media-form .ui-dialog .button.button:disabled:focus,
+form.media-form .ui-dialog .button.button.is-disabled,
+form.media-form .ui-dialog .button.button.is-disabled:hover,
+form.media-form .ui-dialog .button.button.is-disabled:active,
+form.media-form .ui-dialog .button.button.is-disabled:focus {
+  color: var(--gin-color-disabled);
+  background: transparent;
+  border: 2px solid var(--gin-color-disabled-border) !important;
+  box-shadow: none;
+}
+#layout-builder-modal .ui-dialog .button.button--primary:disabled, #layout-builder-modal .ui-dialog .button.button--primary:disabled:hover, #layout-builder-modal .ui-dialog .button.button--primary:disabled:active, #layout-builder-modal .ui-dialog .button.button--primary:disabled:focus, #layout-builder-modal .ui-dialog .button.button--primary.is-disabled, #layout-builder-modal .ui-dialog .button.button--primary.is-disabled:hover, #layout-builder-modal .ui-dialog .button.button--primary.is-disabled:active, #layout-builder-modal .ui-dialog .button.button--primary.is-disabled:focus,
+.media-library-widget-modal .ui-dialog .button.button--primary:disabled,
+.media-library-widget-modal .ui-dialog .button.button--primary:disabled:hover,
+.media-library-widget-modal .ui-dialog .button.button--primary:disabled:active,
+.media-library-widget-modal .ui-dialog .button.button--primary:disabled:focus,
+.media-library-widget-modal .ui-dialog .button.button--primary.is-disabled,
+.media-library-widget-modal .ui-dialog .button.button--primary.is-disabled:hover,
+.media-library-widget-modal .ui-dialog .button.button--primary.is-disabled:active,
+.media-library-widget-modal .ui-dialog .button.button--primary.is-disabled:focus,
+form.media-form .ui-dialog .button.button--primary:disabled,
+form.media-form .ui-dialog .button.button--primary:disabled:hover,
+form.media-form .ui-dialog .button.button--primary:disabled:active,
+form.media-form .ui-dialog .button.button--primary:disabled:focus,
+form.media-form .ui-dialog .button.button--primary.is-disabled,
+form.media-form .ui-dialog .button.button--primary.is-disabled:hover,
+form.media-form .ui-dialog .button.button--primary.is-disabled:active,
+form.media-form .ui-dialog .button.button--primary.is-disabled:focus {
+  color: var(--gin-color-disabled);
+  background-color: var(--gin-color-disabled-bg);
+}
+#layout-builder-modal .ui-dialog .action-link.action-link--icon-trash,
+.media-library-widget-modal .ui-dialog .action-link.action-link--icon-trash,
+form.media-form .ui-dialog .action-link.action-link--icon-trash {
+  min-height: 48px;
+  padding: calc(var(--gin-spacing-s) - 1px) calc(var(--gin-spacing-l) - 2px);
+  box-sizing: border-box;
+}
+#layout-builder-modal .ui-dialog .action-link.action-link--icon-trash, #layout-builder-modal .ui-dialog .action-link.action-link--icon-trash:hover, #layout-builder-modal .ui-dialog .action-link.action-link--icon-trash:active, #layout-builder-modal .ui-dialog .action-link.action-link--icon-trash:focus, #layout-builder-modal .ui-dialog .action-link.action-link--icon-trash:focus:hover,
+.media-library-widget-modal .ui-dialog .action-link.action-link--icon-trash,
+.media-library-widget-modal .ui-dialog .action-link.action-link--icon-trash:hover,
+.media-library-widget-modal .ui-dialog .action-link.action-link--icon-trash:active,
+.media-library-widget-modal .ui-dialog .action-link.action-link--icon-trash:focus,
+.media-library-widget-modal .ui-dialog .action-link.action-link--icon-trash:focus:hover,
+form.media-form .ui-dialog .action-link.action-link--icon-trash,
+form.media-form .ui-dialog .action-link.action-link--icon-trash:hover,
+form.media-form .ui-dialog .action-link.action-link--icon-trash:active,
+form.media-form .ui-dialog .action-link.action-link--icon-trash:focus,
+form.media-form .ui-dialog .action-link.action-link--icon-trash:focus:hover {
+  border: 2px solid var(--gin-color-danger) !important;
+}
+#layout-builder-modal .ui-dialog .multiple-fields-remove-button.button,
+.media-library-widget-modal .ui-dialog .multiple-fields-remove-button.button,
+form.media-form .ui-dialog .multiple-fields-remove-button.button {
+  border: 0 none !important;
+  -webkit-mask-image: url("../../media/sprite.svg#remove-view");
+  mask-image: url("../../media/sprite.svg#remove-view");
+  -webkit-mask-size: 16px 16px;
+  mask-size: 16px 16px;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center center;
+  mask-position: center center;
+}
+#layout-builder-modal .ui-dialog .form-element,
+.media-library-widget-modal .ui-dialog .form-element,
+form.media-form .ui-dialog .form-element {
+  color: var(--gin-color-text);
+  background-color: var(--gin-bg-input);
+  border: 1px solid var(--gin-border-color-form-element);
+  border-radius: var(--gin-border-m);
+  box-sizing: border-box;
+  transition: var(--gin-transition);
+}
+#layout-builder-modal .ui-dialog .form-element:hover,
+.media-library-widget-modal .ui-dialog .form-element:hover,
+form.media-form .ui-dialog .form-element:hover {
+  border-color: var(--gin-color-text);
+  box-shadow: inset 0 0 0 1px var(--gin-color-text);
+}
+#layout-builder-modal .ui-dialog .form-element--small, #layout-builder-modal .ui-dialog .form-element--extrasmall,
+.media-library-widget-modal .ui-dialog .form-element--small,
+.media-library-widget-modal .ui-dialog .form-element--extrasmall,
+form.media-form .ui-dialog .form-element--small,
+form.media-form .ui-dialog .form-element--extrasmall {
+  font-size: var(--gin-font-size-s);
+  line-height: 1.5;
+  border-radius: var(--gin-border-s);
+}
+#layout-builder-modal .ui-dialog .form-element[disabled], #layout-builder-modal .ui-dialog .form-element[disabled]:hover,
+.media-library-widget-modal .ui-dialog .form-element[disabled],
+.media-library-widget-modal .ui-dialog .form-element[disabled]:hover,
+form.media-form .ui-dialog .form-element[disabled],
+form.media-form .ui-dialog .form-element[disabled]:hover {
+  cursor: not-allowed;
+  color: var(--gin-color-disabled);
+  background-color: var(--gin-color-disabled-bg) !important;
+  border-color: var(--gin-color-disabled-border);
+  box-shadow: none;
+}
+#layout-builder-modal .gin--dark-mode .ui-dialog .form-element,
+.media-library-widget-modal .gin--dark-mode .ui-dialog .form-element,
+form.media-form .gin--dark-mode .ui-dialog .form-element {
+  color-scheme: dark;
+}
+#layout-builder-modal .ui-dialog .form-textarea-wrapper,
+.media-library-widget-modal .ui-dialog .form-textarea-wrapper,
+form.media-form .ui-dialog .form-textarea-wrapper {
+  border-radius: var(--gin-border-m);
+}
+#layout-builder-modal .ui-dialog .form-textarea-wrapper textarea,
+.media-library-widget-modal .ui-dialog .form-textarea-wrapper textarea,
+form.media-form .ui-dialog .form-textarea-wrapper textarea {
+  max-width: 100%;
+}
+#layout-builder-modal .ui-dialog .form-item--editor-format,
+#layout-builder-modal .ui-dialog .form-element--editor-format,
+.media-library-widget-modal .ui-dialog .form-item--editor-format,
+.media-library-widget-modal .ui-dialog .form-element--editor-format,
+form.media-form .ui-dialog .form-item--editor-format,
+form.media-form .ui-dialog .form-element--editor-format {
+  width: auto;
+}
+#layout-builder-modal .ui-dialog .form-item--editor-format .form-item__label,
+#layout-builder-modal .ui-dialog .form-element--editor-format .form-item__label,
+.media-library-widget-modal .ui-dialog .form-item--editor-format .form-item__label,
+.media-library-widget-modal .ui-dialog .form-element--editor-format .form-item__label,
+form.media-form .ui-dialog .form-item--editor-format .form-item__label,
+form.media-form .ui-dialog .form-element--editor-format .form-item__label {
+  top: 3px;
+  padding-bottom: 0;
+}
+#layout-builder-modal .ui-dialog .password-field,
+.media-library-widget-modal .ui-dialog .password-field,
+form.media-form .ui-dialog .password-field {
+  width: 100%;
+}
+#layout-builder-modal .ui-dialog .password-confirm,
+.media-library-widget-modal .ui-dialog .password-confirm,
+form.media-form .ui-dialog .password-confirm {
+  width: 100%;
+  max-width: 520px;
+}
+#layout-builder-modal .ui-dialog .password-strength__title,
+.media-library-widget-modal .ui-dialog .password-strength__title,
+form.media-form .ui-dialog .password-strength__title {
+  color: var(--gin-color-text-light);
+}
+#layout-builder-modal .ui-dialog .password-strength__text,
+.media-library-widget-modal .ui-dialog .password-strength__text,
+form.media-form .ui-dialog .password-strength__text {
+  color: var(--gin-color-title);
+}
+#layout-builder-modal .ui-dialog .password-suggestions,
+.media-library-widget-modal .ui-dialog .password-suggestions,
+form.media-form .ui-dialog .password-suggestions {
+  color: var(--gin-color-text-light);
+  border: 1px solid var(--gin-border-color-layer2);
+  background-color: transparent;
+}
+#layout-builder-modal [dir=ltr] .ui-dialog .form-element--type-select,
+.media-library-widget-modal [dir=ltr] .ui-dialog .form-element--type-select,
+form.media-form [dir=ltr] .ui-dialog .form-element--type-select {
+  padding-right: calc(var(--gin-spacing-xs) + var(--gin-spacing-xl) - 1px);
+}
+#layout-builder-modal [dir=rtl] .ui-dialog .form-element--type-select,
+.media-library-widget-modal [dir=rtl] .ui-dialog .form-element--type-select,
+form.media-form [dir=rtl] .ui-dialog .form-element--type-select {
+  padding-left: calc(var(--gin-spacing-xs) + var(--gin-spacing-xl) - 1px);
+}
+#layout-builder-modal .gin--dark-mode .ui-dialog .form-element--type-select,
+.media-library-widget-modal .gin--dark-mode .ui-dialog .form-element--type-select,
+form.media-form .gin--dark-mode .ui-dialog .form-element--type-select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 9'%3E%3Cpath fill='none' stroke-width='1.5' d='M1 1L7 7L13 1' stroke='%23ffffff'/%3E%3C/svg%3E%0A");
+}
+#layout-builder-modal .ui-dialog .form-element--type-select--small,
+.media-library-widget-modal .ui-dialog .form-element--type-select--small,
+form.media-form .ui-dialog .form-element--type-select--small {
+  font-size: var(--gin-font-size-xs);
+  min-height: 2.25rem;
+  line-height: 1.4;
+  padding-top: 0.474rem;
+  padding-bottom: 0.474rem;
+}
+#layout-builder-modal [dir=ltr] .ui-dialog .form-element--type-select--small,
+.media-library-widget-modal [dir=ltr] .ui-dialog .form-element--type-select--small,
+form.media-form [dir=ltr] .ui-dialog .form-element--type-select--small {
+  background-position: 100% 52%;
+}
+#layout-builder-modal [dir=rtl] .ui-dialog .form-element--type-select--small,
+.media-library-widget-modal [dir=rtl] .ui-dialog .form-element--type-select--small,
+form.media-form [dir=rtl] .ui-dialog .form-element--type-select--small {
+  background-position: 0% 52%;
+}
+#layout-builder-modal .ui-dialog .form-boolean,
+.media-library-widget-modal .ui-dialog .form-boolean,
+form.media-form .ui-dialog .form-boolean {
+  width: 21px;
+  height: 21px;
+  border-color: var(--gin-border-color-form-element);
+  border-radius: var(--gin-border-xs);
+}
+#layout-builder-modal .gin--dark-mode .ui-dialog .form-boolean--type-checkbox:not(:checked),
+.media-library-widget-modal .gin--dark-mode .ui-dialog .form-boolean--type-checkbox:not(:checked),
+form.media-form .gin--dark-mode .ui-dialog .form-boolean--type-checkbox:not(:checked) {
+  background: var(--gin-bg-input);
+}
+#layout-builder-modal .ui-dialog .form-boolean--type-checkbox:checked,
+.media-library-widget-modal .ui-dialog .form-boolean--type-checkbox:checked,
+form.media-form .ui-dialog .form-boolean--type-checkbox:checked {
+  background-color: var(--gin-color-primary);
+}
+#layout-builder-modal .ui-dialog .form-boolean--type-checkbox:checked:hover,
+.media-library-widget-modal .ui-dialog .form-boolean--type-checkbox:checked:hover,
+form.media-form .ui-dialog .form-boolean--type-checkbox:checked:hover {
+  background-color: var(--gin-color-primary-hover);
+}
+#layout-builder-modal .ui-dialog .form-boolean--type-checkbox:checked:active,
+.media-library-widget-modal .ui-dialog .form-boolean--type-checkbox:checked:active,
+form.media-form .ui-dialog .form-boolean--type-checkbox:checked:active {
+  background-color: var(--gin-color-primary-active);
+}
+#layout-builder-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox,
+.media-library-widget-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox,
+form.media-form .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox {
+  position: relative;
+}
+#layout-builder-modal [dir=ltr] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox,
+.media-library-widget-modal [dir=ltr] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox,
+form.media-form [dir=ltr] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox {
+  margin-left: 0;
+}
+#layout-builder-modal [dir=rtl] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox,
+.media-library-widget-modal [dir=rtl] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox,
+form.media-form [dir=rtl] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox {
+  margin-right: 0;
+}
+#layout-builder-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox .checkbox-toggle,
+.media-library-widget-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox .checkbox-toggle,
+form.media-form .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox .checkbox-toggle {
+  z-index: 0;
+  display: inline-block;
+  vertical-align: top;
+  width: 2.5rem;
+  height: 1.5rem;
+  border-radius: var(--gin-border-l);
+  box-sizing: border-box;
+}
+#layout-builder-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox .checkbox-toggle__inner,
+.media-library-widget-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox .checkbox-toggle__inner,
+form.media-form .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox .checkbox-toggle__inner {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  clip-path: circle(var(--gin-spacing-l) at 50% 50%);
+  background-color: var(--gin-color-disabled);
+  border: 3px solid transparent;
+  border-radius: var(--gin-border-l);
+  box-sizing: border-box;
+}
+#layout-builder-modal .gin--dark-mode .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox .checkbox-toggle__inner,
+.media-library-widget-modal .gin--dark-mode .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox .checkbox-toggle__inner,
+form.media-form .gin--dark-mode .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox .checkbox-toggle__inner {
+  background-color: var(--gin-bg-input);
+}
+#layout-builder-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox .checkbox-toggle__inner:before,
+.media-library-widget-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox .checkbox-toggle__inner:before,
+form.media-form .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox .checkbox-toggle__inner:before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border-radius: 21px;
+  transition: transform 0.3s;
+}
+#layout-builder-modal [dir=ltr] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox .checkbox-toggle__inner:before,
+.media-library-widget-modal [dir=ltr] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox .checkbox-toggle__inner:before,
+form.media-form [dir=ltr] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox .checkbox-toggle__inner:before {
+  transform: translateX(-16px);
+}
+#layout-builder-modal [dir=rtl] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox .checkbox-toggle__inner:before,
+.media-library-widget-modal [dir=rtl] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox .checkbox-toggle__inner:before,
+form.media-form [dir=rtl] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox .checkbox-toggle__inner:before {
+  transform: translateX(16px);
+}
+#layout-builder-modal .gin--dark-mode .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox .checkbox-toggle__inner:before,
+.media-library-widget-modal .gin--dark-mode .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox .checkbox-toggle__inner:before,
+form.media-form .gin--dark-mode .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox .checkbox-toggle__inner:before {
+  background-color: var(--gin-border-color-form-element);
+}
+#layout-builder-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input,
+.media-library-widget-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input,
+form.media-form .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal;
+  width: 40px;
+  height: 24px;
+  clip: auto;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+#layout-builder-modal [dir=ltr] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input,
+.media-library-widget-modal [dir=ltr] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input,
+form.media-form [dir=ltr] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input {
+  margin-left: 0;
+}
+#layout-builder-modal [dir=rtl] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input,
+.media-library-widget-modal [dir=rtl] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input,
+form.media-form [dir=rtl] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input {
+  margin-right: 0;
+}
+#layout-builder-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:hover, #layout-builder-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:focus, #layout-builder-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:active, #layout-builder-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:hover:focus, #layout-builder-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:active:focus,
+.media-library-widget-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:hover,
+.media-library-widget-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:focus,
+.media-library-widget-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:active,
+.media-library-widget-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:hover:focus,
+.media-library-widget-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:active:focus,
+form.media-form .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:hover,
+form.media-form .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:focus,
+form.media-form .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:active,
+form.media-form .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:hover:focus,
+form.media-form .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:active:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+#layout-builder-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:hover ~ .checkbox-toggle,
+.media-library-widget-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:hover ~ .checkbox-toggle,
+form.media-form .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:hover ~ .checkbox-toggle {
+  opacity: 0.9;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+#layout-builder-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle,
+.media-library-widget-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle,
+form.media-form .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle {
+  border-color: var(--gin-color-primary-light-active);
+}
+#layout-builder-modal .gin--high-contrast-mode .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle,
+.media-library-widget-modal .gin--high-contrast-mode .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle,
+form.media-form .gin--high-contrast-mode .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle {
+  border-color: var(--gin-border-color);
+}
+#layout-builder-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle .checkbox-toggle__inner,
+.media-library-widget-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle .checkbox-toggle__inner,
+form.media-form .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle .checkbox-toggle__inner {
+  background-color: var(--gin-switch);
+}
+#layout-builder-modal .gin--dark-mode .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle .checkbox-toggle__inner,
+.media-library-widget-modal .gin--dark-mode .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle .checkbox-toggle__inner,
+form.media-form .gin--dark-mode .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle .checkbox-toggle__inner {
+  background-color: var(--gin-color-primary-light-active);
+}
+#layout-builder-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle .checkbox-toggle__inner:before,
+.media-library-widget-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle .checkbox-toggle__inner:before,
+form.media-form .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle .checkbox-toggle__inner:before {
+  background-color: #fff;
+}
+#layout-builder-modal [dir=ltr] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle .checkbox-toggle__inner:before,
+.media-library-widget-modal [dir=ltr] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle .checkbox-toggle__inner:before,
+form.media-form [dir=ltr] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle .checkbox-toggle__inner:before {
+  transform: translateX(16px);
+}
+#layout-builder-modal [dir=rtl] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle .checkbox-toggle__inner:before,
+.media-library-widget-modal [dir=rtl] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle .checkbox-toggle__inner:before,
+form.media-form [dir=rtl] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle .checkbox-toggle__inner:before {
+  transform: translateX(-16px);
+}
+#layout-builder-modal .gin--dark-mode .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle .checkbox-toggle__inner:before,
+.media-library-widget-modal .gin--dark-mode .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle .checkbox-toggle__inner:before,
+form.media-form .gin--dark-mode .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle .checkbox-toggle__inner:before {
+  background-color: var(--gin-color-primary-hover);
+}
+#layout-builder-modal .gin--high-contrast-mode .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle .checkbox-toggle__inner:before,
+.media-library-widget-modal .gin--high-contrast-mode .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle .checkbox-toggle__inner:before,
+form.media-form .gin--high-contrast-mode .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:checked ~ .checkbox-toggle .checkbox-toggle__inner:before {
+  background-color: var(--gin-border-color);
+}
+#layout-builder-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:active ~ .checkbox-toggle .checkbox-toggle__inner, #layout-builder-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:focus ~ .checkbox-toggle .checkbox-toggle__inner,
+.media-library-widget-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:active ~ .checkbox-toggle .checkbox-toggle__inner,
+.media-library-widget-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:focus ~ .checkbox-toggle .checkbox-toggle__inner,
+form.media-form .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:active ~ .checkbox-toggle .checkbox-toggle__inner,
+form.media-form .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:focus ~ .checkbox-toggle .checkbox-toggle__inner {
+  box-shadow: 0 0 0 1px var(--gin-color-focus-border), 0 0 0 4px var(--gin-color-focus);
+}
+#layout-builder-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled,
+.media-library-widget-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled,
+form.media-form .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled {
+  cursor: not-allowed;
+}
+#layout-builder-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled ~ .checkbox-toggle, #layout-builder-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled ~ .checkbox-toggle:hover, #layout-builder-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled:checked ~ .checkbox-toggle .checkbox-toggle__inner, #layout-builder-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled:checked ~ .checkbox-toggle:hover .checkbox-toggle__inner,
+.media-library-widget-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled ~ .checkbox-toggle,
+.media-library-widget-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled ~ .checkbox-toggle:hover,
+.media-library-widget-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled:checked ~ .checkbox-toggle .checkbox-toggle__inner,
+.media-library-widget-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled:checked ~ .checkbox-toggle:hover .checkbox-toggle__inner,
+form.media-form .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled ~ .checkbox-toggle,
+form.media-form .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled ~ .checkbox-toggle:hover,
+form.media-form .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled:checked ~ .checkbox-toggle .checkbox-toggle__inner,
+form.media-form .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled:checked ~ .checkbox-toggle:hover .checkbox-toggle__inner {
+  background-color: var(--gin-color-disabled);
+}
+#layout-builder-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled ~ .checkbox-toggle::before, #layout-builder-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled ~ .checkbox-toggle:hover::before, #layout-builder-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled:checked ~ .checkbox-toggle .checkbox-toggle__inner::before, #layout-builder-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled:checked ~ .checkbox-toggle:hover .checkbox-toggle__inner::before,
+.media-library-widget-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled ~ .checkbox-toggle::before,
+.media-library-widget-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled ~ .checkbox-toggle:hover::before,
+.media-library-widget-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled:checked ~ .checkbox-toggle .checkbox-toggle__inner::before,
+.media-library-widget-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled:checked ~ .checkbox-toggle:hover .checkbox-toggle__inner::before,
+form.media-form .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled ~ .checkbox-toggle::before,
+form.media-form .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled ~ .checkbox-toggle:hover::before,
+form.media-form .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled:checked ~ .checkbox-toggle .checkbox-toggle__inner::before,
+form.media-form .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox input:disabled:checked ~ .checkbox-toggle:hover .checkbox-toggle__inner::before {
+  background-color: #fff;
+  opacity: 0.4;
+}
+#layout-builder-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox label,
+.media-library-widget-modal .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox label,
+form.media-form .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox label {
+  z-index: 1;
+  position: relative;
+  padding-bottom: 0;
+  color: var(--gin-color-text);
+}
+#layout-builder-modal [dir=ltr] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox label,
+.media-library-widget-modal [dir=ltr] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox label,
+form.media-form [dir=ltr] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox label {
+  padding-left: var(--gin-spacing-xxs);
+}
+#layout-builder-modal [dir=rtl] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox label,
+.media-library-widget-modal [dir=rtl] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox label,
+form.media-form [dir=rtl] .ui-dialog :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content) > .form-type--checkbox label {
+  padding-right: var(--gin-spacing-xxs);
+}
+#layout-builder-modal .gin--dark-mode .ui-dialog .form-boolean:hover, #layout-builder-modal .gin--dark-mode .ui-dialog .form-boolean:active,
+.media-library-widget-modal .gin--dark-mode .ui-dialog .form-boolean:hover,
+.media-library-widget-modal .gin--dark-mode .ui-dialog .form-boolean:active,
+form.media-form .gin--dark-mode .ui-dialog .form-boolean:hover,
+form.media-form .gin--dark-mode .ui-dialog .form-boolean:active {
+  box-shadow: none;
+  border-color: var(--gin-color-text);
+}
+#layout-builder-modal .ui-dialog .form-boolean--type-radio, #layout-builder-modal .ui-dialog .form-boolean--type-radio:hover, #layout-builder-modal .ui-dialog .form-boolean--type-radio:active, #layout-builder-modal .ui-dialog .form-boolean--type-radio:focus, #layout-builder-modal .ui-dialog .form-boolean--type-radio:hover:focus,
+.media-library-widget-modal .ui-dialog .form-boolean--type-radio,
+.media-library-widget-modal .ui-dialog .form-boolean--type-radio:hover,
+.media-library-widget-modal .ui-dialog .form-boolean--type-radio:active,
+.media-library-widget-modal .ui-dialog .form-boolean--type-radio:focus,
+.media-library-widget-modal .ui-dialog .form-boolean--type-radio:hover:focus,
+form.media-form .ui-dialog .form-boolean--type-radio,
+form.media-form .ui-dialog .form-boolean--type-radio:hover,
+form.media-form .ui-dialog .form-boolean--type-radio:active,
+form.media-form .ui-dialog .form-boolean--type-radio:focus,
+form.media-form .ui-dialog .form-boolean--type-radio:hover:focus {
+  background-image: none;
+  background-color: var(--gin-bg-input);
+  border-color: var(--gin-border-color-form-element);
+  border-radius: 50%;
+}
+#layout-builder-modal .ui-dialog .form-boolean--type-radio:hover,
+.media-library-widget-modal .ui-dialog .form-boolean--type-radio:hover,
+form.media-form .ui-dialog .form-boolean--type-radio:hover {
+  box-shadow: inset 0 0 0 1px var(--gin-border-color-layer2);
+}
+#layout-builder-modal .ui-dialog .form-boolean--type-radio:hover, #layout-builder-modal .gin--dark-mode .ui-dialog .form-boolean--type-radio:hover,
+.media-library-widget-modal .ui-dialog .form-boolean--type-radio:hover,
+.media-library-widget-modal .gin--dark-mode .ui-dialog .form-boolean--type-radio:hover,
+form.media-form .ui-dialog .form-boolean--type-radio:hover,
+form.media-form .gin--dark-mode .ui-dialog .form-boolean--type-radio:hover {
+  border-color: var(--gin-color-text);
+}
+#layout-builder-modal .ui-dialog .form-boolean--type-radio:active, #layout-builder-modal .ui-dialog .form-boolean--type-radio:focus,
+.media-library-widget-modal .ui-dialog .form-boolean--type-radio:active,
+.media-library-widget-modal .ui-dialog .form-boolean--type-radio:focus,
+form.media-form .ui-dialog .form-boolean--type-radio:active,
+form.media-form .ui-dialog .form-boolean--type-radio:focus {
+  box-shadow: inset 0 0 0 1px var(--gin-border-color-layer2), 0 0 0 1px var(--gin-color-focus-border), 0 0 0 4px var(--gin-color-focus);
+}
+#layout-builder-modal .ui-dialog .form-boolean--type-radio:checked:not(:disabled), #layout-builder-modal .ui-dialog .form-boolean--type-radio:checked:not(:disabled):hover,
+.media-library-widget-modal .ui-dialog .form-boolean--type-radio:checked:not(:disabled),
+.media-library-widget-modal .ui-dialog .form-boolean--type-radio:checked:not(:disabled):hover,
+form.media-form .ui-dialog .form-boolean--type-radio:checked:not(:disabled),
+form.media-form .ui-dialog .form-boolean--type-radio:checked:not(:disabled):hover {
+  background-image: none;
+  background-color: var(--gin-bg-layer);
+  box-shadow: inset 0 0 0 5px var(--gin-color-primary);
+}
+#layout-builder-modal .ui-dialog .form-boolean--type-radio:checked:not(:disabled):active, #layout-builder-modal .ui-dialog .form-boolean--type-radio:checked:not(:disabled):focus, #layout-builder-modal .ui-dialog .form-boolean--type-radio:checked:not(:disabled):hover:focus,
+.media-library-widget-modal .ui-dialog .form-boolean--type-radio:checked:not(:disabled):active,
+.media-library-widget-modal .ui-dialog .form-boolean--type-radio:checked:not(:disabled):focus,
+.media-library-widget-modal .ui-dialog .form-boolean--type-radio:checked:not(:disabled):hover:focus,
+form.media-form .ui-dialog .form-boolean--type-radio:checked:not(:disabled):active,
+form.media-form .ui-dialog .form-boolean--type-radio:checked:not(:disabled):focus,
+form.media-form .ui-dialog .form-boolean--type-radio:checked:not(:disabled):hover:focus {
+  box-shadow: inset 0 0 0 5px var(--gin-color-primary), 0 0 0 1px var(--gin-color-focus-border), 0 0 0 4px var(--gin-color-focus);
+  border-color: var(--gin-color-focus-border);
+}
+#layout-builder-modal .ui-dialog .form-boolean--type-radio:disabled, #layout-builder-modal .ui-dialog .form-boolean--type-radio:disabled:hover,
+.media-library-widget-modal .ui-dialog .form-boolean--type-radio:disabled,
+.media-library-widget-modal .ui-dialog .form-boolean--type-radio:disabled:hover,
+form.media-form .ui-dialog .form-boolean--type-radio:disabled,
+form.media-form .ui-dialog .form-boolean--type-radio:disabled:hover {
+  cursor: not-allowed;
+  background: var(--gin-color-disabled-bg);
+  border-color: var(--gin-color-disabled-border);
+}
+#layout-builder-modal .ui-dialog .form-boolean--type-radio:checked:disabled, #layout-builder-modal .ui-dialog .form-boolean--type-radio:checked:disabled:hover,
+.media-library-widget-modal .ui-dialog .form-boolean--type-radio:checked:disabled,
+.media-library-widget-modal .ui-dialog .form-boolean--type-radio:checked:disabled:hover,
+form.media-form .ui-dialog .form-boolean--type-radio:checked:disabled,
+form.media-form .ui-dialog .form-boolean--type-radio:checked:disabled:hover {
+  background: var(--gin-color-disabled);
+  box-shadow: inset 0 0 0 5px var(--gin-color-disabled-bg);
+}
+#layout-builder-modal .ui-dialog .form-boolean--type-checkbox[disabled], #layout-builder-modal .ui-dialog .form-boolean--type-checkbox[disabled]:hover,
+.media-library-widget-modal .ui-dialog .form-boolean--type-checkbox[disabled],
+.media-library-widget-modal .ui-dialog .form-boolean--type-checkbox[disabled]:hover,
+form.media-form .ui-dialog .form-boolean--type-checkbox[disabled],
+form.media-form .ui-dialog .form-boolean--type-checkbox[disabled]:hover {
+  cursor: not-allowed;
+  background-color: var(--gin-color-disabled-bg);
+  border-color: var(--gin-color-disabled-border);
+}
+#layout-builder-modal .ui-dialog .form-boolean--type-checkbox[disabled]:checked, #layout-builder-modal .ui-dialog .form-boolean--type-checkbox[disabled]:hover:checked,
+.media-library-widget-modal .ui-dialog .form-boolean--type-checkbox[disabled]:checked,
+.media-library-widget-modal .ui-dialog .form-boolean--type-checkbox[disabled]:hover:checked,
+form.media-form .ui-dialog .form-boolean--type-checkbox[disabled]:checked,
+form.media-form .ui-dialog .form-boolean--type-checkbox[disabled]:hover:checked {
+  border-color: var(--gin-color-disabled-border);
+  background-color: var(--gin-color-disabled-bg);
+  box-shadow: none;
+}
+#layout-builder-modal .ui-dialog .form-radios .form-type--boolean,
+#layout-builder-modal .ui-dialog .form-checkboxes .form-type--boolean,
+.media-library-widget-modal .ui-dialog .form-radios .form-type--boolean,
+.media-library-widget-modal .ui-dialog .form-checkboxes .form-type--boolean,
+form.media-form .ui-dialog .form-radios .form-type--boolean,
+form.media-form .ui-dialog .form-checkboxes .form-type--boolean {
+  margin-top: var(--gin-spacing-xs);
+  margin-bottom: var(--gin-spacing-xs);
+}
+#layout-builder-modal .ui-dialog .form-actions,
+.media-library-widget-modal .ui-dialog .form-actions,
+form.media-form .ui-dialog .form-actions {
+  margin-bottom: 0;
+}
+#layout-builder-modal .ui-dialog .form-edit .form-actions,
+.media-library-widget-modal .ui-dialog .form-edit .form-actions,
+form.media-form .ui-dialog .form-edit .form-actions {
+  padding: 0;
+  margin-bottom: 0;
+  border: 0 none;
+  background-color: transparent;
+}
+#layout-builder-modal .ui-dialog fieldset:not(.fieldgroup),
+.media-library-widget-modal .ui-dialog fieldset:not(.fieldgroup),
+form.media-form .ui-dialog fieldset:not(.fieldgroup) {
+  color: var(--gin-color-text-light);
+  padding-top: var(--gin-spacing-xs);
+  padding-left: 0;
+  padding-right: 0;
+  background: transparent;
+  border-color: var(--gin-border-color);
+  border-radius: var(--gin-border-m);
+  box-shadow: none;
+}
+#layout-builder-modal .ui-dialog fieldset:not(.fieldgroup) > legend,
+.media-library-widget-modal .ui-dialog fieldset:not(.fieldgroup) > legend,
+form.media-form .ui-dialog fieldset:not(.fieldgroup) > legend {
+  top: 20px;
+}
+#layout-builder-modal .ui-dialog fieldset:not(.fieldgroup) > .fieldset-wrapper,
+.media-library-widget-modal .ui-dialog fieldset:not(.fieldgroup) > .fieldset-wrapper,
+form.media-form .ui-dialog fieldset:not(.fieldgroup) > .fieldset-wrapper {
+  margin-top: 20px;
+}
+#layout-builder-modal .ui-dialog fieldset:not(.fieldgroup).error,
+.media-library-widget-modal .ui-dialog fieldset:not(.fieldgroup).error,
+form.media-form .ui-dialog fieldset:not(.fieldgroup).error {
+  border: 2px solid var(--gin-color-danger);
+}
+#layout-builder-modal .ui-dialog .fieldset__label,
+#layout-builder-modal .ui-dialog .fieldset__label--group,
+#layout-builder-modal .ui-dialog .form-item__label,
+.media-library-widget-modal .ui-dialog .fieldset__label,
+.media-library-widget-modal .ui-dialog .fieldset__label--group,
+.media-library-widget-modal .ui-dialog .form-item__label,
+form.media-form .ui-dialog .fieldset__label,
+form.media-form .ui-dialog .fieldset__label--group,
+form.media-form .ui-dialog .form-item__label {
+  font-size: var(--gin-font-size-s);
+  font-weight: var(--gin-font-weight-semibold);
+  color: var(--gin-color-title);
+  margin-top: 0;
+  margin-bottom: var(--gin-spacing-xs);
+}
+#layout-builder-modal .ui-dialog .form-item__label.has-error,
+#layout-builder-modal .ui-dialog .form-item__error-message,
+.media-library-widget-modal .ui-dialog .form-item__label.has-error,
+.media-library-widget-modal .ui-dialog .form-item__error-message,
+form.media-form .ui-dialog .form-item__label.has-error,
+form.media-form .ui-dialog .form-item__error-message {
+  color: var(--gin-color-danger);
+}
+#layout-builder-modal .ui-dialog .form-item__description,
+#layout-builder-modal .ui-dialog .fieldset__description,
+.media-library-widget-modal .ui-dialog .form-item__description,
+.media-library-widget-modal .ui-dialog .fieldset__description,
+form.media-form .ui-dialog .form-item__description,
+form.media-form .ui-dialog .fieldset__description {
+  max-width: 520px;
+  color: var(--gin-color-text-light);
+}
+#layout-builder-modal .ui-dialog .form-item__label.form-required::after,
+#layout-builder-modal .ui-dialog .fieldset__label.form-required::after,
+#layout-builder-modal .ui-dialog .form-required > .fieldset__label::after,
+#layout-builder-modal .ui-dialog .horizontal-tab-button .form-required::after,
+#layout-builder-modal .ui-dialog .vertical-tabs__menu-link .form-required::after,
+.media-library-widget-modal .ui-dialog .form-item__label.form-required::after,
+.media-library-widget-modal .ui-dialog .fieldset__label.form-required::after,
+.media-library-widget-modal .ui-dialog .form-required > .fieldset__label::after,
+.media-library-widget-modal .ui-dialog .horizontal-tab-button .form-required::after,
+.media-library-widget-modal .ui-dialog .vertical-tabs__menu-link .form-required::after,
+form.media-form .ui-dialog .form-item__label.form-required::after,
+form.media-form .ui-dialog .fieldset__label.form-required::after,
+form.media-form .ui-dialog .form-required > .fieldset__label::after,
+form.media-form .ui-dialog .horizontal-tab-button .form-required::after,
+form.media-form .ui-dialog .vertical-tabs__menu-link .form-required::after {
+  content: "*";
+  color: var(--gin-color-danger);
+  line-height: 1;
+  margin-right: 0.15em;
+  margin-left: 0.15em;
+  vertical-align: text-top;
+  background: none;
+}
+#layout-builder-modal .ui-dialog .claro-details.error,
+.media-library-widget-modal .ui-dialog .claro-details.error,
+form.media-form .ui-dialog .claro-details.error {
+  border: 2px solid var(--gin-color-danger);
+}
+#layout-builder-modal .ui-dialog .claro-details__summary:not(.form-required) .required-mark,
+.media-library-widget-modal .ui-dialog .claro-details__summary:not(.form-required) .required-mark,
+form.media-form .ui-dialog .claro-details__summary:not(.form-required) .required-mark {
+  display: none;
+}
+#layout-builder-modal .ui-dialog .form-item__warning,
+.media-library-widget-modal .ui-dialog .form-item__warning,
+form.media-form .ui-dialog .form-item__warning {
+  display: inline-block;
+  margin-top: var(--gin-spacing-xs);
+}
+#layout-builder-modal [dir=ltr] .ui-dialog html.js .form-autocomplete,
+.media-library-widget-modal [dir=ltr] .ui-dialog html.js .form-autocomplete,
+form.media-form [dir=ltr] .ui-dialog html.js .form-autocomplete {
+  padding-right: 36px;
+}
+#layout-builder-modal [dir=rtl] .ui-dialog html.js .form-autocomplete,
+.media-library-widget-modal [dir=rtl] .ui-dialog html.js .form-autocomplete,
+form.media-form [dir=rtl] .ui-dialog html.js .form-autocomplete {
+  padding-left: 36px;
+}
+#layout-builder-modal .ui-dialog .entity-form-display-form > .form-actions,
+.media-library-widget-modal .ui-dialog .entity-form-display-form > .form-actions,
+form.media-form .ui-dialog .entity-form-display-form > .form-actions {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#layout-builder-modal .ui-dialog .required-mark::after,
+.media-library-widget-modal .ui-dialog .required-mark::after,
+form.media-form .ui-dialog .required-mark::after {
+  background: var(--gin-color-danger);
+  -webkit-mask-image: url("../../media/sprite.svg#asterisk-view");
+  mask-image: url("../../media/sprite.svg#asterisk-view");
+  -webkit-mask-position: center center;
+  mask-position: center center;
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+}
+#layout-builder-modal .ui-dialog .form-wrapper .form-item__label,
+#layout-builder-modal .ui-dialog .form-composite .form-item__label,
+.media-library-widget-modal .ui-dialog .form-wrapper .form-item__label,
+.media-library-widget-modal .ui-dialog .form-composite .form-item__label,
+form.media-form .ui-dialog .form-wrapper .form-item__label,
+form.media-form .ui-dialog .form-composite .form-item__label {
+  position: relative;
+}
+#layout-builder-modal .ui-dialog .field--type-text-with-summary .form-item,
+#layout-builder-modal .ui-dialog .field--widget-text-textarea .form-item,
+.media-library-widget-modal .ui-dialog .field--type-text-with-summary .form-item,
+.media-library-widget-modal .ui-dialog .field--widget-text-textarea .form-item,
+form.media-form .ui-dialog .field--type-text-with-summary .form-item,
+form.media-form .ui-dialog .field--widget-text-textarea .form-item {
+  margin-bottom: 0;
+}
+#layout-builder-modal .ui-dialog .field--type-text-with-summary .filter-wrapper,
+#layout-builder-modal .ui-dialog .field--widget-text-textarea .filter-wrapper,
+.media-library-widget-modal .ui-dialog .field--type-text-with-summary .filter-wrapper,
+.media-library-widget-modal .ui-dialog .field--widget-text-textarea .filter-wrapper,
+form.media-form .ui-dialog .field--type-text-with-summary .filter-wrapper,
+form.media-form .ui-dialog .field--widget-text-textarea .filter-wrapper {
+  border: 0 none;
+  padding-left: 0;
+  padding-right: 0;
+}
+#layout-builder-modal [dir=ltr] .ui-dialog html.js input.form-linkit-autocomplete,
+.media-library-widget-modal [dir=ltr] .ui-dialog html.js input.form-linkit-autocomplete,
+form.media-form [dir=ltr] .ui-dialog html.js input.form-linkit-autocomplete {
+  padding-right: var(--gin-spacing-xl);
+  background-position: right 8px center;
+}
+#layout-builder-modal [dir=rtl] .ui-dialog html.js input.form-linkit-autocomplete,
+.media-library-widget-modal [dir=rtl] .ui-dialog html.js input.form-linkit-autocomplete,
+form.media-form [dir=rtl] .ui-dialog html.js input.form-linkit-autocomplete {
+  padding-left: var(--gin-spacing-xl);
+  background-position: left 8px center;
+}
+#layout-builder-modal .ui-dialog .claro-autocomplete,
+.media-library-widget-modal .ui-dialog .claro-autocomplete,
+form.media-form .ui-dialog .claro-autocomplete {
+  width: calc(100% - var(--gin-spacing-m));
+}
+#layout-builder-modal .ui-dialog .claro-autocomplete .form-autocomplete,
+.media-library-widget-modal .ui-dialog .claro-autocomplete .form-autocomplete,
+form.media-form .ui-dialog .claro-autocomplete .form-autocomplete {
+  width: 100%;
+}
+#layout-builder-modal .ui-dialog .no-touchevents .form-element--type-select.form-element--extrasmall,
+.media-library-widget-modal .ui-dialog .no-touchevents .form-element--type-select.form-element--extrasmall,
+form.media-form .ui-dialog .no-touchevents .form-element--type-select.form-element--extrasmall {
+  font-size: var(--gin-font-size-s);
+  line-height: 1.5;
+  min-height: 1.75rem;
+}
+#layout-builder-modal .ui-dialog #block-gin-content > form > .form-item:first-of-type,
+.media-library-widget-modal .ui-dialog #block-gin-content > form > .form-item:first-of-type,
+form.media-form .ui-dialog #block-gin-content > form > .form-item:first-of-type {
+  margin-top: 0;
+}
+#layout-builder-modal [dir=ltr] .ui-dialog .image-style-new .form-item,
+.media-library-widget-modal [dir=ltr] .ui-dialog .image-style-new .form-item,
+form.media-form [dir=ltr] .ui-dialog .image-style-new .form-item {
+  margin-right: var(--gin-spacing-xxs);
+}
+#layout-builder-modal [dir=rtl] .ui-dialog .image-style-new .form-item,
+.media-library-widget-modal [dir=rtl] .ui-dialog .image-style-new .form-item,
+form.media-form [dir=rtl] .ui-dialog .image-style-new .form-item {
+  margin-left: var(--gin-spacing-xxs);
+}
+#layout-builder-modal .ui-dialog tr .form-item,
+.media-library-widget-modal .ui-dialog tr .form-item,
+form.media-form .ui-dialog tr .form-item {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+#layout-builder-modal .ui-dialog .container-inline .form-item,
+.media-library-widget-modal .ui-dialog .container-inline .form-item,
+form.media-form .ui-dialog .container-inline .form-item {
+  margin-top: var(--gin-spacing-density-s);
+  margin-bottom: var(--gin-spacing-density-s);
+}
+#layout-builder-modal .ui-dialog .field-plugin-settings-edit-form,
+.media-library-widget-modal .ui-dialog .field-plugin-settings-edit-form,
+form.media-form .ui-dialog .field-plugin-settings-edit-form {
+  margin-top: var(--gin-spacing-s);
+}
+#layout-builder-modal .ui-dialog .field-plugin-settings-edit-form .form-item,
+.media-library-widget-modal .ui-dialog .field-plugin-settings-edit-form .form-item,
+form.media-form .ui-dialog .field-plugin-settings-edit-form .form-item {
+  margin-top: var(--gin-spacing-m);
+  margin-bottom: var(--gin-spacing-m);
+}
+#layout-builder-modal .ui-dialog .field-plugin-settings-edit-form .form-boolean-group .form-item,
+.media-library-widget-modal .ui-dialog .field-plugin-settings-edit-form .form-boolean-group .form-item,
+form.media-form .ui-dialog .field-plugin-settings-edit-form .form-boolean-group .form-item {
+  margin-top: var(--gin-spacing-xs);
+  margin-bottom: var(--gin-spacing-xs);
+}
