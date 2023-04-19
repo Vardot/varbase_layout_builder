@@ -95,31 +95,34 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
    *   The selected active theme.
    */
   public function determineActiveTheme(RouteMatchInterface $route_match) {
-    $use_claro = $this->configFactory->get('varbase_layout_builder.settings')->get('use_claro');
+    $current_request = $this->requestStack->getCurrentRequest()->request->all();
+    $dialog_has_target_layout_builder_modal = FALSE;
+    if (isset($current_request['dialogOptions'])
+      && isset($current_request['dialogOptions']['target'])
+      && $current_request['dialogOptions']['target'] == 'layout-builder-modal') {
 
-    if (isset($use_claro) && $use_claro == 1) {
+      $dialog_has_target_layout_builder_modal = TRUE;
+    }
 
-      $route_name = $route_match->getRouteName();
-      if (isset($route_name) && strpos($route_name, 'layout_builder') !== FALSE) {
+    $parent_theme_is_front_end_theme = FALSE;
+    if (isset($current_request['ajax_page_state'])
+    && isset($current_request['ajax_page_state']['theme'])
+    && $current_request['ajax_page_state']['theme'] == $this->configFactory->get('system.theme')->get('default')) {
+      $parent_theme_is_front_end_theme = TRUE;
+    }
 
-        if ($this->themeHandler->themeExists('gin') || $this->themeHandler->themeExists('claro')) {
-          $request_query_wrapper_format = $this->requestStack->getCurrentRequest()->query->get('_wrapper_format');
-          if (isset($request_query_wrapper_format)) {
-            if ($request_query_wrapper_format == 'drupal_dialog.off_canvas') {
-              return $this->configFactory->get('system.theme')->get('default');
-            }
-            else {
-              return $this->configFactory->get('system.theme')->get('admin');
-            }
-          }
+    if ($dialog_has_target_layout_builder_modal && $parent_theme_is_front_end_theme) {
+      $request_query_wrapper_format = $this->requestStack->getCurrentRequest()->query->get('_wrapper_format');
+      if (isset($request_query_wrapper_format)) {
+        if ($request_query_wrapper_format == 'drupal_dialog.off_canvas') {
+          
+          return $this->configFactory->get('system.theme')->get('admin');
         }
         else {
-          return $this->configFactory->get('system.theme')->get('admin');
+          return $this->configFactory->get('system.theme')->get('default');
         }
       }
     }
-
-    return NULL;
   }
 
 }

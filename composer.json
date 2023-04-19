@@ -88,7 +88,7 @@
       },
       "drupal/layout_builder_blocks": {
         "Issue #3349066: Limit Layout Builder Blocks to the front-end theme":
-        "https://www.drupal.org/files/issues/2023-04-12/3349066-10.patch"
+        "https://www.drupal.org/files/issues/2023-04-19/3349066-11.patch"
       },
       "drupal/section_library": {
         "Issue #3348151: Fix Drupal 10 Errors for $(...).once is not a function":
