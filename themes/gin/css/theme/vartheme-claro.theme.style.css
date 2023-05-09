@@ -124,3 +124,8 @@ form.media-form .media-library-item .media-library-item__preview {
 form.media-form .media-library-item--grid .field--name-thumbnail img {
   width: 100% !important;
 }
+#layout-builder-modal .form-text.description,
+.media-library-widget-modal .form-text.description,
+form.media-form .form-text.description {
+  border: 0 !important;
+}

@@ -9,4 +9,8 @@
 .media-library-widget-modal,
 form.media-form {
   @import "../../../../../../../themes/contrib/vartheme_claro/css/theme/vartheme-claro.theme.style";
+
+  .form-text.description {
+    border: 0 !important;
+  }
 }

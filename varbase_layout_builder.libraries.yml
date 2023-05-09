@@ -38,7 +38,6 @@ aso.local:
 
 # Layout builder modal claro theme.
 claro:
-  version: VERSION
   css:
     base:
       themes/claro/css/base/elements.css: {}
@@ -123,7 +122,6 @@ claro:
 
 # Layout builder modal Gin theme.
 gin:
-  version: VERSION
   css:
     base:
       themes/gin/css/base/gin.css: {}
