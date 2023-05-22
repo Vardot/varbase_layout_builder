@@ -85,6 +85,11 @@ function varbase_layout_builder_form_alter(&$form, FormStateInterface $form_stat
         $form['actions']['rebuild-layout']['#attributes']['class'][] = 'btn btn-primary';
       }
 
+      // Style the Reorder sections action button.
+      if (isset($form['actions']['move_sections'])) {
+        $form['actions']['move_sections']['#attributes']['class'][] = 'btn btn-primary';
+      }
+
     }
   }
 
