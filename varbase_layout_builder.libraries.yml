@@ -151,7 +151,6 @@ gin:
       themes/gin/css/components/revisions.css: {}
       themes/gin/css/components/settings_tray_edit.css: {}
       themes/gin/css/components/settings_tray.css: {}
-      themes/gin/css/components/settingsv: {}
       themes/gin/css/components/sidebar.css: {}
       themes/gin/css/components/tabs.css: {}
       themes/gin/css/components/toolbar_secondary.css: {}
