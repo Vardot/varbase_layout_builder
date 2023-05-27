@@ -1,12 +1,9 @@
-#layout-builder-modal .gin-secondary-toolbar__layout-container *:focus,
-.media-library-widget-modal .gin-secondary-toolbar__layout-container *:focus,
-form.media-form .gin-secondary-toolbar__layout-container *:focus {
+#layout-builder-modal .gin-secondary-toolbar__layout-container *:focus,.media-library-widget-modal .gin-secondary-toolbar__layout-container *:focus,form.media-form .gin-secondary-toolbar__layout-container *:focus {
   outline: none;
   box-shadow: 0 0 0 1px var(--gin-color-focus-border), 0 0 0 4px var(--gin-color-focus);
 }
-#layout-builder-modal .gin-secondary-toolbar,
-.media-library-widget-modal .gin-secondary-toolbar,
-form.media-form .gin-secondary-toolbar {
+
+#layout-builder-modal .gin-secondary-toolbar,.media-library-widget-modal .gin-secondary-toolbar,form.media-form .gin-secondary-toolbar {
   z-index: 102;
   position: relative;
   display: flex;
@@ -18,120 +15,103 @@ form.media-form .gin-secondary-toolbar {
   border-bottom: 1px solid var(--gin-border-color-secondary);
   box-sizing: border-box;
 }
+
 @media (min-width: 61em) {
-  #layout-builder-modal .gin-secondary-toolbar,
-  .media-library-widget-modal .gin-secondary-toolbar,
-  form.media-form .gin-secondary-toolbar {
+  #layout-builder-modal .gin-secondary-toolbar,.media-library-widget-modal .gin-secondary-toolbar,form.media-form .gin-secondary-toolbar {
     padding: 10px 0;
   }
 }
-#layout-builder-modal .gin-secondary-toolbar--frontend,
-.media-library-widget-modal .gin-secondary-toolbar--frontend,
-form.media-form .gin-secondary-toolbar--frontend {
-  z-index: 501; /* on top of the Drupal world */
+
+#layout-builder-modal .gin-secondary-toolbar--frontend,.media-library-widget-modal .gin-secondary-toolbar--frontend,form.media-form .gin-secondary-toolbar--frontend {
+  z-index: 501;
   position: sticky;
   top: 0;
   margin-top: 0;
   height: var(--gin-toolbar-secondary-height);
-  background: rgba(255, 255, 255, 0.98);
+  background: rgba(255, 255, 255, .98);
   border-bottom: 1px solid var(--gin-border-color-layer);
   box-sizing: border-box;
 }
+
 @supports ((-webkit-backdrop-filter: blur()) or (backdrop-filter: blur())) {
-  #layout-builder-modal .gin-secondary-toolbar--frontend,
-  .media-library-widget-modal .gin-secondary-toolbar--frontend,
-  form.media-form .gin-secondary-toolbar--frontend {
-    opacity: 0.999; /* Fix Chrome issue with mask */
-    background: rgba(255, 255, 255, 0.8);
+  #layout-builder-modal .gin-secondary-toolbar--frontend,.media-library-widget-modal .gin-secondary-toolbar--frontend,form.media-form .gin-secondary-toolbar--frontend {
+    opacity: .999;
+    background: rgba(255, 255, 255, .8);
     -webkit-backdrop-filter: blur(12px);
-    backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
   }
 }
-#layout-builder-modal .gin--dark-mode .gin-secondary-toolbar--frontend,
-.media-library-widget-modal .gin--dark-mode .gin-secondary-toolbar--frontend,
-form.media-form .gin--dark-mode .gin-secondary-toolbar--frontend {
-  background: rgba(27, 27, 29, 0.98);
+
+#layout-builder-modal .gin--dark-mode .gin-secondary-toolbar--frontend,.media-library-widget-modal .gin--dark-mode .gin-secondary-toolbar--frontend,form.media-form .gin--dark-mode .gin-secondary-toolbar--frontend {
+  background: rgba(27, 27, 29, .98);
 }
+
 @supports ((-webkit-backdrop-filter: blur()) or (backdrop-filter: blur())) {
-  #layout-builder-modal .gin--dark-mode .gin-secondary-toolbar--frontend,
-  .media-library-widget-modal .gin--dark-mode .gin-secondary-toolbar--frontend,
-  form.media-form .gin--dark-mode .gin-secondary-toolbar--frontend {
-    background: rgba(7, 7, 7, 0.9);
+  #layout-builder-modal .gin--dark-mode .gin-secondary-toolbar--frontend,.media-library-widget-modal .gin--dark-mode .gin-secondary-toolbar--frontend,form.media-form .gin--dark-mode .gin-secondary-toolbar--frontend {
+    background: rgba(7, 7, 7, .9);
   }
 }
-#layout-builder-modal .gin--high-contrast-mode .gin-secondary-toolbar--frontend,
-.media-library-widget-modal .gin--high-contrast-mode .gin-secondary-toolbar--frontend,
-form.media-form .gin--high-contrast-mode .gin-secondary-toolbar--frontend {
+
+#layout-builder-modal .gin--high-contrast-mode .gin-secondary-toolbar--frontend,.media-library-widget-modal .gin--high-contrast-mode .gin-secondary-toolbar--frontend,form.media-form .gin--high-contrast-mode .gin-secondary-toolbar--frontend {
   background: var(--gin-bg-app);
   -webkit-backdrop-filter: none;
-  backdrop-filter: none;
+          backdrop-filter: none;
 }
+
 @media (min-width: 90em) {
-  #layout-builder-modal .gin--edit-form .gin-secondary-toolbar,
-  .media-library-widget-modal .gin--edit-form .gin-secondary-toolbar,
-  form.media-form .gin--edit-form .gin-secondary-toolbar {
+  #layout-builder-modal .gin--edit-form .gin-secondary-toolbar,.media-library-widget-modal .gin--edit-form .gin-secondary-toolbar,form.media-form .gin--edit-form .gin-secondary-toolbar {
     position: relative;
   }
-  #layout-builder-modal [dir=ltr] .gin--edit-form .gin-secondary-toolbar,
-  .media-library-widget-modal [dir=ltr] .gin--edit-form .gin-secondary-toolbar,
-  form.media-form [dir=ltr] .gin--edit-form .gin-secondary-toolbar {
+
+  #layout-builder-modal [dir=ltr] .gin--edit-form .gin-secondary-toolbar,.media-library-widget-modal [dir=ltr] .gin--edit-form .gin-secondary-toolbar,form.media-form [dir=ltr] .gin--edit-form .gin-secondary-toolbar {
     left: calc(50% - var(--gin-spacing-xxl));
     transform: translateX(-50%);
   }
-  #layout-builder-modal [dir=rtl] .gin--edit-form .gin-secondary-toolbar,
-  .media-library-widget-modal [dir=rtl] .gin--edit-form .gin-secondary-toolbar,
-  form.media-form [dir=rtl] .gin--edit-form .gin-secondary-toolbar {
+
+  #layout-builder-modal [dir=rtl] .gin--edit-form .gin-secondary-toolbar,.media-library-widget-modal [dir=rtl] .gin--edit-form .gin-secondary-toolbar,form.media-form [dir=rtl] .gin--edit-form .gin-secondary-toolbar {
     right: calc(50% - var(--gin-spacing-xxl));
     transform: translateX(50%);
   }
 }
-#layout-builder-modal .gin-secondary-toolbar__layout-container,
-.media-library-widget-modal .gin-secondary-toolbar__layout-container,
-form.media-form .gin-secondary-toolbar__layout-container {
+
+#layout-builder-modal .gin-secondary-toolbar__layout-container,.media-library-widget-modal .gin-secondary-toolbar__layout-container,form.media-form .gin-secondary-toolbar__layout-container {
   display: flex;
   align-items: center;
   min-width: 1px;
   width: 100%;
   margin: 0 var(--gin-spacing-m);
 }
+
 @media (min-width: 48em) {
-  #layout-builder-modal .gin-secondary-toolbar__layout-container,
-  .media-library-widget-modal .gin-secondary-toolbar__layout-container,
-  form.media-form .gin-secondary-toolbar__layout-container {
+  #layout-builder-modal .gin-secondary-toolbar__layout-container,.media-library-widget-modal .gin-secondary-toolbar__layout-container,form.media-form .gin-secondary-toolbar__layout-container {
     margin: 0 var(--gin-spacing-xl);
   }
 }
+
 @media (min-width: 61em) {
-  #layout-builder-modal .gin-secondary-toolbar__layout-container,
-  .media-library-widget-modal .gin-secondary-toolbar__layout-container,
-  form.media-form .gin-secondary-toolbar__layout-container {
+  #layout-builder-modal .gin-secondary-toolbar__layout-container,.media-library-widget-modal .gin-secondary-toolbar__layout-container,form.media-form .gin-secondary-toolbar__layout-container {
     margin: 0 min(5vw, var(--gin-spacing-xxl));
   }
 }
-#layout-builder-modal .gin-secondary-toolbar .region-breadcrumb,
-.media-library-widget-modal .gin-secondary-toolbar .region-breadcrumb,
-form.media-form .gin-secondary-toolbar .region-breadcrumb {
+
+#layout-builder-modal .gin-secondary-toolbar .region-breadcrumb,.media-library-widget-modal .gin-secondary-toolbar .region-breadcrumb,form.media-form .gin-secondary-toolbar .region-breadcrumb {
   min-height: 1.25rem;
 }
-#layout-builder-modal .gin-breadcrumb-wrapper,
-.media-library-widget-modal .gin-breadcrumb-wrapper,
-form.media-form .gin-breadcrumb-wrapper {
+
+#layout-builder-modal .gin-breadcrumb-wrapper,.media-library-widget-modal .gin-breadcrumb-wrapper,form.media-form .gin-breadcrumb-wrapper {
   flex-grow: 1;
   white-space: nowrap;
 }
-#layout-builder-modal [dir=ltr] .gin-breadcrumb-wrapper,
-.media-library-widget-modal [dir=ltr] .gin-breadcrumb-wrapper,
-form.media-form [dir=ltr] .gin-breadcrumb-wrapper {
+
+#layout-builder-modal [dir=ltr] .gin-breadcrumb-wrapper,.media-library-widget-modal [dir=ltr] .gin-breadcrumb-wrapper,form.media-form [dir=ltr] .gin-breadcrumb-wrapper {
   margin-right: var(--gin-spacing-xl);
 }
-#layout-builder-modal [dir=rtl] .gin-breadcrumb-wrapper,
-.media-library-widget-modal [dir=rtl] .gin-breadcrumb-wrapper,
-form.media-form [dir=rtl] .gin-breadcrumb-wrapper {
+
+#layout-builder-modal [dir=rtl] .gin-breadcrumb-wrapper,.media-library-widget-modal [dir=rtl] .gin-breadcrumb-wrapper,form.media-form [dir=rtl] .gin-breadcrumb-wrapper {
   margin-left: var(--gin-spacing-xl);
 }
-#layout-builder-modal .gin-back-to-admin,
-.media-library-widget-modal .gin-back-to-admin,
-form.media-form .gin-back-to-admin {
+
+#layout-builder-modal .gin-back-to-admin,.media-library-widget-modal .gin-back-to-admin,form.media-form .gin-back-to-admin {
   font-family: var(--gin-font);
   font-size: var(--gin-font-size-xs);
   font-weight: var(--gin-font-weight-normal);
@@ -142,19 +122,16 @@ form.media-form .gin-back-to-admin {
   border-bottom: 0 none;
   border-radius: var(--gin-border-xxs);
 }
-#layout-builder-modal [dir=ltr] .gin-back-to-admin,
-.media-library-widget-modal [dir=ltr] .gin-back-to-admin,
-form.media-form [dir=ltr] .gin-back-to-admin {
+
+#layout-builder-modal [dir=ltr] .gin-back-to-admin,.media-library-widget-modal [dir=ltr] .gin-back-to-admin,form.media-form [dir=ltr] .gin-back-to-admin {
   padding-left: 2em;
 }
-#layout-builder-modal [dir=rtl] .gin-back-to-admin,
-.media-library-widget-modal [dir=rtl] .gin-back-to-admin,
-form.media-form [dir=rtl] .gin-back-to-admin {
+
+#layout-builder-modal [dir=rtl] .gin-back-to-admin,.media-library-widget-modal [dir=rtl] .gin-back-to-admin,form.media-form [dir=rtl] .gin-back-to-admin {
   padding-right: 2em;
 }
-#layout-builder-modal .gin-back-to-admin::before,
-.media-library-widget-modal .gin-back-to-admin::before,
-form.media-form .gin-back-to-admin::before {
+
+#layout-builder-modal .gin-back-to-admin::before,.media-library-widget-modal .gin-back-to-admin::before,form.media-form .gin-back-to-admin::before {
   content: "";
   display: inline-block;
   position: absolute;
@@ -164,127 +141,98 @@ form.media-form .gin-back-to-admin::before {
   transform: translateY(-50%);
   background-color: var(--gin-icon-color);
   -webkit-mask-image: url("../../media/sprite.svg#backtosite-view");
-  mask-image: url("../../media/sprite.svg#backtosite-view");
+          mask-image: url("../../media/sprite.svg#backtosite-view");
   -webkit-mask-size: 100% 100%;
-  mask-size: 100% 100%;
+          mask-size: 100% 100%;
   -webkit-mask-position: center center;
-  mask-position: center center;
+          mask-position: center center;
 }
-#layout-builder-modal [dir=ltr] .gin-back-to-admin::before,
-.media-library-widget-modal [dir=ltr] .gin-back-to-admin::before,
-form.media-form [dir=ltr] .gin-back-to-admin::before {
+
+#layout-builder-modal [dir=ltr] .gin-back-to-admin::before,.media-library-widget-modal [dir=ltr] .gin-back-to-admin::before,form.media-form [dir=ltr] .gin-back-to-admin::before {
   left: 0;
 }
-#layout-builder-modal [dir=rtl] .gin-back-to-admin::before,
-.media-library-widget-modal [dir=rtl] .gin-back-to-admin::before,
-form.media-form [dir=rtl] .gin-back-to-admin::before {
+
+#layout-builder-modal [dir=rtl] .gin-back-to-admin::before,.media-library-widget-modal [dir=rtl] .gin-back-to-admin::before,form.media-form [dir=rtl] .gin-back-to-admin::before {
   right: 0;
 }
-#layout-builder-modal .gin-back-to-admin:hover,
-.media-library-widget-modal .gin-back-to-admin:hover,
-form.media-form .gin-back-to-admin:hover {
+
+#layout-builder-modal .gin-back-to-admin:hover,.media-library-widget-modal .gin-back-to-admin:hover,form.media-form .gin-back-to-admin:hover {
   color: var(--gin-color-primary-hover);
 }
-#layout-builder-modal .gin-back-to-admin:hover::before,
-.media-library-widget-modal .gin-back-to-admin:hover::before,
-form.media-form .gin-back-to-admin:hover::before {
+
+#layout-builder-modal .gin-back-to-admin:hover::before,.media-library-widget-modal .gin-back-to-admin:hover::before,form.media-form .gin-back-to-admin:hover::before {
   background-color: var(--gin-color-primary-hover);
 }
+
 @media (min-width: 61em) {
-  #layout-builder-modal .toolbar .toolbar-bar,
-  .media-library-widget-modal .toolbar .toolbar-bar,
-  form.media-form .toolbar .toolbar-bar {
+  #layout-builder-modal .toolbar .toolbar-bar,.media-library-widget-modal .toolbar .toolbar-bar,form.media-form .toolbar .toolbar-bar {
     background: transparent;
   }
-  #layout-builder-modal .toolbar .toolbar-bar .toolbar-tab, #layout-builder-modal .toolbar .toolbar-bar .toolbar-tab .toolbar-menu__logo,
-  .media-library-widget-modal .toolbar .toolbar-bar .toolbar-tab,
-  .media-library-widget-modal .toolbar .toolbar-bar .toolbar-tab .toolbar-menu__logo,
-  form.media-form .toolbar .toolbar-bar .toolbar-tab,
-  form.media-form .toolbar .toolbar-bar .toolbar-tab .toolbar-menu__logo {
+
+  #layout-builder-modal .toolbar .toolbar-bar .toolbar-tab,#layout-builder-modal .toolbar .toolbar-bar .toolbar-tab .toolbar-menu__logo,.media-library-widget-modal .toolbar .toolbar-bar .toolbar-tab,.media-library-widget-modal .toolbar .toolbar-bar .toolbar-tab .toolbar-menu__logo,form.media-form .toolbar .toolbar-bar .toolbar-tab,form.media-form .toolbar .toolbar-bar .toolbar-tab .toolbar-menu__logo {
     display: none;
   }
-  #layout-builder-modal .toolbar .toolbar-bar .toolbar-tab.toolbar-tab--toolbar-item-administration,
-  .media-library-widget-modal .toolbar .toolbar-bar .toolbar-tab.toolbar-tab--toolbar-item-administration,
-  form.media-form .toolbar .toolbar-bar .toolbar-tab.toolbar-tab--toolbar-item-administration {
+
+  #layout-builder-modal .toolbar .toolbar-bar .toolbar-tab.toolbar-tab--toolbar-item-administration,.media-library-widget-modal .toolbar .toolbar-bar .toolbar-tab.toolbar-tab--toolbar-item-administration,form.media-form .toolbar .toolbar-bar .toolbar-tab.toolbar-tab--toolbar-item-administration {
     display: block;
   }
-  #layout-builder-modal .toolbar-tab--toolbar-item-administration > .toolbar-icon-menu,
-  .media-library-widget-modal .toolbar-tab--toolbar-item-administration > .toolbar-icon-menu,
-  form.media-form .toolbar-tab--toolbar-item-administration > .toolbar-icon-menu {
+
+  #layout-builder-modal .toolbar-tab--toolbar-item-administration>.toolbar-icon-menu,.media-library-widget-modal .toolbar-tab--toolbar-item-administration>.toolbar-icon-menu,form.media-form .toolbar-tab--toolbar-item-administration>.toolbar-icon-menu {
     display: none;
   }
-  #layout-builder-modal #toolbar-item-administration-tray,
-  .media-library-widget-modal #toolbar-item-administration-tray,
-  form.media-form #toolbar-item-administration-tray {
+
+  #layout-builder-modal #toolbar-item-administration-tray,.media-library-widget-modal #toolbar-item-administration-tray,form.media-form #toolbar-item-administration-tray {
     display: block;
     position: absolute;
     top: 0;
   }
 }
+
 @media (min-width: 61em) {
-  #layout-builder-modal #toolbar-administration-secondary .toolbar-bar,
-  .media-library-widget-modal #toolbar-administration-secondary .toolbar-bar,
-  form.media-form #toolbar-administration-secondary .toolbar-bar {
+  #layout-builder-modal #toolbar-administration-secondary .toolbar-bar,.media-library-widget-modal #toolbar-administration-secondary .toolbar-bar,form.media-form #toolbar-administration-secondary .toolbar-bar {
     position: relative;
     display: flex;
     align-items: center;
     height: 100%;
   }
 }
-#layout-builder-modal .gin-secondary-toolbar .toolbar-secondary,
-.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary,
-form.media-form .gin-secondary-toolbar .toolbar-secondary {
+
+#layout-builder-modal .gin-secondary-toolbar .toolbar-secondary,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary,form.media-form .gin-secondary-toolbar .toolbar-secondary {
   display: none;
 }
+
 @media (min-width: 61em) {
-  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary {
+  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary,form.media-form .gin-secondary-toolbar .toolbar-secondary {
     display: block;
   }
-  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar {
+
+  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar {
     height: var(--gin-toolbar-height);
     z-index: 102;
   }
-  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab {
+
+  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab {
     display: block;
     position: relative;
   }
-  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:hover, #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:focus-within,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:hover,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:focus-within,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:hover,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:focus-within {
+
+  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:hover,#layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:focus-within,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:hover,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:focus-within,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:hover,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:focus-within {
     border-radius: var(--gin-border-s) var(--gin-border-s) 0 0;
   }
-  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:hover > .toolbar-item, #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:focus-within > .toolbar-item,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:hover > .toolbar-item,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:focus-within > .toolbar-item,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:hover > .toolbar-item,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:focus-within > .toolbar-item {
+
+  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:hover>.toolbar-item,#layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:focus-within>.toolbar-item,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:hover>.toolbar-item,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:focus-within>.toolbar-item,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:hover>.toolbar-item,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:focus-within>.toolbar-item {
     color: var(--gin-color-title);
   }
-  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:hover > .toolbar-item:before, #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:focus-within > .toolbar-item:before,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:hover > .toolbar-item:before,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:focus-within > .toolbar-item:before,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:hover > .toolbar-item:before,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:focus-within > .toolbar-item:before {
+
+  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:hover>.toolbar-item:before,#layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:focus-within>.toolbar-item:before,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:hover>.toolbar-item:before,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:focus-within>.toolbar-item:before,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:hover>.toolbar-item:before,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:focus-within>.toolbar-item:before {
     background: var(--gin-color-title);
   }
-  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:hover .toolbar-tray, #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:focus-within .toolbar-tray,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:hover .toolbar-tray,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:focus-within .toolbar-tray,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:hover .toolbar-tray,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:focus-within .toolbar-tray {
+
+  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:hover .toolbar-tray,#layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:focus-within .toolbar-tray,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:hover .toolbar-tray,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:focus-within .toolbar-tray,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:hover .toolbar-tray,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:focus-within .toolbar-tray {
     display: block;
   }
-  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item {
+
+  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item {
     font-size: 0;
     color: var(--gin-color-text-light);
     width: 32px;
@@ -292,351 +240,257 @@ form.media-form .gin-secondary-toolbar .toolbar-secondary {
     margin: 0;
     border-radius: var(--gin-border-s) var(--gin-border-s) 0 0;
   }
-  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:before,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:before,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:before {
+
+  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:before,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:before,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:before {
     top: 0;
   }
-  #layout-builder-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:before,
-  .media-library-widget-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:before,
-  form.media-form [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:before {
+
+  #layout-builder-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:before,.media-library-widget-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:before,form.media-form [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:before {
     left: 10px;
   }
-  #layout-builder-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:before,
-  .media-library-widget-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:before,
-  form.media-form [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:before {
+
+  #layout-builder-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:before,.media-library-widget-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:before,form.media-form [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:before {
     right: 10px;
   }
-  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:focus,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:focus,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:focus {
+
+  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:focus,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:focus,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:focus {
     border-radius: var(--gin-border-s);
   }
-  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:focus ~ .toolbar-tray,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:focus ~ .toolbar-tray,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:focus ~ .toolbar-tray {
+
+  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:focus~.toolbar-tray,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:focus~.toolbar-tray,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:focus~.toolbar-tray {
     display: block;
   }
-  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:hover, #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:focus,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:hover,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:focus,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:hover,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:focus {
+
+  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:hover,#layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:focus,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:hover,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:focus,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:hover,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:focus {
     color: var(--gin-color-title);
     background: none;
   }
-  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:hover::before, #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:focus::before,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:hover::before,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:focus::before,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:hover::before,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:focus::before {
+
+  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:hover::before,#layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:focus::before,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:hover::before,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:focus::before,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:hover::before,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:focus::before {
     background-color: var(--gin-color-title);
   }
-  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:focus, #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:hover:focus,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:focus,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:hover:focus,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:focus,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:hover:focus {
+
+  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:focus,#layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:hover:focus,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:focus,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:hover:focus,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:focus,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item:hover:focus {
     box-shadow: 0 0 0 1px var(--gin-color-focus-border), 0 0 0 4px var(--gin-color-focus);
   }
-  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:hover .trigger, #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:focus .trigger,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:hover .trigger,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:focus .trigger,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:hover .trigger,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:focus .trigger {
+
+  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:hover .trigger,#layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:focus .trigger,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:hover .trigger,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:focus .trigger,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:hover .trigger,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab:focus .trigger {
     text-decoration: none;
     background: var(--gin-bg-layer3);
   }
-  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray {
+
+  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray {
     position: absolute;
     width: 170px;
     background-color: var(--gin-bg-layer3);
     border-bottom: 0 none;
     box-shadow: var(--gin-shadow-l2);
   }
-  #layout-builder-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray,
-  .media-library-widget-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray,
-  form.media-form [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray {
+
+  #layout-builder-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray,.media-library-widget-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray,form.media-form [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray {
     left: 0;
     border-radius: 0 var(--gin-border-l) var(--gin-border-l) var(--gin-border-l);
   }
-  #layout-builder-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray,
-  .media-library-widget-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray,
-  form.media-form [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray {
+
+  #layout-builder-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray,.media-library-widget-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray,form.media-form [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray {
     right: 0;
     border-radius: var(--gin-border-l) 0 var(--gin-border-l) var(--gin-border-l);
   }
-  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray a,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray a,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray a {
+
+  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray a,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray a,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray a {
     color: var(--gin-color-primary);
     padding: var(--gin-spacing-s) var(--gin-spacing-m);
     border-radius: var(--gin-border-s);
     font-size: var(--gin-font-size-xs);
   }
-  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray a:hover, #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray a:active,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray a:hover,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray a:active,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray a:hover,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray a:active {
+
+  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray a:hover,#layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray a:active,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray a:hover,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray a:active,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray a:hover,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray a:active {
     color: var(--gin-color-button-text);
     background-color: var(--gin-color-primary);
   }
-  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray a.action-link::before,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray a.action-link::before,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray a.action-link::before {
+
+  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray a.action-link::before,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray a.action-link::before,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray a.action-link::before {
     background-color: var(--gin-color-primary);
   }
-  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray a.action-link:hover::before,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray a.action-link:hover::before,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray a.action-link:hover::before {
+
+  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray a.action-link:hover::before,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray a.action-link:hover::before,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray a.action-link:hover::before {
     background-color: var(--gin-color-button-text);
   }
-  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray .toolbar-lining:not(:empty),
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray .toolbar-lining:not(:empty),
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray .toolbar-lining:not(:empty) {
+
+  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray .toolbar-lining:not(:empty),.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray .toolbar-lining:not(:empty),form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray .toolbar-lining:not(:empty) {
     padding: var(--gin-spacing-xs);
   }
-  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray .toolbar-icon:before,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray .toolbar-icon:before,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray .toolbar-icon:before {
+
+  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray .toolbar-icon:before,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray .toolbar-icon:before,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-tray .toolbar-icon:before {
     display: none;
   }
-  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab.hidden,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab.hidden,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab.hidden {
+
+  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab.hidden,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab.hidden,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab.hidden {
     display: none;
   }
-  #layout-builder-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar div:nth-last-child(2) .toolbar-tray,
-  #layout-builder-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar div:last-child .toolbar-tray,
-  .media-library-widget-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar div:nth-last-child(2) .toolbar-tray,
-  .media-library-widget-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar div:last-child .toolbar-tray,
-  form.media-form [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar div:nth-last-child(2) .toolbar-tray,
-  form.media-form [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar div:last-child .toolbar-tray {
+
+  #layout-builder-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar div:nth-last-child(2) .toolbar-tray,#layout-builder-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar div:last-child .toolbar-tray,.media-library-widget-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar div:nth-last-child(2) .toolbar-tray,.media-library-widget-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar div:last-child .toolbar-tray,form.media-form [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar div:nth-last-child(2) .toolbar-tray,form.media-form [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar div:last-child .toolbar-tray {
     left: auto;
     right: 0;
     border-radius: var(--gin-border-l) 0 var(--gin-border-l) var(--gin-border-l);
   }
-  #layout-builder-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar div:nth-last-child(2) .toolbar-tray,
-  #layout-builder-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar div:last-child .toolbar-tray,
-  .media-library-widget-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar div:nth-last-child(2) .toolbar-tray,
-  .media-library-widget-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar div:last-child .toolbar-tray,
-  form.media-form [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar div:nth-last-child(2) .toolbar-tray,
-  form.media-form [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar div:last-child .toolbar-tray {
+
+  #layout-builder-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar div:nth-last-child(2) .toolbar-tray,#layout-builder-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar div:last-child .toolbar-tray,.media-library-widget-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar div:nth-last-child(2) .toolbar-tray,.media-library-widget-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar div:last-child .toolbar-tray,form.media-form [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar div:nth-last-child(2) .toolbar-tray,form.media-form [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar div:last-child .toolbar-tray {
     right: auto;
     left: 0;
     border-radius: 0 var(--gin-border-l) var(--gin-border-l) var(--gin-border-l);
   }
-  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item, #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item:hover, #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item:active, #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item:focus, #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item.is-active, #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item.is-active:hover,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item:hover,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item:active,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item:focus,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item.is-active,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item.is-active:hover,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item:hover,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item:active,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item:focus,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item.is-active,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item.is-active:hover {
+
+  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item,#layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item:hover,#layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item:active,#layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item:focus,#layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item.is-active,#layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item.is-active:hover,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item:hover,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item:active,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item:focus,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item.is-active,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item.is-active:hover,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item:hover,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item:active,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item:focus,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item.is-active,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item.is-active:hover {
     font-weight: var(--gin-font-weight-normal);
     color: var(--gin-color-text-light);
     background-color: transparent;
   }
-  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item::before, #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item:hover::before, #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item:active::before, #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item:focus::before, #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item.is-active::before, #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item.is-active:hover::before,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item::before,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item:hover::before,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item:active::before,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item:focus::before,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item.is-active::before,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item.is-active:hover::before,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item::before,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item:hover::before,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item:active::before,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item:focus::before,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item.is-active::before,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item.is-active:hover::before {
+
+  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item::before,#layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item:hover::before,#layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item:active::before,#layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item:focus::before,#layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item.is-active::before,#layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item.is-active:hover::before,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item::before,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item:hover::before,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item:active::before,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item:focus::before,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item.is-active::before,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item.is-active:hover::before,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item::before,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item:hover::before,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item:active::before,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item:focus::before,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item.is-active::before,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item.is-active:hover::before {
     background-image: none;
     background-color: var(--gin-icon-color);
   }
 }
-@media (min-width: 61em) and (min-width: 80em) {
-  #layout-builder-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user,
-  .media-library-widget-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user,
-  form.media-form [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user {
+
+@media (min-width: 61em)and (min-width: 80em) {
+  #layout-builder-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user,.media-library-widget-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user,form.media-form [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user {
     margin-right: -1.333em;
   }
-  #layout-builder-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user,
-  .media-library-widget-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user,
-  form.media-form [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user {
+
+  #layout-builder-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user,.media-library-widget-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user,form.media-form [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user {
     margin-left: -1.333em;
   }
 }
+
 @media (min-width: 61em) {
-  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user:hover .icon-user,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user:hover .icon-user,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user:hover .icon-user {
+  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user:hover .icon-user,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user:hover .icon-user,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user:hover .icon-user {
     box-shadow: 0 0 0 2px var(--gin-bg-app), 0 0 0 5px var(--gin-bg-layer3);
   }
 }
+
 @media (min-width: 61em) {
-  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user {
+  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user {
     border: 1px solid var(--gin-border-color);
     overflow: hidden;
     padding: 0;
     line-height: 0;
   }
-  #layout-builder-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user,
-  .media-library-widget-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user,
-  form.media-form [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user {
+
+  #layout-builder-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user,.media-library-widget-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user,form.media-form [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user {
     margin-left: var(--gin-spacing-m);
   }
-  #layout-builder-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user,
-  .media-library-widget-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user,
-  form.media-form [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user {
+
+  #layout-builder-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user,.media-library-widget-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user,form.media-form [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user {
     margin-right: var(--gin-spacing-m);
   }
-  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user, #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user:focus,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user:focus,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user:focus {
+
+  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user,#layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user:focus,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user:focus,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user:focus {
     border-radius: 50%;
   }
-  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user__image,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user__image,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user__image {
+
+  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user__image,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user__image,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user__image {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 }
-@media (min-width: 61em) and (min-width: 80em) {
-  #layout-builder-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user,
-  #layout-builder-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user ~ .toolbar-tray,
-  .media-library-widget-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user,
-  .media-library-widget-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user ~ .toolbar-tray,
-  form.media-form [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user,
-  form.media-form [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user ~ .toolbar-tray {
+
+@media (min-width: 61em)and (min-width: 80em) {
+  #layout-builder-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user,#layout-builder-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user~.toolbar-tray,.media-library-widget-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user,.media-library-widget-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user~.toolbar-tray,form.media-form [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user,form.media-form [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user~.toolbar-tray {
     margin-right: 1.333em;
   }
-  #layout-builder-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user,
-  #layout-builder-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user ~ .toolbar-tray,
-  .media-library-widget-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user,
-  .media-library-widget-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user ~ .toolbar-tray,
-  form.media-form [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user,
-  form.media-form [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user ~ .toolbar-tray {
+
+  #layout-builder-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user,#layout-builder-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user~.toolbar-tray,.media-library-widget-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user,.media-library-widget-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user~.toolbar-tray,form.media-form [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user,form.media-form [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-id--toolbar-icon-user .icon-user~.toolbar-tray {
     margin-left: 1.333em;
   }
 }
+
 @media (min-width: 61em) {
-  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-menu,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-menu,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-menu {
+  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-menu,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-menu,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-menu {
     background-color: transparent;
   }
 }
+
 @media (min-width: 80em) {
-  #layout-builder-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab,
-  .media-library-widget-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab,
-  form.media-form [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab {
+  #layout-builder-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab,.media-library-widget-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab,form.media-form [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab {
     margin-left: -0.25em;
   }
-  #layout-builder-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab,
-  .media-library-widget-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab,
-  form.media-form [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab {
+
+  #layout-builder-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab,.media-library-widget-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab,form.media-form [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab {
     margin-right: -0.25em;
   }
-  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item {
+
+  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item {
     font-size: var(--gin-font-size-xs);
     width: auto;
     height: auto;
   }
-  #layout-builder-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item,
-  .media-library-widget-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item,
-  form.media-form [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item {
+
+  #layout-builder-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item,.media-library-widget-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item,form.media-form [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item {
     padding-left: 2.875em;
   }
-  #layout-builder-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item,
-  .media-library-widget-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item,
-  form.media-form [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item {
+
+  #layout-builder-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item,.media-library-widget-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item,form.media-form [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item {
     padding-right: 2.875em;
   }
-  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item::before,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item::before,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item::before {
+
+  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item::before,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item::before,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item::before {
     width: var(--gin-icon-size-toolbar-secondary);
     height: var(--gin-icon-size-toolbar-secondary);
     top: 50%;
     transform: translateY(-50%);
   }
-  #layout-builder-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item::before,
-  .media-library-widget-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item::before,
-  form.media-form [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item::before {
+
+  #layout-builder-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item::before,.media-library-widget-modal [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item::before,form.media-form [dir=ltr] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item::before {
     left: 12px;
   }
-  #layout-builder-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item::before,
-  .media-library-widget-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item::before,
-  form.media-form [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item::before {
+
+  #layout-builder-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item::before,.media-library-widget-modal [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item::before,form.media-form [dir=rtl] .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item::before {
     right: 12px;
   }
-  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item .icon-user__image,
-  .media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item .icon-user__image,
-  form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item .icon-user__image {
+
+  #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item .icon-user__image,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item .icon-user__image,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-tab .toolbar-item .icon-user__image {
     width: 34px;
     height: 34px;
   }
 }
-#layout-builder-modal #admin-toolbar-search-input,
-.media-library-widget-modal #admin-toolbar-search-input,
-form.media-form #admin-toolbar-search-input {
+
+#layout-builder-modal #admin-toolbar-search-input,.media-library-widget-modal #admin-toolbar-search-input,form.media-form #admin-toolbar-search-input {
   line-height: 1;
   padding-top: 10px;
   padding-bottom: 10px;
   font-size: var(--gin-font-size-xs);
 }
-#layout-builder-modal [dir=ltr] #admin-toolbar-search-input,
-.media-library-widget-modal [dir=ltr] #admin-toolbar-search-input,
-form.media-form [dir=ltr] #admin-toolbar-search-input {
+
+#layout-builder-modal [dir=ltr] #admin-toolbar-search-input,.media-library-widget-modal [dir=ltr] #admin-toolbar-search-input,form.media-form [dir=ltr] #admin-toolbar-search-input {
   margin-right: 12px;
 }
-#layout-builder-modal [dir=rtl] #admin-toolbar-search-input,
-.media-library-widget-modal [dir=rtl] #admin-toolbar-search-input,
-form.media-form [dir=rtl] #admin-toolbar-search-input {
+
+#layout-builder-modal [dir=rtl] #admin-toolbar-search-input,.media-library-widget-modal [dir=rtl] #admin-toolbar-search-input,form.media-form [dir=rtl] #admin-toolbar-search-input {
   margin-left: 12px;
 }
-#layout-builder-modal #admin-toolbar-search-input::placeholder,
-.media-library-widget-modal #admin-toolbar-search-input::placeholder,
-form.media-form #admin-toolbar-search-input::placeholder {
+
+#layout-builder-modal #admin-toolbar-search-input::placeholder,.media-library-widget-modal #admin-toolbar-search-input::placeholder,form.media-form #admin-toolbar-search-input::placeholder {
   color: var(--gin-color-disabled);
   opacity: 1;
 }
-#layout-builder-modal .gin--dark-mode #admin-toolbar-search-input::placeholder,
-.media-library-widget-modal .gin--dark-mode #admin-toolbar-search-input::placeholder,
-form.media-form .gin--dark-mode #admin-toolbar-search-input::placeholder {
+
+#layout-builder-modal .gin--dark-mode #admin-toolbar-search-input::placeholder,.media-library-widget-modal .gin--dark-mode #admin-toolbar-search-input::placeholder,form.media-form .gin--dark-mode #admin-toolbar-search-input::placeholder {
   color: var(--gin-color-text-light);
-  opacity: 0.75;
+  opacity: .75;
 }
-#layout-builder-modal #admin-toolbar-search-tab .js-form-item.form-item,
-.media-library-widget-modal #admin-toolbar-search-tab .js-form-item.form-item,
-form.media-form #admin-toolbar-search-tab .js-form-item.form-item {
+
+#layout-builder-modal #admin-toolbar-search-tab .js-form-item.form-item,.media-library-widget-modal #admin-toolbar-search-tab .js-form-item.form-item,form.media-form #admin-toolbar-search-tab .js-form-item.form-item {
   margin-top: 0;
 }
-#layout-builder-modal .ui-autocomplete.admin-toolbar-search-autocomplete-list,
-.media-library-widget-modal .ui-autocomplete.admin-toolbar-search-autocomplete-list,
-form.media-form .ui-autocomplete.admin-toolbar-search-autocomplete-list {
+
+#layout-builder-modal .ui-autocomplete.admin-toolbar-search-autocomplete-list,.media-library-widget-modal .ui-autocomplete.admin-toolbar-search-autocomplete-list,form.media-form .ui-autocomplete.admin-toolbar-search-autocomplete-list {
   max-width: 320px;
   border-radius: var(--gin-border-m);
 }
-#layout-builder-modal .ui-autocomplete.admin-toolbar-search-autocomplete-list .ui-menu-item-wrapper,
-.media-library-widget-modal .ui-autocomplete.admin-toolbar-search-autocomplete-list .ui-menu-item-wrapper,
-form.media-form .ui-autocomplete.admin-toolbar-search-autocomplete-list .ui-menu-item-wrapper {
+
+#layout-builder-modal .ui-autocomplete.admin-toolbar-search-autocomplete-list .ui-menu-item-wrapper,.media-library-widget-modal .ui-autocomplete.admin-toolbar-search-autocomplete-list .ui-menu-item-wrapper,form.media-form .ui-autocomplete.admin-toolbar-search-autocomplete-list .ui-menu-item-wrapper {
   font-size: var(--gin-font-size-xs);
 }
+

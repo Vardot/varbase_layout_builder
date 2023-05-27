@@ -1,44 +1,34 @@
-#layout-builder-modal .layout-region-node-secondary,
-.media-library-widget-modal .layout-region-node-secondary,
-form.media-form .layout-region-node-secondary {
+#layout-builder-modal .layout-region-node-secondary,.media-library-widget-modal .layout-region-node-secondary,form.media-form .layout-region-node-secondary {
   transition: transform var(--gin-transition-fast);
 }
+
 @media (max-width: 63.99em) {
-  #layout-builder-modal .layout-region-node-secondary,
-  .media-library-widget-modal .layout-region-node-secondary,
-  form.media-form .layout-region-node-secondary {
+  #layout-builder-modal .layout-region-node-secondary,.media-library-widget-modal .layout-region-node-secondary,form.media-form .layout-region-node-secondary {
     opacity: 0;
     visibility: hidden;
   }
 }
-#layout-builder-modal body[data-meta-sidebar=closed],
-.media-library-widget-modal body[data-meta-sidebar=closed],
-form.media-form body[data-meta-sidebar=closed] {
+
+#layout-builder-modal body[data-meta-sidebar=closed],.media-library-widget-modal body[data-meta-sidebar=closed],form.media-form body[data-meta-sidebar=closed] {
   --gin-sidebar-offset: 0px;
 }
-#layout-builder-modal body[data-meta-sidebar=closed] .layout-region-node-secondary,
-.media-library-widget-modal body[data-meta-sidebar=closed] .layout-region-node-secondary,
-form.media-form body[data-meta-sidebar=closed] .layout-region-node-secondary {
+
+#layout-builder-modal body[data-meta-sidebar=closed] .layout-region-node-secondary,.media-library-widget-modal body[data-meta-sidebar=closed] .layout-region-node-secondary,form.media-form body[data-meta-sidebar=closed] .layout-region-node-secondary {
   transform: translateX(var(--gin-sidebar-width));
 }
-#layout-builder-modal [dir=rtl] body[data-meta-sidebar=closed] .layout-region-node-secondary,
-.media-library-widget-modal [dir=rtl] body[data-meta-sidebar=closed] .layout-region-node-secondary,
-form.media-form [dir=rtl] body[data-meta-sidebar=closed] .layout-region-node-secondary {
+
+#layout-builder-modal [dir=rtl] body[data-meta-sidebar=closed] .layout-region-node-secondary,.media-library-widget-modal [dir=rtl] body[data-meta-sidebar=closed] .layout-region-node-secondary,form.media-form [dir=rtl] body[data-meta-sidebar=closed] .layout-region-node-secondary {
   transform: translateX(calc(var(--gin-sidebar-width) * -1));
 }
+
 @media (max-width: 63.99em) {
-  #layout-builder-modal body[data-meta-sidebar=open] .layout-region-node-secondary,
-  .media-library-widget-modal body[data-meta-sidebar=open] .layout-region-node-secondary,
-  form.media-form body[data-meta-sidebar=open] .layout-region-node-secondary {
+  #layout-builder-modal body[data-meta-sidebar=open] .layout-region-node-secondary,.media-library-widget-modal body[data-meta-sidebar=open] .layout-region-node-secondary,form.media-form body[data-meta-sidebar=open] .layout-region-node-secondary {
     opacity: 1;
     visibility: visible;
   }
 }
-#layout-builder-modal .meta-sidebar__trigger, #layout-builder-modal .meta-sidebar__close,
-.media-library-widget-modal .meta-sidebar__trigger,
-.media-library-widget-modal .meta-sidebar__close,
-form.media-form .meta-sidebar__trigger,
-form.media-form .meta-sidebar__close {
+
+#layout-builder-modal .meta-sidebar__trigger,#layout-builder-modal .meta-sidebar__close,.media-library-widget-modal .meta-sidebar__trigger,.media-library-widget-modal .meta-sidebar__close,form.media-form .meta-sidebar__trigger,form.media-form .meta-sidebar__close {
   cursor: pointer;
   background: transparent;
   height: 32px;
@@ -46,111 +36,79 @@ form.media-form .meta-sidebar__close {
   border-radius: var(--gin-border-m);
   transition: background var(--gin-transition-fast);
 }
-#layout-builder-modal .meta-sidebar__trigger::before, #layout-builder-modal .meta-sidebar__close::before,
-.media-library-widget-modal .meta-sidebar__trigger::before,
-.media-library-widget-modal .meta-sidebar__close::before,
-form.media-form .meta-sidebar__trigger::before,
-form.media-form .meta-sidebar__close::before {
+
+#layout-builder-modal .meta-sidebar__trigger::before,#layout-builder-modal .meta-sidebar__close::before,.media-library-widget-modal .meta-sidebar__trigger::before,.media-library-widget-modal .meta-sidebar__close::before,form.media-form .meta-sidebar__trigger::before,form.media-form .meta-sidebar__close::before {
   display: inline-block;
   width: 100%;
   height: 100%;
   content: "";
   -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
   -webkit-mask-position: center center;
-  mask-position: center center;
+          mask-position: center center;
   background-color: var(--gin-icon-color);
 }
-#layout-builder-modal .meta-sidebar__trigger:hover, #layout-builder-modal .meta-sidebar__trigger:focus, #layout-builder-modal .meta-sidebar__close:hover, #layout-builder-modal .meta-sidebar__close:focus,
-.media-library-widget-modal .meta-sidebar__trigger:hover,
-.media-library-widget-modal .meta-sidebar__trigger:focus,
-.media-library-widget-modal .meta-sidebar__close:hover,
-.media-library-widget-modal .meta-sidebar__close:focus,
-form.media-form .meta-sidebar__trigger:hover,
-form.media-form .meta-sidebar__trigger:focus,
-form.media-form .meta-sidebar__close:hover,
-form.media-form .meta-sidebar__close:focus {
+
+#layout-builder-modal .meta-sidebar__trigger:hover,#layout-builder-modal .meta-sidebar__trigger:focus,#layout-builder-modal .meta-sidebar__close:hover,#layout-builder-modal .meta-sidebar__close:focus,.media-library-widget-modal .meta-sidebar__trigger:hover,.media-library-widget-modal .meta-sidebar__trigger:focus,.media-library-widget-modal .meta-sidebar__close:hover,.media-library-widget-modal .meta-sidebar__close:focus,form.media-form .meta-sidebar__trigger:hover,form.media-form .meta-sidebar__trigger:focus,form.media-form .meta-sidebar__close:hover,form.media-form .meta-sidebar__close:focus {
   background-color: var(--gin-color-primary-light);
 }
-#layout-builder-modal .meta-sidebar__trigger:hover::before, #layout-builder-modal .meta-sidebar__trigger:focus::before, #layout-builder-modal .meta-sidebar__close:hover::before, #layout-builder-modal .meta-sidebar__close:focus::before,
-.media-library-widget-modal .meta-sidebar__trigger:hover::before,
-.media-library-widget-modal .meta-sidebar__trigger:focus::before,
-.media-library-widget-modal .meta-sidebar__close:hover::before,
-.media-library-widget-modal .meta-sidebar__close:focus::before,
-form.media-form .meta-sidebar__trigger:hover::before,
-form.media-form .meta-sidebar__trigger:focus::before,
-form.media-form .meta-sidebar__close:hover::before,
-form.media-form .meta-sidebar__close:focus::before {
+
+#layout-builder-modal .meta-sidebar__trigger:hover::before,#layout-builder-modal .meta-sidebar__trigger:focus::before,#layout-builder-modal .meta-sidebar__close:hover::before,#layout-builder-modal .meta-sidebar__close:focus::before,.media-library-widget-modal .meta-sidebar__trigger:hover::before,.media-library-widget-modal .meta-sidebar__trigger:focus::before,.media-library-widget-modal .meta-sidebar__close:hover::before,.media-library-widget-modal .meta-sidebar__close:focus::before,form.media-form .meta-sidebar__trigger:hover::before,form.media-form .meta-sidebar__trigger:focus::before,form.media-form .meta-sidebar__close:hover::before,form.media-form .meta-sidebar__close:focus::before {
   background-color: var(--gin-color-primary);
 }
-#layout-builder-modal .meta-sidebar__trigger.is-active, #layout-builder-modal .meta-sidebar__close.is-active,
-.media-library-widget-modal .meta-sidebar__trigger.is-active,
-.media-library-widget-modal .meta-sidebar__close.is-active,
-form.media-form .meta-sidebar__trigger.is-active,
-form.media-form .meta-sidebar__close.is-active {
+
+#layout-builder-modal .meta-sidebar__trigger.is-active,#layout-builder-modal .meta-sidebar__close.is-active,.media-library-widget-modal .meta-sidebar__trigger.is-active,.media-library-widget-modal .meta-sidebar__close.is-active,form.media-form .meta-sidebar__trigger.is-active,form.media-form .meta-sidebar__close.is-active {
   background-color: var(--gin-color-primary-light-hover);
 }
-#layout-builder-modal .meta-sidebar__trigger.is-active::before, #layout-builder-modal .meta-sidebar__close.is-active::before,
-.media-library-widget-modal .meta-sidebar__trigger.is-active::before,
-.media-library-widget-modal .meta-sidebar__close.is-active::before,
-form.media-form .meta-sidebar__trigger.is-active::before,
-form.media-form .meta-sidebar__close.is-active::before {
+
+#layout-builder-modal .meta-sidebar__trigger.is-active::before,#layout-builder-modal .meta-sidebar__close.is-active::before,.media-library-widget-modal .meta-sidebar__trigger.is-active::before,.media-library-widget-modal .meta-sidebar__close.is-active::before,form.media-form .meta-sidebar__trigger.is-active::before,form.media-form .meta-sidebar__close.is-active::before {
   background-color: var(--gin-color-primary-active);
 }
-#layout-builder-modal [dir=ltr] .meta-sidebar__trigger,
-.media-library-widget-modal [dir=ltr] .meta-sidebar__trigger,
-form.media-form [dir=ltr] .meta-sidebar__trigger {
+
+#layout-builder-modal [dir=ltr] .meta-sidebar__trigger,.media-library-widget-modal [dir=ltr] .meta-sidebar__trigger,form.media-form [dir=ltr] .meta-sidebar__trigger {
   margin-left: var(--gin-spacing-xs);
 }
-#layout-builder-modal [dir=rtl] .meta-sidebar__trigger,
-.media-library-widget-modal [dir=rtl] .meta-sidebar__trigger,
-form.media-form [dir=rtl] .meta-sidebar__trigger {
+
+#layout-builder-modal [dir=rtl] .meta-sidebar__trigger,.media-library-widget-modal [dir=rtl] .meta-sidebar__trigger,form.media-form [dir=rtl] .meta-sidebar__trigger {
   margin-right: var(--gin-spacing-xs);
 }
-#layout-builder-modal .meta-sidebar__trigger::before,
-.media-library-widget-modal .meta-sidebar__trigger::before,
-form.media-form .meta-sidebar__trigger::before {
+
+#layout-builder-modal .meta-sidebar__trigger::before,.media-library-widget-modal .meta-sidebar__trigger::before,form.media-form .meta-sidebar__trigger::before {
   -webkit-mask-image: url("../../media/sprite.svg#sidebar-view");
-  mask-image: url("../../media/sprite.svg#sidebar-view");
+          mask-image: url("../../media/sprite.svg#sidebar-view");
   -webkit-mask-size: var(--gin-icon-size-sidebar-toggle) var(--gin-icon-size-sidebar-toggle);
-  mask-size: var(--gin-icon-size-sidebar-toggle) var(--gin-icon-size-sidebar-toggle);
+          mask-size: var(--gin-icon-size-sidebar-toggle) var(--gin-icon-size-sidebar-toggle);
   border-radius: 50%;
 }
-#layout-builder-modal .meta-sidebar__close,
-.media-library-widget-modal .meta-sidebar__close,
-form.media-form .meta-sidebar__close {
+
+#layout-builder-modal .meta-sidebar__close,.media-library-widget-modal .meta-sidebar__close,form.media-form .meta-sidebar__close {
   z-index: 104;
   position: absolute;
   top: 18px;
 }
-#layout-builder-modal [dir=ltr] .meta-sidebar__close,
-.media-library-widget-modal [dir=ltr] .meta-sidebar__close,
-form.media-form [dir=ltr] .meta-sidebar__close {
+
+#layout-builder-modal [dir=ltr] .meta-sidebar__close,.media-library-widget-modal [dir=ltr] .meta-sidebar__close,form.media-form [dir=ltr] .meta-sidebar__close {
   right: var(--gin-spacing-m);
 }
-#layout-builder-modal [dir=rtl] .meta-sidebar__close,
-.media-library-widget-modal [dir=rtl] .meta-sidebar__close,
-form.media-form [dir=rtl] .meta-sidebar__close {
+
+#layout-builder-modal [dir=rtl] .meta-sidebar__close,.media-library-widget-modal [dir=rtl] .meta-sidebar__close,form.media-form [dir=rtl] .meta-sidebar__close {
   left: var(--gin-spacing-m);
 }
+
 @media (min-width: 64em) {
-  #layout-builder-modal .meta-sidebar__close,
-  .media-library-widget-modal .meta-sidebar__close,
-  form.media-form .meta-sidebar__close {
+  #layout-builder-modal .meta-sidebar__close,.media-library-widget-modal .meta-sidebar__close,form.media-form .meta-sidebar__close {
     display: none;
   }
 }
-#layout-builder-modal .meta-sidebar__close::before,
-.media-library-widget-modal .meta-sidebar__close::before,
-form.media-form .meta-sidebar__close::before {
+
+#layout-builder-modal .meta-sidebar__close::before,.media-library-widget-modal .meta-sidebar__close::before,form.media-form .meta-sidebar__close::before {
   -webkit-mask-image: url("../../media/sprite.svg#close-view");
-  mask-image: url("../../media/sprite.svg#close-view");
+          mask-image: url("../../media/sprite.svg#close-view");
   -webkit-mask-size: 16px 16px;
-  mask-size: 16px 16px;
+          mask-size: 16px 16px;
 }
-#layout-builder-modal .meta-sidebar__overlay,
-.media-library-widget-modal .meta-sidebar__overlay,
-form.media-form .meta-sidebar__overlay {
+
+#layout-builder-modal .meta-sidebar__overlay,.media-library-widget-modal .meta-sidebar__overlay,form.media-form .meta-sidebar__overlay {
   z-index: 102;
   position: fixed;
   top: 0;
@@ -160,26 +118,23 @@ form.media-form .meta-sidebar__overlay {
   visibility: hidden;
   background: var(--gin-bg-layer2);
 }
-#layout-builder-modal [dir=ltr] .meta-sidebar__overlay,
-.media-library-widget-modal [dir=ltr] .meta-sidebar__overlay,
-form.media-form [dir=ltr] .meta-sidebar__overlay {
+
+#layout-builder-modal [dir=ltr] .meta-sidebar__overlay,.media-library-widget-modal [dir=ltr] .meta-sidebar__overlay,form.media-form [dir=ltr] .meta-sidebar__overlay {
   left: 0;
 }
-#layout-builder-modal [dir=rtl] .meta-sidebar__overlay,
-.media-library-widget-modal [dir=rtl] .meta-sidebar__overlay,
-form.media-form [dir=rtl] .meta-sidebar__overlay {
+
+#layout-builder-modal [dir=rtl] .meta-sidebar__overlay,.media-library-widget-modal [dir=rtl] .meta-sidebar__overlay,form.media-form [dir=rtl] .meta-sidebar__overlay {
   right: 0;
 }
-#layout-builder-modal body[data-meta-sidebar=open] .meta-sidebar__overlay,
-.media-library-widget-modal body[data-meta-sidebar=open] .meta-sidebar__overlay,
-form.media-form body[data-meta-sidebar=open] .meta-sidebar__overlay {
-  opacity: 0.9;
+
+#layout-builder-modal body[data-meta-sidebar=open] .meta-sidebar__overlay,.media-library-widget-modal body[data-meta-sidebar=open] .meta-sidebar__overlay,form.media-form body[data-meta-sidebar=open] .meta-sidebar__overlay {
+  opacity: .9;
   visibility: visible;
 }
+
 @media (min-width: 64em) {
-  #layout-builder-modal .meta-sidebar__overlay,
-  .media-library-widget-modal .meta-sidebar__overlay,
-  form.media-form .meta-sidebar__overlay {
+  #layout-builder-modal .meta-sidebar__overlay,.media-library-widget-modal .meta-sidebar__overlay,form.media-form .meta-sidebar__overlay {
     display: none;
   }
 }
+

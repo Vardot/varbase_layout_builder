@@ -1,6 +1,4 @@
-#layout-builder-modal :root,
-.media-library-widget-modal :root,
-form.media-form :root {
+#layout-builder-modal :root,.media-library-widget-modal :root,form.media-form :root {
   --gin-toolbar-secondary-height: 48px;
   --gin-toolbar-height: 39px;
   --gin-scroll-offset: 72px;
@@ -8,10 +6,9 @@ form.media-form :root {
   --gin-toolbar-x-offset: 0px;
   --gin-sticky-offset: 0px;
 }
+
 @media (min-width: 61em) {
-  #layout-builder-modal :root,
-  .media-library-widget-modal :root,
-  form.media-form :root {
+  #layout-builder-modal :root,.media-library-widget-modal :root,form.media-form :root {
     --gin-toolbar-secondary-height: 60px;
     --gin-icon-size-toolbar: 22px;
     --gin-scroll-offset: 130px;
@@ -20,316 +17,235 @@ form.media-form :root {
     --gin-sticky-offset: var(--gin-height-sticky);
   }
 }
+
 @media (min-width: 61em) {
-  #layout-builder-modal .toolbar-fixed[data-toolbar-menu=open],
-  .media-library-widget-modal .toolbar-fixed[data-toolbar-menu=open],
-  form.media-form .toolbar-fixed[data-toolbar-menu=open] {
+  #layout-builder-modal .toolbar-fixed[data-toolbar-menu=open],.media-library-widget-modal .toolbar-fixed[data-toolbar-menu=open],form.media-form .toolbar-fixed[data-toolbar-menu=open] {
     --gin-toolbar-x-offset: var(--gin-toolbar-width, 240px);
   }
 }
+
 @media (min-width: 61em) {
-  #layout-builder-modal #toolbar-item-administration-tray,
-  .media-library-widget-modal #toolbar-item-administration-tray,
-  form.media-form #toolbar-item-administration-tray {
+  #layout-builder-modal #toolbar-item-administration-tray,.media-library-widget-modal #toolbar-item-administration-tray,form.media-form #toolbar-item-administration-tray {
     border: 0 none;
   }
 }
-#layout-builder-modal .toolbar .toolbar-bar,
-.media-library-widget-modal .toolbar .toolbar-bar,
-form.media-form .toolbar .toolbar-bar {
+
+#layout-builder-modal .toolbar .toolbar-bar,.media-library-widget-modal .toolbar .toolbar-bar,form.media-form .toolbar .toolbar-bar {
   box-shadow: none;
 }
-#layout-builder-modal [dir=rtl] .toolbar .toolbar-bar,
-.media-library-widget-modal [dir=rtl] .toolbar .toolbar-bar,
-form.media-form [dir=rtl] .toolbar .toolbar-bar {
+
+#layout-builder-modal [dir=rtl] .toolbar .toolbar-bar,.media-library-widget-modal [dir=rtl] .toolbar .toolbar-bar,form.media-form [dir=rtl] .toolbar .toolbar-bar {
   box-shadow: none;
 }
+
 @media (min-width: 36.75em) {
-  #layout-builder-modal .toolbar .toolbar-bar,
-  .media-library-widget-modal .toolbar .toolbar-bar,
-  form.media-form .toolbar .toolbar-bar {
+  #layout-builder-modal .toolbar .toolbar-bar,.media-library-widget-modal .toolbar .toolbar-bar,form.media-form .toolbar .toolbar-bar {
     display: flex;
   }
 }
+
 @media (min-width: 64em) {
-  #layout-builder-modal .toolbar .toolbar-bar,
-  .media-library-widget-modal .toolbar .toolbar-bar,
-  form.media-form .toolbar .toolbar-bar {
+  #layout-builder-modal .toolbar .toolbar-bar,.media-library-widget-modal .toolbar .toolbar-bar,form.media-form .toolbar .toolbar-bar {
     height: 0;
   }
 }
-#layout-builder-modal .toolbar .toolbar-bar .toolbar-tab > .toolbar-item,
-.media-library-widget-modal .toolbar .toolbar-bar .toolbar-tab > .toolbar-item,
-form.media-form .toolbar .toolbar-bar .toolbar-tab > .toolbar-item {
+
+#layout-builder-modal .toolbar .toolbar-bar .toolbar-tab>.toolbar-item,.media-library-widget-modal .toolbar .toolbar-bar .toolbar-tab>.toolbar-item,form.media-form .toolbar .toolbar-bar .toolbar-tab>.toolbar-item {
   font-weight: var(--gin-font-weight-normal);
 }
+
 @media (min-width: 61em) {
-  #layout-builder-modal .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-icon::before,
-  #layout-builder-modal .toolbar .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item::before,
-  .media-library-widget-modal .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-icon::before,
-  .media-library-widget-modal .toolbar .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item::before,
-  form.media-form .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-icon::before,
-  form.media-form .toolbar .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item::before {
+  #layout-builder-modal .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-icon::before,#layout-builder-modal .toolbar .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item::before,.media-library-widget-modal .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-icon::before,.media-library-widget-modal .toolbar .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item::before,form.media-form .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-icon::before,form.media-form .toolbar .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item::before {
     width: var(--gin-icon-size-toolbar);
     height: var(--gin-icon-size-toolbar);
     top: 50%;
     transform: translateY(-50%);
   }
-  #layout-builder-modal [dir=ltr] .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-icon::before,
-  #layout-builder-modal [dir=ltr] .toolbar .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item::before,
-  .media-library-widget-modal [dir=ltr] .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-icon::before,
-  .media-library-widget-modal [dir=ltr] .toolbar .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item::before,
-  form.media-form [dir=ltr] .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-icon::before,
-  form.media-form [dir=ltr] .toolbar .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item::before {
-    left: calc((var(--gin-toolbar-width-collapsed) - var(--gin-icon-size-toolbar)) / 2 - 9px);
+
+  #layout-builder-modal [dir=ltr] .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-icon::before,#layout-builder-modal [dir=ltr] .toolbar .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item::before,.media-library-widget-modal [dir=ltr] .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-icon::before,.media-library-widget-modal [dir=ltr] .toolbar .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item::before,form.media-form [dir=ltr] .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-icon::before,form.media-form [dir=ltr] .toolbar .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item::before {
+    left: calc((var(--gin-toolbar-width-collapsed) - var(--gin-icon-size-toolbar))/2 - 9px);
   }
-  #layout-builder-modal [dir=rtl] .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-icon::before,
-  #layout-builder-modal [dir=rtl] .toolbar .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item::before,
-  .media-library-widget-modal [dir=rtl] .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-icon::before,
-  .media-library-widget-modal [dir=rtl] .toolbar .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item::before,
-  form.media-form [dir=rtl] .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-icon::before,
-  form.media-form [dir=rtl] .toolbar .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item::before {
-    right: calc((var(--gin-toolbar-width-collapsed) - var(--gin-icon-size-toolbar)) / 2 - 9px);
+
+  #layout-builder-modal [dir=rtl] .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-icon::before,#layout-builder-modal [dir=rtl] .toolbar .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item::before,.media-library-widget-modal [dir=rtl] .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-icon::before,.media-library-widget-modal [dir=rtl] .toolbar .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item::before,form.media-form [dir=rtl] .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-icon::before,form.media-form [dir=rtl] .toolbar .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item::before {
+    right: calc((var(--gin-toolbar-width-collapsed) - var(--gin-icon-size-toolbar))/2 - 9px);
   }
 }
+
 @media (max-width: 36.74em) {
-  #layout-builder-modal [dir=ltr] .toolbar .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item::before,
-  .media-library-widget-modal [dir=ltr] .toolbar .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item::before,
-  form.media-form [dir=ltr] .toolbar .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item::before {
+  #layout-builder-modal [dir=ltr] .toolbar .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item::before,.media-library-widget-modal [dir=ltr] .toolbar .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item::before,form.media-form [dir=ltr] .toolbar .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item::before {
     left: 0;
   }
-  #layout-builder-modal [dir=rtl] .toolbar .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item::before,
-  .media-library-widget-modal [dir=rtl] .toolbar .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item::before,
-  form.media-form [dir=rtl] .toolbar .toolbar-bar .toolbar-tab > .toolbar-icon-edit.toolbar-item::before {
+
+  #layout-builder-modal [dir=rtl] .toolbar .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item::before,.media-library-widget-modal [dir=rtl] .toolbar .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item::before,form.media-form [dir=rtl] .toolbar .toolbar-bar .toolbar-tab>.toolbar-icon-edit.toolbar-item::before {
     right: 0;
   }
 }
+
 @media (min-width: 61em) {
-  #layout-builder-modal .toolbar .toolbar-bar .toolbar-logo,
-  .media-library-widget-modal .toolbar .toolbar-bar .toolbar-logo,
-  form.media-form .toolbar .toolbar-bar .toolbar-logo {
+  #layout-builder-modal .toolbar .toolbar-bar .toolbar-logo,.media-library-widget-modal .toolbar .toolbar-bar .toolbar-logo,form.media-form .toolbar .toolbar-bar .toolbar-logo {
     height: var(--gin-height-sticky);
   }
-  #layout-builder-modal .toolbar .toolbar-bar .toolbar-logo:hover, #layout-builder-modal .toolbar .toolbar-bar .toolbar-logo:focus,
-  .media-library-widget-modal .toolbar .toolbar-bar .toolbar-logo:hover,
-  .media-library-widget-modal .toolbar .toolbar-bar .toolbar-logo:focus,
-  form.media-form .toolbar .toolbar-bar .toolbar-logo:hover,
-  form.media-form .toolbar .toolbar-bar .toolbar-logo:focus {
+
+  #layout-builder-modal .toolbar .toolbar-bar .toolbar-logo:hover,#layout-builder-modal .toolbar .toolbar-bar .toolbar-logo:focus,.media-library-widget-modal .toolbar .toolbar-bar .toolbar-logo:hover,.media-library-widget-modal .toolbar .toolbar-bar .toolbar-logo:focus,form.media-form .toolbar .toolbar-bar .toolbar-logo:hover,form.media-form .toolbar .toolbar-bar .toolbar-logo:focus {
     z-index: 3;
     position: relative;
   }
-  #layout-builder-modal .toolbar .toolbar-bar .toolbar-icon-home,
-  .media-library-widget-modal .toolbar .toolbar-bar .toolbar-icon-home,
-  form.media-form .toolbar .toolbar-bar .toolbar-icon-home {
+
+  #layout-builder-modal .toolbar .toolbar-bar .toolbar-icon-home,.media-library-widget-modal .toolbar .toolbar-bar .toolbar-icon-home,form.media-form .toolbar .toolbar-bar .toolbar-icon-home {
     display: block;
     width: 100%;
     margin: var(--gin-spacing-xs) 0;
   }
-  #layout-builder-modal .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon.override-icon:before,
-  .media-library-widget-modal .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon.override-icon:before,
-  form.media-form .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon.override-icon:before {
+
+  #layout-builder-modal .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon.override-icon:before,.media-library-widget-modal .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon.override-icon:before,form.media-form .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon.override-icon:before {
     width: 0;
     content: none;
   }
-  #layout-builder-modal [dir=ltr] .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon.override-icon:before,
-  .media-library-widget-modal [dir=ltr] .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon.override-icon:before,
-  form.media-form [dir=ltr] .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon.override-icon:before {
+
+  #layout-builder-modal [dir=ltr] .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon.override-icon:before,.media-library-widget-modal [dir=ltr] .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon.override-icon:before,form.media-form [dir=ltr] .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon.override-icon:before {
     left: 0;
   }
-  #layout-builder-modal [dir=rtl] .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon.override-icon:before,
-  .media-library-widget-modal [dir=rtl] .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon.override-icon:before,
-  form.media-form [dir=rtl] .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon.override-icon:before {
+
+  #layout-builder-modal [dir=rtl] .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon.override-icon:before,.media-library-widget-modal [dir=rtl] .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon.override-icon:before,form.media-form [dir=rtl] .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon.override-icon:before {
     right: 0;
   }
 }
-#layout-builder-modal .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-logo,
-.media-library-widget-modal .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-logo,
-form.media-form .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-logo {
-  padding: var(--gin-spacing-xs) 0;
+
+#layout-builder-modal .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-logo,.media-library-widget-modal .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-logo,form.media-form .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-logo {
+  padding: var(--gin-spacing-xs) var(--gin-spacing-s);
 }
-#layout-builder-modal .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-logo img,
-.media-library-widget-modal .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-logo img,
-form.media-form .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-logo img {
+
+#layout-builder-modal .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-logo img,.media-library-widget-modal .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-logo img,form.media-form .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-logo img {
   max-width: calc(var(--gin-toolbar-width-collapsed) - 1px);
   max-height: 40px;
 }
+
 @media (min-width: 61em) {
-  #layout-builder-modal .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default,
-  .media-library-widget-modal .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default,
-  form.media-form .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default {
+  #layout-builder-modal .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default,.media-library-widget-modal .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default,form.media-form .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default {
     height: 74px;
     margin-bottom: 6px;
     transition: top var(--gin-transition);
   }
 }
+
 @media (min-width: 61em) {
-  #layout-builder-modal .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default::before,
-  .media-library-widget-modal .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default::before,
-  form.media-form .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default::before {
+  #layout-builder-modal .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default::before,.media-library-widget-modal .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default::before,form.media-form .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default::before {
     width: 32px;
     height: 32px;
     -webkit-mask-size: 32px 32px;
-    mask-size: 32px 32px;
+            mask-size: 32px 32px;
     -webkit-mask-position: center center;
-    mask-position: center center;
+            mask-position: center center;
   }
-  #layout-builder-modal [dir=ltr] .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default::before,
-  .media-library-widget-modal [dir=ltr] .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default::before,
-  form.media-form [dir=ltr] .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default::before {
-    left: calc((var(--gin-toolbar-width-collapsed) - 32px) / 2 - 9px);
+
+  #layout-builder-modal [dir=ltr] .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default::before,.media-library-widget-modal [dir=ltr] .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default::before,form.media-form [dir=ltr] .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default::before {
+    left: calc((var(--gin-toolbar-width-collapsed) - 32px)/2 - 9px);
   }
-  #layout-builder-modal [dir=rtl] .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default::before,
-  .media-library-widget-modal [dir=rtl] .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default::before,
-  form.media-form [dir=rtl] .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default::before {
-    right: calc((var(--gin-toolbar-width-collapsed) - 32px) / 2 - 9px);
+
+  #layout-builder-modal [dir=rtl] .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default::before,.media-library-widget-modal [dir=rtl] .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default::before,form.media-form [dir=rtl] .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default::before {
+    right: calc((var(--gin-toolbar-width-collapsed) - 32px)/2 - 9px);
   }
 }
-#layout-builder-modal .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default:hover::before,
-.media-library-widget-modal .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default:hover::before,
-form.media-form .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default:hover::before {
+
+#layout-builder-modal .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default:hover::before,.media-library-widget-modal .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default:hover::before,form.media-form .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default:hover::before {
   background: var(--gin-color-primary);
 }
-#layout-builder-modal .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default::after,
-.media-library-widget-modal .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default::after,
-form.media-form .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default::after {
+
+#layout-builder-modal .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default::after,.media-library-widget-modal .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default::after,form.media-form .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default::after {
   display: none;
 }
-#layout-builder-modal .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default:focus,
-.media-library-widget-modal .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default:focus,
-form.media-form .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default:focus {
+
+#layout-builder-modal .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default:focus,.media-library-widget-modal .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default:focus,form.media-form .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default:focus {
   box-shadow: none;
 }
-#layout-builder-modal .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default:focus::after,
-.media-library-widget-modal .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default:focus::after,
-form.media-form .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default:focus::after {
+
+#layout-builder-modal .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default:focus::after,.media-library-widget-modal .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default:focus::after,form.media-form .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default:focus::after {
   box-shadow: inset 0 0 0 1px var(--gin-color-focus-border), inset 0 0 0 4px var(--gin-color-focus);
 }
-#layout-builder-modal .toolbar-tray a,
-#layout-builder-modal .toolbar-tray a:visited,
-#layout-builder-modal .toolbar-tray span,
-.media-library-widget-modal .toolbar-tray a,
-.media-library-widget-modal .toolbar-tray a:visited,
-.media-library-widget-modal .toolbar-tray span,
-form.media-form .toolbar-tray a,
-form.media-form .toolbar-tray a:visited,
-form.media-form .toolbar-tray span {
+
+#layout-builder-modal .toolbar-tray a,#layout-builder-modal .toolbar-tray a:visited,#layout-builder-modal .toolbar-tray span,.media-library-widget-modal .toolbar-tray a,.media-library-widget-modal .toolbar-tray a:visited,.media-library-widget-modal .toolbar-tray span,form.media-form .toolbar-tray a,form.media-form .toolbar-tray a:visited,form.media-form .toolbar-tray span {
   color: var(--gin-color-text);
 }
-#layout-builder-modal #gin-toolbar-bar.js-settings-tray-edit-mode,
-.media-library-widget-modal #gin-toolbar-bar.js-settings-tray-edit-mode,
-form.media-form #gin-toolbar-bar.js-settings-tray-edit-mode {
+
+#layout-builder-modal #gin-toolbar-bar.js-settings-tray-edit-mode,.media-library-widget-modal #gin-toolbar-bar.js-settings-tray-edit-mode,form.media-form #gin-toolbar-bar.js-settings-tray-edit-mode {
   justify-content: flex-end;
 }
+
 @media (min-width: 61em) {
-  #layout-builder-modal #toolbar-item-administration-tray a.toolbar-icon.override-icon:before,
-  .media-library-widget-modal #toolbar-item-administration-tray a.toolbar-icon.override-icon:before,
-  form.media-form #toolbar-item-administration-tray a.toolbar-icon.override-icon:before {
+  #layout-builder-modal #toolbar-item-administration-tray a.toolbar-icon.override-icon:before,.media-library-widget-modal #toolbar-item-administration-tray a.toolbar-icon.override-icon:before,form.media-form #toolbar-item-administration-tray a.toolbar-icon.override-icon:before {
     width: 0;
     content: none;
   }
-  #layout-builder-modal [dir=ltr] #toolbar-item-administration-tray a.toolbar-icon.override-icon:before,
-  .media-library-widget-modal [dir=ltr] #toolbar-item-administration-tray a.toolbar-icon.override-icon:before,
-  form.media-form [dir=ltr] #toolbar-item-administration-tray a.toolbar-icon.override-icon:before {
+
+  #layout-builder-modal [dir=ltr] #toolbar-item-administration-tray a.toolbar-icon.override-icon:before,.media-library-widget-modal [dir=ltr] #toolbar-item-administration-tray a.toolbar-icon.override-icon:before,form.media-form [dir=ltr] #toolbar-item-administration-tray a.toolbar-icon.override-icon:before {
     left: 0;
   }
-  #layout-builder-modal [dir=rtl] #toolbar-item-administration-tray a.toolbar-icon.override-icon:before,
-  .media-library-widget-modal [dir=rtl] #toolbar-item-administration-tray a.toolbar-icon.override-icon:before,
-  form.media-form [dir=rtl] #toolbar-item-administration-tray a.toolbar-icon.override-icon:before {
+
+  #layout-builder-modal [dir=rtl] #toolbar-item-administration-tray a.toolbar-icon.override-icon:before,.media-library-widget-modal [dir=rtl] #toolbar-item-administration-tray a.toolbar-icon.override-icon:before,form.media-form [dir=rtl] #toolbar-item-administration-tray a.toolbar-icon.override-icon:before {
     right: 0;
   }
 }
-#layout-builder-modal .toolbar .toolbar-bar,
-.media-library-widget-modal .toolbar .toolbar-bar,
-form.media-form .toolbar .toolbar-bar {
+
+#layout-builder-modal .toolbar .toolbar-bar,.media-library-widget-modal .toolbar .toolbar-bar,form.media-form .toolbar .toolbar-bar {
   position: fixed;
   width: 100%;
 }
-#layout-builder-modal [dir=ltr] .toolbar .toolbar-bar,
-.media-library-widget-modal [dir=ltr] .toolbar .toolbar-bar,
-form.media-form [dir=ltr] .toolbar .toolbar-bar {
+
+#layout-builder-modal [dir=ltr] .toolbar .toolbar-bar,.media-library-widget-modal [dir=ltr] .toolbar .toolbar-bar,form.media-form [dir=ltr] .toolbar .toolbar-bar {
   left: 0;
 }
-#layout-builder-modal [dir=rtl] .toolbar .toolbar-bar,
-.media-library-widget-modal [dir=rtl] .toolbar .toolbar-bar,
-form.media-form [dir=rtl] .toolbar .toolbar-bar {
+
+#layout-builder-modal [dir=rtl] .toolbar .toolbar-bar,.media-library-widget-modal [dir=rtl] .toolbar .toolbar-bar,form.media-form [dir=rtl] .toolbar .toolbar-bar {
   right: 0;
 }
-#layout-builder-modal .toolbar .toolbar-menu,
-.media-library-widget-modal .toolbar .toolbar-menu,
-form.media-form .toolbar .toolbar-menu {
+
+#layout-builder-modal .toolbar .toolbar-menu,.media-library-widget-modal .toolbar .toolbar-menu,form.media-form .toolbar .toolbar-menu {
   background: transparent;
 }
-#layout-builder-modal .toolbar .toolbar-menu .toolbar-menu a,
-#layout-builder-modal .toolbar .toolbar-menu .toolbar-menu span,
-.media-library-widget-modal .toolbar .toolbar-menu .toolbar-menu a,
-.media-library-widget-modal .toolbar .toolbar-menu .toolbar-menu span,
-form.media-form .toolbar .toolbar-menu .toolbar-menu a,
-form.media-form .toolbar .toolbar-menu .toolbar-menu span {
+
+#layout-builder-modal .toolbar .toolbar-menu .toolbar-menu a,#layout-builder-modal .toolbar .toolbar-menu .toolbar-menu span,.media-library-widget-modal .toolbar .toolbar-menu .toolbar-menu a,.media-library-widget-modal .toolbar .toolbar-menu .toolbar-menu span,form.media-form .toolbar .toolbar-menu .toolbar-menu a,form.media-form .toolbar .toolbar-menu .toolbar-menu span {
   color: var(--gin-color-text);
 }
-#layout-builder-modal .toolbar .toolbar-tray .menu-item--active-trail > .toolbar-box a,
-#layout-builder-modal .toolbar .toolbar-tray a.is-active,
-.media-library-widget-modal .toolbar .toolbar-tray .menu-item--active-trail > .toolbar-box a,
-.media-library-widget-modal .toolbar .toolbar-tray a.is-active,
-form.media-form .toolbar .toolbar-tray .menu-item--active-trail > .toolbar-box a,
-form.media-form .toolbar .toolbar-tray a.is-active {
+
+#layout-builder-modal .toolbar .toolbar-tray .menu-item--active-trail>.toolbar-box a,#layout-builder-modal .toolbar .toolbar-tray a.is-active,.media-library-widget-modal .toolbar .toolbar-tray .menu-item--active-trail>.toolbar-box a,.media-library-widget-modal .toolbar .toolbar-tray a.is-active,form.media-form .toolbar .toolbar-tray .menu-item--active-trail>.toolbar-box a,form.media-form .toolbar .toolbar-tray a.is-active {
   color: var(--gin-color-primary);
   font-weight: var(--gin-font-weight-semibold);
   text-decoration: none;
 }
+
 @media (max-width: 60.99em) {
-  #layout-builder-modal .toolbar .toolbar-tray .menu-item--active-trail > .toolbar-box a,
-  #layout-builder-modal .toolbar .toolbar-tray a.is-active,
-  .media-library-widget-modal .toolbar .toolbar-tray .menu-item--active-trail > .toolbar-box a,
-  .media-library-widget-modal .toolbar .toolbar-tray a.is-active,
-  form.media-form .toolbar .toolbar-tray .menu-item--active-trail > .toolbar-box a,
-  form.media-form .toolbar .toolbar-tray a.is-active {
+  #layout-builder-modal .toolbar .toolbar-tray .menu-item--active-trail>.toolbar-box a,#layout-builder-modal .toolbar .toolbar-tray a.is-active,.media-library-widget-modal .toolbar .toolbar-tray .menu-item--active-trail>.toolbar-box a,.media-library-widget-modal .toolbar .toolbar-tray a.is-active,form.media-form .toolbar .toolbar-tray .menu-item--active-trail>.toolbar-box a,form.media-form .toolbar .toolbar-tray a.is-active {
+    width: 100%;
     background: var(--gin-color-primary-light);
   }
 }
-#layout-builder-modal .toolbar-menu__title,
-#layout-builder-modal .toolbar-menu__sub-title,
-#layout-builder-modal a.toolbar-menu__trigger,
-#layout-builder-modal .toolbar-menu__logo,
-.media-library-widget-modal .toolbar-menu__title,
-.media-library-widget-modal .toolbar-menu__sub-title,
-.media-library-widget-modal a.toolbar-menu__trigger,
-.media-library-widget-modal .toolbar-menu__logo,
-form.media-form .toolbar-menu__title,
-form.media-form .toolbar-menu__sub-title,
-form.media-form a.toolbar-menu__trigger,
-form.media-form .toolbar-menu__logo {
+
+#layout-builder-modal .toolbar-menu__title,#layout-builder-modal .toolbar-menu__sub-title,#layout-builder-modal a.toolbar-menu__trigger,#layout-builder-modal .toolbar-menu__logo,.media-library-widget-modal .toolbar-menu__title,.media-library-widget-modal .toolbar-menu__sub-title,.media-library-widget-modal a.toolbar-menu__trigger,.media-library-widget-modal .toolbar-menu__logo,form.media-form .toolbar-menu__title,form.media-form .toolbar-menu__sub-title,form.media-form a.toolbar-menu__trigger,form.media-form .toolbar-menu__logo {
   display: none;
 }
+
 @media (min-width: 61em) {
-  #layout-builder-modal #toolbar-item-administration-tray,
-  .media-library-widget-modal #toolbar-item-administration-tray,
-  form.media-form #toolbar-item-administration-tray {
+  #layout-builder-modal #toolbar-item-administration-tray,.media-library-widget-modal #toolbar-item-administration-tray,form.media-form #toolbar-item-administration-tray {
     display: block;
   }
-  #layout-builder-modal .toolbar .toolbar-menu .toolbar-menu,
-  .media-library-widget-modal .toolbar .toolbar-menu .toolbar-menu,
-  form.media-form .toolbar .toolbar-menu .toolbar-menu {
+
+  #layout-builder-modal .toolbar .toolbar-menu .toolbar-menu,.media-library-widget-modal .toolbar .toolbar-menu .toolbar-menu,form.media-form .toolbar .toolbar-menu .toolbar-menu {
     background: var(--gin-bg-app);
   }
-  #layout-builder-modal .toolbar-fixed,
-  .media-library-widget-modal .toolbar-fixed,
-  form.media-form .toolbar-fixed {
+
+  #layout-builder-modal .toolbar-fixed,.media-library-widget-modal .toolbar-fixed,form.media-form .toolbar-fixed {
     transition: var(--gin-transition);
   }
-  #layout-builder-modal .toolbar .toolbar-box,
-  .media-library-widget-modal .toolbar .toolbar-box,
-  form.media-form .toolbar .toolbar-box {
+
+  #layout-builder-modal .toolbar .toolbar-box,.media-library-widget-modal .toolbar .toolbar-box,form.media-form .toolbar .toolbar-box {
     position: static;
   }
-  #layout-builder-modal .toolbar-tab > .toolbar-item.toolbar-icon-menu,
-  .media-library-widget-modal .toolbar-tab > .toolbar-item.toolbar-icon-menu,
-  form.media-form .toolbar-tab > .toolbar-item.toolbar-icon-menu {
+
+  #layout-builder-modal .toolbar-tab>.toolbar-item.toolbar-icon-menu,.media-library-widget-modal .toolbar-tab>.toolbar-item.toolbar-icon-menu,form.media-form .toolbar-tab>.toolbar-item.toolbar-icon-menu {
     display: none;
   }
-  #layout-builder-modal .toolbar-menu-administration a.toolbar-menu__trigger,
-  .media-library-widget-modal .toolbar-menu-administration a.toolbar-menu__trigger,
-  form.media-form .toolbar-menu-administration a.toolbar-menu__trigger {
+
+  #layout-builder-modal .toolbar-menu-administration a.toolbar-menu__trigger,.media-library-widget-modal .toolbar-menu-administration a.toolbar-menu__trigger,form.media-form .toolbar-menu-administration a.toolbar-menu__trigger {
     position: fixed;
     bottom: 0;
     font-size: var(--gin-font-size-s);
@@ -343,35 +259,26 @@ form.media-form .toolbar-menu__logo {
     transition: width var(--gin-transition);
     overflow: hidden;
   }
-  #layout-builder-modal [dir=ltr] .toolbar-menu-administration a.toolbar-menu__trigger,
-  .media-library-widget-modal [dir=ltr] .toolbar-menu-administration a.toolbar-menu__trigger,
-  form.media-form [dir=ltr] .toolbar-menu-administration a.toolbar-menu__trigger {
+
+  #layout-builder-modal [dir=ltr] .toolbar-menu-administration a.toolbar-menu__trigger,.media-library-widget-modal [dir=ltr] .toolbar-menu-administration a.toolbar-menu__trigger,form.media-form [dir=ltr] .toolbar-menu-administration a.toolbar-menu__trigger {
     left: 0;
     padding: var(--gin-spacing-m) 0 var(--gin-spacing-m) var(--gin-toolbar-width-collapsed);
   }
-  #layout-builder-modal [dir=rtl] .toolbar-menu-administration a.toolbar-menu__trigger,
-  .media-library-widget-modal [dir=rtl] .toolbar-menu-administration a.toolbar-menu__trigger,
-  form.media-form [dir=rtl] .toolbar-menu-administration a.toolbar-menu__trigger {
+
+  #layout-builder-modal [dir=rtl] .toolbar-menu-administration a.toolbar-menu__trigger,.media-library-widget-modal [dir=rtl] .toolbar-menu-administration a.toolbar-menu__trigger,form.media-form [dir=rtl] .toolbar-menu-administration a.toolbar-menu__trigger {
     right: 0;
     padding: var(--gin-spacing-m) var(--gin-toolbar-width-collapsed) var(--gin-spacing-m) 0;
   }
-  #layout-builder-modal .toolbar-menu-administration a.toolbar-menu__trigger, #layout-builder-modal .toolbar-menu-administration a.toolbar-menu__trigger:active, #layout-builder-modal .toolbar-menu-administration a.toolbar-menu__trigger:focus,
-  .media-library-widget-modal .toolbar-menu-administration a.toolbar-menu__trigger,
-  .media-library-widget-modal .toolbar-menu-administration a.toolbar-menu__trigger:active,
-  .media-library-widget-modal .toolbar-menu-administration a.toolbar-menu__trigger:focus,
-  form.media-form .toolbar-menu-administration a.toolbar-menu__trigger,
-  form.media-form .toolbar-menu-administration a.toolbar-menu__trigger:active,
-  form.media-form .toolbar-menu-administration a.toolbar-menu__trigger:focus {
+
+  #layout-builder-modal .toolbar-menu-administration a.toolbar-menu__trigger,#layout-builder-modal .toolbar-menu-administration a.toolbar-menu__trigger:active,#layout-builder-modal .toolbar-menu-administration a.toolbar-menu__trigger:focus,.media-library-widget-modal .toolbar-menu-administration a.toolbar-menu__trigger,.media-library-widget-modal .toolbar-menu-administration a.toolbar-menu__trigger:active,.media-library-widget-modal .toolbar-menu-administration a.toolbar-menu__trigger:focus,form.media-form .toolbar-menu-administration a.toolbar-menu__trigger,form.media-form .toolbar-menu-administration a.toolbar-menu__trigger:active,form.media-form .toolbar-menu-administration a.toolbar-menu__trigger:focus {
     background-color: transparent;
   }
-  #layout-builder-modal .toolbar-menu-administration a.toolbar-menu__trigger:hover::before,
-  .media-library-widget-modal .toolbar-menu-administration a.toolbar-menu__trigger:hover::before,
-  form.media-form .toolbar-menu-administration a.toolbar-menu__trigger:hover::before {
+
+  #layout-builder-modal .toolbar-menu-administration a.toolbar-menu__trigger:hover::before,.media-library-widget-modal .toolbar-menu-administration a.toolbar-menu__trigger:hover::before,form.media-form .toolbar-menu-administration a.toolbar-menu__trigger:hover::before {
     background-color: var(--gin-color-title);
   }
-  #layout-builder-modal .toolbar-menu-administration a.toolbar-menu__trigger::before,
-  .media-library-widget-modal .toolbar-menu-administration a.toolbar-menu__trigger::before,
-  form.media-form .toolbar-menu-administration a.toolbar-menu__trigger::before {
+
+  #layout-builder-modal .toolbar-menu-administration a.toolbar-menu__trigger::before,.media-library-widget-modal .toolbar-menu-administration a.toolbar-menu__trigger::before,form.media-form .toolbar-menu-administration a.toolbar-menu__trigger::before {
     content: "";
     position: absolute;
     display: inline-block;
@@ -383,57 +290,47 @@ form.media-form .toolbar-menu__logo {
     background-size: 11px 11px;
     transition: transform var(--gin-transition);
   }
-  #layout-builder-modal [dir=ltr] .toolbar-menu-administration a.toolbar-menu__trigger::before,
-  .media-library-widget-modal [dir=ltr] .toolbar-menu-administration a.toolbar-menu__trigger::before,
-  form.media-form [dir=ltr] .toolbar-menu-administration a.toolbar-menu__trigger::before {
-    left: calc((var(--gin-toolbar-width-collapsed) - 36px) / 2);
+
+  #layout-builder-modal [dir=ltr] .toolbar-menu-administration a.toolbar-menu__trigger::before,.media-library-widget-modal [dir=ltr] .toolbar-menu-administration a.toolbar-menu__trigger::before,form.media-form [dir=ltr] .toolbar-menu-administration a.toolbar-menu__trigger::before {
+    left: calc((var(--gin-toolbar-width-collapsed) - 36px)/2);
   }
-  #layout-builder-modal [dir=rtl] .toolbar-menu-administration a.toolbar-menu__trigger::before,
-  .media-library-widget-modal [dir=rtl] .toolbar-menu-administration a.toolbar-menu__trigger::before,
-  form.media-form [dir=rtl] .toolbar-menu-administration a.toolbar-menu__trigger::before {
-    right: calc((var(--gin-toolbar-width-collapsed) - 36px) / 2);
+
+  #layout-builder-modal [dir=rtl] .toolbar-menu-administration a.toolbar-menu__trigger::before,.media-library-widget-modal [dir=rtl] .toolbar-menu-administration a.toolbar-menu__trigger::before,form.media-form [dir=rtl] .toolbar-menu-administration a.toolbar-menu__trigger::before {
+    right: calc((var(--gin-toolbar-width-collapsed) - 36px)/2);
   }
-  #layout-builder-modal .toolbar-menu-administration a.toolbar-menu__trigger.is-active,
-  .media-library-widget-modal .toolbar-menu-administration a.toolbar-menu__trigger.is-active,
-  form.media-form .toolbar-menu-administration a.toolbar-menu__trigger.is-active {
+
+  #layout-builder-modal .toolbar-menu-administration a.toolbar-menu__trigger.is-active,.media-library-widget-modal .toolbar-menu-administration a.toolbar-menu__trigger.is-active,form.media-form .toolbar-menu-administration a.toolbar-menu__trigger.is-active {
     display: flex;
     font-weight: var(--gin-font-weight-normal);
     color: var(--gin-color-text-light);
     width: var(--gin-toolbar-width);
   }
-  #layout-builder-modal .toolbar-menu-administration a.toolbar-menu__trigger.is-active:hover,
-  .media-library-widget-modal .toolbar-menu-administration a.toolbar-menu__trigger.is-active:hover,
-  form.media-form .toolbar-menu-administration a.toolbar-menu__trigger.is-active:hover {
+
+  #layout-builder-modal .toolbar-menu-administration a.toolbar-menu__trigger.is-active:hover,.media-library-widget-modal .toolbar-menu-administration a.toolbar-menu__trigger.is-active:hover,form.media-form .toolbar-menu-administration a.toolbar-menu__trigger.is-active:hover {
     color: var(--gin-color-title);
   }
-  #layout-builder-modal [dir=ltr] .toolbar-menu-administration a.toolbar-menu__trigger.is-active:before,
-  .media-library-widget-modal [dir=ltr] .toolbar-menu-administration a.toolbar-menu__trigger.is-active:before,
-  form.media-form [dir=ltr] .toolbar-menu-administration a.toolbar-menu__trigger.is-active:before {
+
+  #layout-builder-modal [dir=ltr] .toolbar-menu-administration a.toolbar-menu__trigger.is-active:before,.media-library-widget-modal [dir=ltr] .toolbar-menu-administration a.toolbar-menu__trigger.is-active:before,form.media-form [dir=ltr] .toolbar-menu-administration a.toolbar-menu__trigger.is-active:before {
     transform: rotate(180deg);
   }
-  #layout-builder-modal [dir=rtl] .toolbar-menu-administration a.toolbar-menu__trigger.is-active:before,
-  .media-library-widget-modal [dir=rtl] .toolbar-menu-administration a.toolbar-menu__trigger.is-active:before,
-  form.media-form [dir=rtl] .toolbar-menu-administration a.toolbar-menu__trigger.is-active:before {
+
+  #layout-builder-modal [dir=rtl] .toolbar-menu-administration a.toolbar-menu__trigger.is-active:before,.media-library-widget-modal [dir=rtl] .toolbar-menu-administration a.toolbar-menu__trigger.is-active:before,form.media-form [dir=rtl] .toolbar-menu-administration a.toolbar-menu__trigger.is-active:before {
     transform: rotate(-180deg);
   }
-  #layout-builder-modal .toolbar-menu-administration a.toolbar-menu__trigger .menu,
-  .media-library-widget-modal .toolbar-menu-administration a.toolbar-menu__trigger .menu,
-  form.media-form .toolbar-menu-administration a.toolbar-menu__trigger .menu {
+
+  #layout-builder-modal .toolbar-menu-administration a.toolbar-menu__trigger .menu,.media-library-widget-modal .toolbar-menu-administration a.toolbar-menu__trigger .menu,form.media-form .toolbar-menu-administration a.toolbar-menu__trigger .menu {
     display: none;
   }
-  #layout-builder-modal .toolbar-menu-administration a.toolbar-menu__trigger .close,
-  .media-library-widget-modal .toolbar-menu-administration a.toolbar-menu__trigger .close,
-  form.media-form .toolbar-menu-administration a.toolbar-menu__trigger .close {
+
+  #layout-builder-modal .toolbar-menu-administration a.toolbar-menu__trigger .close,.media-library-widget-modal .toolbar-menu-administration a.toolbar-menu__trigger .close,form.media-form .toolbar-menu-administration a.toolbar-menu__trigger .close {
     display: inline;
   }
-  #layout-builder-modal .toolbar-tab--toolbar-item-administration,
-  .media-library-widget-modal .toolbar-tab--toolbar-item-administration,
-  form.media-form .toolbar-tab--toolbar-item-administration {
+
+  #layout-builder-modal .toolbar-tab--toolbar-item-administration,.media-library-widget-modal .toolbar-tab--toolbar-item-administration,form.media-form .toolbar-tab--toolbar-item-administration {
     order: -1;
   }
-  #layout-builder-modal .toolbar-menu-administration,
-  .media-library-widget-modal .toolbar-menu-administration,
-  form.media-form .toolbar-menu-administration {
+
+  #layout-builder-modal .toolbar-menu-administration,.media-library-widget-modal .toolbar-menu-administration,form.media-form .toolbar-menu-administration {
     display: flex;
     position: fixed;
     top: auto;
@@ -443,91 +340,71 @@ form.media-form .toolbar-menu__logo {
     background: var(--gin-bg-layer);
     transition: var(--gin-transition);
   }
-  #layout-builder-modal [dir=ltr] .toolbar-menu-administration,
-  .media-library-widget-modal [dir=ltr] .toolbar-menu-administration,
-  form.media-form [dir=ltr] .toolbar-menu-administration {
+
+  #layout-builder-modal [dir=ltr] .toolbar-menu-administration,.media-library-widget-modal [dir=ltr] .toolbar-menu-administration,form.media-form [dir=ltr] .toolbar-menu-administration {
     left: 0;
     border-right: 1px solid var(--gin-border-color-layer);
   }
-  #layout-builder-modal [dir=rtl] .toolbar-menu-administration,
-  .media-library-widget-modal [dir=rtl] .toolbar-menu-administration,
-  form.media-form [dir=rtl] .toolbar-menu-administration {
+
+  #layout-builder-modal [dir=rtl] .toolbar-menu-administration,.media-library-widget-modal [dir=rtl] .toolbar-menu-administration,form.media-form [dir=rtl] .toolbar-menu-administration {
     right: 0;
     border-left: 1px solid var(--gin-border-color-layer);
   }
-  #layout-builder-modal .gin--dark-mode .toolbar-menu-administration,
-  .media-library-widget-modal .gin--dark-mode .toolbar-menu-administration,
-  form.media-form .gin--dark-mode .toolbar-menu-administration {
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+
+  #layout-builder-modal .gin--dark-mode .toolbar-menu-administration,.media-library-widget-modal .gin--dark-mode .toolbar-menu-administration,form.media-form .gin--dark-mode .toolbar-menu-administration {
+    box-shadow: 0 0 4px rgba(0, 0, 0, .1);
   }
-  #layout-builder-modal [data-toolbar-menu=open] .toolbar-menu-administration,
-  .media-library-widget-modal [data-toolbar-menu=open] .toolbar-menu-administration,
-  form.media-form [data-toolbar-menu=open] .toolbar-menu-administration {
+
+  #layout-builder-modal [data-toolbar-menu=open] .toolbar-menu-administration,.media-library-widget-modal [data-toolbar-menu=open] .toolbar-menu-administration,form.media-form [data-toolbar-menu=open] .toolbar-menu-administration {
     width: var(--gin-toolbar-width);
   }
-  #layout-builder-modal .toolbar-tray-horizontal .toolbar-menu-administration ul li.menu-item--expanded .menu-item.hover-intent ul,
-  .media-library-widget-modal .toolbar-tray-horizontal .toolbar-menu-administration ul li.menu-item--expanded .menu-item.hover-intent ul,
-  form.media-form .toolbar-tray-horizontal .toolbar-menu-administration ul li.menu-item--expanded .menu-item.hover-intent ul {
+
+  #layout-builder-modal .toolbar-tray-horizontal .toolbar-menu-administration ul li.menu-item--expanded .menu-item.hover-intent ul,#layout-builder-modal .toolbar-tray-horizontal .toolbar-menu-administration ul li.menu-item--expanded .menu-item:focus-within ul,.media-library-widget-modal .toolbar-tray-horizontal .toolbar-menu-administration ul li.menu-item--expanded .menu-item.hover-intent ul,.media-library-widget-modal .toolbar-tray-horizontal .toolbar-menu-administration ul li.menu-item--expanded .menu-item:focus-within ul,form.media-form .toolbar-tray-horizontal .toolbar-menu-administration ul li.menu-item--expanded .menu-item.hover-intent ul,form.media-form .toolbar-tray-horizontal .toolbar-menu-administration ul li.menu-item--expanded .menu-item:focus-within ul {
     margin-top: 0;
   }
-  #layout-builder-modal [dir=ltr] .toolbar-tray-horizontal .toolbar-menu-administration ul li.menu-item--expanded .menu-item.hover-intent ul,
-  .media-library-widget-modal [dir=ltr] .toolbar-tray-horizontal .toolbar-menu-administration ul li.menu-item--expanded .menu-item.hover-intent ul,
-  form.media-form [dir=ltr] .toolbar-tray-horizontal .toolbar-menu-administration ul li.menu-item--expanded .menu-item.hover-intent ul {
+
+  #layout-builder-modal [dir=ltr] .toolbar-tray-horizontal .toolbar-menu-administration ul li.menu-item--expanded .menu-item.hover-intent ul,#layout-builder-modal [dir=ltr] .toolbar-tray-horizontal .toolbar-menu-administration ul li.menu-item--expanded .menu-item:focus-within ul,.media-library-widget-modal [dir=ltr] .toolbar-tray-horizontal .toolbar-menu-administration ul li.menu-item--expanded .menu-item.hover-intent ul,.media-library-widget-modal [dir=ltr] .toolbar-tray-horizontal .toolbar-menu-administration ul li.menu-item--expanded .menu-item:focus-within ul,form.media-form [dir=ltr] .toolbar-tray-horizontal .toolbar-menu-administration ul li.menu-item--expanded .menu-item.hover-intent ul,form.media-form [dir=ltr] .toolbar-tray-horizontal .toolbar-menu-administration ul li.menu-item--expanded .menu-item:focus-within ul {
     margin-left: calc(var(--gin-toolbar-width) - 2px);
   }
-  #layout-builder-modal [dir=rtl] .toolbar-tray-horizontal .toolbar-menu-administration ul li.menu-item--expanded .menu-item.hover-intent ul,
-  .media-library-widget-modal [dir=rtl] .toolbar-tray-horizontal .toolbar-menu-administration ul li.menu-item--expanded .menu-item.hover-intent ul,
-  form.media-form [dir=rtl] .toolbar-tray-horizontal .toolbar-menu-administration ul li.menu-item--expanded .menu-item.hover-intent ul {
+
+  #layout-builder-modal [dir=rtl] .toolbar-tray-horizontal .toolbar-menu-administration ul li.menu-item--expanded .menu-item.hover-intent ul,#layout-builder-modal [dir=rtl] .toolbar-tray-horizontal .toolbar-menu-administration ul li.menu-item--expanded .menu-item:focus-within ul,.media-library-widget-modal [dir=rtl] .toolbar-tray-horizontal .toolbar-menu-administration ul li.menu-item--expanded .menu-item.hover-intent ul,.media-library-widget-modal [dir=rtl] .toolbar-tray-horizontal .toolbar-menu-administration ul li.menu-item--expanded .menu-item:focus-within ul,form.media-form [dir=rtl] .toolbar-tray-horizontal .toolbar-menu-administration ul li.menu-item--expanded .menu-item.hover-intent ul,form.media-form [dir=rtl] .toolbar-tray-horizontal .toolbar-menu-administration ul li.menu-item--expanded .menu-item:focus-within ul {
     margin-right: calc(var(--gin-toolbar-width) - 2px);
   }
-  #layout-builder-modal .toolbar-vertical .toolbar-menu-administration,
-  .media-library-widget-modal .toolbar-vertical .toolbar-menu-administration,
-  form.media-form .toolbar-vertical .toolbar-menu-administration {
+
+  #layout-builder-modal .toolbar-tray-horizontal .toolbar-menu-administration .toolbar-icon.toolbar-handle,.media-library-widget-modal .toolbar-tray-horizontal .toolbar-menu-administration .toolbar-icon.toolbar-handle,form.media-form .toolbar-tray-horizontal .toolbar-menu-administration .toolbar-icon.toolbar-handle {
+    display: none !important;
+  }
+
+  #layout-builder-modal .toolbar-vertical .toolbar-menu-administration,.media-library-widget-modal .toolbar-vertical .toolbar-menu-administration,form.media-form .toolbar-vertical .toolbar-menu-administration {
     width: var(--gin-toolbar-width);
   }
-  #layout-builder-modal .toolbar-vertical .toolbar-menu-administration > .toolbar-menu > .menu-item,
-  .media-library-widget-modal .toolbar-vertical .toolbar-menu-administration > .toolbar-menu > .menu-item,
-  form.media-form .toolbar-vertical .toolbar-menu-administration > .toolbar-menu > .menu-item {
+
+  #layout-builder-modal .toolbar-vertical .toolbar-menu-administration>.toolbar-menu>.menu-item,.media-library-widget-modal .toolbar-vertical .toolbar-menu-administration>.toolbar-menu>.menu-item,form.media-form .toolbar-vertical .toolbar-menu-administration>.toolbar-menu>.menu-item {
     border-top: 0 none;
     border-bottom: 0 none;
   }
-  #layout-builder-modal .toolbar-vertical .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon,
-  #layout-builder-modal .toolbar-vertical .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-box > .toolbar-icon,
-  .media-library-widget-modal .toolbar-vertical .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon,
-  .media-library-widget-modal .toolbar-vertical .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-box > .toolbar-icon,
-  form.media-form .toolbar-vertical .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon,
-  form.media-form .toolbar-vertical .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-box > .toolbar-icon {
+
+  #layout-builder-modal .toolbar-vertical .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,#layout-builder-modal .toolbar-vertical .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon,.media-library-widget-modal .toolbar-vertical .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,.media-library-widget-modal .toolbar-vertical .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon,form.media-form .toolbar-vertical .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,form.media-form .toolbar-vertical .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon {
     width: auto;
   }
-  #layout-builder-modal [dir=ltr] .toolbar-vertical .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon,
-  #layout-builder-modal [dir=ltr] .toolbar-vertical .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-box > .toolbar-icon,
-  .media-library-widget-modal [dir=ltr] .toolbar-vertical .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon,
-  .media-library-widget-modal [dir=ltr] .toolbar-vertical .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-box > .toolbar-icon,
-  form.media-form [dir=ltr] .toolbar-vertical .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon,
-  form.media-form [dir=ltr] .toolbar-vertical .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-box > .toolbar-icon {
+
+  #layout-builder-modal [dir=ltr] .toolbar-vertical .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,#layout-builder-modal [dir=ltr] .toolbar-vertical .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon,.media-library-widget-modal [dir=ltr] .toolbar-vertical .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,.media-library-widget-modal [dir=ltr] .toolbar-vertical .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon,form.media-form [dir=ltr] .toolbar-vertical .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,form.media-form [dir=ltr] .toolbar-vertical .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon {
     padding-left: calc(var(--gin-spacing-xxl) + var(--gin-spacing-xs));
   }
-  #layout-builder-modal [dir=rtl] .toolbar-vertical .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon,
-  #layout-builder-modal [dir=rtl] .toolbar-vertical .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-box > .toolbar-icon,
-  .media-library-widget-modal [dir=rtl] .toolbar-vertical .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon,
-  .media-library-widget-modal [dir=rtl] .toolbar-vertical .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-box > .toolbar-icon,
-  form.media-form [dir=rtl] .toolbar-vertical .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon,
-  form.media-form [dir=rtl] .toolbar-vertical .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-box > .toolbar-icon {
+
+  #layout-builder-modal [dir=rtl] .toolbar-vertical .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,#layout-builder-modal [dir=rtl] .toolbar-vertical .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon,.media-library-widget-modal [dir=rtl] .toolbar-vertical .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,.media-library-widget-modal [dir=rtl] .toolbar-vertical .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon,form.media-form [dir=rtl] .toolbar-vertical .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,form.media-form [dir=rtl] .toolbar-vertical .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon {
     padding-right: calc(var(--gin-spacing-xxl) + var(--gin-spacing-xs));
   }
-  #layout-builder-modal [dir=ltr] .toolbar-vertical .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu,
-  .media-library-widget-modal [dir=ltr] .toolbar-vertical .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu,
-  form.media-form [dir=ltr] .toolbar-vertical .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu {
+
+  #layout-builder-modal [dir=ltr] .toolbar-vertical .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu,.media-library-widget-modal [dir=ltr] .toolbar-vertical .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu,form.media-form [dir=ltr] .toolbar-vertical .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu {
     left: var(--gin-toolbar-width);
   }
-  #layout-builder-modal [dir=rtl] .toolbar-vertical .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu,
-  .media-library-widget-modal [dir=rtl] .toolbar-vertical .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu,
-  form.media-form [dir=rtl] .toolbar-vertical .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu {
+
+  #layout-builder-modal [dir=rtl] .toolbar-vertical .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu,.media-library-widget-modal [dir=rtl] .toolbar-vertical .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu,form.media-form [dir=rtl] .toolbar-vertical .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu {
     right: var(--gin-toolbar-width);
   }
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu,
-  form.media-form .toolbar-menu-administration > .toolbar-menu {
+
+  #layout-builder-modal .toolbar-menu-administration>.toolbar-menu,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu,form.media-form .toolbar-menu-administration>.toolbar-menu {
     align-self: flex-start;
     height: 100%;
     max-height: calc(100% - var(--gin-toolbar-width-collapsed));
@@ -538,12 +415,8 @@ form.media-form .toolbar-menu__logo {
     flex-direction: column;
     overflow-x: hidden;
   }
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon,
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-box > .toolbar-icon,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-box > .toolbar-icon,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-box > .toolbar-icon {
+
+  #layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon {
     font-size: var(--gin-font-size);
     font-weight: 475;
     letter-spacing: -0.0125rem;
@@ -557,69 +430,40 @@ form.media-form .toolbar-menu__logo {
     overflow: hidden;
     transition: width var(--gin-transition);
   }
-  #layout-builder-modal [dir=ltr] .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon,
-  #layout-builder-modal [dir=ltr] .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-box > .toolbar-icon,
-  .media-library-widget-modal [dir=ltr] .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon,
-  .media-library-widget-modal [dir=ltr] .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-box > .toolbar-icon,
-  form.media-form [dir=ltr] .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon,
-  form.media-form [dir=ltr] .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-box > .toolbar-icon {
+
+  #layout-builder-modal [dir=ltr] .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,#layout-builder-modal [dir=ltr] .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon,.media-library-widget-modal [dir=ltr] .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,.media-library-widget-modal [dir=ltr] .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon,form.media-form [dir=ltr] .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,form.media-form [dir=ltr] .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon {
     padding-left: calc(var(--gin-toolbar-width-collapsed) - var(--gin-spacing-m));
     padding-right: 0;
   }
-  #layout-builder-modal [dir=rtl] .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon,
-  #layout-builder-modal [dir=rtl] .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-box > .toolbar-icon,
-  .media-library-widget-modal [dir=rtl] .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon,
-  .media-library-widget-modal [dir=rtl] .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-box > .toolbar-icon,
-  form.media-form [dir=rtl] .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon,
-  form.media-form [dir=rtl] .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-box > .toolbar-icon {
+
+  #layout-builder-modal [dir=rtl] .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,#layout-builder-modal [dir=rtl] .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon,.media-library-widget-modal [dir=rtl] .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,.media-library-widget-modal [dir=rtl] .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon,form.media-form [dir=rtl] .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,form.media-form [dir=rtl] .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon {
     padding-right: calc(var(--gin-toolbar-width-collapsed) - var(--gin-spacing-m));
     padding-left: 0;
   }
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon:hover,
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-box > .toolbar-icon:hover,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon:hover,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-box > .toolbar-icon:hover,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon:hover,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-box > .toolbar-icon:hover {
+
+  #layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon:hover,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:hover,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon:hover,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:hover,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon:hover,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:hover {
     color: var(--gin-color-primary);
     background-color: transparent;
   }
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon.is-active,
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-box > .toolbar-icon.is-active,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon.is-active,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-box > .toolbar-icon.is-active,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon.is-active,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-box > .toolbar-icon.is-active {
+
+  #layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon.is-active,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon.is-active,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon.is-active,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon.is-active,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon.is-active,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon.is-active {
     color: var(--gin-color-primary-active);
     font-weight: var(--gin-font-weight-semibold);
   }
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon.is-active:before,
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-box > .toolbar-icon.is-active:before,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon.is-active:before,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-box > .toolbar-icon.is-active:before,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon.is-active:before,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-box > .toolbar-icon.is-active:before {
+
+  #layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon.is-active:before,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon.is-active:before,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon.is-active:before,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon.is-active:before,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon.is-active:before,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon.is-active:before {
     background: var(--gin-color-primary);
   }
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon.toolbar-handle,
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-box > .toolbar-icon.toolbar-handle,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon.toolbar-handle,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-box > .toolbar-icon.toolbar-handle,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon.toolbar-handle,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-box > .toolbar-icon.toolbar-handle {
+
+  #layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon.toolbar-handle,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon.toolbar-handle,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon.toolbar-handle,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon.toolbar-handle,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon.toolbar-handle,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon.toolbar-handle {
     width: var(--gin-toolbar-width-collapsed);
   }
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon.toolbar-handle:before,
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-box > .toolbar-icon.toolbar-handle:before,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon.toolbar-handle:before,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-box > .toolbar-icon.toolbar-handle:before,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon.toolbar-handle:before,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-box > .toolbar-icon.toolbar-handle:before {
+
+  #layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon.toolbar-handle:before,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon.toolbar-handle:before,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon.toolbar-handle:before,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon.toolbar-handle:before,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon.toolbar-handle:before,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon.toolbar-handle:before {
     display: none;
   }
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu {
+
+  #layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu {
     display: none;
     top: 0;
     height: 100vh;
@@ -628,60 +472,40 @@ form.media-form .toolbar-menu__logo {
     overflow-y: auto;
     overflow-x: hidden;
   }
-  #layout-builder-modal [dir=ltr] .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu,
-  .media-library-widget-modal [dir=ltr] .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu,
-  form.media-form [dir=ltr] .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu {
+
+  #layout-builder-modal [dir=ltr] .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu,.media-library-widget-modal [dir=ltr] .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu,form.media-form [dir=ltr] .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu {
     margin-left: calc(var(--gin-toolbar-x-offset) - 1px);
     border-left: 1px solid var(--gin-border-color-layer);
     transition: margin-left var(--gin-transition);
   }
-  #layout-builder-modal [dir=rtl] .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu,
-  .media-library-widget-modal [dir=rtl] .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu,
-  form.media-form [dir=rtl] .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu {
+
+  #layout-builder-modal [dir=rtl] .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu,.media-library-widget-modal [dir=rtl] .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu,form.media-form [dir=rtl] .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu {
     margin-right: calc(var(--gin-toolbar-x-offset) - 1px);
     border-right: 1px solid var(--gin-border-color-layer);
     transition: margin-right var(--gin-transition);
   }
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu, #layout-builder-modal [dir] .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu,
-  .media-library-widget-modal [dir] .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu,
-  form.media-form [dir] .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu {
+
+  #layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu,#layout-builder-modal [dir] .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu,.media-library-widget-modal [dir] .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu,form.media-form [dir] .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu {
     position: fixed;
     width: var(--gin-toolbar-width);
   }
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu a,
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu span,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu a,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu span,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu a,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu span {
+
+  #layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu a,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu span,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu a,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu span,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu a,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu span {
     color: var(--gin-color-text);
   }
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu a.is-active,
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu span.is-active,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu a.is-active,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu span.is-active,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu a.is-active,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu span.is-active {
+
+  #layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu a.is-active,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu span.is-active,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu a.is-active,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu span.is-active,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu a.is-active,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu span.is-active {
     color: var(--gin-color-primary);
     font-weight: var(--gin-font-weight-semibold);
     background: var(--gin-color-primary-light);
   }
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu a.is-active:hover,
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu span.is-active:hover,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu a.is-active:hover,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu span.is-active:hover,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu a.is-active:hover,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu span.is-active:hover {
+
+  #layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu a.is-active:hover,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu span.is-active:hover,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu a.is-active:hover,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu span.is-active:hover,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu a.is-active:hover,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu span.is-active:hover {
     color: var(--gin-color-primary-hover);
     background: var(--gin-color-primary-light-hover);
   }
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu__title, #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu__sub-title,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu__title,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu__sub-title,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu__title,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu__sub-title {
+
+  #layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu__title,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu__sub-title,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu__title,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu__sub-title,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu__title,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu__sub-title {
     position: relative;
     display: block;
     min-height: 36px;
@@ -690,219 +514,141 @@ form.media-form .toolbar-menu__logo {
     padding: 0;
     margin: var(--gin-spacing-m) var(--gin-spacing-s) calc(var(--gin-spacing-l) - var(--gin-spacing-xxs)) var(--gin-spacing-s);
   }
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu__title a, #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu__sub-title a,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu__title a,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu__sub-title a,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu__title a,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu__sub-title a {
+
+  #layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu__title a,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu__sub-title a,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu__title a,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu__sub-title a,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu__title a,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu__sub-title a {
     font-weight: var(--gin-font-weight-semibold);
     color: var(--gin-color-title);
     padding: var(--gin-spacing-s);
     border-radius: var(--gin-border-m);
   }
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu__sub-title,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu__sub-title,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu__sub-title {
+
+  #layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu__sub-title,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu__sub-title,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu__sub-title {
     font-size: var(--gin-font-size-xl);
     letter-spacing: -0.01em;
     margin-bottom: 1.275rem;
   }
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu__sub-title a,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu__sub-title a,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu__sub-title a {
-    padding: 0.9rem var(--gin-spacing-s);
+
+  #layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu__sub-title a,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu__sub-title a,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu__sub-title a {
+    padding: .9rem var(--gin-spacing-s);
   }
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu .menu-item,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu .menu-item,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu .menu-item {
+
+  #layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu .menu-item,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu .menu-item,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu .menu-item {
     border-top: 0 none;
     border-bottom: 0 none;
   }
-  #layout-builder-modal [dir=ltr] .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu .menu-item,
-  .media-library-widget-modal [dir=ltr] .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu .menu-item,
-  form.media-form [dir=ltr] .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu .menu-item {
+
+  #layout-builder-modal [dir=ltr] .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu .menu-item,.media-library-widget-modal [dir=ltr] .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu .menu-item,form.media-form [dir=ltr] .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu .menu-item {
     border-left: 0 none;
   }
-  #layout-builder-modal [dir=rtl] .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu .menu-item,
-  .media-library-widget-modal [dir=rtl] .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu .menu-item,
-  form.media-form [dir=rtl] .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu .menu-item {
+
+  #layout-builder-modal [dir=rtl] .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu .menu-item,.media-library-widget-modal [dir=rtl] .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu .menu-item,form.media-form [dir=rtl] .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu .menu-item {
     border-right: 0 none;
   }
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu .menu-item .toolbar-icon,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu .menu-item .toolbar-icon,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu .menu-item .toolbar-icon {
+
+  #layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu .menu-item .toolbar-icon,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu .menu-item .toolbar-icon,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu .menu-item .toolbar-icon {
     font-size: var(--gin-font-size);
-    margin: 0.25em var(--gin-spacing-s);
+    display: block;
+    width: 100%;
+    max-width: calc(100% - var(--gin-spacing-l));
+    margin: .25em var(--gin-spacing-s);
     border-radius: var(--gin-border-m);
     overflow: hidden;
   }
-  #layout-builder-modal [dir=ltr] .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu .menu-item .toolbar-icon,
-  .media-library-widget-modal [dir=ltr] .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu .menu-item .toolbar-icon,
-  form.media-form [dir=ltr] .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu .menu-item .toolbar-icon {
+
+  #layout-builder-modal [dir=ltr] .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu .menu-item .toolbar-icon,.media-library-widget-modal [dir=ltr] .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu .menu-item .toolbar-icon,form.media-form [dir=ltr] .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu .menu-item .toolbar-icon {
     padding: var(--gin-spacing-s) var(--gin-spacing-xl) var(--gin-spacing-s) var(--gin-spacing-s);
   }
-  #layout-builder-modal [dir=rtl] .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu .menu-item .toolbar-icon,
-  .media-library-widget-modal [dir=rtl] .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu .menu-item .toolbar-icon,
-  form.media-form [dir=rtl] .toolbar-menu-administration > .toolbar-menu > .menu-item .toolbar-menu .menu-item .toolbar-icon {
+
+  #layout-builder-modal [dir=rtl] .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu .menu-item .toolbar-icon,.media-library-widget-modal [dir=rtl] .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu .menu-item .toolbar-icon,form.media-form [dir=rtl] .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu .menu-item .toolbar-icon {
     padding: var(--gin-spacing-s) var(--gin-spacing-s) var(--gin-spacing-s) var(--gin-spacing-xl);
   }
-  #layout-builder-modal [dir=ltr] .toolbar-menu-administration > .toolbar-menu, #layout-builder-modal [dir=ltr] .toolbar-menu-administration > .toolbar-menu .toolbar-menu,
-  .media-library-widget-modal [dir=ltr] .toolbar-menu-administration > .toolbar-menu,
-  .media-library-widget-modal [dir=ltr] .toolbar-menu-administration > .toolbar-menu .toolbar-menu,
-  form.media-form [dir=ltr] .toolbar-menu-administration > .toolbar-menu,
-  form.media-form [dir=ltr] .toolbar-menu-administration > .toolbar-menu .toolbar-menu {
-    background: linear-gradient(var(--gin-bg-layer) 30%, var(--gin-bg-layer)), linear-gradient(var(--gin-bg-layer), var(--gin-bg-layer) 80%) 0 100%, radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0)) 0 100%;
+
+  #layout-builder-modal [dir=ltr] .toolbar-menu-administration>.toolbar-menu,#layout-builder-modal [dir=ltr] .toolbar-menu-administration>.toolbar-menu .toolbar-menu,.media-library-widget-modal [dir=ltr] .toolbar-menu-administration>.toolbar-menu,.media-library-widget-modal [dir=ltr] .toolbar-menu-administration>.toolbar-menu .toolbar-menu,form.media-form [dir=ltr] .toolbar-menu-administration>.toolbar-menu,form.media-form [dir=ltr] .toolbar-menu-administration>.toolbar-menu .toolbar-menu {
+    background: linear-gradient(var(--gin-bg-layer) 30%, var(--gin-bg-layer)), linear-gradient(var(--gin-bg-layer), var(--gin-bg-layer) 80%) 0 100%, radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, .15), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, .15), rgba(0, 0, 0, 0)) 0 100%;
   }
-  #layout-builder-modal [dir=rtl] .toolbar-menu-administration > .toolbar-menu, #layout-builder-modal [dir=rtl] .toolbar-menu-administration > .toolbar-menu .toolbar-menu,
-  .media-library-widget-modal [dir=rtl] .toolbar-menu-administration > .toolbar-menu,
-  .media-library-widget-modal [dir=rtl] .toolbar-menu-administration > .toolbar-menu .toolbar-menu,
-  form.media-form [dir=rtl] .toolbar-menu-administration > .toolbar-menu,
-  form.media-form [dir=rtl] .toolbar-menu-administration > .toolbar-menu .toolbar-menu {
-    background: linear-gradient(var(--gin-bg-layer) 30%, var(--gin-bg-layer)), linear-gradient(var(--gin-bg-layer), var(--gin-bg-layer) 80%) 100% 100%, radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0)) 100% 100%;
+
+  #layout-builder-modal [dir=rtl] .toolbar-menu-administration>.toolbar-menu,#layout-builder-modal [dir=rtl] .toolbar-menu-administration>.toolbar-menu .toolbar-menu,.media-library-widget-modal [dir=rtl] .toolbar-menu-administration>.toolbar-menu,.media-library-widget-modal [dir=rtl] .toolbar-menu-administration>.toolbar-menu .toolbar-menu,form.media-form [dir=rtl] .toolbar-menu-administration>.toolbar-menu,form.media-form [dir=rtl] .toolbar-menu-administration>.toolbar-menu .toolbar-menu {
+    background: linear-gradient(var(--gin-bg-layer) 30%, var(--gin-bg-layer)), linear-gradient(var(--gin-bg-layer), var(--gin-bg-layer) 80%) 100% 100%, radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, .15), rgba(0, 0, 0, 0)), radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, .15), rgba(0, 0, 0, 0)) 100% 100%;
   }
-  #layout-builder-modal [dir] .toolbar-menu-administration > .toolbar-menu, #layout-builder-modal [dir] .toolbar-menu-administration > .toolbar-menu .toolbar-menu,
-  .media-library-widget-modal [dir] .toolbar-menu-administration > .toolbar-menu,
-  .media-library-widget-modal [dir] .toolbar-menu-administration > .toolbar-menu .toolbar-menu,
-  form.media-form [dir] .toolbar-menu-administration > .toolbar-menu,
-  form.media-form [dir] .toolbar-menu-administration > .toolbar-menu .toolbar-menu {
+
+  #layout-builder-modal [dir] .toolbar-menu-administration>.toolbar-menu,#layout-builder-modal [dir] .toolbar-menu-administration>.toolbar-menu .toolbar-menu,.media-library-widget-modal [dir] .toolbar-menu-administration>.toolbar-menu,.media-library-widget-modal [dir] .toolbar-menu-administration>.toolbar-menu .toolbar-menu,form.media-form [dir] .toolbar-menu-administration>.toolbar-menu,form.media-form [dir] .toolbar-menu-administration>.toolbar-menu .toolbar-menu {
     background-color: var(--gin-bg-layer);
     background-repeat: no-repeat;
     background-attachment: local, local, scroll, scroll;
     background-size: 100% 40px, 100% 40px, 100% 16px, 100% 16px;
   }
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu .toolbar-menu,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu .toolbar-menu,
-  form.media-form .toolbar-menu-administration > .toolbar-menu .toolbar-menu {
+
+  #layout-builder-modal .toolbar-menu-administration>.toolbar-menu .toolbar-menu,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu .toolbar-menu,form.media-form .toolbar-menu-administration>.toolbar-menu .toolbar-menu {
     background-size: 100% 40px, 100% 40px, 100% 24px, 100% 24px;
   }
-  #layout-builder-modal .toolbar-menu-administration .menu-item.hover-intent > .toolbar-menu,
-  .media-library-widget-modal .toolbar-menu-administration .menu-item.hover-intent > .toolbar-menu,
-  form.media-form .toolbar-menu-administration .menu-item.hover-intent > .toolbar-menu {
+
+  #layout-builder-modal .toolbar-menu-administration .menu-item.hover-intent>.toolbar-menu,#layout-builder-modal .toolbar-menu-administration .menu-item:focus-within>.toolbar-menu,.media-library-widget-modal .toolbar-menu-administration .menu-item.hover-intent>.toolbar-menu,.media-library-widget-modal .toolbar-menu-administration .menu-item:focus-within>.toolbar-menu,form.media-form .toolbar-menu-administration .menu-item.hover-intent>.toolbar-menu,form.media-form .toolbar-menu-administration .menu-item:focus-within>.toolbar-menu {
     z-index: 2;
     display: block;
   }
-  #layout-builder-modal [dir=ltr] .toolbar-menu-administration .menu-item.hover-intent > .toolbar-menu,
-  .media-library-widget-modal [dir=ltr] .toolbar-menu-administration .menu-item.hover-intent > .toolbar-menu,
-  form.media-form [dir=ltr] .toolbar-menu-administration .menu-item.hover-intent > .toolbar-menu {
-    border-right: 1px solid rgba(0, 0, 0, 0.075);
-    box-shadow: 7px 0 16px rgba(0, 0, 0, 0.075), -12px 0 0 0 var(--gin-bg-layer);
+
+  #layout-builder-modal [dir=ltr] .toolbar-menu-administration .menu-item.hover-intent>.toolbar-menu,#layout-builder-modal [dir=ltr] .toolbar-menu-administration .menu-item:focus-within>.toolbar-menu,.media-library-widget-modal [dir=ltr] .toolbar-menu-administration .menu-item.hover-intent>.toolbar-menu,.media-library-widget-modal [dir=ltr] .toolbar-menu-administration .menu-item:focus-within>.toolbar-menu,form.media-form [dir=ltr] .toolbar-menu-administration .menu-item.hover-intent>.toolbar-menu,form.media-form [dir=ltr] .toolbar-menu-administration .menu-item:focus-within>.toolbar-menu {
+    border-right: 1px solid rgba(0, 0, 0, .075);
+    box-shadow: 7px 0 16px rgba(0, 0, 0, .075), -12px 0 0 0 var(--gin-bg-layer);
   }
-  #layout-builder-modal [dir=rtl] .toolbar-menu-administration .menu-item.hover-intent > .toolbar-menu,
-  .media-library-widget-modal [dir=rtl] .toolbar-menu-administration .menu-item.hover-intent > .toolbar-menu,
-  form.media-form [dir=rtl] .toolbar-menu-administration .menu-item.hover-intent > .toolbar-menu {
-    border-left: 1px solid rgba(0, 0, 0, 0.075);
-    box-shadow: -7px 0 16px rgba(0, 0, 0, 0.075), 12px 0 0 0 var(--gin-bg-layer);
+
+  #layout-builder-modal [dir=rtl] .toolbar-menu-administration .menu-item.hover-intent>.toolbar-menu,#layout-builder-modal [dir=rtl] .toolbar-menu-administration .menu-item:focus-within>.toolbar-menu,.media-library-widget-modal [dir=rtl] .toolbar-menu-administration .menu-item.hover-intent>.toolbar-menu,.media-library-widget-modal [dir=rtl] .toolbar-menu-administration .menu-item:focus-within>.toolbar-menu,form.media-form [dir=rtl] .toolbar-menu-administration .menu-item.hover-intent>.toolbar-menu,form.media-form [dir=rtl] .toolbar-menu-administration .menu-item:focus-within>.toolbar-menu {
+    border-left: 1px solid rgba(0, 0, 0, .075);
+    box-shadow: -7px 0 16px rgba(0, 0, 0, .075), 12px 0 0 0 var(--gin-bg-layer);
   }
-  #layout-builder-modal .toolbar-menu-administration .menu-item .menu-item:hover > .toolbar-icon,
-  .media-library-widget-modal .toolbar-menu-administration .menu-item .menu-item:hover > .toolbar-icon,
-  form.media-form .toolbar-menu-administration .menu-item .menu-item:hover > .toolbar-icon {
+
+  #layout-builder-modal .toolbar-menu-administration .menu-item .menu-item:hover>.toolbar-icon,#layout-builder-modal .toolbar-menu-administration .menu-item .menu-item:hover>.toolbar-box .toolbar-icon,.media-library-widget-modal .toolbar-menu-administration .menu-item .menu-item:hover>.toolbar-icon,.media-library-widget-modal .toolbar-menu-administration .menu-item .menu-item:hover>.toolbar-box .toolbar-icon,form.media-form .toolbar-menu-administration .menu-item .menu-item:hover>.toolbar-icon,form.media-form .toolbar-menu-administration .menu-item .menu-item:hover>.toolbar-box .toolbar-icon {
     color: var(--gin-color-primary-hover);
     background: var(--gin-color-primary-light);
   }
-  #layout-builder-modal .toolbar .toolbar-toggle-orientation button,
-  .media-library-widget-modal .toolbar .toolbar-toggle-orientation button,
-  form.media-form .toolbar .toolbar-toggle-orientation button {
+
+  #layout-builder-modal .toolbar .toolbar-toggle-orientation button,.media-library-widget-modal .toolbar .toolbar-toggle-orientation button,form.media-form .toolbar .toolbar-toggle-orientation button {
     display: none;
   }
 }
-#layout-builder-modal .toolbar .toolbar-icon.toolbar-handle:focus,
-.media-library-widget-modal .toolbar .toolbar-icon.toolbar-handle:focus,
-form.media-form .toolbar .toolbar-icon.toolbar-handle:focus {
-  background-color: rgba(255, 255, 255, 0.1);
+
+#layout-builder-modal .toolbar .toolbar-icon.toolbar-handle:focus,.media-library-widget-modal .toolbar .toolbar-icon.toolbar-handle:focus,form.media-form .toolbar .toolbar-icon.toolbar-handle:focus {
+  background-color: rgba(255, 255, 255, .1);
 }
-#layout-builder-modal #toolbar-item-administration-search-tray input,
-.media-library-widget-modal #toolbar-item-administration-search-tray input,
-form.media-form #toolbar-item-administration-search-tray input {
+
+#layout-builder-modal #toolbar-item-administration-search-tray input,.media-library-widget-modal #toolbar-item-administration-search-tray input,form.media-form #toolbar-item-administration-search-tray input {
   width: 100%;
   max-width: calc(100% - var(--gin-spacing-m));
   outline: none;
 }
-#layout-builder-modal .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded,
-#layout-builder-modal .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded > a:focus,
-.media-library-widget-modal .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded,
-.media-library-widget-modal .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded > a:focus,
-form.media-form .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded,
-form.media-form .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded > a:focus {
+
+#layout-builder-modal .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded,#layout-builder-modal .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus,.media-library-widget-modal .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded,.media-library-widget-modal .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus,form.media-form .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded,form.media-form .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus {
   position: relative;
 }
-#layout-builder-modal .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded::before,
-#layout-builder-modal .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded > a:focus::before,
-.media-library-widget-modal .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded::before,
-.media-library-widget-modal .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded > a:focus::before,
-form.media-form .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded::before,
-form.media-form .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded > a:focus::before {
+
+#layout-builder-modal .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded::before,#layout-builder-modal .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus::before,.media-library-widget-modal .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded::before,.media-library-widget-modal .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus::before,form.media-form .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded::before,form.media-form .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus::before {
   z-index: 1;
   top: 1em;
 }
-#layout-builder-modal [dir=ltr] .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded::before,
-#layout-builder-modal [dir=ltr] .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded > a:focus::before,
-.media-library-widget-modal [dir=ltr] .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded::before,
-.media-library-widget-modal [dir=ltr] .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded > a:focus::before,
-form.media-form [dir=ltr] .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded::before,
-form.media-form [dir=ltr] .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded > a:focus::before {
+
+#layout-builder-modal [dir=ltr] .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded::before,#layout-builder-modal [dir=ltr] .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus::before,.media-library-widget-modal [dir=ltr] .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded::before,.media-library-widget-modal [dir=ltr] .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus::before,form.media-form [dir=ltr] .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded::before,form.media-form [dir=ltr] .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus::before {
   right: 20px;
 }
-#layout-builder-modal [dir=rtl] .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded::before,
-#layout-builder-modal [dir=rtl] .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded > a:focus::before,
-.media-library-widget-modal [dir=rtl] .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded::before,
-.media-library-widget-modal [dir=rtl] .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded > a:focus::before,
-form.media-form [dir=rtl] .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded::before,
-form.media-form [dir=rtl] .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded > a:focus::before {
+
+#layout-builder-modal [dir=rtl] .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded::before,#layout-builder-modal [dir=rtl] .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus::before,.media-library-widget-modal [dir=rtl] .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded::before,.media-library-widget-modal [dir=rtl] .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus::before,form.media-form [dir=rtl] .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded::before,form.media-form [dir=rtl] .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus::before {
   left: 20px;
 }
-#layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item:hover,
-.media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item:hover,
-form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item:hover {
+
+#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item:hover,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item:hover,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item:hover {
   background: transparent;
 }
+
 @media (min-width: 61em) {
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-icon, #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-box > a.toolbar-icon,
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon:focus, #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-icon, #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail:hover > .toolbar-icon, #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-box > a.toolbar-icon,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-icon,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-box > a.toolbar-icon,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon:focus,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-icon,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail:hover > .toolbar-icon,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-box > a.toolbar-icon,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-icon,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-box > a.toolbar-icon,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon:focus,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-icon,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail:hover > .toolbar-icon,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-box > a.toolbar-icon {
+  #layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-icon,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-box>a.toolbar-icon,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon:focus,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-icon,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail:hover>.toolbar-icon,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-box>a.toolbar-icon,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-icon,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-box>a.toolbar-icon,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon:focus,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-icon,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail:hover>.toolbar-icon,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-box>a.toolbar-icon,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-icon,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-box>a.toolbar-icon,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon:focus,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-icon,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail:hover>.toolbar-icon,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-box>a.toolbar-icon {
     color: var(--gin-color-primary-hover);
     box-shadow: none;
   }
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-icon::before, #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-box > a.toolbar-icon::before,
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon:focus::before, #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-icon::before, #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail:hover > .toolbar-icon::before, #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-box > a.toolbar-icon::before,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-icon::before,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-box > a.toolbar-icon::before,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon:focus::before,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-icon::before,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail:hover > .toolbar-icon::before,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-box > a.toolbar-icon::before,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-icon::before,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-box > a.toolbar-icon::before,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon:focus::before,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-icon::before,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail:hover > .toolbar-icon::before,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-box > a.toolbar-icon::before {
+
+  #layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-icon::before,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-box>a.toolbar-icon::before,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon:focus::before,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-icon::before,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail:hover>.toolbar-icon::before,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-box>a.toolbar-icon::before,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-icon::before,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-box>a.toolbar-icon::before,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon:focus::before,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-icon::before,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail:hover>.toolbar-icon::before,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-box>a.toolbar-icon::before,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-icon::before,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-box>a.toolbar-icon::before,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon:focus::before,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-icon::before,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail:hover>.toolbar-icon::before,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-box>a.toolbar-icon::before {
     background: var(--gin-color-primary-active);
   }
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-icon::after, #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-box > a.toolbar-icon::after,
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon:focus::after, #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-icon::after, #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail:hover > .toolbar-icon::after, #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-box > a.toolbar-icon::after,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-icon::after,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-box > a.toolbar-icon::after,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon:focus::after,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-icon::after,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail:hover > .toolbar-icon::after,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-box > a.toolbar-icon::after,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-icon::after,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-box > a.toolbar-icon::after,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon:focus::after,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-icon::after,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail:hover > .toolbar-icon::after,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-box > a.toolbar-icon::after {
+
+  #layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-icon::after,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-box>a.toolbar-icon::after,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon:focus::after,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-icon::after,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail:hover>.toolbar-icon::after,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-box>a.toolbar-icon::after,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-icon::after,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-box>a.toolbar-icon::after,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon:focus::after,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-icon::after,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail:hover>.toolbar-icon::after,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-box>a.toolbar-icon::after,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-icon::after,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-box>a.toolbar-icon::after,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon:focus::after,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-icon::after,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail:hover>.toolbar-icon::after,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-box>a.toolbar-icon::after {
     content: "";
     display: block;
     position: absolute;
@@ -912,78 +658,27 @@ form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item:hover 
     background: var(--gin-color-primary-light);
     border-radius: var(--gin-border-m);
   }
-  #layout-builder-modal [dir=ltr] .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-icon::after, #layout-builder-modal [dir=ltr] .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-box > a.toolbar-icon::after, #layout-builder-modal [dir=ltr] .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon:focus::after, #layout-builder-modal [dir=ltr] .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-icon::after, #layout-builder-modal [dir=ltr] .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail:hover > .toolbar-icon::after, #layout-builder-modal [dir=ltr] .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-box > a.toolbar-icon::after,
-  .media-library-widget-modal [dir=ltr] .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-icon::after,
-  .media-library-widget-modal [dir=ltr] .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-box > a.toolbar-icon::after,
-  .media-library-widget-modal [dir=ltr] .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon:focus::after,
-  .media-library-widget-modal [dir=ltr] .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-icon::after,
-  .media-library-widget-modal [dir=ltr] .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail:hover > .toolbar-icon::after,
-  .media-library-widget-modal [dir=ltr] .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-box > a.toolbar-icon::after,
-  form.media-form [dir=ltr] .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-icon::after,
-  form.media-form [dir=ltr] .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-box > a.toolbar-icon::after,
-  form.media-form [dir=ltr] .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon:focus::after,
-  form.media-form [dir=ltr] .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-icon::after,
-  form.media-form [dir=ltr] .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail:hover > .toolbar-icon::after,
-  form.media-form [dir=ltr] .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-box > a.toolbar-icon::after {
-    left: calc((var(--gin-toolbar-width-collapsed) - var(--gin-spacing-xl) - var(--gin-spacing-xs)) / 2 - 9px);
+
+  #layout-builder-modal [dir=ltr] .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-icon::after,#layout-builder-modal [dir=ltr] .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-box>a.toolbar-icon::after,#layout-builder-modal [dir=ltr] .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon:focus::after,#layout-builder-modal [dir=ltr] .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-icon::after,#layout-builder-modal [dir=ltr] .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail:hover>.toolbar-icon::after,#layout-builder-modal [dir=ltr] .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-box>a.toolbar-icon::after,.media-library-widget-modal [dir=ltr] .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-icon::after,.media-library-widget-modal [dir=ltr] .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-box>a.toolbar-icon::after,.media-library-widget-modal [dir=ltr] .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon:focus::after,.media-library-widget-modal [dir=ltr] .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-icon::after,.media-library-widget-modal [dir=ltr] .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail:hover>.toolbar-icon::after,.media-library-widget-modal [dir=ltr] .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-box>a.toolbar-icon::after,form.media-form [dir=ltr] .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-icon::after,form.media-form [dir=ltr] .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-box>a.toolbar-icon::after,form.media-form [dir=ltr] .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon:focus::after,form.media-form [dir=ltr] .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-icon::after,form.media-form [dir=ltr] .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail:hover>.toolbar-icon::after,form.media-form [dir=ltr] .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-box>a.toolbar-icon::after {
+    left: calc((var(--gin-toolbar-width-collapsed) - var(--gin-spacing-xl) - var(--gin-spacing-xs))/2 - 9px);
   }
-  #layout-builder-modal [dir=rtl] .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-icon::after, #layout-builder-modal [dir=rtl] .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-box > a.toolbar-icon::after, #layout-builder-modal [dir=rtl] .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon:focus::after, #layout-builder-modal [dir=rtl] .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-icon::after, #layout-builder-modal [dir=rtl] .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail:hover > .toolbar-icon::after, #layout-builder-modal [dir=rtl] .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-box > a.toolbar-icon::after,
-  .media-library-widget-modal [dir=rtl] .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-icon::after,
-  .media-library-widget-modal [dir=rtl] .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-box > a.toolbar-icon::after,
-  .media-library-widget-modal [dir=rtl] .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon:focus::after,
-  .media-library-widget-modal [dir=rtl] .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-icon::after,
-  .media-library-widget-modal [dir=rtl] .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail:hover > .toolbar-icon::after,
-  .media-library-widget-modal [dir=rtl] .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-box > a.toolbar-icon::after,
-  form.media-form [dir=rtl] .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-icon::after,
-  form.media-form [dir=rtl] .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-box > a.toolbar-icon::after,
-  form.media-form [dir=rtl] .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon:focus::after,
-  form.media-form [dir=rtl] .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-icon::after,
-  form.media-form [dir=rtl] .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail:hover > .toolbar-icon::after,
-  form.media-form [dir=rtl] .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-box > a.toolbar-icon::after {
-    right: calc((var(--gin-toolbar-width-collapsed) - var(--gin-spacing-xl) - var(--gin-spacing-xs)) / 2 - 9px);
+
+  #layout-builder-modal [dir=rtl] .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-icon::after,#layout-builder-modal [dir=rtl] .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-box>a.toolbar-icon::after,#layout-builder-modal [dir=rtl] .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon:focus::after,#layout-builder-modal [dir=rtl] .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-icon::after,#layout-builder-modal [dir=rtl] .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail:hover>.toolbar-icon::after,#layout-builder-modal [dir=rtl] .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-box>a.toolbar-icon::after,.media-library-widget-modal [dir=rtl] .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-icon::after,.media-library-widget-modal [dir=rtl] .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-box>a.toolbar-icon::after,.media-library-widget-modal [dir=rtl] .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon:focus::after,.media-library-widget-modal [dir=rtl] .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-icon::after,.media-library-widget-modal [dir=rtl] .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail:hover>.toolbar-icon::after,.media-library-widget-modal [dir=rtl] .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-box>a.toolbar-icon::after,form.media-form [dir=rtl] .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-icon::after,form.media-form [dir=rtl] .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-box>a.toolbar-icon::after,form.media-form [dir=rtl] .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon:focus::after,form.media-form [dir=rtl] .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-icon::after,form.media-form [dir=rtl] .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail:hover>.toolbar-icon::after,form.media-form [dir=rtl] .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-box>a.toolbar-icon::after {
+    right: calc((var(--gin-toolbar-width-collapsed) - var(--gin-spacing-xl) - var(--gin-spacing-xs))/2 - 9px);
   }
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-icon:focus, #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-box > a.toolbar-icon:focus,
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon:focus:focus, #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-icon:focus, #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail:hover > .toolbar-icon:focus, #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-box > a.toolbar-icon:focus,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-icon:focus,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-box > a.toolbar-icon:focus,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon:focus:focus,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-icon:focus,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail:hover > .toolbar-icon:focus,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-box > a.toolbar-icon:focus,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-icon:focus,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-box > a.toolbar-icon:focus,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon:focus:focus,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-icon:focus,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail:hover > .toolbar-icon:focus,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-box > a.toolbar-icon:focus {
+
+  #layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-icon:focus,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-box>a.toolbar-icon:focus,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon:focus:focus,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-icon:focus,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail:hover>.toolbar-icon:focus,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-box>a.toolbar-icon:focus,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-icon:focus,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-box>a.toolbar-icon:focus,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon:focus:focus,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-icon:focus,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail:hover>.toolbar-icon:focus,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-box>a.toolbar-icon:focus,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-icon:focus,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-box>a.toolbar-icon:focus,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon:focus:focus,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-icon:focus,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail:hover>.toolbar-icon:focus,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-box>a.toolbar-icon:focus {
     background: transparent;
   }
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-icon:focus::after, #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-box > a.toolbar-icon:focus::after,
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon:focus:focus::after, #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-icon:focus::after, #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail:hover > .toolbar-icon:focus::after, #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-box > a.toolbar-icon:focus::after,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-icon:focus::after,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-box > a.toolbar-icon:focus::after,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon:focus:focus::after,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-icon:focus::after,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail:hover > .toolbar-icon:focus::after,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-box > a.toolbar-icon:focus::after,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-icon:focus::after,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item:hover > .toolbar-box > a.toolbar-icon:focus::after,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon:focus:focus::after,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-icon:focus::after,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail:hover > .toolbar-icon:focus::after,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-box > a.toolbar-icon:focus::after {
+
+  #layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-icon:focus::after,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-box>a.toolbar-icon:focus::after,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon:focus:focus::after,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-icon:focus::after,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail:hover>.toolbar-icon:focus::after,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-box>a.toolbar-icon:focus::after,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-icon:focus::after,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-box>a.toolbar-icon:focus::after,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon:focus:focus::after,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-icon:focus::after,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail:hover>.toolbar-icon:focus::after,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-box>a.toolbar-icon:focus::after,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-icon:focus::after,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item:hover>.toolbar-box>a.toolbar-icon:focus::after,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon:focus:focus::after,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-icon:focus::after,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail:hover>.toolbar-icon:focus::after,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-box>a.toolbar-icon:focus::after {
     box-shadow: inset 0 0 0 1px var(--gin-color-focus-border), inset 0 0 0 4px var(--gin-color-focus);
   }
 }
+
 @media (min-width: 61em) {
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-icon::after, #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-box > a.toolbar-icon::after,
-  #layout-builder-modal .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon.is-active::after,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-icon::after,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-box > a.toolbar-icon::after,
-  .media-library-widget-modal .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon.is-active::after,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-icon::after,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item.menu-item--active-trail > .toolbar-box > a.toolbar-icon::after,
-  form.media-form .toolbar-menu-administration > .toolbar-menu > .menu-item > .toolbar-icon.is-active::after {
+  #layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-icon::after,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-box>a.toolbar-icon::after,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon.is-active::after,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-icon::after,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-box>a.toolbar-icon::after,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon.is-active::after,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-icon::after,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-box>a.toolbar-icon::after,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon.is-active::after {
     background: var(--gin-bg-item-hover);
   }
 }
+

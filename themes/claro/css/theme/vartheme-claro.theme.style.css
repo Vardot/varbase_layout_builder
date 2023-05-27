@@ -1,62 +1,37 @@
-/**
- * @file
- * Wrapped content from themes/contrib/vartheme_claro/css/vartheme-claro.theme.style.css
- * Maintainers: the import statement presumes a relative location of core css.
- * The location may need to be adjusted depending on your setup.
- */
-#layout-builder-modal input[type=text],
-.media-library-widget-modal input[type=text],
-form.media-form input[type=text] {
+#layout-builder-modal input[type=text],.media-library-widget-modal input[type=text],form.media-form input[type=text] {
   max-width: 100%;
 }
-#layout-builder-modal .views-exposed-form__item [id*=edit-created-from],
-#layout-builder-modal .views-exposed-form__item [id*=edit-created-to],
-#layout-builder-modal .views-exposed-form__item [id*=edit-user-created-from],
-#layout-builder-modal .views-exposed-form__item [id*=edit-user-created-to],
-#layout-builder-modal .views-exposed-form__item [id*=edit-content-created-from],
-#layout-builder-modal .views-exposed-form__item [id*=edit-content-created-to],
-.media-library-widget-modal .views-exposed-form__item [id*=edit-created-from],
-.media-library-widget-modal .views-exposed-form__item [id*=edit-created-to],
-.media-library-widget-modal .views-exposed-form__item [id*=edit-user-created-from],
-.media-library-widget-modal .views-exposed-form__item [id*=edit-user-created-to],
-.media-library-widget-modal .views-exposed-form__item [id*=edit-content-created-from],
-.media-library-widget-modal .views-exposed-form__item [id*=edit-content-created-to],
-form.media-form .views-exposed-form__item [id*=edit-created-from],
-form.media-form .views-exposed-form__item [id*=edit-created-to],
-form.media-form .views-exposed-form__item [id*=edit-user-created-from],
-form.media-form .views-exposed-form__item [id*=edit-user-created-to],
-form.media-form .views-exposed-form__item [id*=edit-content-created-from],
-form.media-form .views-exposed-form__item [id*=edit-content-created-to] {
+
+#layout-builder-modal .views-exposed-form__item [id*=edit-created-from],#layout-builder-modal .views-exposed-form__item [id*=edit-created-to],#layout-builder-modal .views-exposed-form__item [id*=edit-user-created-from],#layout-builder-modal .views-exposed-form__item [id*=edit-user-created-to],#layout-builder-modal .views-exposed-form__item [id*=edit-content-created-from],#layout-builder-modal .views-exposed-form__item [id*=edit-content-created-to],.media-library-widget-modal .views-exposed-form__item [id*=edit-created-from],.media-library-widget-modal .views-exposed-form__item [id*=edit-created-to],.media-library-widget-modal .views-exposed-form__item [id*=edit-user-created-from],.media-library-widget-modal .views-exposed-form__item [id*=edit-user-created-to],.media-library-widget-modal .views-exposed-form__item [id*=edit-content-created-from],.media-library-widget-modal .views-exposed-form__item [id*=edit-content-created-to],form.media-form .views-exposed-form__item [id*=edit-created-from],form.media-form .views-exposed-form__item [id*=edit-created-to],form.media-form .views-exposed-form__item [id*=edit-user-created-from],form.media-form .views-exposed-form__item [id*=edit-user-created-to],form.media-form .views-exposed-form__item [id*=edit-content-created-from],form.media-form .views-exposed-form__item [id*=edit-content-created-to] {
   width: 9rem;
 }
-#layout-builder-modal .views-exposed-form__item [id*=edit-langcode],
-#layout-builder-modal .views-exposed-form__item [id*=edit-uid],
-.media-library-widget-modal .views-exposed-form__item [id*=edit-langcode],
-.media-library-widget-modal .views-exposed-form__item [id*=edit-uid],
-form.media-form .views-exposed-form__item [id*=edit-langcode],
-form.media-form .views-exposed-form__item [id*=edit-uid] {
+
+#layout-builder-modal .views-exposed-form__item [id*=edit-langcode],#layout-builder-modal .views-exposed-form__item [id*=edit-uid],.media-library-widget-modal .views-exposed-form__item [id*=edit-langcode],.media-library-widget-modal .views-exposed-form__item [id*=edit-uid],form.media-form .views-exposed-form__item [id*=edit-langcode],form.media-form .views-exposed-form__item [id*=edit-uid] {
   width: 12rem;
 }
-#layout-builder-modal .views-exposed-form__item .ui-autocomplete-input,
-.media-library-widget-modal .views-exposed-form__item .ui-autocomplete-input,
-form.media-form .views-exposed-form__item .ui-autocomplete-input {
+
+#layout-builder-modal .views-exposed-form__item .ui-autocomplete-input,.media-library-widget-modal .views-exposed-form__item .ui-autocomplete-input,form.media-form .views-exposed-form__item .ui-autocomplete-input {
   padding-right: 32px;
 }
-#layout-builder-modal .node-form .field--name-title input,
-.media-library-widget-modal .node-form .field--name-title input,
-form.media-form .node-form .field--name-title input {
-  width: 100%;
-  min-height: 4rem;
+
+#layout-builder-modal .gin--edit-form .field--name-title .form-element,.media-library-widget-modal .gin--edit-form .field--name-title .form-element,form.media-form .gin--edit-form .field--name-title .form-element {
   font-size: 1.6em;
+  width: 100%;
 }
-#layout-builder-modal .node-form .field--name-title .length-indicator,
-.media-library-widget-modal .node-form .field--name-title .length-indicator,
-form.media-form .node-form .field--name-title .length-indicator {
+
+#layout-builder-modal .gin--edit-form .field--name-title input,.media-library-widget-modal .gin--edit-form .field--name-title input,form.media-form .gin--edit-form .field--name-title input {
+  min-height: 4rem;
+}
+
+#layout-builder-modal .node-form .field--name-title .length-indicator,.media-library-widget-modal .node-form .field--name-title .length-indicator,form.media-form .node-form .field--name-title .length-indicator {
   margin-top: -1rem;
 }
-#layout-builder-modal body.path-admin .panel.dashboard-block,
-.media-library-widget-modal body.path-admin .panel.dashboard-block,
-form.media-form body.path-admin .panel.dashboard-block {
+
+#layout-builder-modal .media-library-widget .fieldset-wrapper,.media-library-widget-modal .media-library-widget .fieldset-wrapper,form.media-form .media-library-widget .fieldset-wrapper {
+  padding: var(--gin-spacing-density-s);
+}
+
+#layout-builder-modal body.path-admin .panel.dashboard-block,.media-library-widget-modal body.path-admin .panel.dashboard-block,form.media-form body.path-admin .panel.dashboard-block {
   display: block;
   margin-top: var(--gin-spacing-m);
   margin-bottom: var(--gin-spacing-m);
@@ -64,68 +39,57 @@ form.media-form body.path-admin .panel.dashboard-block {
   background-color: var(--gin-bg-layer3);
   box-shadow: var(--gin-shadow-l1);
 }
-#layout-builder-modal body.path-admin .panel.dashboard-block p,
-.media-library-widget-modal body.path-admin .panel.dashboard-block p,
-form.media-form body.path-admin .panel.dashboard-block p {
+
+#layout-builder-modal body.path-admin .panel.dashboard-block p,.media-library-widget-modal body.path-admin .panel.dashboard-block p,form.media-form body.path-admin .panel.dashboard-block p {
   padding: var(--gin-spacing-m);
 }
-#layout-builder-modal .block-views-blockvarbase-google-analytics-summary-sessions-and-pageviews .panel__title,
-.media-library-widget-modal .block-views-blockvarbase-google-analytics-summary-sessions-and-pageviews .panel__title,
-form.media-form .block-views-blockvarbase-google-analytics-summary-sessions-and-pageviews .panel__title {
+
+#layout-builder-modal .block-views-blockvarbase-google-analytics-summary-sessions-and-pageviews .panel__title,.media-library-widget-modal .block-views-blockvarbase-google-analytics-summary-sessions-and-pageviews .panel__title,form.media-form .block-views-blockvarbase-google-analytics-summary-sessions-and-pageviews .panel__title {
   display: block;
 }
-#layout-builder-modal .block-views-blockvarbase-google-analytics-summary-sessions-and-pageviews .description,
-.media-library-widget-modal .block-views-blockvarbase-google-analytics-summary-sessions-and-pageviews .description,
-form.media-form .block-views-blockvarbase-google-analytics-summary-sessions-and-pageviews .description {
+
+#layout-builder-modal .block-views-blockvarbase-google-analytics-summary-sessions-and-pageviews .description,.media-library-widget-modal .block-views-blockvarbase-google-analytics-summary-sessions-and-pageviews .description,form.media-form .block-views-blockvarbase-google-analytics-summary-sessions-and-pageviews .description {
   padding: var(--gin-spacing-l);
 }
-#layout-builder-modal .node-form div.autocomplete-deluxe-container,
-.media-library-widget-modal .node-form div.autocomplete-deluxe-container,
-form.media-form .node-form div.autocomplete-deluxe-container {
+
+#layout-builder-modal .node-form div.autocomplete-deluxe-container,.media-library-widget-modal .node-form div.autocomplete-deluxe-container,form.media-form .node-form div.autocomplete-deluxe-container {
   width: 65%;
 }
+
 @media screen and (max-width: 81.25rem) {
-  #layout-builder-modal .node-form div.autocomplete-deluxe-container,
-  .media-library-widget-modal .node-form div.autocomplete-deluxe-container,
-  form.media-form .node-form div.autocomplete-deluxe-container {
+  #layout-builder-modal .node-form div.autocomplete-deluxe-container,.media-library-widget-modal .node-form div.autocomplete-deluxe-container,form.media-form .node-form div.autocomplete-deluxe-container {
     width: 100%;
   }
 }
-#layout-builder-modal .node-form div.autocomplete-deluxe-container:not(.autocomplete-deluxe-multiple) input.autocomplete-deluxe-form,
-.media-library-widget-modal .node-form div.autocomplete-deluxe-container:not(.autocomplete-deluxe-multiple) input.autocomplete-deluxe-form,
-form.media-form .node-form div.autocomplete-deluxe-container:not(.autocomplete-deluxe-multiple) input.autocomplete-deluxe-form {
+
+#layout-builder-modal .node-form div.autocomplete-deluxe-container:not(.autocomplete-deluxe-multiple) input.autocomplete-deluxe-form,.media-library-widget-modal .node-form div.autocomplete-deluxe-container:not(.autocomplete-deluxe-multiple) input.autocomplete-deluxe-form,form.media-form .node-form div.autocomplete-deluxe-container:not(.autocomplete-deluxe-multiple) input.autocomplete-deluxe-form {
   width: 100%;
 }
-#layout-builder-modal .node-form .field--type-yoast-seo input,
-.media-library-widget-modal .node-form .field--type-yoast-seo input,
-form.media-form .node-form .field--type-yoast-seo input {
+
+#layout-builder-modal .node-form .field--type-yoast-seo input,.media-library-widget-modal .node-form .field--type-yoast-seo input,form.media-form .node-form .field--type-yoast-seo input {
   width: 66%;
 }
+
 @media screen and (max-width: 81.25rem) {
-  #layout-builder-modal .node-form .field--type-yoast-seo input,
-  .media-library-widget-modal .node-form .field--type-yoast-seo input,
-  form.media-form .node-form .field--type-yoast-seo input {
+  #layout-builder-modal .node-form .field--type-yoast-seo input,.media-library-widget-modal .node-form .field--type-yoast-seo input,form.media-form .node-form .field--type-yoast-seo input {
     width: 100%;
   }
 }
-#layout-builder-modal .focal-point-preview-link,
-.media-library-widget-modal .focal-point-preview-link,
-form.media-form .focal-point-preview-link {
+
+#layout-builder-modal .focal-point-preview-link,.media-library-widget-modal .focal-point-preview-link,form.media-form .focal-point-preview-link {
   padding: var(--gin-spacing-l);
   text-decoration: none;
 }
-#layout-builder-modal .media-library-item .media-library-item__preview,
-.media-library-widget-modal .media-library-item .media-library-item__preview,
-form.media-form .media-library-item .media-library-item__preview {
+
+#layout-builder-modal .media-library-item .media-library-item__preview,.media-library-widget-modal .media-library-item .media-library-item__preview,form.media-form .media-library-item .media-library-item__preview {
   padding-bottom: 0 !important;
 }
-#layout-builder-modal .media-library-item--grid .field--name-thumbnail img,
-.media-library-widget-modal .media-library-item--grid .field--name-thumbnail img,
-form.media-form .media-library-item--grid .field--name-thumbnail img {
+
+#layout-builder-modal .media-library-item--grid .field--name-thumbnail img,.media-library-widget-modal .media-library-item--grid .field--name-thumbnail img,form.media-form .media-library-item--grid .field--name-thumbnail img {
   width: 100% !important;
 }
-#layout-builder-modal .form-text.description,
-.media-library-widget-modal .form-text.description,
-form.media-form .form-text.description {
+
+#layout-builder-modal .form-text.description,.media-library-widget-modal .form-text.description,form.media-form .form-text.description {
   border: 0 !important;
 }
+

@@ -84,11 +84,6 @@ claro:
       themes/claro/css/components/system-admin--links.css: {}
       themes/claro/css/components/system-admin--modules.css: {}
       themes/claro/css/components/system-admin--panel.css: {}
-      themes/claro/css/components/system-admin--status-report.css: {}
-      themes/claro/css/components/system-status-counter.css: {}
-      themes/claro/css/components/system-status-report-counters.css: {}
-      themes/claro/css/components/system-status-report-general-info.css: {}
-      themes/claro/css/components/system-status-report.css: {}
       themes/claro/css/components/tabledrag.css: {}
       themes/claro/css/components/tables.css: {}
       themes/claro/css/components/tableselect.css: {}
@@ -131,7 +126,6 @@ gin:
       themes/gin/css/components/autosave.css: {}
       themes/gin/css/components/breadcrumb.css: {}
       themes/gin/css/components/chosen.css: {}
-      themes/gin/css/components/coffee.css: {}
       themes/gin/css/components/contextual_links.css: {}
       themes/gin/css/components/description_toggle.css: {}
       themes/gin/css/components/dialog.css: {}
@@ -149,13 +143,10 @@ gin:
       themes/gin/css/components/paragraphs.css: {}
       themes/gin/css/components/responsive_preview.css: {}
       themes/gin/css/components/revisions.css: {}
-      themes/gin/css/components/settings_tray_edit.css: {}
-      themes/gin/css/components/settings_tray.css: {}
       themes/gin/css/components/sidebar.css: {}
       themes/gin/css/components/tabs.css: {}
       themes/gin/css/components/toolbar_secondary.css: {}
       themes/gin/css/components/toolbar.css: {}
-      themes/gin/css/components/upgrade_status.css: {}
       themes/gin/css/components/webform.css: {}
       themes/gin/css/components/workbench.css: {}
     layout:
@@ -165,7 +156,6 @@ gin:
     theme:
       themes/gin/css/theme/ckeditor.css: {}
       themes/gin/css/theme/dialog.css: {}
-      themes/gin/css/theme/font.css: {}
       themes/gin/css/theme/vartheme-claro.theme.style.css: {}
   dependencies:
     - system/admin

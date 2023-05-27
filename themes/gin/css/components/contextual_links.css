@@ -1,74 +1,58 @@
-#layout-builder-modal .contextual,
-.media-library-widget-modal .contextual,
-form.media-form .contextual {
+#layout-builder-modal .contextual,.media-library-widget-modal .contextual,form.media-form .contextual {
   z-index: 100;
 }
-#layout-builder-modal .contextual .trigger,
-.media-library-widget-modal .contextual .trigger,
-form.media-form .contextual .trigger {
+
+#layout-builder-modal .contextual .trigger,.media-library-widget-modal .contextual .trigger,form.media-form .contextual .trigger {
   width: 32px !important;
   height: 32px !important;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
   border-radius: 50%;
   box-sizing: border-box;
 }
-#layout-builder-modal .contextual .trigger::before,
-.media-library-widget-modal .contextual .trigger::before,
-form.media-form .contextual .trigger::before {
+
+#layout-builder-modal .contextual .trigger::before,.media-library-widget-modal .contextual .trigger::before,form.media-form .contextual .trigger::before {
   content: "";
   position: absolute;
   top: 50%;
   display: block;
-  width: 0.75rem;
-  height: 0.75rem;
+  width: .75rem;
+  height: .75rem;
   -webkit-mask-image: url("../../media/sprite.svg#media-edit-view");
-  mask-image: url("../../media/sprite.svg#media-edit-view");
+          mask-image: url("../../media/sprite.svg#media-edit-view");
   -webkit-mask-size: var(--gin-spacing-s) var(--gin-spacing-s);
-  mask-size: var(--gin-spacing-s) var(--gin-spacing-s);
+          mask-size: var(--gin-spacing-s) var(--gin-spacing-s);
   -webkit-mask-position: 100% 100%;
-  mask-position: 100% 100%;
+          mask-position: 100% 100%;
   background: var(--gin-color-primary);
 }
-#layout-builder-modal [dir=ltr] .contextual .trigger::before,
-.media-library-widget-modal [dir=ltr] .contextual .trigger::before,
-form.media-form [dir=ltr] .contextual .trigger::before {
+
+#layout-builder-modal [dir=ltr] .contextual .trigger::before,.media-library-widget-modal [dir=ltr] .contextual .trigger::before,form.media-form [dir=ltr] .contextual .trigger::before {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#layout-builder-modal [dir=rtl] .contextual .trigger::before,
-.media-library-widget-modal [dir=rtl] .contextual .trigger::before,
-form.media-form [dir=rtl] .contextual .trigger::before {
+
+#layout-builder-modal [dir=rtl] .contextual .trigger::before,.media-library-widget-modal [dir=rtl] .contextual .trigger::before,form.media-form [dir=rtl] .contextual .trigger::before {
   right: 50%;
   transform: translate(50%, -50%);
 }
-#layout-builder-modal .contextual .trigger, #layout-builder-modal .contextual .trigger:hover, #layout-builder-modal .contextual .trigger:focus,
-.media-library-widget-modal .contextual .trigger,
-.media-library-widget-modal .contextual .trigger:hover,
-.media-library-widget-modal .contextual .trigger:focus,
-form.media-form .contextual .trigger,
-form.media-form .contextual .trigger:hover,
-form.media-form .contextual .trigger:focus {
+
+#layout-builder-modal .contextual .trigger,#layout-builder-modal .contextual .trigger:hover,#layout-builder-modal .contextual .trigger:focus,.media-library-widget-modal .contextual .trigger,.media-library-widget-modal .contextual .trigger:hover,.media-library-widget-modal .contextual .trigger:focus,form.media-form .contextual .trigger,form.media-form .contextual .trigger:hover,form.media-form .contextual .trigger:focus {
   background: var(--gin-bg-layer3);
   border: 1px solid var(--gin-border-color-layer2);
 }
-#layout-builder-modal .contextual .trigger:hover, #layout-builder-modal .contextual .trigger:focus,
-.media-library-widget-modal .contextual .trigger:hover,
-.media-library-widget-modal .contextual .trigger:focus,
-form.media-form .contextual .trigger:hover,
-form.media-form .contextual .trigger:focus {
+
+#layout-builder-modal .contextual .trigger:hover,#layout-builder-modal .contextual .trigger:focus,.media-library-widget-modal .contextual .trigger:hover,.media-library-widget-modal .contextual .trigger:focus,form.media-form .contextual .trigger:hover,form.media-form .contextual .trigger:focus {
   box-shadow: 0 0 0 1px var(--gin-color-focus-border), 0 0 0 4px var(--gin-color-focus);
 }
-#layout-builder-modal .contextual.open .trigger,
-.media-library-widget-modal .contextual.open .trigger,
-form.media-form .contextual.open .trigger {
+
+#layout-builder-modal .contextual.open .trigger,.media-library-widget-modal .contextual.open .trigger,form.media-form .contextual.open .trigger {
   border-radius: 50%;
   border-bottom: 0 none;
 }
-#layout-builder-modal .contextual-region .contextual .contextual-links,
-.media-library-widget-modal .contextual-region .contextual .contextual-links,
-form.media-form .contextual-region .contextual .contextual-links {
+
+#layout-builder-modal .contextual-region .contextual .contextual-links,.media-library-widget-modal .contextual-region .contextual .contextual-links,form.media-form .contextual-region .contextual .contextual-links {
   top: var(--gin-spacing-xxs);
-  padding: 0.5em;
+  padding: .5em;
   margin: 0;
   min-width: 120px;
   background: var(--gin-bg-layer3);
@@ -76,14 +60,12 @@ form.media-form .contextual-region .contextual .contextual-links {
   border-radius: var(--gin-border-l);
   box-shadow: var(--gin-shadow-l2);
 }
-#layout-builder-modal .contextual-region .contextual .contextual-links li,
-.media-library-widget-modal .contextual-region .contextual .contextual-links li,
-form.media-form .contextual-region .contextual .contextual-links li {
+
+#layout-builder-modal .contextual-region .contextual .contextual-links li,.media-library-widget-modal .contextual-region .contextual .contextual-links li,form.media-form .contextual-region .contextual .contextual-links li {
   background: transparent;
 }
-#layout-builder-modal .contextual-region .contextual .contextual-links li a,
-.media-library-widget-modal .contextual-region .contextual .contextual-links li a,
-form.media-form .contextual-region .contextual .contextual-links li a {
+
+#layout-builder-modal .contextual-region .contextual .contextual-links li a,.media-library-widget-modal .contextual-region .contextual .contextual-links li a,form.media-form .contextual-region .contextual .contextual-links li a {
   font-family: var(--gin-font);
   color: var(--gin-color-primary);
   line-height: 1;
@@ -93,52 +75,42 @@ form.media-form .contextual-region .contextual .contextual-links li a {
   background: transparent;
   border-radius: var(--gin-border-s);
 }
-#layout-builder-modal .contextual-region .contextual .contextual-links li a:hover, #layout-builder-modal .contextual-region .contextual .contextual-links li a:active,
-.media-library-widget-modal .contextual-region .contextual .contextual-links li a:hover,
-.media-library-widget-modal .contextual-region .contextual .contextual-links li a:active,
-form.media-form .contextual-region .contextual .contextual-links li a:hover,
-form.media-form .contextual-region .contextual .contextual-links li a:active {
+
+#layout-builder-modal .contextual-region .contextual .contextual-links li a:hover,#layout-builder-modal .contextual-region .contextual .contextual-links li a:active,.media-library-widget-modal .contextual-region .contextual .contextual-links li a:hover,.media-library-widget-modal .contextual-region .contextual .contextual-links li a:active,form.media-form .contextual-region .contextual .contextual-links li a:hover,form.media-form .contextual-region .contextual .contextual-links li a:active {
   color: var(--gin-color-button-text);
   background: var(--gin-color-primary);
 }
-#layout-builder-modal .contextual-region .contextual .contextual-links li a:focus,
-.media-library-widget-modal .contextual-region .contextual .contextual-links li a:focus,
-form.media-form .contextual-region .contextual .contextual-links li a:focus {
+
+#layout-builder-modal .contextual-region .contextual .contextual-links li a:focus,.media-library-widget-modal .contextual-region .contextual .contextual-links li a:focus,form.media-form .contextual-region .contextual .contextual-links li a:focus {
   outline: none;
   box-shadow: 0 0 0 1px var(--gin-color-focus-border), 0 0 0 4px var(--gin-color-focus);
 }
-#layout-builder-modal .contextual-region .contextual .contextual-links .ajax-progress-throbber,
-.media-library-widget-modal .contextual-region .contextual .contextual-links .ajax-progress-throbber,
-form.media-form .contextual-region .contextual .contextual-links .ajax-progress-throbber {
-  top: 0.125rem;
+
+#layout-builder-modal .contextual-region .contextual .contextual-links .ajax-progress-throbber,.media-library-widget-modal .contextual-region .contextual .contextual-links .ajax-progress-throbber,form.media-form .contextual-region .contextual .contextual-links .ajax-progress-throbber {
+  top: .125rem;
   background: var(--gin-color-primary);
   border-radius: 50%;
 }
-#layout-builder-modal .contextual-region .contextual .contextual-links .ajax-progress-throbber::before,
-.media-library-widget-modal .contextual-region .contextual .contextual-links .ajax-progress-throbber::before,
-form.media-form .contextual-region .contextual .contextual-links .ajax-progress-throbber::before {
+
+#layout-builder-modal .contextual-region .contextual .contextual-links .ajax-progress-throbber::before,.media-library-widget-modal .contextual-region .contextual .contextual-links .ajax-progress-throbber::before,form.media-form .contextual-region .contextual .contextual-links .ajax-progress-throbber::before {
   top: var(--gin-spacing-xxs);
   width: 1rem;
   height: 1rem;
   border: 2px solid var(--gin-color-button-text);
 }
-#layout-builder-modal [dir=ltr] .contextual-region .contextual .contextual-links .ajax-progress-throbber::before,
-.media-library-widget-modal [dir=ltr] .contextual-region .contextual .contextual-links .ajax-progress-throbber::before,
-form.media-form [dir=ltr] .contextual-region .contextual .contextual-links .ajax-progress-throbber::before {
+
+#layout-builder-modal [dir=ltr] .contextual-region .contextual .contextual-links .ajax-progress-throbber::before,.media-library-widget-modal [dir=ltr] .contextual-region .contextual .contextual-links .ajax-progress-throbber::before,form.media-form [dir=ltr] .contextual-region .contextual .contextual-links .ajax-progress-throbber::before {
   left: var(--gin-spacing-xxs);
   border-right: 2px dotted transparent;
 }
-#layout-builder-modal [dir=rtl] .contextual-region .contextual .contextual-links .ajax-progress-throbber::before,
-.media-library-widget-modal [dir=rtl] .contextual-region .contextual .contextual-links .ajax-progress-throbber::before,
-form.media-form [dir=rtl] .contextual-region .contextual .contextual-links .ajax-progress-throbber::before {
+
+#layout-builder-modal [dir=rtl] .contextual-region .contextual .contextual-links .ajax-progress-throbber::before,.media-library-widget-modal [dir=rtl] .contextual-region .contextual .contextual-links .ajax-progress-throbber::before,form.media-form [dir=rtl] .contextual-region .contextual .contextual-links .ajax-progress-throbber::before {
   right: var(--gin-spacing-xxs);
   border-left: 2px dotted transparent;
 }
-#layout-builder-modal .no-touchevents .contextual-region .contextual .contextual-links li a:hover, #layout-builder-modal .no-touchevents .contextual-region .contextual .contextual-links li a:active,
-.media-library-widget-modal .no-touchevents .contextual-region .contextual .contextual-links li a:hover,
-.media-library-widget-modal .no-touchevents .contextual-region .contextual .contextual-links li a:active,
-form.media-form .no-touchevents .contextual-region .contextual .contextual-links li a:hover,
-form.media-form .no-touchevents .contextual-region .contextual .contextual-links li a:active {
+
+#layout-builder-modal .no-touchevents .contextual-region .contextual .contextual-links li a:hover,#layout-builder-modal .no-touchevents .contextual-region .contextual .contextual-links li a:active,.media-library-widget-modal .no-touchevents .contextual-region .contextual .contextual-links li a:hover,.media-library-widget-modal .no-touchevents .contextual-region .contextual .contextual-links li a:active,form.media-form .no-touchevents .contextual-region .contextual .contextual-links li a:hover,form.media-form .no-touchevents .contextual-region .contextual .contextual-links li a:active {
   color: var(--gin-color-button-text);
   background: var(--gin-color-primary);
 }
+

@@ -1,94 +1,47 @@
-#layout-builder-modal .erl-field .layout-radio-item.active,
-.media-library-widget-modal .erl-field .layout-radio-item.active,
-form.media-form .erl-field .layout-radio-item.active {
+#layout-builder-modal .erl-field .layout-radio-item.active,.media-library-widget-modal .erl-field .layout-radio-item.active,form.media-form .erl-field .layout-radio-item.active {
   background: transparent;
 }
-#layout-builder-modal .erl-field .erl-disabled-items,
-#layout-builder-modal .erl-field .erl-disabled-items.form-item.form-wrapper,
-.media-library-widget-modal .erl-field .erl-disabled-items,
-.media-library-widget-modal .erl-field .erl-disabled-items.form-item.form-wrapper,
-form.media-form .erl-field .erl-disabled-items,
-form.media-form .erl-field .erl-disabled-items.form-item.form-wrapper {
+
+#layout-builder-modal .erl-field .erl-disabled-items,#layout-builder-modal .erl-field .erl-disabled-items.form-item.form-wrapper,.media-library-widget-modal .erl-field .erl-disabled-items,.media-library-widget-modal .erl-field .erl-disabled-items.form-item.form-wrapper,form.media-form .erl-field .erl-disabled-items,form.media-form .erl-field .erl-disabled-items.form-item.form-wrapper {
   padding: var(--gin-spacing-m);
   margin-bottom: -6rem;
   background: #f1f1f3;
   border-radius: var(--gin-border-m);
 }
-#layout-builder-modal .gin--dark-mode .erl-field .erl-disabled-items,
-#layout-builder-modal .gin--dark-mode .erl-field .erl-disabled-items.form-item.form-wrapper,
-.media-library-widget-modal .gin--dark-mode .erl-field .erl-disabled-items,
-.media-library-widget-modal .gin--dark-mode .erl-field .erl-disabled-items.form-item.form-wrapper,
-form.media-form .gin--dark-mode .erl-field .erl-disabled-items,
-form.media-form .gin--dark-mode .erl-field .erl-disabled-items.form-item.form-wrapper {
+
+#layout-builder-modal .gin--dark-mode .erl-field .erl-disabled-items,#layout-builder-modal .gin--dark-mode .erl-field .erl-disabled-items.form-item.form-wrapper,.media-library-widget-modal .gin--dark-mode .erl-field .erl-disabled-items,.media-library-widget-modal .gin--dark-mode .erl-field .erl-disabled-items.form-item.form-wrapper,form.media-form .gin--dark-mode .erl-field .erl-disabled-items,form.media-form .gin--dark-mode .erl-field .erl-disabled-items.form-item.form-wrapper {
   background: var(--gin-bg-layer2);
 }
-#layout-builder-modal .erl-field .erl-disabled-items, #layout-builder-modal .erl-field .erl-disabled-items:hover, #layout-builder-modal .erl-field .erl-disabled-items:active,
-#layout-builder-modal .erl-field .erl-disabled-items.form-item.form-wrapper,
-#layout-builder-modal .erl-field .erl-disabled-items.form-item.form-wrapper:hover,
-#layout-builder-modal .erl-field .erl-disabled-items.form-item.form-wrapper:active,
-.media-library-widget-modal .erl-field .erl-disabled-items,
-.media-library-widget-modal .erl-field .erl-disabled-items:hover,
-.media-library-widget-modal .erl-field .erl-disabled-items:active,
-.media-library-widget-modal .erl-field .erl-disabled-items.form-item.form-wrapper,
-.media-library-widget-modal .erl-field .erl-disabled-items.form-item.form-wrapper:hover,
-.media-library-widget-modal .erl-field .erl-disabled-items.form-item.form-wrapper:active,
-form.media-form .erl-field .erl-disabled-items,
-form.media-form .erl-field .erl-disabled-items:hover,
-form.media-form .erl-field .erl-disabled-items:active,
-form.media-form .erl-field .erl-disabled-items.form-item.form-wrapper,
-form.media-form .erl-field .erl-disabled-items.form-item.form-wrapper:hover,
-form.media-form .erl-field .erl-disabled-items.form-item.form-wrapper:active {
+
+#layout-builder-modal .erl-field .erl-disabled-items,#layout-builder-modal .erl-field .erl-disabled-items:hover,#layout-builder-modal .erl-field .erl-disabled-items:active,#layout-builder-modal .erl-field .erl-disabled-items.form-item.form-wrapper,#layout-builder-modal .erl-field .erl-disabled-items.form-item.form-wrapper:hover,#layout-builder-modal .erl-field .erl-disabled-items.form-item.form-wrapper:active,.media-library-widget-modal .erl-field .erl-disabled-items,.media-library-widget-modal .erl-field .erl-disabled-items:hover,.media-library-widget-modal .erl-field .erl-disabled-items:active,.media-library-widget-modal .erl-field .erl-disabled-items.form-item.form-wrapper,.media-library-widget-modal .erl-field .erl-disabled-items.form-item.form-wrapper:hover,.media-library-widget-modal .erl-field .erl-disabled-items.form-item.form-wrapper:active,form.media-form .erl-field .erl-disabled-items,form.media-form .erl-field .erl-disabled-items:hover,form.media-form .erl-field .erl-disabled-items:active,form.media-form .erl-field .erl-disabled-items.form-item.form-wrapper,form.media-form .erl-field .erl-disabled-items.form-item.form-wrapper:hover,form.media-form .erl-field .erl-disabled-items.form-item.form-wrapper:active {
   border: 0 none;
 }
-#layout-builder-modal .erl-field .erl-disabled-items .fieldset__label,
-#layout-builder-modal .erl-field .erl-disabled-items.form-item.form-wrapper .fieldset__label,
-.media-library-widget-modal .erl-field .erl-disabled-items .fieldset__label,
-.media-library-widget-modal .erl-field .erl-disabled-items.form-item.form-wrapper .fieldset__label,
-form.media-form .erl-field .erl-disabled-items .fieldset__label,
-form.media-form .erl-field .erl-disabled-items.form-item.form-wrapper .fieldset__label {
+
+#layout-builder-modal .erl-field .erl-disabled-items .fieldset__label,#layout-builder-modal .erl-field .erl-disabled-items.form-item.form-wrapper .fieldset__label,.media-library-widget-modal .erl-field .erl-disabled-items .fieldset__label,.media-library-widget-modal .erl-field .erl-disabled-items.form-item.form-wrapper .fieldset__label,form.media-form .erl-field .erl-disabled-items .fieldset__label,form.media-form .erl-field .erl-disabled-items.form-item.form-wrapper .fieldset__label {
   padding: var(--gin-spacing-m) 0 var(--gin-spacing-l);
 }
-#layout-builder-modal .erl-field .erl-disabled-items__description,
-#layout-builder-modal .erl-field .erl-disabled-items.form-item.form-wrapper__description,
-.media-library-widget-modal .erl-field .erl-disabled-items__description,
-.media-library-widget-modal .erl-field .erl-disabled-items.form-item.form-wrapper__description,
-form.media-form .erl-field .erl-disabled-items__description,
-form.media-form .erl-field .erl-disabled-items.form-item.form-wrapper__description {
+
+#layout-builder-modal .erl-field .erl-disabled-items__description,#layout-builder-modal .erl-field .erl-disabled-items.form-item.form-wrapper__description,.media-library-widget-modal .erl-field .erl-disabled-items__description,.media-library-widget-modal .erl-field .erl-disabled-items.form-item.form-wrapper__description,form.media-form .erl-field .erl-disabled-items__description,form.media-form .erl-field .erl-disabled-items.form-item.form-wrapper__description {
   font-size: var(--gin-font-size-s);
   color: #999;
 }
-#layout-builder-modal .erl-disabled-items > .fieldset__wrapper,
-.media-library-widget-modal .erl-disabled-items > .fieldset__wrapper,
-form.media-form .erl-disabled-items > .fieldset__wrapper {
+
+#layout-builder-modal .erl-disabled-items>.fieldset__wrapper,.media-library-widget-modal .erl-disabled-items>.fieldset__wrapper,form.media-form .erl-disabled-items>.fieldset__wrapper {
   margin: 0;
 }
-#layout-builder-modal .erl-field .erl-add-content:focus,
-.media-library-widget-modal .erl-field .erl-add-content:focus,
-form.media-form .erl-field .erl-add-content:focus {
+
+#layout-builder-modal .erl-field .erl-add-content:focus,.media-library-widget-modal .erl-field .erl-add-content:focus,form.media-form .erl-field .erl-add-content:focus {
   outline: none;
   box-shadow: none;
 }
-#layout-builder-modal .erl-field .erl-actions .erl-edit, #layout-builder-modal .erl-field .erl-actions .erl-edit:hover,
-#layout-builder-modal .erl-field .erl-actions .erl-remove,
-#layout-builder-modal .erl-field .erl-actions .erl-remove:hover,
-.media-library-widget-modal .erl-field .erl-actions .erl-edit,
-.media-library-widget-modal .erl-field .erl-actions .erl-edit:hover,
-.media-library-widget-modal .erl-field .erl-actions .erl-remove,
-.media-library-widget-modal .erl-field .erl-actions .erl-remove:hover,
-form.media-form .erl-field .erl-actions .erl-edit,
-form.media-form .erl-field .erl-actions .erl-edit:hover,
-form.media-form .erl-field .erl-actions .erl-remove,
-form.media-form .erl-field .erl-actions .erl-remove:hover {
+
+#layout-builder-modal .erl-field .erl-actions .erl-edit,#layout-builder-modal .erl-field .erl-actions .erl-edit:hover,#layout-builder-modal .erl-field .erl-actions .erl-remove,#layout-builder-modal .erl-field .erl-actions .erl-remove:hover,.media-library-widget-modal .erl-field .erl-actions .erl-edit,.media-library-widget-modal .erl-field .erl-actions .erl-edit:hover,.media-library-widget-modal .erl-field .erl-actions .erl-remove,.media-library-widget-modal .erl-field .erl-actions .erl-remove:hover,form.media-form .erl-field .erl-actions .erl-edit,form.media-form .erl-field .erl-actions .erl-edit:hover,form.media-form .erl-field .erl-actions .erl-remove,form.media-form .erl-field .erl-actions .erl-remove:hover {
   box-shadow: none;
   border-color: transparent !important;
   border-radius: 50%;
 }
-#layout-builder-modal .erl-field .erl-add-section,
-#layout-builder-modal .erl-field .erl-add-content--single button,
-.media-library-widget-modal .erl-field .erl-add-section,
-.media-library-widget-modal .erl-field .erl-add-content--single button,
-form.media-form .erl-field .erl-add-section,
-form.media-form .erl-field .erl-add-content--single button {
+
+#layout-builder-modal .erl-field .erl-add-section,#layout-builder-modal .erl-field .erl-add-content--single button,.media-library-widget-modal .erl-field .erl-add-section,.media-library-widget-modal .erl-field .erl-add-content--single button,form.media-form .erl-field .erl-add-section,form.media-form .erl-field .erl-add-content--single button {
   position: static;
   display: block;
   width: 100%;
@@ -100,235 +53,163 @@ form.media-form .erl-field .erl-add-content--single button {
   border-radius: var(--gin-border-m);
   transform: none;
 }
-#layout-builder-modal .erl-field .erl-add-section, #layout-builder-modal .erl-field .erl-add-section:hover, #layout-builder-modal .erl-field .erl-add-section:active,
-#layout-builder-modal .erl-field .erl-add-content--single button,
-#layout-builder-modal .erl-field .erl-add-content--single button:hover,
-#layout-builder-modal .erl-field .erl-add-content--single button:active,
-.media-library-widget-modal .erl-field .erl-add-section,
-.media-library-widget-modal .erl-field .erl-add-section:hover,
-.media-library-widget-modal .erl-field .erl-add-section:active,
-.media-library-widget-modal .erl-field .erl-add-content--single button,
-.media-library-widget-modal .erl-field .erl-add-content--single button:hover,
-.media-library-widget-modal .erl-field .erl-add-content--single button:active,
-form.media-form .erl-field .erl-add-section,
-form.media-form .erl-field .erl-add-section:hover,
-form.media-form .erl-field .erl-add-section:active,
-form.media-form .erl-field .erl-add-content--single button,
-form.media-form .erl-field .erl-add-content--single button:hover,
-form.media-form .erl-field .erl-add-content--single button:active {
+
+#layout-builder-modal .erl-field .erl-add-section,#layout-builder-modal .erl-field .erl-add-section:hover,#layout-builder-modal .erl-field .erl-add-section:active,#layout-builder-modal .erl-field .erl-add-content--single button,#layout-builder-modal .erl-field .erl-add-content--single button:hover,#layout-builder-modal .erl-field .erl-add-content--single button:active,.media-library-widget-modal .erl-field .erl-add-section,.media-library-widget-modal .erl-field .erl-add-section:hover,.media-library-widget-modal .erl-field .erl-add-section:active,.media-library-widget-modal .erl-field .erl-add-content--single button,.media-library-widget-modal .erl-field .erl-add-content--single button:hover,.media-library-widget-modal .erl-field .erl-add-content--single button:active,form.media-form .erl-field .erl-add-section,form.media-form .erl-field .erl-add-section:hover,form.media-form .erl-field .erl-add-section:active,form.media-form .erl-field .erl-add-content--single button,form.media-form .erl-field .erl-add-content--single button:hover,form.media-form .erl-field .erl-add-content--single button:active {
   text-decoration: none;
 }
-#layout-builder-modal .erl-field .erl-add-section:hover, #layout-builder-modal .erl-field .erl-add-section:active,
-#layout-builder-modal .erl-field .erl-add-content--single button:hover,
-#layout-builder-modal .erl-field .erl-add-content--single button:active,
-.media-library-widget-modal .erl-field .erl-add-section:hover,
-.media-library-widget-modal .erl-field .erl-add-section:active,
-.media-library-widget-modal .erl-field .erl-add-content--single button:hover,
-.media-library-widget-modal .erl-field .erl-add-content--single button:active,
-form.media-form .erl-field .erl-add-section:hover,
-form.media-form .erl-field .erl-add-section:active,
-form.media-form .erl-field .erl-add-content--single button:hover,
-form.media-form .erl-field .erl-add-content--single button:active {
+
+#layout-builder-modal .erl-field .erl-add-section:hover,#layout-builder-modal .erl-field .erl-add-section:active,#layout-builder-modal .erl-field .erl-add-content--single button:hover,#layout-builder-modal .erl-field .erl-add-content--single button:active,.media-library-widget-modal .erl-field .erl-add-section:hover,.media-library-widget-modal .erl-field .erl-add-section:active,.media-library-widget-modal .erl-field .erl-add-content--single button:hover,.media-library-widget-modal .erl-field .erl-add-content--single button:active,form.media-form .erl-field .erl-add-section:hover,form.media-form .erl-field .erl-add-section:active,form.media-form .erl-field .erl-add-content--single button:hover,form.media-form .erl-field .erl-add-content--single button:active {
   color: var(--gin-color-primary-hover);
   background: var(--gin-color-primary-light);
 }
-#layout-builder-modal .erl-field .erl-item:last-of-type > .erl-add-content--single,
-.media-library-widget-modal .erl-field .erl-item:last-of-type > .erl-add-content--single,
-form.media-form .erl-field .erl-item:last-of-type > .erl-add-content--single {
+
+#layout-builder-modal .erl-field .erl-item:last-of-type>.erl-add-content--single,.media-library-widget-modal .erl-field .erl-item:last-of-type>.erl-add-content--single,form.media-form .erl-field .erl-item:last-of-type>.erl-add-content--single {
   opacity: 1;
 }
-#layout-builder-modal [dir=ltr] .erl-field .erl-add-content--single button .icon,
-.media-library-widget-modal [dir=ltr] .erl-field .erl-add-content--single button .icon,
-form.media-form [dir=ltr] .erl-field .erl-add-content--single button .icon {
+
+#layout-builder-modal [dir=ltr] .erl-field .erl-add-content--single button .icon,.media-library-widget-modal [dir=ltr] .erl-field .erl-add-content--single button .icon,form.media-form [dir=ltr] .erl-field .erl-add-content--single button .icon {
   margin-right: var(--gin-spacing-xs);
 }
-#layout-builder-modal [dir=rtl] .erl-field .erl-add-content--single button .icon,
-.media-library-widget-modal [dir=rtl] .erl-field .erl-add-content--single button .icon,
-form.media-form [dir=rtl] .erl-field .erl-add-content--single button .icon {
+
+#layout-builder-modal [dir=rtl] .erl-field .erl-add-content--single button .icon,.media-library-widget-modal [dir=rtl] .erl-field .erl-add-content--single button .icon,form.media-form [dir=rtl] .erl-field .erl-add-content--single button .icon {
   margin-left: var(--gin-spacing-xs);
 }
-#layout-builder-modal .erl-field .layout-radio-item > div,
-.media-library-widget-modal .erl-field .layout-radio-item > div,
-form.media-form .erl-field .layout-radio-item > div {
+
+#layout-builder-modal .erl-field .layout-radio-item>div,.media-library-widget-modal .erl-field .layout-radio-item>div,form.media-form .erl-field .layout-radio-item>div {
   display: flex;
   align-items: center;
 }
-#layout-builder-modal [dir=ltr] .erl-field .layout-radio-item .form-item,
-.media-library-widget-modal [dir=ltr] .erl-field .layout-radio-item .form-item,
-form.media-form [dir=ltr] .erl-field .layout-radio-item .form-item {
+
+#layout-builder-modal [dir=ltr] .erl-field .layout-radio-item .form-item,.media-library-widget-modal [dir=ltr] .erl-field .layout-radio-item .form-item,form.media-form [dir=ltr] .erl-field .layout-radio-item .form-item {
   margin-left: var(--gin-spacing-xs);
 }
-#layout-builder-modal [dir=rtl] .erl-field .layout-radio-item .form-item,
-.media-library-widget-modal [dir=rtl] .erl-field .layout-radio-item .form-item,
-form.media-form [dir=rtl] .erl-field .layout-radio-item .form-item {
+
+#layout-builder-modal [dir=rtl] .erl-field .layout-radio-item .form-item,.media-library-widget-modal [dir=rtl] .erl-field .layout-radio-item .form-item,form.media-form [dir=rtl] .erl-field .layout-radio-item .form-item {
   margin-right: var(--gin-spacing-xs);
 }
-#layout-builder-modal .erl-field .layout-radio-item.active,
-.media-library-widget-modal .erl-field .layout-radio-item.active,
-form.media-form .erl-field .layout-radio-item.active {
+
+#layout-builder-modal .erl-field .layout-radio-item.active,.media-library-widget-modal .erl-field .layout-radio-item.active,form.media-form .erl-field .layout-radio-item.active {
   outline: var(--gin-border-xs) solid var(--gin-color-focus);
 }
-#layout-builder-modal .erl-layout-region:hover button.erl-add-content__toggle,
-.media-library-widget-modal .erl-layout-region:hover button.erl-add-content__toggle,
-form.media-form .erl-layout-region:hover button.erl-add-content__toggle {
+
+#layout-builder-modal .erl-layout-region:hover button.erl-add-content__toggle,.media-library-widget-modal .erl-layout-region:hover button.erl-add-content__toggle,form.media-form .erl-layout-region:hover button.erl-add-content__toggle {
   opacity: 1;
 }
-#layout-builder-modal .erl-overlay .erl-form,
-.media-library-widget-modal .erl-overlay .erl-form,
-form.media-form .erl-overlay .erl-form {
+
+#layout-builder-modal .erl-overlay .erl-form,.media-library-widget-modal .erl-overlay .erl-form,form.media-form .erl-overlay .erl-form {
   overflow-x: hidden;
   overflow-y: visible;
   max-height: 85vh !important;
 }
-#layout-builder-modal .erl-overlay.erl-loading div.loading,
-.media-library-widget-modal .erl-overlay.erl-loading div.loading,
-form.media-form .erl-overlay.erl-loading div.loading {
+
+#layout-builder-modal .erl-overlay.erl-loading div.loading,.media-library-widget-modal .erl-overlay.erl-loading div.loading,form.media-form .erl-overlay.erl-loading div.loading {
   border-radius: 6px;
 }
-#layout-builder-modal .gin--dark-mode .erl-overlay.erl-loading div.loading,
-.media-library-widget-modal .gin--dark-mode .erl-overlay.erl-loading div.loading,
-form.media-form .gin--dark-mode .erl-overlay.erl-loading div.loading {
-  background: rgba(0, 0, 0, 0.3);
+
+#layout-builder-modal .gin--dark-mode .erl-overlay.erl-loading div.loading,.media-library-widget-modal .gin--dark-mode .erl-overlay.erl-loading div.loading,form.media-form .gin--dark-mode .erl-overlay.erl-loading div.loading {
+  background: rgba(0, 0, 0, .3);
 }
-#layout-builder-modal .erl-disabled-wrapper .erl-item,
-.media-library-widget-modal .erl-disabled-wrapper .erl-item,
-form.media-form .erl-disabled-wrapper .erl-item {
+
+#layout-builder-modal .erl-disabled-wrapper .erl-item,.media-library-widget-modal .erl-disabled-wrapper .erl-item,form.media-form .erl-disabled-wrapper .erl-item {
   border-color: #fff;
 }
-#layout-builder-modal .erl-disabled-wrapper .erl-item:not(:last-of-type),
-.media-library-widget-modal .erl-disabled-wrapper .erl-item:not(:last-of-type),
-form.media-form .erl-disabled-wrapper .erl-item:not(:last-of-type) {
+
+#layout-builder-modal .erl-disabled-wrapper .erl-item:not(:last-of-type),.media-library-widget-modal .erl-disabled-wrapper .erl-item:not(:last-of-type),form.media-form .erl-disabled-wrapper .erl-item:not(:last-of-type) {
   margin-bottom: var(--gin-spacing-m);
 }
-#layout-builder-modal .erl-disabled-wrapper .erl-disabled-items__description,
-.media-library-widget-modal .erl-disabled-wrapper .erl-disabled-items__description,
-form.media-form .erl-disabled-wrapper .erl-disabled-items__description {
+
+#layout-builder-modal .erl-disabled-wrapper .erl-disabled-items__description,.media-library-widget-modal .erl-disabled-wrapper .erl-disabled-items__description,form.media-form .erl-disabled-wrapper .erl-disabled-items__description {
   top: var(--gin-spacing-m);
 }
-#layout-builder-modal .erl-item label.paragraph-type-label,
-#layout-builder-modal .erl-item label.paragraph-type--label,
-.media-library-widget-modal .erl-item label.paragraph-type-label,
-.media-library-widget-modal .erl-item label.paragraph-type--label,
-form.media-form .erl-item label.paragraph-type-label,
-form.media-form .erl-item label.paragraph-type--label {
+
+#layout-builder-modal .erl-item label.paragraph-type-label,#layout-builder-modal .erl-item label.paragraph-type--label,.media-library-widget-modal .erl-item label.paragraph-type-label,.media-library-widget-modal .erl-item label.paragraph-type--label,form.media-form .erl-item label.paragraph-type-label,form.media-form .erl-item label.paragraph-type--label {
   margin: -1px;
   position: absolute;
   top: 12px;
   border: 0 none;
   font-style: normal;
   color: var(--gin-color-text-light);
-  opacity: 0.75;
+  opacity: .75;
 }
-#layout-builder-modal [dir=ltr] .erl-item label.paragraph-type-label,
-#layout-builder-modal [dir=ltr] .erl-item label.paragraph-type--label,
-.media-library-widget-modal [dir=ltr] .erl-item label.paragraph-type-label,
-.media-library-widget-modal [dir=ltr] .erl-item label.paragraph-type--label,
-form.media-form [dir=ltr] .erl-item label.paragraph-type-label,
-form.media-form [dir=ltr] .erl-item label.paragraph-type--label {
+
+#layout-builder-modal [dir=ltr] .erl-item label.paragraph-type-label,#layout-builder-modal [dir=ltr] .erl-item label.paragraph-type--label,.media-library-widget-modal [dir=ltr] .erl-item label.paragraph-type-label,.media-library-widget-modal [dir=ltr] .erl-item label.paragraph-type--label,form.media-form [dir=ltr] .erl-item label.paragraph-type-label,form.media-form [dir=ltr] .erl-item label.paragraph-type--label {
   left: 50%;
   transform: translate(-50%);
 }
-#layout-builder-modal [dir=rtl] .erl-item label.paragraph-type-label,
-#layout-builder-modal [dir=rtl] .erl-item label.paragraph-type--label,
-.media-library-widget-modal [dir=rtl] .erl-item label.paragraph-type-label,
-.media-library-widget-modal [dir=rtl] .erl-item label.paragraph-type--label,
-form.media-form [dir=rtl] .erl-item label.paragraph-type-label,
-form.media-form [dir=rtl] .erl-item label.paragraph-type--label {
+
+#layout-builder-modal [dir=rtl] .erl-item label.paragraph-type-label,#layout-builder-modal [dir=rtl] .erl-item label.paragraph-type--label,.media-library-widget-modal [dir=rtl] .erl-item label.paragraph-type-label,.media-library-widget-modal [dir=rtl] .erl-item label.paragraph-type--label,form.media-form [dir=rtl] .erl-item label.paragraph-type-label,form.media-form [dir=rtl] .erl-item label.paragraph-type--label {
   right: 50%;
   transform: translate(50%);
 }
-#layout-builder-modal .erl-item .layout-controls,
-.media-library-widget-modal .erl-item .layout-controls,
-form.media-form .erl-item .layout-controls {
+
+#layout-builder-modal .erl-item .layout-controls,.media-library-widget-modal .erl-item .layout-controls,form.media-form .erl-item .layout-controls {
   opacity: 1;
   position: absolute;
   top: var(--gin-spacing-xs);
 }
-#layout-builder-modal [dir=ltr] .erl-item .layout-controls,
-.media-library-widget-modal [dir=ltr] .erl-item .layout-controls,
-form.media-form [dir=ltr] .erl-item .layout-controls {
+
+#layout-builder-modal [dir=ltr] .erl-item .layout-controls,.media-library-widget-modal [dir=ltr] .erl-item .layout-controls,form.media-form [dir=ltr] .erl-item .layout-controls {
   left: var(--gin-spacing-xxs);
 }
-#layout-builder-modal [dir=rtl] .erl-item .layout-controls,
-.media-library-widget-modal [dir=rtl] .erl-item .layout-controls,
-form.media-form [dir=rtl] .erl-item .layout-controls {
+
+#layout-builder-modal [dir=rtl] .erl-item .layout-controls,.media-library-widget-modal [dir=rtl] .erl-item .layout-controls,form.media-form [dir=rtl] .erl-item .layout-controls {
   right: var(--gin-spacing-xxs);
 }
-#layout-builder-modal .erl-item .paragraph .field,
-.media-library-widget-modal .erl-item .paragraph .field,
-form.media-form .erl-item .paragraph .field {
+
+#layout-builder-modal .erl-item .paragraph .field,.media-library-widget-modal .erl-item .paragraph .field,form.media-form .erl-item .paragraph .field {
   line-height: 1.5;
-  margin: 0.5em 0;
+  margin: .5em 0;
 }
-#layout-builder-modal .erl-item .paragraph .field--name-field-title,
-.media-library-widget-modal .erl-item .paragraph .field--name-field-title,
-form.media-form .erl-item .paragraph .field--name-field-title {
+
+#layout-builder-modal .erl-item .paragraph .field--name-field-title,.media-library-widget-modal .erl-item .paragraph .field--name-field-title,form.media-form .erl-item .paragraph .field--name-field-title {
   font-weight: var(--gin-font-weight-heavy);
 }
-#layout-builder-modal .erl-item .paragraph .field--type-image,
-.media-library-widget-modal .erl-item .paragraph .field--type-image,
-form.media-form .erl-item .paragraph .field--type-image {
+
+#layout-builder-modal .erl-item .paragraph .field--type-image,.media-library-widget-modal .erl-item .paragraph .field--type-image,form.media-form .erl-item .paragraph .field--type-image {
   max-height: 400px;
   overflow: hidden;
 }
-#layout-builder-modal .erl-item .paragraph .field--name-field-paragraphs,
-.media-library-widget-modal .erl-item .paragraph .field--name-field-paragraphs,
-form.media-form .erl-item .paragraph .field--name-field-paragraphs {
+
+#layout-builder-modal .erl-item .paragraph .field--name-field-paragraphs,.media-library-widget-modal .erl-item .paragraph .field--name-field-paragraphs,form.media-form .erl-item .paragraph .field--name-field-paragraphs {
   display: flex;
   flex-wrap: wrap;
 }
-#layout-builder-modal .erl-item .paragraph .field--name-field-paragraphs .field__item,
-.media-library-widget-modal .erl-item .paragraph .field--name-field-paragraphs .field__item,
-form.media-form .erl-item .paragraph .field--name-field-paragraphs .field__item {
+
+#layout-builder-modal .erl-item .paragraph .field--name-field-paragraphs .field__item,.media-library-widget-modal .erl-item .paragraph .field--name-field-paragraphs .field__item,form.media-form .erl-item .paragraph .field--name-field-paragraphs .field__item {
   flex-basis: 100%;
 }
-#layout-builder-modal [dir=ltr] .erl-item .paragraph .field--name-field-paragraphs .field__item,
-.media-library-widget-modal [dir=ltr] .erl-item .paragraph .field--name-field-paragraphs .field__item,
-form.media-form [dir=ltr] .erl-item .paragraph .field--name-field-paragraphs .field__item {
+
+#layout-builder-modal [dir=ltr] .erl-item .paragraph .field--name-field-paragraphs .field__item,.media-library-widget-modal [dir=ltr] .erl-item .paragraph .field--name-field-paragraphs .field__item,form.media-form [dir=ltr] .erl-item .paragraph .field--name-field-paragraphs .field__item {
   margin-right: var(--gin-spacing-xs);
 }
-#layout-builder-modal [dir=rtl] .erl-item .paragraph .field--name-field-paragraphs .field__item,
-.media-library-widget-modal [dir=rtl] .erl-item .paragraph .field--name-field-paragraphs .field__item,
-form.media-form [dir=rtl] .erl-item .paragraph .field--name-field-paragraphs .field__item {
+
+#layout-builder-modal [dir=rtl] .erl-item .paragraph .field--name-field-paragraphs .field__item,.media-library-widget-modal [dir=rtl] .erl-item .paragraph .field--name-field-paragraphs .field__item,form.media-form [dir=rtl] .erl-item .paragraph .field--name-field-paragraphs .field__item {
   margin-left: var(--gin-spacing-xs);
 }
-#layout-builder-modal .erl-item .erl-actions,
-.media-library-widget-modal .erl-item .erl-actions,
-form.media-form .erl-item .erl-actions {
+
+#layout-builder-modal .erl-item .erl-actions,.media-library-widget-modal .erl-item .erl-actions,form.media-form .erl-item .erl-actions {
   visibility: visible;
   position: absolute;
   top: var(--gin-spacing-xs);
 }
-#layout-builder-modal [dir=ltr] .erl-item .erl-actions,
-.media-library-widget-modal [dir=ltr] .erl-item .erl-actions,
-form.media-form [dir=ltr] .erl-item .erl-actions {
+
+#layout-builder-modal [dir=ltr] .erl-item .erl-actions,.media-library-widget-modal [dir=ltr] .erl-item .erl-actions,form.media-form [dir=ltr] .erl-item .erl-actions {
   right: var(--gin-spacing-xxs);
 }
-#layout-builder-modal [dir=rtl] .erl-item .erl-actions,
-.media-library-widget-modal [dir=rtl] .erl-item .erl-actions,
-form.media-form [dir=rtl] .erl-item .erl-actions {
+
+#layout-builder-modal [dir=rtl] .erl-item .erl-actions,.media-library-widget-modal [dir=rtl] .erl-item .erl-actions,form.media-form [dir=rtl] .erl-item .erl-actions {
   left: var(--gin-spacing-xxs);
 }
-#layout-builder-modal .erl-layout.erl-item.form-wrapper:hover > button.erl-add-content__toggle, #layout-builder-modal .erl-layout.erl-item.form-wrapper:hover > button.layout-paragraphs-add-content__toggle,
-.media-library-widget-modal .erl-layout.erl-item.form-wrapper:hover > button.erl-add-content__toggle,
-.media-library-widget-modal .erl-layout.erl-item.form-wrapper:hover > button.layout-paragraphs-add-content__toggle,
-form.media-form .erl-layout.erl-item.form-wrapper:hover > button.erl-add-content__toggle,
-form.media-form .erl-layout.erl-item.form-wrapper:hover > button.layout-paragraphs-add-content__toggle {
+
+#layout-builder-modal .erl-layout.erl-item.form-wrapper:hover>button.erl-add-content__toggle,#layout-builder-modal .erl-layout.erl-item.form-wrapper:hover>button.layout-paragraphs-add-content__toggle,.media-library-widget-modal .erl-layout.erl-item.form-wrapper:hover>button.erl-add-content__toggle,.media-library-widget-modal .erl-layout.erl-item.form-wrapper:hover>button.layout-paragraphs-add-content__toggle,form.media-form .erl-layout.erl-item.form-wrapper:hover>button.erl-add-content__toggle,form.media-form .erl-layout.erl-item.form-wrapper:hover>button.layout-paragraphs-add-content__toggle {
   opacity: 1;
 }
-#layout-builder-modal .erl-layout.erl-item.form-wrapper .erl-actions input.erl-edit,
-#layout-builder-modal .erl-layout.erl-item.form-wrapper .erl-actions input.erl-remove,
-.media-library-widget-modal .erl-layout.erl-item.form-wrapper .erl-actions input.erl-edit,
-.media-library-widget-modal .erl-layout.erl-item.form-wrapper .erl-actions input.erl-remove,
-form.media-form .erl-layout.erl-item.form-wrapper .erl-actions input.erl-edit,
-form.media-form .erl-layout.erl-item.form-wrapper .erl-actions input.erl-remove {
-  opacity: 0.75;
+
+#layout-builder-modal .erl-layout.erl-item.form-wrapper .erl-actions input.erl-edit,#layout-builder-modal .erl-layout.erl-item.form-wrapper .erl-actions input.erl-remove,.media-library-widget-modal .erl-layout.erl-item.form-wrapper .erl-actions input.erl-edit,.media-library-widget-modal .erl-layout.erl-item.form-wrapper .erl-actions input.erl-remove,form.media-form .erl-layout.erl-item.form-wrapper .erl-actions input.erl-edit,form.media-form .erl-layout.erl-item.form-wrapper .erl-actions input.erl-remove {
+  opacity: .75;
 }
-#layout-builder-modal .erl-layout.erl-item.form-wrapper .erl-actions input.erl-edit:hover,
-#layout-builder-modal .erl-layout.erl-item.form-wrapper .erl-actions input.erl-remove:hover,
-.media-library-widget-modal .erl-layout.erl-item.form-wrapper .erl-actions input.erl-edit:hover,
-.media-library-widget-modal .erl-layout.erl-item.form-wrapper .erl-actions input.erl-remove:hover,
-form.media-form .erl-layout.erl-item.form-wrapper .erl-actions input.erl-edit:hover,
-form.media-form .erl-layout.erl-item.form-wrapper .erl-actions input.erl-remove:hover {
+
+#layout-builder-modal .erl-layout.erl-item.form-wrapper .erl-actions input.erl-edit:hover,#layout-builder-modal .erl-layout.erl-item.form-wrapper .erl-actions input.erl-remove:hover,.media-library-widget-modal .erl-layout.erl-item.form-wrapper .erl-actions input.erl-edit:hover,.media-library-widget-modal .erl-layout.erl-item.form-wrapper .erl-actions input.erl-remove:hover,form.media-form .erl-layout.erl-item.form-wrapper .erl-actions input.erl-edit:hover,form.media-form .erl-layout.erl-item.form-wrapper .erl-actions input.erl-remove:hover {
   opacity: 1;
 }
+

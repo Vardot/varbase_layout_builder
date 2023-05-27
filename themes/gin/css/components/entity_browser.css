@@ -1,19 +1,15 @@
-#layout-builder-modal .entities-list:not(.entities-list--single-item),
-.media-library-widget-modal .entities-list:not(.entities-list--single-item),
-form.media-form .entities-list:not(.entities-list--single-item) {
+#layout-builder-modal .entities-list:not(.entities-list--single-item),.media-library-widget-modal .entities-list:not(.entities-list--single-item),form.media-form .entities-list:not(.entities-list--single-item) {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   grid-gap: var(--gin-spacing-m);
   margin-bottom: var(--gin-spacing-m);
 }
-#layout-builder-modal .entities-list.entities-list--single-item .item-container,
-.media-library-widget-modal .entities-list.entities-list--single-item .item-container,
-form.media-form .entities-list.entities-list--single-item .item-container {
+
+#layout-builder-modal .entities-list.entities-list--single-item .item-container,.media-library-widget-modal .entities-list.entities-list--single-item .item-container,form.media-form .entities-list.entities-list--single-item .item-container {
   max-width: 180px;
 }
-#layout-builder-modal .entities-list .item-container,
-.media-library-widget-modal .entities-list .item-container,
-form.media-form .entities-list .item-container {
+
+#layout-builder-modal .entities-list .item-container,.media-library-widget-modal .entities-list .item-container,form.media-form .entities-list .item-container {
   word-break: break-all;
   position: relative;
   margin: 0;
@@ -21,51 +17,40 @@ form.media-form .entities-list .item-container {
   border: 1px solid var(--gin-border-color);
   border-radius: var(--gin-border-l);
 }
-#layout-builder-modal .entities-list .item-container .field__item,
-.media-library-widget-modal .entities-list .item-container .field__item,
-form.media-form .entities-list .item-container .field__item {
+
+#layout-builder-modal .entities-list .item-container .field__item,.media-library-widget-modal .entities-list .item-container .field__item,form.media-form .entities-list .item-container .field__item {
   border: 3px solid transparent;
   border-radius: var(--gin-border-xl);
   overflow: hidden;
 }
-#layout-builder-modal .entities-list .item-container .field__item:hover, #layout-builder-modal .entities-list .item-container .field__item:focus,
-.media-library-widget-modal .entities-list .item-container .field__item:hover,
-.media-library-widget-modal .entities-list .item-container .field__item:focus,
-form.media-form .entities-list .item-container .field__item:hover,
-form.media-form .entities-list .item-container .field__item:focus {
+
+#layout-builder-modal .entities-list .item-container .field__item:hover,#layout-builder-modal .entities-list .item-container .field__item:focus,.media-library-widget-modal .entities-list .item-container .field__item:hover,.media-library-widget-modal .entities-list .item-container .field__item:focus,form.media-form .entities-list .item-container .field__item:hover,form.media-form .entities-list .item-container .field__item:focus {
   border-color: var(--gin-color-primary) !important;
   cursor: pointer;
 }
-#layout-builder-modal [dir=ltr] .entities-list .item-container.label,
-.media-library-widget-modal [dir=ltr] .entities-list .item-container.label,
-form.media-form [dir=ltr] .entities-list .item-container.label {
+
+#layout-builder-modal [dir=ltr] .entities-list .item-container.label,.media-library-widget-modal [dir=ltr] .entities-list .item-container.label,form.media-form [dir=ltr] .entities-list .item-container.label {
   padding: var(--gin-spacing-s) var(--gin-spacing-xxl) var(--gin-spacing-s) var(--gin-spacing-s);
 }
-#layout-builder-modal [dir=rtl] .entities-list .item-container.label,
-.media-library-widget-modal [dir=rtl] .entities-list .item-container.label,
-form.media-form [dir=rtl] .entities-list .item-container.label {
+
+#layout-builder-modal [dir=rtl] .entities-list .item-container.label,.media-library-widget-modal [dir=rtl] .entities-list .item-container.label,form.media-form [dir=rtl] .entities-list .item-container.label {
   padding: var(--gin-spacing-s) var(--gin-spacing-s) var(--gin-spacing-s) var(--gin-spacing-xxl);
 }
-#layout-builder-modal .entities-list .item-container img,
-.media-library-widget-modal .entities-list .item-container img,
-form.media-form .entities-list .item-container img {
+
+#layout-builder-modal .entities-list .item-container img,.media-library-widget-modal .entities-list .item-container img,form.media-form .entities-list .item-container img {
   vertical-align: middle;
 }
-#layout-builder-modal .entities-list .item-container > .entity-browser-remove-selected-entity,
-#layout-builder-modal .entities-list .item-container > .remove-button,
-.media-library-widget-modal .entities-list .item-container > .entity-browser-remove-selected-entity,
-.media-library-widget-modal .entities-list .item-container > .remove-button,
-form.media-form .entities-list .item-container > .entity-browser-remove-selected-entity,
-form.media-form .entities-list .item-container > .remove-button {
+
+#layout-builder-modal .entities-list .item-container>.entity-browser-remove-selected-entity,#layout-builder-modal .entities-list .item-container>.remove-button,.media-library-widget-modal .entities-list .item-container>.entity-browser-remove-selected-entity,.media-library-widget-modal .entities-list .item-container>.remove-button,form.media-form .entities-list .item-container>.entity-browser-remove-selected-entity,form.media-form .entities-list .item-container>.remove-button {
   all: unset;
   background-color: white;
   background-image: url("../../media/sprite.svg#trash-view");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 15px;
+  background-size: 15px 15px;
   border-radius: 50%;
   border-color: transparent !important;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
   color: transparent;
   width: 29px;
   height: 29px;
@@ -73,53 +58,32 @@ form.media-form .entities-list .item-container > .remove-button {
   position: absolute;
   top: 0;
 }
-#layout-builder-modal [dir=ltr] .entities-list .item-container > .entity-browser-remove-selected-entity,
-#layout-builder-modal [dir=ltr] .entities-list .item-container > .remove-button,
-.media-library-widget-modal [dir=ltr] .entities-list .item-container > .entity-browser-remove-selected-entity,
-.media-library-widget-modal [dir=ltr] .entities-list .item-container > .remove-button,
-form.media-form [dir=ltr] .entities-list .item-container > .entity-browser-remove-selected-entity,
-form.media-form [dir=ltr] .entities-list .item-container > .remove-button {
+
+#layout-builder-modal [dir=ltr] .entities-list .item-container>.entity-browser-remove-selected-entity,#layout-builder-modal [dir=ltr] .entities-list .item-container>.remove-button,.media-library-widget-modal [dir=ltr] .entities-list .item-container>.entity-browser-remove-selected-entity,.media-library-widget-modal [dir=ltr] .entities-list .item-container>.remove-button,form.media-form [dir=ltr] .entities-list .item-container>.entity-browser-remove-selected-entity,form.media-form [dir=ltr] .entities-list .item-container>.remove-button {
   right: 0;
 }
-#layout-builder-modal [dir=rtl] .entities-list .item-container > .entity-browser-remove-selected-entity,
-#layout-builder-modal [dir=rtl] .entities-list .item-container > .remove-button,
-.media-library-widget-modal [dir=rtl] .entities-list .item-container > .entity-browser-remove-selected-entity,
-.media-library-widget-modal [dir=rtl] .entities-list .item-container > .remove-button,
-form.media-form [dir=rtl] .entities-list .item-container > .entity-browser-remove-selected-entity,
-form.media-form [dir=rtl] .entities-list .item-container > .remove-button {
+
+#layout-builder-modal [dir=rtl] .entities-list .item-container>.entity-browser-remove-selected-entity,#layout-builder-modal [dir=rtl] .entities-list .item-container>.remove-button,.media-library-widget-modal [dir=rtl] .entities-list .item-container>.entity-browser-remove-selected-entity,.media-library-widget-modal [dir=rtl] .entities-list .item-container>.remove-button,form.media-form [dir=rtl] .entities-list .item-container>.entity-browser-remove-selected-entity,form.media-form [dir=rtl] .entities-list .item-container>.remove-button {
   left: 0;
 }
-#layout-builder-modal .entities-list .item-container > .entity-browser-remove-selected-entity:hover, #layout-builder-modal .entities-list .item-container > .entity-browser-remove-selected-entity:focus,
-#layout-builder-modal .entities-list .item-container > .remove-button:hover,
-#layout-builder-modal .entities-list .item-container > .remove-button:focus,
-.media-library-widget-modal .entities-list .item-container > .entity-browser-remove-selected-entity:hover,
-.media-library-widget-modal .entities-list .item-container > .entity-browser-remove-selected-entity:focus,
-.media-library-widget-modal .entities-list .item-container > .remove-button:hover,
-.media-library-widget-modal .entities-list .item-container > .remove-button:focus,
-form.media-form .entities-list .item-container > .entity-browser-remove-selected-entity:hover,
-form.media-form .entities-list .item-container > .entity-browser-remove-selected-entity:focus,
-form.media-form .entities-list .item-container > .remove-button:hover,
-form.media-form .entities-list .item-container > .remove-button:focus {
+
+#layout-builder-modal .entities-list .item-container>.entity-browser-remove-selected-entity:hover,#layout-builder-modal .entities-list .item-container>.entity-browser-remove-selected-entity:focus,#layout-builder-modal .entities-list .item-container>.remove-button:hover,#layout-builder-modal .entities-list .item-container>.remove-button:focus,.media-library-widget-modal .entities-list .item-container>.entity-browser-remove-selected-entity:hover,.media-library-widget-modal .entities-list .item-container>.entity-browser-remove-selected-entity:focus,.media-library-widget-modal .entities-list .item-container>.remove-button:hover,.media-library-widget-modal .entities-list .item-container>.remove-button:focus,form.media-form .entities-list .item-container>.entity-browser-remove-selected-entity:hover,form.media-form .entities-list .item-container>.entity-browser-remove-selected-entity:focus,form.media-form .entities-list .item-container>.remove-button:hover,form.media-form .entities-list .item-container>.remove-button:focus {
   background-color: white;
   border-color: var(--gin-color-primary) !important;
   color: transparent;
   cursor: pointer;
 }
-#layout-builder-modal .entities-list .item-container > .replace-button,
-#layout-builder-modal .entities-list .item-container > .edit-button,
-.media-library-widget-modal .entities-list .item-container > .replace-button,
-.media-library-widget-modal .entities-list .item-container > .edit-button,
-form.media-form .entities-list .item-container > .replace-button,
-form.media-form .entities-list .item-container > .edit-button {
+
+#layout-builder-modal .entities-list .item-container>.replace-button,#layout-builder-modal .entities-list .item-container>.edit-button,.media-library-widget-modal .entities-list .item-container>.replace-button,.media-library-widget-modal .entities-list .item-container>.edit-button,form.media-form .entities-list .item-container>.replace-button,form.media-form .entities-list .item-container>.edit-button {
   all: unset;
   background-color: white;
   background-image: url("../../media/sprite.svg#edit-view");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 15px;
+  background-size: 15px 15px;
   border-radius: 50%;
   border-color: transparent !important;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .15);
   color: transparent;
   width: 29px;
   height: 29px;
@@ -127,178 +91,127 @@ form.media-form .entities-list .item-container > .edit-button {
   position: absolute;
   top: 0;
 }
-#layout-builder-modal [dir=ltr] .entities-list .item-container > .replace-button,
-#layout-builder-modal [dir=ltr] .entities-list .item-container > .edit-button,
-.media-library-widget-modal [dir=ltr] .entities-list .item-container > .replace-button,
-.media-library-widget-modal [dir=ltr] .entities-list .item-container > .edit-button,
-form.media-form [dir=ltr] .entities-list .item-container > .replace-button,
-form.media-form [dir=ltr] .entities-list .item-container > .edit-button {
+
+#layout-builder-modal [dir=ltr] .entities-list .item-container>.replace-button,#layout-builder-modal [dir=ltr] .entities-list .item-container>.edit-button,.media-library-widget-modal [dir=ltr] .entities-list .item-container>.replace-button,.media-library-widget-modal [dir=ltr] .entities-list .item-container>.edit-button,form.media-form [dir=ltr] .entities-list .item-container>.replace-button,form.media-form [dir=ltr] .entities-list .item-container>.edit-button {
   right: 2.6rem;
 }
-#layout-builder-modal [dir=rtl] .entities-list .item-container > .replace-button,
-#layout-builder-modal [dir=rtl] .entities-list .item-container > .edit-button,
-.media-library-widget-modal [dir=rtl] .entities-list .item-container > .replace-button,
-.media-library-widget-modal [dir=rtl] .entities-list .item-container > .edit-button,
-form.media-form [dir=rtl] .entities-list .item-container > .replace-button,
-form.media-form [dir=rtl] .entities-list .item-container > .edit-button {
+
+#layout-builder-modal [dir=rtl] .entities-list .item-container>.replace-button,#layout-builder-modal [dir=rtl] .entities-list .item-container>.edit-button,.media-library-widget-modal [dir=rtl] .entities-list .item-container>.replace-button,.media-library-widget-modal [dir=rtl] .entities-list .item-container>.edit-button,form.media-form [dir=rtl] .entities-list .item-container>.replace-button,form.media-form [dir=rtl] .entities-list .item-container>.edit-button {
   left: 2.6rem;
 }
-#layout-builder-modal .entities-list .item-container > .replace-button:hover, #layout-builder-modal .entities-list .item-container > .replace-button:focus,
-#layout-builder-modal .entities-list .item-container > .edit-button:hover,
-#layout-builder-modal .entities-list .item-container > .edit-button:focus,
-.media-library-widget-modal .entities-list .item-container > .replace-button:hover,
-.media-library-widget-modal .entities-list .item-container > .replace-button:focus,
-.media-library-widget-modal .entities-list .item-container > .edit-button:hover,
-.media-library-widget-modal .entities-list .item-container > .edit-button:focus,
-form.media-form .entities-list .item-container > .replace-button:hover,
-form.media-form .entities-list .item-container > .replace-button:focus,
-form.media-form .entities-list .item-container > .edit-button:hover,
-form.media-form .entities-list .item-container > .edit-button:focus {
+
+#layout-builder-modal .entities-list .item-container>.replace-button:hover,#layout-builder-modal .entities-list .item-container>.replace-button:focus,#layout-builder-modal .entities-list .item-container>.edit-button:hover,#layout-builder-modal .entities-list .item-container>.edit-button:focus,.media-library-widget-modal .entities-list .item-container>.replace-button:hover,.media-library-widget-modal .entities-list .item-container>.replace-button:focus,.media-library-widget-modal .entities-list .item-container>.edit-button:hover,.media-library-widget-modal .entities-list .item-container>.edit-button:focus,form.media-form .entities-list .item-container>.replace-button:hover,form.media-form .entities-list .item-container>.replace-button:focus,form.media-form .entities-list .item-container>.edit-button:hover,form.media-form .entities-list .item-container>.edit-button:focus {
   background-color: white;
   border-color: var(--gin-color-primary) !important;
   color: transparent;
   cursor: pointer;
 }
-#layout-builder-modal table.entities-list:not(.entities-list--single-item),
-.media-library-widget-modal table.entities-list:not(.entities-list--single-item),
-form.media-form table.entities-list:not(.entities-list--single-item) {
+
+#layout-builder-modal table.entities-list:not(.entities-list--single-item),.media-library-widget-modal table.entities-list:not(.entities-list--single-item),form.media-form table.entities-list:not(.entities-list--single-item) {
   display: block;
 }
-#layout-builder-modal table.entities-list td,
-.media-library-widget-modal table.entities-list td,
-form.media-form table.entities-list td {
+
+#layout-builder-modal table.entities-list td,.media-library-widget-modal table.entities-list td,form.media-form table.entities-list td {
   height: auto;
   padding: 10px 12px;
 }
-#layout-builder-modal .gin-entity-browser .entity-browser-form,
-.media-library-widget-modal .gin-entity-browser .entity-browser-form,
-form.media-form .gin-entity-browser .entity-browser-form {
+
+#layout-builder-modal .gin-entity-browser .entity-browser-form,.media-library-widget-modal .gin-entity-browser .entity-browser-form,form.media-form .gin-entity-browser .entity-browser-form {
   padding: 0;
   border: 0 none;
   box-shadow: none;
 }
-#layout-builder-modal .gin-entity-browser .entity-browser-form .page-wrapper > .layout-container,
-.media-library-widget-modal .gin-entity-browser .entity-browser-form .page-wrapper > .layout-container,
-form.media-form .gin-entity-browser .entity-browser-form .page-wrapper > .layout-container {
+
+#layout-builder-modal .gin-entity-browser .entity-browser-form .page-wrapper>.layout-container,.media-library-widget-modal .gin-entity-browser .entity-browser-form .page-wrapper>.layout-container,form.media-form .gin-entity-browser .entity-browser-form .page-wrapper>.layout-container {
   margin: 0;
 }
-#layout-builder-modal .gin-entity-browser .entity-browser-form .views-view-grid .views-col,
-.media-library-widget-modal .gin-entity-browser .entity-browser-form .views-view-grid .views-col,
-form.media-form .gin-entity-browser .entity-browser-form .views-view-grid .views-col {
+
+#layout-builder-modal .gin-entity-browser .entity-browser-form .views-view-grid .views-col,.media-library-widget-modal .gin-entity-browser .entity-browser-form .views-view-grid .views-col,form.media-form .gin-entity-browser .entity-browser-form .views-view-grid .views-col {
   position: relative;
 }
-#layout-builder-modal .gin-entity-browser .entity-browser-form .view-content,
-.media-library-widget-modal .gin-entity-browser .entity-browser-form .view-content,
-form.media-form .gin-entity-browser .entity-browser-form .view-content {
+
+#layout-builder-modal .gin-entity-browser .entity-browser-form .view-content,.media-library-widget-modal .gin-entity-browser .entity-browser-form .view-content,form.media-form .gin-entity-browser .entity-browser-form .view-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   grid-gap: var(--gin-spacing-m);
   margin-bottom: var(--gin-spacing-m);
 }
-#layout-builder-modal .gin-entity-browser .entity-browser-form .views-row,
-.media-library-widget-modal .gin-entity-browser .entity-browser-form .views-row,
-form.media-form .gin-entity-browser .entity-browser-form .views-row {
+
+#layout-builder-modal .gin-entity-browser .entity-browser-form .views-row,.media-library-widget-modal .gin-entity-browser .entity-browser-form .views-row,form.media-form .gin-entity-browser .entity-browser-form .views-row {
   border: 1px solid var(--gin-border-color);
   border-radius: calc(var(--gin-border-xl) + 2px);
   position: relative;
 }
-#layout-builder-modal .gin-entity-browser .entity-browser-form .views-row .views-field-thumbnail__target-id:hover, #layout-builder-modal .gin-entity-browser .entity-browser-form .views-row .views-field-thumbnail__target-id:focus,
-.media-library-widget-modal .gin-entity-browser .entity-browser-form .views-row .views-field-thumbnail__target-id:hover,
-.media-library-widget-modal .gin-entity-browser .entity-browser-form .views-row .views-field-thumbnail__target-id:focus,
-form.media-form .gin-entity-browser .entity-browser-form .views-row .views-field-thumbnail__target-id:hover,
-form.media-form .gin-entity-browser .entity-browser-form .views-row .views-field-thumbnail__target-id:focus {
+
+#layout-builder-modal .gin-entity-browser .entity-browser-form .views-row .views-field-thumbnail__target-id:hover,#layout-builder-modal .gin-entity-browser .entity-browser-form .views-row .views-field-thumbnail__target-id:focus,.media-library-widget-modal .gin-entity-browser .entity-browser-form .views-row .views-field-thumbnail__target-id:hover,.media-library-widget-modal .gin-entity-browser .entity-browser-form .views-row .views-field-thumbnail__target-id:focus,form.media-form .gin-entity-browser .entity-browser-form .views-row .views-field-thumbnail__target-id:hover,form.media-form .gin-entity-browser .entity-browser-form .views-row .views-field-thumbnail__target-id:focus {
   cursor: pointer;
   border-color: var(--gin-color-primary);
 }
-#layout-builder-modal .gin-entity-browser .entity-browser-form .views-row .views-field-name,
-.media-library-widget-modal .gin-entity-browser .entity-browser-form .views-row .views-field-name,
-form.media-form .gin-entity-browser .entity-browser-form .views-row .views-field-name {
+
+#layout-builder-modal .gin-entity-browser .entity-browser-form .views-row .views-field-name,.media-library-widget-modal .gin-entity-browser .entity-browser-form .views-row .views-field-name,form.media-form .gin-entity-browser .entity-browser-form .views-row .views-field-name {
   padding: var(--gin-spacing-xs);
 }
-#layout-builder-modal .gin-entity-browser .entity-browser-form .views-row .views-field-entity-browser-select,
-.media-library-widget-modal .gin-entity-browser .entity-browser-form .views-row .views-field-entity-browser-select,
-form.media-form .gin-entity-browser .entity-browser-form .views-row .views-field-entity-browser-select {
+
+#layout-builder-modal .gin-entity-browser .entity-browser-form .views-row .views-field-entity-browser-select,.media-library-widget-modal .gin-entity-browser .entity-browser-form .views-row .views-field-entity-browser-select,form.media-form .gin-entity-browser .entity-browser-form .views-row .views-field-entity-browser-select {
   position: absolute;
   top: 0;
   margin: var(--gin-spacing-s);
 }
-#layout-builder-modal [dir=ltr] .gin-entity-browser .entity-browser-form .views-row .views-field-entity-browser-select,
-.media-library-widget-modal [dir=ltr] .gin-entity-browser .entity-browser-form .views-row .views-field-entity-browser-select,
-form.media-form [dir=ltr] .gin-entity-browser .entity-browser-form .views-row .views-field-entity-browser-select {
+
+#layout-builder-modal [dir=ltr] .gin-entity-browser .entity-browser-form .views-row .views-field-entity-browser-select,.media-library-widget-modal [dir=ltr] .gin-entity-browser .entity-browser-form .views-row .views-field-entity-browser-select,form.media-form [dir=ltr] .gin-entity-browser .entity-browser-form .views-row .views-field-entity-browser-select {
   left: 0;
 }
-#layout-builder-modal [dir=rtl] .gin-entity-browser .entity-browser-form .views-row .views-field-entity-browser-select,
-.media-library-widget-modal [dir=rtl] .gin-entity-browser .entity-browser-form .views-row .views-field-entity-browser-select,
-form.media-form [dir=rtl] .gin-entity-browser .entity-browser-form .views-row .views-field-entity-browser-select {
+
+#layout-builder-modal [dir=rtl] .gin-entity-browser .entity-browser-form .views-row .views-field-entity-browser-select,.media-library-widget-modal [dir=rtl] .gin-entity-browser .entity-browser-form .views-row .views-field-entity-browser-select,form.media-form [dir=rtl] .gin-entity-browser .entity-browser-form .views-row .views-field-entity-browser-select {
   right: 0;
 }
-#layout-builder-modal .gin-entity-browser .entity-browser-form .views-row .views-field-entity-browser-select .form-item,
-.media-library-widget-modal .gin-entity-browser .entity-browser-form .views-row .views-field-entity-browser-select .form-item,
-form.media-form .gin-entity-browser .entity-browser-form .views-row .views-field-entity-browser-select .form-item {
+
+#layout-builder-modal .gin-entity-browser .entity-browser-form .views-row .views-field-entity-browser-select .form-item,.media-library-widget-modal .gin-entity-browser .entity-browser-form .views-row .views-field-entity-browser-select .form-item,form.media-form .gin-entity-browser .entity-browser-form .views-row .views-field-entity-browser-select .form-item {
   margin: 0;
 }
-#layout-builder-modal .gin-entity-browser .entity-browser-form .media-info,
-.media-library-widget-modal .gin-entity-browser .entity-browser-form .media-info,
-form.media-form .gin-entity-browser .entity-browser-form .media-info {
+
+#layout-builder-modal .gin-entity-browser .entity-browser-form .media-info,.media-library-widget-modal .gin-entity-browser .entity-browser-form .media-info,form.media-form .gin-entity-browser .entity-browser-form .media-info {
   word-wrap: break-word;
   font-size: var(--gin-font-size-s);
 }
-#layout-builder-modal .gin-entity-browser .entity-browser-form .views-field-thumbnail__target-id,
-.media-library-widget-modal .gin-entity-browser .entity-browser-form .views-field-thumbnail__target-id,
-form.media-form .gin-entity-browser .entity-browser-form .views-field-thumbnail__target-id {
+
+#layout-builder-modal .gin-entity-browser .entity-browser-form .views-field-thumbnail__target-id,.media-library-widget-modal .gin-entity-browser .entity-browser-form .views-field-thumbnail__target-id,form.media-form .gin-entity-browser .entity-browser-form .views-field-thumbnail__target-id {
   border: 3px solid transparent;
   border-radius: var(--gin-border-xl);
   overflow: hidden;
 }
-#layout-builder-modal .gin-entity-browser .entity-browser-form .views-field-thumbnail__target-id:hover, #layout-builder-modal .gin-entity-browser .entity-browser-form .views-field-thumbnail__target-id:focus,
-.media-library-widget-modal .gin-entity-browser .entity-browser-form .views-field-thumbnail__target-id:hover,
-.media-library-widget-modal .gin-entity-browser .entity-browser-form .views-field-thumbnail__target-id:focus,
-form.media-form .gin-entity-browser .entity-browser-form .views-field-thumbnail__target-id:hover,
-form.media-form .gin-entity-browser .entity-browser-form .views-field-thumbnail__target-id:focus {
+
+#layout-builder-modal .gin-entity-browser .entity-browser-form .views-field-thumbnail__target-id:hover,#layout-builder-modal .gin-entity-browser .entity-browser-form .views-field-thumbnail__target-id:focus,.media-library-widget-modal .gin-entity-browser .entity-browser-form .views-field-thumbnail__target-id:hover,.media-library-widget-modal .gin-entity-browser .entity-browser-form .views-field-thumbnail__target-id:focus,form.media-form .gin-entity-browser .entity-browser-form .views-field-thumbnail__target-id:hover,form.media-form .gin-entity-browser .entity-browser-form .views-field-thumbnail__target-id:focus {
   border-color: var(--gin-color-primary);
 }
-#layout-builder-modal .gin-entity-browser .entity-browser-form .entities-list,
-.media-library-widget-modal .gin-entity-browser .entity-browser-form .entities-list,
-form.media-form .gin-entity-browser .entity-browser-form .entities-list {
+
+#layout-builder-modal .gin-entity-browser .entity-browser-form .entities-list,.media-library-widget-modal .gin-entity-browser .entity-browser-form .entities-list,form.media-form .gin-entity-browser .entity-browser-form .entities-list {
   border-top: var(--gin-border-xs) solid var(--gin-border-color-form-element);
   padding-top: var(--gin-spacing-m);
 }
-#layout-builder-modal .gin-entity-browser .views-exposed-form,
-.media-library-widget-modal .gin-entity-browser .views-exposed-form,
-form.media-form .gin-entity-browser .views-exposed-form {
+
+#layout-builder-modal .gin-entity-browser .views-exposed-form,.media-library-widget-modal .gin-entity-browser .views-exposed-form,form.media-form .gin-entity-browser .views-exposed-form {
   box-shadow: none;
 }
-#layout-builder-modal .field--widget-entity-browser-entity-reference .entities-list.sortable .item-container:hover, #layout-builder-modal .field--widget-entity-browser-entity-reference .entities-list.sortable .item-container:focus,
-#layout-builder-modal .field--widget-entity-browser-entity-reference .entities-list.sortable .field__item:hover,
-#layout-builder-modal .field--widget-entity-browser-entity-reference .entities-list.sortable .field__item:focus,
-.media-library-widget-modal .field--widget-entity-browser-entity-reference .entities-list.sortable .item-container:hover,
-.media-library-widget-modal .field--widget-entity-browser-entity-reference .entities-list.sortable .item-container:focus,
-.media-library-widget-modal .field--widget-entity-browser-entity-reference .entities-list.sortable .field__item:hover,
-.media-library-widget-modal .field--widget-entity-browser-entity-reference .entities-list.sortable .field__item:focus,
-form.media-form .field--widget-entity-browser-entity-reference .entities-list.sortable .item-container:hover,
-form.media-form .field--widget-entity-browser-entity-reference .entities-list.sortable .item-container:focus,
-form.media-form .field--widget-entity-browser-entity-reference .entities-list.sortable .field__item:hover,
-form.media-form .field--widget-entity-browser-entity-reference .entities-list.sortable .field__item:focus {
+
+#layout-builder-modal .field--widget-entity-browser-entity-reference .entities-list.sortable .item-container:hover,#layout-builder-modal .field--widget-entity-browser-entity-reference .entities-list.sortable .item-container:focus,#layout-builder-modal .field--widget-entity-browser-entity-reference .entities-list.sortable .field__item:hover,#layout-builder-modal .field--widget-entity-browser-entity-reference .entities-list.sortable .field__item:focus,.media-library-widget-modal .field--widget-entity-browser-entity-reference .entities-list.sortable .item-container:hover,.media-library-widget-modal .field--widget-entity-browser-entity-reference .entities-list.sortable .item-container:focus,.media-library-widget-modal .field--widget-entity-browser-entity-reference .entities-list.sortable .field__item:hover,.media-library-widget-modal .field--widget-entity-browser-entity-reference .entities-list.sortable .field__item:focus,form.media-form .field--widget-entity-browser-entity-reference .entities-list.sortable .item-container:hover,form.media-form .field--widget-entity-browser-entity-reference .entities-list.sortable .item-container:focus,form.media-form .field--widget-entity-browser-entity-reference .entities-list.sortable .field__item:hover,form.media-form .field--widget-entity-browser-entity-reference .entities-list.sortable .field__item:focus {
   cursor: move;
   opacity: 1;
 }
-#layout-builder-modal .eb-tabs,
-.media-library-widget-modal .eb-tabs,
-form.media-form .eb-tabs {
-  margin-bottom: 0.75em;
+
+#layout-builder-modal .eb-tabs,.media-library-widget-modal .eb-tabs,form.media-form .eb-tabs {
+  margin-bottom: .75em;
 }
-#layout-builder-modal [dir=ltr] .eb-tabs,
-.media-library-widget-modal [dir=ltr] .eb-tabs,
-form.media-form [dir=ltr] .eb-tabs {
+
+#layout-builder-modal [dir=ltr] .eb-tabs,.media-library-widget-modal [dir=ltr] .eb-tabs,form.media-form [dir=ltr] .eb-tabs {
   margin-left: var(--gin-spacing-xxs);
 }
-#layout-builder-modal [dir=rtl] .eb-tabs,
-.media-library-widget-modal [dir=rtl] .eb-tabs,
-form.media-form [dir=rtl] .eb-tabs {
+
+#layout-builder-modal [dir=rtl] .eb-tabs,.media-library-widget-modal [dir=rtl] .eb-tabs,form.media-form [dir=rtl] .eb-tabs {
   margin-right: var(--gin-spacing-xxs);
 }
-#layout-builder-modal .eb-tabs ul,
-.media-library-widget-modal .eb-tabs ul,
-form.media-form .eb-tabs ul {
+
+#layout-builder-modal .eb-tabs ul,.media-library-widget-modal .eb-tabs ul,form.media-form .eb-tabs ul {
   border-bottom: none;
 }
+

@@ -5,40 +5,44 @@ body .layout-builder__message--overrides .messages {
 #drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label,
 #layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label,
 .dialog-off-canvas-main-canvas .field-text-alignment .fieldset-wrapper > div > div input + label {
-  text-indent: -999em;
   font-size: 0;
+  text-indent: -999em;
 }
+
 #drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon,
 #layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon,
 .dialog-off-canvas-main-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon {
   margin-bottom: 0;
 }
-#drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=left],
-#drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=start],
+
+#drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=left], #drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=start],
 #layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=left],
 #layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=start],
 .dialog-off-canvas-main-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=left],
 .dialog-off-canvas-main-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=start] {
-  background-image: url("../../images/plugins/text-alignment/text-start.svg");
+  background-image: url(../../images/plugins/text-alignment/text-start.svg);
 }
+
 #drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=center],
 #layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=center],
 .dialog-off-canvas-main-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=center] {
-  background-image: url("../../images/plugins/text-alignment/text-center.svg");
+  background-image: url(../../images/plugins/text-alignment/text-center.svg);
 }
-#drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=right],
-#drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=end],
+
+#drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=right], #drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=end],
 #layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=right],
 #layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=end],
 .dialog-off-canvas-main-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=right],
 .dialog-off-canvas-main-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=end] {
-  background-image: url("../../images/plugins/text-alignment/text-end.svg");
+  background-image: url(../../images/plugins/text-alignment/text-end.svg);
 }
+
 #drupal-off-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=justify],
 #layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=justify],
 .dialog-off-canvas-main-canvas .field-text-alignment .fieldset-wrapper > div > div input + label .input-icon[class*=justify] {
-  background-image: url("../../images/plugins/text-alignment/text-justify.svg");
+  background-image: url(../../images/plugins/text-alignment/text-justify.svg);
 }
+
 #drupal-off-canvas button.button--primary,
 #drupal-off-canvas input[type=submit].button--primary,
 #layout-builder-modal button.button--primary,
@@ -47,21 +51,25 @@ body .layout-builder__message--overrides .messages {
 .dialog-off-canvas-main-canvas input[type=submit].button--primary {
   text-align: center;
 }
+
 #drupal-off-canvas .fieldgroup.form-composite.form-wrapper,
 #layout-builder-modal .fieldgroup.form-composite.form-wrapper,
 .dialog-off-canvas-main-canvas .fieldgroup.form-composite.form-wrapper {
   width: 100%;
 }
+
 #drupal-off-canvas .fieldgroup.blb_container_type .fieldset-wrapper > div > div .input-icon:after,
 #layout-builder-modal .fieldgroup.blb_container_type .fieldset-wrapper > div > div .input-icon:after,
 .dialog-off-canvas-main-canvas .fieldgroup.blb_container_type .fieldset-wrapper > div > div .input-icon:after {
   cursor: pointer;
 }
+
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div,
 .dialog-off-canvas-main-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div {
   display: flex;
 }
+
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div,
 .dialog-off-canvas-main-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div {
@@ -71,125 +79,142 @@ body .layout-builder__message--overrides .messages {
   margin: 0;
   padding: 0;
 }
+
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input,
 .dialog-off-canvas-main-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input {
   position: absolute;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
   width: 1px;
   height: 1px;
-  margin: -1px;
   padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
 }
+
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input + label,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input + label,
 .dialog-off-canvas-main-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input + label {
+  transition: all .3s ease-in-out;
+  height: 70px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  width: calc(100% - 4px);
-  height: 70px;
-  margin: 2px;
-  padding: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  text-align: center;
-  border-radius: 0;
   background-color: #292c32;
   font-size: 10px;
   font-weight: normal;
+  padding: 8px;
+  margin: 2px;
+  width: calc(100% - 4px);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0;
 }
+
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input + label:hover,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input + label:hover,
 .dialog-off-canvas-main-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input + label:hover {
   background-color: #4b515c;
 }
+
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input + label:hover:after,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input + label:hover:after,
 .dialog-off-canvas-main-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input + label:hover:after {
   border-color: #2f3138;
 }
+
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input:checked + label,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input:checked + label,
 .dialog-off-canvas-main-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input:checked + label {
-  color: #41a5ff;
   background-color: #5c606b;
   font-weight: bold;
+  color: #41a5ff;
 }
+
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input:checked + label svg *,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input:checked + label svg *,
 .dialog-off-canvas-main-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input:checked + label svg * {
   color: inherit;
 }
+
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input:checked + label:after,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input:checked + label:after,
 .dialog-off-canvas-main-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input:checked + label:after {
   border-color: #2f3138;
 }
+
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input:checked + label .input-icon:after,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input:checked + label .input-icon:after,
 .dialog-off-canvas-main-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div input:checked + label .input-icon:after {
-  background-image: url("../../images/layout/container-active.svg");
+  background-image: url(../../images/layout/container-active.svg);
 }
+
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon,
 .dialog-off-canvas-main-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon {
   width: 50px !important;
   height: 26px;
   margin-bottom: 10px;
-  background: url("../../images/layout/stripe-sm.svg") center top repeat;
+  background: url(../../images/layout/stripe-sm.svg) center top repeat;
 }
+
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon:after,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon:after,
 .dialog-off-canvas-main-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon:after {
+  content: "";
   display: block;
+  margin: 0 auto 1rem auto;
   width: 100%;
   height: 100%;
-  margin: 0 auto 1rem auto;
-  content: "";
-  cursor: pointer;
-  background-color: #292c32;
-  background-image: url("../../images/layout/container.svg");
-  background-repeat: no-repeat;
+  background-image: url(../../images/layout/container.svg);
   background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #292c32;
   background-size: 100% 26px;
+  cursor: pointer;
 }
+
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon._none:after,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon._none:after,
 .dialog-off-canvas-main-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon._none:after {
-  background-image: url("../../images/layout/none.svg");
+  background-image: url(../../images/layout/none.svg);
   background-size: 50% 100%;
 }
+
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon.wide:after,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon.wide:after,
 .dialog-off-canvas-main-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon.wide:after {
   width: 83.33333%;
 }
+
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon.medium:after,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon.medium:after,
 .dialog-off-canvas-main-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon.medium:after {
   width: 66.66667%;
 }
+
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon.narrow:after,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon.narrow:after,
 .dialog-off-canvas-main-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon.narrow:after {
   width: 50%;
 }
+
 #drupal-off-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon.tiny:after,
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon.tiny:after,
 .dialog-off-canvas-main-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon.tiny:after {
   width: 33.33333%;
 }
+
 #drupal-off-canvas fieldset.form-type-search,
 #layout-builder-modal fieldset.form-type-search,
 .dialog-off-canvas-main-canvas fieldset.form-type-search {
   width: 100% !important;
 }
+
 #drupal-off-canvas #bs_nav-tabs,
 #layout-builder-modal #bs_nav-tabs,
 .dialog-off-canvas-main-canvas #bs_nav-tabs {
@@ -214,112 +239,129 @@ body .layout-builder__message--overrides .messages {
 #drupal-off-canvas-wrapper {
   z-index: 502;
 }
+
 #drupal-off-canvas-wrapper .layout-selection {
   margin: 0;
   padding: 0;
   list-style: none;
 }
+
 #drupal-off-canvas-wrapper .layout-selection li {
   position: relative;
   border-bottom: 1px solid var(--off-canvas-border-color);
 }
+
 #drupal-off-canvas-wrapper .layout-selection li:last-child {
   padding-bottom: 0;
   border-bottom: none;
 }
+
 #drupal-off-canvas-wrapper .layout-selection a {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: 0.625rem;
+  gap: .625rem;
+  padding: .625rem;
   text-decoration: none;
+}
 
-  gap: 0.625rem;
+#drupal-off-canvas-wrapper .layout-selection a:hover, #drupal-off-canvas-wrapper .layout-selection a:focus, #drupal-off-canvas-wrapper .layout-selection a:active {
+  opacity: .7;
 }
-#drupal-off-canvas-wrapper .layout-selection a:hover,
-#drupal-off-canvas-wrapper .layout-selection a:focus,
-#drupal-off-canvas-wrapper .layout-selection a:active {
-  opacity: 0.7;
-}
+
 #drupal-off-canvas-wrapper .layout-icon__region {
   fill: var(--off-canvas-text-color);
   stroke: transparent;
 }
+
 #drupal-off-canvas-wrapper .inline-block-list li {
-  display: flow-root;
+  padding: 0 .5rem 1rem .5rem;
   width: 50%;
   height: 50%;
-  padding: 0 0.5rem 1rem 0.5rem;
+  display: flow-root;
 }
 
 #layout-builder-modal .form-item--editor-format .form-element--editor-format {
   width: auto;
-  min-height: 1.5rem;
-  padding: calc(0.15rem - 1px) calc(0.5rem - 1px);
-  padding-right: calc(1.5rem - 1px);
-  color: #222330;
-  border: 2px solid #727579;
   border-radius: inherit;
+  border: 2px solid #727579;
   background-color: #fff;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 9'%3E%3Cpath fill='none' stroke-width='1.5' d='M1 1L7 7L13 1' stroke='%23545560'/%3E%3C/svg%3E%0A");
   background-repeat: no-repeat;
   background-position: 100% 50%;
-  background-size: 1.75rem 0.4375rem;
-  font-size: 0.889rem;
+  min-height: 1.5rem;
+  padding: calc(.15rem - 1px) calc(.5rem - 1px);
+  padding-right: calc(1.5rem - 1px);
+  background-size: 1.75rem .4375rem;
+  font-size: .889rem;
   line-height: 1.2rem;
+  color: #222330;
 }
-#layout-builder-modal .form-item--editor-format .form-element--editor-format:hover #layout-builder-modal .form-item--editor-format .form-element--editor-format:active,
-#layout-builder-modal .form-item--editor-format .form-element--editor-format:focus {
+
+#layout-builder-modal .form-item--editor-format .form-element--editor-format:hover #layout-builder-modal .form-item--editor-format .form-element--editor-format:active, #layout-builder-modal .form-item--editor-format .form-element--editor-format:focus {
   background-color: #fff;
 }
+
 #layout-builder-modal .bs_input-boxes--box-model .fieldset-wrapper > div > div input ~ label,
 #layout-builder-modal .field-text-alignment .fieldset-wrapper > div > div input + label {
   height: 60px;
 }
+
 #layout-builder-modal .tabledrag-toggle-weight-wrapper {
   margin-top: 0;
 }
+
 #layout-builder-modal .tabledrag-cell,
 #layout-builder-modal .tabledrag-cell-content {
-  min-width: 1rem;
   max-width: 1rem;
+  min-width: 1rem;
 }
+
 #layout-builder-modal .draggable a.tabledrag-handle {
   overflow: visible;
 }
+
 #layout-builder-modal .tabledrag-handle::after {
   margin-left: 0;
 }
+
 #layout-builder-modal .ief-entity-table td {
   border: 0;
 }
+
 #layout-builder-modal fieldset.fieldset {
   background-color: #383a40;
 }
+
 #layout-builder-modal fieldset.fieldset .media-library-widget-empty-text,
 #layout-builder-modal fieldset.fieldset .fieldset__description,
 #layout-builder-modal fieldset.fieldset .form-item__description {
   color: #fff !important;
 }
+
 #layout-builder-modal .fieldset__label {
   color: #fff !important;
 }
+
 #layout-builder-modal .ck.ck-editor {
   color: var(--ck-color-text);
 }
+
 #layout-builder-modal .form-element--type-text {
   color: var(--gin-color-text) !important;
   background-color: var(--gin-bg-input) !important;
 }
 
 body .ui-dialog .ui-dialog-titlebar-close {
-  width: 2rem !important;
+  margin-top: .08rem !important;
   height: 2rem !important;
-  margin-top: 0.08rem !important;
+  width: 2rem !important;
   background: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9JzMwMHB4JyB3aWR0aD0nMzAwcHgnICBmaWxsPSIjZmZmZmZmIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgODUuODEyIDg1LjgxMiIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgODUuODEyIDg1LjgxMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PHBhdGggZD0iTTcwLjY5LDE0LjEyMWMtMTUuNjIxLTE1LjYyLTQwLjk0NS0xNS42Mi01Ni41NjgsMGMtMTUuNjIxLDE1LjYyLTE1LjYyLDQwLjk0NiwwLDU2LjU2NyAgIGMxNS42MjQsMTUuNjIzLDQwLjk0OSwxNS42MjMsNTYuNTY5LDAuMDAyQzg2LjMxMiw1NS4wNzEsODYuMzEzLDI5Ljc0NCw3MC42OSwxNC4xMjF6IE01NC44NzEsNTkuMjlMNDIuNDA2LDQ2LjgyNUwyOS45NDIsNTkuMjkgICBjLTEuMjIzLDEuMjIzLTMuMjAyLDEuMjIyLTQuNDIyLDAuMDAyYy0xLjIyMy0xLjIyNC0xLjIyMS0zLjIsMC00LjQyMmwxMi40NjYtMTIuNDY2TDI1LjUyMiwyOS45NDEgICBjLTEuMjIzLTEuMjIzLTEuMjIzLTMuMjAxLDAtNC40MjFjMS4yMTktMS4yMjIsMy4xOTktMS4yMjMsNC40MiwwbDEyLjQ2NSwxMi40NjRMNTQuODcsMjUuNTJjMS4yMjItMS4yMjIsMy4xOTktMS4yMjIsNC40MiwwLjAwMSAgIGMxLjIyMSwxLjIxOSwxLjIyMiwzLjE5OCwwLjAwMSw0LjQxOUw0Ni44MjYsNDIuNDA0bDEyLjQ2NSwxMi40NjZjMS4yMjIsMS4yMjIsMS4yMjIsMy4yMDEsMCw0LjQyMlM1Ni4wOTMsNjAuNTEyLDU0Ljg3MSw1OS4yOXoiPjwvcGF0aD48L2c+PC9zdmc+) center center no-repeat;
   background-size: 2rem 2rem;
 }
+
 body .ui-dialog .ui-widget-content.ui-dialog-content {
-  padding-right: var(--gin-spacing-m);
   padding-left: var(--gin-spacing-m);
+  padding-right: var(--gin-spacing-m);
 }
+

@@ -1,79 +1,33 @@
-#layout-builder-modal .ui-autocomplete,
-#layout-builder-modal .ui-dialog .ui-autocomplete,
-.media-library-widget-modal .ui-autocomplete,
-.media-library-widget-modal .ui-dialog .ui-autocomplete,
-form.media-form .ui-autocomplete,
-form.media-form .ui-dialog .ui-autocomplete {
+#layout-builder-modal .ui-autocomplete,#layout-builder-modal .ui-dialog .ui-autocomplete,.media-library-widget-modal .ui-autocomplete,.media-library-widget-modal .ui-dialog .ui-autocomplete,form.media-form .ui-autocomplete,form.media-form .ui-dialog .ui-autocomplete {
   color: var(--gin-color-text);
   background: var(--gin-bg-input);
   border-radius: 0 0 var(--gin-border-m) var(--gin-border-m);
 }
-#layout-builder-modal .ui-autocomplete .ui-menu-item-wrapper.ui-state-active,
-#layout-builder-modal .ui-dialog .ui-autocomplete .ui-menu-item-wrapper.ui-state-active,
-.media-library-widget-modal .ui-autocomplete .ui-menu-item-wrapper.ui-state-active,
-.media-library-widget-modal .ui-dialog .ui-autocomplete .ui-menu-item-wrapper.ui-state-active,
-form.media-form .ui-autocomplete .ui-menu-item-wrapper.ui-state-active,
-form.media-form .ui-dialog .ui-autocomplete .ui-menu-item-wrapper.ui-state-active {
+
+#layout-builder-modal .ui-autocomplete .ui-menu-item-wrapper.ui-state-active,#layout-builder-modal .ui-dialog .ui-autocomplete .ui-menu-item-wrapper.ui-state-active,.media-library-widget-modal .ui-autocomplete .ui-menu-item-wrapper.ui-state-active,.media-library-widget-modal .ui-dialog .ui-autocomplete .ui-menu-item-wrapper.ui-state-active,form.media-form .ui-autocomplete .ui-menu-item-wrapper.ui-state-active,form.media-form .ui-dialog .ui-autocomplete .ui-menu-item-wrapper.ui-state-active {
   color: var(--gin-color-primary-hover);
   background-color: var(--gin-bg-item-hover);
 }
-#layout-builder-modal .ui-state-active, #layout-builder-modal .ui-dialog .ui-state-active,
-#layout-builder-modal .ui-widget-content .ui-state-active,
-#layout-builder-modal .ui-dialog .ui-widget-content .ui-state-active,
-#layout-builder-modal .ui-widget-header .ui-state-active,
-#layout-builder-modal .ui-dialog .ui-widget-header .ui-state-active,
-#layout-builder-modal a.ui-button:active,
-#layout-builder-modal .ui-dialog a.ui-button:active,
-#layout-builder-modal .ui-button:active,
-#layout-builder-modal .ui-dialog .ui-button:active,
-#layout-builder-modal .ui-button.ui-state-active:hover,
-#layout-builder-modal .ui-dialog .ui-button.ui-state-active:hover,
-.media-library-widget-modal .ui-state-active,
-.media-library-widget-modal .ui-dialog .ui-state-active,
-.media-library-widget-modal .ui-widget-content .ui-state-active,
-.media-library-widget-modal .ui-dialog .ui-widget-content .ui-state-active,
-.media-library-widget-modal .ui-widget-header .ui-state-active,
-.media-library-widget-modal .ui-dialog .ui-widget-header .ui-state-active,
-.media-library-widget-modal a.ui-button:active,
-.media-library-widget-modal .ui-dialog a.ui-button:active,
-.media-library-widget-modal .ui-button:active,
-.media-library-widget-modal .ui-dialog .ui-button:active,
-.media-library-widget-modal .ui-button.ui-state-active:hover,
-.media-library-widget-modal .ui-dialog .ui-button.ui-state-active:hover,
-form.media-form .ui-state-active,
-form.media-form .ui-dialog .ui-state-active,
-form.media-form .ui-widget-content .ui-state-active,
-form.media-form .ui-dialog .ui-widget-content .ui-state-active,
-form.media-form .ui-widget-header .ui-state-active,
-form.media-form .ui-dialog .ui-widget-header .ui-state-active,
-form.media-form a.ui-button:active,
-form.media-form .ui-dialog a.ui-button:active,
-form.media-form .ui-button:active,
-form.media-form .ui-dialog .ui-button:active,
-form.media-form .ui-button.ui-state-active:hover,
-form.media-form .ui-dialog .ui-button.ui-state-active:hover {
+
+#layout-builder-modal .ui-state-active,#layout-builder-modal .ui-dialog .ui-state-active,#layout-builder-modal .ui-widget-content .ui-state-active,#layout-builder-modal .ui-dialog .ui-widget-content .ui-state-active,#layout-builder-modal .ui-widget-header .ui-state-active,#layout-builder-modal .ui-dialog .ui-widget-header .ui-state-active,#layout-builder-modal a.ui-button:active,#layout-builder-modal .ui-dialog a.ui-button:active,#layout-builder-modal .ui-button:active,#layout-builder-modal .ui-dialog .ui-button:active,#layout-builder-modal .ui-button.ui-state-active:hover,#layout-builder-modal .ui-dialog .ui-button.ui-state-active:hover,.media-library-widget-modal .ui-state-active,.media-library-widget-modal .ui-dialog .ui-state-active,.media-library-widget-modal .ui-widget-content .ui-state-active,.media-library-widget-modal .ui-dialog .ui-widget-content .ui-state-active,.media-library-widget-modal .ui-widget-header .ui-state-active,.media-library-widget-modal .ui-dialog .ui-widget-header .ui-state-active,.media-library-widget-modal a.ui-button:active,.media-library-widget-modal .ui-dialog a.ui-button:active,.media-library-widget-modal .ui-button:active,.media-library-widget-modal .ui-dialog .ui-button:active,.media-library-widget-modal .ui-button.ui-state-active:hover,.media-library-widget-modal .ui-dialog .ui-button.ui-state-active:hover,form.media-form .ui-state-active,form.media-form .ui-dialog .ui-state-active,form.media-form .ui-widget-content .ui-state-active,form.media-form .ui-dialog .ui-widget-content .ui-state-active,form.media-form .ui-widget-header .ui-state-active,form.media-form .ui-dialog .ui-widget-header .ui-state-active,form.media-form a.ui-button:active,form.media-form .ui-dialog a.ui-button:active,form.media-form .ui-button:active,form.media-form .ui-dialog .ui-button:active,form.media-form .ui-button.ui-state-active:hover,form.media-form .ui-dialog .ui-button.ui-state-active:hover {
   border: none;
 }
-#layout-builder-modal .ui-autocomplete .ui-menu-item a,
-.media-library-widget-modal .ui-autocomplete .ui-menu-item a,
-form.media-form .ui-autocomplete .ui-menu-item a {
+
+#layout-builder-modal .ui-autocomplete .ui-menu-item a,.media-library-widget-modal .ui-autocomplete .ui-menu-item a,form.media-form .ui-autocomplete .ui-menu-item a {
   color: var(--gin-color-text);
 }
-#layout-builder-modal .ui-autocomplete .ui-menu-item a:hover,
-.media-library-widget-modal .ui-autocomplete .ui-menu-item a:hover,
-form.media-form .ui-autocomplete .ui-menu-item a:hover {
+
+#layout-builder-modal .ui-autocomplete .ui-menu-item a:hover,.media-library-widget-modal .ui-autocomplete .ui-menu-item a:hover,form.media-form .ui-autocomplete .ui-menu-item a:hover {
   color: var(--gin-color-primary-hover);
   background-color: var(--gin-bg-item-hover);
 }
-#layout-builder-modal .ui-widget.ui-widget-content,
-.media-library-widget-modal .ui-widget.ui-widget-content,
-form.media-form .ui-widget.ui-widget-content {
+
+#layout-builder-modal .ui-widget.ui-widget-content,.media-library-widget-modal .ui-widget.ui-widget-content,form.media-form .ui-widget.ui-widget-content {
   padding: 0;
   border: 1px solid var(--gin-border-color);
 }
-#layout-builder-modal div.autocomplete-deluxe-multiple,
-.media-library-widget-modal div.autocomplete-deluxe-multiple,
-form.media-form div.autocomplete-deluxe-multiple {
+
+#layout-builder-modal div.autocomplete-deluxe-multiple,.media-library-widget-modal div.autocomplete-deluxe-multiple,form.media-form div.autocomplete-deluxe-multiple {
   color: var(--gin-color-text);
   background: var(--gin-bg-input);
   border: 1px solid var(--gin-border-color-form-element);
@@ -81,68 +35,55 @@ form.media-form div.autocomplete-deluxe-multiple {
   box-sizing: border-box;
   transition: var(--gin-transition);
 }
-#layout-builder-modal .autocomplete-deluxe-container input.autocomplete-deluxe-form,
-.media-library-widget-modal .autocomplete-deluxe-container input.autocomplete-deluxe-form,
-form.media-form .autocomplete-deluxe-container input.autocomplete-deluxe-form {
+
+#layout-builder-modal .autocomplete-deluxe-container input.autocomplete-deluxe-form,.media-library-widget-modal .autocomplete-deluxe-container input.autocomplete-deluxe-form,form.media-form .autocomplete-deluxe-container input.autocomplete-deluxe-form {
   min-height: 0;
   background: none;
 }
-#layout-builder-modal .autocomplete-deluxe-item,
-.media-library-widget-modal .autocomplete-deluxe-item,
-form.media-form .autocomplete-deluxe-item {
+
+#layout-builder-modal .autocomplete-deluxe-item,.media-library-widget-modal .autocomplete-deluxe-item,form.media-form .autocomplete-deluxe-item {
   color: var(--gin-color-primary-hover);
   background-color: var(--gin-color-primary-light-hover);
   border-radius: var(--gin-border-l);
   border: 0 none;
   box-shadow: none;
 }
-#layout-builder-modal [dir=ltr] .autocomplete-deluxe-item,
-.media-library-widget-modal [dir=ltr] .autocomplete-deluxe-item,
-form.media-form [dir=ltr] .autocomplete-deluxe-item {
+
+#layout-builder-modal [dir=ltr] .autocomplete-deluxe-item,.media-library-widget-modal [dir=ltr] .autocomplete-deluxe-item,form.media-form [dir=ltr] .autocomplete-deluxe-item {
   padding: 6px var(--gin-spacing-l) 6px 12px;
 }
-#layout-builder-modal [dir=rtl] .autocomplete-deluxe-item,
-.media-library-widget-modal [dir=rtl] .autocomplete-deluxe-item,
-form.media-form [dir=rtl] .autocomplete-deluxe-item {
+
+#layout-builder-modal [dir=rtl] .autocomplete-deluxe-item,.media-library-widget-modal [dir=rtl] .autocomplete-deluxe-item,form.media-form [dir=rtl] .autocomplete-deluxe-item {
   padding: 6px 12px 6px var(--gin-spacing-l);
 }
-#layout-builder-modal .autocomplete-deluxe-item:hover, #layout-builder-modal .autocomplete-deluxe-item:active,
-.media-library-widget-modal .autocomplete-deluxe-item:hover,
-.media-library-widget-modal .autocomplete-deluxe-item:active,
-form.media-form .autocomplete-deluxe-item:hover,
-form.media-form .autocomplete-deluxe-item:active {
+
+#layout-builder-modal .autocomplete-deluxe-item:hover,#layout-builder-modal .autocomplete-deluxe-item:active,.media-library-widget-modal .autocomplete-deluxe-item:hover,.media-library-widget-modal .autocomplete-deluxe-item:active,form.media-form .autocomplete-deluxe-item:hover,form.media-form .autocomplete-deluxe-item:active {
   color: var(--gin-color-button-text);
   background-color: var(--gin-color-primary);
 }
-#layout-builder-modal .autocomplete-deluxe-item .autocomplete-deluxe-item-delete,
-.media-library-widget-modal .autocomplete-deluxe-item .autocomplete-deluxe-item-delete,
-form.media-form .autocomplete-deluxe-item .autocomplete-deluxe-item-delete {
+
+#layout-builder-modal .autocomplete-deluxe-item .autocomplete-deluxe-item-delete,.media-library-widget-modal .autocomplete-deluxe-item .autocomplete-deluxe-item-delete,form.media-form .autocomplete-deluxe-item .autocomplete-deluxe-item-delete {
   top: 6px;
   -webkit-mask-image: url("../../media/sprite.svg#close-view");
-  mask-image: url("../../media/sprite.svg#close-view");
+          mask-image: url("../../media/sprite.svg#close-view");
   -webkit-mask-size: 10px 10px;
-  mask-size: 10px 10px;
+          mask-size: 10px 10px;
   -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
   -webkit-mask-position: center;
-  mask-position: center;
+          mask-position: center;
   background: var(--gin-color-primary);
 }
-#layout-builder-modal [dir=ltr] .autocomplete-deluxe-item .autocomplete-deluxe-item-delete,
-.media-library-widget-modal [dir=ltr] .autocomplete-deluxe-item .autocomplete-deluxe-item-delete,
-form.media-form [dir=ltr] .autocomplete-deluxe-item .autocomplete-deluxe-item-delete {
+
+#layout-builder-modal [dir=ltr] .autocomplete-deluxe-item .autocomplete-deluxe-item-delete,.media-library-widget-modal [dir=ltr] .autocomplete-deluxe-item .autocomplete-deluxe-item-delete,form.media-form [dir=ltr] .autocomplete-deluxe-item .autocomplete-deluxe-item-delete {
   right: 6px;
 }
-#layout-builder-modal [dir=rtl] .autocomplete-deluxe-item .autocomplete-deluxe-item-delete,
-.media-library-widget-modal [dir=rtl] .autocomplete-deluxe-item .autocomplete-deluxe-item-delete,
-form.media-form [dir=rtl] .autocomplete-deluxe-item .autocomplete-deluxe-item-delete {
+
+#layout-builder-modal [dir=rtl] .autocomplete-deluxe-item .autocomplete-deluxe-item-delete,.media-library-widget-modal [dir=rtl] .autocomplete-deluxe-item .autocomplete-deluxe-item-delete,form.media-form [dir=rtl] .autocomplete-deluxe-item .autocomplete-deluxe-item-delete {
   left: 6px;
 }
-#layout-builder-modal .autocomplete-deluxe-item:hover .autocomplete-deluxe-item-delete,
-#layout-builder-modal .autocomplete-deluxe-item .autocomplete-deluxe-item-delete:hover,
-.media-library-widget-modal .autocomplete-deluxe-item:hover .autocomplete-deluxe-item-delete,
-.media-library-widget-modal .autocomplete-deluxe-item .autocomplete-deluxe-item-delete:hover,
-form.media-form .autocomplete-deluxe-item:hover .autocomplete-deluxe-item-delete,
-form.media-form .autocomplete-deluxe-item .autocomplete-deluxe-item-delete:hover {
+
+#layout-builder-modal .autocomplete-deluxe-item:hover .autocomplete-deluxe-item-delete,#layout-builder-modal .autocomplete-deluxe-item .autocomplete-deluxe-item-delete:hover,.media-library-widget-modal .autocomplete-deluxe-item:hover .autocomplete-deluxe-item-delete,.media-library-widget-modal .autocomplete-deluxe-item .autocomplete-deluxe-item-delete:hover,form.media-form .autocomplete-deluxe-item:hover .autocomplete-deluxe-item-delete,form.media-form .autocomplete-deluxe-item .autocomplete-deluxe-item-delete:hover {
   background: var(--gin-color-button-text);
 }
+

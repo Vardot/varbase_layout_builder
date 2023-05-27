@@ -1,74 +1,55 @@
-#layout-builder-modal,
-.media-library-widget-modal,
-form.media-form {
-  /* Fixes for 'Inline entity form - Complex' widgets inside paragraphs */
-}
-#layout-builder-modal .ief-entity-table .ief-row-form,
-.media-library-widget-modal .ief-entity-table .ief-row-form,
-form.media-form .ief-entity-table .ief-row-form {
+#layout-builder-modal .ief-entity-table .ief-row-form,.media-library-widget-modal .ief-entity-table .ief-row-form,form.media-form .ief-entity-table .ief-row-form {
   border: 1px solid var(--gin-border-color);
 }
-#layout-builder-modal .ief-entity-table .ief-row-form:hover,
-.media-library-widget-modal .ief-entity-table .ief-row-form:hover,
-form.media-form .ief-entity-table .ief-row-form:hover {
+
+#layout-builder-modal .ief-entity-table .ief-row-form:hover,.media-library-widget-modal .ief-entity-table .ief-row-form:hover,form.media-form .ief-entity-table .ief-row-form:hover {
   background: transparent;
 }
-#layout-builder-modal .ief-entity-table .ief-row-form td,
-.media-library-widget-modal .ief-entity-table .ief-row-form td,
-form.media-form .ief-entity-table .ief-row-form td {
+
+#layout-builder-modal .ief-entity-table .ief-row-form td,.media-library-widget-modal .ief-entity-table .ief-row-form td,form.media-form .ief-entity-table .ief-row-form td {
   padding-bottom: 0;
 }
-#layout-builder-modal .ief-entity-table tr.ief-row-form .form-item,
-.media-library-widget-modal .ief-entity-table tr.ief-row-form .form-item,
-form.media-form .ief-entity-table tr.ief-row-form .form-item {
+
+#layout-builder-modal .ief-entity-table .ief-row-form .form-item,.media-library-widget-modal .ief-entity-table .ief-row-form .form-item,form.media-form .ief-entity-table .ief-row-form .form-item {
   margin-top: var(--gin-spacing-density-s);
   margin-bottom: var(--gin-spacing-density-s);
 }
-#layout-builder-modal .ief-form > .form-wrapper > .form-wrapper:last-of-type,
-.media-library-widget-modal .ief-form > .form-wrapper > .form-wrapper:last-of-type,
-form.media-form .ief-form > .form-wrapper > .form-wrapper:last-of-type {
+
+#layout-builder-modal .ief-form>.form-wrapper>.form-wrapper:last-of-type,.media-library-widget-modal .ief-form>.form-wrapper>.form-wrapper:last-of-type,form.media-form .ief-form>.form-wrapper>.form-wrapper:last-of-type {
   background: var(--gin-bg-layer2);
   padding: 0 var(--gin-spacing-m);
-  margin: 0 calc(var(--gin-spacing-m) * -1);
+  margin: 0 calc(var(--gin-spacing-m)*-1);
 }
-#layout-builder-modal .ief-form.ief-form-bottom,
-.media-library-widget-modal .ief-form.ief-form-bottom,
-form.media-form .ief-form.ief-form-bottom {
+
+#layout-builder-modal .ief-form.ief-form-bottom,.media-library-widget-modal .ief-form.ief-form-bottom,form.media-form .ief-form.ief-form-bottom {
   border: 1px solid var(--gin-border-color);
 }
-#layout-builder-modal .ief-form.ief-form-bottom .fieldset__wrapper,
-.media-library-widget-modal .ief-form.ief-form-bottom .fieldset__wrapper,
-form.media-form .ief-form.ief-form-bottom .fieldset__wrapper {
+
+#layout-builder-modal .ief-form.ief-form-bottom .fieldset__wrapper,.media-library-widget-modal .ief-form.ief-form-bottom .fieldset__wrapper,form.media-form .ief-form.ief-form-bottom .fieldset__wrapper {
   margin-bottom: 0;
 }
-#layout-builder-modal .paragraphs-tabs-wrapper .field-multiple-table .ief-entity-table .draggable,
-.media-library-widget-modal .paragraphs-tabs-wrapper .field-multiple-table .ief-entity-table .draggable,
-form.media-form .paragraphs-tabs-wrapper .field-multiple-table .ief-entity-table .draggable {
+
+#layout-builder-modal .paragraphs-tabs-wrapper .field-multiple-table .ief-entity-table .draggable,.media-library-widget-modal .paragraphs-tabs-wrapper .field-multiple-table .ief-entity-table .draggable,form.media-form .paragraphs-tabs-wrapper .field-multiple-table .ief-entity-table .draggable {
   display: table-row;
-  /* The .draggable padding is not applied because of display: table-row */
 }
-#layout-builder-modal [dir=ltr] .paragraphs-tabs-wrapper .field-multiple-table .ief-entity-table .draggable.drag-previous > .tabledrag-cell::before,
-.media-library-widget-modal [dir=ltr] .paragraphs-tabs-wrapper .field-multiple-table .ief-entity-table .draggable.drag-previous > .tabledrag-cell::before,
-form.media-form [dir=ltr] .paragraphs-tabs-wrapper .field-multiple-table .ief-entity-table .draggable.drag-previous > .tabledrag-cell::before {
+
+#layout-builder-modal [dir=ltr] .paragraphs-tabs-wrapper .field-multiple-table .ief-entity-table .draggable.drag-previous>.tabledrag-cell::before,.media-library-widget-modal [dir=ltr] .paragraphs-tabs-wrapper .field-multiple-table .ief-entity-table .draggable.drag-previous>.tabledrag-cell::before,form.media-form [dir=ltr] .paragraphs-tabs-wrapper .field-multiple-table .ief-entity-table .draggable.drag-previous>.tabledrag-cell::before {
   left: var(--gin-spacing-xs);
 }
-#layout-builder-modal [dir=rtl] .paragraphs-tabs-wrapper .field-multiple-table .ief-entity-table .draggable.drag-previous > .tabledrag-cell::before,
-.media-library-widget-modal [dir=rtl] .paragraphs-tabs-wrapper .field-multiple-table .ief-entity-table .draggable.drag-previous > .tabledrag-cell::before,
-form.media-form [dir=rtl] .paragraphs-tabs-wrapper .field-multiple-table .ief-entity-table .draggable.drag-previous > .tabledrag-cell::before {
+
+#layout-builder-modal [dir=rtl] .paragraphs-tabs-wrapper .field-multiple-table .ief-entity-table .draggable.drag-previous>.tabledrag-cell::before,.media-library-widget-modal [dir=rtl] .paragraphs-tabs-wrapper .field-multiple-table .ief-entity-table .draggable.drag-previous>.tabledrag-cell::before,form.media-form [dir=rtl] .paragraphs-tabs-wrapper .field-multiple-table .ief-entity-table .draggable.drag-previous>.tabledrag-cell::before {
   right: var(--gin-spacing-xs);
 }
-#layout-builder-modal [dir=ltr] .paragraphs-tabs-wrapper .field-multiple-table .ief-entity-table .draggable .tabledrag-cell-content__item,
-.media-library-widget-modal [dir=ltr] .paragraphs-tabs-wrapper .field-multiple-table .ief-entity-table .draggable .tabledrag-cell-content__item,
-form.media-form [dir=ltr] .paragraphs-tabs-wrapper .field-multiple-table .ief-entity-table .draggable .tabledrag-cell-content__item {
+
+#layout-builder-modal [dir=ltr] .paragraphs-tabs-wrapper .field-multiple-table .ief-entity-table .draggable .tabledrag-cell-content__item,.media-library-widget-modal [dir=ltr] .paragraphs-tabs-wrapper .field-multiple-table .ief-entity-table .draggable .tabledrag-cell-content__item,form.media-form [dir=ltr] .paragraphs-tabs-wrapper .field-multiple-table .ief-entity-table .draggable .tabledrag-cell-content__item {
   padding-left: var(--gin-spacing-s);
 }
-#layout-builder-modal [dir=rtl] .paragraphs-tabs-wrapper .field-multiple-table .ief-entity-table .draggable .tabledrag-cell-content__item,
-.media-library-widget-modal [dir=rtl] .paragraphs-tabs-wrapper .field-multiple-table .ief-entity-table .draggable .tabledrag-cell-content__item,
-form.media-form [dir=rtl] .paragraphs-tabs-wrapper .field-multiple-table .ief-entity-table .draggable .tabledrag-cell-content__item {
+
+#layout-builder-modal [dir=rtl] .paragraphs-tabs-wrapper .field-multiple-table .ief-entity-table .draggable .tabledrag-cell-content__item,.media-library-widget-modal [dir=rtl] .paragraphs-tabs-wrapper .field-multiple-table .ief-entity-table .draggable .tabledrag-cell-content__item,form.media-form [dir=rtl] .paragraphs-tabs-wrapper .field-multiple-table .ief-entity-table .draggable .tabledrag-cell-content__item {
   padding-right: var(--gin-spacing-s);
 }
-#layout-builder-modal .paragraphs-tabs-wrapper .field-multiple-table .ief-entity-operations,
-.media-library-widget-modal .paragraphs-tabs-wrapper .field-multiple-table .ief-entity-operations,
-form.media-form .paragraphs-tabs-wrapper .field-multiple-table .ief-entity-operations {
+
+#layout-builder-modal .paragraphs-tabs-wrapper .field-multiple-table .ief-entity-operations,.media-library-widget-modal .paragraphs-tabs-wrapper .field-multiple-table .ief-entity-operations,form.media-form .paragraphs-tabs-wrapper .field-multiple-table .ief-entity-operations {
   display: flex;
 }
+

@@ -1,175 +1,96 @@
-#layout-builder-modal .tabs,
-.media-library-widget-modal .tabs,
-form.media-form .tabs {
+#layout-builder-modal .tabs,.media-library-widget-modal .tabs,form.media-form .tabs {
   box-shadow: none;
 }
-#layout-builder-modal .tabs-wrapper,
-#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list,
-.media-library-widget-modal .tabs-wrapper,
-.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list,
-form.media-form .tabs-wrapper,
-form.media-form .horizontal-tabs ul.horizontal-tabs-list {
+
+#layout-builder-modal .tabs-wrapper,#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list,.media-library-widget-modal .tabs-wrapper,.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list,form.media-form .tabs-wrapper,form.media-form .horizontal-tabs ul.horizontal-tabs-list {
   padding: 0 var(--gin-spacing-xs);
-  margin-left: calc(var(--gin-spacing-xs) * -1);
-  margin-right: calc(var(--gin-spacing-xs) * -1);
+  margin-left: calc(var(--gin-spacing-xs)*-1);
+  margin-right: calc(var(--gin-spacing-xs)*-1);
 }
+
 @media (min-width: 48em) {
-  #layout-builder-modal .tabs-wrapper,
-  #layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list,
-  .media-library-widget-modal .tabs-wrapper,
-  .media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list,
-  form.media-form .tabs-wrapper,
-  form.media-form .horizontal-tabs ul.horizontal-tabs-list {
+  #layout-builder-modal .tabs-wrapper,#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list,.media-library-widget-modal .tabs-wrapper,.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list,form.media-form .tabs-wrapper,form.media-form .horizontal-tabs ul.horizontal-tabs-list {
     padding: 0;
   }
 }
-#layout-builder-modal .gin--dark-mode .tabs-wrapper:not(.is-horizontal) .tabs,
-.media-library-widget-modal .gin--dark-mode .tabs-wrapper:not(.is-horizontal) .tabs,
-form.media-form .gin--dark-mode .tabs-wrapper:not(.is-horizontal) .tabs {
+
+#layout-builder-modal .gin--dark-mode .tabs-wrapper:not(.is-horizontal) .tabs,.media-library-widget-modal .gin--dark-mode .tabs-wrapper:not(.is-horizontal) .tabs,form.media-form .gin--dark-mode .tabs-wrapper:not(.is-horizontal) .tabs {
   border-color: #8e929c;
 }
-#layout-builder-modal .gin--dark-mode .tabs-wrapper:not(.is-horizontal) .tabs__tab,
-.media-library-widget-modal .gin--dark-mode .tabs-wrapper:not(.is-horizontal) .tabs__tab,
-form.media-form .gin--dark-mode .tabs-wrapper:not(.is-horizontal) .tabs__tab {
+
+#layout-builder-modal .gin--dark-mode .tabs-wrapper:not(.is-horizontal) .tabs__tab,.media-library-widget-modal .gin--dark-mode .tabs-wrapper:not(.is-horizontal) .tabs__tab,form.media-form .gin--dark-mode .tabs-wrapper:not(.is-horizontal) .tabs__tab {
   background-color: var(--gin-bg-item-hover);
   border-color: #8e929c;
 }
-#layout-builder-modal .vertical-tabs__items,
-.media-library-widget-modal .vertical-tabs__items,
-form.media-form .vertical-tabs__items {
+
+#layout-builder-modal .vertical-tabs__items,.media-library-widget-modal .vertical-tabs__items,form.media-form .vertical-tabs__items {
   z-index: inherit;
 }
-#layout-builder-modal .gin--dark-mode .tabs,
-.media-library-widget-modal .gin--dark-mode .tabs,
-form.media-form .gin--dark-mode .tabs {
+
+#layout-builder-modal .gin--dark-mode .tabs,.media-library-widget-modal .gin--dark-mode .tabs,form.media-form .gin--dark-mode .tabs {
   border-color: var(--gin-border-color-layer2);
 }
-#layout-builder-modal .gin--dark-mode .tabs .tabs__tab,
-#layout-builder-modal .gin--dark-mode .tabs .tabs__tab.is-active,
-.media-library-widget-modal .gin--dark-mode .tabs .tabs__tab,
-.media-library-widget-modal .gin--dark-mode .tabs .tabs__tab.is-active,
-form.media-form .gin--dark-mode .tabs .tabs__tab,
-form.media-form .gin--dark-mode .tabs .tabs__tab.is-active {
+
+#layout-builder-modal .gin--dark-mode .tabs .tabs__tab,#layout-builder-modal .gin--dark-mode .tabs .tabs__tab.is-active,.media-library-widget-modal .gin--dark-mode .tabs .tabs__tab,.media-library-widget-modal .gin--dark-mode .tabs .tabs__tab.is-active,form.media-form .gin--dark-mode .tabs .tabs__tab,form.media-form .gin--dark-mode .tabs .tabs__tab.is-active {
   border-color: var(--gin-border-color-layer2);
   background-color: transparent;
 }
-#layout-builder-modal .tabs__link,
-#layout-builder-modal .claro-details__summary,
-#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a,
-.media-library-widget-modal .tabs__link,
-.media-library-widget-modal .claro-details__summary,
-.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a,
-form.media-form .tabs__link,
-form.media-form .claro-details__summary,
-form.media-form .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a {
+
+#layout-builder-modal .tabs__link,#layout-builder-modal .claro-details__summary,#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a,.media-library-widget-modal .tabs__link,.media-library-widget-modal .claro-details__summary,.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a,form.media-form .tabs__link,form.media-form .claro-details__summary,form.media-form .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a {
   color: var(--gin-color-text);
   font-size: var(--gin-font-size);
   font-weight: var(--gin-font-weight-bold);
   padding-top: calc(var(--gin-spacing-l) - var(--gin-spacing-xxs));
   padding-bottom: calc(var(--gin-spacing-l) - var(--gin-spacing-xxs));
 }
-#layout-builder-modal .tabs__link strong,
-#layout-builder-modal .claro-details__summary strong,
-#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a strong,
-.media-library-widget-modal .tabs__link strong,
-.media-library-widget-modal .claro-details__summary strong,
-.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a strong,
-form.media-form .tabs__link strong,
-form.media-form .claro-details__summary strong,
-form.media-form .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a strong {
+
+#layout-builder-modal .tabs__link strong,#layout-builder-modal .claro-details__summary strong,#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a strong,.media-library-widget-modal .tabs__link strong,.media-library-widget-modal .claro-details__summary strong,.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a strong,form.media-form .tabs__link strong,form.media-form .claro-details__summary strong,form.media-form .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a strong {
   font-weight: inherit;
 }
-#layout-builder-modal .tabs__link.is-active,
-#layout-builder-modal .claro-details__summary[aria-expanded=true],
-#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button.selected a,
-.media-library-widget-modal .tabs__link.is-active,
-.media-library-widget-modal .claro-details__summary[aria-expanded=true],
-.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button.selected a,
-form.media-form .tabs__link.is-active,
-form.media-form .claro-details__summary[aria-expanded=true],
-form.media-form .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button.selected a {
+
+#layout-builder-modal .tabs__link.is-active,#layout-builder-modal .claro-details__summary[aria-expanded=true],#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button.selected a,.media-library-widget-modal .tabs__link.is-active,.media-library-widget-modal .claro-details__summary[aria-expanded=true],.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button.selected a,form.media-form .tabs__link.is-active,form.media-form .claro-details__summary[aria-expanded=true],form.media-form .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button.selected a {
   font-weight: var(--gin-font-weight-bold);
 }
-#layout-builder-modal .is-horizontal .tabs__link:hover, #layout-builder-modal .is-horizontal .tabs__link:focus,
-#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a:hover,
-#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a:focus,
-.media-library-widget-modal .is-horizontal .tabs__link:hover,
-.media-library-widget-modal .is-horizontal .tabs__link:focus,
-.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a:hover,
-.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a:focus,
-form.media-form .is-horizontal .tabs__link:hover,
-form.media-form .is-horizontal .tabs__link:focus,
-form.media-form .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a:hover,
-form.media-form .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a:focus {
+
+#layout-builder-modal .is-horizontal .tabs__link:hover,#layout-builder-modal .is-horizontal .tabs__link:focus,#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a:hover,#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a:focus,.media-library-widget-modal .is-horizontal .tabs__link:hover,.media-library-widget-modal .is-horizontal .tabs__link:focus,.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a:hover,.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a:focus,form.media-form .is-horizontal .tabs__link:hover,form.media-form .is-horizontal .tabs__link:focus,form.media-form .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a:hover,form.media-form .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a:focus {
   color: var(--gin-color-primary);
   background: var(--gin-bg-item-hover);
 }
-#layout-builder-modal .claro-details,
-.media-library-widget-modal .claro-details,
-form.media-form .claro-details {
+
+#layout-builder-modal .claro-details,.media-library-widget-modal .claro-details,form.media-form .claro-details {
   color: var(--gin-color-text);
   border: 1px solid var(--gin-border-color);
   border-radius: var(--gin-border-m);
   box-shadow: none;
 }
-#layout-builder-modal .claro-details__summary::after,
-.media-library-widget-modal .claro-details__summary::after,
-form.media-form .claro-details__summary::after {
+
+#layout-builder-modal .claro-details__summary::after,.media-library-widget-modal .claro-details__summary::after,form.media-form .claro-details__summary::after {
   border-radius: var(--gin-border-m);
 }
-#layout-builder-modal .claro-details__summary:hover,
-.media-library-widget-modal .claro-details__summary:hover,
-form.media-form .claro-details__summary:hover {
+
+#layout-builder-modal .claro-details__summary:hover,.media-library-widget-modal .claro-details__summary:hover,form.media-form .claro-details__summary:hover {
   color: var(--gin-color-primary);
   background-color: var(--gin-bg-item-hover);
 }
-#layout-builder-modal .is-horizontal .tabs--primary,
-#layout-builder-modal .is-horizontal .tabs--secondary,
-#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list,
-.media-library-widget-modal .is-horizontal .tabs--primary,
-.media-library-widget-modal .is-horizontal .tabs--secondary,
-.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list,
-form.media-form .is-horizontal .tabs--primary,
-form.media-form .is-horizontal .tabs--secondary,
-form.media-form .horizontal-tabs ul.horizontal-tabs-list {
+
+#layout-builder-modal .is-horizontal .tabs--primary,#layout-builder-modal .is-horizontal .tabs--secondary,#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list,.media-library-widget-modal .is-horizontal .tabs--primary,.media-library-widget-modal .is-horizontal .tabs--secondary,.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list,form.media-form .is-horizontal .tabs--primary,form.media-form .is-horizontal .tabs--secondary,form.media-form .horizontal-tabs ul.horizontal-tabs-list {
   position: relative;
 }
+
 @media (min-width: 48em) {
-  #layout-builder-modal .is-horizontal .tabs--primary,
-  #layout-builder-modal .is-horizontal .tabs--secondary,
-  #layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list,
-  .media-library-widget-modal .is-horizontal .tabs--primary,
-  .media-library-widget-modal .is-horizontal .tabs--secondary,
-  .media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list,
-  form.media-form .is-horizontal .tabs--primary,
-  form.media-form .is-horizontal .tabs--secondary,
-  form.media-form .horizontal-tabs ul.horizontal-tabs-list {
+  #layout-builder-modal .is-horizontal .tabs--primary,#layout-builder-modal .is-horizontal .tabs--secondary,#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list,.media-library-widget-modal .is-horizontal .tabs--primary,.media-library-widget-modal .is-horizontal .tabs--secondary,.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list,form.media-form .is-horizontal .tabs--primary,form.media-form .is-horizontal .tabs--secondary,form.media-form .horizontal-tabs ul.horizontal-tabs-list {
     width: 100%;
-    padding: 0.3125rem var(--gin-spacing-xs) var(--gin-spacing-l);
-    margin-bottom: calc(var(--gin-spacing-l) * -1);
+    padding: .3125rem var(--gin-spacing-xs) var(--gin-spacing-l);
+    margin-bottom: calc(var(--gin-spacing-l)*-1);
     overflow-x: auto;
   }
-  #layout-builder-modal .gin--edit-form .is-horizontal .tabs--primary,
-  #layout-builder-modal .gin--edit-form .is-horizontal .tabs--secondary,
-  #layout-builder-modal .gin--edit-form .horizontal-tabs ul.horizontal-tabs-list,
-  .media-library-widget-modal .gin--edit-form .is-horizontal .tabs--primary,
-  .media-library-widget-modal .gin--edit-form .is-horizontal .tabs--secondary,
-  .media-library-widget-modal .gin--edit-form .horizontal-tabs ul.horizontal-tabs-list,
-  form.media-form .gin--edit-form .is-horizontal .tabs--primary,
-  form.media-form .gin--edit-form .is-horizontal .tabs--secondary,
-  form.media-form .gin--edit-form .horizontal-tabs ul.horizontal-tabs-list {
-    padding-top: 0.4rem;
+
+  #layout-builder-modal .gin--edit-form .is-horizontal .tabs--primary,#layout-builder-modal .gin--edit-form .is-horizontal .tabs--secondary,#layout-builder-modal .gin--edit-form .horizontal-tabs ul.horizontal-tabs-list,.media-library-widget-modal .gin--edit-form .is-horizontal .tabs--primary,.media-library-widget-modal .gin--edit-form .is-horizontal .tabs--secondary,.media-library-widget-modal .gin--edit-form .horizontal-tabs ul.horizontal-tabs-list,form.media-form .gin--edit-form .is-horizontal .tabs--primary,form.media-form .gin--edit-form .is-horizontal .tabs--secondary,form.media-form .gin--edit-form .horizontal-tabs ul.horizontal-tabs-list {
+    padding-top: .4rem;
   }
 }
-#layout-builder-modal .is-horizontal .tabs--primary::after,
-#layout-builder-modal .is-horizontal .tabs--secondary::after,
-#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list::after,
-.media-library-widget-modal .is-horizontal .tabs--primary::after,
-.media-library-widget-modal .is-horizontal .tabs--secondary::after,
-.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list::after,
-form.media-form .is-horizontal .tabs--primary::after,
-form.media-form .is-horizontal .tabs--secondary::after,
-form.media-form .horizontal-tabs ul.horizontal-tabs-list::after {
+
+#layout-builder-modal .is-horizontal .tabs--primary::after,#layout-builder-modal .is-horizontal .tabs--secondary::after,#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list::after,.media-library-widget-modal .is-horizontal .tabs--primary::after,.media-library-widget-modal .is-horizontal .tabs--secondary::after,.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list::after,form.media-form .is-horizontal .tabs--primary::after,form.media-form .is-horizontal .tabs--secondary::after,form.media-form .horizontal-tabs ul.horizontal-tabs-list::after {
   pointer-events: none;
   content: "";
   position: absolute;
@@ -180,378 +101,234 @@ form.media-form .horizontal-tabs ul.horizontal-tabs-list::after {
   border-bottom: 1px solid var(--gin-border-color);
   transition: var(--gin-transition);
 }
-#layout-builder-modal [dir=ltr] .is-horizontal .tabs--primary::after,
-#layout-builder-modal [dir=ltr] .is-horizontal .tabs--secondary::after,
-#layout-builder-modal [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list::after,
-.media-library-widget-modal [dir=ltr] .is-horizontal .tabs--primary::after,
-.media-library-widget-modal [dir=ltr] .is-horizontal .tabs--secondary::after,
-.media-library-widget-modal [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list::after,
-form.media-form [dir=ltr] .is-horizontal .tabs--primary::after,
-form.media-form [dir=ltr] .is-horizontal .tabs--secondary::after,
-form.media-form [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list::after {
+
+#layout-builder-modal [dir=ltr] .is-horizontal .tabs--primary::after,#layout-builder-modal [dir=ltr] .is-horizontal .tabs--secondary::after,#layout-builder-modal [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list::after,.media-library-widget-modal [dir=ltr] .is-horizontal .tabs--primary::after,.media-library-widget-modal [dir=ltr] .is-horizontal .tabs--secondary::after,.media-library-widget-modal [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list::after,form.media-form [dir=ltr] .is-horizontal .tabs--primary::after,form.media-form [dir=ltr] .is-horizontal .tabs--secondary::after,form.media-form [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list::after {
   left: 0;
 }
-#layout-builder-modal [dir=rtl] .is-horizontal .tabs--primary::after,
-#layout-builder-modal [dir=rtl] .is-horizontal .tabs--secondary::after,
-#layout-builder-modal [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list::after,
-.media-library-widget-modal [dir=rtl] .is-horizontal .tabs--primary::after,
-.media-library-widget-modal [dir=rtl] .is-horizontal .tabs--secondary::after,
-.media-library-widget-modal [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list::after,
-form.media-form [dir=rtl] .is-horizontal .tabs--primary::after,
-form.media-form [dir=rtl] .is-horizontal .tabs--secondary::after,
-form.media-form [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list::after {
+
+#layout-builder-modal [dir=rtl] .is-horizontal .tabs--primary::after,#layout-builder-modal [dir=rtl] .is-horizontal .tabs--secondary::after,#layout-builder-modal [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list::after,.media-library-widget-modal [dir=rtl] .is-horizontal .tabs--primary::after,.media-library-widget-modal [dir=rtl] .is-horizontal .tabs--secondary::after,.media-library-widget-modal [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list::after,form.media-form [dir=rtl] .is-horizontal .tabs--primary::after,form.media-form [dir=rtl] .is-horizontal .tabs--secondary::after,form.media-form [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list::after {
   right: 0;
 }
+
 @media (min-width: 48em) {
-  #layout-builder-modal .is-horizontal .tabs--primary::after,
-  #layout-builder-modal .is-horizontal .tabs--secondary::after,
-  #layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list::after,
-  .media-library-widget-modal .is-horizontal .tabs--primary::after,
-  .media-library-widget-modal .is-horizontal .tabs--secondary::after,
-  .media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list::after,
-  form.media-form .is-horizontal .tabs--primary::after,
-  form.media-form .is-horizontal .tabs--secondary::after,
-  form.media-form .horizontal-tabs ul.horizontal-tabs-list::after {
+  #layout-builder-modal .is-horizontal .tabs--primary::after,#layout-builder-modal .is-horizontal .tabs--secondary::after,#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list::after,.media-library-widget-modal .is-horizontal .tabs--primary::after,.media-library-widget-modal .is-horizontal .tabs--secondary::after,.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list::after,form.media-form .is-horizontal .tabs--primary::after,form.media-form .is-horizontal .tabs--secondary::after,form.media-form .horizontal-tabs ul.horizontal-tabs-list::after {
     bottom: var(--gin-spacing-l);
     max-width: calc(100% - var(--gin-spacing-m));
   }
-  #layout-builder-modal [dir=ltr] .is-horizontal .tabs--primary::after,
-  #layout-builder-modal [dir=ltr] .is-horizontal .tabs--secondary::after,
-  #layout-builder-modal [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list::after,
-  .media-library-widget-modal [dir=ltr] .is-horizontal .tabs--primary::after,
-  .media-library-widget-modal [dir=ltr] .is-horizontal .tabs--secondary::after,
-  .media-library-widget-modal [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list::after,
-  form.media-form [dir=ltr] .is-horizontal .tabs--primary::after,
-  form.media-form [dir=ltr] .is-horizontal .tabs--secondary::after,
-  form.media-form [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list::after {
+
+  #layout-builder-modal [dir=ltr] .is-horizontal .tabs--primary::after,#layout-builder-modal [dir=ltr] .is-horizontal .tabs--secondary::after,#layout-builder-modal [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list::after,.media-library-widget-modal [dir=ltr] .is-horizontal .tabs--primary::after,.media-library-widget-modal [dir=ltr] .is-horizontal .tabs--secondary::after,.media-library-widget-modal [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list::after,form.media-form [dir=ltr] .is-horizontal .tabs--primary::after,form.media-form [dir=ltr] .is-horizontal .tabs--secondary::after,form.media-form [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list::after {
     left: var(--gin-spacing-xs);
   }
-  #layout-builder-modal [dir=rtl] .is-horizontal .tabs--primary::after,
-  #layout-builder-modal [dir=rtl] .is-horizontal .tabs--secondary::after,
-  #layout-builder-modal [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list::after,
-  .media-library-widget-modal [dir=rtl] .is-horizontal .tabs--primary::after,
-  .media-library-widget-modal [dir=rtl] .is-horizontal .tabs--secondary::after,
-  .media-library-widget-modal [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list::after,
-  form.media-form [dir=rtl] .is-horizontal .tabs--primary::after,
-  form.media-form [dir=rtl] .is-horizontal .tabs--secondary::after,
-  form.media-form [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list::after {
+
+  #layout-builder-modal [dir=rtl] .is-horizontal .tabs--primary::after,#layout-builder-modal [dir=rtl] .is-horizontal .tabs--secondary::after,#layout-builder-modal [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list::after,.media-library-widget-modal [dir=rtl] .is-horizontal .tabs--primary::after,.media-library-widget-modal [dir=rtl] .is-horizontal .tabs--secondary::after,.media-library-widget-modal [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list::after,form.media-form [dir=rtl] .is-horizontal .tabs--primary::after,form.media-form [dir=rtl] .is-horizontal .tabs--secondary::after,form.media-form [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list::after {
     right: var(--gin-spacing-xs);
   }
 }
-#layout-builder-modal .is-horizontal .tabs--primary .tabs__tab,
-#layout-builder-modal .is-horizontal .tabs--primary .horizontal-tab-button,
-#layout-builder-modal .is-horizontal .tabs--secondary .tabs__tab,
-#layout-builder-modal .is-horizontal .tabs--secondary .horizontal-tab-button,
-#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list .tabs__tab,
-#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list .horizontal-tab-button,
-.media-library-widget-modal .is-horizontal .tabs--primary .tabs__tab,
-.media-library-widget-modal .is-horizontal .tabs--primary .horizontal-tab-button,
-.media-library-widget-modal .is-horizontal .tabs--secondary .tabs__tab,
-.media-library-widget-modal .is-horizontal .tabs--secondary .horizontal-tab-button,
-.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list .tabs__tab,
-.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list .horizontal-tab-button,
-form.media-form .is-horizontal .tabs--primary .tabs__tab,
-form.media-form .is-horizontal .tabs--primary .horizontal-tab-button,
-form.media-form .is-horizontal .tabs--secondary .tabs__tab,
-form.media-form .is-horizontal .tabs--secondary .horizontal-tab-button,
-form.media-form .horizontal-tabs ul.horizontal-tabs-list .tabs__tab,
-form.media-form .horizontal-tabs ul.horizontal-tabs-list .horizontal-tab-button {
+
+#layout-builder-modal .is-horizontal .tabs--primary .tabs__tab,#layout-builder-modal .is-horizontal .tabs--primary .horizontal-tab-button,#layout-builder-modal .is-horizontal .tabs--secondary .tabs__tab,#layout-builder-modal .is-horizontal .tabs--secondary .horizontal-tab-button,#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list .tabs__tab,#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list .horizontal-tab-button,.media-library-widget-modal .is-horizontal .tabs--primary .tabs__tab,.media-library-widget-modal .is-horizontal .tabs--primary .horizontal-tab-button,.media-library-widget-modal .is-horizontal .tabs--secondary .tabs__tab,.media-library-widget-modal .is-horizontal .tabs--secondary .horizontal-tab-button,.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list .tabs__tab,.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list .horizontal-tab-button,form.media-form .is-horizontal .tabs--primary .tabs__tab,form.media-form .is-horizontal .tabs--primary .horizontal-tab-button,form.media-form .is-horizontal .tabs--secondary .tabs__tab,form.media-form .is-horizontal .tabs--secondary .horizontal-tab-button,form.media-form .horizontal-tabs ul.horizontal-tabs-list .tabs__tab,form.media-form .horizontal-tabs ul.horizontal-tabs-list .horizontal-tab-button {
   position: relative;
 }
-#layout-builder-modal .is-horizontal .tabs--primary .tabs__tab:focus-within::after,
-#layout-builder-modal .is-horizontal .tabs--primary .horizontal-tab-button:focus-within::after,
-#layout-builder-modal .is-horizontal .tabs--secondary .tabs__tab:focus-within::after,
-#layout-builder-modal .is-horizontal .tabs--secondary .horizontal-tab-button:focus-within::after,
-#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list .tabs__tab:focus-within::after,
-#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list .horizontal-tab-button:focus-within::after,
-.media-library-widget-modal .is-horizontal .tabs--primary .tabs__tab:focus-within::after,
-.media-library-widget-modal .is-horizontal .tabs--primary .horizontal-tab-button:focus-within::after,
-.media-library-widget-modal .is-horizontal .tabs--secondary .tabs__tab:focus-within::after,
-.media-library-widget-modal .is-horizontal .tabs--secondary .horizontal-tab-button:focus-within::after,
-.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list .tabs__tab:focus-within::after,
-.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list .horizontal-tab-button:focus-within::after,
-form.media-form .is-horizontal .tabs--primary .tabs__tab:focus-within::after,
-form.media-form .is-horizontal .tabs--primary .horizontal-tab-button:focus-within::after,
-form.media-form .is-horizontal .tabs--secondary .tabs__tab:focus-within::after,
-form.media-form .is-horizontal .tabs--secondary .horizontal-tab-button:focus-within::after,
-form.media-form .horizontal-tabs ul.horizontal-tabs-list .tabs__tab:focus-within::after,
-form.media-form .horizontal-tabs ul.horizontal-tabs-list .horizontal-tab-button:focus-within::after {
+
+#layout-builder-modal .is-horizontal .tabs--primary .tabs__tab:focus-within::after,#layout-builder-modal .is-horizontal .tabs--primary .horizontal-tab-button:focus-within::after,#layout-builder-modal .is-horizontal .tabs--secondary .tabs__tab:focus-within::after,#layout-builder-modal .is-horizontal .tabs--secondary .horizontal-tab-button:focus-within::after,#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list .tabs__tab:focus-within::after,#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list .horizontal-tab-button:focus-within::after,.media-library-widget-modal .is-horizontal .tabs--primary .tabs__tab:focus-within::after,.media-library-widget-modal .is-horizontal .tabs--primary .horizontal-tab-button:focus-within::after,.media-library-widget-modal .is-horizontal .tabs--secondary .tabs__tab:focus-within::after,.media-library-widget-modal .is-horizontal .tabs--secondary .horizontal-tab-button:focus-within::after,.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list .tabs__tab:focus-within::after,.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list .horizontal-tab-button:focus-within::after,form.media-form .is-horizontal .tabs--primary .tabs__tab:focus-within::after,form.media-form .is-horizontal .tabs--primary .horizontal-tab-button:focus-within::after,form.media-form .is-horizontal .tabs--secondary .tabs__tab:focus-within::after,form.media-form .is-horizontal .tabs--secondary .horizontal-tab-button:focus-within::after,form.media-form .horizontal-tabs ul.horizontal-tabs-list .tabs__tab:focus-within::after,form.media-form .horizontal-tabs ul.horizontal-tabs-list .horizontal-tab-button:focus-within::after {
   content: "";
   width: calc(100% + var(--gin-spacing-xs));
   height: 4px;
   background: var(--gin-bg-app);
   display: block;
   position: absolute;
-  bottom: calc(var(--gin-spacing-xxs) * -1);
+  bottom: calc(var(--gin-spacing-xxs)*-1);
   z-index: 3;
 }
-#layout-builder-modal [dir=ltr] .is-horizontal .tabs--primary .tabs__tab:focus-within::after,
-#layout-builder-modal [dir=ltr] .is-horizontal .tabs--primary .horizontal-tab-button:focus-within::after,
-#layout-builder-modal [dir=ltr] .is-horizontal .tabs--secondary .tabs__tab:focus-within::after,
-#layout-builder-modal [dir=ltr] .is-horizontal .tabs--secondary .horizontal-tab-button:focus-within::after,
-#layout-builder-modal [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list .tabs__tab:focus-within::after,
-#layout-builder-modal [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list .horizontal-tab-button:focus-within::after,
-.media-library-widget-modal [dir=ltr] .is-horizontal .tabs--primary .tabs__tab:focus-within::after,
-.media-library-widget-modal [dir=ltr] .is-horizontal .tabs--primary .horizontal-tab-button:focus-within::after,
-.media-library-widget-modal [dir=ltr] .is-horizontal .tabs--secondary .tabs__tab:focus-within::after,
-.media-library-widget-modal [dir=ltr] .is-horizontal .tabs--secondary .horizontal-tab-button:focus-within::after,
-.media-library-widget-modal [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list .tabs__tab:focus-within::after,
-.media-library-widget-modal [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list .horizontal-tab-button:focus-within::after,
-form.media-form [dir=ltr] .is-horizontal .tabs--primary .tabs__tab:focus-within::after,
-form.media-form [dir=ltr] .is-horizontal .tabs--primary .horizontal-tab-button:focus-within::after,
-form.media-form [dir=ltr] .is-horizontal .tabs--secondary .tabs__tab:focus-within::after,
-form.media-form [dir=ltr] .is-horizontal .tabs--secondary .horizontal-tab-button:focus-within::after,
-form.media-form [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list .tabs__tab:focus-within::after,
-form.media-form [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list .horizontal-tab-button:focus-within::after {
-  left: calc(var(--gin-spacing-xxs) * -1);
+
+#layout-builder-modal [dir=ltr] .is-horizontal .tabs--primary .tabs__tab:focus-within::after,#layout-builder-modal [dir=ltr] .is-horizontal .tabs--primary .horizontal-tab-button:focus-within::after,#layout-builder-modal [dir=ltr] .is-horizontal .tabs--secondary .tabs__tab:focus-within::after,#layout-builder-modal [dir=ltr] .is-horizontal .tabs--secondary .horizontal-tab-button:focus-within::after,#layout-builder-modal [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list .tabs__tab:focus-within::after,#layout-builder-modal [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list .horizontal-tab-button:focus-within::after,.media-library-widget-modal [dir=ltr] .is-horizontal .tabs--primary .tabs__tab:focus-within::after,.media-library-widget-modal [dir=ltr] .is-horizontal .tabs--primary .horizontal-tab-button:focus-within::after,.media-library-widget-modal [dir=ltr] .is-horizontal .tabs--secondary .tabs__tab:focus-within::after,.media-library-widget-modal [dir=ltr] .is-horizontal .tabs--secondary .horizontal-tab-button:focus-within::after,.media-library-widget-modal [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list .tabs__tab:focus-within::after,.media-library-widget-modal [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list .horizontal-tab-button:focus-within::after,form.media-form [dir=ltr] .is-horizontal .tabs--primary .tabs__tab:focus-within::after,form.media-form [dir=ltr] .is-horizontal .tabs--primary .horizontal-tab-button:focus-within::after,form.media-form [dir=ltr] .is-horizontal .tabs--secondary .tabs__tab:focus-within::after,form.media-form [dir=ltr] .is-horizontal .tabs--secondary .horizontal-tab-button:focus-within::after,form.media-form [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list .tabs__tab:focus-within::after,form.media-form [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list .horizontal-tab-button:focus-within::after {
+  left: calc(var(--gin-spacing-xxs)*-1);
 }
-#layout-builder-modal [dir=rtl] .is-horizontal .tabs--primary .tabs__tab:focus-within::after,
-#layout-builder-modal [dir=rtl] .is-horizontal .tabs--primary .horizontal-tab-button:focus-within::after,
-#layout-builder-modal [dir=rtl] .is-horizontal .tabs--secondary .tabs__tab:focus-within::after,
-#layout-builder-modal [dir=rtl] .is-horizontal .tabs--secondary .horizontal-tab-button:focus-within::after,
-#layout-builder-modal [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list .tabs__tab:focus-within::after,
-#layout-builder-modal [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list .horizontal-tab-button:focus-within::after,
-.media-library-widget-modal [dir=rtl] .is-horizontal .tabs--primary .tabs__tab:focus-within::after,
-.media-library-widget-modal [dir=rtl] .is-horizontal .tabs--primary .horizontal-tab-button:focus-within::after,
-.media-library-widget-modal [dir=rtl] .is-horizontal .tabs--secondary .tabs__tab:focus-within::after,
-.media-library-widget-modal [dir=rtl] .is-horizontal .tabs--secondary .horizontal-tab-button:focus-within::after,
-.media-library-widget-modal [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list .tabs__tab:focus-within::after,
-.media-library-widget-modal [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list .horizontal-tab-button:focus-within::after,
-form.media-form [dir=rtl] .is-horizontal .tabs--primary .tabs__tab:focus-within::after,
-form.media-form [dir=rtl] .is-horizontal .tabs--primary .horizontal-tab-button:focus-within::after,
-form.media-form [dir=rtl] .is-horizontal .tabs--secondary .tabs__tab:focus-within::after,
-form.media-form [dir=rtl] .is-horizontal .tabs--secondary .horizontal-tab-button:focus-within::after,
-form.media-form [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list .tabs__tab:focus-within::after,
-form.media-form [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list .horizontal-tab-button:focus-within::after {
-  right: calc(var(--gin-spacing-xxs) * -1);
+
+#layout-builder-modal [dir=rtl] .is-horizontal .tabs--primary .tabs__tab:focus-within::after,#layout-builder-modal [dir=rtl] .is-horizontal .tabs--primary .horizontal-tab-button:focus-within::after,#layout-builder-modal [dir=rtl] .is-horizontal .tabs--secondary .tabs__tab:focus-within::after,#layout-builder-modal [dir=rtl] .is-horizontal .tabs--secondary .horizontal-tab-button:focus-within::after,#layout-builder-modal [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list .tabs__tab:focus-within::after,#layout-builder-modal [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list .horizontal-tab-button:focus-within::after,.media-library-widget-modal [dir=rtl] .is-horizontal .tabs--primary .tabs__tab:focus-within::after,.media-library-widget-modal [dir=rtl] .is-horizontal .tabs--primary .horizontal-tab-button:focus-within::after,.media-library-widget-modal [dir=rtl] .is-horizontal .tabs--secondary .tabs__tab:focus-within::after,.media-library-widget-modal [dir=rtl] .is-horizontal .tabs--secondary .horizontal-tab-button:focus-within::after,.media-library-widget-modal [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list .tabs__tab:focus-within::after,.media-library-widget-modal [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list .horizontal-tab-button:focus-within::after,form.media-form [dir=rtl] .is-horizontal .tabs--primary .tabs__tab:focus-within::after,form.media-form [dir=rtl] .is-horizontal .tabs--primary .horizontal-tab-button:focus-within::after,form.media-form [dir=rtl] .is-horizontal .tabs--secondary .tabs__tab:focus-within::after,form.media-form [dir=rtl] .is-horizontal .tabs--secondary .horizontal-tab-button:focus-within::after,form.media-form [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list .tabs__tab:focus-within::after,form.media-form [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list .horizontal-tab-button:focus-within::after {
+  right: calc(var(--gin-spacing-xxs)*-1);
 }
-#layout-builder-modal .is-horizontal .tabs--primary .horizontal-tab-button:focus-within::after,
-#layout-builder-modal .is-horizontal .tabs--secondary .horizontal-tab-button:focus-within::after,
-#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list .horizontal-tab-button:focus-within::after,
-.media-library-widget-modal .is-horizontal .tabs--primary .horizontal-tab-button:focus-within::after,
-.media-library-widget-modal .is-horizontal .tabs--secondary .horizontal-tab-button:focus-within::after,
-.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list .horizontal-tab-button:focus-within::after,
-form.media-form .is-horizontal .tabs--primary .horizontal-tab-button:focus-within::after,
-form.media-form .is-horizontal .tabs--secondary .horizontal-tab-button:focus-within::after,
-form.media-form .horizontal-tabs ul.horizontal-tabs-list .horizontal-tab-button:focus-within::after {
+
+#layout-builder-modal .is-horizontal .tabs--primary .horizontal-tab-button:focus-within::after,#layout-builder-modal .is-horizontal .tabs--secondary .horizontal-tab-button:focus-within::after,#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list .horizontal-tab-button:focus-within::after,.media-library-widget-modal .is-horizontal .tabs--primary .horizontal-tab-button:focus-within::after,.media-library-widget-modal .is-horizontal .tabs--secondary .horizontal-tab-button:focus-within::after,.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list .horizontal-tab-button:focus-within::after,form.media-form .is-horizontal .tabs--primary .horizontal-tab-button:focus-within::after,form.media-form .is-horizontal .tabs--secondary .horizontal-tab-button:focus-within::after,form.media-form .horizontal-tabs ul.horizontal-tabs-list .horizontal-tab-button:focus-within::after {
   background: var(--gin-bg-layer);
 }
-#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list::before,
-.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list::before,
-form.media-form .horizontal-tabs ul.horizontal-tabs-list::before {
+
+#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list::before,.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list::before,form.media-form .horizontal-tabs ul.horizontal-tabs-list::before {
   z-index: 1;
   background: var(--gin-bg-layer);
 }
-#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list::after,
-.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list::after,
-form.media-form .horizontal-tabs ul.horizontal-tabs-list::after {
+
+#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list::after,.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list::after,form.media-form .horizontal-tabs ul.horizontal-tabs-list::after {
   max-width: calc(100% - var(--gin-spacing-m));
 }
-#layout-builder-modal [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list::after,
-.media-library-widget-modal [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list::after,
-form.media-form [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list::after {
+
+#layout-builder-modal [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list::after,.media-library-widget-modal [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list::after,form.media-form [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list::after {
   left: var(--gin-spacing-xs);
 }
-#layout-builder-modal [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list::after,
-.media-library-widget-modal [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list::after,
-form.media-form [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list::after {
+
+#layout-builder-modal [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list::after,.media-library-widget-modal [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list::after,form.media-form [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list::after {
   right: var(--gin-spacing-xs);
 }
+
 @media (min-width: 48em) {
-  #layout-builder-modal .is-horizontal .tabs--primary,
-  #layout-builder-modal .is-horizontal .tabs--secondary,
-  .media-library-widget-modal .is-horizontal .tabs--primary,
-  .media-library-widget-modal .is-horizontal .tabs--secondary,
-  form.media-form .is-horizontal .tabs--primary,
-  form.media-form .is-horizontal .tabs--secondary {
+  #layout-builder-modal .is-horizontal .tabs--primary,#layout-builder-modal .is-horizontal .tabs--secondary,.media-library-widget-modal .is-horizontal .tabs--primary,.media-library-widget-modal .is-horizontal .tabs--secondary,form.media-form .is-horizontal .tabs--primary,form.media-form .is-horizontal .tabs--secondary {
     margin-left: 0;
     margin-right: 0;
   }
 }
+
 @media (min-width: 48em) {
-  #layout-builder-modal .tabs--primary,
-  .media-library-widget-modal .tabs--primary,
-  form.media-form .tabs--primary {
+  #layout-builder-modal .tabs--primary,.media-library-widget-modal .tabs--primary,form.media-form .tabs--primary {
     margin-bottom: 0;
   }
 }
+
 @media (min-width: 48em) {
-  #layout-builder-modal .is-horizontal .tabs--primary::after,
-  .media-library-widget-modal .is-horizontal .tabs--primary::after,
-  form.media-form .is-horizontal .tabs--primary::after {
+  #layout-builder-modal .is-horizontal .tabs--primary::after,.media-library-widget-modal .is-horizontal .tabs--primary::after,form.media-form .is-horizontal .tabs--primary::after {
     border-bottom: 0 none;
   }
-  #layout-builder-modal .gin--high-contrast-mode .is-horizontal .tabs--primary::after,
-  .media-library-widget-modal .gin--high-contrast-mode .is-horizontal .tabs--primary::after,
-  form.media-form .gin--high-contrast-mode .is-horizontal .tabs--primary::after {
+
+  #layout-builder-modal .gin--high-contrast-mode .is-horizontal .tabs--primary::after,.media-library-widget-modal .gin--high-contrast-mode .is-horizontal .tabs--primary::after,form.media-form .gin--high-contrast-mode .is-horizontal .tabs--primary::after {
     border-bottom: 1px solid;
   }
 }
+
 @media (max-width: 47.99em) {
-  #layout-builder-modal .is-horizontal .tabs--primary .tabs__tab,
-  .media-library-widget-modal .is-horizontal .tabs--primary .tabs__tab,
-  form.media-form .is-horizontal .tabs--primary .tabs__tab {
+  #layout-builder-modal .is-horizontal .tabs--primary .tabs__tab,.media-library-widget-modal .is-horizontal .tabs--primary .tabs__tab,form.media-form .is-horizontal .tabs--primary .tabs__tab {
     background-color: var(--gin-bg-layer);
     border-bottom: 1px solid var(--gin-border-color-layer2);
   }
-  #layout-builder-modal .is-horizontal .tabs--primary .tabs__tab[data-original-order="0"],
-  .media-library-widget-modal .is-horizontal .tabs--primary .tabs__tab[data-original-order="0"],
-  form.media-form .is-horizontal .tabs--primary .tabs__tab[data-original-order="0"] {
+
+  #layout-builder-modal .is-horizontal .tabs--primary .tabs__tab[data-original-order="0"],.media-library-widget-modal .is-horizontal .tabs--primary .tabs__tab[data-original-order="0"],form.media-form .is-horizontal .tabs--primary .tabs__tab[data-original-order="0"] {
     border-bottom: none;
   }
 }
+
 @media (min-width: 48em) {
-  #layout-builder-modal .is-horizontal .tabs--primary .tabs__tab:focus-within::after,
-  .media-library-widget-modal .is-horizontal .tabs--primary .tabs__tab:focus-within::after,
-  form.media-form .is-horizontal .tabs--primary .tabs__tab:focus-within::after {
+  #layout-builder-modal .is-horizontal .tabs--primary .tabs__tab:focus-within::after,.media-library-widget-modal .is-horizontal .tabs--primary .tabs__tab:focus-within::after,form.media-form .is-horizontal .tabs--primary .tabs__tab:focus-within::after {
     display: none;
   }
 }
-#layout-builder-modal .is-horizontal .tabs--primary .tabs__link,
-.media-library-widget-modal .is-horizontal .tabs--primary .tabs__link,
-form.media-form .is-horizontal .tabs--primary .tabs__link {
+
+#layout-builder-modal .is-horizontal .tabs--primary .tabs__link,.media-library-widget-modal .is-horizontal .tabs--primary .tabs__link,form.media-form .is-horizontal .tabs--primary .tabs__link {
   min-height: var(--gin-spacing-xxl);
   height: 100%;
 }
+
 @media (min-width: 48em) {
-  #layout-builder-modal .is-horizontal .tabs--primary .tabs__link,
-  .media-library-widget-modal .is-horizontal .tabs--primary .tabs__link,
-  form.media-form .is-horizontal .tabs--primary .tabs__link {
+  #layout-builder-modal .is-horizontal .tabs--primary .tabs__link,.media-library-widget-modal .is-horizontal .tabs--primary .tabs__link,form.media-form .is-horizontal .tabs--primary .tabs__link {
     padding: var(--gin-spacing-s) var(--gin-spacing-m);
     min-height: 0;
     border-radius: 48px;
   }
-  #layout-builder-modal [dir=ltr] .is-horizontal .tabs--primary .tabs__link,
-  .media-library-widget-modal [dir=ltr] .is-horizontal .tabs--primary .tabs__link,
-  form.media-form [dir=ltr] .is-horizontal .tabs--primary .tabs__link {
-    margin-right: 0.25em;
+
+  #layout-builder-modal [dir=ltr] .is-horizontal .tabs--primary .tabs__link,.media-library-widget-modal [dir=ltr] .is-horizontal .tabs--primary .tabs__link,form.media-form [dir=ltr] .is-horizontal .tabs--primary .tabs__link {
+    margin-right: .25em;
   }
-  #layout-builder-modal [dir=rtl] .is-horizontal .tabs--primary .tabs__link,
-  .media-library-widget-modal [dir=rtl] .is-horizontal .tabs--primary .tabs__link,
-  form.media-form [dir=rtl] .is-horizontal .tabs--primary .tabs__link {
-    margin-left: 0.25em;
+
+  #layout-builder-modal [dir=rtl] .is-horizontal .tabs--primary .tabs__link,.media-library-widget-modal [dir=rtl] .is-horizontal .tabs--primary .tabs__link,form.media-form [dir=rtl] .is-horizontal .tabs--primary .tabs__link {
+    margin-left: .25em;
   }
 }
+
 @media (min-width: 48em) {
-  #layout-builder-modal .is-horizontal .tabs--primary .tabs__link.is-active,
-  .media-library-widget-modal .is-horizontal .tabs--primary .tabs__link.is-active,
-  form.media-form .is-horizontal .tabs--primary .tabs__link.is-active {
+  #layout-builder-modal .is-horizontal .tabs--primary .tabs__link.is-active,.media-library-widget-modal .is-horizontal .tabs--primary .tabs__link.is-active,form.media-form .is-horizontal .tabs--primary .tabs__link.is-active {
     color: var(--gin-color-primary-active);
     background: var(--gin-color-primary-light);
   }
 }
-#layout-builder-modal .is-horizontal .tabs--primary .tabs__link.is-active::before,
-.media-library-widget-modal .is-horizontal .tabs--primary .tabs__link.is-active::before,
-form.media-form .is-horizontal .tabs--primary .tabs__link.is-active::before {
+
+#layout-builder-modal .is-horizontal .tabs--primary .tabs__link.is-active::before,.media-library-widget-modal .is-horizontal .tabs--primary .tabs__link.is-active::before,form.media-form .is-horizontal .tabs--primary .tabs__link.is-active::before {
   display: none;
 }
-#layout-builder-modal .tabs__trigger svg,
-.media-library-widget-modal .tabs__trigger svg,
-form.media-form .tabs__trigger svg {
+
+#layout-builder-modal .tabs__trigger svg,.media-library-widget-modal .tabs__trigger svg,form.media-form .tabs__trigger svg {
   stroke: var(--gin-color-primary);
 }
+
 @media (min-width: 48em) {
-  #layout-builder-modal .is-horizontal .tabs--secondary,
-  .media-library-widget-modal .is-horizontal .tabs--secondary,
-  form.media-form .is-horizontal .tabs--secondary {
+  #layout-builder-modal .is-horizontal .tabs--secondary,.media-library-widget-modal .is-horizontal .tabs--secondary,form.media-form .is-horizontal .tabs--secondary {
     margin-top: var(--gin-spacing-m);
   }
-  #layout-builder-modal .is-horizontal .tabs--secondary::before,
-  .media-library-widget-modal .is-horizontal .tabs--secondary::before,
-  form.media-form .is-horizontal .tabs--secondary::before {
+
+  #layout-builder-modal .is-horizontal .tabs--secondary::before,.media-library-widget-modal .is-horizontal .tabs--secondary::before,form.media-form .is-horizontal .tabs--secondary::before {
     width: 100%;
   }
 }
-#layout-builder-modal .is-horizontal .tabs--secondary .tabs__link,
-.media-library-widget-modal .is-horizontal .tabs--secondary .tabs__link,
-form.media-form .is-horizontal .tabs--secondary .tabs__link {
+
+#layout-builder-modal .is-horizontal .tabs--secondary .tabs__link,.media-library-widget-modal .is-horizontal .tabs--secondary .tabs__link,form.media-form .is-horizontal .tabs--secondary .tabs__link {
   min-height: 2.5rem;
   padding: var(--gin-spacing-xs) var(--gin-spacing-m) var(--gin-spacing-m);
   font-size: var(--gin-font-size-s);
   border-radius: var(--gin-border-m) var(--gin-border-m) 0 0;
 }
-#layout-builder-modal .horizontal-tabs,
-.media-library-widget-modal .horizontal-tabs,
-form.media-form .horizontal-tabs {
+
+#layout-builder-modal .horizontal-tabs,.media-library-widget-modal .horizontal-tabs,form.media-form .horizontal-tabs {
   position: static !important;
   display: flex;
   flex-wrap: wrap;
   width: 100%;
   border: 0 none;
-  margin-top: calc(var(--gin-spacing-m) * -1);
+  margin-top: calc(var(--gin-spacing-m)*-1);
 }
-#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list,
-.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list,
-form.media-form .horizontal-tabs ul.horizontal-tabs-list {
+
+#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list,.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list,form.media-form .horizontal-tabs ul.horizontal-tabs-list {
   background: none;
   border-bottom: 0 none;
   overflow: hidden;
 }
-#layout-builder-modal [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list,
-.media-library-widget-modal [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list,
-form.media-form [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list {
+
+#layout-builder-modal [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list,.media-library-widget-modal [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list,form.media-form [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list {
   border-right: 0 none;
 }
-#layout-builder-modal [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list,
-.media-library-widget-modal [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list,
-form.media-form [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list {
+
+#layout-builder-modal [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list,.media-library-widget-modal [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list,form.media-form [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list {
   border-left: 0 none;
 }
+
 @media (min-width: 48em) {
-  #layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list:after,
-  .media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list:after,
-  form.media-form .horizontal-tabs ul.horizontal-tabs-list:after {
+  #layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list:after,.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list:after,form.media-form .horizontal-tabs ul.horizontal-tabs-list:after {
     max-width: calc(100% - var(--gin-spacing-m));
   }
-  #layout-builder-modal [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list:after,
-  .media-library-widget-modal [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list:after,
-  form.media-form [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list:after {
+
+  #layout-builder-modal [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list:after,.media-library-widget-modal [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list:after,form.media-form [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list:after {
     left: var(--gin-spacing-xs);
   }
-  #layout-builder-modal [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list:after,
-  .media-library-widget-modal [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list:after,
-  form.media-form [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list:after {
+
+  #layout-builder-modal [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list:after,.media-library-widget-modal [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list:after,form.media-form [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list:after {
     right: var(--gin-spacing-xs);
   }
 }
-#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button,
-.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button,
-form.media-form .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button {
+
+#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button,.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button,form.media-form .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button {
   background: none;
   border-bottom: 0 none;
 }
-#layout-builder-modal [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button,
-.media-library-widget-modal [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button,
-form.media-form [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button {
+
+#layout-builder-modal [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button,.media-library-widget-modal [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button,form.media-form [dir=ltr] .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button {
   border-right: 0 none;
 }
-#layout-builder-modal [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button,
-.media-library-widget-modal [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button,
-form.media-form [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button {
+
+#layout-builder-modal [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button,.media-library-widget-modal [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button,form.media-form [dir=rtl] .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button {
   border-left: 0 none;
 }
-#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a,
-.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a,
-form.media-form .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a {
+
+#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a,.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a,form.media-form .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a {
   padding: var(--gin-spacing-xs) var(--gin-spacing-m) var(--gin-spacing-m);
   font-size: var(--gin-font-size-s);
   border-radius: var(--gin-border-m) var(--gin-border-m) 0 0;
 }
-#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a::before,
-.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a::before,
-form.media-form .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a::before {
+
+#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a::before,.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a::before,form.media-form .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a::before {
   content: "";
   display: block;
   position: absolute;
 }
-#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button.selected a,
-.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button.selected a,
-form.media-form .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button.selected a {
+
+#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button.selected a,.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button.selected a,form.media-form .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button.selected a {
   color: var(--gin-color-primary);
 }
-#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button.selected a::before,
-.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button.selected a::before,
-form.media-form .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button.selected a::before {
+
+#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button.selected a::before,.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button.selected a::before,form.media-form .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button.selected a::before {
   z-index: 1;
   border-left: none;
   border-right: none;
@@ -563,279 +340,188 @@ form.media-form .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-butto
   height: 3px;
   width: 100%;
 }
-#layout-builder-modal .horizontal-tabs .horizontal-tabs-panes,
-#layout-builder-modal .horizontal-tabs [data-horizontal-tabs-panes],
-.media-library-widget-modal .horizontal-tabs .horizontal-tabs-panes,
-.media-library-widget-modal .horizontal-tabs [data-horizontal-tabs-panes],
-form.media-form .horizontal-tabs .horizontal-tabs-panes,
-form.media-form .horizontal-tabs [data-horizontal-tabs-panes] {
+
+#layout-builder-modal .horizontal-tabs .horizontal-tabs,.media-library-widget-modal .horizontal-tabs .horizontal-tabs,form.media-form .horizontal-tabs .horizontal-tabs {
+  margin-top: var(--gin-spacing-m);
+}
+
+#layout-builder-modal .horizontal-tabs .horizontal-tabs-panes,#layout-builder-modal .horizontal-tabs [data-horizontal-tabs-panes],.media-library-widget-modal .horizontal-tabs .horizontal-tabs-panes,.media-library-widget-modal .horizontal-tabs [data-horizontal-tabs-panes],form.media-form .horizontal-tabs .horizontal-tabs-panes,form.media-form .horizontal-tabs [data-horizontal-tabs-panes] {
   width: 100%;
 }
-#layout-builder-modal .horizontal-tabs .horizontal-tabs-pane,
-.media-library-widget-modal .horizontal-tabs .horizontal-tabs-pane,
-form.media-form .horizontal-tabs .horizontal-tabs-pane {
+
+#layout-builder-modal .horizontal-tabs .horizontal-tabs-pane,.media-library-widget-modal .horizontal-tabs .horizontal-tabs-pane,form.media-form .horizontal-tabs .horizontal-tabs-pane {
   padding: 0;
   margin: 0;
   box-shadow: none;
 }
-#layout-builder-modal .horizontal-tabs .horizontal-tabs-pane > .details-wrapper,
-.media-library-widget-modal .horizontal-tabs .horizontal-tabs-pane > .details-wrapper,
-form.media-form .horizontal-tabs .horizontal-tabs-pane > .details-wrapper {
+
+#layout-builder-modal .horizontal-tabs .horizontal-tabs-pane>.details-wrapper,.media-library-widget-modal .horizontal-tabs .horizontal-tabs-pane>.details-wrapper,form.media-form .horizontal-tabs .horizontal-tabs-pane>.details-wrapper {
   margin: 0;
 }
-#layout-builder-modal .horizontal-tabs .horizontal-tabs-pane > .details-wrapper > .claro-details__description,
-.media-library-widget-modal .horizontal-tabs .horizontal-tabs-pane > .details-wrapper > .claro-details__description,
-form.media-form .horizontal-tabs .horizontal-tabs-pane > .details-wrapper > .claro-details__description {
+
+#layout-builder-modal .horizontal-tabs .horizontal-tabs-pane>.details-wrapper>.claro-details__description,.media-library-widget-modal .horizontal-tabs .horizontal-tabs-pane>.details-wrapper>.claro-details__description,form.media-form .horizontal-tabs .horizontal-tabs-pane>.details-wrapper>.claro-details__description {
   margin-top: var(--gin-spacing-m);
 }
-#layout-builder-modal .claro-details__summary::before,
-#layout-builder-modal .claro-details[open] > .claro-details__summary::before,
-.media-library-widget-modal .claro-details__summary::before,
-.media-library-widget-modal .claro-details[open] > .claro-details__summary::before,
-form.media-form .claro-details__summary::before,
-form.media-form .claro-details[open] > .claro-details__summary::before {
+
+#layout-builder-modal .claro-details__summary::before,#layout-builder-modal .claro-details[open]>.claro-details__summary::before,.media-library-widget-modal .claro-details__summary::before,.media-library-widget-modal .claro-details[open]>.claro-details__summary::before,form.media-form .claro-details__summary::before,form.media-form .claro-details[open]>.claro-details__summary::before {
   background: var(--gin-color-text);
   -webkit-mask-image: url("../../media/sprite.svg#handle-view");
-  mask-image: url("../../media/sprite.svg#handle-view");
+          mask-image: url("../../media/sprite.svg#handle-view");
   -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
   -webkit-mask-position: center center;
-  mask-position: center center;
+          mask-position: center center;
   -webkit-mask-size: 100% 100%;
-  mask-size: 100% 100%;
+          mask-size: 100% 100%;
 }
-#layout-builder-modal [dir=ltr] .claro-details__summary::before,
-#layout-builder-modal [dir=ltr] .claro-details[open] > .claro-details__summary::before,
-.media-library-widget-modal [dir=ltr] .claro-details__summary::before,
-.media-library-widget-modal [dir=ltr] .claro-details[open] > .claro-details__summary::before,
-form.media-form [dir=ltr] .claro-details__summary::before,
-form.media-form [dir=ltr] .claro-details[open] > .claro-details__summary::before {
+
+#layout-builder-modal [dir=ltr] .claro-details__summary::before,#layout-builder-modal [dir=ltr] .claro-details[open]>.claro-details__summary::before,.media-library-widget-modal [dir=ltr] .claro-details__summary::before,.media-library-widget-modal [dir=ltr] .claro-details[open]>.claro-details__summary::before,form.media-form [dir=ltr] .claro-details__summary::before,form.media-form [dir=ltr] .claro-details[open]>.claro-details__summary::before {
   left: 1.125rem;
 }
-#layout-builder-modal [dir=rtl] .claro-details__summary::before,
-#layout-builder-modal [dir=rtl] .claro-details[open] > .claro-details__summary::before,
-.media-library-widget-modal [dir=rtl] .claro-details__summary::before,
-.media-library-widget-modal [dir=rtl] .claro-details[open] > .claro-details__summary::before,
-form.media-form [dir=rtl] .claro-details__summary::before,
-form.media-form [dir=rtl] .claro-details[open] > .claro-details__summary::before {
+
+#layout-builder-modal [dir=rtl] .claro-details__summary::before,#layout-builder-modal [dir=rtl] .claro-details[open]>.claro-details__summary::before,.media-library-widget-modal [dir=rtl] .claro-details__summary::before,.media-library-widget-modal [dir=rtl] .claro-details[open]>.claro-details__summary::before,form.media-form [dir=rtl] .claro-details__summary::before,form.media-form [dir=rtl] .claro-details[open]>.claro-details__summary::before {
   right: 1.125rem;
 }
-#layout-builder-modal .claro-details__summary:hover::before,
-#layout-builder-modal .claro-details__summary:hover:focus::before,
-#layout-builder-modal .claro-details[open] > .claro-details__summary:hover::before,
-#layout-builder-modal .claro-details[open] > .claro-details__summary:focus::before,
-#layout-builder-modal .claro-details[open] > .claro-details__summary--accordion::before,
-#layout-builder-modal .claro-details[open] > .claro-details__summary--accordion-item::before,
-#layout-builder-modal .claro-details[open] > .claro-details__summary--vertical-tabs-item::before,
-.media-library-widget-modal .claro-details__summary:hover::before,
-.media-library-widget-modal .claro-details__summary:hover:focus::before,
-.media-library-widget-modal .claro-details[open] > .claro-details__summary:hover::before,
-.media-library-widget-modal .claro-details[open] > .claro-details__summary:focus::before,
-.media-library-widget-modal .claro-details[open] > .claro-details__summary--accordion::before,
-.media-library-widget-modal .claro-details[open] > .claro-details__summary--accordion-item::before,
-.media-library-widget-modal .claro-details[open] > .claro-details__summary--vertical-tabs-item::before,
-form.media-form .claro-details__summary:hover::before,
-form.media-form .claro-details__summary:hover:focus::before,
-form.media-form .claro-details[open] > .claro-details__summary:hover::before,
-form.media-form .claro-details[open] > .claro-details__summary:focus::before,
-form.media-form .claro-details[open] > .claro-details__summary--accordion::before,
-form.media-form .claro-details[open] > .claro-details__summary--accordion-item::before,
-form.media-form .claro-details[open] > .claro-details__summary--vertical-tabs-item::before {
+
+#layout-builder-modal .claro-details__summary:hover::before,#layout-builder-modal .claro-details__summary:hover:focus::before,#layout-builder-modal .claro-details[open]>.claro-details__summary:hover::before,#layout-builder-modal .claro-details[open]>.claro-details__summary:focus::before,#layout-builder-modal .claro-details[open]>.claro-details__summary--accordion::before,#layout-builder-modal .claro-details[open]>.claro-details__summary--accordion-item::before,#layout-builder-modal .claro-details[open]>.claro-details__summary--vertical-tabs-item::before,.media-library-widget-modal .claro-details__summary:hover::before,.media-library-widget-modal .claro-details__summary:hover:focus::before,.media-library-widget-modal .claro-details[open]>.claro-details__summary:hover::before,.media-library-widget-modal .claro-details[open]>.claro-details__summary:focus::before,.media-library-widget-modal .claro-details[open]>.claro-details__summary--accordion::before,.media-library-widget-modal .claro-details[open]>.claro-details__summary--accordion-item::before,.media-library-widget-modal .claro-details[open]>.claro-details__summary--vertical-tabs-item::before,form.media-form .claro-details__summary:hover::before,form.media-form .claro-details__summary:hover:focus::before,form.media-form .claro-details[open]>.claro-details__summary:hover::before,form.media-form .claro-details[open]>.claro-details__summary:focus::before,form.media-form .claro-details[open]>.claro-details__summary--accordion::before,form.media-form .claro-details[open]>.claro-details__summary--accordion-item::before,form.media-form .claro-details[open]>.claro-details__summary--vertical-tabs-item::before {
   background: var(--gin-color-primary);
 }
-#layout-builder-modal .claro-details__description,
-.media-library-widget-modal .claro-details__description,
-form.media-form .claro-details__description {
+
+#layout-builder-modal .claro-details__description,.media-library-widget-modal .claro-details__description,form.media-form .claro-details__description {
   color: var(--gin-color-text-light);
 }
-#layout-builder-modal .claro-details__wrapper--accordion,
-#layout-builder-modal .claro-details__wrapper--accordion-item,
-#layout-builder-modal .claro-details__wrapper--vertical-tabs-item,
-.media-library-widget-modal .claro-details__wrapper--accordion,
-.media-library-widget-modal .claro-details__wrapper--accordion-item,
-.media-library-widget-modal .claro-details__wrapper--vertical-tabs-item,
-form.media-form .claro-details__wrapper--accordion,
-form.media-form .claro-details__wrapper--accordion-item,
-form.media-form .claro-details__wrapper--vertical-tabs-item {
+
+#layout-builder-modal .claro-details__wrapper--accordion,#layout-builder-modal .claro-details__wrapper--accordion-item,#layout-builder-modal .claro-details__wrapper--vertical-tabs-item,.media-library-widget-modal .claro-details__wrapper--accordion,.media-library-widget-modal .claro-details__wrapper--accordion-item,.media-library-widget-modal .claro-details__wrapper--vertical-tabs-item,form.media-form .claro-details__wrapper--accordion,form.media-form .claro-details__wrapper--accordion-item,form.media-form .claro-details__wrapper--vertical-tabs-item {
   border-top: 1px solid var(--gin-border-color);
   background: var(--gin-bg-app);
 }
-#layout-builder-modal .gin--dark-mode .claro-details,
-#layout-builder-modal .gin--dark-mode .claro-details__summary--accordion,
-#layout-builder-modal .gin--dark-mode .claro-details__summary--accordion-item,
-#layout-builder-modal .gin--dark-mode .claro-details__summary--vertical-tabs-item,
-.media-library-widget-modal .gin--dark-mode .claro-details,
-.media-library-widget-modal .gin--dark-mode .claro-details__summary--accordion,
-.media-library-widget-modal .gin--dark-mode .claro-details__summary--accordion-item,
-.media-library-widget-modal .gin--dark-mode .claro-details__summary--vertical-tabs-item,
-form.media-form .gin--dark-mode .claro-details,
-form.media-form .gin--dark-mode .claro-details__summary--accordion,
-form.media-form .gin--dark-mode .claro-details__summary--accordion-item,
-form.media-form .gin--dark-mode .claro-details__summary--vertical-tabs-item {
+
+#layout-builder-modal .gin--dark-mode .claro-details,#layout-builder-modal .gin--dark-mode .claro-details__summary--accordion,#layout-builder-modal .gin--dark-mode .claro-details__summary--accordion-item,#layout-builder-modal .gin--dark-mode .claro-details__summary--vertical-tabs-item,.media-library-widget-modal .gin--dark-mode .claro-details,.media-library-widget-modal .gin--dark-mode .claro-details__summary--accordion,.media-library-widget-modal .gin--dark-mode .claro-details__summary--accordion-item,.media-library-widget-modal .gin--dark-mode .claro-details__summary--vertical-tabs-item,form.media-form .gin--dark-mode .claro-details,form.media-form .gin--dark-mode .claro-details__summary--accordion,form.media-form .gin--dark-mode .claro-details__summary--accordion-item,form.media-form .gin--dark-mode .claro-details__summary--vertical-tabs-item {
   background-color: transparent;
 }
-#layout-builder-modal .gin--dark-mode .claro-details,
-.media-library-widget-modal .gin--dark-mode .claro-details,
-form.media-form .gin--dark-mode .claro-details {
+
+#layout-builder-modal .gin--dark-mode .claro-details,.media-library-widget-modal .gin--dark-mode .claro-details,form.media-form .gin--dark-mode .claro-details {
   border-color: var(--gin-border-color);
 }
-#layout-builder-modal .gin--dark-mode .vertical-tabs__items,
-.media-library-widget-modal .gin--dark-mode .vertical-tabs__items,
-form.media-form .gin--dark-mode .vertical-tabs__items {
+
+#layout-builder-modal .gin--dark-mode .vertical-tabs__items,.media-library-widget-modal .gin--dark-mode .vertical-tabs__items,form.media-form .gin--dark-mode .vertical-tabs__items {
   background: none;
   border: 0 none;
 }
-#layout-builder-modal .gin--dark-mode .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link,
-.media-library-widget-modal .gin--dark-mode .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link,
-form.media-form .gin--dark-mode .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link {
+
+#layout-builder-modal .gin--dark-mode .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link,.media-library-widget-modal .gin--dark-mode .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link,form.media-form .gin--dark-mode .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link {
   background: var(--gin-bg-app);
   border-color: transparent;
 }
-#layout-builder-modal .gin--dark-mode .vertical-tabs__menu-link,
-.media-library-widget-modal .gin--dark-mode .vertical-tabs__menu-link,
-form.media-form .gin--dark-mode .vertical-tabs__menu-link {
+
+#layout-builder-modal .gin--dark-mode .vertical-tabs__menu-link,.media-library-widget-modal .gin--dark-mode .vertical-tabs__menu-link,form.media-form .gin--dark-mode .vertical-tabs__menu-link {
   color: var(--gin-color-text);
 }
-#layout-builder-modal .gin--dark-mode .vertical-tabs__menu-link-summary,
-.media-library-widget-modal .gin--dark-mode .vertical-tabs__menu-link-summary,
-form.media-form .gin--dark-mode .vertical-tabs__menu-link-summary {
+
+#layout-builder-modal .gin--dark-mode .vertical-tabs__menu-link-summary,.media-library-widget-modal .gin--dark-mode .vertical-tabs__menu-link-summary,form.media-form .gin--dark-mode .vertical-tabs__menu-link-summary {
   color: var(--gin-color-text-light);
 }
-#layout-builder-modal .gin--dark-mode .vertical-tabs .claro-details__wrapper,
-.media-library-widget-modal .gin--dark-mode .vertical-tabs .claro-details__wrapper,
-form.media-form .gin--dark-mode .vertical-tabs .claro-details__wrapper {
+
+#layout-builder-modal .gin--dark-mode .vertical-tabs .claro-details__wrapper,.media-library-widget-modal .gin--dark-mode .vertical-tabs .claro-details__wrapper,form.media-form .gin--dark-mode .vertical-tabs .claro-details__wrapper {
   background: var(--gin-bg-app);
 }
-#layout-builder-modal .vertical-tabs__items,
-.media-library-widget-modal .vertical-tabs__items,
-form.media-form .vertical-tabs__items {
+
+#layout-builder-modal .vertical-tabs__items,.media-library-widget-modal .vertical-tabs__items,form.media-form .vertical-tabs__items {
   border-radius: var(--gin-border-m);
 }
+
 @media (min-width: 64em) {
-  #layout-builder-modal [dir=ltr] .vertical-tabs__items,
-  .media-library-widget-modal [dir=ltr] .vertical-tabs__items,
-  form.media-form [dir=ltr] .vertical-tabs__items {
+  #layout-builder-modal [dir=ltr] .vertical-tabs__items,.media-library-widget-modal [dir=ltr] .vertical-tabs__items,form.media-form [dir=ltr] .vertical-tabs__items {
     border-top-left-radius: 0;
   }
-  #layout-builder-modal [dir=rtl] .vertical-tabs__items,
-  .media-library-widget-modal [dir=rtl] .vertical-tabs__items,
-  form.media-form [dir=rtl] .vertical-tabs__items {
+
+  #layout-builder-modal [dir=rtl] .vertical-tabs__items,.media-library-widget-modal [dir=rtl] .vertical-tabs__items,form.media-form [dir=rtl] .vertical-tabs__items {
     border-top-right-radius: 0;
   }
 }
-#layout-builder-modal .vertical-tabs__items .vertical-tabs__item,
-.media-library-widget-modal .vertical-tabs__items .vertical-tabs__item,
-form.media-form .vertical-tabs__items .vertical-tabs__item {
+
+#layout-builder-modal .vertical-tabs__items .vertical-tabs__item,.media-library-widget-modal .vertical-tabs__items .vertical-tabs__item,form.media-form .vertical-tabs__items .vertical-tabs__item {
   border-radius: 0;
 }
+
 @media (min-width: 85em) {
-  #layout-builder-modal .vertical-tabs__items .vertical-tabs__item,
-  .media-library-widget-modal .vertical-tabs__items .vertical-tabs__item,
-  form.media-form .vertical-tabs__items .vertical-tabs__item {
+  #layout-builder-modal .vertical-tabs__items .vertical-tabs__item,.media-library-widget-modal .vertical-tabs__items .vertical-tabs__item,form.media-form .vertical-tabs__items .vertical-tabs__item {
     border-bottom-right-radius: var(--gin-border-m);
     border-bottom-left-radius: var(--gin-border-m);
   }
-  #layout-builder-modal [dir=ltr] .vertical-tabs__items .vertical-tabs__item,
-  .media-library-widget-modal [dir=ltr] .vertical-tabs__items .vertical-tabs__item,
-  form.media-form [dir=ltr] .vertical-tabs__items .vertical-tabs__item {
+
+  #layout-builder-modal [dir=ltr] .vertical-tabs__items .vertical-tabs__item,.media-library-widget-modal [dir=ltr] .vertical-tabs__items .vertical-tabs__item,form.media-form [dir=ltr] .vertical-tabs__items .vertical-tabs__item {
     border-top-right-radius: var(--gin-border-m);
   }
-  #layout-builder-modal [dir=rtl] .vertical-tabs__items .vertical-tabs__item,
-  .media-library-widget-modal [dir=rtl] .vertical-tabs__items .vertical-tabs__item,
-  form.media-form [dir=rtl] .vertical-tabs__items .vertical-tabs__item {
+
+  #layout-builder-modal [dir=rtl] .vertical-tabs__items .vertical-tabs__item,.media-library-widget-modal [dir=rtl] .vertical-tabs__items .vertical-tabs__item,form.media-form [dir=rtl] .vertical-tabs__items .vertical-tabs__item {
     border-top-left-radius: var(--gin-border-m);
   }
-  #layout-builder-modal [dir=ltr] .vertical-tabs__items .vertical-tabs__item ~ .vertical-tabs__item,
-  .media-library-widget-modal [dir=ltr] .vertical-tabs__items .vertical-tabs__item ~ .vertical-tabs__item,
-  form.media-form [dir=ltr] .vertical-tabs__items .vertical-tabs__item ~ .vertical-tabs__item {
+
+  #layout-builder-modal [dir=ltr] .vertical-tabs__items .vertical-tabs__item~.vertical-tabs__item,.media-library-widget-modal [dir=ltr] .vertical-tabs__items .vertical-tabs__item~.vertical-tabs__item,form.media-form [dir=ltr] .vertical-tabs__items .vertical-tabs__item~.vertical-tabs__item {
     border-top-left-radius: var(--gin-border-m);
   }
-  #layout-builder-modal [dir=rtl] .vertical-tabs__items .vertical-tabs__item ~ .vertical-tabs__item,
-  .media-library-widget-modal [dir=rtl] .vertical-tabs__items .vertical-tabs__item ~ .vertical-tabs__item,
-  form.media-form [dir=rtl] .vertical-tabs__items .vertical-tabs__item ~ .vertical-tabs__item {
+
+  #layout-builder-modal [dir=rtl] .vertical-tabs__items .vertical-tabs__item~.vertical-tabs__item,.media-library-widget-modal [dir=rtl] .vertical-tabs__items .vertical-tabs__item~.vertical-tabs__item,form.media-form [dir=rtl] .vertical-tabs__items .vertical-tabs__item~.vertical-tabs__item {
     border-top-right-radius: var(--gin-border-m);
   }
 }
+
 @media (min-width: 64em) {
-  #layout-builder-modal [dir=ltr] .vertical-tabs__items .vertical-tabs__item .claro-details__summary,
-  .media-library-widget-modal [dir=ltr] .vertical-tabs__items .vertical-tabs__item .claro-details__summary,
-  form.media-form [dir=ltr] .vertical-tabs__items .vertical-tabs__item .claro-details__summary {
+  #layout-builder-modal [dir=ltr] .vertical-tabs__items .vertical-tabs__item .claro-details__summary,.media-library-widget-modal [dir=ltr] .vertical-tabs__items .vertical-tabs__item .claro-details__summary,form.media-form [dir=ltr] .vertical-tabs__items .vertical-tabs__item .claro-details__summary {
     padding-left: var(--gin-spacing-xxl);
   }
-  #layout-builder-modal [dir=rtl] .vertical-tabs__items .vertical-tabs__item .claro-details__summary,
-  .media-library-widget-modal [dir=rtl] .vertical-tabs__items .vertical-tabs__item .claro-details__summary,
-  form.media-form [dir=rtl] .vertical-tabs__items .vertical-tabs__item .claro-details__summary {
+
+  #layout-builder-modal [dir=rtl] .vertical-tabs__items .vertical-tabs__item .claro-details__summary,.media-library-widget-modal [dir=rtl] .vertical-tabs__items .vertical-tabs__item .claro-details__summary,form.media-form [dir=rtl] .vertical-tabs__items .vertical-tabs__item .claro-details__summary {
     padding-right: var(--gin-spacing-xxl);
   }
-  #layout-builder-modal [dir=ltr] .vertical-tabs__items .vertical-tabs__item .claro-details__summary::before,
-  .media-library-widget-modal [dir=ltr] .vertical-tabs__items .vertical-tabs__item .claro-details__summary::before,
-  form.media-form [dir=ltr] .vertical-tabs__items .vertical-tabs__item .claro-details__summary::before {
+
+  #layout-builder-modal [dir=ltr] .vertical-tabs__items .vertical-tabs__item .claro-details__summary::before,.media-library-widget-modal [dir=ltr] .vertical-tabs__items .vertical-tabs__item .claro-details__summary::before,form.media-form [dir=ltr] .vertical-tabs__items .vertical-tabs__item .claro-details__summary::before {
     left: var(--gin-spacing-m);
   }
-  #layout-builder-modal [dir=rtl] .vertical-tabs__items .vertical-tabs__item .claro-details__summary::before,
-  .media-library-widget-modal [dir=rtl] .vertical-tabs__items .vertical-tabs__item .claro-details__summary::before,
-  form.media-form [dir=rtl] .vertical-tabs__items .vertical-tabs__item .claro-details__summary::before {
+
+  #layout-builder-modal [dir=rtl] .vertical-tabs__items .vertical-tabs__item .claro-details__summary::before,.media-library-widget-modal [dir=rtl] .vertical-tabs__items .vertical-tabs__item .claro-details__summary::before,form.media-form [dir=rtl] .vertical-tabs__items .vertical-tabs__item .claro-details__summary::before {
     right: var(--gin-spacing-m);
   }
 }
-#layout-builder-modal .vertical-tabs__items .vertical-tabs__item .claro-details__wrapper,
-.media-library-widget-modal .vertical-tabs__items .vertical-tabs__item .claro-details__wrapper,
-form.media-form .vertical-tabs__items .vertical-tabs__item .claro-details__wrapper {
+
+#layout-builder-modal .vertical-tabs__items .vertical-tabs__item .claro-details__wrapper,.media-library-widget-modal .vertical-tabs__items .vertical-tabs__item .claro-details__wrapper,form.media-form .vertical-tabs__items .vertical-tabs__item .claro-details__wrapper {
   display: inline-block;
   width: 100%;
 }
-#layout-builder-modal .vertical-tabs__menu-item::before, #layout-builder-modal .vertical-tabs__menu-item::after,
-.media-library-widget-modal .vertical-tabs__menu-item::before,
-.media-library-widget-modal .vertical-tabs__menu-item::after,
-form.media-form .vertical-tabs__menu-item::before,
-form.media-form .vertical-tabs__menu-item::after {
+
+#layout-builder-modal .vertical-tabs__menu-item::before,#layout-builder-modal .vertical-tabs__menu-item::after,.media-library-widget-modal .vertical-tabs__menu-item::before,.media-library-widget-modal .vertical-tabs__menu-item::after,form.media-form .vertical-tabs__menu-item::before,form.media-form .vertical-tabs__menu-item::after {
   border-color: var(--gin-border-color);
 }
-#layout-builder-modal .vertical-tabs__menu-link:hover, #layout-builder-modal .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:hover,
-.media-library-widget-modal .vertical-tabs__menu-link:hover,
-.media-library-widget-modal .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:hover,
-form.media-form .vertical-tabs__menu-link:hover,
-form.media-form .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:hover {
+
+#layout-builder-modal .vertical-tabs__menu-link:hover,#layout-builder-modal .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:hover,.media-library-widget-modal .vertical-tabs__menu-link:hover,.media-library-widget-modal .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:hover,form.media-form .vertical-tabs__menu-link:hover,form.media-form .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:hover {
   color: var(--gin-color-primary);
 }
-#layout-builder-modal .vertical-tabs__menu-link:hover::before, #layout-builder-modal .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:hover::before,
-.media-library-widget-modal .vertical-tabs__menu-link:hover::before,
-.media-library-widget-modal .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:hover::before,
-form.media-form .vertical-tabs__menu-link:hover::before,
-form.media-form .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:hover::before {
+
+#layout-builder-modal .vertical-tabs__menu-link:hover::before,#layout-builder-modal .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:hover::before,.media-library-widget-modal .vertical-tabs__menu-link:hover::before,.media-library-widget-modal .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:hover::before,form.media-form .vertical-tabs__menu-link:hover::before,form.media-form .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:hover::before {
   background: var(--gin-bg-item-hover);
 }
-#layout-builder-modal [dir=ltr] [open] > .claro-details__summary--vertical-tabs-item:not(:focus):not(:active)::after,
-#layout-builder-modal [dir=ltr] [open] > .claro-details__summary--accordion-item:not(:focus):not(:active)::after,
-.media-library-widget-modal [dir=ltr] [open] > .claro-details__summary--vertical-tabs-item:not(:focus):not(:active)::after,
-.media-library-widget-modal [dir=ltr] [open] > .claro-details__summary--accordion-item:not(:focus):not(:active)::after,
-form.media-form [dir=ltr] [open] > .claro-details__summary--vertical-tabs-item:not(:focus):not(:active)::after,
-form.media-form [dir=ltr] [open] > .claro-details__summary--accordion-item:not(:focus):not(:active)::after {
+
+#layout-builder-modal [dir=ltr] [open]>.claro-details__summary--vertical-tabs-item:not(:focus):not(:active)::after,#layout-builder-modal [dir=ltr] [open]>.claro-details__summary--accordion-item:not(:focus):not(:active)::after,.media-library-widget-modal [dir=ltr] [open]>.claro-details__summary--vertical-tabs-item:not(:focus):not(:active)::after,.media-library-widget-modal [dir=ltr] [open]>.claro-details__summary--accordion-item:not(:focus):not(:active)::after,form.media-form [dir=ltr] [open]>.claro-details__summary--vertical-tabs-item:not(:focus):not(:active)::after,form.media-form [dir=ltr] [open]>.claro-details__summary--accordion-item:not(:focus):not(:active)::after {
   border-left-width: 5px;
 }
-#layout-builder-modal [dir=rtl] [open] > .claro-details__summary--vertical-tabs-item:not(:focus):not(:active)::after,
-#layout-builder-modal [dir=rtl] [open] > .claro-details__summary--accordion-item:not(:focus):not(:active)::after,
-.media-library-widget-modal [dir=rtl] [open] > .claro-details__summary--vertical-tabs-item:not(:focus):not(:active)::after,
-.media-library-widget-modal [dir=rtl] [open] > .claro-details__summary--accordion-item:not(:focus):not(:active)::after,
-form.media-form [dir=rtl] [open] > .claro-details__summary--vertical-tabs-item:not(:focus):not(:active)::after,
-form.media-form [dir=rtl] [open] > .claro-details__summary--accordion-item:not(:focus):not(:active)::after {
+
+#layout-builder-modal [dir=rtl] [open]>.claro-details__summary--vertical-tabs-item:not(:focus):not(:active)::after,#layout-builder-modal [dir=rtl] [open]>.claro-details__summary--accordion-item:not(:focus):not(:active)::after,.media-library-widget-modal [dir=rtl] [open]>.claro-details__summary--vertical-tabs-item:not(:focus):not(:active)::after,.media-library-widget-modal [dir=rtl] [open]>.claro-details__summary--accordion-item:not(:focus):not(:active)::after,form.media-form [dir=rtl] [open]>.claro-details__summary--vertical-tabs-item:not(:focus):not(:active)::after,form.media-form [dir=rtl] [open]>.claro-details__summary--accordion-item:not(:focus):not(:active)::after {
   border-right-width: 5px;
 }
+
 @media screen and (min-width: 85em) {
-  #layout-builder-modal html.js .vertical-tabs__item,
-  .media-library-widget-modal html.js .vertical-tabs__item,
-  form.media-form html.js .vertical-tabs__item {
+  #layout-builder-modal html.js .vertical-tabs__item,.media-library-widget-modal html.js .vertical-tabs__item,form.media-form html.js .vertical-tabs__item {
     overflow: visible;
     width: 100%;
   }
-  #layout-builder-modal html[dir=ltr].js .vertical-tabs__item,
-  .media-library-widget-modal html[dir=ltr].js .vertical-tabs__item,
-  form.media-form html[dir=ltr].js .vertical-tabs__item {
+
+  #layout-builder-modal html[dir=ltr].js .vertical-tabs__item,.media-library-widget-modal html[dir=ltr].js .vertical-tabs__item,form.media-form html[dir=ltr].js .vertical-tabs__item {
     float: left;
   }
-  #layout-builder-modal html[dir=rtl].js .vertical-tabs__item,
-  .media-library-widget-modal html[dir=rtl].js .vertical-tabs__item,
-  form.media-form html[dir=rtl].js .vertical-tabs__item {
+
+  #layout-builder-modal html[dir=rtl].js .vertical-tabs__item,.media-library-widget-modal html[dir=rtl].js .vertical-tabs__item,form.media-form html[dir=rtl].js .vertical-tabs__item {
     float: right;
   }
 }
+
