@@ -9,6 +9,7 @@ dependencies:
   - drupal:layout_builder
   - varbase_media:varbase_media
   - varbase_editor:varbase_editor
+  - varbase_components:varbase_components
   - layout_builder_restrictions:layout_builder_restrictions
 install:
   - entity_block
