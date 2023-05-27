@@ -32,13 +32,9 @@
     'block-' ~ plugin_id|clean_class,
   ]
 %}
-<div{{ attributes.addClass(classes) }}>
-  {{ title_prefix }}
-  {% if label %}
-    <h2{{ title_attributes }}>{{ label }}</h2>
-  {% endif %}
-  {{ title_suffix }}
-  {% block content %}
-    {{ content }}
-  {% endblock %}
-</div>
+{% include "varbase_components:block-cta" with {
+  title_tag: 'h2',
+  heading: label,
+  content: content,
+  attributes: attributes.addClass(classes)
+} %}
