@@ -1,4 +1,3 @@
 id: site_admin
 permissions:
   - 'create and edit custom blocks'
-  - 'view restricted block content'
