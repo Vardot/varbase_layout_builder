@@ -2,4 +2,4 @@ id: site_admin
 permissions:
   - 'create varbase_heading_block block content'
   - 'delete any varbase_heading_block block content'
-  - 'update any varbase_heading_block block content'
+  - 'edit any varbase_heading_block block content'

@@ -2,4 +2,4 @@ id: content_admin
 permissions:
   - 'create basic block content'
   - 'delete any basic block content'
-  - 'update any basic block content'
+  - 'edit any basic block content'

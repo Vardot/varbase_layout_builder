@@ -26,4 +26,4 @@ install:
   - bootstrap_layout_builder
   - block_library
   - allowed_formats
-  - block_content_permissions
+
