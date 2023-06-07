@@ -16,13 +16,13 @@ configure-section.admin:
 plugin.horizontal_alignment.layout_builder_form:
   css:
     theme:
-      css/theme/plugins/horizontal-alignment.css: {}
+      css/plugins/horizontal-alignment.css: {}
 
 # Vertical alignment.
 plugin.vertical_alignment.layout_builder_form:
   css:
     theme:
-      css/theme/plugins/vertical-alignment.css: {}
+      css/plugins/vertical-alignment.css: {}
 
 # local library for
 # AOS - Animate on scroll library.
@@ -138,8 +138,8 @@ gin:
       themes/gin/css/components/linkit.css: {}
       themes/gin/css/components/media_library.css: {}
       themes/gin/css/components/module_filter.css: {}
-      themes/gin/css/components/node_previewv: {}
-      themes/gin/css/components/paragraphs_eev: {}
+      themes/gin/css/components/node_preview.css: {}
+      themes/gin/css/components/paragraphs_ee.css: {}
       themes/gin/css/components/paragraphs.css: {}
       themes/gin/css/components/responsive_preview.css: {}
       themes/gin/css/components/revisions.css: {}

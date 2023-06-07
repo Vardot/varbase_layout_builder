@@ -7,18 +7,19 @@ const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
 
 const isDev = (process.env.NODE_ENV !== 'production');
 
-// Compiling SCSS files for Varbase Layout Builder styling enhancements.
+// Compiling SCSS files for custom Bootstrap Styles plugins.
 module.exports = {
   mode: 'production',
   entry: {
     // ################################################
     // SCSS
     // ################################################
-    // Theme
-    'vlb-enhancements.base': ['./scss/theme/vlb-enhancements.base.scss']
+    // Plugins
+    'horizontal-alignment': ['./scss/theme/plugins/horizontal-alignment.scss'],
+    'vertical-alignment': ['./scss/theme/plugins/vertical-alignment.scss'],
   },
   output: {
-    path: path.resolve(__dirname, 'css/theme'),
+    path: path.resolve(__dirname, 'css/plugins'),
     pathinfo: true,
     publicPath: '',
   },
@@ -32,7 +33,7 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[path][name].[ext]', //?[contenthash]
-              outputPath: '../../'
+              outputPath: '../../../'
             },
           },
           {

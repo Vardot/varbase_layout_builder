@@ -1,12 +1,13 @@
 const path = require('path');
-const isDev = (process.env.NODE_ENV !== 'production');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
-const postcssRTLCSS = require('postcss-rtlcss');
 
+const isDev = (process.env.NODE_ENV !== 'production');
+
+// Compiling SCSS files for Gin.
 module.exports = {
   mode: 'production',
   entry: {

@@ -11,6 +11,8 @@
     "theme:watch": "webpack --progress --config webpack.config.dev.js --watch",
     "claro:build": "webpack --progress --config webpack.config.build.claro.js",
     "gin:build": "webpack --progress --config webpack.config.build.gin.js",
+    "plugins:build": "webpack --progress --config webpack.config.build.plugins.js",
+    "theme:full-build": "yarn theme:build ; yarn plugins:build",
     "phpcs": "phpcs --standard=./.phpcs.xml .",
     "phpcbf": "phpcbf --standard=./.phpcs.xml .",
     "lint:js": "node ./node_modules/eslint/bin/eslint.js .",
@@ -22,6 +24,8 @@
   "keywords": [
     "SASS",
     "Bootstrap",
+    "Bootstrap Layout Builder",
+    "Bootstrap Styles",
     "Drupal",
     "Varbase",
     "Varbase Layout Builder"
