@@ -82,8 +82,7 @@ function varbase_layout_builder_form_alter(&$form, FormStateInterface $form_stat
 
   $config = \Drupal::config('varbase_layout_builder.settings');
   $use_claro = $config->get('use_claro');
-  if (isset($use_claro) && $use_claro == 1
-    && \Drupal::service('theme_handler')->themeExists('claro')) {
+  if (isset($use_claro) && $use_claro == 1) {
 
     $applicable_forms = [
       'layout_builder_add_block',
@@ -91,20 +90,25 @@ function varbase_layout_builder_form_alter(&$form, FormStateInterface $form_stat
       'media_image_edit_form',
     ];
 
+    $add_admin_theme = FALSE;
     if (in_array($form_id, $applicable_forms)) {
-      $form['#attached']['library'][] = 'varbase_layout_builder/claro';
+      $add_admin_theme = TRUE;
     }
     else {
       $current_path = \Drupal::service('path.current')->getPath();
       $url_object = \Drupal::service('path.validator')->getUrlIfValid($current_path);
-      $route_name = '';
-      if (isset($url_object) && is_object($url_object) && $url_object->isRouted()) {
-        $route_name = $url_object->getRouteName();
+      if (isset($url_object)
+        && is_object($url_object)
+        && $url_object->isRouted()
+        && $url_object->getRouteName() === 'layout_builder.overrides.node.view') {
+        $add_admin_theme = TRUE;
       }
+    }
 
-      if ($route_name === 'layout_builder.overrides.node.view') {
-        $form['#attached']['library'][] = 'varbase_layout_builder/claro';
-      }
+    if ($add_admin_theme
+      && \Drupal::service('theme_handler')->themeExists('claro')) {
+      // Add claro theme library.
+      $form['#attached']['library'][] = 'varbase_layout_builder/claro';
     }
   }
 }
