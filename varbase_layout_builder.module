@@ -97,30 +97,35 @@ function varbase_layout_builder_form_alter(&$form, FormStateInterface $form_stat
   $use_claro = $config->get('use_claro');
 
   if (isset($use_claro) && $use_claro == 1) {
-    $current_path = \Drupal::service('path.current')->getPath();
-    $url_object = \Drupal::service('path.validator')->getUrlIfValid($current_path);
-    $route_name = '';
-    if (isset($url_object) && is_object($url_object)) {
-      $route_name = $url_object->getRouteName();
-    }
-
     $applicable_forms = [
       'layout_builder_add_block',
       'layout_builder_update_block',
       'media_image_edit_form',
     ];
 
-    if (in_array($form_id, $applicable_forms)
-      || $route_name === 'layout_builder.overrides.node.view') {
+    $add_admin_theme = FALSE;
+    if (in_array($form_id, $applicable_forms)) {
+      $add_admin_theme = TRUE;
+    }
+    else {
+      $current_path = \Drupal::service('path.current')->getPath();
+      $url_object = \Drupal::service('path.validator')->getUrlIfValid($current_path);
+      if (isset($url_object) && is_object($url_object) && $url_object->isRouted()) {
+        if ($url_object->getRouteName() === 'layout_builder.overrides.node.view') {
+          $add_admin_theme = TRUE;
+        }
+      }
+    }
 
-        if (\Drupal::service('theme_handler')->themeExists('gin')) {
-          // Add claro theme libraries.
-          $form['#attached']['library'][] = 'varbase_layout_builder/gin';
-        }
-        elseif (\Drupal::service('theme_handler')->themeExists('claro')) {
-            // Add claro theme libraries.
-          $form['#attached']['library'][] = 'varbase_layout_builder/claro';
-        }
+    if ($add_admin_theme) {
+      if (\Drupal::service('theme_handler')->themeExists('gin')) {
+        // Add Gin theme library.
+        $form['#attached']['library'][] = 'varbase_layout_builder/gin';
+      }
+      elseif (\Drupal::service('theme_handler')->themeExists('claro')) {
+        // Add claro theme library.
+        $form['#attached']['library'][] = 'varbase_layout_builder/claro';
+      }
     }
   }
 }
@@ -414,7 +419,7 @@ function varbase_layout_builder_css_alter(&$css, AttachedAssetsInterface $assets
     if (\Drupal::service('theme.manager')->getActiveTheme()->getName() !== \Drupal::config('system.theme')->get('admin')) {
       unset($css['core/modules/layout_builder/css/off-canvas.css']);
     }
- 
+
   }
 }
 
@@ -437,7 +442,7 @@ function _is_layout_builder_route() {
     $layout_builder_route = TRUE;
   }
 
-  $context = null;
+  $context = NULL;
   \Drupal::moduleHandler()->alter('_is_layout_builder_route', $layout_builder_route, $context);
   unset($context);
   return $layout_builder_route;
