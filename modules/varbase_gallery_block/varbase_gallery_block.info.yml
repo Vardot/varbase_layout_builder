@@ -2,7 +2,7 @@ name: 'Varbase Gallery block'
 description: 'A gallery block contains a title and a gallery of images and videos.'
 type: module
 package: 'Varbase Blocks'
-core_version_requirement: ^9 || ^10
+core_version_requirement: ~9.5.0 || ~10.1.0
 dependencies:
   - drupal:block
   - drupal:block_content
