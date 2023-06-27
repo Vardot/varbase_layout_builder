@@ -2,7 +2,7 @@ name: "Varbase Buttons Block"
 description: "A button block will contain a button with flexible styling."
 type: module
 package: "Varbase Blocks"
-core_version_requirement: ~10.0
+core_version_requirement: ~10.1.0
 configure: varbase_buttons_block.settings
 dependencies:
   - drupal:link
