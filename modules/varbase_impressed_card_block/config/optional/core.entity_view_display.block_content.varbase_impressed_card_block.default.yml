@@ -107,8 +107,6 @@ content:
                 attributes: 'class="btn btn-primary"'
               impressedCard:
                 card_attributes: ''
-              impressedCard:
-                card_attributes: ''
                 content_attributes: ''
                 card_classes: ''
                 image_position: top
