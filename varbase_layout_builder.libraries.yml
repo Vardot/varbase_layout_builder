@@ -1,14 +1,24 @@
 # Varbase Layout Builder base enhancements.
 enhancements:
+  js:
+    js/vlb-off-canvas.admin.js: {}
   css:
     theme:
       css/theme/vlb-enhancements.base.css: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once
 
 # Varbase Layout Builder theme of configure section.
 configure-section.admin:
   js:
+    js/vlb-off-canvas.admin.js: {}
     js/vlb-configure-section.admin.js: {}
   dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once
     - varbase_layout_builder/plugin.horizontal_alignment.layout_builder_form
     - varbase_layout_builder/plugin.vertical_alignment.layout_builder_form
 
