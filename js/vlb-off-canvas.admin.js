@@ -7,22 +7,15 @@
 (function ($, Drupal, once) {
   Drupal.behaviors.varbaseLayoutBuilderOffCanvas = {
     attach(context) {
-      $(
-        once(
-          '#drupal-off-canvas',
-          '#drupal-off-canvas-wrapper',
-          context,
-        ),
-      ).each(function () {
+      $(once('body', context)).each(function () {
+        const drupalOffCanvasWrapper = $('.ui-dialog-off-canvas.ui-dialog-position-side');
+        if (drupalOffCanvasWrapper) {
+          drupalOffCanvasWrapper.addClass('gin--dark-mode');
+        }
 
         const drupalOffCanvas = $('#drupal-off-canvas');
         if (drupalOffCanvas) {
           drupalOffCanvas.addClass('gin--dark-mode');
-        }
-  
-        const drupalOffCanvasWrapper = $('#drupal-off-canvas-wrapper');
-        if (drupalOffCanvasWrapper) {
-          drupalOffCanvasWrapper.addClass('gin--dark-mode');
         }
       });
     },
