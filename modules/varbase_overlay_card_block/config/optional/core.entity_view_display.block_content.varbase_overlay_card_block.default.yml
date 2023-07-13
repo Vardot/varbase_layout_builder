@@ -13,7 +13,7 @@ dependencies:
 third_party_settings:
   ds:
     layout:
-      id: pattern_overlayCard
+      id: pattern_card_overlay
       library: null
       disable_css: false
       entity_classes: all_classes
@@ -21,13 +21,15 @@ third_party_settings:
         pattern:
           field_templates: default
           settings:
+            style_size: ''
+            card_border: true
+            horizontal_alignment: ''
+            vertical_alignment: ''
+            utility_classes: ''
             card_attributes: ''
             content_attributes: ''
-            card_classes: ''
-            horizontal_alignment: center
-            vertical_alignment: center
     regions:
-      image:
+      media:
         - field_image
       content:
         - block_description

@@ -13,7 +13,7 @@ dependencies:
 third_party_settings:
   ds:
     layout:
-      id: pattern_impressedCard
+      id: pattern_card_impressed
       library: null
       disable_css: false
       entity_classes: all_classes
@@ -21,12 +21,14 @@ third_party_settings:
         pattern:
           field_templates: default
           settings:
+            style_size: ''
+            card_border: true
+            media_position: ''
+            utility_classes: ''
             card_attributes: ''
             content_attributes: ''
-            card_classes: ''
-            image_position: top
     regions:
-      image:
+      media:
         - field_image
       content:
         - block_title

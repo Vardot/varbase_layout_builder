@@ -13,7 +13,7 @@ dependencies:
 third_party_settings:
   ds:
     layout:
-      id: pattern_featuredCard
+      id: pattern_card_featured
       library: null
       disable_css: false
       entity_classes: all_classes
@@ -21,18 +21,23 @@ third_party_settings:
         pattern:
           field_templates: default
           settings:
-            card_attributes: ''
-            row_attributes: ''
-            left_column_attributes: ''
-            right_column_attributes: ''
-            columns_sm_size: '12_12'
-            columns_md_size: '6_6'
+            style_size: ''
+            card_border: true
+            media_position: ''
+            columns_xs_size: '06_06'
+            columns_sm_size: ''
+            columns_md_size: ''
             columns_lg_size: ''
             columns_xl_size: ''
             columns_xxl_size: ''
-            image_position: left
+            utility_classes: ''
+            card_attributes: ''
+            content_attributes: ''
+            row_attributes: ''
+            start_column_attributes: ''
+            end_column_attributes: ''
     regions:
-      image:
+      media:
         - field_image
       content:
         - block_description
