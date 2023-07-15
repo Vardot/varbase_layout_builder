@@ -56,6 +56,7 @@ body .layout-builder__message--overrides .messages {
 #layout-builder-modal .fieldgroup.form-composite.form-wrapper,
 .dialog-off-canvas-main-canvas .fieldgroup.form-composite.form-wrapper {
   width: 100%;
+  border: 0;
 }
 
 #drupal-off-canvas .fieldgroup.blb_container_type .fieldset-wrapper > div > div .input-icon:after,
@@ -238,6 +239,19 @@ body .layout-builder__message--overrides .messages {
 
 #drupal-off-canvas-wrapper {
   z-index: 502;
+  padding: 0;
+}
+
+#drupal-off-canvas-wrapper #drupal-off-canvas {
+  padding: 0 1rem;
+}
+
+#drupal-off-canvas-wrapper .details-wrapper {
+  border: 0;
+}
+
+#drupal-off-canvas-wrapper .details-wrapper ul li.nav-item {
+  width: 100%;
 }
 
 #drupal-off-canvas-wrapper .layout-selection {

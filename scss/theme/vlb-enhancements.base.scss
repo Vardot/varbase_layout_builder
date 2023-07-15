@@ -57,6 +57,7 @@ body {
     &.form-composite {
       &.form-wrapper {
         width: 100%;
+        border: 0;
       }
     }
 
@@ -221,6 +222,21 @@ body {
 
 #drupal-off-canvas-wrapper {
   z-index: 502;
+  padding: 0;
+
+  #drupal-off-canvas {
+    padding: 0 1rem;
+  }
+
+  .details-wrapper {
+    border: 0;
+
+    ul {
+      li.nav-item {
+        width: 100%;
+      }
+    } 
+  }
 
   .layout-selection {
     margin: 0;

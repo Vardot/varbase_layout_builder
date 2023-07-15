@@ -9,6 +9,7 @@ enhancements:
     - core/drupal
     - core/jquery
     - core/once
+    - bootstrap_styles/theme.dark
 
 # Varbase Layout Builder theme of configure section.
 configure-section.admin:
@@ -21,6 +22,7 @@ configure-section.admin:
     - core/once
     - varbase_layout_builder/plugin.horizontal_alignment.layout_builder_form
     - varbase_layout_builder/plugin.vertical_alignment.layout_builder_form
+    - bootstrap_styles/theme.dark
 
 # Horizontal alignment.
 plugin.horizontal_alignment.layout_builder_form:
