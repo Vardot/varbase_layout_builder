@@ -4,8 +4,8 @@ dependencies:
   config:
     - block_content.type.varbase_impressed_card_block
     - field.field.block_content.varbase_impressed_card_block.body
-    - field.field.block_content.varbase_impressed_card_block.field_image
     - field.field.block_content.varbase_impressed_card_block.field_link
+    - field.field.block_content.varbase_impressed_card_block.field_media
   module:
     - ds
     - link
@@ -19,17 +19,17 @@ third_party_settings:
       entity_classes: all_classes
       settings:
         pattern:
-          field_templates: default
+          field_templates: only_content
           settings:
             style_size: ''
-            card_border: true
-            media_position: ''
+            card_border: 1
+            media_position: top
             utility_classes: ''
             card_attributes: ''
             content_attributes: ''
     regions:
       media:
-        - field_image
+        - field_media
       content:
         - block_title
         - body
@@ -52,22 +52,6 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
-  field_image:
-    type: entity_reference_entity_view
-    label: hidden
-    settings:
-      view_mode: media_04_03
-      link: false
-    third_party_settings:
-      ds:
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
-    weight: 0
-    region: image
   field_link:
     type: link
     label: hidden
@@ -114,6 +98,22 @@ content:
                 image_position: top
     weight: 3
     region: content
+  field_media:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    weight: 0
+    region: media
 hidden:
   langcode: true
   search_api_excerpt: true

@@ -4,8 +4,8 @@ dependencies:
   config:
     - block_content.type.varbase_overlay_card_block
     - field.field.block_content.varbase_overlay_card_block.body
-    - field.field.block_content.varbase_overlay_card_block.field_image
     - field.field.block_content.varbase_overlay_card_block.field_link
+    - field.field.block_content.varbase_overlay_card_block.field_media
   module:
     - ds
     - link
@@ -22,7 +22,7 @@ third_party_settings:
           field_templates: default
           settings:
             style_size: ''
-            card_border: true
+            card_border: 1
             horizontal_alignment: ''
             vertical_alignment: ''
             utility_classes: ''
@@ -30,7 +30,7 @@ third_party_settings:
             content_attributes: ''
     regions:
       media:
-        - field_image
+        - field_media
       content:
         - block_description
         - body
@@ -38,7 +38,7 @@ third_party_settings:
     fields:
       block_description:
         plugin_id: block_description
-        weight: 1
+        weight: 2
         label: hidden
         formatter: default
 id: block_content.varbase_overlay_card_block.default
@@ -55,10 +55,13 @@ content:
       trim_suffix: ...
       wrap_output: false
       wrap_class: trimmed
-      more_link: false
-      more_class: more-link
-      more_text: More
-      more_aria_label: 'Read more about [node:title]'
+      more:
+        display_link: false
+        target_blank: false
+        link_trim_only: false
+        class: more-link
+        text: More
+        aria_label: 'Read more about [node:title]'
       summary_handler: full
       trim_options:
         text: true
@@ -72,24 +75,8 @@ content:
             lb: ''
             lb-col: false
             classes: {  }
-    weight: 2
+    weight: 3
     region: content
-  field_image:
-    type: entity_reference_entity_view
-    label: hidden
-    settings:
-      view_mode: media_04_03
-      link: false
-    third_party_settings:
-      ds:
-        ft:
-          id: default
-          settings:
-            lb: ''
-            lb-col: false
-            classes: {  }
-    weight: 0
-    region: image
   field_link:
     type: link
     label: hidden
@@ -100,8 +87,24 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    weight: 3
+    weight: 4
     region: content
+  field_media:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings:
+      ds:
+        ft:
+          id: default
+          settings:
+            lb: ''
+            lb-col: false
+            classes: {  }
+    weight: 1
+    region: media
 hidden:
   langcode: true
   search_api_excerpt: true

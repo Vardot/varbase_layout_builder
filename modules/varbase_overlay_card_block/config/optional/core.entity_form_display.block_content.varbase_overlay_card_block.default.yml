@@ -4,11 +4,12 @@ dependencies:
   config:
     - block_content.type.varbase_overlay_card_block
     - field.field.block_content.varbase_overlay_card_block.body
-    - field.field.block_content.varbase_overlay_card_block.field_image
     - field.field.block_content.varbase_overlay_card_block.field_link
+    - field.field.block_content.varbase_overlay_card_block.field_media
   module:
     - link
     - media_library
+    - media_library_edit
     - text
 id: block_content.varbase_overlay_card_block.default
 targetEntityType: block_content
@@ -25,21 +26,28 @@ content:
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-  field_image:
-    type: media_library_widget
-    weight: 2
-    region: content
-    settings:
-      media_types: {  }
-    third_party_settings: {  }
   field_link:
     type: link_default
-    weight: 3
+    weight: 4
     region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
     third_party_settings: {  }
+  field_media:
+    type: media_library_widget
+    weight: 2
+    region: content
+    settings:
+      media_types:
+        - image
+        - video
+        - remote_video
+        - audio
+        - file
+    third_party_settings:
+      media_library_edit:
+        show_edit: '0'
   info:
     type: string_textfield
     weight: 0

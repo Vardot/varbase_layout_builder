@@ -1,5 +1,5 @@
 name: "Varbase Overlay Card block"
-description: "A card block that contains background image and (title, body and link) fields."
+description: "A card block that contains background media and (title, body and link) fields."
 type: module
 package: "Varbase Blocks"
 core_version_requirement: ~10.1.0

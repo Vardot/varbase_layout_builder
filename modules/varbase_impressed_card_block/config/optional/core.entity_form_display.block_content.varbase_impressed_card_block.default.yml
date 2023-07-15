@@ -4,8 +4,8 @@ dependencies:
   config:
     - block_content.type.varbase_impressed_card_block
     - field.field.block_content.varbase_impressed_card_block.body
-    - field.field.block_content.varbase_impressed_card_block.field_image
     - field.field.block_content.varbase_impressed_card_block.field_link
+    - field.field.block_content.varbase_impressed_card_block.field_media
   module:
     - advanced_text_formatter
     - field_group
@@ -13,6 +13,7 @@ dependencies:
     - link
     - maxlength
     - media_library
+    - media_library_edit
     - text
 third_party_settings:
   field_group:
@@ -33,7 +34,7 @@ third_party_settings:
         width_breakpoint: 640
     group_media:
       children:
-        - field_image
+        - field_media
       label: Media
       region: content
       parent_name: group_tabs
@@ -62,7 +63,7 @@ third_party_settings:
         formatter: open
         description: ''
         required_fields: true
-id: block_content.varbase_impressed_card_block.default
+sid: block_content.varbase_impressed_card_block.default
 targetEntityType: block_content
 bundle: varbase_impressed_card_block
 mode: default
@@ -77,13 +78,6 @@ content:
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-  field_image:
-    type: media_library_widget
-    weight: 3
-    region: content
-    settings:
-      media_types: {  }
-    third_party_settings: {  }
   field_link:
     type: link_default
     weight: 3
@@ -96,6 +90,20 @@ content:
         maxlength_js: null
         maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'
         maxlength_js_enforce: false
+  field_media:
+    type: media_library_widget
+    weight: 2
+    region: content
+    settings:
+      media_types:
+        - image
+        - video
+        - remote_video
+        - audio
+        - file
+    third_party_settings:
+      media_library_edit:
+        show_edit: '0'
   info:
     type: string_textfield
     weight: 0
