@@ -181,14 +181,16 @@ class VarbaseLayoutBuilderUX extends LayoutBuilder {
 
     foreach ($layout_definition->getRegions() as $region => $info) {
       if ($region == 'section_header') {
+        $plugin_id = 'inline_block:varbase_heading_block';
         $build['layout-builder__section']['section_header']['layout_builder_add_block']['link'] = [
           '#type' => 'link',
           '#title' => $this->t('Add heading <span class="visually-hidden">in @section, @region region</span>', ['@section' => $section_label, '@region' => $region_labels['section_header']]),
-          '#url' => Url::fromRoute('layout_builder.choose_block',
+          '#url' => Url::fromRoute('layout_builder.add_block',
             [
               'section_storage_type' => $storage_type,
               'section_storage' => $storage_id,
               'delta' => $delta,
+              'plugin_id' => $plugin_id,
               'region' => 'section_header',
             ],
             [
