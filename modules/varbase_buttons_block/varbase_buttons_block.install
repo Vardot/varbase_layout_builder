@@ -5,7 +5,6 @@
  * Install, update and uninstall functions for Varbase Buttons Block module.
  */
 
-use Vardot\Entity\EntityDefinitionUpdateManager;
 use Vardot\Installer\ModuleInstallerFactory;
 
 /**

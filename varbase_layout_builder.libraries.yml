@@ -9,6 +9,8 @@ enhancements:
     - core/drupal
     - core/jquery
     - core/once
+    - core/drupal.dialog
+    - gin/gin_dialog
     - bootstrap_styles/theme.dark
 
 # Varbase Layout Builder theme of configure section.
@@ -20,6 +22,8 @@ configure-section.admin:
     - core/drupal
     - core/jquery
     - core/once
+    - core/drupal.dialog
+    - gin/gin_dialog
     - varbase_layout_builder/plugin.horizontal_alignment.layout_builder_form
     - varbase_layout_builder/plugin.vertical_alignment.layout_builder_form
     - bootstrap_styles/theme.dark

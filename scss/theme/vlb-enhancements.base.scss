@@ -216,16 +216,40 @@ body {
   button.button--primary,
   input[type="submit"].button--primary,
   .button--primary[type=submit] {
-    color: var(--bs-btn-color);
+    margin: 1rem 0;
+    color: var(--gin-color-title);
+    width: auto !important;
+
+    &:focus,
+    &:hover,
+    &:active {
+      color: var(--gin-color-button-text);
+    }
+  }
+
+  .form-actions {
+    button.button--primary,
+    input[type="submit"].button--primary,
+    .button--primary[type=submit] {
+      margin: 0;
+      padding: calc(var(--gin-spacing-m) - 2px) calc(var(--gin-spacing-l) - 2px);
+
+      &:focus,
+      &:hover,
+      &:active {
+        color: var(--gin-color-button-text);
+      }
+    }
   }
 }
 
+#drupal-off-canvas,
 #layout-builder-modal,
 .media-library-widget-modal,
 form.media-form {
   .form-text.description {
     border: 0 !important;
-    color: var(--gin-color-contextual-text)!important;
+    color: var(--gin-color-contextual-text) !important;
   }
 
   input[type=text] {
@@ -245,7 +269,26 @@ form.media-form {
   padding: 0;
 
   #drupal-off-canvas {
-    padding: 0 0.5rem !important;
+    padding-left: var(--gin-spacing-m) !important;
+    padding-right: var(--gin-spacing-m) !important;
+
+    .ui-widget-content.ui-dialog-content {
+      padding-left: var(--gin-spacing-m) !important;
+      padding-right: var(--gin-spacing-m) !important;
+      background: #444444 !important;
+    }
+
+    .inline-block-create-button:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: var(--off-canvas-padding);
+      width: 2rem;
+      height: 2rem;
+      transform: translateY(-50%);
+      margin-top: auto;
+    }
+
   }
 
   .ui-dialog-titlebar {
@@ -262,11 +305,16 @@ form.media-form {
     } 
   }
 
+  form {
+    padding-block: 0;
+    padding-bottom: var(--off-canvas-padding);
+  }
+
   #bs_nav-tabs {
-    margin: 0 0 0 -0.5rem;
+    margin: 0;
     padding: 0;
     width: 100%;
-    top: -1.2rem;
+    top: 0;
   }
 
   .blb_breakpoint_cols {
@@ -361,8 +409,15 @@ form.media-form {
   #bs_ui {
     ~ button.button,
     ~ input[type="submit"].button {
-      margin: 3rem 0 0 !important;
+      margin: 2rem 0 0 !important;
       width: auto !important;
+      color: var(--gin-color-button-text);
+
+      &:focus,
+      &:hover,
+      &:active {
+        color: var(--gin-color-button-text);
+      }
     }
   } 
 
@@ -438,9 +493,23 @@ body {
       background-size: 2rem 2rem;
     }
 
-    .ui-widget-content.ui-dialog-content {
-      padding-left: var(--gin-spacing-m);
-      padding-right: var(--gin-spacing-m);
+    .ui-resizable-w {
+      left: -10px;
+      width: 20px;
+      cursor: col-resize;
+
+      &::before {
+        box-shadow: none !important;
+        background: #444444 !important;
+        background-color: #444444 !important;
+      }
+
+      &:after,
+      &:after:hover {
+        background: #444444 !important;
+        background-color: #444444;
+        box-shadow: none;
+      }
     }
   }
 }

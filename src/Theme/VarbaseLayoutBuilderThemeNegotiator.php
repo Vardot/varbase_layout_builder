@@ -115,7 +115,7 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
       $request_query_wrapper_format = $this->requestStack->getCurrentRequest()->query->get('_wrapper_format');
       if (isset($request_query_wrapper_format)) {
         if ($request_query_wrapper_format == 'drupal_dialog.off_canvas') {
-          
+
           return $this->configFactory->get('system.theme')->get('admin');
         }
         else {
