@@ -50,7 +50,7 @@
     "drupal/lb_ux": "1.x-dev",
     "drupal/layout_library": "1.0-beta4",
     "drupal/section_library": "~1.0",
-    "drupal/bootstrap_styles": "1.1.0",
+    "drupal/bootstrap_styles": "1.1.1",
     "drupal/bootstrap_layout_builder": "2.1.1",
     "drupal/block_library": "~1.0",
     "drupal/length_indicator": "~1.0",
@@ -72,13 +72,7 @@
       },
       "drupal/bootstrap_styles": {
         "Issue #3192061: Have the option to use other admin themes like Claro or Gin":
-        "https://www.drupal.org/files/issues/2021-02-03/bootstrap_styles-1-0-3--3192061-9.patch",
-        "Issue #3230802: Fix Border styling with Bootstrap library hard overrides over borders":
-        "https://www.drupal.org/files/issues/2021-09-01/3230802-4.patch",
-        "Issue #3213112: Add a specific class when having sections with background color, image, or video option":
-        "https://www.drupal.org/files/issues/2023-01-19/3213112-23.patch",
-        "Issue #3315218: Fix not loading bootstrap_styles/aos.local or bootstrap_styles/aos.remote library":
-        "https://www.drupal.org/files/issues/2023-01-25/3315218-17--1-0-x.patch"
+        "https://www.drupal.org/files/issues/2021-02-03/bootstrap_styles-1-0-3--3192061-9.patch"
       },
       "drupal/layout_library": {
         "Issue #3075067: Duplicate entry for key 'block_content_field__uuid__value'":
