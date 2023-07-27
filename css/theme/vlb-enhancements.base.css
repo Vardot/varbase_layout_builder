@@ -527,7 +527,12 @@ body .ui-dialog .ui-resizable-w::before {
 
 body .ui-dialog .ui-resizable-w:after, body .ui-dialog .ui-resizable-w:after:hover {
   background: #444 !important;
-  background-color: #444;
-  box-shadow: none;
+  background-color: #444 !important;
+  box-shadow: none !important;
+}
+
+[dir=rtl] body .ui-dialog .ui-resizable-w {
+  left: auto !important;
+  right: -10px !important;
 }
 
