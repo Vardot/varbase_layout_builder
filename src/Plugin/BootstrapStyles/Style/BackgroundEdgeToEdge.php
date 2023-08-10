@@ -77,12 +77,14 @@ class BackgroundEdgeToEdge extends StylePluginBase {
 
         $build = $this->addClassesToBuild($build, ['bg-edge2edge'], $theme_wrapper);
       }
-      elseif ($storage['background']['background_type'] == 'image'
+
+      if ($storage['background']['background_type'] == 'image'
         && !empty($storage['background_media']['image']['media_id'])) {
 
         $build = $this->addClassesToBuild($build, ['bg-edge2edge'], $theme_wrapper);
       }
-      elseif ($storage['background']['background_type'] == 'video'
+
+      if ($storage['background']['background_type'] == 'video'
         && !empty($storage['background_media']['video']['media_id'])) {
 
         $build['#theme_wrappers']['bs_video_background']['#attributes']['class'][] = 'bg-edge2edge';
