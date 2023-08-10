@@ -71,8 +71,8 @@ class BackgroundEdgeToEdge extends StylePluginBase {
       && $storage['background_edgetoedge'] == 1
       && isset($storage['background']['background_type'])) {
 
-      if ($storage['background']['background_type'] == 'color'
-        && !empty($storage['background_color']['class'])
+      if (isset($storage['background_color']['class'])
+        && $storage['background_color']['class'] !== ''
         && $storage['background_color']['class'] !== '_none') {
 
         $build = $this->addClassesToBuild($build, ['bg-edge2edge'], $theme_wrapper);
