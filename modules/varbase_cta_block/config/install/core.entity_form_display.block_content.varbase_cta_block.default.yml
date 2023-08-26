@@ -7,7 +7,6 @@ dependencies:
     - field.field.block_content.varbase_cta_block.field_buttons
   module:
     - advanced_text_formatter
-    - allowed_formats
     - maxlength
     - text
     - varbase_buttons_block
@@ -26,9 +25,6 @@ content:
       placeholder: ''
       show_summary: false
     third_party_settings:
-      allowed_formats:
-        hide_help: '1'
-        hide_guidelines: '1'
       maxlength:
         maxlength_js: null
         maxlength_js_label: 'Content limited to @limit characters, remaining: <strong>@remaining</strong>'

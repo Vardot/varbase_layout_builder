@@ -5,7 +5,6 @@ dependencies:
     - block_content.type.varbase_html_code_block
     - field.storage.block_content.body
   module:
-    - allowed_formats
     - text
 third_party_settings:
   allowed_formats:
