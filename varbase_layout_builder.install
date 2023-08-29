@@ -215,3 +215,19 @@ function varbase_layout_builder_update_10006() {
     $bootstrap_styles_settings->set('box_shadow', "shadow-sm|Small\r\nshadow|Regular\r\nshadow-lg|Large")->save(TRUE);
   }
 }
+
+/**
+ * Issue #3383937: Remove the remaining optional layout_builder_iframe_modal.settings config.
+ */
+function varbase_layout_builder_update_10102() {
+
+  // Install Layout Builder Modal module if it was not enabled.
+  if (!\Drupal::moduleHandler()->moduleExists('layout_builder_modal')) {
+    \Drupal::service('module_installer')->install(['layout_builder_modal'], FALSE);
+  }
+
+  // Remove the leftover optional layout_builder_iframe_modal.settings config if the module was uninstalled.
+  if (!\Drupal::moduleHandler()->moduleExists('layout_builder_iframe_modal')) {
+    \Drupal::configFactory()->getEditable('layout_builder_iframe_modal.settings')->delete();
+  }
+}
