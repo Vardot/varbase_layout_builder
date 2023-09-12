@@ -41,9 +41,21 @@
   word-wrap: break-word;
 }
 
+#layout-builder-modal .visually-hidden,.media-library-widget-modal .visually-hidden,form.media-form .visually-hidden {
+  color: #000;
+}
+
+#layout-builder-modal .gin--dark-mode .visually-hidden,.media-library-widget-modal .gin--dark-mode .visually-hidden,form.media-form .gin--dark-mode .visually-hidden {
+  color: #fff;
+}
+
+#layout-builder-modal .visually-hidden.skip-link,.media-library-widget-modal .visually-hidden.skip-link,form.media-form .visually-hidden.skip-link {
+  color: var(--gin-color-button-text);
+}
+
 #layout-builder-modal a,#layout-builder-modal .link,#layout-builder-modal button.link,#layout-builder-modal .tabs__link.is-active,#layout-builder-modal [open] .claro-details__summary--accordion,#layout-builder-modal [open] .claro-details__summary--accordion-item,#layout-builder-modal [open] .claro-details__summary--vertical-tabs-item,#layout-builder-modal .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link,.media-library-widget-modal a,.media-library-widget-modal .link,.media-library-widget-modal button.link,.media-library-widget-modal .tabs__link.is-active,.media-library-widget-modal [open] .claro-details__summary--accordion,.media-library-widget-modal [open] .claro-details__summary--accordion-item,.media-library-widget-modal [open] .claro-details__summary--vertical-tabs-item,.media-library-widget-modal .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link,form.media-form a,form.media-form .link,form.media-form button.link,form.media-form .tabs__link.is-active,form.media-form [open] .claro-details__summary--accordion,form.media-form [open] .claro-details__summary--accordion-item,form.media-form [open] .claro-details__summary--vertical-tabs-item,form.media-form .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link {
   color: var(--gin-color-primary);
-  text-decoration: none;
+  text-decoration-style: dotted;
 }
 
 #layout-builder-modal a:hover,#layout-builder-modal .link:hover,#layout-builder-modal button.link:hover,#layout-builder-modal .tabs__link.is-active:hover,#layout-builder-modal [open] .claro-details__summary--accordion:hover,#layout-builder-modal [open] .claro-details__summary--accordion-item:hover,#layout-builder-modal [open] .claro-details__summary--vertical-tabs-item:hover,#layout-builder-modal .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:hover,.media-library-widget-modal a:hover,.media-library-widget-modal .link:hover,.media-library-widget-modal button.link:hover,.media-library-widget-modal .tabs__link.is-active:hover,.media-library-widget-modal [open] .claro-details__summary--accordion:hover,.media-library-widget-modal [open] .claro-details__summary--accordion-item:hover,.media-library-widget-modal [open] .claro-details__summary--vertical-tabs-item:hover,.media-library-widget-modal .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:hover,form.media-form a:hover,form.media-form .link:hover,form.media-form button.link:hover,form.media-form .tabs__link.is-active:hover,form.media-form [open] .claro-details__summary--accordion:hover,form.media-form [open] .claro-details__summary--accordion-item:hover,form.media-form [open] .claro-details__summary--vertical-tabs-item:hover,form.media-form .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:hover {
@@ -52,6 +64,11 @@
 
 #layout-builder-modal a:active,#layout-builder-modal .link:active,#layout-builder-modal button.link:active,#layout-builder-modal .tabs__link.is-active:active,#layout-builder-modal [open] .claro-details__summary--accordion:active,#layout-builder-modal [open] .claro-details__summary--accordion-item:active,#layout-builder-modal [open] .claro-details__summary--vertical-tabs-item:active,#layout-builder-modal .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:active,.media-library-widget-modal a:active,.media-library-widget-modal .link:active,.media-library-widget-modal button.link:active,.media-library-widget-modal .tabs__link.is-active:active,.media-library-widget-modal [open] .claro-details__summary--accordion:active,.media-library-widget-modal [open] .claro-details__summary--accordion-item:active,.media-library-widget-modal [open] .claro-details__summary--vertical-tabs-item:active,.media-library-widget-modal .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:active,form.media-form a:active,form.media-form .link:active,form.media-form button.link:active,form.media-form .tabs__link.is-active:active,form.media-form [open] .claro-details__summary--accordion:active,form.media-form [open] .claro-details__summary--accordion-item:active,form.media-form [open] .claro-details__summary--vertical-tabs-item:active,form.media-form .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:active {
   color: var(--gin-color-primary-active);
+}
+
+#layout-builder-modal *|*:any-link:not(svg|a),.media-library-widget-modal *|*:any-link:not(svg|a),form.media-form *|*:any-link:not(svg|a) {
+  text-decoration: underline;
+  text-decoration-style: dotted;
 }
 
 #layout-builder-modal .is-horizontal .tabs__link:hover,#layout-builder-modal .claro-details__summary:hover,#layout-builder-modal .action-link:hover,.media-library-widget-modal .is-horizontal .tabs__link:hover,.media-library-widget-modal .claro-details__summary:hover,.media-library-widget-modal .action-link:hover,form.media-form .is-horizontal .tabs__link:hover,form.media-form .claro-details__summary:hover,form.media-form .action-link:hover {
@@ -469,12 +486,9 @@
 }
 
 #layout-builder-modal .shortcut-action--remove .shortcut-action__icon,.media-library-widget-modal .shortcut-action--remove .shortcut-action__icon,form.media-form .shortcut-action--remove .shortcut-action__icon {
-  background: var(--gin-color-primary);
-}
-
-#layout-builder-modal .gin--high-contrast-mode .shortcut-action--remove .shortcut-action__icon,.media-library-widget-modal .gin--high-contrast-mode .shortcut-action--remove .shortcut-action__icon,form.media-form .gin--high-contrast-mode .shortcut-action--remove .shortcut-action__icon {
   -webkit-mask-image: url("../../media/sprite.svg#shortcut-filled-view");
           mask-image: url("../../media/sprite.svg#shortcut-filled-view");
+  background: var(--gin-color-primary);
 }
 
 #layout-builder-modal .shortcut-action--remove:hover .shortcut-action__icon,.media-library-widget-modal .shortcut-action--remove:hover .shortcut-action__icon,form.media-form .shortcut-action--remove:hover .shortcut-action__icon {
@@ -483,10 +497,12 @@
 }
 
 #layout-builder-modal .shortcut-action__message,.media-library-widget-modal .shortcut-action__message,form.media-form .shortcut-action__message {
+  z-index: 2;
   position: absolute;
-  top: calc(100% + var(--gin-spacing-xs));
+  top: 0;
   min-width: 120px;
   pointer-events: none;
+  white-space: nowrap;
   padding: var(--gin-spacing-xs);
   margin-top: calc(var(--gin-spacing-xxs)*-1);
   color: var(--gin-color-contextual-text);
@@ -495,11 +511,11 @@
 }
 
 #layout-builder-modal [dir=ltr] .shortcut-action__message,.media-library-widget-modal [dir=ltr] .shortcut-action__message,form.media-form [dir=ltr] .shortcut-action__message {
-  right: 0;
+  left: 100%;
 }
 
 #layout-builder-modal [dir=rtl] .shortcut-action__message,.media-library-widget-modal [dir=rtl] .shortcut-action__message,form.media-form [dir=rtl] .shortcut-action__message {
-  left: 0;
+  right: 100%;
 }
 
 #layout-builder-modal .modules-table-filter,.media-library-widget-modal .modules-table-filter,form.media-form .modules-table-filter {
@@ -622,104 +638,6 @@
   }
 }
 
-#layout-builder-modal .block-system>.views-form .claro-details,#layout-builder-modal .view-content .views-form .claro-details,.media-library-widget-modal .block-system>.views-form .claro-details,.media-library-widget-modal .view-content .views-form .claro-details,form.media-form .block-system>.views-form .claro-details,form.media-form .view-content .views-form .claro-details {
-  box-shadow: none;
-}
-
-#layout-builder-modal .block-system>.views-form form,#layout-builder-modal .view-content .views-form form,.media-library-widget-modal .block-system>.views-form form,.media-library-widget-modal .view-content .views-form form,form.media-form .block-system>.views-form form,form.media-form .view-content .views-form form {
-  display: flex;
-  flex-direction: column;
-}
-
-#layout-builder-modal .block-system>.views-form .views-table,#layout-builder-modal .view-content .views-form .views-table,.media-library-widget-modal .block-system>.views-form .views-table,.media-library-widget-modal .view-content .views-form .views-table,form.media-form .block-system>.views-form .views-table,form.media-form .view-content .views-form .views-table {
-  order: -1;
-  margin-top: 0;
-}
-
-#layout-builder-modal .block-system>.views-form [data-drupal-selector*=edit-header],#layout-builder-modal .view-content .views-form [data-drupal-selector*=edit-header],.media-library-widget-modal .block-system>.views-form [data-drupal-selector*=edit-header],.media-library-widget-modal .view-content .views-form [data-drupal-selector*=edit-header],form.media-form .block-system>.views-form [data-drupal-selector*=edit-header],form.media-form .view-content .views-form [data-drupal-selector*=edit-header] {
-  order: 99;
-  position: relative;
-  padding: 0 var(--gin-spacing-m) var(--gin-spacing-m) var(--gin-spacing-m);
-  border-radius: var(--gin-border-m);
-  background: rgba(var(--gin-color-sticky-rgb), .95);
-}
-
-#layout-builder-modal [dir=ltr] .block-system>.views-form [data-drupal-selector*=edit-header],#layout-builder-modal [dir=ltr] .view-content .views-form [data-drupal-selector*=edit-header],.media-library-widget-modal [dir=ltr] .block-system>.views-form [data-drupal-selector*=edit-header],.media-library-widget-modal [dir=ltr] .view-content .views-form [data-drupal-selector*=edit-header],form.media-form [dir=ltr] .block-system>.views-form [data-drupal-selector*=edit-header],form.media-form [dir=ltr] .view-content .views-form [data-drupal-selector*=edit-header] {
-  left: 0;
-}
-
-#layout-builder-modal [dir=rtl] .block-system>.views-form [data-drupal-selector*=edit-header],#layout-builder-modal [dir=rtl] .view-content .views-form [data-drupal-selector*=edit-header],.media-library-widget-modal [dir=rtl] .block-system>.views-form [data-drupal-selector*=edit-header],.media-library-widget-modal [dir=rtl] .view-content .views-form [data-drupal-selector*=edit-header],form.media-form [dir=rtl] .block-system>.views-form [data-drupal-selector*=edit-header],form.media-form [dir=rtl] .view-content .views-form [data-drupal-selector*=edit-header] {
-  right: 0;
-}
-
-@supports ((-webkit-backdrop-filter: blur()) or (backdrop-filter: blur())) {
-  #layout-builder-modal .block-system>.views-form [data-drupal-selector*=edit-header],#layout-builder-modal .view-content .views-form [data-drupal-selector*=edit-header],.media-library-widget-modal .block-system>.views-form [data-drupal-selector*=edit-header],.media-library-widget-modal .view-content .views-form [data-drupal-selector*=edit-header],form.media-form .block-system>.views-form [data-drupal-selector*=edit-header],form.media-form .view-content .views-form [data-drupal-selector*=edit-header] {
-    opacity: .999;
-    background: rgba(var(--gin-color-sticky-rgb), .9);
-    -webkit-backdrop-filter: blur(12px);
-            backdrop-filter: blur(12px);
-  }
-
-  #layout-builder-modal .gin--dark-mode .block-system>.views-form [data-drupal-selector*=edit-header],#layout-builder-modal .gin--dark-mode .view-content .views-form [data-drupal-selector*=edit-header],.media-library-widget-modal .gin--dark-mode .block-system>.views-form [data-drupal-selector*=edit-header],.media-library-widget-modal .gin--dark-mode .view-content .views-form [data-drupal-selector*=edit-header],form.media-form .gin--dark-mode .block-system>.views-form [data-drupal-selector*=edit-header],form.media-form .gin--dark-mode .view-content .views-form [data-drupal-selector*=edit-header] {
-    background: rgba(27, 27, 29, .8);
-  }
-}
-
-#layout-builder-modal [dir=ltr] .block-system>.views-form [data-drupal-selector*=edit-header] [data-drupal-selector*=edit-views-bulk-operations-bulk-form]>*,#layout-builder-modal [dir=ltr] .view-content .views-form [data-drupal-selector*=edit-header] [data-drupal-selector*=edit-views-bulk-operations-bulk-form]>*,.media-library-widget-modal [dir=ltr] .block-system>.views-form [data-drupal-selector*=edit-header] [data-drupal-selector*=edit-views-bulk-operations-bulk-form]>*,.media-library-widget-modal [dir=ltr] .view-content .views-form [data-drupal-selector*=edit-header] [data-drupal-selector*=edit-views-bulk-operations-bulk-form]>*,form.media-form [dir=ltr] .block-system>.views-form [data-drupal-selector*=edit-header] [data-drupal-selector*=edit-views-bulk-operations-bulk-form]>*,form.media-form [dir=ltr] .view-content .views-form [data-drupal-selector*=edit-header] [data-drupal-selector*=edit-views-bulk-operations-bulk-form]>* {
-  margin-right: var(--gin-spacing-xs);
-}
-
-#layout-builder-modal [dir=rtl] .block-system>.views-form [data-drupal-selector*=edit-header] [data-drupal-selector*=edit-views-bulk-operations-bulk-form]>*,#layout-builder-modal [dir=rtl] .view-content .views-form [data-drupal-selector*=edit-header] [data-drupal-selector*=edit-views-bulk-operations-bulk-form]>*,.media-library-widget-modal [dir=rtl] .block-system>.views-form [data-drupal-selector*=edit-header] [data-drupal-selector*=edit-views-bulk-operations-bulk-form]>*,.media-library-widget-modal [dir=rtl] .view-content .views-form [data-drupal-selector*=edit-header] [data-drupal-selector*=edit-views-bulk-operations-bulk-form]>*,form.media-form [dir=rtl] .block-system>.views-form [data-drupal-selector*=edit-header] [data-drupal-selector*=edit-views-bulk-operations-bulk-form]>*,form.media-form [dir=rtl] .view-content .views-form [data-drupal-selector*=edit-header] [data-drupal-selector*=edit-views-bulk-operations-bulk-form]>* {
-  margin-left: var(--gin-spacing-xs);
-}
-
-#layout-builder-modal .block-system>.views-form [data-drupal-selector*=edit-header] [data-drupal-selector*=edit-views-bulk-operations-bulk-form] .form-type--select,#layout-builder-modal .block-system>.views-form [data-drupal-selector*=edit-header] [data-drupal-selector*=edit-views-bulk-operations-bulk-form] .form-actions,#layout-builder-modal .view-content .views-form [data-drupal-selector*=edit-header] [data-drupal-selector*=edit-views-bulk-operations-bulk-form] .form-type--select,#layout-builder-modal .view-content .views-form [data-drupal-selector*=edit-header] [data-drupal-selector*=edit-views-bulk-operations-bulk-form] .form-actions,.media-library-widget-modal .block-system>.views-form [data-drupal-selector*=edit-header] [data-drupal-selector*=edit-views-bulk-operations-bulk-form] .form-type--select,.media-library-widget-modal .block-system>.views-form [data-drupal-selector*=edit-header] [data-drupal-selector*=edit-views-bulk-operations-bulk-form] .form-actions,.media-library-widget-modal .view-content .views-form [data-drupal-selector*=edit-header] [data-drupal-selector*=edit-views-bulk-operations-bulk-form] .form-type--select,.media-library-widget-modal .view-content .views-form [data-drupal-selector*=edit-header] [data-drupal-selector*=edit-views-bulk-operations-bulk-form] .form-actions,form.media-form .block-system>.views-form [data-drupal-selector*=edit-header] [data-drupal-selector*=edit-views-bulk-operations-bulk-form] .form-type--select,form.media-form .block-system>.views-form [data-drupal-selector*=edit-header] [data-drupal-selector*=edit-views-bulk-operations-bulk-form] .form-actions,form.media-form .view-content .views-form [data-drupal-selector*=edit-header] [data-drupal-selector*=edit-views-bulk-operations-bulk-form] .form-type--select,form.media-form .view-content .views-form [data-drupal-selector*=edit-header] [data-drupal-selector*=edit-views-bulk-operations-bulk-form] .form-actions {
-  flex: 0 0 100%;
-  max-width: 100%;
-}
-
-#layout-builder-modal .block-system>.views-form [data-drupal-selector*=edit-header] [data-drupal-selector*=edit-views-bulk-operations-bulk-form] .form-actions,#layout-builder-modal .view-content .views-form [data-drupal-selector*=edit-header] [data-drupal-selector*=edit-views-bulk-operations-bulk-form] .form-actions,.media-library-widget-modal .block-system>.views-form [data-drupal-selector*=edit-header] [data-drupal-selector*=edit-views-bulk-operations-bulk-form] .form-actions,.media-library-widget-modal .view-content .views-form [data-drupal-selector*=edit-header] [data-drupal-selector*=edit-views-bulk-operations-bulk-form] .form-actions,form.media-form .block-system>.views-form [data-drupal-selector*=edit-header] [data-drupal-selector*=edit-views-bulk-operations-bulk-form] .form-actions,form.media-form .view-content .views-form [data-drupal-selector*=edit-header] [data-drupal-selector*=edit-views-bulk-operations-bulk-form] .form-actions {
-  justify-content: flex-end;
-}
-
-#layout-builder-modal .block-system>.views-form [data-drupal-selector*=edit-header] [data-drupal-selector*=edit-views-bulk-operations-bulk-form] .form-type--checkbox,#layout-builder-modal .view-content .views-form [data-drupal-selector*=edit-header] [data-drupal-selector*=edit-views-bulk-operations-bulk-form] .form-type--checkbox,.media-library-widget-modal .block-system>.views-form [data-drupal-selector*=edit-header] [data-drupal-selector*=edit-views-bulk-operations-bulk-form] .form-type--checkbox,.media-library-widget-modal .view-content .views-form [data-drupal-selector*=edit-header] [data-drupal-selector*=edit-views-bulk-operations-bulk-form] .form-type--checkbox,form.media-form .block-system>.views-form [data-drupal-selector*=edit-header] [data-drupal-selector*=edit-views-bulk-operations-bulk-form] .form-type--checkbox,form.media-form .view-content .views-form [data-drupal-selector*=edit-header] [data-drupal-selector*=edit-views-bulk-operations-bulk-form] .form-type--checkbox {
-  align-self: center;
-}
-
-#layout-builder-modal .block-system>.views-form [data-drupal-selector*=edit-header] .form-item__label:not([for=edit-select-all]),#layout-builder-modal .view-content .views-form [data-drupal-selector*=edit-header] .form-item__label:not([for=edit-select-all]),.media-library-widget-modal .block-system>.views-form [data-drupal-selector*=edit-header] .form-item__label:not([for=edit-select-all]),.media-library-widget-modal .view-content .views-form [data-drupal-selector*=edit-header] .form-item__label:not([for=edit-select-all]),form.media-form .block-system>.views-form [data-drupal-selector*=edit-header] .form-item__label:not([for=edit-select-all]),form.media-form .view-content .views-form [data-drupal-selector*=edit-header] .form-item__label:not([for=edit-select-all]) {
-  display: block;
-  top: 2px;
-  margin-top: var(--gin-spacing-xxs);
-  line-height: 1.75;
-}
-
-#layout-builder-modal [dir=ltr] .block-system>.views-form [data-drupal-selector*=edit-header] .form-item__label:not([for=edit-select-all]),#layout-builder-modal [dir=ltr] .view-content .views-form [data-drupal-selector*=edit-header] .form-item__label:not([for=edit-select-all]),.media-library-widget-modal [dir=ltr] .block-system>.views-form [data-drupal-selector*=edit-header] .form-item__label:not([for=edit-select-all]),.media-library-widget-modal [dir=ltr] .view-content .views-form [data-drupal-selector*=edit-header] .form-item__label:not([for=edit-select-all]),form.media-form [dir=ltr] .block-system>.views-form [data-drupal-selector*=edit-header] .form-item__label:not([for=edit-select-all]),form.media-form [dir=ltr] .view-content .views-form [data-drupal-selector*=edit-header] .form-item__label:not([for=edit-select-all]) {
-  float: left;
-  margin-right: var(--gin-spacing-m);
-}
-
-#layout-builder-modal [dir=rtl] .block-system>.views-form [data-drupal-selector*=edit-header] .form-item__label:not([for=edit-select-all]),#layout-builder-modal [dir=rtl] .view-content .views-form [data-drupal-selector*=edit-header] .form-item__label:not([for=edit-select-all]),.media-library-widget-modal [dir=rtl] .block-system>.views-form [data-drupal-selector*=edit-header] .form-item__label:not([for=edit-select-all]),.media-library-widget-modal [dir=rtl] .view-content .views-form [data-drupal-selector*=edit-header] .form-item__label:not([for=edit-select-all]),form.media-form [dir=rtl] .block-system>.views-form [data-drupal-selector*=edit-header] .form-item__label:not([for=edit-select-all]),form.media-form [dir=rtl] .view-content .views-form [data-drupal-selector*=edit-header] .form-item__label:not([for=edit-select-all]) {
-  float: right;
-  margin-left: var(--gin-spacing-m);
-}
-
-#layout-builder-modal .block-system>.views-form [data-drupal-selector*=edit-header].is-sticky,#layout-builder-modal .view-content .views-form [data-drupal-selector*=edit-header].is-sticky,.media-library-widget-modal .block-system>.views-form [data-drupal-selector*=edit-header].is-sticky,.media-library-widget-modal .view-content .views-form [data-drupal-selector*=edit-header].is-sticky,form.media-form .block-system>.views-form [data-drupal-selector*=edit-header].is-sticky,form.media-form .view-content .views-form [data-drupal-selector*=edit-header].is-sticky {
-  z-index: 4;
-  opacity: 1;
-  position: sticky;
-  bottom: var(--gin-spacing-xs);
-  box-shadow: 0 2px 6px 2px rgba(0, 0, 0, .03);
-  animation: fadeInBottom 320ms 1 forwards;
-}
-
-#layout-builder-modal [dir=ltr] .block-system>.views-form [data-drupal-selector*=edit-header].is-sticky,#layout-builder-modal [dir=ltr] .view-content .views-form [data-drupal-selector*=edit-header].is-sticky,.media-library-widget-modal [dir=ltr] .block-system>.views-form [data-drupal-selector*=edit-header].is-sticky,.media-library-widget-modal [dir=ltr] .view-content .views-form [data-drupal-selector*=edit-header].is-sticky,form.media-form [dir=ltr] .block-system>.views-form [data-drupal-selector*=edit-header].is-sticky,form.media-form [dir=ltr] .view-content .views-form [data-drupal-selector*=edit-header].is-sticky {
-  left: 0;
-}
-
-#layout-builder-modal [dir=rtl] .block-system>.views-form [data-drupal-selector*=edit-header].is-sticky,#layout-builder-modal [dir=rtl] .view-content .views-form [data-drupal-selector*=edit-header].is-sticky,.media-library-widget-modal [dir=rtl] .block-system>.views-form [data-drupal-selector*=edit-header].is-sticky,.media-library-widget-modal [dir=rtl] .view-content .views-form [data-drupal-selector*=edit-header].is-sticky,form.media-form [dir=rtl] .block-system>.views-form [data-drupal-selector*=edit-header].is-sticky,form.media-form [dir=rtl] .view-content .views-form [data-drupal-selector*=edit-header].is-sticky {
-  right: 0;
-}
-
 #layout-builder-modal .views-exposed-form.views-exposed-form,.media-library-widget-modal .views-exposed-form.views-exposed-form,form.media-form .views-exposed-form.views-exposed-form {
   padding-top: var(--gin-spacing-xs);
 }
@@ -736,6 +654,15 @@
 #layout-builder-modal [dir=rtl] .views-exposed-form.views-exposed-form .form-type--boolean .form-boolean,.media-library-widget-modal [dir=rtl] .views-exposed-form.views-exposed-form .form-type--boolean .form-boolean,form.media-form [dir=rtl] .views-exposed-form.views-exposed-form .form-type--boolean .form-boolean {
   margin-right: 0;
   margin-left: var(--gin-spacing-xs);
+}
+
+#layout-builder-modal .views-exposed-form.views-exposed-form .form-type--boolean.form-type--checkbox,.media-library-widget-modal .views-exposed-form.views-exposed-form .form-type--boolean.form-type--checkbox,form.media-form .views-exposed-form.views-exposed-form .form-type--boolean.form-type--checkbox {
+  margin-top: auto;
+  margin-bottom: var(--gin-spacing-s);
+}
+
+#layout-builder-modal .views-exposed-form.views-exposed-form .form-type--boolean.form-type--checkbox .form-item__label,.media-library-widget-modal .views-exposed-form.views-exposed-form .form-type--boolean.form-type--checkbox .form-item__label,form.media-form .views-exposed-form.views-exposed-form .form-type--boolean.form-type--checkbox .form-item__label {
+  margin-bottom: 0;
 }
 
 #layout-builder-modal .views-exposed-form.views-exposed-form .fieldset--group,.media-library-widget-modal .views-exposed-form.views-exposed-form .fieldset--group,form.media-form .views-exposed-form.views-exposed-form .fieldset--group {
@@ -1126,6 +1053,17 @@
   margin-left: var(--gin-spacing-xs);
 }
 
+#layout-builder-modal .views-field .marker,.media-library-widget-modal .views-field .marker,form.media-form .views-field .marker {
+  font-size: var(--gin-font-size-xxs);
+  font-style: italic;
+  color: var(--gin-color-text-light);
+  padding: var(--gin-spacing-xxs);
+}
+
+#layout-builder-modal .view-header,.media-library-widget-modal .view-header,form.media-form .view-header {
+  margin-bottom: var(--gin-spacing-l);
+}
+
 #layout-builder-modal .gin-table-scroll-wrapper,.media-library-widget-modal .gin-table-scroll-wrapper,form.media-form .gin-table-scroll-wrapper {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
@@ -1138,7 +1076,7 @@
   visibility: hidden;
   z-index: 98;
   position: fixed;
-  top: calc(var(--ginHorizontalToolbarOffset) + var(--ginStickyOffset)) !important;
+  top: calc(var(--gin-toolbar-y-offset) + var(--gin-sticky-offset)) !important;
   background: transparent;
 }
 
@@ -1202,7 +1140,7 @@
 }
 
 #layout-builder-modal table thead tr,.media-library-widget-modal table thead tr,form.media-form table thead tr {
-  border-bottom: 1px solid var(--gin-border-color-table-header);
+  border-bottom: 2px solid var(--gin-border-color-table-header);
 }
 
 #layout-builder-modal table thead tr:hover,.media-library-widget-modal table thead tr:hover,form.media-form table thead tr:hover {
@@ -1263,6 +1201,7 @@
 
 #layout-builder-modal table td a:hover,.media-library-widget-modal table td a:hover,form.media-form table td a:hover {
   text-decoration: underline;
+  text-decoration-style: dotted;
 }
 
 #layout-builder-modal table td .group-label,.media-library-widget-modal table td .group-label,form.media-form table td .group-label {
@@ -1285,6 +1224,12 @@
           mask-repeat: no-repeat;
   -webkit-mask-position: center center;
           mask-position: center center;
+}
+
+@media (forced-colors: active) {
+  #layout-builder-modal .sortable-heading>a::after,.media-library-widget-modal .sortable-heading>a::after,form.media-form .sortable-heading>a::after {
+    background: linktext;
+  }
 }
 
 #layout-builder-modal .sortable-heading.is-active>a,#layout-builder-modal .sortable-heading.is-active>a:hover,#layout-builder-modal .sortable-heading.is-active>a:active,.media-library-widget-modal .sortable-heading.is-active>a,.media-library-widget-modal .sortable-heading.is-active>a:hover,.media-library-widget-modal .sortable-heading.is-active>a:active,form.media-form .sortable-heading.is-active>a,form.media-form .sortable-heading.is-active>a:hover,form.media-form .sortable-heading.is-active>a:active {
@@ -1311,9 +1256,21 @@
           mask-image: url("../../media/sprite.svg#sort-asc-view");
 }
 
+@media (forced-colors: active) {
+  #layout-builder-modal .tablesort--asc,#layout-builder-modal [dir=rtl] .tablesort--asc,.media-library-widget-modal .tablesort--asc,.media-library-widget-modal [dir=rtl] .tablesort--asc,form.media-form .tablesort--asc,form.media-form [dir=rtl] .tablesort--asc {
+    background: linktext;
+  }
+}
+
 #layout-builder-modal .tablesort--desc,#layout-builder-modal [dir=rtl] .tablesort--desc,.media-library-widget-modal .tablesort--desc,.media-library-widget-modal [dir=rtl] .tablesort--desc,form.media-form .tablesort--desc,form.media-form [dir=rtl] .tablesort--desc {
   -webkit-mask-image: url("../../media/sprite.svg#sort-desc-view");
           mask-image: url("../../media/sprite.svg#sort-desc-view");
+}
+
+@media (forced-colors: active) {
+  #layout-builder-modal .tablesort--desc,#layout-builder-modal [dir=rtl] .tablesort--desc,.media-library-widget-modal .tablesort--desc,.media-library-widget-modal [dir=rtl] .tablesort--desc,form.media-form .tablesort--desc,form.media-form [dir=rtl] .tablesort--desc {
+    background: linktext;
+  }
 }
 
 #layout-builder-modal [dir=ltr] .field-plugin-settings-edit-wrapper,.media-library-widget-modal [dir=ltr] .field-plugin-settings-edit-wrapper,form.media-form [dir=ltr] .field-plugin-settings-edit-wrapper {
@@ -1388,23 +1345,27 @@
   border-bottom: 0;
 }
 
-#layout-builder-modal .field-multiple-table thead .label,.media-library-widget-modal .field-multiple-table thead .label,form.media-form .field-multiple-table thead .label {
+#layout-builder-modal .field-multiple-table thead .field-label .label,#layout-builder-modal .field-multiple-table thead .form-item__label--multiple-value-form,.media-library-widget-modal .field-multiple-table thead .field-label .label,.media-library-widget-modal .field-multiple-table thead .form-item__label--multiple-value-form,form.media-form .field-multiple-table thead .field-label .label,form.media-form .field-multiple-table thead .form-item__label--multiple-value-form {
   display: inline-block;
   font-size: var(--gin-font-size-l);
   font-weight: var(--gin-font-weight-bold);
   letter-spacing: -0.025em;
   line-height: 1.33333em;
   color: var(--gin-color-primary-active);
-  padding: 0;
-  margin: var(--gin-spacing-xs) 0;
+  padding: var(--gin-spacing-xs) 0;
+  margin: 0;
 }
 
-#layout-builder-modal .field-multiple-table tr .form-item,.media-library-widget-modal .field-multiple-table tr .form-item,form.media-form .field-multiple-table tr .form-item {
+#layout-builder-modal .field-multiple-table tr .form-item:not(:last-of-type),.media-library-widget-modal .field-multiple-table tr .form-item:not(:last-of-type),form.media-form .field-multiple-table tr .form-item:not(:last-of-type) {
   margin-bottom: var(--gin-spacing-m);
 }
 
 #layout-builder-modal .gin-layer-wrapper .views-table,.media-library-widget-modal .gin-layer-wrapper .views-table,form.media-form .gin-layer-wrapper .views-table {
   margin-top: 0;
+}
+
+#layout-builder-modal table td.field-plugin-summary-cell,.media-library-widget-modal table td.field-plugin-summary-cell,form.media-form table td.field-plugin-summary-cell {
+  vertical-align: middle;
 }
 
 #layout-builder-modal .draggable a.tabledrag-handle,.media-library-widget-modal .draggable a.tabledrag-handle,form.media-form .draggable a.tabledrag-handle {
@@ -1459,7 +1420,6 @@
 
 #layout-builder-modal .tabledrag-handle::after,.media-library-widget-modal .tabledrag-handle::after,form.media-form .tabledrag-handle::after {
   background-image: none;
-  background-color: var(--gin-color-text-light);
   -webkit-mask-image: url("../../media/sprite.svg#drag-view");
           mask-image: url("../../media/sprite.svg#drag-view");
   -webkit-mask-repeat: no-repeat;
@@ -1470,9 +1430,20 @@
           mask-size: 16px 16px;
 }
 
+@media (forced-colors: none) {
+  #layout-builder-modal .tabledrag-handle::after,.media-library-widget-modal .tabledrag-handle::after,form.media-form .tabledrag-handle::after {
+    background-color: var(--gin-color-text-light);
+  }
+}
+
 #layout-builder-modal .tabledrag-handle:hover::after,.media-library-widget-modal .tabledrag-handle:hover::after,form.media-form .tabledrag-handle:hover::after {
   transform: scale(1);
-  background-color: var(--gin-color-primary);
+}
+
+@media (forced-colors: none) {
+  #layout-builder-modal .tabledrag-handle:hover::after,.media-library-widget-modal .tabledrag-handle:hover::after,form.media-form .tabledrag-handle:hover::after {
+    background-color: var(--gin-color-primary);
+  }
 }
 
 #layout-builder-modal .draggable.drag,#layout-builder-modal .draggable.drag:focus,.media-library-widget-modal .draggable.drag,.media-library-widget-modal .draggable.drag:focus,form.media-form .draggable.drag,form.media-form .draggable.drag:focus {
@@ -1493,6 +1464,29 @@
 
 #layout-builder-modal [dir=rtl] .draggable.drag-previous,.media-library-widget-modal [dir=rtl] .draggable.drag-previous,form.media-form [dir=rtl] .draggable.drag-previous {
   box-shadow: inset -6px 0 0 0 var(--gin-color-warning);
+}
+
+#layout-builder-modal .draggable.drag-previous::after,.media-library-widget-modal .draggable.drag-previous::after,form.media-form .draggable.drag-previous::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 6px;
+}
+
+@media (forced-colors: active) {
+  #layout-builder-modal .draggable.drag-previous,.media-library-widget-modal .draggable.drag-previous,form.media-form .draggable.drag-previous {
+    position: relative;
+  }
+
+  #layout-builder-modal [dir=ltr] .draggable.drag-previous::after,.media-library-widget-modal [dir=ltr] .draggable.drag-previous::after,form.media-form [dir=ltr] .draggable.drag-previous::after {
+    border-left: 6px solid linktext;
+    left: 0;
+  }
+
+  #layout-builder-modal [dir=rtl] .draggable.drag-previous::after,.media-library-widget-modal [dir=rtl] .draggable.drag-previous::after,form.media-form [dir=rtl] .draggable.drag-previous::after {
+    border-right: 6px solid linktext;
+    right: 0;
+  }
 }
 
 #layout-builder-modal .tabledrag-leaf td,#layout-builder-modal .tabledrag-cell,.media-library-widget-modal .tabledrag-leaf td,.media-library-widget-modal .tabledrag-cell,form.media-form .tabledrag-leaf td,form.media-form .tabledrag-cell {
@@ -1649,19 +1643,19 @@
   background-color: var(--gin-color-primary-active);
 }
 
-#layout-builder-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox,form.media-form :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox {
+#layout-builder-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox,form.media-form :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox {
   position: relative;
 }
 
-#layout-builder-modal [dir=ltr] :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox,.media-library-widget-modal [dir=ltr] :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox,form.media-form [dir=ltr] :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox {
+#layout-builder-modal [dir=ltr] :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox,.media-library-widget-modal [dir=ltr] :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox,form.media-form [dir=ltr] :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox {
   margin-left: 0;
 }
 
-#layout-builder-modal [dir=rtl] :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox,.media-library-widget-modal [dir=rtl] :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox,form.media-form [dir=rtl] :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox {
+#layout-builder-modal [dir=rtl] :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox,.media-library-widget-modal [dir=rtl] :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox,form.media-form [dir=rtl] :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox {
   margin-right: 0;
 }
 
-#layout-builder-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle,form.media-form :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle {
+#layout-builder-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle,form.media-form :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle {
   z-index: 0;
   display: inline-block;
   vertical-align: top;
@@ -1671,7 +1665,7 @@
   box-sizing: border-box;
 }
 
-#layout-builder-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle__inner,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle__inner,form.media-form :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle__inner {
+#layout-builder-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle__inner,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle__inner,form.media-form :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle__inner {
   position: relative;
   display: block;
   width: 100%;
@@ -1685,11 +1679,11 @@
   box-sizing: border-box;
 }
 
-#layout-builder-modal .gin--dark-mode :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle__inner,.media-library-widget-modal .gin--dark-mode :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle__inner,form.media-form .gin--dark-mode :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle__inner {
+#layout-builder-modal .gin--dark-mode :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle__inner,.media-library-widget-modal .gin--dark-mode :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle__inner,form.media-form .gin--dark-mode :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle__inner {
   background-color: var(--gin-bg-input);
 }
 
-#layout-builder-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle__inner:before,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle__inner:before,form.media-form :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle__inner:before {
+#layout-builder-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle__inner:before,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle__inner:before,form.media-form :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle__inner:before {
   position: absolute;
   content: "";
   width: 100%;
@@ -1699,19 +1693,19 @@
   transition: transform .3s;
 }
 
-#layout-builder-modal [dir=ltr] :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle__inner:before,.media-library-widget-modal [dir=ltr] :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle__inner:before,form.media-form [dir=ltr] :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle__inner:before {
+#layout-builder-modal [dir=ltr] :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle__inner:before,.media-library-widget-modal [dir=ltr] :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle__inner:before,form.media-form [dir=ltr] :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle__inner:before {
   transform: translateX(-16px);
 }
 
-#layout-builder-modal [dir=rtl] :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle__inner:before,.media-library-widget-modal [dir=rtl] :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle__inner:before,form.media-form [dir=rtl] :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle__inner:before {
+#layout-builder-modal [dir=rtl] :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle__inner:before,.media-library-widget-modal [dir=rtl] :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle__inner:before,form.media-form [dir=rtl] :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle__inner:before {
   transform: translateX(16px);
 }
 
-#layout-builder-modal .gin--dark-mode :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle__inner:before,.media-library-widget-modal .gin--dark-mode :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle__inner:before,form.media-form .gin--dark-mode :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle__inner:before {
+#layout-builder-modal .gin--dark-mode :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle__inner:before,.media-library-widget-modal .gin--dark-mode :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle__inner:before,form.media-form .gin--dark-mode :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox .checkbox-toggle__inner:before {
   background-color: var(--gin-border-color-form-element);
 }
 
-#layout-builder-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input,form.media-form :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input {
+#layout-builder-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input,form.media-form :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input {
   position: absolute !important;
   clip: rect(1px, 1px, 1px, 1px);
   overflow: hidden;
@@ -1726,91 +1720,99 @@
   z-index: 1;
 }
 
-#layout-builder-modal [dir=ltr] :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input,.media-library-widget-modal [dir=ltr] :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input,form.media-form [dir=ltr] :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input {
+#layout-builder-modal [dir=ltr] :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input,.media-library-widget-modal [dir=ltr] :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input,form.media-form [dir=ltr] :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input {
   margin-left: 0;
 }
 
-#layout-builder-modal [dir=rtl] :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input,.media-library-widget-modal [dir=rtl] :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input,form.media-form [dir=rtl] :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input {
+#layout-builder-modal [dir=rtl] :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input,.media-library-widget-modal [dir=rtl] :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input,form.media-form [dir=rtl] :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input {
   margin-right: 0;
 }
 
-#layout-builder-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:hover,#layout-builder-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:focus,#layout-builder-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:active,#layout-builder-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:hover:focus,#layout-builder-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:active:focus,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:hover,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:focus,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:active,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:hover:focus,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:active:focus,form.media-form :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:hover,form.media-form :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:focus,form.media-form :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:active,form.media-form :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:hover:focus,form.media-form :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:active:focus {
+#layout-builder-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:hover,#layout-builder-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:focus,#layout-builder-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:active,#layout-builder-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:hover:focus,#layout-builder-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:active:focus,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:hover,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:focus,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:active,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:hover:focus,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:active:focus,form.media-form :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:hover,form.media-form :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:focus,form.media-form :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:active,form.media-form :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:hover:focus,form.media-form :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:active:focus {
   outline: none;
   box-shadow: none;
   border: none;
 }
 
-#layout-builder-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:hover~.checkbox-toggle,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:hover~.checkbox-toggle,form.media-form :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:hover~.checkbox-toggle {
+#layout-builder-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:hover~.checkbox-toggle,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:hover~.checkbox-toggle,form.media-form :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:hover~.checkbox-toggle {
   opacity: .9;
   box-shadow: 0 0 2px rgba(0, 0, 0, .2);
 }
 
-#layout-builder-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle,form.media-form :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle {
+#layout-builder-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle,form.media-form :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle {
   border-color: var(--gin-color-primary-light-active);
 }
 
-#layout-builder-modal .gin--high-contrast-mode :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle,.media-library-widget-modal .gin--high-contrast-mode :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle,form.media-form .gin--high-contrast-mode :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle {
+#layout-builder-modal .gin--high-contrast-mode :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle,.media-library-widget-modal .gin--high-contrast-mode :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle,form.media-form .gin--high-contrast-mode :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle {
   border-color: var(--gin-border-color);
 }
 
-#layout-builder-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner,form.media-form :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner {
+#layout-builder-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner,form.media-form :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner {
   background-color: var(--gin-switch);
 }
 
-#layout-builder-modal .gin--dark-mode :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner,.media-library-widget-modal .gin--dark-mode :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner,form.media-form .gin--dark-mode :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner {
+#layout-builder-modal .gin--dark-mode :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner,.media-library-widget-modal .gin--dark-mode :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner,form.media-form .gin--dark-mode :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner {
   background-color: var(--gin-color-primary-light-active);
 }
 
-#layout-builder-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner:before,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner:before,form.media-form :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner:before {
+#layout-builder-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner:before,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner:before,form.media-form :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner:before {
   background-color: #fff;
 }
 
-#layout-builder-modal [dir=ltr] :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner:before,.media-library-widget-modal [dir=ltr] :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner:before,form.media-form [dir=ltr] :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner:before {
+#layout-builder-modal [dir=ltr] :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner:before,.media-library-widget-modal [dir=ltr] :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner:before,form.media-form [dir=ltr] :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner:before {
   transform: translateX(16px);
 }
 
-#layout-builder-modal [dir=rtl] :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner:before,.media-library-widget-modal [dir=rtl] :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner:before,form.media-form [dir=rtl] :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner:before {
+#layout-builder-modal [dir=rtl] :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner:before,.media-library-widget-modal [dir=rtl] :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner:before,form.media-form [dir=rtl] :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner:before {
   transform: translateX(-16px);
 }
 
-#layout-builder-modal .gin--dark-mode :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner:before,.media-library-widget-modal .gin--dark-mode :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner:before,form.media-form .gin--dark-mode :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner:before {
+#layout-builder-modal .gin--dark-mode :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner:before,.media-library-widget-modal .gin--dark-mode :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner:before,form.media-form .gin--dark-mode :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner:before {
   background-color: var(--gin-color-primary-hover);
 }
 
-#layout-builder-modal .gin--high-contrast-mode :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner:before,.media-library-widget-modal .gin--high-contrast-mode :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner:before,form.media-form .gin--high-contrast-mode :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner:before {
+#layout-builder-modal .gin--high-contrast-mode :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner:before,.media-library-widget-modal .gin--high-contrast-mode :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner:before,form.media-form .gin--high-contrast-mode :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:checked~.checkbox-toggle .checkbox-toggle__inner:before {
   background-color: var(--gin-border-color);
 }
 
-#layout-builder-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:active~.checkbox-toggle .checkbox-toggle__inner,#layout-builder-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:focus~.checkbox-toggle .checkbox-toggle__inner,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:active~.checkbox-toggle .checkbox-toggle__inner,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:focus~.checkbox-toggle .checkbox-toggle__inner,form.media-form :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:active~.checkbox-toggle .checkbox-toggle__inner,form.media-form :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:focus~.checkbox-toggle .checkbox-toggle__inner {
+#layout-builder-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:active~.checkbox-toggle .checkbox-toggle__inner,#layout-builder-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:focus~.checkbox-toggle .checkbox-toggle__inner,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:active~.checkbox-toggle .checkbox-toggle__inner,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:focus~.checkbox-toggle .checkbox-toggle__inner,form.media-form :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:active~.checkbox-toggle .checkbox-toggle__inner,form.media-form :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:focus~.checkbox-toggle .checkbox-toggle__inner {
   box-shadow: 0 0 0 1px var(--gin-color-focus-border), 0 0 0 4px var(--gin-color-focus);
 }
 
-#layout-builder-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled,form.media-form :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled {
+#layout-builder-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled,form.media-form :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled {
   cursor: not-allowed;
 }
 
-#layout-builder-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled~.checkbox-toggle,#layout-builder-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled~.checkbox-toggle:hover,#layout-builder-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled:checked~.checkbox-toggle .checkbox-toggle__inner,#layout-builder-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled:checked~.checkbox-toggle:hover .checkbox-toggle__inner,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled~.checkbox-toggle,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled~.checkbox-toggle:hover,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled:checked~.checkbox-toggle .checkbox-toggle__inner,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled:checked~.checkbox-toggle:hover .checkbox-toggle__inner,form.media-form :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled~.checkbox-toggle,form.media-form :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled~.checkbox-toggle:hover,form.media-form :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled:checked~.checkbox-toggle .checkbox-toggle__inner,form.media-form :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled:checked~.checkbox-toggle:hover .checkbox-toggle__inner {
+#layout-builder-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled~.checkbox-toggle,#layout-builder-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled~.checkbox-toggle:hover,#layout-builder-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled:checked~.checkbox-toggle .checkbox-toggle__inner,#layout-builder-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled:checked~.checkbox-toggle:hover .checkbox-toggle__inner,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled~.checkbox-toggle,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled~.checkbox-toggle:hover,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled:checked~.checkbox-toggle .checkbox-toggle__inner,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled:checked~.checkbox-toggle:hover .checkbox-toggle__inner,form.media-form :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled~.checkbox-toggle,form.media-form :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled~.checkbox-toggle:hover,form.media-form :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled:checked~.checkbox-toggle .checkbox-toggle__inner,form.media-form :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled:checked~.checkbox-toggle:hover .checkbox-toggle__inner {
   background-color: var(--gin-color-disabled);
 }
 
-#layout-builder-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled~.checkbox-toggle::before,#layout-builder-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled~.checkbox-toggle:hover::before,#layout-builder-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled:checked~.checkbox-toggle .checkbox-toggle__inner::before,#layout-builder-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled:checked~.checkbox-toggle:hover .checkbox-toggle__inner::before,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled~.checkbox-toggle::before,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled~.checkbox-toggle:hover::before,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled:checked~.checkbox-toggle .checkbox-toggle__inner::before,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled:checked~.checkbox-toggle:hover .checkbox-toggle__inner::before,form.media-form :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled~.checkbox-toggle::before,form.media-form :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled~.checkbox-toggle:hover::before,form.media-form :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled:checked~.checkbox-toggle .checkbox-toggle__inner::before,form.media-form :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled:checked~.checkbox-toggle:hover .checkbox-toggle__inner::before {
+#layout-builder-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled~.checkbox-toggle::before,#layout-builder-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled~.checkbox-toggle:hover::before,#layout-builder-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled:checked~.checkbox-toggle .checkbox-toggle__inner::before,#layout-builder-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled:checked~.checkbox-toggle:hover .checkbox-toggle__inner::before,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled~.checkbox-toggle::before,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled~.checkbox-toggle:hover::before,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled:checked~.checkbox-toggle .checkbox-toggle__inner::before,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled:checked~.checkbox-toggle:hover .checkbox-toggle__inner::before,form.media-form :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled~.checkbox-toggle::before,form.media-form :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled~.checkbox-toggle:hover::before,form.media-form :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled:checked~.checkbox-toggle .checkbox-toggle__inner::before,form.media-form :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox input:disabled:checked~.checkbox-toggle:hover .checkbox-toggle__inner::before {
   background-color: #fff;
   opacity: .4;
 }
 
-#layout-builder-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox label,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox label,form.media-form :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox label {
+#layout-builder-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox label,.media-library-widget-modal :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox label,form.media-form :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox label {
   z-index: 1;
   position: relative;
   padding-bottom: 0;
   color: var(--gin-color-text);
 }
 
-#layout-builder-modal [dir=ltr] :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox label,.media-library-widget-modal [dir=ltr] :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox label,form.media-form [dir=ltr] :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox label {
+#layout-builder-modal [dir=ltr] :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox label,.media-library-widget-modal [dir=ltr] :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox label,form.media-form [dir=ltr] :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox label {
   padding-left: var(--gin-spacing-xxs);
 }
 
-#layout-builder-modal [dir=rtl] :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox label,.media-library-widget-modal [dir=rtl] :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox label,form.media-form [dir=rtl] :not(.form-checkboxes):not(td):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox label {
+#layout-builder-modal [dir=rtl] :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox label,.media-library-widget-modal [dir=rtl] :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox label,form.media-form [dir=rtl] :not(.form-checkboxes):not(td):not(.tabledrag-cell-content__item):not(.media-library-item__click-to-select-checkbox):not(.field-content)>.form-type--checkbox label {
   padding-right: var(--gin-spacing-xxs);
+}
+
+#layout-builder-modal [dir=ltr] table:has(.tabledrag-cell-content__item .form-checkbox) th.select-all .form-checkbox,.media-library-widget-modal [dir=ltr] table:has(.tabledrag-cell-content__item .form-checkbox) th.select-all .form-checkbox,form.media-form [dir=ltr] table:has(.tabledrag-cell-content__item .form-checkbox) th.select-all .form-checkbox {
+  margin-left: calc(var(--tabledrag-handle-icon-size) + var(--space-m));
+}
+
+#layout-builder-modal [dir=rtl] table:has(.tabledrag-cell-content__item .form-checkbox) th.select-all .form-checkbox,.media-library-widget-modal [dir=rtl] table:has(.tabledrag-cell-content__item .form-checkbox) th.select-all .form-checkbox,form.media-form [dir=rtl] table:has(.tabledrag-cell-content__item .form-checkbox) th.select-all .form-checkbox {
+  margin-right: calc(var(--tabledrag-handle-icon-size) + var(--space-m));
 }
 
 #layout-builder-modal .gin--dark-mode .form-boolean:hover,#layout-builder-modal .gin--dark-mode .form-boolean:active,.media-library-widget-modal .gin--dark-mode .form-boolean:hover,.media-library-widget-modal .gin--dark-mode .form-boolean:active,form.media-form .gin--dark-mode .form-boolean:hover,form.media-form .gin--dark-mode .form-boolean:active {
@@ -2047,6 +2049,10 @@
   margin-bottom: var(--gin-spacing-xs);
 }
 
+#layout-builder-modal .length-indicator,.media-library-widget-modal .length-indicator,form.media-form .length-indicator {
+  margin-bottom: var(--gin-spacing-l);
+}
+
 #layout-builder-modal .button,#layout-builder-modal .dropbutton__item:first-of-type>*,#layout-builder-modal .dropbutton__toggle,.media-library-widget-modal .button,.media-library-widget-modal .dropbutton__item:first-of-type>*,.media-library-widget-modal .dropbutton__toggle,form.media-form .button,form.media-form .dropbutton__item:first-of-type>*,form.media-form .dropbutton__toggle {
   font-size: var(--gin-font-size-s);
   font-weight: var(--gin-font-weight-semibold);
@@ -2104,7 +2110,7 @@
 }
 
 #layout-builder-modal .button.button--small,.media-library-widget-modal .button.button--small,form.media-form .button.button--small {
-  padding: var(--gin-spacing-xs) var(--gin-spacing-m);
+  padding: calc(var(--gin-spacing-xxs) + 2px) var(--gin-spacing-m);
   border-radius: var(--gin-border-s);
 }
 
@@ -2179,6 +2185,10 @@
           mask-position: center center;
 }
 
+#layout-builder-modal .dropbutton-widget,#layout-builder-modal html.js .dropbutton-widget,.media-library-widget-modal .dropbutton-widget,.media-library-widget-modal html.js .dropbutton-widget,form.media-form .dropbutton-widget,form.media-form html.js .dropbutton-widget {
+  background-color: transparent;
+}
+
 #layout-builder-modal .dropbutton,.media-library-widget-modal .dropbutton,form.media-form .dropbutton {
   border: 2px solid var(--gin-color-primary);
   border-radius: var(--gin-border-m);
@@ -2228,6 +2238,12 @@
   white-space: nowrap;
 }
 
+@media (forced-colors: active) {
+  #layout-builder-modal .dropbutton__item:first-of-type>*,#layout-builder-modal .dropbutton__toggle,.media-library-widget-modal .dropbutton__item:first-of-type>*,.media-library-widget-modal .dropbutton__toggle,form.media-form .dropbutton__item:first-of-type>*,form.media-form .dropbutton__toggle {
+    border-width: 0 !important;
+  }
+}
+
 #layout-builder-modal .dropbutton__item:first-of-type>*,.media-library-widget-modal .dropbutton__item:first-of-type>*,form.media-form .dropbutton__item:first-of-type>* {
   padding: calc(.875rem - 1px) calc(var(--gin-spacing-l) - 1px);
 }
@@ -2236,6 +2252,7 @@
   top: 2px;
   width: calc(var(--gin-spacing-xxl) + 1px);
   height: 2.75rem;
+  border-inline-start: var(--dropbutton-border-size) solid var(--gin-color-primary) !important;
 }
 
 #layout-builder-modal [dir=ltr] .dropbutton__toggle,.media-library-widget-modal [dir=ltr] .dropbutton__toggle,form.media-form [dir=ltr] .dropbutton__toggle {
@@ -2250,21 +2267,23 @@
   background-color: var(--gin-color-primary);
 }
 
-#layout-builder-modal .dropbutton__toggle::before,.media-library-widget-modal .dropbutton__toggle::before,form.media-form .dropbutton__toggle::before {
-  background-image: none;
-  background-color: var(--gin-color-primary);
-  -webkit-mask-image: url("../../media/sprite.svg#drop-view");
-          mask-image: url("../../media/sprite.svg#drop-view");
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  -webkit-mask-position: center center;
-          mask-position: center center;
-  -webkit-mask-size: 12px 12px;
-          mask-size: 12px 12px;
-}
+@media not (forced-colors: active) {
+  #layout-builder-modal .dropbutton__toggle::before,.media-library-widget-modal .dropbutton__toggle::before,form.media-form .dropbutton__toggle::before {
+    background-image: none;
+    background-color: var(--gin-color-primary);
+    -webkit-mask-image: url("../../media/sprite.svg#drop-view");
+            mask-image: url("../../media/sprite.svg#drop-view");
+    -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+    -webkit-mask-position: center center;
+            mask-position: center center;
+    -webkit-mask-size: 12px 12px;
+            mask-size: 12px 12px;
+  }
 
-#layout-builder-modal .dropbutton__toggle:hover::before,#layout-builder-modal .dropbutton__toggle:active::before,#layout-builder-modal .dropbutton__toggle:focus::before,.media-library-widget-modal .dropbutton__toggle:hover::before,.media-library-widget-modal .dropbutton__toggle:active::before,.media-library-widget-modal .dropbutton__toggle:focus::before,form.media-form .dropbutton__toggle:hover::before,form.media-form .dropbutton__toggle:active::before,form.media-form .dropbutton__toggle:focus::before {
-  background-color: var(--gin-color-button-text);
+  #layout-builder-modal .dropbutton__toggle:hover::before,#layout-builder-modal .dropbutton__toggle:active::before,#layout-builder-modal .dropbutton__toggle:focus::before,.media-library-widget-modal .dropbutton__toggle:hover::before,.media-library-widget-modal .dropbutton__toggle:active::before,.media-library-widget-modal .dropbutton__toggle:focus::before,form.media-form .dropbutton__toggle:hover::before,form.media-form .dropbutton__toggle:active::before,form.media-form .dropbutton__toggle:focus::before {
+    background-color: var(--gin-color-button-text);
+  }
 }
 
 #layout-builder-modal .dropbutton .dropbutton__items,.media-library-widget-modal .dropbutton .dropbutton__items,form.media-form .dropbutton .dropbutton__items {
@@ -2294,6 +2313,12 @@
 #layout-builder-modal [dir=rtl] .node-form .dropbutton .dropbutton__items,.media-library-widget-modal [dir=rtl] .node-form .dropbutton .dropbutton__items,form.media-form [dir=rtl] .node-form .dropbutton .dropbutton__items {
   right: 0;
   left: auto;
+}
+
+@media (forced-colors: active) {
+  #layout-builder-modal .dropbutton .dropbutton__items,.media-library-widget-modal .dropbutton .dropbutton__items,form.media-form .dropbutton .dropbutton__items {
+    border: 1px solid linktext;
+  }
 }
 
 #layout-builder-modal .dropbutton>.dropbutton__items>.dropbutton__item:first-of-type>a,#layout-builder-modal .dropbutton>.dropbutton__items>.dropbutton__item:first-of-type>input,#layout-builder-modal .dropbutton>.dropbutton__items>.dropbutton__item:first-of-type>.button,.media-library-widget-modal .dropbutton>.dropbutton__items>.dropbutton__item:first-of-type>a,.media-library-widget-modal .dropbutton>.dropbutton__items>.dropbutton__item:first-of-type>input,.media-library-widget-modal .dropbutton>.dropbutton__items>.dropbutton__item:first-of-type>.button,form.media-form .dropbutton>.dropbutton__items>.dropbutton__item:first-of-type>a,form.media-form .dropbutton>.dropbutton__items>.dropbutton__item:first-of-type>input,form.media-form .dropbutton>.dropbutton__items>.dropbutton__item:first-of-type>.button {
@@ -2349,6 +2374,19 @@
   border-radius: var(--gin-border-s);
 }
 
+@media (forced-colors: active) {
+  #layout-builder-modal .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item>a:hover,#layout-builder-modal .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item>a:active,#layout-builder-modal .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item>a:focus,#layout-builder-modal .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item>input:hover,#layout-builder-modal .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item>input:active,#layout-builder-modal .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item>input:focus,#layout-builder-modal .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item>.button:hover,#layout-builder-modal .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item>.button:active,#layout-builder-modal .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item>.button:focus,#layout-builder-modal .dropbutton .dropbutton__items>.dropbutton__item>a:hover,#layout-builder-modal .dropbutton .dropbutton__items>.dropbutton__item>a:active,#layout-builder-modal .dropbutton .dropbutton__items>.dropbutton__item>a:focus,#layout-builder-modal .dropbutton .dropbutton__items>.dropbutton__item>input:hover,#layout-builder-modal .dropbutton .dropbutton__items>.dropbutton__item>input:active,#layout-builder-modal .dropbutton .dropbutton__items>.dropbutton__item>input:focus,#layout-builder-modal .dropbutton .dropbutton__items>.dropbutton__item>.button:hover,#layout-builder-modal .dropbutton .dropbutton__items>.dropbutton__item>.button:active,#layout-builder-modal .dropbutton .dropbutton__items>.dropbutton__item>.button:focus,#layout-builder-modal .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item>a:hover,#layout-builder-modal .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item>a:active,#layout-builder-modal .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item>a:focus,#layout-builder-modal .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item>input:hover,#layout-builder-modal .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item>input:active,#layout-builder-modal .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item>input:focus,#layout-builder-modal .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item>.button:hover,#layout-builder-modal .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item>.button:active,#layout-builder-modal .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item>.button:focus,.media-library-widget-modal .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item>a:hover,.media-library-widget-modal .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item>a:active,.media-library-widget-modal .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item>a:focus,.media-library-widget-modal .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item>input:hover,.media-library-widget-modal .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item>input:active,.media-library-widget-modal .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item>input:focus,.media-library-widget-modal .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item>.button:hover,.media-library-widget-modal .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item>.button:active,.media-library-widget-modal .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item>.button:focus,.media-library-widget-modal .dropbutton .dropbutton__items>.dropbutton__item>a:hover,.media-library-widget-modal .dropbutton .dropbutton__items>.dropbutton__item>a:active,.media-library-widget-modal .dropbutton .dropbutton__items>.dropbutton__item>a:focus,.media-library-widget-modal .dropbutton .dropbutton__items>.dropbutton__item>input:hover,.media-library-widget-modal .dropbutton .dropbutton__items>.dropbutton__item>input:active,.media-library-widget-modal .dropbutton .dropbutton__items>.dropbutton__item>input:focus,.media-library-widget-modal .dropbutton .dropbutton__items>.dropbutton__item>.button:hover,.media-library-widget-modal .dropbutton .dropbutton__items>.dropbutton__item>.button:active,.media-library-widget-modal .dropbutton .dropbutton__items>.dropbutton__item>.button:focus,.media-library-widget-modal .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item>a:hover,.media-library-widget-modal .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item>a:active,.media-library-widget-modal .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item>a:focus,.media-library-widget-modal .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item>input:hover,.media-library-widget-modal .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item>input:active,.media-library-widget-modal .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item>input:focus,.media-library-widget-modal .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item>.button:hover,.media-library-widget-modal .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item>.button:active,.media-library-widget-modal .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item>.button:focus,form.media-form .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item>a:hover,form.media-form .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item>a:active,form.media-form .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item>a:focus,form.media-form .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item>input:hover,form.media-form .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item>input:active,form.media-form .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item>input:focus,form.media-form .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item>.button:hover,form.media-form .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item>.button:active,form.media-form .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item>.button:focus,form.media-form .dropbutton .dropbutton__items>.dropbutton__item>a:hover,form.media-form .dropbutton .dropbutton__items>.dropbutton__item>a:active,form.media-form .dropbutton .dropbutton__items>.dropbutton__item>a:focus,form.media-form .dropbutton .dropbutton__items>.dropbutton__item>input:hover,form.media-form .dropbutton .dropbutton__items>.dropbutton__item>input:active,form.media-form .dropbutton .dropbutton__items>.dropbutton__item>input:focus,form.media-form .dropbutton .dropbutton__items>.dropbutton__item>.button:hover,form.media-form .dropbutton .dropbutton__items>.dropbutton__item>.button:active,form.media-form .dropbutton .dropbutton__items>.dropbutton__item>.button:focus,form.media-form .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item>a:hover,form.media-form .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item>a:active,form.media-form .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item>a:focus,form.media-form .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item>input:hover,form.media-form .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item>input:active,form.media-form .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item>input:focus,form.media-form .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item>.button:hover,form.media-form .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item>.button:active,form.media-form .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item>.button:focus {
+    outline: 2px solid transparent;
+    outline-offset: -2px;
+  }
+}
+
+@media (forced-colors: active) {
+  #layout-builder-modal .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item>a:focus,#layout-builder-modal .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item>input:focus,#layout-builder-modal .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item>.button:focus,#layout-builder-modal .dropbutton .dropbutton__items>.dropbutton__item>a:focus,#layout-builder-modal .dropbutton .dropbutton__items>.dropbutton__item>input:focus,#layout-builder-modal .dropbutton .dropbutton__items>.dropbutton__item>.button:focus,#layout-builder-modal .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item>a:focus,#layout-builder-modal .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item>input:focus,#layout-builder-modal .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item>.button:focus,.media-library-widget-modal .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item>a:focus,.media-library-widget-modal .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item>input:focus,.media-library-widget-modal .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item>.button:focus,.media-library-widget-modal .dropbutton .dropbutton__items>.dropbutton__item>a:focus,.media-library-widget-modal .dropbutton .dropbutton__items>.dropbutton__item>input:focus,.media-library-widget-modal .dropbutton .dropbutton__items>.dropbutton__item>.button:focus,.media-library-widget-modal .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item>a:focus,.media-library-widget-modal .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item>input:focus,.media-library-widget-modal .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item>.button:focus,form.media-form .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item>a:focus,form.media-form .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item>input:focus,form.media-form .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item>.button:focus,form.media-form .dropbutton .dropbutton__items>.dropbutton__item>a:focus,form.media-form .dropbutton .dropbutton__items>.dropbutton__item>input:focus,form.media-form .dropbutton .dropbutton__items>.dropbutton__item>.button:focus,form.media-form .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item>a:focus,form.media-form .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item>input:focus,form.media-form .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item>.button:focus {
+    outline-style: dotted;
+  }
+}
+
 #layout-builder-modal .dropbutton>.dropbutton__item:first-of-type>a:hover,#layout-builder-modal .dropbutton>.dropbutton__item:first-of-type>a:active,#layout-builder-modal .dropbutton>.dropbutton__item:first-of-type>a:focus,#layout-builder-modal .dropbutton>.dropbutton__item:first-of-type>input:hover,#layout-builder-modal .dropbutton>.dropbutton__item:first-of-type>input:active,#layout-builder-modal .dropbutton>.dropbutton__item:first-of-type>input:focus,#layout-builder-modal .dropbutton>.dropbutton__item:first-of-type>.button:hover,#layout-builder-modal .dropbutton>.dropbutton__item:first-of-type>.button:active,#layout-builder-modal .dropbutton>.dropbutton__item:first-of-type>.button:focus,.media-library-widget-modal .dropbutton>.dropbutton__item:first-of-type>a:hover,.media-library-widget-modal .dropbutton>.dropbutton__item:first-of-type>a:active,.media-library-widget-modal .dropbutton>.dropbutton__item:first-of-type>a:focus,.media-library-widget-modal .dropbutton>.dropbutton__item:first-of-type>input:hover,.media-library-widget-modal .dropbutton>.dropbutton__item:first-of-type>input:active,.media-library-widget-modal .dropbutton>.dropbutton__item:first-of-type>input:focus,.media-library-widget-modal .dropbutton>.dropbutton__item:first-of-type>.button:hover,.media-library-widget-modal .dropbutton>.dropbutton__item:first-of-type>.button:active,.media-library-widget-modal .dropbutton>.dropbutton__item:first-of-type>.button:focus,form.media-form .dropbutton>.dropbutton__item:first-of-type>a:hover,form.media-form .dropbutton>.dropbutton__item:first-of-type>a:active,form.media-form .dropbutton>.dropbutton__item:first-of-type>a:focus,form.media-form .dropbutton>.dropbutton__item:first-of-type>input:hover,form.media-form .dropbutton>.dropbutton__item:first-of-type>input:active,form.media-form .dropbutton>.dropbutton__item:first-of-type>input:focus,form.media-form .dropbutton>.dropbutton__item:first-of-type>.button:hover,form.media-form .dropbutton>.dropbutton__item:first-of-type>.button:active,form.media-form .dropbutton>.dropbutton__item:first-of-type>.button:focus {
   color: var(--gin-color-button-text);
   background: var(--gin-color-primary);
@@ -2359,7 +2397,7 @@
 }
 
 #layout-builder-modal .dropbutton:not(.dropbutton--gin)>.dropbutton__item:not(:first-of-type)>a,#layout-builder-modal .dropbutton:not(.dropbutton--gin)>.dropbutton__item:not(:first-of-type)>input,#layout-builder-modal .dropbutton:not(.dropbutton--gin)>.dropbutton__item:not(:first-of-type)>.button,#layout-builder-modal .dropbutton .dropbutton__items>.dropbutton__item>a,#layout-builder-modal .dropbutton .dropbutton__items>.dropbutton__item>input,#layout-builder-modal .dropbutton .dropbutton__items>.dropbutton__item>.button,#layout-builder-modal .dropbutton>.dropbutton__items>.dropbutton__item~.dropbutton__item>a,#layout-builder-modal .dropbutton>.dropbutton__items>.dropbutton__item~.dropbutton__item>input,#layout-builder-modal .dropbutton>.dropbutton__items>.dropbutton__item~.dropbutton__item>.button,.media-library-widget-modal .dropbutton:not(.dropbutton--gin)>.dropbutton__item:not(:first-of-type)>a,.media-library-widget-modal .dropbutton:not(.dropbutton--gin)>.dropbutton__item:not(:first-of-type)>input,.media-library-widget-modal .dropbutton:not(.dropbutton--gin)>.dropbutton__item:not(:first-of-type)>.button,.media-library-widget-modal .dropbutton .dropbutton__items>.dropbutton__item>a,.media-library-widget-modal .dropbutton .dropbutton__items>.dropbutton__item>input,.media-library-widget-modal .dropbutton .dropbutton__items>.dropbutton__item>.button,.media-library-widget-modal .dropbutton>.dropbutton__items>.dropbutton__item~.dropbutton__item>a,.media-library-widget-modal .dropbutton>.dropbutton__items>.dropbutton__item~.dropbutton__item>input,.media-library-widget-modal .dropbutton>.dropbutton__items>.dropbutton__item~.dropbutton__item>.button,form.media-form .dropbutton:not(.dropbutton--gin)>.dropbutton__item:not(:first-of-type)>a,form.media-form .dropbutton:not(.dropbutton--gin)>.dropbutton__item:not(:first-of-type)>input,form.media-form .dropbutton:not(.dropbutton--gin)>.dropbutton__item:not(:first-of-type)>.button,form.media-form .dropbutton .dropbutton__items>.dropbutton__item>a,form.media-form .dropbutton .dropbutton__items>.dropbutton__item>input,form.media-form .dropbutton .dropbutton__items>.dropbutton__item>.button,form.media-form .dropbutton>.dropbutton__items>.dropbutton__item~.dropbutton__item>a,form.media-form .dropbutton>.dropbutton__items>.dropbutton__item~.dropbutton__item>input,form.media-form .dropbutton>.dropbutton__items>.dropbutton__item~.dropbutton__item>.button {
-  font-size: var(--gin-font-size-s);
+  font-size: var(--gin-font-size-s) !important;
   padding: .75em 1em !important;
 }
 
@@ -2420,11 +2458,19 @@
   border-radius: var(--gin-border-s);
 }
 
+#layout-builder-modal html.js.no-touchevents .dropbutton--small .dropbutton__toggle,.media-library-widget-modal html.js.no-touchevents .dropbutton--small .dropbutton__toggle,form.media-form html.js.no-touchevents .dropbutton--small .dropbutton__toggle {
+  width: calc(var(--dropbutton-small-toggle-size) + 1px);
+}
+
 #layout-builder-modal html.js.no-touchevents .dropbutton--extrasmall,.media-library-widget-modal html.js.no-touchevents .dropbutton--extrasmall,form.media-form html.js.no-touchevents .dropbutton--extrasmall {
   min-width: 0;
   height: 1.75rem;
   min-height: 1.75rem;
   border-radius: var(--gin-border-s);
+}
+
+#layout-builder-modal html.js.no-touchevents .dropbutton--extrasmall .dropbutton__toggle,.media-library-widget-modal html.js.no-touchevents .dropbutton--extrasmall .dropbutton__toggle,form.media-form html.js.no-touchevents .dropbutton--extrasmall .dropbutton__toggle {
+  width: calc(var(--dropbutton-extrasmall-toggle-size) + 1px);
 }
 
 #layout-builder-modal html[dir=ltr].js.no-touchevents .dropbutton--multiple.dropbutton--extrasmall .dropbutton__items .dropbutton__item,.media-library-widget-modal html[dir=ltr].js.no-touchevents .dropbutton--multiple.dropbutton--extrasmall .dropbutton__items .dropbutton__item,form.media-form html[dir=ltr].js.no-touchevents .dropbutton--multiple.dropbutton--extrasmall .dropbutton__items .dropbutton__item {
@@ -2441,18 +2487,18 @@
 
 #layout-builder-modal .action-link,.media-library-widget-modal .action-link,form.media-form .action-link {
   color: var(--gin-color-primary);
-  background-color: transparent;
+  background: transparent;
   border-radius: var(--gin-border-s);
 }
 
 #layout-builder-modal .action-link:hover,.media-library-widget-modal .action-link:hover,form.media-form .action-link:hover {
   color: var(--gin-color-primary-hover);
-  background-color: var(--gin-bg-item-hover);
+  background: var(--gin-bg-item-hover);
 }
 
 #layout-builder-modal .action-link:focus,.media-library-widget-modal .action-link:focus,form.media-form .action-link:focus {
   color: var(--gin-color-primary-active);
-  background-color: var(--gin-color-primary-light-hover);
+  background: var(--gin-color-primary-light-hover);
 }
 
 #layout-builder-modal .action-link.action-link--extrasmall,.media-library-widget-modal .action-link.action-link--extrasmall,form.media-form .action-link.action-link--extrasmall {
@@ -2461,7 +2507,7 @@
 
 #layout-builder-modal .action-link:before,.media-library-widget-modal .action-link:before,form.media-form .action-link:before {
   background-image: none;
-  background-color: var(--gin-color-primary);
+  background: var(--gin-color-primary) !important;
   -webkit-mask-size: contain;
           mask-size: contain;
   -webkit-mask-repeat: no-repeat;
@@ -2470,9 +2516,14 @@
           mask-position: center;
 }
 
-#layout-builder-modal .action-link--icon-ex:hover::before,#layout-builder-modal .action-link--icon-checkmark:hover:before,#layout-builder-modal .action-link--icon-show:hover::before,#layout-builder-modal .action-link--icon-cog:hover::before,#layout-builder-modal .action-link--icon-hide:hover::before,#layout-builder-modal .action-link--icon-show:before,#layout-builder-modal .action-link--icon-hide:before,.media-library-widget-modal .action-link--icon-ex:hover::before,.media-library-widget-modal .action-link--icon-checkmark:hover:before,.media-library-widget-modal .action-link--icon-show:hover::before,.media-library-widget-modal .action-link--icon-cog:hover::before,.media-library-widget-modal .action-link--icon-hide:hover::before,.media-library-widget-modal .action-link--icon-show:before,.media-library-widget-modal .action-link--icon-hide:before,form.media-form .action-link--icon-ex:hover::before,form.media-form .action-link--icon-checkmark:hover:before,form.media-form .action-link--icon-show:hover::before,form.media-form .action-link--icon-cog:hover::before,form.media-form .action-link--icon-hide:hover::before,form.media-form .action-link--icon-show:before,form.media-form .action-link--icon-hide:before {
+#layout-builder-modal .action-link--icon-plus:hover:before,#layout-builder-modal .action-link--icon-ex:hover::before,#layout-builder-modal .action-link--icon-checkmark:hover:before,#layout-builder-modal .action-link--icon-show:hover::before,#layout-builder-modal .action-link--icon-cog:hover::before,#layout-builder-modal .action-link--icon-hide:hover::before,#layout-builder-modal .action-link--icon-show:before,#layout-builder-modal .action-link--icon-hide:before,.media-library-widget-modal .action-link--icon-plus:hover:before,.media-library-widget-modal .action-link--icon-ex:hover::before,.media-library-widget-modal .action-link--icon-checkmark:hover:before,.media-library-widget-modal .action-link--icon-show:hover::before,.media-library-widget-modal .action-link--icon-cog:hover::before,.media-library-widget-modal .action-link--icon-hide:hover::before,.media-library-widget-modal .action-link--icon-show:before,.media-library-widget-modal .action-link--icon-hide:before,form.media-form .action-link--icon-plus:hover:before,form.media-form .action-link--icon-ex:hover::before,form.media-form .action-link--icon-checkmark:hover:before,form.media-form .action-link--icon-show:hover::before,form.media-form .action-link--icon-cog:hover::before,form.media-form .action-link--icon-hide:hover::before,form.media-form .action-link--icon-show:before,form.media-form .action-link--icon-hide:before {
   background-image: none;
   background-color: var(--gin-color-primary);
+}
+
+#layout-builder-modal .action-link--icon-plus:before,.media-library-widget-modal .action-link--icon-plus:before,form.media-form .action-link--icon-plus:before {
+  -webkit-mask-image: url("../../media/sprite.svg#add-view");
+          mask-image: url("../../media/sprite.svg#add-view");
 }
 
 #layout-builder-modal .action-link--icon-checkmark:before,.media-library-widget-modal .action-link--icon-checkmark:before,form.media-form .action-link--icon-checkmark:before {
@@ -2705,6 +2756,12 @@
   right: 0;
 }
 
+@media (forced-colors: active) {
+  #layout-builder-modal .messages .messages__header:before,.media-library-widget-modal .messages .messages__header:before,form.media-form .messages .messages__header:before {
+    background-color: linktext !important;
+  }
+}
+
 #layout-builder-modal .messages .button--dismiss,.media-library-widget-modal .messages .button--dismiss,form.media-form .messages .button--dismiss {
   position: absolute;
   top: 0;
@@ -2760,6 +2817,12 @@
 
 #layout-builder-modal [dir=rtl] .messages .button--dismiss .icon-close,.media-library-widget-modal [dir=rtl] .messages .button--dismiss .icon-close,form.media-form [dir=rtl] .messages .button--dismiss .icon-close {
   right: 0;
+}
+
+@media (forced-colors: active) {
+  #layout-builder-modal .messages .button--dismiss .icon-close,.media-library-widget-modal .messages .button--dismiss .icon-close,form.media-form .messages .button--dismiss .icon-close {
+    background-color: buttonBorder;
+  }
 }
 
 #layout-builder-modal .messages--webform .button--dismiss,.media-library-widget-modal .messages--webform .button--dismiss,form.media-form .messages--webform .button--dismiss {
@@ -3018,6 +3081,12 @@
   left: var(--gin-spacing-m);
   right: auto;
   transform: translateY(-50%) scaleX(-1);
+}
+
+@media (forced-colors: active) {
+  #layout-builder-modal .admin-item .admin-item__link::before,.media-library-widget-modal .admin-item .admin-item__link::before,form.media-form .admin-item .admin-item__link::before {
+    background-color: linktext;
+  }
 }
 
 #layout-builder-modal .admin-item .admin-item__link:hover,#layout-builder-modal .admin-item .admin-item__link:focus,.media-library-widget-modal .admin-item .admin-item__link:hover,.media-library-widget-modal .admin-item .admin-item__link:focus,form.media-form .admin-item .admin-item__link:hover,form.media-form .admin-item .admin-item__link:focus {
@@ -3282,6 +3351,10 @@
   padding: 0;
   border: 0 none;
   box-shadow: none;
+}
+
+#layout-builder-modal .block-system>form .gin-layer-wrapper,.media-library-widget-modal .block-system>form .gin-layer-wrapper,form.media-form .block-system>form .gin-layer-wrapper {
+  padding-bottom: 1px;
 }
 
 #layout-builder-modal .compact-link,.media-library-widget-modal .compact-link,form.media-form .compact-link {

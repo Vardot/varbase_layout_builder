@@ -11,11 +11,11 @@
 }
 
 #layout-builder-modal [dir=ltr] .help-icon__description-toggle,.media-library-widget-modal [dir=ltr] .help-icon__description-toggle,form.media-form [dir=ltr] .help-icon__description-toggle {
-  margin: .3rem var(--gin-spacing-m) 0 .3rem;
+  margin: .1rem var(--gin-spacing-m) 0 .3rem;
 }
 
 #layout-builder-modal [dir=rtl] .help-icon__description-toggle,.media-library-widget-modal [dir=rtl] .help-icon__description-toggle,form.media-form [dir=rtl] .help-icon__description-toggle {
-  margin: .3rem .3rem 0 var(--gin-spacing-m);
+  margin: .1rem .3rem 0 var(--gin-spacing-m);
 }
 
 #layout-builder-modal .help-icon__description-toggle:before,.media-library-widget-modal .help-icon__description-toggle:before,form.media-form .help-icon__description-toggle:before {
@@ -76,7 +76,7 @@
 }
 
 #layout-builder-modal .field-group-fieldset>.help-icon>.help-icon__description-toggle,#layout-builder-modal fieldset.media-library-widget .help-icon>.help-icon__description-toggle,#layout-builder-modal .field--type-datetime fieldset .help-icon>.help-icon__description-toggle,.media-library-widget-modal .field-group-fieldset>.help-icon>.help-icon__description-toggle,.media-library-widget-modal fieldset.media-library-widget .help-icon>.help-icon__description-toggle,.media-library-widget-modal .field--type-datetime fieldset .help-icon>.help-icon__description-toggle,form.media-form .field-group-fieldset>.help-icon>.help-icon__description-toggle,form.media-form fieldset.media-library-widget .help-icon>.help-icon__description-toggle,form.media-form .field--type-datetime fieldset .help-icon>.help-icon__description-toggle {
-  margin-top: 1.3rem;
+  margin-top: 1rem;
 }
 
 #layout-builder-modal [dir=ltr] .field-group-fieldset>.fieldset__description,#layout-builder-modal [dir=ltr] fieldset.media-library-widget .fieldset__description,#layout-builder-modal [dir=ltr] .field--type-datetime fieldset .fieldset__description,.media-library-widget-modal [dir=ltr] .field-group-fieldset>.fieldset__description,.media-library-widget-modal [dir=ltr] fieldset.media-library-widget .fieldset__description,.media-library-widget-modal [dir=ltr] .field--type-datetime fieldset .fieldset__description,form.media-form [dir=ltr] .field-group-fieldset>.fieldset__description,form.media-form [dir=ltr] fieldset.media-library-widget .fieldset__description,form.media-form [dir=ltr] .field--type-datetime fieldset .fieldset__description {

@@ -52,57 +52,54 @@
   margin: 0;
 }
 
-#layout-builder-modal .js .dropbutton,.media-library-widget-modal .js .dropbutton,form.media-form .js .dropbutton {
+#layout-builder-modal .dropbutton,.media-library-widget-modal .dropbutton,form.media-form .dropbutton {
   min-width: 6rem;
   height: var(--dropbutton-toggle-size);
 }
 
-#layout-builder-modal .js .dropbutton-widget,.media-library-widget-modal .js .dropbutton-widget,form.media-form .js .dropbutton-widget {
+#layout-builder-modal .dropbutton-widget,.media-library-widget-modal .dropbutton-widget,form.media-form .dropbutton-widget {
   border-radius: var(--button-border-radius-size);
   background-color: var(--button-bg-color);
 }
 
-#layout-builder-modal .js .dropbutton-action,.media-library-widget-modal .js .dropbutton-action,form.media-form .js .dropbutton-action {
-  border-inline-end: var(--dropbutton-border-size) solid white;
-}
-
-#layout-builder-modal .js.no-touchevents .dropbutton--small,.media-library-widget-modal .js.no-touchevents .dropbutton--small,form.media-form .js.no-touchevents .dropbutton--small {
+#layout-builder-modal .dropbutton--small,.media-library-widget-modal .dropbutton--small,form.media-form .dropbutton--small {
   height: var(--dropbutton-small-toggle-size);
 }
 
-#layout-builder-modal .js.no-touchevents .dropbutton--extrasmall,.media-library-widget-modal .js.no-touchevents .dropbutton--extrasmall,form.media-form .js.no-touchevents .dropbutton--extrasmall {
+#layout-builder-modal .dropbutton--extrasmall,.media-library-widget-modal .dropbutton--extrasmall,form.media-form .dropbutton--extrasmall {
   height: var(--dropbutton-extrasmall-toggle-size);
 }
 
-#layout-builder-modal .js .dropbutton--multiple .dropbutton__item:first-of-type,.media-library-widget-modal .js .dropbutton--multiple .dropbutton__item:first-of-type,form.media-form .js .dropbutton--multiple .dropbutton__item:first-of-type {
+#layout-builder-modal .dropbutton--multiple .dropbutton__item:first-of-type,.media-library-widget-modal .dropbutton--multiple .dropbutton__item:first-of-type,form.media-form .dropbutton--multiple .dropbutton__item:first-of-type {
   margin-right: calc(var(--dropbutton-toggle-size) + var(--dropbutton-toggle-size-spacing));
 }
 
-#layout-builder-modal [dir=rtl].js .dropbutton--multiple .dropbutton__item:first-of-type,.media-library-widget-modal [dir=rtl].js .dropbutton--multiple .dropbutton__item:first-of-type,form.media-form [dir=rtl].js .dropbutton--multiple .dropbutton__item:first-of-type {
+#layout-builder-modal [dir=rtl] .dropbutton--multiple .dropbutton__item:first-of-type,.media-library-widget-modal [dir=rtl] .dropbutton--multiple .dropbutton__item:first-of-type,form.media-form [dir=rtl] .dropbutton--multiple .dropbutton__item:first-of-type {
   margin-right: 0;
   margin-left: calc(var(--dropbutton-toggle-size) + var(--dropbutton-toggle-size-spacing));
 }
 
-#layout-builder-modal .js.no-touchevents .dropbutton--multiple.dropbutton--small .dropbutton__item:first-of-type,.media-library-widget-modal .js.no-touchevents .dropbutton--multiple.dropbutton--small .dropbutton__item:first-of-type,form.media-form .js.no-touchevents .dropbutton--multiple.dropbutton--small .dropbutton__item:first-of-type {
+#layout-builder-modal .no-touchevents .dropbutton--multiple.dropbutton--small .dropbutton__item:first-of-type,.media-library-widget-modal .no-touchevents .dropbutton--multiple.dropbutton--small .dropbutton__item:first-of-type,form.media-form .no-touchevents .dropbutton--multiple.dropbutton--small .dropbutton__item:first-of-type {
   margin-right: calc(var(--dropbutton-small-toggle-size) + var(--dropbutton-toggle-size-spacing));
 }
 
-#layout-builder-modal [dir=rtl].js.no-touchevents .dropbutton--multiple.dropbutton--small .dropbutton__item:first-of-type,.media-library-widget-modal [dir=rtl].js.no-touchevents .dropbutton--multiple.dropbutton--small .dropbutton__item:first-of-type,form.media-form [dir=rtl].js.no-touchevents .dropbutton--multiple.dropbutton--small .dropbutton__item:first-of-type {
+#layout-builder-modal [dir=rtl].no-touchevents .dropbutton--multiple.dropbutton--small .dropbutton__item:first-of-type,.media-library-widget-modal [dir=rtl].no-touchevents .dropbutton--multiple.dropbutton--small .dropbutton__item:first-of-type,form.media-form [dir=rtl].no-touchevents .dropbutton--multiple.dropbutton--small .dropbutton__item:first-of-type {
   margin-right: 0;
   margin-left: calc(var(--dropbutton-small-toggle-size) + var(--dropbutton-toggle-size-spacing));
 }
 
-#layout-builder-modal .js.no-touchevents .dropbutton--multiple.dropbutton--extrasmall .dropbutton__item:first-of-type,.media-library-widget-modal .js.no-touchevents .dropbutton--multiple.dropbutton--extrasmall .dropbutton__item:first-of-type,form.media-form .js.no-touchevents .dropbutton--multiple.dropbutton--extrasmall .dropbutton__item:first-of-type {
+#layout-builder-modal .no-touchevents .dropbutton--multiple.dropbutton--extrasmall .dropbutton__item:first-of-type,.media-library-widget-modal .no-touchevents .dropbutton--multiple.dropbutton--extrasmall .dropbutton__item:first-of-type,form.media-form .no-touchevents .dropbutton--multiple.dropbutton--extrasmall .dropbutton__item:first-of-type {
   margin-right: calc(var(--dropbutton-extrasmall-toggle-size) + var(--dropbutton-toggle-size-spacing));
 }
 
-#layout-builder-modal [dir=rtl].js.no-touchevents .dropbutton--multiple.dropbutton--extrasmall .dropbutton__item:first-of-type,.media-library-widget-modal [dir=rtl].js.no-touchevents .dropbutton--multiple.dropbutton--extrasmall .dropbutton__item:first-of-type,form.media-form [dir=rtl].js.no-touchevents .dropbutton--multiple.dropbutton--extrasmall .dropbutton__item:first-of-type {
+#layout-builder-modal [dir=rtl].no-touchevents .dropbutton--multiple.dropbutton--extrasmall .dropbutton__item:first-of-type,.media-library-widget-modal [dir=rtl].no-touchevents .dropbutton--multiple.dropbutton--extrasmall .dropbutton__item:first-of-type,form.media-form [dir=rtl].no-touchevents .dropbutton--multiple.dropbutton--extrasmall .dropbutton__item:first-of-type {
   margin-right: 0;
   margin-left: calc(var(--dropbutton-extrasmall-toggle-size) + var(--dropbutton-toggle-size-spacing));
 }
 
 #layout-builder-modal .dropbutton__toggle,.media-library-widget-modal .dropbutton__toggle,form.media-form .dropbutton__toggle {
   border: var(--dropbutton-border-size) solid transparent !important;
+  border-inline-start: var(--dropbutton-border-size) solid white !important;
 }
 
 #layout-builder-modal .dropbutton__toggle,.media-library-widget-modal .dropbutton__toggle,form.media-form .dropbutton__toggle {
@@ -279,11 +276,11 @@
   z-index: 2;
 }
 
-#layout-builder-modal .js .dropbutton--multiple .dropbutton__item:first-of-type>*,.media-library-widget-modal .js .dropbutton--multiple .dropbutton__item:first-of-type>*,form.media-form .js .dropbutton--multiple .dropbutton__item:first-of-type>* {
+#layout-builder-modal .dropbutton--multiple .dropbutton__item:first-of-type>*,.media-library-widget-modal .dropbutton--multiple .dropbutton__item:first-of-type>*,form.media-form .dropbutton--multiple .dropbutton__item:first-of-type>* {
   border-radius: var(--button-border-radius-size) 0 0 var(--button-border-radius-size);
 }
 
-#layout-builder-modal [dir=rtl].js .dropbutton--multiple .dropbutton__item:first-of-type>*,.media-library-widget-modal [dir=rtl].js .dropbutton--multiple .dropbutton__item:first-of-type>*,form.media-form [dir=rtl].js .dropbutton--multiple .dropbutton__item:first-of-type>* {
+#layout-builder-modal [dir=rtl] .dropbutton--multiple .dropbutton__item:first-of-type>*,.media-library-widget-modal [dir=rtl] .dropbutton--multiple .dropbutton__item:first-of-type>*,form.media-form [dir=rtl] .dropbutton--multiple .dropbutton__item:first-of-type>* {
   border-radius: 0 var(--button-border-radius-size) var(--button-border-radius-size) 0;
 }
 
@@ -299,7 +296,7 @@
   text-align: right;
 }
 
-#layout-builder-modal .js .dropbutton-wrapper:not(.open) .dropbutton__item:first-of-type~.dropbutton__item,.media-library-widget-modal .js .dropbutton-wrapper:not(.open) .dropbutton__item:first-of-type~.dropbutton__item,form.media-form .js .dropbutton-wrapper:not(.open) .dropbutton__item:first-of-type~.dropbutton__item {
+#layout-builder-modal .dropbutton-wrapper:not(.open) .dropbutton__item:first-of-type~.dropbutton__item,.media-library-widget-modal .dropbutton-wrapper:not(.open) .dropbutton__item:first-of-type~.dropbutton__item,form.media-form .dropbutton-wrapper:not(.open) .dropbutton__item:first-of-type~.dropbutton__item {
   visibility: hidden;
 }
 

@@ -112,7 +112,8 @@
 }
 
 #layout-builder-modal .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-logo,.media-library-widget-modal .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-logo,form.media-form .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-logo {
-  padding: var(--gin-spacing-xs) var(--gin-spacing-s);
+  display: block;
+  padding: var(--gin-spacing-xs) 0;
 }
 
 #layout-builder-modal .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-logo img,.media-library-widget-modal .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-logo img,form.media-form .toolbar .toolbar-bar #toolbar-item-administration-tray .toolbar-logo img {
@@ -156,11 +157,14 @@
 }
 
 #layout-builder-modal .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default:focus,.media-library-widget-modal .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default:focus,form.media-form .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default:focus {
+  z-index: 3;
+  background: var(--gin-color-primary-light);
   box-shadow: none;
+  box-shadow: inset 0 0 0 1px var(--gin-color-focus-border), inset 0 0 0 4px var(--gin-color-focus);
 }
 
-#layout-builder-modal .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default:focus::after,.media-library-widget-modal .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default:focus::after,form.media-form .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default:focus::after {
-  box-shadow: inset 0 0 0 1px var(--gin-color-focus-border), inset 0 0 0 4px var(--gin-color-focus);
+#layout-builder-modal .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default:focus::before,.media-library-widget-modal .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default:focus::before,form.media-form .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default:focus::before {
+  background: var(--gin-color-primary-active);
 }
 
 #layout-builder-modal .toolbar-tray a,#layout-builder-modal .toolbar-tray a:visited,#layout-builder-modal .toolbar-tray span,.media-library-widget-modal .toolbar-tray a,.media-library-widget-modal .toolbar-tray a:visited,.media-library-widget-modal .toolbar-tray span,form.media-form .toolbar-tray a,form.media-form .toolbar-tray a:visited,form.media-form .toolbar-tray span {
@@ -207,14 +211,14 @@
   color: var(--gin-color-text);
 }
 
-#layout-builder-modal .toolbar .toolbar-tray .menu-item--active-trail>.toolbar-box a,#layout-builder-modal .toolbar .toolbar-tray a.is-active,.media-library-widget-modal .toolbar .toolbar-tray .menu-item--active-trail>.toolbar-box a,.media-library-widget-modal .toolbar .toolbar-tray a.is-active,form.media-form .toolbar .toolbar-tray .menu-item--active-trail>.toolbar-box a,form.media-form .toolbar .toolbar-tray a.is-active {
+#layout-builder-modal .toolbar .toolbar-tray .menu-item--active-trail>.toolbar-box>a.toolbar-icon,#layout-builder-modal .toolbar .toolbar-tray a.is-active,.media-library-widget-modal .toolbar .toolbar-tray .menu-item--active-trail>.toolbar-box>a.toolbar-icon,.media-library-widget-modal .toolbar .toolbar-tray a.is-active,form.media-form .toolbar .toolbar-tray .menu-item--active-trail>.toolbar-box>a.toolbar-icon,form.media-form .toolbar .toolbar-tray a.is-active {
   color: var(--gin-color-primary);
   font-weight: var(--gin-font-weight-semibold);
   text-decoration: none;
 }
 
 @media (max-width: 60.99em) {
-  #layout-builder-modal .toolbar .toolbar-tray .menu-item--active-trail>.toolbar-box a,#layout-builder-modal .toolbar .toolbar-tray a.is-active,.media-library-widget-modal .toolbar .toolbar-tray .menu-item--active-trail>.toolbar-box a,.media-library-widget-modal .toolbar .toolbar-tray a.is-active,form.media-form .toolbar .toolbar-tray .menu-item--active-trail>.toolbar-box a,form.media-form .toolbar .toolbar-tray a.is-active {
+  #layout-builder-modal .toolbar .toolbar-tray .menu-item--active-trail>.toolbar-box>a.toolbar-icon,#layout-builder-modal .toolbar .toolbar-tray a.is-active,.media-library-widget-modal .toolbar .toolbar-tray .menu-item--active-trail>.toolbar-box>a.toolbar-icon,.media-library-widget-modal .toolbar .toolbar-tray a.is-active,form.media-form .toolbar .toolbar-tray .menu-item--active-trail>.toolbar-box>a.toolbar-icon,form.media-form .toolbar .toolbar-tray a.is-active {
     width: 100%;
     background: var(--gin-color-primary-light);
   }
@@ -274,7 +278,7 @@
     background-color: transparent;
   }
 
-  #layout-builder-modal .toolbar-menu-administration a.toolbar-menu__trigger:hover::before,.media-library-widget-modal .toolbar-menu-administration a.toolbar-menu__trigger:hover::before,form.media-form .toolbar-menu-administration a.toolbar-menu__trigger:hover::before {
+  #layout-builder-modal .toolbar-menu-administration a.toolbar-menu__trigger:hover::before,#layout-builder-modal .toolbar-menu-administration a.toolbar-menu__trigger:focus::before,.media-library-widget-modal .toolbar-menu-administration a.toolbar-menu__trigger:hover::before,.media-library-widget-modal .toolbar-menu-administration a.toolbar-menu__trigger:focus::before,form.media-form .toolbar-menu-administration a.toolbar-menu__trigger:hover::before,form.media-form .toolbar-menu-administration a.toolbar-menu__trigger:focus::before {
     background-color: var(--gin-color-title);
   }
 
@@ -298,7 +302,21 @@
   #layout-builder-modal [dir=rtl] .toolbar-menu-administration a.toolbar-menu__trigger::before,.media-library-widget-modal [dir=rtl] .toolbar-menu-administration a.toolbar-menu__trigger::before,form.media-form [dir=rtl] .toolbar-menu-administration a.toolbar-menu__trigger::before {
     right: calc((var(--gin-toolbar-width-collapsed) - 36px)/2);
   }
+}
 
+@media (min-width: 61em)and (forced-colors: active) {
+  #layout-builder-modal .toolbar-menu-administration a.toolbar-menu__trigger::before,.media-library-widget-modal .toolbar-menu-administration a.toolbar-menu__trigger::before,form.media-form .toolbar-menu-administration a.toolbar-menu__trigger::before {
+    background: var(--gin-bg-layer) url("data:image/svg+xml,%3Csvg width='9' height='14' viewBox='0 0 9 14' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M 1.7109375,0.31445312 0.2890625,1.7226562 5.5917969,7.0761719 0.2890625,12.429688 1.7109375,13.837891 8.4082031,7.0761719 Z' fill='linkText'/%3E%3C/svg%3E") no-repeat center center;
+  }
+}
+
+@media (min-width: 61em) {
+  #layout-builder-modal .toolbar-menu-administration a.toolbar-menu__trigger:focus::before,.media-library-widget-modal .toolbar-menu-administration a.toolbar-menu__trigger:focus::before,form.media-form .toolbar-menu-administration a.toolbar-menu__trigger:focus::before {
+    box-shadow: 0 0 0 1px var(--gin-color-focus-border), 0 0 0 4px var(--gin-color-focus);
+  }
+}
+
+@media (min-width: 61em) {
   #layout-builder-modal .toolbar-menu-administration a.toolbar-menu__trigger.is-active,.media-library-widget-modal .toolbar-menu-administration a.toolbar-menu__trigger.is-active,form.media-form .toolbar-menu-administration a.toolbar-menu__trigger.is-active {
     display: flex;
     font-weight: var(--gin-font-weight-normal);
@@ -317,19 +335,27 @@
   #layout-builder-modal [dir=rtl] .toolbar-menu-administration a.toolbar-menu__trigger.is-active:before,.media-library-widget-modal [dir=rtl] .toolbar-menu-administration a.toolbar-menu__trigger.is-active:before,form.media-form [dir=rtl] .toolbar-menu-administration a.toolbar-menu__trigger.is-active:before {
     transform: rotate(-180deg);
   }
+}
 
+@media (min-width: 61em) {
   #layout-builder-modal .toolbar-menu-administration a.toolbar-menu__trigger .menu,.media-library-widget-modal .toolbar-menu-administration a.toolbar-menu__trigger .menu,form.media-form .toolbar-menu-administration a.toolbar-menu__trigger .menu {
     display: none;
   }
+}
 
+@media (min-width: 61em) {
   #layout-builder-modal .toolbar-menu-administration a.toolbar-menu__trigger .close,.media-library-widget-modal .toolbar-menu-administration a.toolbar-menu__trigger .close,form.media-form .toolbar-menu-administration a.toolbar-menu__trigger .close {
     display: inline;
   }
+}
 
+@media (min-width: 61em) {
   #layout-builder-modal .toolbar-tab--toolbar-item-administration,.media-library-widget-modal .toolbar-tab--toolbar-item-administration,form.media-form .toolbar-tab--toolbar-item-administration {
     order: -1;
   }
+}
 
+@media (min-width: 61em) {
   #layout-builder-modal .toolbar-menu-administration,.media-library-widget-modal .toolbar-menu-administration,form.media-form .toolbar-menu-administration {
     display: flex;
     position: fixed;
@@ -533,6 +559,7 @@
   }
 
   #layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu .menu-item,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu .menu-item,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item .toolbar-menu .menu-item {
+    float: none;
     border-top: 0 none;
     border-bottom: 0 none;
   }
@@ -597,11 +624,13 @@
     box-shadow: -7px 0 16px rgba(0, 0, 0, .075), 12px 0 0 0 var(--gin-bg-layer);
   }
 
-  #layout-builder-modal .toolbar-menu-administration .menu-item .menu-item:hover>.toolbar-icon,#layout-builder-modal .toolbar-menu-administration .menu-item .menu-item:hover>.toolbar-box .toolbar-icon,.media-library-widget-modal .toolbar-menu-administration .menu-item .menu-item:hover>.toolbar-icon,.media-library-widget-modal .toolbar-menu-administration .menu-item .menu-item:hover>.toolbar-box .toolbar-icon,form.media-form .toolbar-menu-administration .menu-item .menu-item:hover>.toolbar-icon,form.media-form .toolbar-menu-administration .menu-item .menu-item:hover>.toolbar-box .toolbar-icon {
+  #layout-builder-modal .toolbar-menu-administration .menu-item .menu-item:hover>.toolbar-icon,#layout-builder-modal .toolbar-menu-administration .menu-item .menu-item:focus-within>.toolbar-icon,#layout-builder-modal .toolbar-menu-administration .menu-item .menu-item:hover>.toolbar-box>.toolbar-icon,#layout-builder-modal .toolbar-menu-administration .menu-item .menu-item:focus-within>.toolbar-box>.toolbar-icon,.media-library-widget-modal .toolbar-menu-administration .menu-item .menu-item:hover>.toolbar-icon,.media-library-widget-modal .toolbar-menu-administration .menu-item .menu-item:focus-within>.toolbar-icon,.media-library-widget-modal .toolbar-menu-administration .menu-item .menu-item:hover>.toolbar-box>.toolbar-icon,.media-library-widget-modal .toolbar-menu-administration .menu-item .menu-item:focus-within>.toolbar-box>.toolbar-icon,form.media-form .toolbar-menu-administration .menu-item .menu-item:hover>.toolbar-icon,form.media-form .toolbar-menu-administration .menu-item .menu-item:focus-within>.toolbar-icon,form.media-form .toolbar-menu-administration .menu-item .menu-item:hover>.toolbar-box>.toolbar-icon,form.media-form .toolbar-menu-administration .menu-item .menu-item:focus-within>.toolbar-box>.toolbar-icon {
     color: var(--gin-color-primary-hover);
     background: var(--gin-color-primary-light);
   }
+}
 
+@media (min-width: 61em) {
   #layout-builder-modal .toolbar .toolbar-toggle-orientation button,.media-library-widget-modal .toolbar .toolbar-toggle-orientation button,form.media-form .toolbar .toolbar-toggle-orientation button {
     display: none;
   }
@@ -680,5 +709,9 @@
   #layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-icon::after,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-box>a.toolbar-icon::after,#layout-builder-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon.is-active::after,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-icon::after,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-box>a.toolbar-icon::after,.media-library-widget-modal .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon.is-active::after,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-icon::after,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item.menu-item--active-trail>.toolbar-box>a.toolbar-icon::after,form.media-form .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon.is-active::after {
     background: var(--gin-bg-item-hover);
   }
+}
+
+#layout-builder-modal #toolbar-item-administration-tray,#layout-builder-modal .toolbar-loading #toolbar-item-administration-tray,.media-library-widget-modal #toolbar-item-administration-tray,.media-library-widget-modal .toolbar-loading #toolbar-item-administration-tray,form.media-form #toolbar-item-administration-tray,form.media-form .toolbar-loading #toolbar-item-administration-tray {
+  box-shadow: none;
 }
 

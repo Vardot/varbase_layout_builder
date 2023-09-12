@@ -143,17 +143,13 @@
   }
 }
 
-#layout-builder-modal #toolbar-item-administration-tray,.media-library-widget-modal #toolbar-item-administration-tray,form.media-form #toolbar-item-administration-tray {
-  box-shadow: 0 0 4px rgba(0, 0, 0, .1), 0 2px 6px 2px rgba(0, 0, 0, .03);
-}
-
-#layout-builder-modal .gin--dark-mode #toolbar-item-administration-tray,.media-library-widget-modal .gin--dark-mode #toolbar-item-administration-tray,form.media-form .gin--dark-mode #toolbar-item-administration-tray {
-  box-shadow: 0 0 4px rgba(0, 0, 0, .3);
-}
-
 #layout-builder-modal #toolbar-item-administration-tray .toolbar-logo,.media-library-widget-modal #toolbar-item-administration-tray .toolbar-logo,form.media-form #toolbar-item-administration-tray .toolbar-logo {
   display: flex;
   height: 100%;
+}
+
+#layout-builder-modal #toolbar-item-administration-tray .toolbar-logo+.toolbar-handle,.media-library-widget-modal #toolbar-item-administration-tray .toolbar-logo+.toolbar-handle,form.media-form #toolbar-item-administration-tray .toolbar-logo+.toolbar-handle {
+  display: none;
 }
 
 #layout-builder-modal .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded,#layout-builder-modal .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus,.media-library-widget-modal .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded,.media-library-widget-modal .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus,form.media-form .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded,form.media-form .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus {
@@ -282,5 +278,17 @@
 #layout-builder-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-menu-administration .menu-item .menu-item:hover>.toolbar-icon,.media-library-widget-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-menu-administration .menu-item .menu-item:hover>.toolbar-icon,form.media-form .gin--horizontal-toolbar #toolbar-administration .toolbar-menu-administration .menu-item .menu-item:hover>.toolbar-icon {
   color: var(--gin-color-primary-hover);
   background: var(--gin-color-primary-light);
+}
+
+#layout-builder-modal #toolbar-item-administration-tray,#layout-builder-modal .toolbar-loading #toolbar-item-administration-tray,.media-library-widget-modal #toolbar-item-administration-tray,.media-library-widget-modal .toolbar-loading #toolbar-item-administration-tray,form.media-form #toolbar-item-administration-tray,form.media-form .toolbar-loading #toolbar-item-administration-tray {
+  box-shadow: 0 0 4px rgba(0, 0, 0, .1), 0 2px 6px 2px rgba(0, 0, 0, .03);
+}
+
+#layout-builder-modal .gin--dark-mode #toolbar-item-administration-tray,#layout-builder-modal .gin--dark-mode .toolbar-loading #toolbar-item-administration-tray,.media-library-widget-modal .gin--dark-mode #toolbar-item-administration-tray,.media-library-widget-modal .gin--dark-mode .toolbar-loading #toolbar-item-administration-tray,form.media-form .gin--dark-mode #toolbar-item-administration-tray,form.media-form .gin--dark-mode .toolbar-loading #toolbar-item-administration-tray {
+  box-shadow: 0 0 4px rgba(0, 0, 0, .3);
+}
+
+#layout-builder-modal .toolbar-loading .menu-item--expanded>.toolbar-menu,.media-library-widget-modal .toolbar-loading .menu-item--expanded>.toolbar-menu,form.media-form .toolbar-loading .menu-item--expanded>.toolbar-menu {
+  display: none;
 }
 

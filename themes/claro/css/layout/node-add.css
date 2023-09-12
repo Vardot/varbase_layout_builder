@@ -9,16 +9,19 @@
 @media (min-width: 61rem) {
   #layout-builder-modal .layout-node-form,.media-library-widget-modal .layout-node-form,form.media-form .layout-node-form {
     display: grid;
+    grid-template-rows: auto 1fr;
     grid-template-columns: 3fr minmax(22.5rem, 1fr);
     gap: var(--space-l);
   }
 
   #layout-builder-modal .layout-region--node-main,#layout-builder-modal .layout-region--node-footer,.media-library-widget-modal .layout-region--node-main,.media-library-widget-modal .layout-region--node-footer,form.media-form .layout-region--node-main,form.media-form .layout-region--node-footer {
+    grid-column: 1;
     margin-inline: auto;
     width: min(52rem, 100%);
   }
 
   #layout-builder-modal .layout-region--node-secondary,.media-library-widget-modal .layout-region--node-secondary,form.media-form .layout-region--node-secondary {
+    grid-row: span 2;
     margin-block-start: var(--space-l);
   }
 }

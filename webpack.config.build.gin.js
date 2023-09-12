@@ -44,7 +44,6 @@ module.exports = {
     'components/chosen': ['./themes/gin/scss/components/chosen.scss'],
     'components/dropzonejs': ['./themes/gin/scss/components/dropzonejs.scss'],
     'components/layout_paragraphs': ['./themes/gin/scss/components/layout_paragraphs.scss'],
-    'components/paragraphs_ee': ['./themes/gin/scss/components/paragraphs_ee.scss'],
     // Layout
     'layout/classic_toolbar': ['./themes/gin/scss/layout/classic_toolbar.scss'],
     'layout/horizontal_toolbar': ['./themes/gin/scss/layout/horizontal_toolbar.scss'],

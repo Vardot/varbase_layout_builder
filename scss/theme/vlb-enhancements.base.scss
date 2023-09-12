@@ -511,6 +511,10 @@ body {
         box-shadow: none !important;
       }
     }
+
+    &:not(.ui-dialog-off-canvas) {
+      z-index: 100;
+    }
   }
 }
 

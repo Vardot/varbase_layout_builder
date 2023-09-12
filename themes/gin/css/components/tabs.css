@@ -383,8 +383,44 @@
   right: 1.125rem;
 }
 
+@media (forced-colors: active) {
+  #layout-builder-modal .claro-details__summary::before,#layout-builder-modal .claro-details[open]>.claro-details__summary::before,.media-library-widget-modal .claro-details__summary::before,.media-library-widget-modal .claro-details[open]>.claro-details__summary::before,form.media-form .claro-details__summary::before,form.media-form .claro-details[open]>.claro-details__summary::before {
+    background-color: buttonBorder;
+  }
+}
+
+@media (forced-colors: active) {
+  #layout-builder-modal [dir=ltr] .claro-details__summary::before,.media-library-widget-modal [dir=ltr] .claro-details__summary::before,form.media-form [dir=ltr] .claro-details__summary::before {
+    transform: rotate(90deg);
+  }
+
+  #layout-builder-modal [dir=rtl] .claro-details__summary::before,.media-library-widget-modal [dir=rtl] .claro-details__summary::before,form.media-form [dir=rtl] .claro-details__summary::before {
+    transform: rotate(-90deg);
+  }
+}
+
+@media (forced-colors: active) {
+  #layout-builder-modal .claro-details[open]>.claro-details__summary::before,.media-library-widget-modal .claro-details[open]>.claro-details__summary::before,form.media-form .claro-details[open]>.claro-details__summary::before {
+    margin-top: -6px;
+  }
+
+  #layout-builder-modal [dir=ltr] .claro-details[open]>.claro-details__summary::before,.media-library-widget-modal [dir=ltr] .claro-details[open]>.claro-details__summary::before,form.media-form [dir=ltr] .claro-details[open]>.claro-details__summary::before {
+    transform: rotate(270deg);
+  }
+
+  #layout-builder-modal [dir=rtl] .claro-details[open]>.claro-details__summary::before,.media-library-widget-modal [dir=rtl] .claro-details[open]>.claro-details__summary::before,form.media-form [dir=rtl] .claro-details[open]>.claro-details__summary::before {
+    transform: rotate(-270deg);
+  }
+}
+
 #layout-builder-modal .claro-details__summary:hover::before,#layout-builder-modal .claro-details__summary:hover:focus::before,#layout-builder-modal .claro-details[open]>.claro-details__summary:hover::before,#layout-builder-modal .claro-details[open]>.claro-details__summary:focus::before,#layout-builder-modal .claro-details[open]>.claro-details__summary--accordion::before,#layout-builder-modal .claro-details[open]>.claro-details__summary--accordion-item::before,#layout-builder-modal .claro-details[open]>.claro-details__summary--vertical-tabs-item::before,.media-library-widget-modal .claro-details__summary:hover::before,.media-library-widget-modal .claro-details__summary:hover:focus::before,.media-library-widget-modal .claro-details[open]>.claro-details__summary:hover::before,.media-library-widget-modal .claro-details[open]>.claro-details__summary:focus::before,.media-library-widget-modal .claro-details[open]>.claro-details__summary--accordion::before,.media-library-widget-modal .claro-details[open]>.claro-details__summary--accordion-item::before,.media-library-widget-modal .claro-details[open]>.claro-details__summary--vertical-tabs-item::before,form.media-form .claro-details__summary:hover::before,form.media-form .claro-details__summary:hover:focus::before,form.media-form .claro-details[open]>.claro-details__summary:hover::before,form.media-form .claro-details[open]>.claro-details__summary:focus::before,form.media-form .claro-details[open]>.claro-details__summary--accordion::before,form.media-form .claro-details[open]>.claro-details__summary--accordion-item::before,form.media-form .claro-details[open]>.claro-details__summary--vertical-tabs-item::before {
   background: var(--gin-color-primary);
+}
+
+@media (forced-colors: active) {
+  #layout-builder-modal .claro-details__summary:hover::before,#layout-builder-modal .claro-details__summary:hover:focus::before,#layout-builder-modal .claro-details[open]>.claro-details__summary:hover::before,#layout-builder-modal .claro-details[open]>.claro-details__summary:focus::before,#layout-builder-modal .claro-details[open]>.claro-details__summary--accordion::before,#layout-builder-modal .claro-details[open]>.claro-details__summary--accordion-item::before,#layout-builder-modal .claro-details[open]>.claro-details__summary--vertical-tabs-item::before,.media-library-widget-modal .claro-details__summary:hover::before,.media-library-widget-modal .claro-details__summary:hover:focus::before,.media-library-widget-modal .claro-details[open]>.claro-details__summary:hover::before,.media-library-widget-modal .claro-details[open]>.claro-details__summary:focus::before,.media-library-widget-modal .claro-details[open]>.claro-details__summary--accordion::before,.media-library-widget-modal .claro-details[open]>.claro-details__summary--accordion-item::before,.media-library-widget-modal .claro-details[open]>.claro-details__summary--vertical-tabs-item::before,form.media-form .claro-details__summary:hover::before,form.media-form .claro-details__summary:hover:focus::before,form.media-form .claro-details[open]>.claro-details__summary:hover::before,form.media-form .claro-details[open]>.claro-details__summary:focus::before,form.media-form .claro-details[open]>.claro-details__summary--accordion::before,form.media-form .claro-details[open]>.claro-details__summary--accordion-item::before,form.media-form .claro-details[open]>.claro-details__summary--vertical-tabs-item::before {
+    background-color: linkText;
+  }
 }
 
 #layout-builder-modal .claro-details__description,.media-library-widget-modal .claro-details__description,form.media-form .claro-details__description {
@@ -485,7 +521,7 @@
   }
 }
 
-#layout-builder-modal .vertical-tabs__items .vertical-tabs__item .claro-details__wrapper,.media-library-widget-modal .vertical-tabs__items .vertical-tabs__item .claro-details__wrapper,form.media-form .vertical-tabs__items .vertical-tabs__item .claro-details__wrapper {
+#layout-builder-modal .vertical-tabs__items .vertical-tabs__item>.claro-details__wrapper,.media-library-widget-modal .vertical-tabs__items .vertical-tabs__item>.claro-details__wrapper,form.media-form .vertical-tabs__items .vertical-tabs__item>.claro-details__wrapper {
   display: inline-block;
   width: 100%;
 }

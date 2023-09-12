@@ -155,7 +155,6 @@ gin:
       themes/gin/css/components/media_library.css: {}
       themes/gin/css/components/module_filter.css: {}
       themes/gin/css/components/node_preview.css: {}
-      themes/gin/css/components/paragraphs_ee.css: {}
       themes/gin/css/components/paragraphs.css: {}
       themes/gin/css/components/responsive_preview.css: {}
       themes/gin/css/components/revisions.css: {}

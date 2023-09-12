@@ -191,6 +191,7 @@
 
 #layout-builder-modal .media-library-views-form,.media-library-widget-modal .media-library-views-form,form.media-form .media-library-views-form {
   flex-wrap: initial;
+  flex-direction: column;
 }
 
 #layout-builder-modal fieldset.media-library-widget .media-library-widget__toggle-weight,.media-library-widget-modal fieldset.media-library-widget .media-library-widget__toggle-weight,form.media-form fieldset.media-library-widget .media-library-widget__toggle-weight {
@@ -295,6 +296,16 @@
   box-shadow: var(--gin-shadow-l1);
 }
 
+#layout-builder-modal .media-library-view .views-form,.media-library-widget-modal .media-library-view .views-form,form.media-form .media-library-view .views-form {
+  background: transparent !important;
+}
+
+#layout-builder-modal .media-library-wrapper,.media-library-widget-modal .media-library-wrapper,form.media-form .media-library-wrapper {
+  margin-top: 0;
+  margin-left: calc(var(--gin-spacing-m)*-1);
+  margin-right: calc(var(--gin-spacing-m)*-1);
+}
+
 #layout-builder-modal .media-library-wrapper .views-display-link,.media-library-widget-modal .media-library-wrapper .views-display-link,form.media-form .media-library-wrapper .views-display-link {
   position: relative;
   color: var(--gin-color-text);
@@ -391,6 +402,10 @@
   }
 }
 
+#layout-builder-modal .media-library-widget-modal .ui-dialog-buttonpane,.media-library-widget-modal .media-library-widget-modal .ui-dialog-buttonpane,form.media-form .media-library-widget-modal .ui-dialog-buttonpane {
+  flex-direction: column;
+}
+
 #layout-builder-modal .media-library-widget-modal .ui-dialog-buttonpane .form-actions,.media-library-widget-modal .media-library-widget-modal .ui-dialog-buttonpane .form-actions,form.media-form .media-library-widget-modal .ui-dialog-buttonpane .form-actions {
   display: flex;
   flex-direction: row;
@@ -409,14 +424,25 @@
 
 #layout-builder-modal .media-library-widget-modal .ui-dialog-buttonpane .media-library-selected-count,.media-library-widget-modal .media-library-widget-modal .ui-dialog-buttonpane .media-library-selected-count,form.media-form .media-library-widget-modal .ui-dialog-buttonpane .media-library-selected-count {
   flex-grow: 1;
+  margin-bottom: var(--gin-spacing-s);
 }
 
-#layout-builder-modal [dir=ltr] .media-library-widget-modal .ui-dialog-buttonpane .media-library-selected-count,.media-library-widget-modal [dir=ltr] .media-library-widget-modal .ui-dialog-buttonpane .media-library-selected-count,form.media-form [dir=ltr] .media-library-widget-modal .ui-dialog-buttonpane .media-library-selected-count {
-  margin-left: 0;
-}
+@media (min-width: 36.75em) {
+  #layout-builder-modal .media-library-widget-modal .ui-dialog-buttonpane,.media-library-widget-modal .media-library-widget-modal .ui-dialog-buttonpane,form.media-form .media-library-widget-modal .ui-dialog-buttonpane {
+    flex-direction: row;
+  }
 
-#layout-builder-modal [dir=rtl] .media-library-widget-modal .ui-dialog-buttonpane .media-library-selected-count,.media-library-widget-modal [dir=rtl] .media-library-widget-modal .ui-dialog-buttonpane .media-library-selected-count,form.media-form [dir=rtl] .media-library-widget-modal .ui-dialog-buttonpane .media-library-selected-count {
-  margin-right: 0;
+  #layout-builder-modal .media-library-widget-modal .ui-dialog-buttonpane .media-library-selected-count,.media-library-widget-modal .media-library-widget-modal .ui-dialog-buttonpane .media-library-selected-count,form.media-form .media-library-widget-modal .ui-dialog-buttonpane .media-library-selected-count {
+    margin-bottom: 0;
+  }
+
+  #layout-builder-modal [dir=ltr] .media-library-widget-modal .ui-dialog-buttonpane .media-library-selected-count,.media-library-widget-modal [dir=ltr] .media-library-widget-modal .ui-dialog-buttonpane .media-library-selected-count,form.media-form [dir=ltr] .media-library-widget-modal .ui-dialog-buttonpane .media-library-selected-count {
+    margin-left: 0;
+  }
+
+  #layout-builder-modal [dir=rtl] .media-library-widget-modal .ui-dialog-buttonpane .media-library-selected-count,.media-library-widget-modal [dir=rtl] .media-library-widget-modal .ui-dialog-buttonpane .media-library-selected-count,form.media-form [dir=rtl] .media-library-widget-modal .ui-dialog-buttonpane .media-library-selected-count {
+    margin-right: 0;
+  }
 }
 
 @media (min-width: 80em) {

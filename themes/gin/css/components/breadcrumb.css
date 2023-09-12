@@ -49,6 +49,12 @@
   background: none;
 }
 
+@media (forced-colors: active) {
+  #layout-builder-modal .gin-breadcrumb__item+.gin-breadcrumb__item::before,.media-library-widget-modal .gin-breadcrumb__item+.gin-breadcrumb__item::before,form.media-form .gin-breadcrumb__item+.gin-breadcrumb__item::before {
+    opacity: 1;
+  }
+}
+
 #layout-builder-modal .gin-breadcrumb__item:first-of-type .gin-breadcrumb__link,.media-library-widget-modal .gin-breadcrumb__item:first-of-type .gin-breadcrumb__link,form.media-form .gin-breadcrumb__item:first-of-type .gin-breadcrumb__link {
   position: relative;
 }
@@ -86,8 +92,20 @@
   right: 0;
 }
 
+@media (forced-colors: active) {
+  #layout-builder-modal .gin-breadcrumb__item:first-of-type .gin-breadcrumb__link::before,.media-library-widget-modal .gin-breadcrumb__item:first-of-type .gin-breadcrumb__link::before,form.media-form .gin-breadcrumb__item:first-of-type .gin-breadcrumb__link::before {
+    background: linktext;
+  }
+}
+
 #layout-builder-modal .gin-breadcrumb__item:first-of-type .gin-breadcrumb__link:hover::before,.media-library-widget-modal .gin-breadcrumb__item:first-of-type .gin-breadcrumb__link:hover::before,form.media-form .gin-breadcrumb__item:first-of-type .gin-breadcrumb__link:hover::before {
   background-color: var(--gin-color-primary);
+}
+
+@media (forced-colors: active) {
+  #layout-builder-modal .gin-breadcrumb__item:first-of-type .gin-breadcrumb__link:hover::before,.media-library-widget-modal .gin-breadcrumb__item:first-of-type .gin-breadcrumb__link:hover::before,form.media-form .gin-breadcrumb__item:first-of-type .gin-breadcrumb__link:hover::before {
+    background: linktext;
+  }
 }
 
 #layout-builder-modal .gin-breadcrumb__item:first-of-type+.gin-breadcrumb__item::before,.media-library-widget-modal .gin-breadcrumb__item:first-of-type+.gin-breadcrumb__item::before,form.media-form .gin-breadcrumb__item:first-of-type+.gin-breadcrumb__item::before {
@@ -109,6 +127,12 @@
   padding-right: .75em;
   padding-left: 0;
   margin-left: .75em;
+}
+
+@media (forced-colors: active) {
+  #layout-builder-modal .gin-breadcrumb__item:first-of-type+.gin-breadcrumb__item::before,.media-library-widget-modal .gin-breadcrumb__item:first-of-type+.gin-breadcrumb__item::before,form.media-form .gin-breadcrumb__item:first-of-type+.gin-breadcrumb__item::before {
+    opacity: 1;
+  }
 }
 
 #layout-builder-modal .gin-breadcrumb__link,#layout-builder-modal .gin-breadcrumb__text,.media-library-widget-modal .gin-breadcrumb__link,.media-library-widget-modal .gin-breadcrumb__text,form.media-form .gin-breadcrumb__link,form.media-form .gin-breadcrumb__text {

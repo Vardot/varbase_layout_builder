@@ -33,7 +33,7 @@
   box-shadow: none;
 }
 
-#layout-builder-modal .toolbar .toolbar-menu,#layout-builder-modal .toolbar-horizontal .toolbar-tray .menu-item--expanded,#layout-builder-modal .toolbar .toolbar-tray,.media-library-widget-modal .toolbar .toolbar-menu,.media-library-widget-modal .toolbar-horizontal .toolbar-tray .menu-item--expanded,.media-library-widget-modal .toolbar .toolbar-tray,form.media-form .toolbar .toolbar-menu,form.media-form .toolbar-horizontal .toolbar-tray .menu-item--expanded,form.media-form .toolbar .toolbar-tray {
+#layout-builder-modal .toolbar .toolbar-menu,#layout-builder-modal .toolbar-horizontal .menu-item>.toolbar-menu,#layout-builder-modal .toolbar-horizontal .toolbar-tray .menu-item--expanded.menu-item--expanded,#layout-builder-modal .toolbar .toolbar-tray,.media-library-widget-modal .toolbar .toolbar-menu,.media-library-widget-modal .toolbar-horizontal .menu-item>.toolbar-menu,.media-library-widget-modal .toolbar-horizontal .toolbar-tray .menu-item--expanded.menu-item--expanded,.media-library-widget-modal .toolbar .toolbar-tray,form.media-form .toolbar .toolbar-menu,form.media-form .toolbar-horizontal .menu-item>.toolbar-menu,form.media-form .toolbar-horizontal .toolbar-tray .menu-item--expanded.menu-item--expanded,form.media-form .toolbar .toolbar-tray {
   background-color: var(--gin-bg-layer);
 }
 
@@ -82,12 +82,12 @@
   background: var(--gin-color-primary);
 }
 
-#layout-builder-modal .toolbar .toolbar-tray .menu-item:hover>.toolbar-icon,.media-library-widget-modal .toolbar .toolbar-tray .menu-item:hover>.toolbar-icon,form.media-form .toolbar .toolbar-tray .menu-item:hover>.toolbar-icon {
+#layout-builder-modal .toolbar .toolbar-tray .menu-item:hover>.toolbar-icon,#layout-builder-modal .toolbar .toolbar-tray .toolbar-menu>li:hover>a,.media-library-widget-modal .toolbar .toolbar-tray .menu-item:hover>.toolbar-icon,.media-library-widget-modal .toolbar .toolbar-tray .toolbar-menu>li:hover>a,form.media-form .toolbar .toolbar-tray .menu-item:hover>.toolbar-icon,form.media-form .toolbar .toolbar-tray .toolbar-menu>li:hover>a {
   color: var(--gin-color-primary-hover);
   background-color: var(--gin-bg-item-hover);
 }
 
-#layout-builder-modal .toolbar .toolbar-tray .menu-item:hover>.toolbar-icon::before,.media-library-widget-modal .toolbar .toolbar-tray .menu-item:hover>.toolbar-icon::before,form.media-form .toolbar .toolbar-tray .menu-item:hover>.toolbar-icon::before {
+#layout-builder-modal .toolbar .toolbar-tray .menu-item:hover>.toolbar-icon::before,#layout-builder-modal .toolbar .toolbar-tray .toolbar-menu>li:hover>a::before,.media-library-widget-modal .toolbar .toolbar-tray .menu-item:hover>.toolbar-icon::before,.media-library-widget-modal .toolbar .toolbar-tray .toolbar-menu>li:hover>a::before,form.media-form .toolbar .toolbar-tray .menu-item:hover>.toolbar-icon::before,form.media-form .toolbar .toolbar-tray .toolbar-menu>li:hover>a::before {
   background: var(--gin-color-primary);
 }
 
@@ -162,10 +162,6 @@
   }
 }
 
-#layout-builder-modal #toolbar-item-administration-tray,.media-library-widget-modal #toolbar-item-administration-tray,form.media-form #toolbar-item-administration-tray {
-  box-shadow: 0 0 4px rgba(0, 0, 0, .1);
-}
-
 @media (min-width: 64em) {
   #layout-builder-modal #toolbar-item-administration-tray .toolbar-logo img,.media-library-widget-modal #toolbar-item-administration-tray .toolbar-logo img,form.media-form #toolbar-item-administration-tray .toolbar-logo img {
     max-height: 21px;
@@ -206,5 +202,14 @@
 
 #layout-builder-modal [dir=rtl] #admin-toolbar-search-input,.media-library-widget-modal [dir=rtl] #admin-toolbar-search-input,form.media-form [dir=rtl] #admin-toolbar-search-input {
   padding-right: var(--gin-spacing-xl);
+}
+
+#layout-builder-modal #toolbar-item-administration-tray,#layout-builder-modal .toolbar-loading #toolbar-item-administration-tray,.media-library-widget-modal #toolbar-item-administration-tray,.media-library-widget-modal .toolbar-loading #toolbar-item-administration-tray,form.media-form #toolbar-item-administration-tray,form.media-form .toolbar-loading #toolbar-item-administration-tray {
+  border-bottom: 1px solid var(--gin-border-color);
+  box-shadow: 0 0 4px rgba(0, 0, 0, .1);
+}
+
+#layout-builder-modal #toolbar-item-administration-tray .toolbar-lining,#layout-builder-modal .toolbar-loading #toolbar-item-administration-tray .toolbar-lining,.media-library-widget-modal #toolbar-item-administration-tray .toolbar-lining,.media-library-widget-modal .toolbar-loading #toolbar-item-administration-tray .toolbar-lining,form.media-form #toolbar-item-administration-tray .toolbar-lining,form.media-form .toolbar-loading #toolbar-item-administration-tray .toolbar-lining {
+  background-color: var(--gin-bg-layer);
 }
 

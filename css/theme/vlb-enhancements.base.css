@@ -531,6 +531,10 @@ body .ui-dialog .ui-resizable-w:after, body .ui-dialog .ui-resizable-w:after:hov
   box-shadow: none !important;
 }
 
+body .ui-dialog:not(.ui-dialog-off-canvas) {
+  z-index: 100;
+}
+
 [dir=rtl] body .ui-dialog .ui-resizable-w {
   left: auto !important;
   right: -10px !important;

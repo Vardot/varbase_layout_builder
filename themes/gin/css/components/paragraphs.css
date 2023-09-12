@@ -1,3 +1,7 @@
+#layout-builder-modal .paragraphs-tabs-wrapper .gin-table-scroll-wrapper,.media-library-widget-modal .paragraphs-tabs-wrapper .gin-table-scroll-wrapper,form.media-form .paragraphs-tabs-wrapper .gin-table-scroll-wrapper {
+  overflow: initial;
+}
+
 #layout-builder-modal .gin--dark-mode .paragraphs-tabs-wrapper tr:hover,#layout-builder-modal .paragraphs-tabs-wrapper tr:hover,#layout-builder-modal .gin--dark-mode .paragraphs-tabs-wrapper tr:focus,#layout-builder-modal .paragraphs-tabs-wrapper tr:focus,.media-library-widget-modal .gin--dark-mode .paragraphs-tabs-wrapper tr:hover,.media-library-widget-modal .paragraphs-tabs-wrapper tr:hover,.media-library-widget-modal .gin--dark-mode .paragraphs-tabs-wrapper tr:focus,.media-library-widget-modal .paragraphs-tabs-wrapper tr:focus,form.media-form .gin--dark-mode .paragraphs-tabs-wrapper tr:hover,form.media-form .paragraphs-tabs-wrapper tr:hover,form.media-form .gin--dark-mode .paragraphs-tabs-wrapper tr:focus,form.media-form .paragraphs-tabs-wrapper tr:focus {
   background-color: inherit;
 }
@@ -140,6 +144,11 @@
   margin-bottom: var(--gin-spacing-xs);
 }
 
+#layout-builder-modal .paragraphs-add-wrapper.button--small,#layout-builder-modal .paragraphs-dropbutton-wrapper.button--small,.media-library-widget-modal .paragraphs-add-wrapper.button--small,.media-library-widget-modal .paragraphs-dropbutton-wrapper.button--small,form.media-form .paragraphs-add-wrapper.button--small,form.media-form .paragraphs-dropbutton-wrapper.button--small {
+  padding: 0;
+  margin: 0;
+}
+
 #layout-builder-modal .paragraphs-dropdown-toggle,.media-library-widget-modal .paragraphs-dropdown-toggle,form.media-form .paragraphs-dropdown-toggle {
   position: relative;
   margin: var(--gin-spacing-xs) 0;
@@ -180,6 +189,10 @@
 
 #layout-builder-modal .paragraphs-dropdown-toggle:hover::after,#layout-builder-modal .paragraphs-dropdown-toggle:active::after,#layout-builder-modal .paragraphs-dropdown-toggle:focus::after,.media-library-widget-modal .paragraphs-dropdown-toggle:hover::after,.media-library-widget-modal .paragraphs-dropdown-toggle:active::after,.media-library-widget-modal .paragraphs-dropdown-toggle:focus::after,form.media-form .paragraphs-dropdown-toggle:hover::after,form.media-form .paragraphs-dropdown-toggle:active::after,form.media-form .paragraphs-dropdown-toggle:focus::after {
   background-color: var(--gin-color-primary);
+}
+
+#layout-builder-modal .field--widget-paragraphs .paragraphs-tabs-wrapper .field-multiple-table tr[class*=paragraph-type--],.media-library-widget-modal .field--widget-paragraphs .paragraphs-tabs-wrapper .field-multiple-table tr[class*=paragraph-type--],form.media-form .field--widget-paragraphs .paragraphs-tabs-wrapper .field-multiple-table tr[class*=paragraph-type--] {
+  margin-top: var(--gin-spacing-m);
 }
 
 #layout-builder-modal html.js .field--widget-entity-reference-paragraphs .draggable .tabledrag-handle,#layout-builder-modal html.js .field--widget-paragraphs .draggable .tabledrag-handle,.media-library-widget-modal html.js .field--widget-entity-reference-paragraphs .draggable .tabledrag-handle,.media-library-widget-modal html.js .field--widget-paragraphs .draggable .tabledrag-handle,form.media-form html.js .field--widget-entity-reference-paragraphs .draggable .tabledrag-handle,form.media-form html.js .field--widget-paragraphs .draggable .tabledrag-handle {

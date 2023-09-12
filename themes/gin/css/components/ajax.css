@@ -1,3 +1,13 @@
+@keyframes gin-throbber {
+  0% {
+    transform: rotateZ(0);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
 #layout-builder-modal .ajax-progress__throbber,#layout-builder-modal .ajax-progress__throbber--fullscreen,#layout-builder-modal .ui-dialog .ajax-progress__throbber,#layout-builder-modal .media-library-item .ajax-progress__throbber,.media-library-widget-modal .ajax-progress__throbber,.media-library-widget-modal .ajax-progress__throbber--fullscreen,.media-library-widget-modal .ui-dialog .ajax-progress__throbber,.media-library-widget-modal .media-library-item .ajax-progress__throbber,form.media-form .ajax-progress__throbber,form.media-form .ajax-progress__throbber--fullscreen,form.media-form .ui-dialog .ajax-progress__throbber,form.media-form .media-library-item .ajax-progress__throbber {
   border: 3px solid var(--gin-color-primary);
 }
@@ -107,16 +117,6 @@
 
 #layout-builder-modal [dir=rtl] .contextual-links .ajax-progress-throbber::before,.media-library-widget-modal [dir=rtl] .contextual-links .ajax-progress-throbber::before,form.media-form [dir=rtl] .contextual-links .ajax-progress-throbber::before {
   right: .25em;
-}
-
-@keyframes gin-throbber {
-  0% {
-    transform: rotateZ(0);
-  }
-
-  100% {
-    transform: rotateZ(360deg);
-  }
 }
 
 #layout-builder-modal .claro-autocomplete__message,.media-library-widget-modal .claro-autocomplete__message,form.media-form .claro-autocomplete__message {

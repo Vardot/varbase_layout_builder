@@ -15,6 +15,7 @@
 
 #layout-builder-modal body[data-meta-sidebar=closed] .layout-region-node-secondary,.media-library-widget-modal body[data-meta-sidebar=closed] .layout-region-node-secondary,form.media-form body[data-meta-sidebar=closed] .layout-region-node-secondary {
   transform: translateX(var(--gin-sidebar-width));
+  visibility: hidden;
 }
 
 #layout-builder-modal [dir=rtl] body[data-meta-sidebar=closed] .layout-region-node-secondary,.media-library-widget-modal [dir=rtl] body[data-meta-sidebar=closed] .layout-region-node-secondary,form.media-form [dir=rtl] body[data-meta-sidebar=closed] .layout-region-node-secondary {

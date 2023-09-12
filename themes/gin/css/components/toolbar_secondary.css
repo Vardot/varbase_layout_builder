@@ -409,6 +409,7 @@
 @media (min-width: 61em) {
   #layout-builder-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-menu,.media-library-widget-modal .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-menu,form.media-form .gin-secondary-toolbar .toolbar-secondary .toolbar-bar .toolbar-menu {
     background-color: transparent;
+    float: unset;
   }
 }
 
