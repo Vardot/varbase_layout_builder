@@ -515,6 +515,10 @@ body {
     &:not(.ui-dialog-off-canvas) {
       z-index: 100;
     }
+
+    &.ui-front.media-library-widget-modal {
+      z-index: 101;
+    }
   }
 }
 
