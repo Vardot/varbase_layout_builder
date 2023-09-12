@@ -50,7 +50,7 @@
     "drupal/lb_ux": "1.x-dev",
     "drupal/layout_library": "1.0-beta4",
     "drupal/section_library": "~1.0",
-    "drupal/bootstrap_styles": "1.1.1",
+    "drupal/bootstrap_styles": "1.1.2",
     "drupal/bootstrap_layout_builder": "2.1.2",
     "drupal/block_library": "~1.0",
     "drupal/length_indicator": "~1.0",
@@ -72,9 +72,7 @@
       },
       "drupal/bootstrap_styles": {
         "Issue #3192061: Have the option to use other admin themes like Claro or Gin.":
-        "https://www.drupal.org/files/issues/2021-02-03/bootstrap_styles-1-0-3--3192061-9.patch",
-        "Issue #3221526: Fix rendering both Background Color and Background Image or Video":
-        "https://www.drupal.org/files/issues/2023-08-09/3221526-12.patch"
+        "https://www.drupal.org/files/issues/2021-02-03/bootstrap_styles-1-0-3--3192061-9.patch"
       },
       "drupal/layout_library": {
         "Issue #3075067: Duplicate entry for key 'block_content_field__uuid__value'":
