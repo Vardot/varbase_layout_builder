@@ -75,7 +75,7 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
     if (isset($use_claro) && $use_claro == 1) {
 
       $route_name = $route_match->getRouteName();
-      if (isset($route_name) && strpos($route_name, 'layout_builder') !== FALSE) {
+      if (isset($route_name) && (str_contains($route_name, 'layout_builder'))) {
         if ($this->themeHandler->themeExists('gin') || $this->themeHandler->themeExists('claro')) {
           return TRUE;
         }
@@ -96,6 +96,38 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
    */
   public function determineActiveTheme(RouteMatchInterface $route_match) {
     $current_request = $this->requestStack->getCurrentRequest()->request->all();
+
+    // Media Library Theme Negotiator
+    $dialog_has_target_media_library = FALSE;
+    if (isset($current_request['_triggering_element_name'])
+      && str_contains($current_request['_triggering_element_name'], 'media-library')) {
+
+      $dialog_has_target_media_library = TRUE;
+    }
+
+    if (isset($current_request['dialogOptions'])
+      && isset($current_request['dialogOptions']['dialogClass'])
+      && $current_request['dialogOptions']['dialogClass'] == 'media-library-widget-modal') {
+
+      $dialog_has_target_media_library = TRUE;
+    }
+
+    if ($dialog_has_target_media_library) {
+      $request_query_wrapper_format = $this->requestStack->getCurrentRequest()->query->get('_wrapper_format');
+      $request_query_ajax_form = $this->requestStack->getCurrentRequest()->query->get('ajax_form');
+      if ($request_query_ajax_form == '1'
+        && ($request_query_wrapper_format == 'drupal_dialog'
+        || $request_query_wrapper_format == 'drupal_dialog.off_canvas'
+        || $request_query_wrapper_format == 'drupal_ajax')) {
+        return $this->configFactory->get('system.theme')->get('admin');
+      }
+    }
+
+    $request_query_media_library_opener = $this->requestStack->getCurrentRequest()->query->get('media_library_opener_id');
+    if (!empty($request_query_media_library_opener)) {
+      return $this->configFactory->get('system.theme')->get('admin');
+    }
+
     $dialog_has_target_layout_builder_modal = FALSE;
     if (isset($current_request['dialogOptions'])
       && isset($current_request['dialogOptions']['target'])
@@ -115,13 +147,13 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
       $request_query_wrapper_format = $this->requestStack->getCurrentRequest()->query->get('_wrapper_format');
       if (isset($request_query_wrapper_format)) {
         if ($request_query_wrapper_format == 'drupal_dialog.off_canvas') {
-
           return $this->configFactory->get('system.theme')->get('admin');
         }
-        else {
-          return $this->configFactory->get('system.theme')->get('default');
-        }
       }
+    }
+
+    if ($parent_theme_is_front_end_theme) {
+      return $this->configFactory->get('system.theme')->get('default');
     }
   }
 
