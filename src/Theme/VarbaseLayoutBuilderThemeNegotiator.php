@@ -75,7 +75,7 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
     if (isset($use_claro) && $use_claro == 1) {
 
       $route_name = $route_match->getRouteName();
-      if (isset($route_name) && (str_contains($route_name, 'layout_builder'))) {
+      if (isset($route_name) && str_contains($route_name, 'layout_builder') && !str_contains($route_name, 'dashboards')) {
         if ($this->themeHandler->themeExists('gin') || $this->themeHandler->themeExists('claro')) {
           return TRUE;
         }
@@ -149,12 +149,14 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
         if ($request_query_wrapper_format == 'drupal_dialog.off_canvas') {
           return $this->configFactory->get('system.theme')->get('admin');
         }
+        else {
+          return $this->configFactory->get('system.theme')->get('default');
+        }
       }
     }
 
-    if ($parent_theme_is_front_end_theme) {
-      return $this->configFactory->get('system.theme')->get('default');
-    }
+    return $this->configFactory->get('system.theme')->get('default');
+
   }
 
 }
