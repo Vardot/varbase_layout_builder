@@ -75,7 +75,7 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
     if (isset($use_claro) && $use_claro == 1) {
 
       $route_name = $route_match->getRouteName();
-      if (isset($route_name) && str_contains($route_name, 'layout_builder') && !str_contains($route_name, 'dashboards')) {
+      if (isset($route_name) && _is_layout_builder_route() && !str_contains($route_name, 'dashboards')) {
         if ($this->themeHandler->themeExists('gin') || $this->themeHandler->themeExists('claro')) {
           return TRUE;
         }
