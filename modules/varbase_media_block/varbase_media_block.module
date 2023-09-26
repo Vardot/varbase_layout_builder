@@ -21,11 +21,15 @@ function varbase_media_block_block_type_form_alter(array &$form, FormStateInterf
       $form['field_media_view_mode']['widget']['#options'] = _varbase_media_block_active_media_view_mode_options();
 
       // Set the media original view mode as the default on creating the block.
-      if (isset($form['field_media_view_mode'])
-        && isset($form['field_media_view_mode']['widget'])
-        && isset($form['field_media_view_mode']['widget']['#default_value'])
+      if (isset($form['field_media_view_mode']['widget']['#default_value'])
         && !isset($form['field_media_view_mode']['widget']['#default_value'][0])) {
-        $form['field_media_view_mode']['widget']['#default_value'][0] = 'media.original';
+
+        if (isset($form['field_media_view_mode']['widget']['#options']['media.original'])) {
+          $form['field_media_view_mode']['widget']['#default_value'][0] = 'media.original';
+        }
+        else {
+          $form['field_media_view_mode']['widget']['#default_value'][0] = 'default';
+        }
       }
     }
 
