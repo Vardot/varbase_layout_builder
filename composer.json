@@ -30,9 +30,9 @@
     "composer/installers": "~2.0",
     "oomphinc/composer-installers-extender": "~2.0",
     "cweagans/composer-patches": "~1.0",
-    "drupal/core": "~9.0 || ~10.0",
-    "drupal/varbase_media": "~9.0 || 9.0.x-dev",
-    "drupal/varbase_editor": "~9.0 || 9.0.x-dev",
+    "drupal/core": "~9.5.0 || ~10.1.0",
+    "drupal/varbase_media": "~9.0",
+    "drupal/varbase_editor": "~9.0",
     "vardot/entity-definition-update-manager": "~1.0",
     "vardot/module-installer-factory": "~1.0",
     "drupal/layout_builder_restrictions": "~2.0",
@@ -50,8 +50,8 @@
     "drupal/lb_ux": "1.x-dev",
     "drupal/layout_library": "1.0-beta4",
     "drupal/section_library": "~1.0",
-    "drupal/bootstrap_styles": "1.0.3",
-    "drupal/bootstrap_layout_builder": "2.0.1",
+    "drupal/bootstrap_styles": "1.1.5",
+    "drupal/bootstrap_layout_builder": "2.1.2",
     "drupal/block_library": "~1.0",
     "drupal/length_indicator": "~1.0",
     "npm-asset/aos": "~2.0"
@@ -71,12 +71,8 @@
         "https://www.drupal.org/files/issues/2020-10-11/3150012-12_0.patch"
       },
       "drupal/bootstrap_styles": {
-        "Issue #3192061: Have the option to use other admin themes like Claro or Gin":
-        "https://www.drupal.org/files/issues/2021-02-03/bootstrap_styles-1-0-3--3192061-9.patch",
-        "Issue #3230802: Fix Border styling with Bootstrap library hard overrides over borders":
-        "https://www.drupal.org/files/issues/2021-09-01/3230802-4.patch",
-        "Issue #3213112: Add a specific class when having sections with background color, image, or video option":
-        "https://www.drupal.org/files/issues/2022-02-01/bootstrap_styles-tag-1-0-3--3213112-20.patch"
+        "Issue #3192061: Have the option to use other admin themes like Claro or Gin.":
+        "https://www.drupal.org/files/issues/2021-02-03/bootstrap_styles-1-0-3--3192061-9.patch"
       },
       "drupal/layout_library": {
         "Issue #3075067: Duplicate entry for key 'block_content_field__uuid__value'":

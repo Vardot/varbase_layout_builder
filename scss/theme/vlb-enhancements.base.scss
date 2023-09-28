@@ -581,6 +581,10 @@ body {
       margin: 0.3125rem 0;
     }
   }
+
+  #bs_nav-tabs {
+    position:relative !important;
+  }
 }
 
 #layout-builder-modal {
@@ -659,4 +663,19 @@ body {
     color: #fff !important;
   }
 
+}
+
+.ui-dialog.ui-dialog-off-canvas {
+  .ui-resizable-w {
+    &:before {
+      position: absolute !important;
+      top: 39% !important;
+    }
+
+    &:after {
+      display: none !important;
+      left: auto;
+      top: auto;
+    }
+  }
 }

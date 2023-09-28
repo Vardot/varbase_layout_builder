@@ -480,6 +480,10 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
   margin: 0.3125rem 0;
   padding: 0;
 }
+#drupal-off-canvas #bs_nav-tabs,
+#layout-builder-modal #bs_nav-tabs {
+  position: relative !important;
+}
 
 #layout-builder-modal .form-item--editor-format .form-element--editor-format {
   width: auto;
@@ -532,4 +536,14 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
 }
 #layout-builder-modal .fieldset__label {
   color: #fff !important;
+}
+
+.ui-dialog.ui-dialog-off-canvas .ui-resizable-w:before {
+  position: absolute !important;
+  top: 39% !important;
+}
+.ui-dialog.ui-dialog-off-canvas .ui-resizable-w:after {
+  top: auto;
+  left: auto;
+  display: none !important;
 }
