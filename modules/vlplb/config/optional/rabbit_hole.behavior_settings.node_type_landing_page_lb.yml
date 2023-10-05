@@ -1,11 +1,10 @@
 langcode: en
 status: true
-dependencies: {}
+dependencies: {  }
 id: node_type_landing_page_lb
-entity_type_id: null
-entity_id: null
+targetEntityType: null
+bundle: null
 action: display_page
-allow_override: 0
-redirect: ""
-redirect_code: 301
-redirect_fallback_action: null
+no_bypass: null
+bypass_message: null
+configuration: {  }
