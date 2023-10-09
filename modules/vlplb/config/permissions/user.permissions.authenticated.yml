@@ -1,0 +1,4 @@
+id: authenticated
+permissions:
+  - 'delete own landing_page_lb content'
+  - 'edit own landing_page_lb content'

@@ -15,8 +15,7 @@ use Vardot\Installer\ModuleInstallerFactory;
  */
 function vlplb_install() {
 
-  // Processer for install: in vlplb.info.yml file.
-  // --------------------------------------------------------------------------.
+  // Processor for install: in vlplb.info.yml file.
   ModuleInstallerFactory::installList('vlplb');
 
   // Install optional configs.
@@ -29,6 +28,9 @@ function vlplb_install() {
   \Drupal::classResolver()
     ->getInstanceFromDefinition(EntityDefinitionUpdateManager::class)
     ->applyUpdates();
+
+  // Add permissions.
+  ModuleInstallerFactory::addPermissions('vlplb');
 
 }
 

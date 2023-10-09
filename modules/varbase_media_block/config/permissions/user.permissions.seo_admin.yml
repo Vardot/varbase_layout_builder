@@ -1,0 +1,5 @@
+id: seo_admin
+permissions:
+  - 'create varbase_media_block block content'
+  - 'delete any varbase_media_block block content'
+  - 'edit any varbase_media_block block content'

@@ -1,0 +1,6 @@
+id: seo_admin
+permissions:
+  - 'create landing_page_lb content'
+  - 'delete any landing_page_lb content'
+  - 'edit any landing_page_lb content'
+  - 'view landing_page_lb revisions'

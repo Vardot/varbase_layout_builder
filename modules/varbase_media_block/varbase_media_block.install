@@ -13,8 +13,7 @@ use Vardot\Installer\ModuleInstallerFactory;
  */
 function varbase_media_block_install() {
 
-  // Processer for install: in varbase_media_block.info.yml file.
-  // --------------------------------------------------------------------------.
+  // Processor for install: in varbase_media_block.info.yml file.
   ModuleInstallerFactory::installList('varbase_media_block');
 
   // Install optional configs.
@@ -27,6 +26,9 @@ function varbase_media_block_install() {
   \Drupal::classResolver()
     ->getInstanceFromDefinition(EntityDefinitionUpdateManager::class)
     ->applyUpdates();
+
+  // Add permissions.
+  ModuleInstallerFactory::addPermissions('varbase_media_block');
 
 }
 

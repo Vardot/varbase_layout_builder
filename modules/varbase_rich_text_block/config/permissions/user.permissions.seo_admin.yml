@@ -1,0 +1,5 @@
+id: seo_admin
+permissions:
+  - 'create varbase_rich_text_block block content'
+  - 'delete any varbase_rich_text_block block content'
+  - 'edit any varbase_rich_text_block block content'
