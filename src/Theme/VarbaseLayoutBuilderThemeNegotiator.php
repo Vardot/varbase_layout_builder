@@ -117,7 +117,7 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
                 return $this->configFactory->get('system.theme')->get('default');
               }
               else {
-                return $this->configFactory->get('system.theme')->get('admin');;
+                return $this->configFactory->get('system.theme')->get('admin');
               }
             }
           }
