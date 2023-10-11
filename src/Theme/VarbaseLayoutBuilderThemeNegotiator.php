@@ -72,12 +72,11 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
    */
   public function applies(RouteMatchInterface $route_match) {
     $use_claro = $this->configFactory->get('varbase_layout_builder.settings')->get('use_claro');
-    if (isset($use_claro) && $use_claro == 1
-      && !version_compare(\Drupal::VERSION, '8.8.0', 'lt')) {
+    if (isset($use_claro) && $use_claro == 1) {
 
       $route_name = $route_match->getRouteName();
       if (isset($route_name) && strpos($route_name, 'layout_builder') !== FALSE) {
-        if ($this->themeHandler->themeExists('claro')) {
+        if ($this->themeHandler->themeExists('gin') || $this->themeHandler->themeExists('claro')) {
           return TRUE;
         }
       }
@@ -98,18 +97,18 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
   public function determineActiveTheme(RouteMatchInterface $route_match) {
     $use_claro = $this->configFactory->get('varbase_layout_builder.settings')->get('use_claro');
 
-    if (isset($use_claro) && $use_claro == 1
-      && !version_compare(\Drupal::VERSION, '8.8.0', 'lt')) {
+    if (isset($use_claro) && $use_claro == 1) {
 
       $route_name = $route_match->getRouteName();
       if (isset($route_name) && strpos($route_name, 'layout_builder') !== FALSE) {
 
-        if ($this->themeHandler->themeExists('claro')) {
-          if ($this->requestStack->getCurrentRequest()->request->get('dialogOptions')) {
-            $dialog_options = $this->requestStack->getCurrentRequest()->request->get('dialogOptions')['target'];
+        if ($this->themeHandler->themeExists('gin') || $this->themeHandler->themeExists('claro')) {
+          $current_request = $this->requestStack->getCurrentRequest()->request->all('dialogOptions');
+          if (isset($current_request['dialogOptions']) && isset($current_request['dialogOptions']['target'])) {
+            $dialog_options = $current_request['dialogOptions']['target'];
           }
           if (isset($dialog_options)) {
-            return "claro";
+            return $this->configFactory->get('system.theme')->get('admin');
           }
           else {
             $request_query_wrapper_format = $this->requestStack->getCurrentRequest()->query->get('_wrapper_format');
@@ -118,7 +117,7 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
                 return $this->configFactory->get('system.theme')->get('default');
               }
               else {
-                return "claro";
+                return $this->configFactory->get('system.theme')->get('admin');;
               }
             }
           }
