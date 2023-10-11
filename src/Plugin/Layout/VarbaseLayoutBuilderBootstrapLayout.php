@@ -458,7 +458,7 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
     }
 
     $layout_id = $this->getPluginDefinition()->id();
-    $breakpoints = $this->entityTypeManager->getStorage('blb_breakpoint')->getQuery()->sort('weight', 'ASC')->execute();
+    $breakpoints = $this->entityTypeManager->getStorage('blb_breakpoint')->getQuery()->accessCheck(TRUE)->sort('weight', 'ASC')->execute();
     foreach ($breakpoints as $breakpoint_id) {
       $breakpoint = $this->entityTypeManager->getStorage('blb_breakpoint')->load($breakpoint_id);
       $layout_options = $breakpoint->getLayoutOptions($layout_id);

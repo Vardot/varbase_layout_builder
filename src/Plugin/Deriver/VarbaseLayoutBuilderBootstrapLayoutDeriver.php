@@ -47,7 +47,7 @@ class VarbaseLayoutBuilderBootstrapLayoutDeriver extends DeriverBase implements 
    * {@inheritdoc}
    */
   public function getDerivativeDefinitions($base_plugin_definition) {
-    $layouts = $this->entityTypeManager->getStorage('blb_layout')->getQuery()->sort('number_of_columns', 'ASC')->execute();
+    $layouts = $this->entityTypeManager->getStorage('blb_layout')->getQuery()->accessCheck(TRUE)->sort('number_of_columns', 'ASC')->execute();
     if ($layouts) {
       foreach ($layouts as $layout_id) {
         $layout = $this->entityTypeManager->getStorage('blb_layout')->load($layout_id);
