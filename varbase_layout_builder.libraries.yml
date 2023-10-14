@@ -3,25 +3,33 @@ enhancements:
   css:
     theme:
       css/theme/vlb-enhancements.base.css: {}
-      css/theme/vlb-tabs-group.theme.css: {}
-      css/theme/vlb-media-library.theme.css: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once
+    - core/drupal.dialog
+    - bootstrap_styles/theme.dark
 
 # Varbase Layout Builder theme of configure section.
 configure-section.admin:
   js:
     js/vlb-configure-section.admin.js: {}
   dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once
+    - core/drupal.dialog
+    - bootstrap_styles/theme.dark
     - varbase_layout_builder/plugin.horizontal_alignment.layout_builder_form
     - varbase_layout_builder/plugin.vertical_alignment.layout_builder_form
 
 # Layout builder modal claro theme.
 claro:
-  version: VERSION
   css:
     base:
       themes/claro/css/base/elements.css: {}
-      themes/claro/css/base/off-canvas.theme.css: {}
       themes/claro/css/base/typography.css: {}
+      themes/claro/css/base/variables.css: {}
     component:
       themes/claro/css/components/accordion.css: {}
       themes/claro/css/components/action-link.css: {}
@@ -44,7 +52,6 @@ claro:
       themes/claro/css/components/file.css: {}
       themes/claro/css/components/form.css: {}
       themes/claro/css/components/form--checkbox-radio.css: {}
-      themes/claro/css/components/form--checkbox-radio--ie.css: {}
       themes/claro/css/components/form--field-multiple.css: {}
       themes/claro/css/components/form--managed-file.css: {}
       themes/claro/css/components/form--password-confirm.css: {}
@@ -63,11 +70,6 @@ claro:
       themes/claro/css/components/system-admin--links.css: {}
       themes/claro/css/components/system-admin--modules.css: {}
       themes/claro/css/components/system-admin--panel.css: {}
-      themes/claro/css/components/system-admin--status-report.css: {}
-      themes/claro/css/components/system-status-counter.css: {}
-      themes/claro/css/components/system-status-report-counters.css: {}
-      themes/claro/css/components/system-status-report-general-info.css: {}
-      themes/claro/css/components/system-status-report.css: {}
       themes/claro/css/components/tabledrag.css: {}
       themes/claro/css/components/tables.css: {}
       themes/claro/css/components/tableselect.css: {}
@@ -91,7 +93,6 @@ claro:
       themes/claro/css/theme/media-library.css: {}
       themes/claro/css/theme/field-ui.admin.css: {}
       themes/claro/css/theme/filter.theme.css: {}
-      themes/claro/css/theme/vartheme-claro.theme.style.css: {}
       themes/claro/css/theme/bootstrap-styles.dark.css: {}
   dependencies:
     - system/admin
@@ -103,13 +104,13 @@ claro:
 plugin.horizontal_alignment.layout_builder_form:
   css:
     theme:
-      css/theme/plugins/horizontal-alignment.css: {}
+      css/plugins/horizontal-alignment.css: {}
 
 # Vertical alignment.
 plugin.vertical_alignment.layout_builder_form:
   css:
     theme:
-      css/theme/plugins/vertical-alignment.css: {}
+      css/plugins/vertical-alignment.css: {}
 
 # local library for
 # AOS - Animate on scroll library.

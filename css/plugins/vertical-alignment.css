@@ -1,0 +1,21 @@
+#drupal-off-canvas .field-vertical-alignment .fieldset-wrapper>div>div input+label {
+  font-size: 0;
+  text-indent: -999em;
+}
+
+#drupal-off-canvas .field-vertical-alignment .fieldset-wrapper>div>div input+label .input-icon {
+  margin-bottom: 0;
+}
+
+#drupal-off-canvas .field-vertical-alignment .fieldset-wrapper>div>div input+label .input-icon[class*=align-items-start] {
+  background-image: url(../../images/plugins/vertical-alignment/align-top.svg);
+}
+
+#drupal-off-canvas .field-vertical-alignment .fieldset-wrapper>div>div input+label .input-icon[class*=align-items-center] {
+  background-image: url(../../images/plugins/vertical-alignment/align-middle.svg);
+}
+
+#drupal-off-canvas .field-vertical-alignment .fieldset-wrapper>div>div input+label .input-icon[class*=align-items-end] {
+  background-image: url(../../images/plugins/vertical-alignment/align-bottom.svg);
+}
+

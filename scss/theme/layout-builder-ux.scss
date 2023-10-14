@@ -1,0 +1,216 @@
+.layout-builder__section {
+  position: relative;
+  padding: 1.5em;
+  outline: 2px dashed #979797;
+}
+
+.layout-builder__actions {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 0 0 6px;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 12px;
+}
+
+.layout-builder__actions__section {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 100ms linear;
+  opacity: 0;
+  background-color: #777;
+}
+
+.layout-builder__section:hover .layout-builder__actions__section {
+  opacity: 1;
+}
+
+.layout-builder__actions__block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 100ms linear;
+  opacity: 0;
+  background-color: #618eab;
+}
+
+.layout-builder__region > .layout-builder-block:hover:not(.ui-state-drop) .layout-builder__actions__block,
+.layout-builder__region > .layout-builder-block:focus:not(.ui-state-drop) .layout-builder__actions__block {
+  opacity: 1;
+}
+
+.layout-builder__actions--display {
+  opacity: 1;
+}
+
+.layout-builder__actions .layout-builder__section-label {
+  display: inline-block;
+  margin-right: 4px;
+}
+
+.layout-builder__actions .layout-builder__block-label {
+  margin-right: 4px;
+}
+
+.layout-builder__actions .layout-builder__link {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  pointer-events: auto;
+  border: 0;
+  border-radius: 0;
+  font-size: 1rem;
+}
+
+.layout-builder__actions .layout-builder__link:hover {
+  background-color: #555;
+}
+
+.layout-builder__actions .layout-builder__link--configure {
+  background: url(../../images/icons/ffffff/cog.svg) center center / 12px 12px no-repeat;
+}
+
+.layout-builder__actions .layout-builder__link--move {
+  background: url(../../images/icons/ffffff/move.svg) center center / 12px 12px no-repeat;
+}
+
+.layout-builder__actions .layout-builder__link--remove {
+  background: url(../../images/icons/ffffff/ex.svg) center center / 12px 12px no-repeat;
+}
+
+.layout-builder__link--add {
+  display: block;
+  padding: 0.5em 0;
+  padding-left: 30px;
+  transition: all 100ms linear;
+  text-transform: uppercase;
+  background-position: 10px center;
+  font-size: 12px;
+}
+
+.layout-builder__link--add:hover {
+  background-image: url(../../images/icons/ffffff/plus.svg);
+}
+
+.layout-builder__add-section {
+  padding: 0;
+  text-align: left;
+  outline: initial;
+  background-color: #eee;
+}
+
+.layout-builder__add-section .layout-builder__link--add {
+  color: #777;
+}
+
+.layout-builder__add-section .layout-builder__link--add:hover {
+  color: white;
+  background-color: #777;
+}
+
+.layout-builder__add-block {
+  padding: 0;
+  transition: all 100ms linear;
+  text-align: left;
+}
+
+.layout-builder__add-block .layout-builder__link--add {
+  color: #618dac;
+}
+
+.layout-builder__add-block .layout-builder__link--add:hover {
+  color: white;
+  background-color: #618dac;
+}
+
+.layout-builder__region {
+  outline: initial;
+}
+
+.layout-builder__region > .layout-builder-block {
+  position: relative;
+  margin: 10px 5px;
+  padding: 1em;
+  border: 2px dotted #618dac;
+}
+
+.layout-builder__region > .layout-builder-block:hover:not(.ui-state-drop),
+.layout-builder__region > .layout-builder-block:focus:not(.ui-state-drop) {
+  border: 2px solid #618dac;
+}
+
+.layout-builder__add-block {
+  margin: 10px 5px;
+}
+
+.layout-builder__section .ui-sortable-helper {
+  border: 2px solid #618dac;
+  outline: initial;
+  box-shadow: 0 10px 24px 0 rgba(0, 0, 0, 0.5);
+}
+
+.layout-builder__section .ui-state-drop {
+  margin: 10px 5px;
+  padding: 1em;
+  border: none;
+  outline: none;
+  background-color: #fed87a;
+  background-image: repeating-linear-gradient(45deg, #fed87a, #fed87a 9px, #fff88d 9px, #fff88d 12px);
+}
+
+.ui-state-drop > div {
+  opacity: 0;
+}
+
+/* Remove border from 'inner' layout builder block when it is highlighted. */
+.layout-builder-block .layout-builder-block.is-layout-builder-highlighted,
+.layout-builder__layout.is-layout-builder-highlighted {
+  border: 0;
+}
+
+/* Override colors and floats that Bartik sets. */
+.layout-container .region-header .layout-builder-block {
+  float: none;
+  clear: none;
+}
+
+/* Layout Selection */
+#drupal-off-canvas .layout-selection li {
+  padding-bottom: 0;
+}
+
+#drupal-off-canvas .layout-selection li a {
+  display: flex;
+  margin: 0 -20px;
+  padding: 15px 0;
+  padding-left: 25px; /* LTR */
+}
+[dir="rtl"] #drupal-off-canvas .layout-selection li a {
+  padding-right: 25px;
+  padding-left: 0;
+}
+
+#drupal-off-canvas .layout-selection li a:hover {
+  background-color: #333;
+}
+
+#drupal-off-canvas .layout-selection li a svg {
+  margin-right: 1em; /* LTR */
+  background-color: inherit;
+}
+[dir="rtl"] #drupal-off-canvas .layout-selection li a svg {
+  margin-right: 0;
+  margin-left: 1em;
+}
+
+#drupal-off-canvas .layout-selection li a div {
+  padding-top: 0.55em;
+  background-color: inherit;
+}
+

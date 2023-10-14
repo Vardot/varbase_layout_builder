@@ -8,11 +8,5 @@
 #layout-builder-modal,
 .media-library-widget-modal,
 form.media-form {
-  @import "../../../../../core/themes/claro/css/base/elements";
-}
-
-html #layout-builder-modal,
-html .media-library-widget-modal,
-html form.media-form {
-  font-size: 90%;
+  @import "../../../core/themes/claro/css/base/elements";
 }

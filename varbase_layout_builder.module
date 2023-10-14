@@ -78,6 +78,16 @@ function varbase_layout_builder_form_alter(&$form, FormStateInterface $form_stat
     if (isset($form['rabbit_hole'])) {
       $form['rabbit_hole']['#access'] = FALSE;
     }
+
+    if (isset($form['actions']['rebuild-layout'])) {
+      $form['actions']['rebuild-layout']['#attributes']['class'][] = 'btn btn-primary';
+    }
+
+    // Style the Reorder sections action button.
+    if (isset($form['actions']['move_sections'])) {
+      $form['actions']['move_sections']['#attributes']['class'][] = 'btn btn-primary';
+    }
+
   }
 
   $config = \Drupal::config('varbase_layout_builder.settings');
@@ -246,7 +256,7 @@ function varbase_layout_builder_preprocess_blb_section(&$variables) {
   }
 
   if (isset($variables['content']['#settings']['container_width'])
-   && $variables['content']['#settings']['container_width'] !== '') {
+  && $variables['content']['#settings']['container_width'] !== '') {
 
     // VLB layout defaults.
     $vlb_layout_defaults = \Drupal::config('varbase_layout_builder.layout_defaults');
@@ -293,5 +303,28 @@ function varbase_layout_builder_library_info_alter(&$libraries, $extension) {
     }
 
     $libraries['layout_builder_form_style']['js'] = $new_js;
+  }
+  elseif ($extension == 'lb_ux'
+    && isset($libraries['drupal.lb_ux'])) {
+
+    $origin_url = \Drupal::request()->getSchemeAndHttpHost() . \Drupal::request()->getBaseUrl();
+    $new_path = $origin_url . '/' . \Drupal::service('extension.list.module')->getPath('varbase_layout_builder');
+
+    $new_css = [];
+    $replacements = [
+      'css/layout-builder-ux.css' => $new_path . '/css/theme/layout-builder-ux.css',
+    ];
+
+    foreach ($libraries['drupal.lb_ux']['css']['theme'] as $source => $options) {
+      if (isset($replacements[$source])) {
+        $new_css[$replacements[$source]] = $options;
+      }
+      else {
+        $new_css[$source] = $options;
+      }
+    }
+
+    $libraries['drupal.lb_ux']['css']['theme'] = $new_css;
+
   }
 }
