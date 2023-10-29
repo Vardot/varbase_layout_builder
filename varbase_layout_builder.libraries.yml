@@ -28,6 +28,7 @@ claro:
   css:
     base:
       themes/claro/css/base/elements.css: {}
+      themes/claro/css/base/off-canvas.theme.css: {}
       themes/claro/css/base/typography.css: {}
       themes/claro/css/base/variables.css: {}
     component:
@@ -93,6 +94,7 @@ claro:
       themes/claro/css/theme/media-library.css: {}
       themes/claro/css/theme/field-ui.admin.css: {}
       themes/claro/css/theme/filter.theme.css: {}
+      themes/claro/css/theme/vartheme-claro.theme.style.css: {}
       themes/claro/css/theme/bootstrap-styles.dark.css: {}
   dependencies:
     - system/admin

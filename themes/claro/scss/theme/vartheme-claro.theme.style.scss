@@ -1,0 +1,203 @@
+#layout-builder-modal,
+.media-library-widget-modal,
+form.media-form {
+  html {
+    font-size: 90%; /* Make the elements smaller for Varbase admin */
+  }
+
+  input[type="text"] {
+    max-width: 100%;
+  }
+
+  .views-exposed-form__item {
+
+    [id*="edit-created-from"],
+    [id*="edit-created-to"],
+    [id*="edit-user-created-from"],
+    [id*="edit-user-created-to"],
+    [id*="edit-content-created-from"],
+    [id*="edit-content-created-to"] {
+      width: 9rem;
+    }
+
+    [id*="edit-langcode"],
+    [id*="edit-uid"] {
+      width: 12rem;
+    }
+
+    .ui-autocomplete-input {
+      padding-right: 32px;
+    }
+
+  }
+
+  .node-form {
+    .field--name-title {
+      input {
+        font-size: 1.6em;
+        width: 100%;
+        min-height: 4rem;
+      }
+
+      .length-indicator {
+        margin-top: -1rem;
+      }
+    }
+  }
+
+  body.path-admin .panel.dashboard-block {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: #222330;
+    border: 1px solid rgba(216, 217, 224, 0.8);
+    border-radius: 2px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .block-views-blockvarbase-google-analytics-summary-sessions-and-pageviews {
+    .panel__title {
+      display: block;
+    }
+
+  .description {
+      padding: 20px;
+    }
+  }
+
+  .node-form {
+    div.autocomplete-deluxe-container {
+      width: 65%;
+
+      @media screen and (max-width: 81.25rem){
+        width: 100%;
+      }
+
+      &:not(.autocomplete-deluxe-multiple) {
+        input {
+          &.autocomplete-deluxe-form {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    .claro-autocomplete {
+      width: 65%;
+
+      .claro-autocomplete__message {
+        display: none;
+      }
+
+      input {
+        width: 100%;
+        padding-right: 1.875rem;
+      }
+
+      @media screen and (max-width: 81.25rem){
+        width: 100%;
+      }
+    }
+
+    .accordion {
+      .claro-autocomplete {
+        width: 100%;
+      }
+    }
+
+    .js {
+      input.form-autocomplete {
+        background: url('../images/search-autocomplete.svg') no-repeat 100% 50%;
+
+        &.ui-autocomplete-loading {
+          background: url('../images/search-autocompleting.svg') no-repeat 100% 50%;
+        }
+      }
+
+      .is-autocompleting {
+        + .claro-autocomplete__message {
+          display: none;
+        }
+      }
+    }
+
+    .field--type-yoast-seo {
+      input {
+        width: 66%;
+
+        @media screen and (max-width: 81.25rem){
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .media-library-item {
+    .media-library-edit__link {
+      right: 40px;
+    }
+
+    .media-library-edit__link,
+    .media-library-item__remove.button:first-child {
+      width: 25px;
+      height: 25px;
+      top: 10px;
+      background-size: 13px;
+      border: 2px solid #ccc !important;
+      font-size: 0;
+
+      &:not(:focus) {
+        box-shadow: none;
+      }
+
+      &:hover, &:focus {
+        border-color: #40b6ff !important;
+        color: transparent;
+      }
+
+      &:active {
+        outline: 2px dotted transparent;
+        box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769;
+      }
+    }
+  }
+
+  // Style Focal point of Focal point "Preview" link cover image for a Video.
+  .focal-point-preview-link {
+    padding: 1.2rem;
+    text-decoration: none;
+  }
+
+  // Style media library grid item in the node secondary region layout.
+  .layout-region-node-secondary {
+    .media-library-item {
+      &.media-library-item--grid {
+        width: 200px;
+        max-width: 200px;
+      }
+    }
+  }
+
+  fieldset {
+    &.fieldset {
+      border-color: rgb(216, 217, 224);
+    }
+  }
+
+  // Fix styling of form elements in tables on mobile.
+  td > .form-item > .form-element,
+  td > .ajax-new-content > .form-item > .form-element {
+    @media screen and (max-width: 37.5rem) {
+      width: inherit;
+    }
+  }
+
+  @media screen and (min-width: 48em) {
+    .is-horizontal {
+      .tabs--secondary {
+        flex-wrap: wrap;
+      }
+    }
+  }
+}
