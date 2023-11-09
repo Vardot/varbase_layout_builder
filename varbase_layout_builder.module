@@ -193,7 +193,7 @@ function varbase_layout_builder_preprocess_layout(&$variables) {
         if (isset($background_media_entity)
           && $background_media_entity instanceof MediaInterface) {
 
-          $background_media_view_mode = (isset($style_options['vlb_background_media']['view_mode']) ? $style_options['vlb_background_media']['view_mode'] : 'background_media');
+          $background_media_view_mode = ($style_options['vlb_background_media']['view_mode'] ?? 'background_media');
           $background_media_build = Drupal::entityTypeManager()->getViewBuilder('media')->view($background_media_entity, $background_media_view_mode);
           $variables['settings']['vlb_section_config']['vlb_background_media_html'] = $background_media_build;
         }
@@ -320,16 +320,16 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
               }
 
               $form[$style_option['group']][$style_option_id] = [
-              '#type' => 'radios',
-              '#options' => $options,
-              '#title' => (isset($style_option['label']) ? $style_option['label'] : ''),
-              '#description' => (isset($style_option['description']) ? $style_option['description'] : NULL),
-              '#default_value' => $default_value,
-              '#required' => (isset($style_option['required']) ? $style_option['required'] : NULL),
-              '#attributes' => [
-                'class' => [$style_option_id, 'form-radio'],
-              ],
-              '#prefix' => '<hr />',
+                '#type' => 'radios',
+                '#options' => $options,
+                '#title' => ($style_option['label'] ?? ''),
+                '#description' => ($style_option['description'] ?? NULL),
+                '#default_value' => $default_value,
+                '#required' => ($style_option['required'] ?? NULL),
+                '#attributes' => [
+                  'class' => [$style_option_id, 'form-radio'],
+                ],
+                '#prefix' => '<hr />',
               ];
 
             }
@@ -346,13 +346,13 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
               }
 
               $form[$style_option['group']][$style_option_id] = [
-              '#type' => 'media_library',
-              '#title' => (isset($style_option['label']) ? $style_option['label'] : ''),
-              '#description' => (isset($style_option['description']) ? $style_option['description'] : NULL),
-              '#allowed_bundles' => $style_option['allowed_bundles'],
-              '#default_value' => $default_value,
-              '#cardinality' => (isset($style_option['cardinality']) ? $style_option['cardinality'] : 1),
-              '#prefix' => '<hr />',
+                '#type' => 'media_library',
+                '#title' => ($style_option['label'] ?? ''),
+                '#description' => ($style_option['description'] ?? NULL),
+                '#allowed_bundles' => $style_option['allowed_bundles'],
+                '#default_value' => $default_value,
+                '#cardinality' => ($style_option['cardinality'] ?? 1),
+                '#prefix' => '<hr />',
               ];
 
             }
@@ -367,14 +367,14 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
               }
 
               $form[$style_option['group']][$style_option_id] = [
-              '#type' => 'textfield',
-              '#title' => (isset($style_option['label']) ? $style_option['label'] : ''),
-              '#description' => (isset($style_option['description']) ? $style_option['description'] : NULL),
-              '#default_value' => $default_value,
-              '#size' => $style_option['size'],
-              '#maxlength' => $style_option['maxlength'],
-              '#required' => (isset($style_option['required']) ? $style_option['required'] : NULL),
-              '#prefix' => '<hr />',
+                '#type' => 'textfield',
+                '#title' => ($style_option['label'] ?? ''),
+                '#description' => ($style_option['description'] ?? NULL),
+                '#default_value' => $default_value,
+                '#size' => $style_option['size'],
+                '#maxlength' => $style_option['maxlength'],
+                '#required' => ($style_option['required'] ?? NULL),
+                '#prefix' => '<hr />',
               ];
             }
             elseif ($style_option['field_type'] == 'textarea') {
@@ -386,12 +386,12 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
                 $default_value = $style_option['default_value'];
               }
               $form[$style_option['group']][$style_option_id] = [
-              '#type' => 'textarea',
-              '#title' => (isset($style_option['label']) ? $style_option['label'] : ''),
-              '#description' => (isset($style_option['description']) ? $style_option['description'] : NULL),
-              '#default_value' => $default_value,
-              '#required' => (isset($style_option['required']) ? $style_option['required'] : NULL),
-              '#prefix' => '<hr />',
+                '#type' => 'textarea',
+                '#title' => ($style_option['label'] ?? ''),
+                '#description' => ($style_option['description'] ?? NULL),
+                '#default_value' => $default_value,
+                '#required' => ($style_option['required'] ?? NULL),
+                '#prefix' => '<hr />',
               ];
             }
             elseif ($style_option['field_type'] == 'checkbox') {
@@ -405,11 +405,11 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
               }
 
               $form[$style_option['group']][$style_option_id] = [
-              '#type' => 'checkbox',
-              '#title' => (isset($style_option['label']) ? $style_option['label'] : ''),
-              '#description' => (isset($style_option['description']) ? $style_option['description'] : NULL),
-              '#default_value' => $default_value,
-              '#prefix' => '<hr />',
+                '#type' => 'checkbox',
+                '#title' => ($style_option['label'] ?? ''),
+                '#description' => ($style_option['description'] ?? NULL),
+                '#default_value' => $default_value,
+                '#prefix' => '<hr />',
               ];
             }
             elseif ($style_option['field_type'] == 'list_string') {
@@ -456,14 +456,14 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
               }
 
               $form[$style_option['group']][$style_option_id] = [
-              '#type' => 'select',
-              '#title' => (isset($style_option['label']) ? $style_option['label'] : ''),
-              '#description' => (isset($style_option['description']) ? $style_option['description'] : NULL),
-              '#multiple' => (isset($style_option['multiple']) ? $style_option['multiple'] : FALSE),
-              '#required' => (isset($style_option['required']) ? $style_option['required'] : FALSE),
-              '#prefix' => '<hr />',
-              '#options' => $options,
-              '#default_value' => $default_value,
+                '#type' => 'select',
+                '#title' => ($style_option['label'] ?? ''),
+                '#description' => ($style_option['description'] ?? NULL),
+                '#multiple' => ($style_option['multiple'] ?? FALSE),
+                '#required' => ($style_option['required'] ?? FALSE),
+                '#prefix' => '<hr />',
+                '#options' => $options,
+                '#default_value' => $default_value,
               ];
             }
 
@@ -485,9 +485,9 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
 
                   if (isset($form[$style_option['group']][$style_option_id])) {
                     $form[$style_option['group']][$style_option_id]['#status'] = [
-                    'visible' => [
+                      'visible' => [
                       [$jquery_selector => $remote_conditions],
-                    ],
+                      ],
                     ];
                   }
                 }
@@ -508,9 +508,9 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
 
                   if (isset($form[$style_option['group']][$style_option_id])) {
                     $form[$style_option['group']][$style_option_id]['#states'] = [
-                    'invisible' => [
+                      'invisible' => [
                       [$jquery_selector => $remote_conditions],
-                    ],
+                      ],
                     ];
                   }
                 }
