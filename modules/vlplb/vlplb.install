@@ -70,7 +70,8 @@ function vlplb_update_8101() {
  */
 function vlplb_update_90001() {
   // Set the weight of the module after installation of list of modules.
-  // To make sure that any hook or event subscriber workes after all used modules.
+  // To make sure that any hook or event subscriber worker
+  // after all used modules.
   ModuleInstallerFactory::setModuleWeightAfterInstallation('vlplb');
 }
 
@@ -84,7 +85,6 @@ function vlplb_update_90002() {
   // https://git.drupalcode.org/project/pathauto/-/blob/8.x-1.10/pathauto.install#L304
   // Based on the following comment:
   // https://www.drupal.org/project/pathauto/issues/2925169#comment-14636138
-
   // Load all pattern configuration entities.
   foreach (\Drupal::configFactory()->listAll('pathauto.pattern.') as $pattern_config_name) {
     $pattern_config = \Drupal::configFactory()->getEditable($pattern_config_name);

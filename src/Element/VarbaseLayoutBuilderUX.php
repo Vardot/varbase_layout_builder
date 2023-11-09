@@ -88,9 +88,6 @@ class VarbaseLayoutBuilderUX extends LayoutBuilder {
         $preview_fallback_string = $build['layout-builder__section'][$region][$uuid]['#attributes']['data-layout-content-preview-placeholder-label'];
         $route_parameters = $build['layout-builder__section'][$region][$uuid]['#contextual_links']['layout_builder_block']['route_parameters'];
 
-        // Remove default contextual links.
-        // unset($build['layout-builder__section'][$region][$uuid]['#contextual_links']['layout_builder_block']);
-
         // Ensure the 'content' key is present, as set by
         // \Drupal\layout_builder\EventSubscriber\BlockComponentRenderArray.
         assert(isset($build['layout-builder__section'][$region][$uuid]['content']));
@@ -184,7 +181,10 @@ class VarbaseLayoutBuilderUX extends LayoutBuilder {
         $plugin_id = 'inline_block:varbase_heading_block';
         $build['layout-builder__section']['section_header']['layout_builder_add_block']['link'] = [
           '#type' => 'link',
-          '#title' => $this->t('Add heading <span class="visually-hidden">in @section, @region region</span>', ['@section' => $section_label, '@region' => $region_labels['section_header']]),
+          '#title' => $this->t('Add heading <span class="visually-hidden">in @section, @region region</span>', [
+            '@section' => $section_label,
+            '@region' => $region_labels['section_header'],
+          ]),
           '#url' => Url::fromRoute('layout_builder.add_block',
             [
               'section_storage_type' => $storage_type,
