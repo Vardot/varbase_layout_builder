@@ -357,7 +357,7 @@ function varbase_layout_builder_element_info_alter(array &$info) {
  */
 function varbase_layout_builder_css_alter(&$css, AttachedAssetsInterface $assets) {
 
-  if (_is_layout_builder_route()) {
+  if (varbase_layout_builder__is_layout_builder_route()) {
     if (\Drupal::service('theme_handler')->themeExists('stable9')) {
       $stable_theme_css = \Drupal::service('extension.list.theme')->getPath('stable9') . '/css';
       unset($css[$stable_theme_css . '/layout_builder/layout-builder.css']);
@@ -384,8 +384,7 @@ function varbase_layout_builder_css_alter(&$css, AttachedAssetsInterface $assets
     unset($css['core/misc/dialog/off-canvas/css/utility.css']);
     unset($css['core/misc/dialog/off-canvas/css/drupal.css']);
     // unset($css['core/misc/dialog/off-canvas/css/tabledrag.css']);
-    // unset($css['core/misc/dialog/off-canvas/css/throbber.css']);
-
+    // unset($css['core/misc/dialog/off-canvas/css/throbber.css']);.
     if (\Drupal::service('theme.manager')->getActiveTheme()->getName() !== \Drupal::config('system.theme')->get('admin')) {
       unset($css['core/modules/layout_builder/css/off-canvas.css']);
     }
@@ -399,7 +398,7 @@ function varbase_layout_builder_css_alter(&$css, AttachedAssetsInterface $assets
  * @return bool
  *   Returns true for layout builder routes.
  */
-function _is_layout_builder_route() {
+function varbase_layout_builder__is_layout_builder_route() {
   $layout_builder_route = drupal_static(__FUNCTION__);
   if ($layout_builder_route !== NULL) {
     return $layout_builder_route;
@@ -413,7 +412,7 @@ function _is_layout_builder_route() {
   }
 
   $context = NULL;
-  \Drupal::moduleHandler()->alter('_is_layout_builder_route', $layout_builder_route, $context);
+  \Drupal::moduleHandler()->alter('varbase_layout_builder__is_layout_builder_route', $layout_builder_route, $context);
   unset($context);
   return $layout_builder_route;
 }

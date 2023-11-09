@@ -195,9 +195,7 @@ class VarbaseBootstrapButtonLinkFormatter extends LinkFormatter {
     $entity = $items->getEntity();
 
     $override_color = (bool) $this->varbaseBootstrapButtonLinkConfigs->get('override_color');
-    $override_outline = (bool) $this->varbaseBootstrapButtonLinkConfigs->get('override_outline');
     $override_size = (bool) $this->varbaseBootstrapButtonLinkConfigs->get('override_size');
-    $override_target = (bool) $this->varbaseBootstrapButtonLinkConfigs->get('override_target');
 
     foreach ($items as $delta => $item) {
       $url = $this->buildUrl($item);
@@ -226,7 +224,8 @@ class VarbaseBootstrapButtonLinkFormatter extends LinkFormatter {
         $btn_class += ['btn', $button_link_color];
       }
 
-      // Add the Bootstrap Button Block level class if the button was sat to be block level.
+      // Add the Bootstrap Button Block level class if the
+      // button was sat to be block level.
       $button_block_level = (empty($options['block_level']) || $options['block_level'] == 0) ? $settings['block_level'] : $options['block_level'];
       if ($button_block_level == 1) {
         $btn_class[] = 'btn-block';

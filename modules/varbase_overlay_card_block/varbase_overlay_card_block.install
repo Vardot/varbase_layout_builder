@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Install, update and uninstall functions for the Varbase Overlay Card block module.
+ * Install, update and uninstall functions for Varbase Overlay Card block.
  */
 
 use Vardot\Entity\EntityDefinitionUpdateManager;

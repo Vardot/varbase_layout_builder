@@ -31,7 +31,7 @@ class VarbaseBootstrapButtonLinkHelper {
       }
 
       // Parse and check style options pairs.
-      list($raw_css_class, $raw_name) = explode('|', trim($line), 2);
+      [$raw_css_class, $raw_name] = explode('|', trim($line), 2);
       $raw_css_class = trim($raw_css_class);
       $raw_name = trim($raw_name);
 

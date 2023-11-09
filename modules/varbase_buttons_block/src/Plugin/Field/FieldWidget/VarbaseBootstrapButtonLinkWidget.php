@@ -98,7 +98,7 @@ class VarbaseBootstrapButtonLinkWidget extends LinkWidget {
     $element['options']['color'] = [
       '#type' => 'select',
       '#title' => $this->t('Color'),
-      '#default_value' => isset($items[$delta]->options['color']) ? $items[$delta]->options['color'] : $button_default_color,
+      '#default_value' => $items[$delta]->options['color'] ?? $button_default_color,
       '#description' => $this->t('Select the color of the button.'),
       '#options' => $button_colors,
       '#access' => $override_color,
@@ -107,7 +107,7 @@ class VarbaseBootstrapButtonLinkWidget extends LinkWidget {
     $element['options']['size'] = [
       '#type' => 'select',
       '#title' => $this->t('Size'),
-      '#default_value' => isset($items[$delta]->options['size']) ? $items[$delta]->options['size'] : $button_default_size,
+      '#default_value' => $items[$delta]->options['size'] ?? $button_default_size,
       '#description' => $this->t('Select the size of the button.'),
       '#options' => $button_sizes,
       '#access' => $override_size,
@@ -116,7 +116,7 @@ class VarbaseBootstrapButtonLinkWidget extends LinkWidget {
     $element['options']['outline'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Outline'),
-      '#default_value' => isset($items[$delta]->options['outline']) ? $items[$delta]->options['outline'] : $button_default_outline,
+      '#default_value' => $items[$delta]->options['outline'] ?? $button_default_outline,
       '#description' => $this->t('Have an outline border for the button.'),
       '#access' => $override_outline,
     ];
@@ -124,7 +124,7 @@ class VarbaseBootstrapButtonLinkWidget extends LinkWidget {
     $element['options']['target'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Open in a new window'),
-      '#default_value' => isset($items[$delta]->options['target']) ? $items[$delta]->options['target'] : $button_default_target,
+      '#default_value' => $items[$delta]->options['target'] ?? $button_default_target,
       '#description' => $this->t('Check to open the link in new window.'),
       '#access' => $override_target,
     ];
@@ -132,7 +132,7 @@ class VarbaseBootstrapButtonLinkWidget extends LinkWidget {
     $element['options']['block_level'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Block level'),
-      '#default_value' => isset($items[$delta]->options['block_level']) ? $items[$delta]->options['block_level'] : $button_default_block_level,
+      '#default_value' => $items[$delta]->options['block_level'] ?? $button_default_block_level,
       '#description' => $this->t('Check to show a wide button to fit content width.'),
       '#access' => $override_block_level,
     ];
@@ -140,7 +140,7 @@ class VarbaseBootstrapButtonLinkWidget extends LinkWidget {
     $element['options']['disabled'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Disabled'),
-      '#default_value' => isset($items[$delta]->options['disabled']) ? $items[$delta]->options['disabled'] : $button_default_disabled,
+      '#default_value' => $items[$delta]->options['disabled'] ?? $button_default_disabled,
       '#description' => $this->t('Check to show a disabled not functional button.'),
       '#access' => $override_disabled,
     ];

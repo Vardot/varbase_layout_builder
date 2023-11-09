@@ -75,7 +75,7 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
     if (isset($use_claro) && $use_claro == 1) {
 
       $route_name = $route_match->getRouteName();
-      if (isset($route_name) && _is_layout_builder_route() && !str_contains($route_name, 'dashboards')) {
+      if (isset($route_name) && varbase_layout_builder__is_layout_builder_route() && !str_contains($route_name, 'dashboards')) {
         if ($this->themeHandler->themeExists('gin') || $this->themeHandler->themeExists('claro')) {
           return TRUE;
         }
@@ -97,7 +97,7 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
   public function determineActiveTheme(RouteMatchInterface $route_match) {
     $current_request = $this->requestStack->getCurrentRequest()->request->all();
 
-    // Media Library Theme Negotiator
+    // Media Library Theme Negotiator.
     $dialog_has_target_media_library = FALSE;
     if (isset($current_request['_triggering_element_name'])
       && str_contains($current_request['_triggering_element_name'], 'media-library')) {

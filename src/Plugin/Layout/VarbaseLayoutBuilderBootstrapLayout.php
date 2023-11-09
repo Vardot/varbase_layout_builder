@@ -555,8 +555,14 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
 
     // Container classes from advanced mode.
     if (!$this->sectionSettingsIsHidden()) {
-      $this->configuration['container_wrapper_classes'] = $form_state->getValue(array_merge($settings_tab, ['container', 'container_wrapper_classes']));
-      $this->configuration['container_wrapper_attributes'] = Yaml::decode($form_state->getValue(array_merge($settings_tab, ['container', 'container_wrapper_attributes'])));
+      $this->configuration['container_wrapper_classes'] = $form_state->getValue(array_merge($settings_tab, [
+        'container',
+        'container_wrapper_classes',
+      ]));
+      $this->configuration['container_wrapper_attributes'] = Yaml::decode($form_state->getValue(array_merge($settings_tab, [
+        'container',
+        'container_wrapper_attributes',
+      ])));
     }
 
     // Gutter Classes.
@@ -565,13 +571,22 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
     // Gutters between.
     $this->configuration['gutters_between'] = $form_state->getValue(array_merge($layout_tab, ['gutters_between']));
 
-    // Container wrapper ID
-    $this->configuration['container_wrapper_id'] = HTML::cleanCssIdentifier($form_state->getValue(array_merge($settings_tab, ['container', 'container_wrapper_id'])), [' ' => '-']);
+    // Container wrapper ID.
+    $this->configuration['container_wrapper_id'] = HTML::cleanCssIdentifier($form_state->getValue(array_merge($settings_tab, [
+      'container',
+      'container_wrapper_id',
+    ])), [' ' => '-']);
 
     // Row classes from advanced mode.
     if (!$this->sectionSettingsIsHidden()) {
-      $this->configuration['section_classes'] = $form_state->getValue(array_merge($settings_tab, ['row', 'section_classes']));
-      $this->configuration['section_attributes'] = Yaml::decode($form_state->getValue(array_merge($settings_tab, ['row', 'section_attributes'])));
+      $this->configuration['section_classes'] = $form_state->getValue(array_merge($settings_tab, [
+        'row',
+        'section_classes',
+      ]));
+      $this->configuration['section_attributes'] = Yaml::decode($form_state->getValue(array_merge($settings_tab, [
+        'row',
+        'section_attributes',
+      ])));
     }
 
     $breakpoints = $form_state->getValue(array_merge($layout_tab, ['breakpoints']));
@@ -583,8 +598,14 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
         $this->configuration['layout_regions_classes'][$region_name] = $this->getRegionClasses($key, $breakpoints);
         // Cols classes from advanced mode.
         if (!$this->sectionSettingsIsHidden()) {
-          $this->configuration['regions_classes'][$region_name] = $form_state->getValue(array_merge($settings_tab, ['regions', $region_name . '_classes']));
-          $this->configuration['regions_attributes'][$region_name] = Yaml::decode($form_state->getValue(array_merge($settings_tab, ['regions', $region_name . '_attributes'])));
+          $this->configuration['regions_classes'][$region_name] = $form_state->getValue(array_merge($settings_tab, [
+            'regions',
+            $region_name . '_classes',
+          ]));
+          $this->configuration['regions_attributes'][$region_name] = Yaml::decode($form_state->getValue(array_merge($settings_tab, [
+            'regions',
+            $region_name . '_attributes',
+          ])));
         }
       }
     }
@@ -596,8 +617,14 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
     $this->configuration['regions_attributes']['section_header'] = $form_state->getValue(array_merge($settings_tab, ['section_header_attributes']));
 
     if (!$this->sectionSettingsIsHidden()) {
-      $this->configuration['regions_classes']['section_header'] = $form_state->getValue(array_merge($settings_tab, ['regions', 'section_header_classes']));
-      $this->configuration['regions_attributes']['section_header'] = Yaml::decode($form_state->getValue(array_merge($settings_tab, ['regions', 'section_header_attributes'])));
+      $this->configuration['regions_classes']['section_header'] = $form_state->getValue(array_merge($settings_tab, [
+        'regions',
+        'section_header_classes',
+      ]));
+      $this->configuration['regions_attributes']['section_header'] = Yaml::decode($form_state->getValue(array_merge($settings_tab, [
+        'regions',
+        'section_header_attributes',
+      ])));
     }
 
     $blb_settings = $this->configFactory->get('bootstrap_layout_builder.settings');
@@ -614,8 +641,14 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
 
     // Cols classes from advanced mode.
     if (!$this->sectionSettingsIsHidden()) {
-      $this->configuration['regions_classes']['section_header'] = $form_state->getValue(array_merge($settings_tab, ['regions', 'section_header_classes']));
-      $this->configuration['regions_attributes']['section_header'] = Yaml::decode($form_state->getValue(array_merge($settings_tab, ['regions', 'section_header_attributes'])));
+      $this->configuration['regions_classes']['section_header'] = $form_state->getValue(array_merge($settings_tab, [
+        'regions',
+        'section_header_classes',
+      ]));
+      $this->configuration['regions_attributes']['section_header'] = Yaml::decode($form_state->getValue(array_merge($settings_tab, [
+        'regions',
+        'section_header_attributes',
+      ])));
     }
 
     $first_layout_region_classes = [];
