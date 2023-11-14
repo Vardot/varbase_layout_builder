@@ -24,12 +24,12 @@
 }
 
 #layout-builder-modal _:-ms-fullscreen,#layout-builder-modal .js .form-autocomplete.is-autocompleting,.media-library-widget-modal _:-ms-fullscreen,.media-library-widget-modal .js .form-autocomplete.is-autocompleting,form.media-form _:-ms-fullscreen,form.media-form .js .form-autocomplete.is-autocompleting {
-  background-image: url(../../themes/claro/images/spinner-ltr.gif);
+  background-image: url(../../themes/claro9/images/spinner-ltr.gif);
   background-size: 2.5rem 1.25rem;
 }
 
 #layout-builder-modal _:-ms-fullscreen,#layout-builder-modal .js[dir=rtl] .form-autocomplete.is-autocompleting,.media-library-widget-modal _:-ms-fullscreen,.media-library-widget-modal .js[dir=rtl] .form-autocomplete.is-autocompleting,form.media-form _:-ms-fullscreen,form.media-form .js[dir=rtl] .form-autocomplete.is-autocompleting {
-  background-image: url(../../themes/claro/images/spinner-rtl.gif);
+  background-image: url(../../themes/claro9/images/spinner-rtl.gif);
 }
 
 #layout-builder-modal .claro-autocomplete,.media-library-widget-modal .claro-autocomplete,form.media-form .claro-autocomplete {
