@@ -85,11 +85,11 @@
 }
 
 #layout-builder-modal .node-form .js input.form-autocomplete,.media-library-widget-modal .node-form .js input.form-autocomplete,form.media-form .node-form .js input.form-autocomplete {
-  background: url(../../themes/claro/images/search-autocomplete.svg) no-repeat 100% 50%;
+  background: url(../../themes/claro10/images/search-autocomplete.svg) no-repeat 100% 50%;
 }
 
 #layout-builder-modal .node-form .js input.form-autocomplete.ui-autocomplete-loading,.media-library-widget-modal .node-form .js input.form-autocomplete.ui-autocomplete-loading,form.media-form .node-form .js input.form-autocomplete.ui-autocomplete-loading {
-  background: url(../../themes/claro/images/search-autocompleting.svg) no-repeat 100% 50%;
+  background: url(../../themes/claro10/images/search-autocompleting.svg) no-repeat 100% 50%;
 }
 
 #layout-builder-modal .node-form .js .is-autocompleting+.claro-autocomplete__message,.media-library-widget-modal .node-form .js .is-autocompleting+.claro-autocomplete__message,form.media-form .node-form .js .is-autocompleting+.claro-autocomplete__message {
