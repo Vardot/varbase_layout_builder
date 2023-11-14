@@ -1,0 +1,120 @@
+#layout-builder-modal .form-element,.media-library-widget-modal .form-element,form.media-form .form-element {
+  box-sizing: border-box;
+  max-width: 100%;
+  min-height: 3rem;
+  padding: calc(.75rem - 1px) calc(1rem - 1px);
+  color: #232429;
+  border: 1px solid #919297;
+  border-radius: .125rem;
+  background: #fff;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-appearance: none;
+          appearance: none;
+}
+
+#layout-builder-modal .no-touchevents .form-element--extrasmall,#layout-builder-modal .no-touchevents .form-element[name$="][_weight]"],.media-library-widget-modal .no-touchevents .form-element--extrasmall,.media-library-widget-modal .no-touchevents .form-element[name$="][_weight]"],form.media-form .no-touchevents .form-element--extrasmall,form.media-form .no-touchevents .form-element[name$="][_weight]"] {
+  min-height: 1.5rem;
+  padding: calc(.15rem - 1px) calc(.5rem - 1px);
+  font-size: .889rem;
+  line-height: 1.2rem;
+}
+
+#layout-builder-modal .form-element--type-search[type=search],.media-library-widget-modal .form-element--type-search[type=search],form.media-form .form-element--type-search[type=search] {
+  -webkit-appearance: none;
+          appearance: none;
+  box-sizing: border-box;
+}
+
+#layout-builder-modal .form-element--type-date,#layout-builder-modal .form-element--type-time,.media-library-widget-modal .form-element--type-date,.media-library-widget-modal .form-element--type-time,form.media-form .form-element--type-date,form.media-form .form-element--type-time {
+  vertical-align: -webkit-baseline-middle;
+}
+
+#layout-builder-modal .form-element--type-date,.media-library-widget-modal .form-element--type-date,form.media-form .form-element--type-date {
+  min-width: 9.5rem;
+}
+
+#layout-builder-modal .form-element--type-time,.media-library-widget-modal .form-element--type-time,form.media-form .form-element--type-time {
+  min-width: 7.5rem;
+}
+
+#layout-builder-modal .form-element--type-color,.media-library-widget-modal .form-element--type-color,form.media-form .form-element--type-color {
+  min-width: 3rem;
+  padding: 0;
+  text-indent: calc(.75rem - 1px);
+}
+
+#layout-builder-modal .form-element--type-file::-ms-value,.media-library-widget-modal .form-element--type-file::-ms-value,form.media-form .form-element--type-file::-ms-value {
+  border: 0;
+  background: inherit;
+}
+
+#layout-builder-modal .form-element--type-file::-webkit-file-upload-button,.media-library-widget-modal .form-element--type-file::-webkit-file-upload-button,form.media-form .form-element--type-file::-webkit-file-upload-button {
+  vertical-align: top;
+}
+
+#layout-builder-modal _:-ms-fullscreen,#layout-builder-modal :root .form-element--type-file,.media-library-widget-modal _:-ms-fullscreen,.media-library-widget-modal :root .form-element--type-file,form.media-form _:-ms-fullscreen,form.media-form :root .form-element--type-file {
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+}
+
+#layout-builder-modal .form-element:active,.media-library-widget-modal .form-element:active,form.media-form .form-element:active {
+  border-color: #003ecc;
+}
+
+#layout-builder-modal .form-element:hover,.media-library-widget-modal .form-element:hover,form.media-form .form-element:hover {
+  border-color: #232429;
+  box-shadow: inset 0 0 0 1px #232429;
+}
+
+#layout-builder-modal .form-element:focus,.media-library-widget-modal .form-element:focus,form.media-form .form-element:focus {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769;
+}
+
+#layout-builder-modal .form-element:hover:focus,.media-library-widget-modal .form-element:hover:focus,form.media-form .form-element:hover:focus {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769, inset 0 0 0 1px #232429;
+}
+
+#layout-builder-modal .form-element.error,.media-library-widget-modal .form-element.error,form.media-form .form-element.error {
+  border-width: 2px;
+  border-color: #dc2323;
+}
+
+#layout-builder-modal .form-element.error:hover,.media-library-widget-modal .form-element.error:hover,form.media-form .form-element.error:hover {
+  box-shadow: none;
+}
+
+#layout-builder-modal .form-element.error:hover:focus,.media-library-widget-modal .form-element.error:hover:focus,form.media-form .form-element.error:hover:focus {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 5px #26a769;
+}
+
+#layout-builder-modal .form-element--type-textarea.error+.cke,.media-library-widget-modal .form-element--type-textarea.error+.cke,form.media-form .form-element--type-textarea.error+.cke {
+  border-color: #dc2323;
+}
+
+#layout-builder-modal .form-element[disabled],.media-library-widget-modal .form-element[disabled],form.media-form .form-element[disabled] {
+  color: #828388;
+  border-color: #bababf;
+  background-color: #f2f2f3;
+  box-shadow: none;
+  -webkit-text-fill-color: #828388;
+}
+
+@media screen and (max-width: 37.5rem) {
+  #layout-builder-modal .form-element,.media-library-widget-modal .form-element,form.media-form .form-element {
+    float: none;
+    width: 100%;
+    margin-top: .75rem;
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  #layout-builder-modal .form-element:first-child,#layout-builder-modal .form-item__label+.form-element,.media-library-widget-modal .form-element:first-child,.media-library-widget-modal .form-item__label+.form-element,form.media-form .form-element:first-child,form.media-form .form-item__label+.form-element {
+    margin-top: 0;
+  }
+}
+
+#layout-builder-modal .form-element--type-textarea.error+.ck-editor>.ck-editor__main,.media-library-widget-modal .form-element--type-textarea.error+.ck-editor>.ck-editor__main,form.media-form .form-element--type-textarea.error+.ck-editor>.ck-editor__main {
+  border: 2px solid #dc2323;
+}
+

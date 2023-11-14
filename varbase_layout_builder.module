@@ -118,7 +118,12 @@ function varbase_layout_builder_form_alter(&$form, FormStateInterface $form_stat
     if ($add_admin_theme
       && \Drupal::service('theme_handler')->themeExists('claro')) {
       // Add claro theme library.
-      $form['#attached']['library'][] = 'varbase_layout_builder/claro';
+      if (version_compare(Drupal::VERSION, '10.0.0', '<')) {
+        $form['#attached']['library'][] = 'varbase_layout_builder/claro9';
+      }
+      else {
+        $form['#attached']['library'][] = 'varbase_layout_builder/claro10';
+      }
     }
   }
 }

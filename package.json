@@ -9,9 +9,10 @@
   "scripts": {
     "theme:build": "webpack --progress --config webpack.config.build.js",
     "theme:watch": "webpack --progress --config webpack.config.dev.js --watch",
-    "claro:build": "webpack --progress --config webpack.config.build.claro.js",
     "plugins:build": "webpack --progress --config webpack.config.build.plugins.js",
-    "theme:full-build": "yarn theme:build ; yarn plugins:build",
+    "theme:full-build": "@theme:build ; @plugins:build",
+    "claro9:build": "webpack --progress --config webpack.config.build.claro9.js",
+    "claro10:build": "webpack --progress --config webpack.config.build.claro10.js",
     "phpcs": "phpcs --standard=./.phpcs.xml .",
     "phpcbf": "phpcbf --standard=./.phpcs.xml .",
     "lint:js": "node ./node_modules/eslint/bin/eslint.js .",

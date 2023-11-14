@@ -1,0 +1,5 @@
+#layout-builder-modal .divider,.media-library-widget-modal .divider,form.media-form .divider {
+  height: 1px;
+  background-color: rgba(142, 146, 156, .5);
+}
+

@@ -1,0 +1,12 @@
+#layout-builder-modal td.checkbox,#layout-builder-modal th.checkbox,.media-library-widget-modal td.checkbox,.media-library-widget-modal th.checkbox,form.media-form td.checkbox,form.media-form th.checkbox {
+  text-align: center;
+}
+
+#layout-builder-modal [dir=rtl] td.checkbox,#layout-builder-modal [dir=rtl] th.checkbox,.media-library-widget-modal [dir=rtl] td.checkbox,.media-library-widget-modal [dir=rtl] th.checkbox,form.media-form [dir=rtl] td.checkbox,form.media-form [dir=rtl] th.checkbox {
+  text-align: center;
+}
+
+#layout-builder-modal tr.selected td,.media-library-widget-modal tr.selected td,form.media-form tr.selected td {
+  background-color: #e5edff;
+}
+

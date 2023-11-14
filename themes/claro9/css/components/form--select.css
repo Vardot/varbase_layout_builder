@@ -1,0 +1,62 @@
+#layout-builder-modal .form-element--type-select,.media-library-widget-modal .form-element--type-select,form.media-form .form-element--type-select {
+  padding-right: calc(2rem - 1px);
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 9'%3e%3cpath fill='none' stroke-width='1.5' d='M1 1l6 6 6-6' stroke='%23545560'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  background-size: 2.75rem .5625rem;
+}
+
+#layout-builder-modal [dir=rtl] .form-element--type-select,.media-library-widget-modal [dir=rtl] .form-element--type-select,form.media-form [dir=rtl] .form-element--type-select {
+  padding-right: calc(1rem - 1px);
+  padding-left: calc(2rem - 1px);
+  background-position: 0 50%;
+}
+
+#layout-builder-modal .no-touchevents .form-element--type-select.form-element--extrasmall,#layout-builder-modal .no-touchevents .form-element--type-select[name$="][_weight]"],.media-library-widget-modal .no-touchevents .form-element--type-select.form-element--extrasmall,.media-library-widget-modal .no-touchevents .form-element--type-select[name$="][_weight]"],form.media-form .no-touchevents .form-element--type-select.form-element--extrasmall,form.media-form .no-touchevents .form-element--type-select[name$="][_weight]"] {
+  padding-right: calc(1.5rem - 1px);
+  background-size: 1.75rem .4375rem;
+}
+
+#layout-builder-modal [dir=rtl].no-touchevents .form-element--type-select.form-element--extrasmall,#layout-builder-modal [dir=rtl].no-touchevents .form-element--type-select[name$="][_weight]"],.media-library-widget-modal [dir=rtl].no-touchevents .form-element--type-select.form-element--extrasmall,.media-library-widget-modal [dir=rtl].no-touchevents .form-element--type-select[name$="][_weight]"],form.media-form [dir=rtl].no-touchevents .form-element--type-select.form-element--extrasmall,form.media-form [dir=rtl].no-touchevents .form-element--type-select[name$="][_weight]"] {
+  padding-right: calc(.5rem - 1px);
+  padding-left: calc(1.5rem - 1px);
+}
+
+#layout-builder-modal .form-element--type-select::-ms-expand,.media-library-widget-modal .form-element--type-select::-ms-expand,form.media-form .form-element--type-select::-ms-expand {
+  display: none;
+}
+
+#layout-builder-modal .form-element--type-select:focus,.media-library-widget-modal .form-element--type-select:focus,form.media-form .form-element--type-select:focus {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 9'%3e%3cpath fill='none' stroke-width='1.5' d='M1 1l6 6 6-6' stroke='%23003ecc'/%3e%3c/svg%3e");
+}
+
+#layout-builder-modal .form-element--type-select[disabled],.media-library-widget-modal .form-element--type-select[disabled],form.media-form .form-element--type-select[disabled] {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 9'%3e%3cpath fill='none' stroke-width='1.5' d='M1 1l6 6 6-6' stroke='%238e929c'/%3e%3c/svg%3e");
+}
+
+@media (forced-colors: active) {
+  #layout-builder-modal .form-element--type-select,#layout-builder-modal .form-element--type-select:focus,#layout-builder-modal .form-element--type-select[disabled],.media-library-widget-modal .form-element--type-select,.media-library-widget-modal .form-element--type-select:focus,.media-library-widget-modal .form-element--type-select[disabled],form.media-form .form-element--type-select,form.media-form .form-element--type-select:focus,form.media-form .form-element--type-select[disabled] {
+    padding-right: calc(1rem - 1px);
+    background-image: none;
+    -webkit-appearance: listbox;
+            appearance: listbox;
+  }
+
+  @supports ((-webkit-appearance: revert) or (appearance: revert)) {
+    #layout-builder-modal .form-element--type-select,#layout-builder-modal .form-element--type-select:focus,#layout-builder-modal .form-element--type-select[disabled],.media-library-widget-modal .form-element--type-select,.media-library-widget-modal .form-element--type-select:focus,.media-library-widget-modal .form-element--type-select[disabled],form.media-form .form-element--type-select,form.media-form .form-element--type-select:focus,form.media-form .form-element--type-select[disabled] {
+      -webkit-appearance: revert;
+              appearance: revert;
+    }
+  }
+}
+
+@media screen and (-ms-high-contrast: active) {
+  #layout-builder-modal .form-element--type-select,#layout-builder-modal .form-element--type-select:focus,#layout-builder-modal .form-element--type-select[disabled],.media-library-widget-modal .form-element--type-select,.media-library-widget-modal .form-element--type-select:focus,.media-library-widget-modal .form-element--type-select[disabled],form.media-form .form-element--type-select,form.media-form .form-element--type-select:focus,form.media-form .form-element--type-select[disabled] {
+    padding-right: calc(1rem - 1px);
+  }
+
+  #layout-builder-modal .form-element--type-select::-ms-expand,#layout-builder-modal .form-element--type-select:focus::-ms-expand,#layout-builder-modal .form-element--type-select[disabled]::-ms-expand,.media-library-widget-modal .form-element--type-select::-ms-expand,.media-library-widget-modal .form-element--type-select:focus::-ms-expand,.media-library-widget-modal .form-element--type-select[disabled]::-ms-expand,form.media-form .form-element--type-select::-ms-expand,form.media-form .form-element--type-select:focus::-ms-expand,form.media-form .form-element--type-select[disabled]::-ms-expand {
+    display: block;
+  }
+}
+

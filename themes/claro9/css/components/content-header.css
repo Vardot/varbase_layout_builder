@@ -1,0 +1,7 @@
+#layout-builder-modal .content-header,.media-library-widget-modal .content-header,form.media-form .content-header {
+  overflow: hidden;
+  margin-bottom: .75rem;
+  padding: 1.5rem 0 0;
+  background-color: #f3f4f9;
+}
+

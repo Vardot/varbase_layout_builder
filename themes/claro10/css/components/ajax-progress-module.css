@@ -1,0 +1,85 @@
+#layout-builder-modal .ajax-progress,.media-library-widget-modal .ajax-progress,form.media-form .ajax-progress {
+  display: inline-block;
+}
+
+#layout-builder-modal .ajax-progress-bar,.media-library-widget-modal .ajax-progress-bar,form.media-form .ajax-progress-bar {
+  width: 13em;
+  padding: 0 .3125rem;
+}
+
+#layout-builder-modal .ajax-progress--throbber,.media-library-widget-modal .ajax-progress--throbber,form.media-form .ajax-progress--throbber {
+  position: relative;
+  display: inline-flex;
+  align-content: center;
+  height: 1.125rem;
+  margin: -0.1875rem var(--ajax-progress-margin-horizontal) 0;
+  vertical-align: middle;
+  white-space: nowrap;
+  line-height: 1.125rem;
+}
+
+#layout-builder-modal .js .button:not(.js-hide)+.ajax-progress--throbber,.media-library-widget-modal .js .button:not(.js-hide)+.ajax-progress--throbber,form.media-form .js .button:not(.js-hide)+.ajax-progress--throbber {
+  margin-inline-start: 0;
+}
+
+#layout-builder-modal .js .form-type--managed-file .button:not(.js-hide)+.ajax-progress--throbber,#layout-builder-modal .js .file-operations-cell .button:not(.js-hide)+.ajax-progress--throbber,.media-library-widget-modal .js .form-type--managed-file .button:not(.js-hide)+.ajax-progress--throbber,.media-library-widget-modal .js .file-operations-cell .button:not(.js-hide)+.ajax-progress--throbber,form.media-form .js .form-type--managed-file .button:not(.js-hide)+.ajax-progress--throbber,form.media-form .js .file-operations-cell .button:not(.js-hide)+.ajax-progress--throbber {
+  margin-inline-start: var(--ajax-progress-margin-horizontal);
+}
+
+#layout-builder-modal .ajax-progress__throbber,.media-library-widget-modal .ajax-progress__throbber,form.media-form .ajax-progress__throbber {
+  box-sizing: border-box;
+  width: 1.125rem;
+  height: 1.125rem;
+  animation: claro-throbber .75s linear infinite;
+  border: 2px solid var(--color-absolutezero);
+  border-right: 2px dotted transparent;
+  border-radius: 50%;
+}
+
+#layout-builder-modal .ajax-progress__message,.media-library-widget-modal .ajax-progress__message,form.media-form .ajax-progress__message {
+  display: inline-block;
+  padding-inline-start: var(--ajax-progress-margin-horizontal);
+  font-size: var(--font-size-label);
+}
+
+#layout-builder-modal .ajax-progress--fullscreen,#layout-builder-modal .ui-dialog .ajax-progress--throbber,.media-library-widget-modal .ajax-progress--fullscreen,.media-library-widget-modal .ui-dialog .ajax-progress--throbber,form.media-form .ajax-progress--fullscreen,form.media-form .ui-dialog .ajax-progress--throbber {
+  position: fixed;
+  z-index: 1261;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  box-sizing: border-box;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin: -1.75rem;
+  border: var(--input-border-size) solid var(--jui-dropdown-border-color);
+  border-radius: 3.5rem;
+  background: var(--color-white);
+  box-shadow: 0 .25rem .625rem var(--jui-dropdown-shadow-color);
+}
+
+#layout-builder-modal .ajax-progress__throbber--fullscreen,#layout-builder-modal .ui-dialog .ajax-progress__throbber,.media-library-widget-modal .ajax-progress__throbber--fullscreen,.media-library-widget-modal .ui-dialog .ajax-progress__throbber,form.media-form .ajax-progress__throbber--fullscreen,form.media-form .ui-dialog .ajax-progress__throbber {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  width: 1.75rem;
+  height: 1.75rem;
+  margin: -0.875rem;
+  content: "";
+  border: 3px solid var(--color-absolutezero);
+  border-right: 3px dotted transparent;
+}
+
+#layout-builder-modal .ui-dialog .ajax-progress__message,.media-library-widget-modal .ui-dialog .ajax-progress__message,form.media-form .ui-dialog .ajax-progress__message {
+  display: none;
+}
+
+@keyframes claro-throbber {
+  0% {
+    transform: rotateZ(0);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
