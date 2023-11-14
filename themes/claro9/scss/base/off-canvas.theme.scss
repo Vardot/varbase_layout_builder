@@ -5,8 +5,8 @@
  * The location may need to be adjusted depending on your setup.
  */
 
- #layout-builder-modal,
- .media-library-widget-modal,
- form.media-form {
-   @import "../../../../../core/themes/claro/css/base/off-canvas.theme";
- }
+#layout-builder-modal,
+.media-library-widget-modal,
+form.media-form {
+  @import "../../../core/themes/claro/css/base/off-canvas.theme";
+}

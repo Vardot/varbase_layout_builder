@@ -3,9 +3,9 @@
  * Maintainers: the import statement presumes a relative location of core css.
  * The location may need to be adjusted depending on your setup.
  */
- #layout-builder-modal,
- .media-library-widget-modal,
- form.media-form {
+#layout-builder-modal,
+.media-library-widget-modal,
+form.media-form {
   @import "../../../core/themes/claro/css/theme/filter.theme";
- }
+}
  

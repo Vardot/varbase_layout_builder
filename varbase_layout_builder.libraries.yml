@@ -107,7 +107,6 @@ claro10:
   css:
     base:
       themes/claro10/css/base/elements.css: {}
-      themes/claro10/css/base/off-canvas.theme.css: {}
       themes/claro10/css/base/typography.css: {}
       themes/claro10/css/base/variables.css: {}
     component:

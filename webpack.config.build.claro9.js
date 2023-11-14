@@ -17,6 +17,7 @@ module.exports = {
     // Base
     'base/variables': ['./themes/claro9/scss/base/variables.scss'],
     'base/elements': ['./themes/claro9/scss/base/elements.scss'],
+    'base/off-canvas.theme': ['./themes/claro9/scss/base/off-canvas.theme.scss'],
     'base/typography': ['./themes/claro9/scss/base/typography.scss'],
     // Components
     'components/accordion': ['./themes/claro9/scss/components/accordion.scss'],
