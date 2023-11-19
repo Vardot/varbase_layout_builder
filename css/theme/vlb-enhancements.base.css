@@ -43,6 +43,15 @@ body .layout-builder__message--overrides .messages {
   background-image: url(../../images/plugins/text-alignment/text-justify.svg);
 }
 
+#drupal-off-canvas button,
+#drupal-off-canvas input[type=submit],
+#layout-builder-modal button,
+#layout-builder-modal input[type=submit],
+.dialog-off-canvas-main-canvas button,
+.dialog-off-canvas-main-canvas input[type=submit] {
+  width: auto !important;
+}
+
 #drupal-off-canvas button.button--primary,
 #drupal-off-canvas input[type=submit].button--primary,
 #layout-builder-modal button.button--primary,
@@ -208,6 +217,12 @@ body .layout-builder__message--overrides .messages {
 #layout-builder-modal .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon.tiny:after,
 .dialog-off-canvas-main-canvas .fieldgroup.vlb_container_width .fieldset-wrapper > div > div .input-icon.tiny:after {
   width: 33.33333%;
+}
+
+#drupal-off-canvas form.layout-builder-configure-block [data-drupal-selector^=edit-appearance-alignment],
+#layout-builder-modal form.layout-builder-configure-block [data-drupal-selector^=edit-appearance-alignment],
+.dialog-off-canvas-main-canvas form.layout-builder-configure-block [data-drupal-selector^=edit-appearance-alignment] {
+  display: none !important;
 }
 
 #drupal-off-canvas fieldset.form-type-search,
@@ -536,7 +551,7 @@ body .ui-dialog:not(.ui-dialog-off-canvas) {
 }
 
 body .ui-dialog.ui-front.media-library-widget-modal {
-  z-index: 101;
+  z-index: 1270;
 }
 
 [dir=rtl] body .ui-dialog .ui-resizable-w {

@@ -177,3 +177,4 @@ gin:
     - core/jquery
     - core/drupal
     - core/modernizr
+    - varbase_layout_builder/claro

@@ -1,5 +1,5 @@
 #layout-builder-modal .responsive-preview,.media-library-widget-modal .responsive-preview,form.media-form .responsive-preview {
-  z-index: 502;
+  z-index: 500;
 }
 
 #layout-builder-modal .responsive-preview-item-list,.media-library-widget-modal .responsive-preview-item-list,form.media-form .responsive-preview-item-list {
@@ -74,6 +74,26 @@
 
 #layout-builder-modal .toolbar .toolbar-tab-responsive-preview.toolbar-tab .responsive-preview-options .responsive-preview-configure:hover,.media-library-widget-modal .toolbar .toolbar-tab-responsive-preview.toolbar-tab .responsive-preview-options .responsive-preview-configure:hover,form.media-form .toolbar .toolbar-tab-responsive-preview.toolbar-tab .responsive-preview-options .responsive-preview-configure:hover {
   color: var(--gin-color-primary);
+}
+
+#layout-builder-modal .toolbar .toolbar-tab-responsive-preview.toolbar-tab .responsive-preview-options .responsive-preview-device.responsive-preview-icon-active.active,.media-library-widget-modal .toolbar .toolbar-tab-responsive-preview.toolbar-tab .responsive-preview-options .responsive-preview-device.responsive-preview-icon-active.active,form.media-form .toolbar .toolbar-tab-responsive-preview.toolbar-tab .responsive-preview-options .responsive-preview-device.responsive-preview-icon-active.active {
+  color: var(--gin-color-button-text);
+  background-color: var(--gin-color-primary);
+}
+
+#layout-builder-modal .toolbar .toolbar-tab-responsive-preview.toolbar-tab .responsive-preview-options .responsive-preview-device.responsive-preview-icon-active.active:before,.media-library-widget-modal .toolbar .toolbar-tab-responsive-preview.toolbar-tab .responsive-preview-options .responsive-preview-device.responsive-preview-icon-active.active:before,form.media-form .toolbar .toolbar-tab-responsive-preview.toolbar-tab .responsive-preview-options .responsive-preview-device.responsive-preview-icon-active.active:before {
+  background-color: var(--gin-icon-color);
+  height: 18px;
+  top: .87em;
+  width: 18px;
+}
+
+#layout-builder-modal [dir=ltr] .toolbar .toolbar-tab-responsive-preview.toolbar-tab .responsive-preview-options .responsive-preview-device.responsive-preview-icon-active.active:before,.media-library-widget-modal [dir=ltr] .toolbar .toolbar-tab-responsive-preview.toolbar-tab .responsive-preview-options .responsive-preview-device.responsive-preview-icon-active.active:before,form.media-form [dir=ltr] .toolbar .toolbar-tab-responsive-preview.toolbar-tab .responsive-preview-options .responsive-preview-device.responsive-preview-icon-active.active:before {
+  left: .667em;
+}
+
+#layout-builder-modal [dir=rtl] .toolbar .toolbar-tab-responsive-preview.toolbar-tab .responsive-preview-options .responsive-preview-device.responsive-preview-icon-active.active:before,.media-library-widget-modal [dir=rtl] .toolbar .toolbar-tab-responsive-preview.toolbar-tab .responsive-preview-options .responsive-preview-device.responsive-preview-icon-active.active:before,form.media-form [dir=rtl] .toolbar .toolbar-tab-responsive-preview.toolbar-tab .responsive-preview-options .responsive-preview-device.responsive-preview-icon-active.active:before {
+  right: .667em;
 }
 
 #layout-builder-modal .toolbar .toolbar-tab-responsive-preview.toolbar-tab.open,#layout-builder-modal .toolbar .toolbar-tab-responsive-preview.toolbar-tab.open::before,.media-library-widget-modal .toolbar .toolbar-tab-responsive-preview.toolbar-tab.open,.media-library-widget-modal .toolbar .toolbar-tab-responsive-preview.toolbar-tab.open::before,form.media-form .toolbar .toolbar-tab-responsive-preview.toolbar-tab.open,form.media-form .toolbar .toolbar-tab-responsive-preview.toolbar-tab.open::before {

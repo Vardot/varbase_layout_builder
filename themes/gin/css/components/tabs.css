@@ -363,6 +363,10 @@
   margin-top: var(--gin-spacing-m);
 }
 
+#layout-builder-modal .claro-details__description,.media-library-widget-modal .claro-details__description,form.media-form .claro-details__description {
+  max-width: var(--gin-max-line-length);
+}
+
 #layout-builder-modal .claro-details__summary::before,#layout-builder-modal .claro-details[open]>.claro-details__summary::before,.media-library-widget-modal .claro-details__summary::before,.media-library-widget-modal .claro-details[open]>.claro-details__summary::before,form.media-form .claro-details__summary::before,form.media-form .claro-details[open]>.claro-details__summary::before {
   background: var(--gin-color-text);
   -webkit-mask-image: url("../../media/sprite.svg#handle-view");

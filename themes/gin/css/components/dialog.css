@@ -127,6 +127,8 @@
 #layout-builder-modal .ui-dialog .ui-dialog-titlebar-close,.media-library-widget-modal .ui-dialog .ui-dialog-titlebar-close,form.media-form .ui-dialog .ui-dialog-titlebar-close {
   position: absolute;
   top: 50%;
+  width: 2rem;
+  height: 2rem;
   opacity: .8;
   margin: 0 var(--gin-spacing-m);
   transform: translateY(-50%);

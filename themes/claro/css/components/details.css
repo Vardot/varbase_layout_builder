@@ -131,7 +131,7 @@
   }
 }
 
-@media not all and (-webkit-min-device-pixel-ratio: 0),not all and (min-resolution: 0.001dpcm) {
+@media not all and (min-resolution: 0.001dpcm) {
   @supports (-webkit-appearance: none) {
     #layout-builder-modal .claro-details__summary::before,.media-library-widget-modal .claro-details__summary::before,form.media-form .claro-details__summary::before {
       transition: none;
@@ -229,7 +229,7 @@
   opacity: 1;
 }
 
-@media not all and (-webkit-min-device-pixel-ratio: 0),not all and (min-resolution: 0.001dpcm) {
+@media not all and (min-resolution: 0.001dpcm) {
   @supports (-webkit-appearance: none) {
     #layout-builder-modal .claro-details__summary::after,.media-library-widget-modal .claro-details__summary::after,form.media-form .claro-details__summary::after {
       transition: none;

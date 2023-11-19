@@ -89,3 +89,48 @@
   width: 100% !important;
 }
 
+#layout-builder-modal aside#admin-toolbar .admin-toolbar__logo,.media-library-widget-modal aside#admin-toolbar .admin-toolbar__logo,form.media-form aside#admin-toolbar .admin-toolbar__logo {
+  border-radius: 0;
+  margin: 1rem;
+}
+
+#layout-builder-modal .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-from-wrapper],#layout-builder-modal .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-to-wrapper],.media-library-widget-modal .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-from-wrapper],.media-library-widget-modal .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-to-wrapper],form.media-form .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-from-wrapper],form.media-form .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-to-wrapper] {
+  padding: 0 !important;
+  border: 0 !important;
+  margin: .9rem 0 0 0 !important;
+}
+
+#layout-builder-modal .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-from-wrapper]>.fieldset__legend>.fieldset__label,#layout-builder-modal .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-to-wrapper]>.fieldset__legend>.fieldset__label,.media-library-widget-modal .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-from-wrapper]>.fieldset__legend>.fieldset__label,.media-library-widget-modal .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-to-wrapper]>.fieldset__legend>.fieldset__label,form.media-form .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-from-wrapper]>.fieldset__legend>.fieldset__label,form.media-form .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-to-wrapper]>.fieldset__legend>.fieldset__label {
+  padding: 0;
+  margin-bottom: var(--gin-spacing-xxs);
+}
+
+#layout-builder-modal .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-from-wrapper] legend,#layout-builder-modal .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-to-wrapper] legend,.media-library-widget-modal .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-from-wrapper] legend,.media-library-widget-modal .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-to-wrapper] legend,form.media-form .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-from-wrapper] legend,form.media-form .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-to-wrapper] legend {
+  margin-bottom: var(--gin-spacing-xs);
+}
+
+#layout-builder-modal .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-from-wrapper] input,#layout-builder-modal .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-to-wrapper] input,.media-library-widget-modal .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-from-wrapper] input,.media-library-widget-modal .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-to-wrapper] input,form.media-form .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-from-wrapper] input,form.media-form .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-to-wrapper] input {
+  height: 1rem !important;
+  margin-top: var(--gin-spacing-xxs) !important;
+}
+
+#layout-builder-modal [dir=ltr] .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-from-wrapper] .fieldset__wrapper,#layout-builder-modal [dir=ltr] .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-to-wrapper] .fieldset__wrapper,.media-library-widget-modal [dir=ltr] .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-from-wrapper] .fieldset__wrapper,.media-library-widget-modal [dir=ltr] .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-to-wrapper] .fieldset__wrapper,form.media-form [dir=ltr] .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-from-wrapper] .fieldset__wrapper,form.media-form [dir=ltr] .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-to-wrapper] .fieldset__wrapper {
+  margin-left: 0 !important;
+}
+
+#layout-builder-modal [dir=ltr] .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-from-wrapper] .form-item,#layout-builder-modal [dir=ltr] .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-to-wrapper] .form-item,.media-library-widget-modal [dir=ltr] .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-from-wrapper] .form-item,.media-library-widget-modal [dir=ltr] .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-to-wrapper] .form-item,form.media-form [dir=ltr] .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-from-wrapper] .form-item,form.media-form [dir=ltr] .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-to-wrapper] .form-item {
+  margin-left: 0 !important;
+}
+
+#layout-builder-modal [dir=rtl] .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-from-wrapper] .fieldset__wrapper,#layout-builder-modal [dir=rtl] .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-to-wrapper] .fieldset__wrapper,.media-library-widget-modal [dir=rtl] .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-from-wrapper] .fieldset__wrapper,.media-library-widget-modal [dir=rtl] .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-to-wrapper] .fieldset__wrapper,form.media-form [dir=rtl] .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-from-wrapper] .fieldset__wrapper,form.media-form [dir=rtl] .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-to-wrapper] .fieldset__wrapper {
+  margin-right: 0 !important;
+}
+
+#layout-builder-modal [dir=rtl] .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-from-wrapper] .form-item,#layout-builder-modal [dir=rtl] .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-to-wrapper] .form-item,.media-library-widget-modal [dir=rtl] .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-from-wrapper] .form-item,.media-library-widget-modal [dir=rtl] .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-to-wrapper] .form-item,form.media-form [dir=rtl] .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-from-wrapper] .form-item,form.media-form [dir=rtl] .views-exposed-form.views-exposed-form fieldset[data-drupal-selector$=-to-wrapper] .form-item {
+  margin-right: 0 !important;
+}
+
+#layout-builder-modal .views-exposed-form__item input[data-drupal-selector*=edit-uid],.media-library-widget-modal .views-exposed-form__item input[data-drupal-selector*=edit-uid],form.media-form .views-exposed-form__item input[data-drupal-selector*=edit-uid] {
+  width: 18rem;
+}
+

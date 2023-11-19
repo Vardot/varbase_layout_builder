@@ -204,7 +204,7 @@
   min-height: 100%;
 }
 
-@media not all and (-webkit-min-device-pixel-ratio: 0),not all and (min-resolution: 0.001dpcm) {
+@media not all and (min-resolution: 0.001dpcm) {
   @supports (-webkit-appearance: none) {
     #layout-builder-modal .tabledrag-cell-content .tree,.media-library-widget-modal .tabledrag-cell-content .tree,form.media-form .tabledrag-cell-content .tree {
       overflow: visible;

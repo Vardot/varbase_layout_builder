@@ -62,11 +62,11 @@
   box-shadow: none;
 }
 
-#layout-builder-modal .views-bulk-actions__item .button--primary,.media-library-widget-modal .views-bulk-actions__item .button--primary,form.media-form .views-bulk-actions__item .button--primary {
+#layout-builder-modal .views-bulk-actions__item .button--primary:not(:disabled,.is-disabled),.media-library-widget-modal .views-bulk-actions__item .button--primary:not(:disabled,.is-disabled),form.media-form .views-bulk-actions__item .button--primary:not(:disabled,.is-disabled) {
   background: var(--color-blue-400);
 }
 
-#layout-builder-modal .views-bulk-actions__item .button--primary:hover,.media-library-widget-modal .views-bulk-actions__item .button--primary:hover,form.media-form .views-bulk-actions__item .button--primary:hover {
+#layout-builder-modal .views-bulk-actions__item .button--primary:not(:disabled,.is-disabled):hover,.media-library-widget-modal .views-bulk-actions__item .button--primary:not(:disabled,.is-disabled):hover,form.media-form .views-bulk-actions__item .button--primary:not(:disabled,.is-disabled):hover {
   background: var(--color-blue-500);
 }
 

@@ -47,6 +47,8 @@ body {
 
   button,
   input[type="submit"] {
+    width: auto !important;
+
     &.button--primary {
       text-align: center;
     }
@@ -188,6 +190,12 @@ body {
 
         }
       }
+    }
+  }
+
+  form.layout-builder-configure-block {
+    [data-drupal-selector^="edit-appearance-alignment"] {
+      display: none !important;
     }
   }
 
@@ -517,7 +525,7 @@ body {
     }
 
     &.ui-front.media-library-widget-modal {
-      z-index: 101;
+      z-index: 1270;
     }
   }
 }

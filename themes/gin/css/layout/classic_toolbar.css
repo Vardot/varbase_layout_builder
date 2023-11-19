@@ -1,6 +1,6 @@
 #layout-builder-modal :root,.media-library-widget-modal :root,form.media-form :root {
-  --gin-toolbar-secondary-height: 0px;
   --gin-toolbar-height: 39px;
+  --gin-toolbar-secondary-height: 48px;
   --gin-scroll-offset: 72px;
   --gin-toolbar-y-offset: var(--gin-toolbar-height);
   --gin-toolbar-x-offset: 0px;
@@ -9,8 +9,13 @@
 
 @media (min-width: 64em) {
   #layout-builder-modal :root,.media-library-widget-modal :root,form.media-form :root {
+    --gin-toolbar-secondary-height: 64px;
     --gin-icon-size-toolbar: 16px;
     --gin-scroll-offset: 200px;
+  }
+
+  #layout-builder-modal :root .gin--edit-form,.media-library-widget-modal :root .gin--edit-form,form.media-form :root .gin--edit-form {
+    --gin-sticky-offset: var(--gin-height-sticky);
   }
 }
 
@@ -29,8 +34,18 @@
 }
 
 #layout-builder-modal .toolbar .toolbar-bar,.media-library-widget-modal .toolbar .toolbar-bar,form.media-form .toolbar .toolbar-bar {
+  position: fixed;
+  width: 100%;
   background: #100f10;
   box-shadow: none;
+}
+
+#layout-builder-modal [dir=ltr] .toolbar .toolbar-bar,.media-library-widget-modal [dir=ltr] .toolbar .toolbar-bar,form.media-form [dir=ltr] .toolbar .toolbar-bar {
+  left: 0;
+}
+
+#layout-builder-modal [dir=rtl] .toolbar .toolbar-bar,.media-library-widget-modal [dir=rtl] .toolbar .toolbar-bar,form.media-form [dir=rtl] .toolbar .toolbar-bar {
+  right: 0;
 }
 
 #layout-builder-modal .toolbar .toolbar-menu,#layout-builder-modal .toolbar-horizontal .menu-item>.toolbar-menu,#layout-builder-modal .toolbar-horizontal .toolbar-tray .menu-item--expanded.menu-item--expanded,#layout-builder-modal .toolbar .toolbar-tray,.media-library-widget-modal .toolbar .toolbar-menu,.media-library-widget-modal .toolbar-horizontal .menu-item>.toolbar-menu,.media-library-widget-modal .toolbar-horizontal .toolbar-tray .menu-item--expanded.menu-item--expanded,.media-library-widget-modal .toolbar .toolbar-tray,form.media-form .toolbar .toolbar-menu,form.media-form .toolbar-horizontal .menu-item>.toolbar-menu,form.media-form .toolbar-horizontal .toolbar-tray .menu-item--expanded.menu-item--expanded,form.media-form .toolbar .toolbar-tray {

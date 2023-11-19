@@ -272,11 +272,11 @@
 }
 
 #layout-builder-modal html[dir=ltr].js .field--widget-paragraphs th .paragraphs-actions .paragraphs-dropdown,.media-library-widget-modal html[dir=ltr].js .field--widget-paragraphs th .paragraphs-actions .paragraphs-dropdown,form.media-form html[dir=ltr].js .field--widget-paragraphs th .paragraphs-actions .paragraphs-dropdown {
-  right: calc(var(--gin-spacing-xxs)*-1);
+  right: var(--gin-spacing-xxs);
 }
 
 #layout-builder-modal html[dir=rtl].js .field--widget-paragraphs th .paragraphs-actions .paragraphs-dropdown,.media-library-widget-modal html[dir=rtl].js .field--widget-paragraphs th .paragraphs-actions .paragraphs-dropdown,form.media-form html[dir=rtl].js .field--widget-paragraphs th .paragraphs-actions .paragraphs-dropdown {
-  left: calc(var(--gin-spacing-xxs)*-1);
+  left: var(--gin-spacing-xxs);
 }
 
 #layout-builder-modal .paragraphs-dropdown-actions,.media-library-widget-modal .paragraphs-dropdown-actions,form.media-form .paragraphs-dropdown-actions {
@@ -357,7 +357,7 @@
 }
 
 #layout-builder-modal .paragraphs-dragdrop__icon,.media-library-widget-modal .paragraphs-dragdrop__icon,form.media-form .paragraphs-dragdrop__icon {
-  top: var(--gin-spacing-xs);
+  top: calc(var(--gin-spacing-xxs)/2);
 }
 
 #layout-builder-modal .js .paragraph-type-add-modal-button:hover,.media-library-widget-modal .js .paragraph-type-add-modal-button:hover,form.media-form .js .paragraph-type-add-modal-button:hover {

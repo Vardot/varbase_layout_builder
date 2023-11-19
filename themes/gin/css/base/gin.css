@@ -53,9 +53,13 @@
   color: var(--gin-color-button-text);
 }
 
+#layout-builder-modal .gin--dark-mode,.media-library-widget-modal .gin--dark-mode,form.media-form .gin--dark-mode {
+  color-scheme: dark;
+}
+
 #layout-builder-modal a,#layout-builder-modal .link,#layout-builder-modal button.link,#layout-builder-modal .tabs__link.is-active,#layout-builder-modal [open] .claro-details__summary--accordion,#layout-builder-modal [open] .claro-details__summary--accordion-item,#layout-builder-modal [open] .claro-details__summary--vertical-tabs-item,#layout-builder-modal .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link,.media-library-widget-modal a,.media-library-widget-modal .link,.media-library-widget-modal button.link,.media-library-widget-modal .tabs__link.is-active,.media-library-widget-modal [open] .claro-details__summary--accordion,.media-library-widget-modal [open] .claro-details__summary--accordion-item,.media-library-widget-modal [open] .claro-details__summary--vertical-tabs-item,.media-library-widget-modal .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link,form.media-form a,form.media-form .link,form.media-form button.link,form.media-form .tabs__link.is-active,form.media-form [open] .claro-details__summary--accordion,form.media-form [open] .claro-details__summary--accordion-item,form.media-form [open] .claro-details__summary--vertical-tabs-item,form.media-form .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link {
   color: var(--gin-color-primary);
-  text-decoration-style: dotted;
+  text-decoration-style: var(--gin-link-decoration-style);
 }
 
 #layout-builder-modal a:hover,#layout-builder-modal .link:hover,#layout-builder-modal button.link:hover,#layout-builder-modal .tabs__link.is-active:hover,#layout-builder-modal [open] .claro-details__summary--accordion:hover,#layout-builder-modal [open] .claro-details__summary--accordion-item:hover,#layout-builder-modal [open] .claro-details__summary--vertical-tabs-item:hover,#layout-builder-modal .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:hover,.media-library-widget-modal a:hover,.media-library-widget-modal .link:hover,.media-library-widget-modal button.link:hover,.media-library-widget-modal .tabs__link.is-active:hover,.media-library-widget-modal [open] .claro-details__summary--accordion:hover,.media-library-widget-modal [open] .claro-details__summary--accordion-item:hover,.media-library-widget-modal [open] .claro-details__summary--vertical-tabs-item:hover,.media-library-widget-modal .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:hover,form.media-form a:hover,form.media-form .link:hover,form.media-form button.link:hover,form.media-form .tabs__link.is-active:hover,form.media-form [open] .claro-details__summary--accordion:hover,form.media-form [open] .claro-details__summary--accordion-item:hover,form.media-form [open] .claro-details__summary--vertical-tabs-item:hover,form.media-form .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:hover {
@@ -68,7 +72,7 @@
 
 #layout-builder-modal *|*:any-link:not(svg|a),.media-library-widget-modal *|*:any-link:not(svg|a),form.media-form *|*:any-link:not(svg|a) {
   text-decoration: underline;
-  text-decoration-style: dotted;
+  text-decoration-style: var(--gin-link-decoration-style);
 }
 
 #layout-builder-modal .is-horizontal .tabs__link:hover,#layout-builder-modal .claro-details__summary:hover,#layout-builder-modal .action-link:hover,.media-library-widget-modal .is-horizontal .tabs__link:hover,.media-library-widget-modal .claro-details__summary:hover,.media-library-widget-modal .action-link:hover,form.media-form .is-horizontal .tabs__link:hover,form.media-form .claro-details__summary:hover,form.media-form .action-link:hover {
@@ -97,6 +101,9 @@
   z-index: 101;
   padding: 0;
   width: 100%;
+  display: flex;
+  align-items: center;
+  min-height: var(--gin-height-sticky);
   background: var(--gin-bg-app);
   box-sizing: border-box;
   transition: var(--gin-transition);
@@ -114,60 +121,57 @@
   }
 }
 
+#layout-builder-modal .region-sticky-watcher,.media-library-widget-modal .region-sticky-watcher,form.media-form .region-sticky-watcher {
+  position: sticky;
+  top: -1px;
+  height: 0;
+}
+
+#layout-builder-modal .region-sticky--is-sticky,.media-library-widget-modal .region-sticky--is-sticky,form.media-form .region-sticky--is-sticky {
+  opacity: .95;
+  background: var(--gin-bg-app);
+}
+
+@supports ((-webkit-backdrop-filter: blur()) or (backdrop-filter: blur())) {
+  #layout-builder-modal .region-sticky--is-sticky,.media-library-widget-modal .region-sticky--is-sticky,form.media-form .region-sticky--is-sticky {
+    opacity: .999;
+    background: rgba(var(--gin-bg-app-rgb), .8);
+    -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
+  }
+}
+
+#layout-builder-modal .gin--high-contrast-mode .region-sticky--is-sticky,.media-library-widget-modal .gin--high-contrast-mode .region-sticky--is-sticky,form.media-form .gin--high-contrast-mode .region-sticky--is-sticky {
+  background: var(--gin-bg-app);
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
+}
+
+#layout-builder-modal .gin--classic-toolbar:not(.gin--edit-form) .region-sticky,.media-library-widget-modal .gin--classic-toolbar:not(.gin--edit-form) .region-sticky,form.media-form .gin--classic-toolbar:not(.gin--edit-form) .region-sticky {
+  position: static;
+}
+
 @media (min-width: 64em) {
   #layout-builder-modal .region-sticky,.media-library-widget-modal .region-sticky,form.media-form .region-sticky {
     top: -1px;
-    width: 100%;
-    height: var(--gin-height-sticky);
     padding: var(--gin-spacing-s) 0;
+    height: var(--gin-height-sticky);
+    margin-bottom: 0;
   }
 
-  #layout-builder-modal .region-sticky-watcher,.media-library-widget-modal .region-sticky-watcher,form.media-form .region-sticky-watcher {
-    position: sticky;
-    top: -1px;
-    height: 0;
-  }
-
-  #layout-builder-modal .region-sticky--is-sticky,.media-library-widget-modal .region-sticky--is-sticky,form.media-form .region-sticky--is-sticky {
-    opacity: .95;
-    background: var(--gin-bg-app);
-  }
-
-  @supports ((-webkit-backdrop-filter: blur()) or (backdrop-filter: blur())) {
-    #layout-builder-modal .region-sticky--is-sticky,.media-library-widget-modal .region-sticky--is-sticky,form.media-form .region-sticky--is-sticky {
-      opacity: .999;
-      background: rgba(var(--gin-bg-app-rgb), .8);
-      -webkit-backdrop-filter: blur(12px);
-              backdrop-filter: blur(12px);
-    }
-  }
-
-  #layout-builder-modal .gin--high-contrast-mode .region-sticky--is-sticky,.media-library-widget-modal .gin--high-contrast-mode .region-sticky--is-sticky,form.media-form .gin--high-contrast-mode .region-sticky--is-sticky {
-    background: var(--gin-bg-app);
-    -webkit-backdrop-filter: none;
-            backdrop-filter: none;
-  }
-
-  #layout-builder-modal .gin--vertical-toolbar .region-sticky,#layout-builder-modal .gin--horizontal-toolbar .region-sticky,#layout-builder-modal .gin--classic-toolbar .region-sticky,.media-library-widget-modal .gin--vertical-toolbar .region-sticky,.media-library-widget-modal .gin--horizontal-toolbar .region-sticky,.media-library-widget-modal .gin--classic-toolbar .region-sticky,form.media-form .gin--vertical-toolbar .region-sticky,form.media-form .gin--horizontal-toolbar .region-sticky,form.media-form .gin--classic-toolbar .region-sticky {
+  #layout-builder-modal .gin--navigation .region-sticky,#layout-builder-modal .gin--vertical-toolbar .region-sticky,#layout-builder-modal .gin--horizontal-toolbar .region-sticky,#layout-builder-modal .gin--classic-toolbar .region-sticky,.media-library-widget-modal .gin--navigation .region-sticky,.media-library-widget-modal .gin--vertical-toolbar .region-sticky,.media-library-widget-modal .gin--horizontal-toolbar .region-sticky,.media-library-widget-modal .gin--classic-toolbar .region-sticky,form.media-form .gin--navigation .region-sticky,form.media-form .gin--vertical-toolbar .region-sticky,form.media-form .gin--horizontal-toolbar .region-sticky,form.media-form .gin--classic-toolbar .region-sticky {
     top: var(--gin-toolbar-y-offset);
-  }
-
-  #layout-builder-modal .gin--classic-toolbar:not(.gin--edit-form) .region-sticky,.media-library-widget-modal .gin--classic-toolbar:not(.gin--edit-form) .region-sticky,form.media-form .gin--classic-toolbar:not(.gin--edit-form) .region-sticky {
-    position: static;
   }
 }
 
 #layout-builder-modal .region-sticky__items,.media-library-widget-modal .region-sticky__items,form.media-form .region-sticky__items {
   display: flex;
   align-items: center;
-  margin-bottom: var(--gin-spacing-m);
+  width: 100%;
+  height: 100%;
 }
 
 @media (min-width: 48em) {
-  #layout-builder-modal .region-sticky__items,.media-library-widget-modal .region-sticky__items,form.media-form .region-sticky__items {
-    height: 100%;
-  }
-
   #layout-builder-modal .region-sticky__items .settings-tray-editable,.media-library-widget-modal .region-sticky__items .settings-tray-editable,form.media-form .region-sticky__items .settings-tray-editable {
     flex-shrink: 0;
   }
@@ -391,10 +395,12 @@
   margin-top: 0;
 }
 
-@media (max-width: 60.99em) {
-  #layout-builder-modal .gin--edit-form .region-sticky--is-sticky .block-page-title-block,.media-library-widget-modal .gin--edit-form .region-sticky--is-sticky .block-page-title-block,form.media-form .gin--edit-form .region-sticky--is-sticky .block-page-title-block {
-    visibility: hidden;
-  }
+#layout-builder-modal #system-clear-cache+#system-performance-settings,#layout-builder-modal .gin-layer-wrapper+.imageapi-optimize-default-pipeline,.media-library-widget-modal #system-clear-cache+#system-performance-settings,.media-library-widget-modal .gin-layer-wrapper+.imageapi-optimize-default-pipeline,form.media-form #system-clear-cache+#system-performance-settings,form.media-form .gin-layer-wrapper+.imageapi-optimize-default-pipeline {
+  margin-top: var(--gin-spacing-l);
+}
+
+#layout-builder-modal .node--unpublished,.media-library-widget-modal .node--unpublished,form.media-form .node--unpublished {
+  background-color: var(--gin-bg-unpublished);
 }
 
 #layout-builder-modal .block-page-title-block:last-child,.media-library-widget-modal .block-page-title-block:last-child,form.media-form .block-page-title-block:last-child {
@@ -1201,7 +1207,7 @@
 
 #layout-builder-modal table td a:hover,.media-library-widget-modal table td a:hover,form.media-form table td a:hover {
   text-decoration: underline;
-  text-decoration-style: dotted;
+  text-decoration-style: var(--gin-link-decoration-style);
 }
 
 #layout-builder-modal table td .group-label,.media-library-widget-modal table td .group-label,form.media-form table td .group-label {
@@ -1571,7 +1577,7 @@
 
 #layout-builder-modal .password-confirm,.media-library-widget-modal .password-confirm,form.media-form .password-confirm {
   width: 100%;
-  max-width: 520px;
+  max-width: var(--gin-max-line-length);
 }
 
 #layout-builder-modal .password-strength__title,.media-library-widget-modal .password-strength__title,form.media-form .password-strength__title {
@@ -1808,11 +1814,11 @@
 }
 
 #layout-builder-modal [dir=ltr] table:has(.tabledrag-cell-content__item .form-checkbox) th.select-all .form-checkbox,.media-library-widget-modal [dir=ltr] table:has(.tabledrag-cell-content__item .form-checkbox) th.select-all .form-checkbox,form.media-form [dir=ltr] table:has(.tabledrag-cell-content__item .form-checkbox) th.select-all .form-checkbox {
-  margin-left: calc(var(--tabledrag-handle-icon-size) + var(--space-m));
+  margin-left: calc(var(--tabledrag-handle-icon-size, 1.0625rem) + var(--gin-spacing-m));
 }
 
 #layout-builder-modal [dir=rtl] table:has(.tabledrag-cell-content__item .form-checkbox) th.select-all .form-checkbox,.media-library-widget-modal [dir=rtl] table:has(.tabledrag-cell-content__item .form-checkbox) th.select-all .form-checkbox,form.media-form [dir=rtl] table:has(.tabledrag-cell-content__item .form-checkbox) th.select-all .form-checkbox {
-  margin-right: calc(var(--tabledrag-handle-icon-size) + var(--space-m));
+  margin-right: calc(var(--tabledrag-handle-icon-size, 1.0625rem) + var(--gin-spacing-m));
 }
 
 #layout-builder-modal .gin--dark-mode .form-boolean:hover,#layout-builder-modal .gin--dark-mode .form-boolean:active,.media-library-widget-modal .gin--dark-mode .form-boolean:hover,.media-library-widget-modal .gin--dark-mode .form-boolean:active,form.media-form .gin--dark-mode .form-boolean:hover,form.media-form .gin--dark-mode .form-boolean:active {
@@ -1925,7 +1931,7 @@
 }
 
 #layout-builder-modal .form-item__description,#layout-builder-modal .fieldset__description,.media-library-widget-modal .form-item__description,.media-library-widget-modal .fieldset__description,form.media-form .form-item__description,form.media-form .fieldset__description {
-  max-width: 520px;
+  max-width: var(--gin-max-line-length);
   color: var(--gin-color-text-light);
 }
 
@@ -2252,7 +2258,7 @@
   top: 2px;
   width: calc(var(--gin-spacing-xxl) + 1px);
   height: 2.75rem;
-  border-inline-start: var(--dropbutton-border-size) solid var(--gin-color-primary) !important;
+  border-inline-start: var(--dropbutton-border-size, 1px) solid var(--gin-color-primary) !important;
 }
 
 #layout-builder-modal [dir=ltr] .dropbutton__toggle,.media-library-widget-modal [dir=ltr] .dropbutton__toggle,form.media-form [dir=ltr] .dropbutton__toggle {
@@ -2459,7 +2465,7 @@
 }
 
 #layout-builder-modal html.js.no-touchevents .dropbutton--small .dropbutton__toggle,.media-library-widget-modal html.js.no-touchevents .dropbutton--small .dropbutton__toggle,form.media-form html.js.no-touchevents .dropbutton--small .dropbutton__toggle {
-  width: calc(var(--dropbutton-small-toggle-size) + 1px);
+  width: calc(var(--dropbutton-small-toggle-size, 2rem) + 1px);
 }
 
 #layout-builder-modal html.js.no-touchevents .dropbutton--extrasmall,.media-library-widget-modal html.js.no-touchevents .dropbutton--extrasmall,form.media-form html.js.no-touchevents .dropbutton--extrasmall {
@@ -2470,7 +2476,7 @@
 }
 
 #layout-builder-modal html.js.no-touchevents .dropbutton--extrasmall .dropbutton__toggle,.media-library-widget-modal html.js.no-touchevents .dropbutton--extrasmall .dropbutton__toggle,form.media-form html.js.no-touchevents .dropbutton--extrasmall .dropbutton__toggle {
-  width: calc(var(--dropbutton-extrasmall-toggle-size) + 1px);
+  width: calc(var(--dropbutton-extrasmall-toggle-size, 1.5rem) + 1px);
 }
 
 #layout-builder-modal html[dir=ltr].js.no-touchevents .dropbutton--multiple.dropbutton--extrasmall .dropbutton__items .dropbutton__item,.media-library-widget-modal html[dir=ltr].js.no-touchevents .dropbutton--multiple.dropbutton--extrasmall .dropbutton__items .dropbutton__item,form.media-form html[dir=ltr].js.no-touchevents .dropbutton--multiple.dropbutton--extrasmall .dropbutton__items .dropbutton__item {
@@ -2572,7 +2578,7 @@
 
 #layout-builder-modal .action-link--icon-trash.action-link--danger:before,#layout-builder-modal .action-link--icon-trash.action-link--danger:hover:before,#layout-builder-modal .action-link--icon-trash.action-link--danger:focus:before,#layout-builder-modal .action-link--icon-trash.action-link--danger:active:before,#layout-builder-modal .button.button--danger:before,#layout-builder-modal .button.button--danger:hover:before,#layout-builder-modal .button.button--danger:focus:before,#layout-builder-modal .button.button--danger:active:before,#layout-builder-modal a.button.button--danger:before,#layout-builder-modal a.button.button--danger:hover:before,#layout-builder-modal a.button.button--danger:focus:before,#layout-builder-modal a.button.button--danger:active:before,.media-library-widget-modal .action-link--icon-trash.action-link--danger:before,.media-library-widget-modal .action-link--icon-trash.action-link--danger:hover:before,.media-library-widget-modal .action-link--icon-trash.action-link--danger:focus:before,.media-library-widget-modal .action-link--icon-trash.action-link--danger:active:before,.media-library-widget-modal .button.button--danger:before,.media-library-widget-modal .button.button--danger:hover:before,.media-library-widget-modal .button.button--danger:focus:before,.media-library-widget-modal .button.button--danger:active:before,.media-library-widget-modal a.button.button--danger:before,.media-library-widget-modal a.button.button--danger:hover:before,.media-library-widget-modal a.button.button--danger:focus:before,.media-library-widget-modal a.button.button--danger:active:before,form.media-form .action-link--icon-trash.action-link--danger:before,form.media-form .action-link--icon-trash.action-link--danger:hover:before,form.media-form .action-link--icon-trash.action-link--danger:focus:before,form.media-form .action-link--icon-trash.action-link--danger:active:before,form.media-form .button.button--danger:before,form.media-form .button.button--danger:hover:before,form.media-form .button.button--danger:focus:before,form.media-form .button.button--danger:active:before,form.media-form a.button.button--danger:before,form.media-form a.button.button--danger:hover:before,form.media-form a.button.button--danger:focus:before,form.media-form a.button.button--danger:active:before {
   background-image: none;
-  background-color: var(--gin-color-danger);
+  background-color: var(--gin-color-danger) !important;
   -webkit-mask-image: url("../../media/sprite.svg#trash-view");
           mask-image: url("../../media/sprite.svg#trash-view");
 }
@@ -2583,7 +2589,7 @@
 }
 
 #layout-builder-modal .action-link--icon-trash.action-link--danger:hover:before,#layout-builder-modal .action-link--icon-trash.action-link--danger:focus:before,#layout-builder-modal .action-link--icon-trash.action-link--danger:active:before,#layout-builder-modal .button.button--danger:hover:before,#layout-builder-modal .button.button--danger:focus:before,#layout-builder-modal .button.button--danger:active:before,#layout-builder-modal a.button.button--danger:hover:before,#layout-builder-modal a.button.button--danger:focus:before,#layout-builder-modal a.button.button--danger:active:before,.media-library-widget-modal .action-link--icon-trash.action-link--danger:hover:before,.media-library-widget-modal .action-link--icon-trash.action-link--danger:focus:before,.media-library-widget-modal .action-link--icon-trash.action-link--danger:active:before,.media-library-widget-modal .button.button--danger:hover:before,.media-library-widget-modal .button.button--danger:focus:before,.media-library-widget-modal .button.button--danger:active:before,.media-library-widget-modal a.button.button--danger:hover:before,.media-library-widget-modal a.button.button--danger:focus:before,.media-library-widget-modal a.button.button--danger:active:before,form.media-form .action-link--icon-trash.action-link--danger:hover:before,form.media-form .action-link--icon-trash.action-link--danger:focus:before,form.media-form .action-link--icon-trash.action-link--danger:active:before,form.media-form .button.button--danger:hover:before,form.media-form .button.button--danger:focus:before,form.media-form .button.button--danger:active:before,form.media-form a.button.button--danger:hover:before,form.media-form a.button.button--danger:focus:before,form.media-form a.button.button--danger:active:before {
-  background-color: var(--gin-bg-layer);
+  background-color: var(--gin-bg-layer) !important;
 }
 
 #layout-builder-modal .button--primary.button--danger,.media-library-widget-modal .button--primary.button--danger,form.media-form .button--primary.button--danger {
