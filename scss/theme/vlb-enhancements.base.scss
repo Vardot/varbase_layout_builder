@@ -249,6 +249,16 @@ body {
       }
     }
   }
+
+  .media-library-item__attributes {
+    background: transparent !important;
+  }
+
+  .media-library-item__remove,
+  .media-library-item .button.media-library-item__remove {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+  }
 }
 
 #drupal-off-canvas,

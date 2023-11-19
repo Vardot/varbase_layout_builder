@@ -81,7 +81,6 @@ claro:
       themes/claro/css/components/file.css: {}
       themes/claro/css/components/form.css: {}
       themes/claro/css/components/form--checkbox-radio.css: {}
-      themes/claro/css/components/form--checkbox-radio--ie.css: {}
       themes/claro/css/components/form--field-multiple.css: {}
       themes/claro/css/components/form--managed-file.css: {}
       themes/claro/css/components/form--password-confirm.css: {}

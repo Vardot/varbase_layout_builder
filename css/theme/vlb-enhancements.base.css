@@ -302,6 +302,19 @@ body .layout-builder__message--overrides .messages {
   color: var(--gin-color-button-text);
 }
 
+#drupal-off-canvas .media-library-item__attributes,
+#layout-builder-modal .media-library-item__attributes {
+  background: transparent !important;
+}
+
+#drupal-off-canvas .media-library-item__remove,
+#drupal-off-canvas .media-library-item .button.media-library-item__remove,
+#layout-builder-modal .media-library-item__remove,
+#layout-builder-modal .media-library-item .button.media-library-item__remove {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+}
+
 #drupal-off-canvas .form-text.description,
 #layout-builder-modal .form-text.description,
 .media-library-widget-modal .form-text.description,

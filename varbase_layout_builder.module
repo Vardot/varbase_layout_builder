@@ -118,7 +118,7 @@ function varbase_layout_builder_form_alter(&$form, FormStateInterface $form_stat
       }
     }
 
-    if ($add_admin_theme) {
+    if ($add_admin_theme && \Drupal::service('theme.manager')->getActiveTheme()->getName() !== \Drupal::config('system.theme')->get('admin')) {
       if (\Drupal::service('theme_handler')->themeExists('gin')) {
         // Add Gin theme library.
         $form['#attached']['library'][] = 'varbase_layout_builder/gin';
