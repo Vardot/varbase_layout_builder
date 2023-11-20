@@ -75,7 +75,7 @@
       },
       "drupal/layout_builder_blocks": {
         "Issue #3349066: Limit Layout Builder Blocks to the front-end theme":
-        "https://www.drupal.org/files/issues/2023-04-19/3349066-11.patch"
+        "https://www.drupal.org/files/issues/2023-11-20/3349066-14.patch"
       }
     }
   }
