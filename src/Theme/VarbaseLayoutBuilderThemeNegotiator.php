@@ -95,47 +95,69 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
    *   The selected active theme.
    */
   public function determineActiveTheme(RouteMatchInterface $route_match) {
-    $use_claro = $this->configFactory->get('varbase_layout_builder.settings')->get('use_claro');
 
-    if (isset($use_claro) && $use_claro == 1) {
+    $current_request = [];
+    if ($this->requestStack->getCurrentRequest()->getMethod() === 'GET') {
+      $current_request = $this->requestStack->getCurrentRequest()->query->all();
+    }
+    else {
+      $current_request = $this->requestStack->getCurrentRequest()->request->all();
+    }
 
-      $route_name = $route_match->getRouteName();
-      if (isset($route_name) && strpos($route_name, 'layout_builder') !== FALSE) {
+    // Media Library Theme Negotiator.
+    if (isset($current_request['_triggering_element_name'])
+      && str_contains($current_request['_triggering_element_name'], 'media-library')) {
 
-        $current_request = [];
-        if ($this->requestStack->getCurrentRequest()->getMethod() === 'GET') {
-          $current_request = $this->requestStack->getCurrentRequest()->query->all();
-        }
-        else {
-          $current_request = $this->requestStack->getCurrentRequest()->request->all();
-        }
+      return $this->configFactory->get('system.theme')->get('admin');
+    }
 
-        if ($this->themeHandler->themeExists('gin') || $this->themeHandler->themeExists('claro')) {
-          if (isset($current_request['dialogOptions']) && isset($current_request['dialogOptions']['target'])) {
-            $dialog_options = $current_request['dialogOptions']['target'];
-          }
-          if (isset($dialog_options)) {
-            return $this->configFactory->get('system.theme')->get('admin');
-          }
-          else {
-            $current_request['_wrapper_format'];
-            if (isset($current_request['_wrapper_format'])) {
-              if ($current_request['_wrapper_format'] == 'drupal_dialog.off_canvas') {
-                return $this->configFactory->get('system.theme')->get('default');
-              }
-              else {
-                return $this->configFactory->get('system.theme')->get('admin');
-              }
-            }
-          }
-        }
-        else {
-          return $this->configFactory->get('system.theme')->get('admin');
-        }
+    if (isset($current_request['dialogOptions'])
+      && isset($current_request['dialogOptions']['dialogClass'])
+      && $current_request['dialogOptions']['dialogClass'] == 'media-library-widget-modal') {
+
+      if (isset($current_request['ajax_form'])
+        && $current_request['ajax_form'] == '1'
+        && isset($current_request['_wrapper_format'])
+        && ($current_request['_wrapper_format'] == 'drupal_dialog'
+        || $current_request['_wrapper_format'] == 'drupal_dialog.off_canvas'
+        || $current_request['_wrapper_format'] == 'drupal_ajax')) {
+
+        return $this->configFactory->get('system.theme')->get('admin');
       }
     }
 
-    return NULL;
+    if (!empty($current_request['media_library_opener_id'])) {
+      return $this->configFactory->get('system.theme')->get('admin');
+    }
+
+    $dialog_has_target_layout_builder_modal = FALSE;
+    if (isset($current_request['dialogOptions'])
+      && isset($current_request['dialogOptions']['target'])
+      && $current_request['dialogOptions']['target'] == 'layout-builder-modal') {
+
+      $dialog_has_target_layout_builder_modal = TRUE;
+    }
+
+    $parent_theme_is_front_end_theme = FALSE;
+    if (isset($current_request['ajax_page_state'])
+      && isset($current_request['ajax_page_state']['theme'])
+      && $current_request['ajax_page_state']['theme'] == $this->configFactory->get('system.theme')->get('default')) {
+      $parent_theme_is_front_end_theme = TRUE;
+    }
+
+    if ($dialog_has_target_layout_builder_modal && $parent_theme_is_front_end_theme) {
+
+      if (isset($current_request['_wrapper_format'])
+        && $current_request['_wrapper_format'] == 'drupal_dialog.off_canvas') {
+        return $this->configFactory->get('system.theme')->get('admin');
+      }
+      else {
+        return $this->configFactory->get('system.theme')->get('default');
+      }
+    }
+
+    return $this->configFactory->get('system.theme')->get('default');
+
   }
 
 }

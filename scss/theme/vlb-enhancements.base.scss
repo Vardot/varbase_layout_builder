@@ -290,19 +290,6 @@ body {
       }
     }
 
-    #drupal-off-canvas .media-library-item__attributes,
-    #layout-builder-modal .media-library-item__attributes {
-      background: transparent !important;
-    }
-
-    #drupal-off-canvas .media-library-item__remove,
-    #drupal-off-canvas .media-library-item .button.media-library-item__remove,
-    #layout-builder-modal .media-library-item__remove,
-    #layout-builder-modal .media-library-item .button.media-library-item__remove {
-      width: 1.5rem !important;
-      height: 1.5rem !important;
-    }
-
   }
 
 }
@@ -366,6 +353,13 @@ body {
     &.button--primary {
       text-align: center;
     }
+  }
+
+  a.button.dialog-cancel {
+    margin: 1rem 0 0 0;
+    padding: 11px 20px;
+    width: auto !important;
+    border-radius: 8px;
   }
 
   .fieldgroup {
@@ -600,6 +594,18 @@ body {
   #bs_nav-tabs {
     position:relative !important;
   }
+
+  .media-library-item__attributes,
+  .media-library-item__attributes {
+    background: transparent !important;
+  }
+
+  .media-library-item__remove,
+  .media-library-item .button.media-library-item__remove {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+  }
+
 }
 
 #layout-builder-modal {

@@ -235,25 +235,6 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
   direction: rtl;
 }
 
-[dir=rtl] body #drupal-off-canvas #drupal-off-canvas .media-library-item__attributes,
-[dir=rtl] body #drupal-off-canvas #layout-builder-modal .media-library-item__attributes,
-[dir=rtl] body #layout-builder-modal #drupal-off-canvas .media-library-item__attributes,
-[dir=rtl] body #layout-builder-modal #layout-builder-modal .media-library-item__attributes {
-  background: transparent !important;
-}
-
-[dir=rtl] body #drupal-off-canvas #drupal-off-canvas .media-library-item__remove,
-[dir=rtl] body #drupal-off-canvas #drupal-off-canvas .media-library-item .button.media-library-item__remove,
-[dir=rtl] body #drupal-off-canvas #layout-builder-modal .media-library-item__remove,
-[dir=rtl] body #drupal-off-canvas #layout-builder-modal .media-library-item .button.media-library-item__remove,
-[dir=rtl] body #layout-builder-modal #drupal-off-canvas .media-library-item__remove,
-[dir=rtl] body #layout-builder-modal #drupal-off-canvas .media-library-item .button.media-library-item__remove,
-[dir=rtl] body #layout-builder-modal #layout-builder-modal .media-library-item__remove,
-[dir=rtl] body #layout-builder-modal #layout-builder-modal .media-library-item .button.media-library-item__remove {
-  width: 1.5rem !important;
-  height: 1.5rem !important;
-}
-
 .toolbar-fixed .js-messages__wrapper {
   top: 0 !important;
 }
@@ -307,6 +288,14 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
 #layout-builder-modal button.button--primary,
 #layout-builder-modal input[type=submit].button--primary {
   text-align: center;
+}
+
+#drupal-off-canvas a.button.dialog-cancel,
+#layout-builder-modal a.button.dialog-cancel {
+  margin: 1rem 0 0 0;
+  padding: 11px 20px;
+  width: auto !important;
+  border-radius: 8px;
 }
 
 #drupal-off-canvas .fieldgroup.form-composite.form-wrapper,
@@ -566,6 +555,21 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
 #drupal-off-canvas #bs_nav-tabs,
 #layout-builder-modal #bs_nav-tabs {
   position: relative !important;
+}
+
+#drupal-off-canvas .media-library-item__attributes,
+#drupal-off-canvas .media-library-item__attributes,
+#layout-builder-modal .media-library-item__attributes,
+#layout-builder-modal .media-library-item__attributes {
+  background: transparent !important;
+}
+
+#drupal-off-canvas .media-library-item__remove,
+#drupal-off-canvas .media-library-item .button.media-library-item__remove,
+#layout-builder-modal .media-library-item__remove,
+#layout-builder-modal .media-library-item .button.media-library-item__remove {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
 }
 
 #layout-builder-modal .form-item--editor-format .form-element--editor-format {
