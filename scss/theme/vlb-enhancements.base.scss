@@ -289,6 +289,20 @@ body {
         }
       }
     }
+
+    #drupal-off-canvas .media-library-item__attributes,
+    #layout-builder-modal .media-library-item__attributes {
+      background: transparent !important;
+    }
+
+    #drupal-off-canvas .media-library-item__remove,
+    #drupal-off-canvas .media-library-item .button.media-library-item__remove,
+    #layout-builder-modal .media-library-item__remove,
+    #layout-builder-modal .media-library-item .button.media-library-item__remove {
+      width: 1.5rem !important;
+      height: 1.5rem !important;
+    }
+
   }
 
 }
@@ -347,9 +361,10 @@ body {
 
   button,
   input[type="submit"] {
+    width: auto !important;
+
     &.button--primary {
       text-align: center;
-      width: auto;
     }
   }
 
@@ -794,7 +809,7 @@ body {
   }
 
   &.ui-front.media-library-widget-modal {
-    z-index: 101;
+    z-index: 1270;
   }
 }
 

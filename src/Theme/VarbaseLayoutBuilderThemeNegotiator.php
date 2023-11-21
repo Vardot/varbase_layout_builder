@@ -102,8 +102,15 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
       $route_name = $route_match->getRouteName();
       if (isset($route_name) && strpos($route_name, 'layout_builder') !== FALSE) {
 
+        $current_request = [];
+        if ($this->requestStack->getCurrentRequest()->getMethod() === 'GET') {
+          $current_request = $this->requestStack->getCurrentRequest()->query->all();
+        }
+        else {
+          $current_request = $this->requestStack->getCurrentRequest()->request->all();
+        }
+
         if ($this->themeHandler->themeExists('gin') || $this->themeHandler->themeExists('claro')) {
-          $current_request = $this->requestStack->getCurrentRequest()->request->all('dialogOptions');
           if (isset($current_request['dialogOptions']) && isset($current_request['dialogOptions']['target'])) {
             $dialog_options = $current_request['dialogOptions']['target'];
           }
@@ -111,9 +118,9 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
             return $this->configFactory->get('system.theme')->get('admin');
           }
           else {
-            $request_query_wrapper_format = $this->requestStack->getCurrentRequest()->query->get('_wrapper_format');
-            if (isset($request_query_wrapper_format)) {
-              if ($request_query_wrapper_format == 'drupal_dialog.off_canvas') {
+            $current_request['_wrapper_format'];
+            if (isset($current_request['_wrapper_format'])) {
+              if ($current_request['_wrapper_format'] == 'drupal_dialog.off_canvas') {
                 return $this->configFactory->get('system.theme')->get('default');
               }
               else {

@@ -235,6 +235,25 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
   direction: rtl;
 }
 
+[dir=rtl] body #drupal-off-canvas #drupal-off-canvas .media-library-item__attributes,
+[dir=rtl] body #drupal-off-canvas #layout-builder-modal .media-library-item__attributes,
+[dir=rtl] body #layout-builder-modal #drupal-off-canvas .media-library-item__attributes,
+[dir=rtl] body #layout-builder-modal #layout-builder-modal .media-library-item__attributes {
+  background: transparent !important;
+}
+
+[dir=rtl] body #drupal-off-canvas #drupal-off-canvas .media-library-item__remove,
+[dir=rtl] body #drupal-off-canvas #drupal-off-canvas .media-library-item .button.media-library-item__remove,
+[dir=rtl] body #drupal-off-canvas #layout-builder-modal .media-library-item__remove,
+[dir=rtl] body #drupal-off-canvas #layout-builder-modal .media-library-item .button.media-library-item__remove,
+[dir=rtl] body #layout-builder-modal #drupal-off-canvas .media-library-item__remove,
+[dir=rtl] body #layout-builder-modal #drupal-off-canvas .media-library-item .button.media-library-item__remove,
+[dir=rtl] body #layout-builder-modal #layout-builder-modal .media-library-item__remove,
+[dir=rtl] body #layout-builder-modal #layout-builder-modal .media-library-item .button.media-library-item__remove {
+  width: 1.5rem !important;
+  height: 1.5rem !important;
+}
+
 .toolbar-fixed .js-messages__wrapper {
   top: 0 !important;
 }
@@ -276,12 +295,18 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
   background-image: url(../../images/plugins/text-alignment/text-justify.svg);
 }
 
+#drupal-off-canvas button,
+#drupal-off-canvas input[type=submit],
+#layout-builder-modal button,
+#layout-builder-modal input[type=submit] {
+  width: auto !important;
+}
+
 #drupal-off-canvas button.button--primary,
 #drupal-off-canvas input[type=submit].button--primary,
 #layout-builder-modal button.button--primary,
 #layout-builder-modal input[type=submit].button--primary {
   text-align: center;
-  width: auto;
 }
 
 #drupal-off-canvas .fieldgroup.form-composite.form-wrapper,
@@ -722,7 +747,7 @@ body #drupal-off-canvas-wrapper .inline-block-list li {
 }
 
 .ui-dialog.ui-front.media-library-widget-modal {
-  z-index: 101;
+  z-index: 1270;
 }
 
 [dir=rtl] .ui-dialog .ui-resizable-w {
