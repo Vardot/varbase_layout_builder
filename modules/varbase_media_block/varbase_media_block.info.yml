@@ -2,7 +2,7 @@ name: "Varbase Media (image/video) block"
 description: "A media block contains a title and media."
 type: module
 package: "Varbase Blocks"
-core_version_requirement: ~9.5.0 || ~10.1.0
+core_version_requirement: ~9.5.0 || ~10
 dependencies:
   - drupal:block
   - drupal:block_content
