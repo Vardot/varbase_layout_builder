@@ -130,25 +130,12 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
       return $this->configFactory->get('system.theme')->get('admin');
     }
 
-    $dialog_has_target_layout_builder_modal = FALSE;
     if (isset($current_request['dialogOptions'])
       && isset($current_request['dialogOptions']['target'])
       && $current_request['dialogOptions']['target'] == 'layout-builder-modal') {
 
-      $dialog_has_target_layout_builder_modal = TRUE;
-    }
-
-    $parent_theme_is_front_end_theme = FALSE;
-    if (isset($current_request['ajax_page_state'])
-      && isset($current_request['ajax_page_state']['theme'])
-      && $current_request['ajax_page_state']['theme'] == $this->configFactory->get('system.theme')->get('default')) {
-      $parent_theme_is_front_end_theme = TRUE;
-    }
-
-    if ($dialog_has_target_layout_builder_modal && $parent_theme_is_front_end_theme) {
-
-      if (isset($current_request['_wrapper_format'])
-        && $current_request['_wrapper_format'] == 'drupal_dialog.off_canvas') {
+      if ((isset($current_request['_wrapper_format']) && $current_request['_wrapper_format'] == 'drupal_dialog.off_canvas')
+        || isset($current_request['_drupal_ajax'])) {
         return $this->configFactory->get('system.theme')->get('admin');
       }
       else {
