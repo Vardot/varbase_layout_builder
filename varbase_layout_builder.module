@@ -115,9 +115,27 @@ function varbase_layout_builder_form_alter(&$form, FormStateInterface $form_stat
       }
     }
 
+    $request_stack_current_request = Drupal::requestStack()->getCurrentRequest();
+    $current_request = [];
+    if ($request_stack_current_request->getMethod() === 'GET') {
+      $current_request = $request_stack_current_request->query->all();
+    }
+    else {
+      $current_request = $request_stack_current_request->request->all();
+    }
+
+    $dialog_has_target_layout_builder_modal = FALSE;
+    if (isset($current_request['dialogOptions'])
+      && isset($current_request['dialogOptions']['target'])
+      && $current_request['dialogOptions']['target'] == 'layout-builder-modal') {
+
+      $dialog_has_target_layout_builder_modal = TRUE;
+    }
+
     if ($add_admin_theme
       && (\Drupal::service('theme_handler')->themeExists('claro') || \Drupal::service('theme_handler')->themeExists('gin'))
-      && \Drupal::service('theme.manager')->getActiveTheme()->getName() !== \Drupal::config('system.theme')->get('admin')) {
+      && (\Drupal::service('theme.manager')->getActiveTheme()->getName() !== \Drupal::config('system.theme')->get('admin')
+      || $dialog_has_target_layout_builder_modal)) {
       // Add claro theme library.
       if (version_compare(Drupal::VERSION, '10.0.0', '<')) {
         $form['#attached']['library'][] = 'varbase_layout_builder/claro9';
