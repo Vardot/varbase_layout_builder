@@ -2,6 +2,6 @@ name: "Varbase Featured Card block"
 description: "A horizontal card contains two columns (media, title, body and link)."
 type: module
 package: "Varbase Blocks"
-core_version_requirement: ~10.1.0
+core_version_requirement: ~10
 dependencies:
   - varbase_layout_builder:varbase_layout_builder
