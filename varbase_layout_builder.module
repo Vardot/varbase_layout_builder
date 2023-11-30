@@ -5,12 +5,13 @@
  * Contains varbase_layout_builder.module.
  */
 
-use Drupal\Core\Url;
-use Drupal\Core\Entity\EntityInterface;
-use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Template\Attribute;
-use Drupal\varbase_layout_builder\Element\VarbaseLayoutBuilderUX;
-
+ use Drupal\Core\Url;
+ use Drupal\Core\Entity\EntityInterface;
+ use Drupal\Core\Form\FormStateInterface;
+ use Drupal\Core\Template\Attribute;
+ use Drupal\varbase_layout_builder\Element\VarbaseLayoutBuilderUX;
+ use Drupal\layout_builder\Element\LayoutBuilder;
+ 
 /**
  * Implements hook_entity_operation().
  */
@@ -43,51 +44,52 @@ function varbase_layout_builder_entity_operation(EntityInterface $entity) {
  * Implements hook_form_alter().
  */
 function varbase_layout_builder_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if (\Drupal::service('theme.manager')->getActiveTheme()->getName() !== \Drupal::config('system.theme')->get('admin')) {
 
-  // Only for layout builder forms.
-  if (isset($form_id) && strpos($form_id, '_layout_builder_form') !== FALSE) {
+    // Only for layout builder forms.
+    if (isset($form_id) && strpos($form_id, '_layout_builder_form') !== FALSE) {
 
-    // Attache the Varbase Layout Builder enhancements library.
-    $form['#attached']['library'][] = 'varbase_layout_builder/enhancements';
+      // Attache the Varbase Layout Builder enhancements library.
+      $form['#attached']['library'][] = 'varbase_layout_builder/enhancements';
 
-    // Attache the Varbase Layout Builder configure section admin library.
-    $form['#attached']['library'][] = 'varbase_layout_builder/configure-section.admin';
+      // Attache the Varbase Layout Builder configure section admin library.
+      $form['#attached']['library'][] = 'varbase_layout_builder/configure-section.admin';
 
-    // No revision information or revision log message.
-    if (isset($form['revision_information'])) {
-      $form['revision_information']['#disabled'] = TRUE;
-      $form['revision_information']['#attributes']['style'][] = 'display: none;';
-      $form['revision_information']['#prefix'] = '<div style="display: none;">';
-      $form['revision_information']['#suffix'] = '</div>';
+      // No revision information or revision log message.
+      if (isset($form['revision_information'])) {
+        $form['revision_information']['#disabled'] = TRUE;
+        $form['revision_information']['#attributes']['style'][] = 'display: none;';
+        $form['revision_information']['#prefix'] = '<div style="display: none;">';
+        $form['revision_information']['#suffix'] = '</div>';
+      }
+
+      // Hide revision.
+      if (isset($form['revision'])) {
+        $form['revision']['#default_value'] = TRUE;
+        $form['revision']['#disabled'] = TRUE;
+        $form['revision']['#attributes']['style'][] = 'display:none;';
+      }
+
+      // Hide revision log message.
+      if (isset($form['revision_log_message'])) {
+        $form['revision_log_message']['#disabled'] = TRUE;
+        $form['revision_log_message']['#attributes']['style'][] = 'display:none;';
+      }
+
+      // Hide rabbit hole fields.
+      if (isset($form['rabbit_hole'])) {
+        $form['rabbit_hole']['#access'] = FALSE;
+      }
+
+      if (isset($form['actions']['rebuild-layout'])) {
+        $form['actions']['rebuild-layout']['#attributes']['class'][] = 'btn btn-primary';
+      }
+
+      // Style the Reorder sections action button.
+      if (isset($form['actions']['move_sections'])) {
+        $form['actions']['move_sections']['#attributes']['class'][] = 'btn btn-primary';
+      }
     }
-
-    // Hide revision.
-    if (isset($form['revision'])) {
-      $form['revision']['#default_value'] = TRUE;
-      $form['revision']['#disabled'] = TRUE;
-      $form['revision']['#attributes']['style'][] = 'display:none;';
-    }
-
-    // Hide revision log message.
-    if (isset($form['revision_log_message'])) {
-      $form['revision_log_message']['#disabled'] = TRUE;
-      $form['revision_log_message']['#attributes']['style'][] = 'display:none;';
-    }
-
-    // Hide rabbit hole fields.
-    if (isset($form['rabbit_hole'])) {
-      $form['rabbit_hole']['#access'] = FALSE;
-    }
-
-    if (isset($form['actions']['rebuild-layout'])) {
-      $form['actions']['rebuild-layout']['#attributes']['class'][] = 'btn btn-primary';
-    }
-
-    // Style the Reorder sections action button.
-    if (isset($form['actions']['move_sections'])) {
-      $form['actions']['move_sections']['#attributes']['class'][] = 'btn btn-primary';
-    }
-
   }
 
   $config = \Drupal::config('varbase_layout_builder.settings');
@@ -221,81 +223,102 @@ function _varbase_layout_builder_form_node_form_submit(array &$form, FormStateIn
  * Implements hook_element_plugin_alter().
  */
 function varbase_layout_builder_element_plugin_alter(array &$definitions) {
-  $definitions['layout_builder']['class'] = VarbaseLayoutBuilderUX::class;
+  if (\Drupal::service('theme.manager')->getActiveTheme()->getName() !== \Drupal::config('system.theme')->get('admin')) {
+    $definitions['layout_builder']['class'] = VarbaseLayoutBuilderUX::class;
+  }
+  else {
+    $definitions['layout_builder']['class'] = LayoutBuilder::class;
+  }
 }
 
 /**
  * Implements hook_layout_alter().
  */
 function varbase_layout_builder_layout_alter(&$definitions) {
-
-  foreach ($definitions as $key => $definition) {
-    if ($definition->getClass() === 'Drupal\bootstrap_layout_builder\Plugin\Layout\BootstrapLayout') {
-      $definitions[$key]->setClass('\Drupal\varbase_layout_builder\Plugin\Layout\VarbaseLayoutBuilderBootstrapLayout');
+  if (\Drupal::service('theme.manager')->getActiveTheme()->getName() !== \Drupal::config('system.theme')->get('admin')) {
+    foreach ($definitions as $key => $definition) {
+      if ($definition->getClass() === 'Drupal\bootstrap_layout_builder\Plugin\Layout\BootstrapLayout') {
+        $definitions[$key]->setClass('\Drupal\varbase_layout_builder\Plugin\Layout\VarbaseLayoutBuilderBootstrapLayout');
+      }
     }
   }
+  else {
+    foreach ($definitions as $key => $definition) {
+      if ($definition->getClass() === 'Drupal\bootstrap_layout_builder\Plugin\Layout\BootstrapLayout') {
+        $definitions[$key]->setClass('\Drupal\Core\Layout\LayoutDefault');
+      }
+    }
+  }
+
 }
 
 /**
  * Implements hook_preprocess_HOOK().
  */
 function varbase_layout_builder_preprocess_blb_container_wrapper(&$variables) {
-  $variables['attributes']['class'][] = 'vlb-section';
+  if (\Drupal::service('theme.manager')->getActiveTheme()->getName() !== \Drupal::config('system.theme')->get('admin')) {
+    $variables['attributes']['class'][] = 'vlb-section';
+  }
 }
 
 /**
  * Implements hook_theme().
  */
 function varbase_layout_builder_theme() {
-  return [
-    'blb_container_wrapper' => [
-      'template' => 'vlb-container-wrapper',
-      'variables' => [
-        'attributes' => [],
-        'children' => [],
+  if (\Drupal::service('theme.manager')->getActiveTheme()->getName() !== \Drupal::config('system.theme')->get('admin')) {
+    return [
+      'blb_container_wrapper' => [
+        'template' => 'vlb-container-wrapper',
+        'variables' => [
+          'attributes' => [],
+          'children' => [],
+        ],
       ],
-    ],
-    'blb_container' => [
-      'template' => 'vlb-container',
-      'variables' => [
-        'attributes' => [],
-        'children' => [],
+      'blb_container' => [
+        'template' => 'vlb-container',
+        'variables' => [
+          'attributes' => [],
+          'children' => [],
+        ],
       ],
-    ],
-    'blb_section' => [
-      'template' => 'vlb-section',
-      'render element' => 'content',
-      'base hook' => 'layout',
-    ],
-  ];
+      'blb_section' => [
+        'template' => 'vlb-section',
+        'render element' => 'content',
+        'base hook' => 'layout',
+      ],
+    ];
+  }
+  return [];
 }
 
 /**
  * Implements hook_preprocess_HOOK().
  */
 function varbase_layout_builder_preprocess_blb_section(&$variables) {
+  if (\Drupal::service('theme.manager')->getActiveTheme()->getName() !== \Drupal::config('system.theme')->get('admin')) {
 
-  if (isset($variables['content']['section_header']['#attributes'])) {
-    $variables['region_attributes']['section_header'] = new Attribute($variables['content']['section_header']['#attributes']);
-  }
-
-  if (isset($variables['content']['#settings']['container_width'])
-  && $variables['content']['#settings']['container_width'] !== '') {
-
-    // VLB layout defaults.
-    $vlb_layout_defaults = \Drupal::config('varbase_layout_builder.layout_defaults');
-
-    // Container width layout configs.
-    $container_width_layout_options = $vlb_layout_defaults->get('container_width');
-    $container_widths = [];
-    if (isset($container_width_layout_options['build_options'])) {
-      $container_widths = $container_width_layout_options['build_options'];
+    if (isset($variables['content']['section_header']['#attributes'])) {
+      $variables['region_attributes']['section_header'] = new Attribute($variables['content']['section_header']['#attributes']);
     }
 
-    if (isset($container_widths[$variables['content']['#settings']['container_width']])) {
-      $variables['content']['#settings']['container_width_classes'] = $container_widths[$variables['content']['#settings']['container_width']];
-    }
+    if (isset($variables['content']['#settings']['container_width'])
+    && $variables['content']['#settings']['container_width'] !== '') {
 
+      // VLB layout defaults.
+      $vlb_layout_defaults = \Drupal::config('varbase_layout_builder.layout_defaults');
+
+      // Container width layout configs.
+      $container_width_layout_options = $vlb_layout_defaults->get('container_width');
+      $container_widths = [];
+      if (isset($container_width_layout_options['build_options'])) {
+        $container_widths = $container_width_layout_options['build_options'];
+      }
+
+      if (isset($container_widths[$variables['content']['#settings']['container_width']])) {
+        $variables['content']['#settings']['container_width_classes'] = $container_widths[$variables['content']['#settings']['container_width']];
+      }
+
+    }
   }
 }
 
@@ -303,56 +326,81 @@ function varbase_layout_builder_preprocess_blb_section(&$variables) {
  * Implements hook_library_info_alter().
  */
 function varbase_layout_builder_library_info_alter(&$libraries, $extension) {
-
-  if ($extension == 'bootstrap_styles'
-    && isset($libraries['plugin.scroll_effects.build'])) {
-    $libraries['plugin.scroll_effects.build'] = ['dependencies' => ['varbase_layout_builder/aso.local']];
-  }
-  elseif ($extension == 'bootstrap_layout_builder'
-     && isset($libraries['layout_builder_form_style'])) {
-
-    $new_path = '/' . \Drupal::service('extension.list.module')->getPath('varbase_layout_builder') . '/js';
-    $new_js = [];
-    $replacements = [
-      'js/layout-tab-scripts.js' => $new_path . '/vlb-layout-tab-scripts.js',
-    ];
-
-    foreach ($libraries['layout_builder_form_style']['js'] as $source => $options) {
-      if (isset($replacements[$source])) {
-        $new_js[$replacements[$source]] = $options;
-      }
-      else {
-        $new_js[$source] = $options;
-      }
+  if (\Drupal::service('theme.manager')->getActiveTheme()->getName() !== \Drupal::config('system.theme')->get('admin')) {
+    if ($extension == 'bootstrap_styles'
+      && isset($libraries['plugin.scroll_effects.build'])) {
+      $libraries['plugin.scroll_effects.build'] = ['dependencies' => ['varbase_layout_builder/aso.local']];
     }
+    elseif ($extension == 'bootstrap_layout_builder'
+      && isset($libraries['layout_builder_form_style'])) {
 
-    $libraries['layout_builder_form_style']['js'] = $new_js;
-  }
-  elseif ($extension == 'lb_ux'
-    && isset($libraries['drupal.lb_ux'])) {
+      $new_path = '/' . \Drupal::service('extension.list.module')->getPath('varbase_layout_builder') . '/js';
+      $new_js = [];
+      $replacements = [
+        'js/layout-tab-scripts.js' => $new_path . '/vlb-layout-tab-scripts.js',
+      ];
 
-    $origin_url = \Drupal::request()->getSchemeAndHttpHost() . \Drupal::request()->getBaseUrl();
-    $new_path = $origin_url . '/' . \Drupal::service('extension.list.module')->getPath('varbase_layout_builder');
-
-    $new_css = [];
-    $replacements = [
-      'css/layout-builder-ux.css' => $new_path . '/css/theme/layout-builder-ux.css',
-    ];
-
-    foreach ($libraries['drupal.lb_ux']['css']['theme'] as $source => $options) {
-      if (isset($replacements[$source])) {
-        $new_css[$replacements[$source]] = $options;
+      foreach ($libraries['layout_builder_form_style']['js'] as $source => $options) {
+        if (isset($replacements[$source])) {
+          $new_js[$replacements[$source]] = $options;
+        }
+        else {
+          $new_js[$source] = $options;
+        }
       }
-      else {
-        $new_css[$source] = $options;
-      }
+
+      $libraries['layout_builder_form_style']['js'] = $new_js;
     }
+    elseif ($extension == 'lb_ux'
+      && isset($libraries['drupal.lb_ux'])) {
 
-    $libraries['drupal.lb_ux']['css']['theme'] = $new_css;
+      $origin_url = \Drupal::request()->getSchemeAndHttpHost() . \Drupal::request()->getBaseUrl();
+      $new_path = $origin_url . '/' . \Drupal::service('extension.list.module')->getPath('varbase_layout_builder');
 
+      $new_css = [];
+      $replacements = [
+        'css/layout-builder-ux.css' => $new_path . '/css/theme/layout-builder-ux.css',
+      ];
+
+      foreach ($libraries['drupal.lb_ux']['css']['theme'] as $source => $options) {
+        if (isset($replacements[$source])) {
+          $new_css[$replacements[$source]] = $options;
+        }
+        else {
+          $new_css[$source] = $options;
+        }
+      }
+
+      $libraries['drupal.lb_ux']['css']['theme'] = $new_css;
+
+    }
   }
 }
 
+/**
+ * Implements hook_element_info_alter().
+ */
+function varbase_layout_builder_element_info_alter(array &$info) {
+
+  // Add Admin theme condition class switcher.
+  if (\Drupal::service('theme.manager')->getActiveTheme()->getName() == \Drupal::config('system.theme')->get('admin')) {
+    if (isset($info['layout_builder']) && isset($info['layout_builder']['#pre_render'])) {
+      foreach ($info['layout_builder']['#pre_render'] as $key => $class_name) {
+        if ($class_name === '\Drupal\section_library\SectionLibraryRender::preRender') {
+          unset($info[$key]);
+          $info['layout_builder']['#pre_render'][$key] = '\Drupal\varbase_layout_builder\Theme\VarbaseSectionLibraryRender::preRender';
+        }
+      }
+    }
+  }
+}
+
+/**
+ * Returns true if the current route is a layout builder route.
+ *
+ * @return bool
+ *   Returns true for layout builder routes.
+ */
 function varbase_layout_builder__is_layout_builder_route() {
   $layout_builder_route = drupal_static(__FUNCTION__);
   if ($layout_builder_route !== NULL) {
@@ -370,4 +418,30 @@ function varbase_layout_builder__is_layout_builder_route() {
   \Drupal::moduleHandler()->alter('varbase_layout_builder__is_layout_builder_route', $layout_builder_route, $context);
   unset($context);
   return $layout_builder_route;
+}
+
+/**
+ * Returns true if the current route is a dashboard route.
+ *
+ * @return bool
+ *   Returns true for dashboard routes.
+ */
+function varbase_layout_builder__is_dashboard_route() {
+  $dashboard_route = drupal_static(__FUNCTION__);
+  if ($dashboard_route !== NULL) {
+    return $dashboard_route;
+  }
+
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  $dashboard_route = FALSE;
+
+  if ($route_name !== NULL && preg_match('/^(dashboards\.([^.]+\.)?)/', $route_name)
+    && str_contains(\Drupal::requestStack()->getCurrentRequest()->getPathInfo(), 'dashboards')) {
+    $dashboard_route = TRUE;
+  }
+
+  $context = NULL;
+  \Drupal::moduleHandler()->alter('varbase_layout_builder__is_dashboard_route', $dashboard_route, $context);
+  unset($context);
+  return $dashboard_route;
 }
