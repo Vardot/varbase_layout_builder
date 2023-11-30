@@ -72,14 +72,13 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
    */
   public function applies(RouteMatchInterface $route_match) {
     $use_claro = $this->configFactory->get('varbase_layout_builder.settings')->get('use_claro');
-    if (isset($use_claro) && $use_claro == 1) {
+    if (isset($use_claro)
+      && $use_claro == 1
+      && varbase_layout_builder__is_layout_builder_route()
+      && !varbase_layout_builder__is_dashboard_route()
+      && ($this->themeHandler->themeExists('gin') || $this->themeHandler->themeExists('claro'))) {
 
-      if (varbase_layout_builder__is_layout_builder_route()
-        && !varbase_layout_builder__is_dashboard_route()) {
-        if ($this->themeHandler->themeExists('gin') || $this->themeHandler->themeExists('claro')) {
-          return TRUE;
-        }
-      }
+      return TRUE;
     }
 
     return FALSE;

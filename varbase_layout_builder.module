@@ -5,13 +5,14 @@
  * Contains varbase_layout_builder.module.
  */
 
- use Drupal\Core\Url;
- use Drupal\Core\Entity\EntityInterface;
- use Drupal\Core\Form\FormStateInterface;
- use Drupal\Core\Template\Attribute;
- use Drupal\varbase_layout_builder\Element\VarbaseLayoutBuilderUX;
- use Drupal\layout_builder\Element\LayoutBuilder;
- 
+use Drupal\Core\Url;
+use Drupal\Core\Entity\EntityInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Template\Attribute;
+use Drupal\varbase_layout_builder\Element\VarbaseLayoutBuilderUX;
+use Drupal\layout_builder\Element\LayoutBuilder;
+use Drupal\Core\Asset\AttachedAssetsInterface;
+
 /**
  * Implements hook_entity_operation().
  */
@@ -396,6 +397,43 @@ function varbase_layout_builder_element_info_alter(array &$info) {
 }
 
 /**
+ * Implements hook_css_alter().
+ */
+function varbase_layout_builder_css_alter(&$css, AttachedAssetsInterface $assets) {
+  if (\Drupal::service('theme.manager')->getActiveTheme()->getName() == \Drupal::config('system.theme')->get('admin')
+    && varbase_layout_builder__is_layout_builder_route()
+    && varbase_layout_builder__is_dashboard_route()) {
+
+    if (\Drupal::service('theme_handler')->themeExists('stable9')) {
+      $stable_theme_css = \Drupal::service('extension.list.theme')->getPath('stable9') . '/css';
+      unset($css[$stable_theme_css . '/layout_builder/layout-builder.css']);
+      unset($css[$stable_theme_css . '/core/dialog/off-canvas.theme.css']);
+      unset($css[$stable_theme_css . '/core/dialog/off-canvas.details.css']);
+      unset($css[$stable_theme_css . '/core/dialog/off-canvas.reset.css']);
+      unset($css[$stable_theme_css . '/core/dialog/off-canvas.base.css']);
+      unset($css[$stable_theme_css . '/core/dialog/off-canvas.table.css']);
+      unset($css[$stable_theme_css . '/core/dialog/off-canvas.tabledrag.css']);
+      unset($css[$stable_theme_css . '/core/dialog/off-canvas.form.css']);
+      unset($css[$stable_theme_css . '/core/dialog/off-canvas.button.css']);
+    }
+
+    unset($css['core/misc/dialog/off-canvas/css/reset.css']);
+    unset($css['core/misc/dialog/off-canvas/css/wrapper.css']);
+    unset($css['core/misc/dialog/off-canvas/css/titlebar.css']);
+    unset($css['core/misc/dialog/off-canvas/css/dropbutton.css']);
+    unset($css['core/misc/dialog/off-canvas/css/messages.css']);
+    unset($css['core/misc/dialog/off-canvas/css/details.css']);
+    unset($css['core/misc/dialog/off-canvas/css/form.css']);
+    unset($css['core/misc/dialog/off-canvas/css/button.css']);
+    unset($css['core/misc/dialog/off-canvas/css/base.css']);
+    unset($css['core/misc/dialog/off-canvas/css/table.css']);
+    unset($css['core/misc/dialog/off-canvas/css/utility.css']);
+    unset($css['core/misc/dialog/off-canvas/css/drupal.css']);
+
+  }
+}
+
+/**
  * Returns true if the current route is a layout builder route.
  *
  * @return bool
@@ -435,8 +473,8 @@ function varbase_layout_builder__is_dashboard_route() {
   $route_name = \Drupal::routeMatch()->getRouteName();
   $dashboard_route = FALSE;
 
-  if ($route_name !== NULL && preg_match('/^(dashboards\.([^.]+\.)?)/', $route_name)
-    && str_contains(\Drupal::requestStack()->getCurrentRequest()->getPathInfo(), 'dashboards')) {
+  if ($route_name !== NULL
+    && (str_contains($route_name, 'dashboards') || str_contains(\Drupal::requestStack()->getCurrentRequest()->getPathInfo(), 'dashboards'))) {
     $dashboard_route = TRUE;
   }
 
