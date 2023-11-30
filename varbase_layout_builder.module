@@ -432,8 +432,8 @@ function varbase_layout_builder__is_dashboard_route() {
   $route_name = \Drupal::routeMatch()->getRouteName();
   $dashboard_route = FALSE;
 
-  if ($route_name !== NULL && preg_match('/^(dashboards\.([^.]+\.)?)/', $route_name)
-    && str_contains(\Drupal::requestStack()->getCurrentRequest()->getPathInfo(), 'dashboards')) {
+  if ($route_name !== NULL
+    && (str_contains($route_name, 'dashboards') || str_contains(\Drupal::requestStack()->getCurrentRequest()->getPathInfo(), 'dashboards'))) {
     $dashboard_route = TRUE;
   }
 
