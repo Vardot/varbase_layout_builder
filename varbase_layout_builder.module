@@ -352,3 +352,22 @@ function varbase_layout_builder_library_info_alter(&$libraries, $extension) {
 
   }
 }
+
+function varbase_layout_builder__is_layout_builder_route() {
+  $layout_builder_route = drupal_static(__FUNCTION__);
+  if ($layout_builder_route !== NULL) {
+    return $layout_builder_route;
+  }
+
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  $layout_builder_route = FALSE;
+
+  if ($route_name !== NULL && preg_match('/^(layout_builder\.([^.]+\.)?)/', $route_name)) {
+    $layout_builder_route = TRUE;
+  }
+
+  $context = NULL;
+  \Drupal::moduleHandler()->alter('varbase_layout_builder__is_layout_builder_route', $layout_builder_route, $context);
+  unset($context);
+  return $layout_builder_route;
+}
