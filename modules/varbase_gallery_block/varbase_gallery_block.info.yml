@@ -1,5 +1,5 @@
-name: "Varbase Gallery block"
-description: "A gallery block contains a title and a gallery of images and videos."
+name: Varbase Gallery block
+description: A gallery block contains a title and a gallery of images and videos.
 type: module
 package: "Varbase Blocks"
 core_version_requirement: ~10

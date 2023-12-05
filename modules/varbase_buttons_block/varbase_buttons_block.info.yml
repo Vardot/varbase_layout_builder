@@ -1,5 +1,5 @@
-name: "Varbase Buttons Block"
-description: "A button block will contain a button with flexible styling."
+name: Varbase Buttons Block
+description: A button block will contain a button with flexible styling.
 type: module
 package: "Varbase Blocks"
 core_version_requirement: ~10

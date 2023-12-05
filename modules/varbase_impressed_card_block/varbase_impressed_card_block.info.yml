@@ -1,5 +1,5 @@
-name: "Varbase Impressed Card block"
-description: "A vertical card contains (media, title, body and link) fields."
+name: Varbase Impressed Card block
+description: A vertical card contains (media, title, body and link) fields.
 type: module
 package: "Varbase Blocks"
 core_version_requirement: ~10
