@@ -12,7 +12,7 @@ use Vardot\Installer\ModuleInstallerFactory;
  */
 function varbase_html_code_block_install() {
 
-  // Processer for install: in varbase_html_code_block.info.yml file.
+  // Processor for install: in varbase_html_code_block.info.yml file.
   // --------------------------------------------------------------------------.
   ModuleInstallerFactory::installList('varbase_html_code_block');
 

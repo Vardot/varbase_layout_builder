@@ -12,7 +12,7 @@ use Vardot\Installer\ModuleInstallerFactory;
  */
 function varbase_rich_text_block_install() {
 
-  // Processer for install: in varbase_rich_text_block.info.yml file.
+  // Processor for install: in varbase_rich_text_block.info.yml file.
   // --------------------------------------------------------------------------.
   ModuleInstallerFactory::installList('varbase_rich_text_block');
 

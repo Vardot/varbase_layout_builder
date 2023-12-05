@@ -20,16 +20,16 @@ function varbase_layout_builder_form_alter(&$form, FormStateInterface $form_stat
   // Only for layout builder forms.
   if (strpos($form_id, '_layout_builder_form') !== FALSE) {
 
-    // Attache the Varbase Layout Builder enhancements libraray.
+    // Attache the Varbase Layout Builder enhancements library.
     $form['#attached']['library'][] = 'varbase_layout_builder/enhancements';
 
-    // Attache the Varbase Layout Builder configure section admin libraray.
+    // Attache the Varbase Layout Builder configure section admin library.
     $form['#attached']['library'][] = 'varbase_layout_builder/configure-section.admin';
 
-    // Attache the Varbase Layout Builder background media libraray.
+    // Attache the Varbase Layout Builder background media library.
     $form['#attached']['library'][] = 'varbase_layout_builder/background-media';
 
-    // Attache the Varbase Layout Builder Colors libraray.
+    // Attache the Varbase Layout Builder Colors library.
     $form['#attached']['library'][] = 'varbase_layout_builder/vlb-colors';
 
     // No revision information or revision log message.
@@ -222,7 +222,7 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
     $form['actions']['#weight'] = -210;
 
     $form['vlb_default'] = [
-      '#type' => 'continer',
+      '#type' => 'container',
       '#weight' => -200,
       '#prefix' => '<hr />',
     ];
@@ -521,10 +521,10 @@ function varbase_layout_builder_form_layout_builder_configure_section_alter(&$fo
       }
     }
 
-    // Attache the Varbase Layout Builder enhancements libraray.
+    // Attache the Varbase Layout Builder enhancements library.
     $form['#attached']['library'][] = 'varbase_layout_builder/enhancements';
 
-    // Attache the Varbase Layout Builder configure section admin libraray.
+    // Attache the Varbase Layout Builder configure section admin library.
     $form['#attached']['library'][] = 'varbase_layout_builder/configure-section.admin';
 
     array_unshift($form['#submit'], '_varbase_layout_builder_submit_section_form');

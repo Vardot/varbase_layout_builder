@@ -7,6 +7,10 @@
 
 use Vardot\Installer\ModuleInstallerFactory;
 
+// Include all helpers and updates.
+include_once __DIR__ . '/includes/helpers.inc';
+include_once __DIR__ . '/includes/updates.inc';
+
 /**
  * Implements hook_install().
  */
@@ -23,6 +27,3 @@ function varbase_layout_builder_install() {
   ModuleInstallerFactory::importConfigsFromScanedDirectory('varbase_layout_builder', '/^layout_builder.style.options.*\\.(yml)$/i');
 
 }
-
-// Load include all updates and apply them.
-\Drupal::moduleHandler()->loadInclude('varbase_layout_builder', 'inc', 'include/updates/all');
