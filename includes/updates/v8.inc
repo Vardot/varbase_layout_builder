@@ -6,6 +6,11 @@
  */
 
 /**
+ * @file
+ * Contains varbase_layout_builder_update_8###(s) hook updates.
+ */
+
+/**
  * Issue #3104761: Add and enable [Entity Blocks] module ( ~1.0 )
  */
 function varbase_layout_builder_update_8101() {

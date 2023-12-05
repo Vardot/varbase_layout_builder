@@ -633,7 +633,8 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
     }
 
     if (isset($breakpoints) && is_array($breakpoints) && count($breakpoints) > 0) {
-      foreach ($breakpoints as $breakpoint_key => $breakpoint_id) {
+      $number_of_breakpoints = count($breakpoints);
+      for ($i = 0; $i < $number_of_breakpoints; $i++) {
         $this->configuration['layout_regions_classes']['section_header'][] = $one_col_layout_class;
       }
     }
