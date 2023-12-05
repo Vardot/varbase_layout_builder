@@ -41,7 +41,7 @@
     "drupal/block_form_alter": "~2",
     "drupal/media_library_form_element": "~2",
     "drupal/bootstrap_layouts": "~5",
-    "drupal/layout_builder_blocks": "1.1.0",
+    "drupal/layout_builder_blocks": "~1",
     "drupal/layout_builder_modal": "~1",
     "drupal/layout_builder_block_sanitizer": "~1",
     "drupal/layout_builder_at": "~2",
@@ -78,10 +78,6 @@
         "https://www.drupal.org/files/issues/2023-01-05/3075067-19.patch",
         "Issue #3273160: Support inline blocks in layout":
         "https://www.drupal.org/files/issues/2022-12-14/3273160-9.patch"
-      },
-      "drupal/layout_builder_blocks": {
-        "Issue #3349066: Limit Layout Builder Blocks to the front-end theme":
-        "https://www.drupal.org/files/issues/2023-11-20/3349066-14.patch"
       }
     }
   }
