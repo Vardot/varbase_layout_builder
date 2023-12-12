@@ -41,7 +41,7 @@
     "drupal/block_form_alter": "~2",
     "drupal/media_library_form_element": "~2",
     "drupal/bootstrap_layouts": "~5",
-    "drupal/layout_builder_blocks": "1.1.0",
+    "drupal/layout_builder_blocks": "1.1.1",
     "drupal/layout_builder_modal": "~1",
     "drupal/layout_builder_at": "~2",
     "drupal/layout_builder_component_attributes": "~2",
