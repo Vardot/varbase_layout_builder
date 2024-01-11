@@ -18,7 +18,7 @@
   line-height: 1.125rem;
 }
 
-#layout-builder-modal .js .button:not(.js-hide)+.ajax-progress--throbber,.media-library-widget-modal .js .button:not(.js-hide)+.ajax-progress--throbber,form.media-form .js .button:not(.js-hide)+.ajax-progress--throbber {
+#layout-builder-modal .js .action-link:not(.js-hide,.button--action)+.ajax-progress--throbber,#layout-builder-modal .js .button:not(.js-hide,.button--action)+.ajax-progress--throbber,.media-library-widget-modal .js .action-link:not(.js-hide,.button--action)+.ajax-progress--throbber,.media-library-widget-modal .js .button:not(.js-hide,.button--action)+.ajax-progress--throbber,form.media-form .js .action-link:not(.js-hide,.button--action)+.ajax-progress--throbber,form.media-form .js .button:not(.js-hide,.button--action)+.ajax-progress--throbber {
   margin-inline-start: 0;
 }
 

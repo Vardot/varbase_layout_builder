@@ -1,10 +1,8 @@
 #layout-builder-modal .field-multiple-table,.media-library-widget-modal .field-multiple-table,form.media-form .field-multiple-table {
-  margin-top: var(--space-m);
-  margin-bottom: var(--space-m);
+  margin-block: var(--space-m);
 }
 
 #layout-builder-modal .form-item--multiple .field-add-more-submit,.media-library-widget-modal .form-item--multiple .field-add-more-submit,form.media-form .form-item--multiple .field-add-more-submit {
-  margin-top: 0;
-  margin-bottom: 0;
+  margin-block: 0;
 }
 

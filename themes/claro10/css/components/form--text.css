@@ -94,13 +94,12 @@
   #layout-builder-modal .form-element,.media-library-widget-modal .form-element,form.media-form .form-element {
     float: none;
     width: 100%;
-    margin-top: .75rem;
-    margin-right: 0;
-    margin-left: 0;
+    margin-block-start: .75rem;
+    margin-inline: 0;
   }
 
   #layout-builder-modal .form-element:first-child,#layout-builder-modal .form-item__label+.form-element,.media-library-widget-modal .form-element:first-child,.media-library-widget-modal .form-item__label+.form-element,form.media-form .form-element:first-child,form.media-form .form-item__label+.form-element {
-    margin-top: 0;
+    margin-block-start: 0;
   }
 }
 

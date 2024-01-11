@@ -44,11 +44,10 @@
 @media screen and (min-width: 36.75rem) {
   #layout-builder-modal .card--horizontal .card__image,.media-library-widget-modal .card--horizontal .card__image,form.media-form .card--horizontal .card__image {
     flex-basis: 35%;
-    border-radius: var(--card-image-border-radius-size) 0 0 var(--card-image-border-radius-size);
-  }
-
-  #layout-builder-modal [dir=rtl] .card--horizontal .card__image,.media-library-widget-modal [dir=rtl] .card--horizontal .card__image,form.media-form [dir=rtl] .card--horizontal .card__image {
-    border-radius: 0 var(--card-image-border-radius-size) var(--card-image-border-radius-size) 0;
+    border-start-start-radius: var(--card-image-border-radius-size);
+    border-start-end-radius: 0;
+    border-end-start-radius: var(--card-image-border-radius-size);
+    border-end-end-radius: 0;
   }
 }
 
@@ -79,12 +78,7 @@
   }
 
   #layout-builder-modal .card--horizontal .card__image~.card__content-wrapper,.media-library-widget-modal .card--horizontal .card__image~.card__content-wrapper,form.media-form .card--horizontal .card__image~.card__content-wrapper {
-    padding-left: var(--space-m);
-  }
-
-  #layout-builder-modal [dir=rtl] .card--horizontal .card__image~.card__content-wrapper,.media-library-widget-modal [dir=rtl] .card--horizontal .card__image~.card__content-wrapper,form.media-form [dir=rtl] .card--horizontal .card__image~.card__content-wrapper {
-    padding-right: var(--space-m);
-    padding-left: var(--space-l);
+    padding-inline-start: var(--space-m);
   }
 }
 
@@ -105,26 +99,24 @@
 }
 
 #layout-builder-modal .card__content-item,.media-library-widget-modal .card__content-item,form.media-form .card__content-item {
-  margin-top: 0;
-  margin-bottom: var(--space-m);
+  margin-block: 0 var(--space-m);
 }
 
 #layout-builder-modal .card__content-item:last-child,.media-library-widget-modal .card__content-item:last-child,form.media-form .card__content-item:last-child {
-  margin-bottom: 0;
+  margin-block-end: 0;
 }
 
 #layout-builder-modal .card__footer,.media-library-widget-modal .card__footer,form.media-form .card__footer {
   order: 100;
-  margin-top: var(--space-l);
+  margin-block-start: var(--space-l);
 }
 
-#layout-builder-modal .card__footer .action-links,#layout-builder-modal [dir=rtl] .card__footer .action-links,.media-library-widget-modal .card__footer .action-links,.media-library-widget-modal [dir=rtl] .card__footer .action-links,form.media-form .card__footer .action-links,form.media-form [dir=rtl] .card__footer .action-links {
-  margin-top: 0;
-  margin-bottom: 0;
+#layout-builder-modal .card__footer .action-links,.media-library-widget-modal .card__footer .action-links,form.media-form .card__footer .action-links {
+  margin-block: 0;
   text-align: right;
 }
 
-#layout-builder-modal [dir=rtl] .card__footer .action-links,.media-library-widget-modal [dir=rtl] .card__footer .action-links,form.media-form [dir=rtl] .card__footer .action-links {
+#layout-builder-modal [dir=rtl] :is(.card__footer .action-links),.media-library-widget-modal [dir=rtl] :is(.card__footer .action-links),form.media-form [dir=rtl] :is(.card__footer .action-links) {
   text-align: left;
 }
 

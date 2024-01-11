@@ -173,7 +173,7 @@
   background: none;
 }
 
-#layout-builder-modal td>.form-item>.form-element,#layout-builder-modal td>.ajax-new-content>.form-item>.form-element,.media-library-widget-modal td>.form-item>.form-element,.media-library-widget-modal td>.ajax-new-content>.form-item>.form-element,form.media-form td>.form-item>.form-element,form.media-form td>.ajax-new-content>.form-item>.form-element {
+#layout-builder-modal td>.form-item>.form-element,#layout-builder-modal td>.ajax-new-content>.form-item>.form-element,#layout-builder-modal td>.form-item>.claro-autocomplete,#layout-builder-modal td>.form-item>.claro-autocomplete>.form-element,#layout-builder-modal td>.ajax-new-content>.form-item>.claro-autocomplete,#layout-builder-modal td>.ajax-new-content>.form-item>.claro-autocomplete>.form-element,.media-library-widget-modal td>.form-item>.form-element,.media-library-widget-modal td>.ajax-new-content>.form-item>.form-element,.media-library-widget-modal td>.form-item>.claro-autocomplete,.media-library-widget-modal td>.form-item>.claro-autocomplete>.form-element,.media-library-widget-modal td>.ajax-new-content>.form-item>.claro-autocomplete,.media-library-widget-modal td>.ajax-new-content>.form-item>.claro-autocomplete>.form-element,form.media-form td>.form-item>.form-element,form.media-form td>.ajax-new-content>.form-item>.form-element,form.media-form td>.form-item>.claro-autocomplete,form.media-form td>.form-item>.claro-autocomplete>.form-element,form.media-form td>.ajax-new-content>.form-item>.claro-autocomplete,form.media-form td>.ajax-new-content>.form-item>.claro-autocomplete>.form-element {
   width: 100%;
 }
 

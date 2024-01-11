@@ -511,11 +511,6 @@ body {
     border-bottom: 0;
   }
 
-  .inline-block-create-button,
-  .inline-block-list__item {
-    width: auto;
-  }
-
   .inline-block-list {
 
     li {
@@ -798,6 +793,12 @@ body {
         display: flow-root;
       }
     }
+
+    fieldset,
+    .fieldset {
+      border: 0;
+    }
+
   }
 }
 

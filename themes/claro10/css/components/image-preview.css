@@ -7,17 +7,17 @@
   line-height: 0;
 }
 
+#layout-builder-modal .image-preview img,.media-library-widget-modal .image-preview img,form.media-form .image-preview img {
+  background-image: linear-gradient(-45deg, var(--color-pattern) 25%, transparent 26%), linear-gradient(-45deg, var(--color-pattern) 25%, transparent 26%), linear-gradient(135deg, var(--color-pattern) 25%, transparent 26%), linear-gradient(135deg, var(--color-pattern) 25%, transparent 26%);
+  background-position: 0 0, var(--size-pattern-square) var(--size-pattern-square), var(--size-pattern-square) var(--size-pattern-square), 0 0;
+  background-size: calc(var(--size-pattern-square)*2) calc(var(--size-pattern-square)*2);
+}
+
 #layout-builder-modal .image-preview__img-wrapper,.media-library-widget-modal .image-preview__img-wrapper,form.media-form .image-preview__img-wrapper {
   display: inline-block;
   max-width: 100%;
   background-color: var(--color-white);
   box-shadow: inset 0 0 var(--size-pattern-square) var(--color-pattern);
-}
-
-#layout-builder-modal .image-preview img,.media-library-widget-modal .image-preview img,form.media-form .image-preview img {
-  background-image: linear-gradient(-45deg, var(--color-pattern) 25%, transparent 26%), linear-gradient(-45deg, var(--color-pattern) 25%, transparent 26%), linear-gradient(135deg, var(--color-pattern) 25%, transparent 26%), linear-gradient(135deg, var(--color-pattern) 25%, transparent 26%);
-  background-position: 0 0, var(--size-pattern-square) var(--size-pattern-square), var(--size-pattern-square) var(--size-pattern-square), 0 0;
-  background-size: calc(var(--size-pattern-square)*2) calc(var(--size-pattern-square)*2);
 }
 
 #layout-builder-modal .image-widget .file.file,.media-library-widget-modal .image-widget .file.file,form.media-form .image-widget .file.file {

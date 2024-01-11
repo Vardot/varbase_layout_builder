@@ -17,6 +17,7 @@ module.exports = {
     // Theme
     'vlb-enhancements.base': ['./scss/theme/vlb-enhancements.base.scss'],
     'layout-builder-ux': ['./scss/theme/layout-builder-ux.scss'],
+    'vlb-tabs-group.theme': ['./scss/theme/vlb-tabs-group.theme.scss']
     
   },
   output: {

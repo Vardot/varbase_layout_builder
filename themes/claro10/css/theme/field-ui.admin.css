@@ -73,3 +73,7 @@
   font-size: 1em;
 }
 
+#layout-builder-modal .allowed-values-table .form-item:where(:not(.hidden)),.media-library-widget-modal .allowed-values-table .form-item:where(:not(.hidden)),form.media-form .allowed-values-table .form-item:where(:not(.hidden)) {
+  display: inline-table;
+}
+

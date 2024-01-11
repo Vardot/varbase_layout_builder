@@ -3,6 +3,8 @@ enhancements:
   css:
     theme:
       css/theme/vlb-enhancements.base.css: {}
+      css/theme/vlb-tabs-group.theme.css: {}
+      css/theme/layout-builder-ux.css: {}
   dependencies:
     - core/drupal
     - core/jquery
