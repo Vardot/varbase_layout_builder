@@ -218,15 +218,12 @@
 }
 
 #layout-builder-modal .indentation,.media-library-widget-modal .indentation,form.media-form .indentation {
-  background: none !important;
-}
-
-#layout-builder-modal .indentation,.media-library-widget-modal .indentation,form.media-form .indentation {
   position: relative;
   left: calc(var(--space-xs)*-0.5);
   float: left;
   width: 1.5625rem;
   height: 1.5625rem;
+  background: none !important;
   line-height: 0;
 }
 

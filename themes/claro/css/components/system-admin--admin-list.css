@@ -1,6 +1,5 @@
 #layout-builder-modal .admin-list,.media-library-widget-modal .admin-list,form.media-form .admin-list {
-  margin-top: 1em;
-  margin-bottom: 2em;
+  margin-block: 1em 2em;
   padding: 0;
 }
 
@@ -9,12 +8,8 @@
 }
 
 #layout-builder-modal .admin-item,.media-library-widget-modal .admin-item,form.media-form .admin-item {
-  padding: .75em 1.5em .75em 3em;
-}
-
-#layout-builder-modal [dir=rtl] .admin-item,.media-library-widget-modal [dir=rtl] .admin-item,form.media-form [dir=rtl] .admin-item {
-  padding-right: 3em;
-  padding-left: 1.5em;
+  padding-block: .75em;
+  padding-inline: 3em 1.5em;
 }
 
 #layout-builder-modal .admin-item:not(:last-child),.media-library-widget-modal .admin-item:not(:last-child),form.media-form .admin-item:not(:last-child) {
@@ -28,23 +23,16 @@
 #layout-builder-modal .admin-item__link,.media-library-widget-modal .admin-item__link,form.media-form .admin-item__link {
   position: relative;
   display: inline-block;
-  margin-left: -1.5em;
-  padding-left: 1.5em;
+  margin-inline-start: -1.5em;
+  padding-inline-start: 1.5em;
   -webkit-text-decoration: none;
           text-decoration: none;
 }
 
-#layout-builder-modal [dir=rtl] .admin-item__link,.media-library-widget-modal [dir=rtl] .admin-item__link,form.media-form [dir=rtl] .admin-item__link {
-  margin-right: -1.5em;
-  margin-left: 0;
-  padding-right: 1.5em;
-  padding-left: 0;
-}
-
 #layout-builder-modal .admin-item__link::before,.media-library-widget-modal .admin-item__link::before,form.media-form .admin-item__link::before {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   display: block;
   width: 1em;
   height: 1.5em;
@@ -54,8 +42,6 @@
 }
 
 #layout-builder-modal [dir=rtl] .admin-item__link::before,.media-library-widget-modal [dir=rtl] .admin-item__link::before,form.media-form [dir=rtl] .admin-item__link::before {
-  right: 0;
-  left: auto;
   transform: scaleX(-1);
 }
 
@@ -73,11 +59,8 @@
 }
 
 #layout-builder-modal .admin-item__description,.media-library-widget-modal .admin-item__description,form.media-form .admin-item__description {
-  margin: .5em 0 .25em;
+  margin-block: .5em .25em;
+  margin-inline: 0;
   color: var(--color-gray-800);
-}
-
-#layout-builder-modal [dir=rtl] .admin-item__description,.media-library-widget-modal [dir=rtl] .admin-item__description,form.media-form [dir=rtl] .admin-item__description {
-  margin-right: 0;
 }
 

@@ -1,16 +1,14 @@
 #layout-builder-modal .button,.media-library-widget-modal .button,form.media-form .button {
-  border: 1px solid transparent !important;
-}
-
-#layout-builder-modal .button,.media-library-widget-modal .button,form.media-form .button {
   display: inline-block;
-  margin: var(--space-m) var(--space-s) var(--space-m) 0;
+  margin-block: var(--space-m);
+  margin-inline: 0 var(--space-s);
   padding: calc(var(--space-m) - 1px) calc(var(--space-l) - 1px);
   cursor: pointer;
   text-align: center;
   -webkit-text-decoration: none;
           text-decoration: none;
   color: var(--button-fg-color);
+  border: 1px solid transparent;
   border-radius: var(--button-border-radius-size);
   background-color: var(--button-bg-color);
   font-size: var(--font-size-base);
@@ -21,10 +19,6 @@
   -webkit-font-smoothing: antialiased;
 }
 
-#layout-builder-modal [dir=rtl] .button,.media-library-widget-modal [dir=rtl] .button,form.media-form [dir=rtl] .button {
-  margin: var(--space-m) 0 var(--space-m) var(--space-s);
-}
-
 #layout-builder-modal .button:not(:focus),.media-library-widget-modal .button:not(:focus),form.media-form .button:not(:focus) {
   box-shadow: 0 1px 2px rgba(0, 0, 0, .25);
 }
@@ -32,6 +26,7 @@
 #layout-builder-modal .button:hover,.media-library-widget-modal .button:hover,form.media-form .button:hover {
   -webkit-text-decoration: none;
           text-decoration: none;
+  color: var(--button-fg-color);
   background-color: var(--button--hover-bg-color);
 }
 
@@ -45,20 +40,17 @@
 }
 
 #layout-builder-modal .no-touchevents .button--small,.media-library-widget-modal .no-touchevents .button--small,form.media-form .no-touchevents .button--small {
-  margin: var(--space-s) var(--space-xs) var(--space-s) 0;
+  margin-block: var(--space-s);
+  margin-inline: 0 var(--space-xs);
   padding: calc(var(--space-xs) - 1px) calc(var(--space-m) - 1px);
   font-size: var(--font-size-xs);
 }
 
 #layout-builder-modal .no-touchevents .button--extrasmall,.media-library-widget-modal .no-touchevents .button--extrasmall,form.media-form .no-touchevents .button--extrasmall {
-  margin: var(--space-xs) var(--space-xs) var(--space-xs) 0;
+  margin-block: var(--space-xs);
+  margin-inline: 0 var(--space-xs);
   padding: calc(var(--space-xs)/2 - 1px) calc(var(--space-s) - 1px);
   font-size: var(--font-size-xs);
-}
-
-#layout-builder-modal [dir=rtl].no-touchevents .button--small,#layout-builder-modal [dir=rtl].no-touchevents .button--extrasmall,.media-library-widget-modal [dir=rtl].no-touchevents .button--small,.media-library-widget-modal [dir=rtl].no-touchevents .button--extrasmall,form.media-form [dir=rtl].no-touchevents .button--small,form.media-form [dir=rtl].no-touchevents .button--extrasmall {
-  margin-right: 0;
-  margin-left: var(--space-xs);
 }
 
 #layout-builder-modal .button--action,.media-library-widget-modal .button--action,form.media-form .button--action {
@@ -66,21 +58,10 @@
 }
 
 #layout-builder-modal .button--action::before,.media-library-widget-modal .button--action::before,form.media-form .button--action::before {
-  margin-left: -0.25em;
-  padding-right: .25em;
+  margin-inline: -0.25em 0;
+  padding-inline: 0 .25em;
   content: "+";
   font-weight: 900;
-}
-
-#layout-builder-modal [dir=rtl] .button--action::before,.media-library-widget-modal [dir=rtl] .button--action::before,form.media-form [dir=rtl] .button--action::before {
-  margin-right: -0.25em;
-  margin-left: 0;
-  padding-right: 0;
-  padding-left: .25em;
-}
-
-#layout-builder-modal a.button:hover,#layout-builder-modal a.button:active,.media-library-widget-modal a.button:hover,.media-library-widget-modal a.button:active,form.media-form a.button:hover,form.media-form a.button:active {
-  color: var(--button-fg-color);
 }
 
 #layout-builder-modal .button--primary,.media-library-widget-modal .button--primary,form.media-form .button--primary {
@@ -88,17 +69,9 @@
   background-color: var(--button-bg-color--primary);
 }
 
-#layout-builder-modal .button--primary:hover,.media-library-widget-modal .button--primary:hover,form.media-form .button--primary:hover {
+#layout-builder-modal .button--primary:is(:hover,:active),.media-library-widget-modal .button--primary:is(:hover,:active),form.media-form .button--primary:is(:hover,:active) {
   color: var(--button-fg-color--primary);
   background-color: var(--button--hover-bg-color--primary);
-}
-
-#layout-builder-modal .button--primary:active,.media-library-widget-modal .button--primary:active,form.media-form .button--primary:active {
-  background-color: var(--button--active-bg-color--primary);
-}
-
-#layout-builder-modal a.button--primary:hover,#layout-builder-modal a.button--primary:active,.media-library-widget-modal a.button--primary:hover,.media-library-widget-modal a.button--primary:active,form.media-form a.button--primary:hover,form.media-form a.button--primary:active {
-  color: var(--button-fg-color--primary);
 }
 
 #layout-builder-modal .button--danger,.media-library-widget-modal .button--danger,form.media-form .button--danger {
@@ -106,27 +79,14 @@
   background-color: var(--button-bg-color--danger);
 }
 
-#layout-builder-modal .button--danger:hover,.media-library-widget-modal .button--danger:hover,form.media-form .button--danger:hover {
+#layout-builder-modal .button--danger:is(:hover,:active),.media-library-widget-modal .button--danger:is(:hover,:active),form.media-form .button--danger:is(:hover,:active) {
   color: var(--button-fg-color--danger);
   background-color: var(--button--hover-bg-color--danger);
 }
 
-#layout-builder-modal .button--danger:active,.media-library-widget-modal .button--danger:active,form.media-form .button--danger:active {
-  background-color: var(--button--active-bg-color--danger);
-}
-
-#layout-builder-modal a.button--danger:hover,#layout-builder-modal a.button--danger:active,.media-library-widget-modal a.button--danger:hover,.media-library-widget-modal a.button--danger:active,form.media-form a.button--danger:hover,form.media-form a.button--danger:active {
-  color: var(--button-fg-color--danger);
-}
-
-#layout-builder-modal .button:disabled,#layout-builder-modal .button.is-disabled,.media-library-widget-modal .button:disabled,.media-library-widget-modal .button.is-disabled,form.media-form .button:disabled,form.media-form .button.is-disabled {
+#layout-builder-modal .button:is(:disabled,.is-disabled),.media-library-widget-modal .button:is(:disabled,.is-disabled),form.media-form .button:is(:disabled,.is-disabled) {
   color: var(--button--disabled-fg-color);
   background-color: var(--button--disabled-bg-color);
-}
-
-#layout-builder-modal .button--primary:disabled,#layout-builder-modal .button--primary.is-disabled,.media-library-widget-modal .button--primary:disabled,.media-library-widget-modal .button--primary.is-disabled,form.media-form .button--primary:disabled,form.media-form .button--primary.is-disabled {
-  color: var(--button--disabled-fg-color--primary);
-  background-color: var(--button--disabled-bg-color--primary);
 }
 
 #layout-builder-modal .button.is-disabled,.media-library-widget-modal .button.is-disabled,form.media-form .button.is-disabled {

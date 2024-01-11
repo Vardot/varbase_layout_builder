@@ -3,18 +3,15 @@
   --module-table-cell-padding-horizontal: calc(var(--space-m) - (var(--input-border-size) * 2));
 }
 
-#layout-builder-modal .modules-table-filter,.media-library-widget-modal .modules-table-filter,form.media-form .modules-table-filter {
+#layout-builder-modal .modules-table-filter,#layout-builder-modal .permissions-table-filter,.media-library-widget-modal .modules-table-filter,.media-library-widget-modal .permissions-table-filter,form.media-form .modules-table-filter,form.media-form .permissions-table-filter {
   padding: .25rem var(--space-l);
   border: 1px solid var(--color-gray-200);
   border-radius: 2px 2px 0 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
 }
 
-#layout-builder-modal .modules-table-filter .form-item__description,.media-library-widget-modal .modules-table-filter .form-item__description,form.media-form .modules-table-filter .form-item__description {
+#layout-builder-modal .modules-table-filter .form-item__description,#layout-builder-modal .permissions-table-filter .form-item__description,.media-library-widget-modal .modules-table-filter .form-item__description,.media-library-widget-modal .permissions-table-filter .form-item__description,form.media-form .modules-table-filter .form-item__description,form.media-form .permissions-table-filter .form-item__description {
   position: absolute !important;
-}
-
-#layout-builder-modal .modules-table-filter .form-item__description,.media-library-widget-modal .modules-table-filter .form-item__description,form.media-form .modules-table-filter .form-item__description {
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
   width: 1px;

@@ -29,6 +29,7 @@ module.exports = {
     'components/media_library': ['./themes/gin/scss/components/media_library.scss'],
     'components/responsive_preview': ['./themes/gin/scss/components/responsive_preview.scss'],
     'components/tabs': ['./themes/gin/scss/components/tabs.scss'],
+    'components/tabs-group': ['./themes/gin/scss/components/tabs-group.scss'],
     'components/workbench': ['./themes/gin/scss/components/workbench.scss'],
     'components/autosave': ['./themes/gin/scss/components/autosave.scss'],
     'components/description_toggle': ['./themes/gin/scss/components/description_toggle.scss'],

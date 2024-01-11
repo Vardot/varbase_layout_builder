@@ -216,9 +216,9 @@
 
 @media (min-width: 48em) {
   #layout-builder-modal .is-horizontal .tabs--primary .tabs__link,.media-library-widget-modal .is-horizontal .tabs--primary .tabs__link,form.media-form .is-horizontal .tabs--primary .tabs__link {
-    padding: var(--gin-spacing-s) var(--gin-spacing-m);
-    min-height: 0;
-    border-radius: 48px;
+    padding: calc(var(--gin-spacing-s) - 2px) var(--gin-spacing-m);
+    min-height: 2.5rem;
+    border-radius: 2.5rem;
   }
 
   #layout-builder-modal [dir=ltr] .is-horizontal .tabs--primary .tabs__link,.media-library-widget-modal [dir=ltr] .is-horizontal .tabs--primary .tabs__link,form.media-form [dir=ltr] .is-horizontal .tabs--primary .tabs__link {

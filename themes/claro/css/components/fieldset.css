@@ -21,25 +21,25 @@
   display: contents;
   float: left;
   width: 100%;
-  margin-bottom: var(--space-m);
+  margin-block-end: var(--space-m);
   color: var(--color-gray-800);
   font-weight: bold;
+}
+
+#layout-builder-modal .fieldset__legend--composite,.media-library-widget-modal .fieldset__legend--composite,form.media-form .fieldset__legend--composite {
+  float: none;
+  width: auto;
+  margin-block-start: calc(var(--space-xs)/2);
+  margin-block-end: calc(var(--space-xs)/2);
+  color: inherit;
+  font-size: var(--font-size-s);
+  line-height: 1.125rem;
 }
 
 @media screen and (min-width: 48em) {
   #layout-builder-modal .fieldset__legend,.media-library-widget-modal .fieldset__legend,form.media-form .fieldset__legend {
     margin-bottom: var(--space-l);
   }
-}
-
-#layout-builder-modal .fieldset__legend--composite,.media-library-widget-modal .fieldset__legend--composite,form.media-form .fieldset__legend--composite {
-  float: none;
-  width: auto;
-  margin-top: calc(var(--space-xs)/2);
-  margin-bottom: calc(var(--space-xs)/2);
-  color: inherit;
-  font-size: var(--font-size-s);
-  line-height: 1.125rem;
 }
 
 #layout-builder-modal .fieldset__legend--group,.media-library-widget-modal .fieldset__legend--group,form.media-form .fieldset__legend--group {
@@ -53,18 +53,6 @@
   line-height: var(--space-m);
 }
 
-@media screen and (min-width: 48em) {
-  #layout-builder-modal .fieldset__label,.media-library-widget-modal .fieldset__label,form.media-form .fieldset__label {
-    padding-right: var(--space-l);
-    padding-left: var(--space-l);
-  }
-}
-
-#layout-builder-modal .fieldset__label--group,.media-library-widget-modal .fieldset__label--group,form.media-form .fieldset__label--group {
-  padding: 0;
-  line-height: inherit;
-}
-
 #layout-builder-modal .fieldset__label.is-disabled,.media-library-widget-modal .fieldset__label.is-disabled,form.media-form .fieldset__label.is-disabled {
   color: var(--input--disabled-fg-color);
 }
@@ -73,9 +61,25 @@
   color: var(--input--error-color);
 }
 
+#layout-builder-modal .fieldset__label--group,.media-library-widget-modal .fieldset__label--group,form.media-form .fieldset__label--group {
+  padding: 0;
+  line-height: inherit;
+}
+
+@media screen and (min-width: 48em) {
+  #layout-builder-modal .fieldset__label,.media-library-widget-modal .fieldset__label,form.media-form .fieldset__label {
+    padding-right: var(--space-l);
+    padding-left: var(--space-l);
+  }
+
+  #layout-builder-modal .fieldset__label--group,.media-library-widget-modal .fieldset__label--group,form.media-form .fieldset__label--group {
+    padding: 0;
+  }
+}
+
 #layout-builder-modal .fieldset__description,.media-library-widget-modal .fieldset__description,form.media-form .fieldset__description {
-  margin-top: .375rem;
-  margin-bottom: .375rem;
+  margin-block-start: .375rem;
+  margin-block-end: .375rem;
   color: var(--input-fg-color--description);
   font-size: var(--font-size-xs);
   line-height: 1.0625rem;
@@ -86,8 +90,8 @@
 }
 
 #layout-builder-modal .fieldset__error-message,.media-library-widget-modal .fieldset__error-message,form.media-form .fieldset__error-message {
-  margin-top: .375rem;
-  margin-bottom: .375rem;
+  margin-block-start: .375rem;
+  margin-block-end: .375rem;
   color: var(--input--error-color);
   font-size: var(--font-size-xs);
   font-weight: normal;
@@ -98,6 +102,10 @@
   margin: var(--space-m);
 }
 
+#layout-builder-modal .fieldset__wrapper>.container-inline,.media-library-widget-modal .fieldset__wrapper>.container-inline,form.media-form .fieldset__wrapper>.container-inline {
+  padding: 0;
+}
+
 @media screen and (min-width: 48em) {
   #layout-builder-modal .fieldset__wrapper,.media-library-widget-modal .fieldset__wrapper,form.media-form .fieldset__wrapper {
     margin: var(--space-l) var(--space-l) calc(var(--space-m) + var(--space-s));
@@ -105,14 +113,10 @@
 }
 
 #layout-builder-modal .fieldset__legend--visible~.fieldset__wrapper,.media-library-widget-modal .fieldset__legend--visible~.fieldset__wrapper,form.media-form .fieldset__legend--visible~.fieldset__wrapper {
-  margin-top: 0;
+  margin-block-start: 0;
 }
 
 #layout-builder-modal .fieldset__wrapper--group,.media-library-widget-modal .fieldset__wrapper--group,form.media-form .fieldset__wrapper--group {
   margin: 0;
-}
-
-#layout-builder-modal .fieldset__wrapper>.container-inline,.media-library-widget-modal .fieldset__wrapper>.container-inline,form.media-form .fieldset__wrapper>.container-inline {
-  padding: 0;
 }
 

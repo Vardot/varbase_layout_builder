@@ -364,11 +364,11 @@
 
 #layout-builder-modal .media-library-select-all,.media-library-widget-modal .media-library-select-all,form.media-form .media-library-select-all {
   color: var(--gin-color-title);
-  padding: 1rem;
+  padding: 0 var(--gin-spacing-m) var(--gin-spacing-m);
   margin-top: 0;
   background: var(--gin-bg-layer);
-  border-bottom-left-radius: var(--gin-border-m);
-  border-bottom-right-radius: var(--gin-border-m);
+  border-bottom: 1px solid var(--gin-border-color-table-header);
+  border-radius: 0;
   box-sizing: border-box;
 }
 
@@ -378,14 +378,6 @@
 
 #layout-builder-modal [dir=rtl] .media-library-select-all,.media-library-widget-modal [dir=rtl] .media-library-select-all,form.media-form [dir=rtl] .media-library-select-all {
   margin-right: 0;
-}
-
-@media (min-width: 61em) {
-  #layout-builder-modal .media-library-select-all,.media-library-widget-modal .media-library-select-all,form.media-form .media-library-select-all {
-    z-index: 98;
-    position: sticky;
-    top: calc(var(--gin-toolbar-y-offset) + var(--gin-sticky-offset));
-  }
 }
 
 #layout-builder-modal .views-field-thumbnail__target-id img,.media-library-widget-modal .views-field-thumbnail__target-id img,form.media-form .views-field-thumbnail__target-id img {

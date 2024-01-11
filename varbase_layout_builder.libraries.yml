@@ -159,6 +159,7 @@ gin:
       themes/gin/css/components/revisions.css: {}
       themes/gin/css/components/sidebar.css: {}
       themes/gin/css/components/tabs.css: {}
+      themes/gin/css/components/tabs-group.css: {}
       themes/gin/css/components/toolbar_secondary.css: {}
       themes/gin/css/components/toolbar.css: {}
       themes/gin/css/components/webform.css: {}
