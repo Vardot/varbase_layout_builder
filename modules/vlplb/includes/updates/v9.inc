@@ -5,6 +5,8 @@
  * Contains vlplb_update_9###(s) hook updates.
  */
 
+use Vardot\Installer\ModuleInstallerFactory;
+
 /**
  * Issue #3272216: Switch to use the Module Installer Factory.
  *
