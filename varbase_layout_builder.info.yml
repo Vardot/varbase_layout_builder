@@ -17,7 +17,6 @@ install:
   - bootstrap_layouts
   - layout_builder_blocks
   - layout_builder_modal
-  - layout_builder_block_sanitizer
   - layout_builder_at
   - layout_builder_component_attributes
   - lb_ux

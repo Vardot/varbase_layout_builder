@@ -18,3 +18,14 @@ function varbase_layout_builder_update_90001() {
   // after all used modules.
   ModuleInstallerFactory::setModuleWeightAfterInstallation('varbase_layout_builder');
 }
+
+/**
+ * Issue Issue #3415842: Disable Layout Builder Block Sanitizer module.
+ *
+ * And uninstall it, as it is no longer supported.
+ */
+function varbase_layout_builder_update_90002() {
+  if (\Drupal::moduleHandler()->moduleExists('layout_builder_block_sanitizer')) {
+    \Drupal::service('module_installer')->uninstall(['layout_builder_block_sanitizer'], FALSE);
+  }
+}
