@@ -380,9 +380,9 @@
   integrity sha512-eF2rxCRulEKXHTRiDrDy6erMYWqNw4LPdQ8UQA4huuxaQsVeRPFl2oM8oDGxMFhJUWZf9McpLtJasDDZb/Bpeg==
 
 "@jridgewell/trace-mapping@^0.3.20", "@jridgewell/trace-mapping@^0.3.9":
-  version "0.3.21"
-  resolved "https://registry.yarnpkg.com/@jridgewell/trace-mapping/-/trace-mapping-0.3.21.tgz#5dc1df7b3dc4a6209e503a924e1ca56097a2bb15"
-  integrity sha512-SRfKmRe1KvYnxjEMtxEr+J4HIeMX5YBg/qhRHpxEIGjhX1rshcHlnFUE9K0GazhVKWM7B+nARSkV8LuvJdJ5/g==
+  version "0.3.22"
+  resolved "https://registry.yarnpkg.com/@jridgewell/trace-mapping/-/trace-mapping-0.3.22.tgz#72a621e5de59f5f1ef792d0793a82ee20f645e4c"
+  integrity sha512-Wf963MzWtA2sjrNt+g18IAln9lKnlRp+K2eH4jjIoF1wYeq3aMREpG09xhlhdzS0EjwU7qmUJYangWa+151vZw==
   dependencies:
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
@@ -1341,9 +1341,9 @@ copy-webpack-plugin@~11.0.0:
     serialize-javascript "^6.0.0"
 
 core-js@^3.9.1:
-  version "3.35.0"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.35.0.tgz#58e651688484f83c34196ca13f099574ee53d6b4"
-  integrity sha512-ntakECeqg81KqMueeGJ79Q5ZgQNR+6eaE8sxGCx62zMbAIj65q+uYvatToew3m6eAGdU4gNZwpZ34NMe4GYswg==
+  version "3.35.1"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-3.35.1.tgz#9c28f8b7ccee482796f8590cc8d15739eaaf980c"
+  integrity sha512-IgdsbxNyMskrTFxa9lWHyMwAJU5gXOPP+1yO+K59d50VLVAIDAbs7gIv705KzALModfK3ZrSZTPNpC0PQgIZuw==
 
 core-util-is@~1.0.0:
   version "1.0.3"
@@ -1714,9 +1714,9 @@ ejs@3.1.8:
     jake "^10.8.5"
 
 electron-to-chromium@^1.4.601:
-  version "1.4.639"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.639.tgz#c6f9cc685f9efb2980d2cfc95a27f8142c9adf28"
-  integrity sha512-CkKf3ZUVZchr+zDpAlNLEEy2NJJ9T64ULWaDgy3THXXlPVPkLu3VOs9Bac44nebVtdwl2geSj6AxTtGDOxoXhg==
+  version "1.4.642"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.642.tgz#eb380fa8b58e515c641d642ba452fa2c453c2e4f"
+  integrity sha512-M4+u22ZJGpk4RY7tne6W+APkZhnnhmAH48FNl8iEFK2lEgob+U5rUQsIqQhvAwCXYpfd3H20pHK/ENsCvwTbsA==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
@@ -4199,9 +4199,9 @@ postcss-pseudo-class-any-link@^8.0.2:
     postcss-selector-parser "^6.0.10"
 
 postcss-pxtorem@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/postcss-pxtorem/-/postcss-pxtorem-6.0.0.tgz#f228a4d05d8a73f0642eabae950e2b19836366d7"
-  integrity sha512-ZRXrD7MLLjLk2RNGV6UA4f5Y7gy+a/j1EqjAfp9NdcNYVjUMvg5HTYduTjSkKBkRkfqbg/iKrjMO70V4g1LZeg==
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/postcss-pxtorem/-/postcss-pxtorem-6.1.0.tgz#7e6410e30426adef53bad6c4c5f00cd5f586937c"
+  integrity sha512-ROODSNci9ADal3zUcPHOF/K83TiCgNSPXQFSbwyPHNV8ioHIE4SaC+FPOufd8jsr5jV2uIz29v1Uqy1c4ov42g==
 
 postcss-replace-overflow-wrap@^4.0.0:
   version "4.0.0"

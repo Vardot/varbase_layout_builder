@@ -499,6 +499,13 @@ form.media-form {
     background-color: var(--gin-bg-input) !important;
   }
 
+  .ck-source-editing-area {
+    textarea {
+      height: -webkit-fill-available;
+      border-radius: 0;
+    }
+  }
+
 }
 
 body {

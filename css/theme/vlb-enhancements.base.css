@@ -533,6 +533,11 @@ form.media-form input[type=text]:focus {
   background-color: var(--gin-bg-input) !important;
 }
 
+#layout-builder-modal .ck-source-editing-area textarea {
+  height: -webkit-fill-available;
+  border-radius: 0;
+}
+
 body .ui-dialog .ui-dialog-titlebar-close {
   margin-top: .08rem !important;
   height: 2rem !important;
