@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.varbase_accordion_block
+id: block_content.varbase_accordion_block
+target_entity_type_id: block_content
+target_bundle: varbase_accordion_block
+default_langcode: site_default
+language_alterable: false

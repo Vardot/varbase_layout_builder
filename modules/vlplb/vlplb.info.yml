@@ -32,3 +32,5 @@ install:
   - varbase_featured_card_block
   - varbase_impressed_card_block
   - varbase_overlay_card_block
+  - varbase_accordion_block
+

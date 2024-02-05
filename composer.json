@@ -51,6 +51,7 @@
     "drupal/bootstrap_layout_builder": "2.1.2",
     "drupal/block_library": "~1",
     "drupal/length_indicator": "~1",
+    "drupal/paragraphs": "~1",
     "npm-asset/aos": "~2"
   },
   "extra": {

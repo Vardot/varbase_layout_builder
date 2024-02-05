@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: varbase_accordion_block
+label: Accordion
+revision: 0
+description: 'An Accordion block, Contents list of Accordion items with accordion headers and bodies.'

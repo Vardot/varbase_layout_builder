@@ -409,6 +409,7 @@ third_party_settings:
           - varbase_media_block
           - varbase_rich_text_block
           - varbase_simple_text_block
+          - varbase_accordion_block
         Dashboard: {  }
         Devel: {  }
         'Entity Block':
@@ -428,6 +429,7 @@ third_party_settings:
           - 'inline_block:varbase_rich_text_block'
           - 'inline_block:varbase_simple_text_block'
           - 'inline_block:varbase_gallery_block'
+          - 'inline_block:varbase_accordion_block'
         'Lists (Views)':
           - 'views_block:varbase_blog-blog_listing_block'
           - 'views_block:varbase_blog-blog_listing_by_blog_category_block'

@@ -1,0 +1,25 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.varbase_accordion_block
+    - field.field.block_content.varbase_accordion_block.field_accordion_items
+  module:
+    - entity_reference_revisions
+id: block_content.varbase_accordion_block.default
+targetEntityType: block_content
+bundle: varbase_accordion_block
+mode: default
+content:
+  field_accordion_items:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true
