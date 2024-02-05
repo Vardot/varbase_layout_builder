@@ -13,7 +13,7 @@ field_name: field_body
 entity_type: paragraph
 bundle: accordion_item
 label: Body
-description: ''
+description: 'The detailed information revealed when the accordion expanded.'
 required: false
 translatable: false
 default_value: {  }

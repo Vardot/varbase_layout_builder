@@ -4,4 +4,4 @@ dependencies: {  }
 id: varbase_accordion_block
 label: Accordion
 revision: 0
-description: 'An Accordion block, Contents list of Accordion items with accordion headers and bodies.'
+description: 'An accordion block, organizes content into expandable sections, each with a header for summarization and a body for detailed information.'
