@@ -9,7 +9,7 @@ field_name: field_title
 entity_type: paragraph
 bundle: accordion_item
 label: Title
-description: 'The accordion header title summarizing the accordion content.'
+description: ''
 required: true
 translatable: false
 default_value: {  }

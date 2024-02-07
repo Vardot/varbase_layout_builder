@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.varbase_accordion_block
+    - field.storage.block_content.field_toggle_all
+id: block_content.varbase_accordion_block.field_toggle_all
+field_name: field_toggle_all
+entity_type: block_content
+bundle: varbase_accordion_block
+label: 'Show toggle all'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

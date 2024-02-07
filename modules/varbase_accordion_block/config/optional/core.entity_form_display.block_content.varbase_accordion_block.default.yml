@@ -4,6 +4,7 @@ dependencies:
   config:
     - block_content.type.varbase_accordion_block
     - field.field.block_content.varbase_accordion_block.field_accordion_items
+    - field.field.block_content.varbase_accordion_block.field_toggle_all
   module:
     - paragraphs
 id: block_content.varbase_accordion_block.default
@@ -30,6 +31,13 @@ content:
         collapse_edit_all: collapse_edit_all
         convert: '0'
         duplicate: duplicate
+    third_party_settings: {  }
+  field_toggle_all:
+    type: boolean_checkbox
+    weight: 26
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   info:
     type: string_textfield

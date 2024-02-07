@@ -4,6 +4,7 @@ dependencies:
   config:
     - block_content.type.varbase_accordion_block
     - field.field.block_content.varbase_accordion_block.field_accordion_items
+    - field.field.block_content.varbase_accordion_block.field_toggle_all
   module:
     - entity_reference_revisions
 id: block_content.varbase_accordion_block.default
@@ -19,6 +20,16 @@ content:
       link: ''
     third_party_settings: {  }
     weight: 0
+    region: content
+  field_toggle_all:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 1
     region: content
 hidden:
   langcode: true

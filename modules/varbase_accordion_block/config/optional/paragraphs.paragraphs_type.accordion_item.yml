@@ -5,5 +5,5 @@ id: accordion_item
 label: 'Accordion Item'
 icon_uuid: null
 icon_default: null
-description: 'An Accordion Item is designed for content management, featuring a collapsible structure with a title (header) for summarization and a content area (body) to provide detailed information, intended for use within an Accordion block to facilitate organized, space-efficient content display.'
+description: ''
 behavior_plugins: {  }
