@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Theme override to display a block.
+ * Template for the inline Varbase Accordion block content.
  *
  * Available variables:
  * - plugin_id: The ID of the block implementation.
@@ -48,10 +48,12 @@
 
 {% endfor %}
 
-{% include "varbase_components:accordion" with {
-  title_tag: 'h3',
-  title: label,
-  header_tag: 'h4',
+{% set accordion_toggle_all = (content['field_toggle_all'] and content['field_toggle_all'][0] == true) ? true : false %}
+
+{% include "varbase_components:block-accordion" with {
+  title_tag: 'h2',
+  heading: label,
   items: accordion_items,
-  toggle_all: (content['field_toggle_all'] and content['field_toggle_all'][0] == true) ? true : false,
+  toggle_all: accordion_toggle_all,
+  utility_classes: classes,
 } %}
