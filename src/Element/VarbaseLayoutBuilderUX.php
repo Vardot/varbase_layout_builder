@@ -17,55 +17,51 @@ class VarbaseLayoutBuilderUX extends LayoutBuilder {
   protected function buildAdministrativeSection(SectionStorageInterface $section_storage, $delta) {
     $build = parent::buildAdministrativeSection($section_storage, $delta);
 
-    if (\Drupal::service('theme.manager')->getActiveTheme()->getName() !== \Drupal::config('system.theme')->get('admin')) {
+    $storage_type = $section_storage->getStorageType();
+    $storage_id = $section_storage->getStorageId();
+    $section = $section_storage->getSection($delta);
 
-      $storage_type = $section_storage->getStorageType();
-      $storage_id = $section_storage->getStorageId();
-      $section = $section_storage->getSection($delta);
+    $layout = $section->getLayout();
+    $layout_settings = $section->getLayoutSettings();
+    $section_label = !empty($layout_settings['label']) ? $layout_settings['label'] : $this->t('Section @section', ['@section' => $delta + 1]);
 
-      $layout = $section->getLayout();
-      $layout_settings = $section->getLayoutSettings();
-      $section_label = !empty($layout_settings['label']) ? $layout_settings['label'] : $this->t('Section @section', ['@section' => $delta + 1]);
+    $layout_definition = $layout->getPluginDefinition();
 
-      $layout_definition = $layout->getPluginDefinition();
+    $region_labels = $layout_definition->getRegionLabels();
 
-      $region_labels = $layout_definition->getRegionLabels();
+    $section_label = $build['#attributes']['aria-label'];
 
-      $section_label = $build['#attributes']['aria-label'];
-
-      foreach ($layout_definition->getRegions() as $region => $info) {
-        if ($region == 'section_header') {
-          $plugin_id = 'inline_block:varbase_heading_block';
-          $build['layout-builder__section']['section_header']['layout_builder_add_block']['link'] = [
-            '#type' => 'link',
-            '#title' => $this->t('Add heading <span class="visually-hidden">in @section, @region region</span>', [
-              '@section' => $section_label,
-              '@region' => $region_labels['section_header'],
-            ]),
-            '#url' => Url::fromRoute('layout_builder.add_block',
-              [
-                'section_storage_type' => $storage_type,
-                'section_storage' => $storage_id,
-                'delta' => $delta,
-                'plugin_id' => $plugin_id,
-                'region' => 'section_header',
-              ],
-              [
-                'attributes' => [
-                  'class' => [
-                    'use-ajax',
-                    'layout-builder__link',
-                    'layout-builder__link--add',
-                  ],
-                  'data-dialog-type' => 'dialog',
-                  'data-dialog-renderer' => 'off_canvas',
+    foreach ($layout_definition->getRegions() as $region => $info) {
+      if ($region == 'section_header') {
+        $plugin_id = 'inline_block:varbase_heading_block';
+        $build['layout-builder__section']['section_header']['layout_builder_add_block']['link'] = [
+          '#type' => 'link',
+          '#title' => $this->t('Add heading <span class="visually-hidden">in @section, @region region</span>', [
+            '@section' => $section_label,
+            '@region' => $region_labels['section_header'],
+          ]),
+          '#url' => Url::fromRoute('layout_builder.add_block',
+            [
+              'section_storage_type' => $storage_type,
+              'section_storage' => $storage_id,
+              'delta' => $delta,
+              'plugin_id' => $plugin_id,
+              'region' => 'section_header',
+            ],
+            [
+              'attributes' => [
+                'class' => [
+                  'use-ajax',
+                  'layout-builder__link',
+                  'layout-builder__link--add',
                 ],
-              ]
-            ),
-          ];
-        }
+                'data-dialog-type' => 'dialog',
+                'data-dialog-renderer' => 'off_canvas',
+              ],
+            ]
+          ),
+        ];
       }
-
     }
 
     return $build;
