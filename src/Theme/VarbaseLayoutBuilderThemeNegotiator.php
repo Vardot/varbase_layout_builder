@@ -81,6 +81,10 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
       return TRUE;
     }
 
+    if ($this->requestStack->getCurrentRequest()->query->get('media_library_opener_id') === 'media_library.opener.editor') {
+      return TRUE;
+    }
+
     return FALSE;
   }
 
@@ -153,6 +157,10 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
       else {
         return $this->configFactory->get('system.theme')->get('default');
       }
+    }
+
+    if ($this->requestStack->getCurrentRequest()->query->get('media_library_opener_id') === 'media_library.opener.editor') {
+      return $this->configFactory->get('system.theme')->get('admin');
     }
 
     return $this->configFactory->get('system.theme')->get('default');
