@@ -122,7 +122,6 @@ claro:
       themes/claro/css/theme/media-library.css: {}
       themes/claro/css/theme/field-ui.admin.css: {}
       themes/claro/css/theme/filter.theme.css: {}
-      themes/claro/css/theme/vartheme-claro.theme.style.css: {}
       themes/claro/css/theme/bootstrap-styles.dark.css: {}
   dependencies:
     - system/admin
@@ -171,7 +170,6 @@ gin:
     theme:
       themes/gin/css/theme/ckeditor.css: {}
       themes/gin/css/theme/dialog.css: {}
-      themes/gin/css/theme/vartheme-claro.theme.style.css: {}
   dependencies:
     - system/admin
     - core/jquery

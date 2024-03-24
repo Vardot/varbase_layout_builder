@@ -355,6 +355,10 @@ form.media-form input[type=text]:focus {
   background: #444 !important;
 }
 
+#drupal-off-canvas-wrapper #drupal-off-canvas .inline-block-create-button {
+  width: 100% !important;
+}
+
 #drupal-off-canvas-wrapper #drupal-off-canvas .inline-block-create-button:before {
   content: "";
   position: absolute;
@@ -430,8 +434,6 @@ form.media-form input[type=text]:focus {
 
 #drupal-off-canvas-wrapper .inline-block-list li {
   padding: 0 .5rem 1rem .5rem;
-  width: 50%;
-  height: 50%;
   display: flow-root;
 }
 

@@ -296,15 +296,19 @@ form.media-form {
       background: #444444 !important;
     }
 
-    .inline-block-create-button:before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: var(--off-canvas-padding);
-      width: 2rem;
-      height: 2rem;
-      transform: translateY(-50%);
-      margin-top: auto;
+    .inline-block-create-button {
+      width: 100% !important;
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: var(--off-canvas-padding);
+        width: 2rem;
+        height: 2rem;
+        transform: translateY(-50%);
+        margin-top: auto;
+      }
     }
 
   }
@@ -380,8 +384,6 @@ form.media-form {
   .inline-block-list {
     li {
       padding: 0 0.5rem 1rem 0.5rem;
-      width: 50%;
-      height: 50%;
       display: flow-root;
     }
   }
