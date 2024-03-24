@@ -645,6 +645,10 @@ body #drupal-off-canvas-wrapper #drupal-off-canvas .ui-widget-content.ui-dialog-
   background: #9b9292 !important;
 }
 
+body #drupal-off-canvas-wrapper #drupal-off-canvas .inline-block-create-button {
+  width: 100% !important;
+}
+
 body #drupal-off-canvas-wrapper #drupal-off-canvas .inline-block-create-button:before {
   content: "";
   width: 2rem;
@@ -726,8 +730,6 @@ body #drupal-off-canvas-wrapper .layout-icon__region {
 
 body #drupal-off-canvas-wrapper .inline-block-list li {
   padding: 0 .5rem 1rem .5rem;
-  width: 50%;
-  height: 50%;
   display: flow-root;
 }
 
