@@ -83,7 +83,6 @@ module.exports = {
     'theme/filter.theme': ['./themes/claro/scss/theme/filter.theme.scss'],
     'theme/js': ['./themes/claro/scss/theme/js.scss'],
     'theme/media-library': ['./themes/claro/scss/theme/media-library.scss'],
-    'theme/vartheme-claro.theme.style': ['./themes/claro/scss/theme/vartheme-claro.theme.style.scss'],
   },
   output: {
     path: path.resolve(__dirname, 'themes/claro/css'),

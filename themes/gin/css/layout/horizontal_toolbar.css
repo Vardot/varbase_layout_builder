@@ -56,13 +56,17 @@
 }
 
 #layout-builder-modal [dir=ltr] .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,#layout-builder-modal [dir=ltr] .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle),.media-library-widget-modal [dir=ltr] .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,.media-library-widget-modal [dir=ltr] .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle),form.media-form [dir=ltr] .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,form.media-form [dir=ltr] .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle) {
-  padding-left: 3em;
-  padding-right: 2.25em;
+  padding-left: 3.25em;
+  padding-right: 1.25em;
 }
 
 #layout-builder-modal [dir=rtl] .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,#layout-builder-modal [dir=rtl] .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle),.media-library-widget-modal [dir=rtl] .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,.media-library-widget-modal [dir=rtl] .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle),form.media-form [dir=rtl] .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,form.media-form [dir=rtl] .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle) {
-  padding-right: 3em;
-  padding-left: 2.25em;
+  padding-right: 3.25em;
+  padding-left: 1.25em;
+}
+
+#layout-builder-modal .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon::before,#layout-builder-modal .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle)::before,.media-library-widget-modal .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon::before,.media-library-widget-modal .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle)::before,form.media-form .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon::before,form.media-form .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle)::before {
+  inset-inline-start: 1em;
 }
 
 #layout-builder-modal [dir=ltr] .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle)::before,.media-library-widget-modal [dir=ltr] .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle)::before,form.media-form [dir=ltr] .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle)::before {
@@ -120,6 +124,7 @@
 #layout-builder-modal .toolbar .toolbar-tray .menu-item--active-trail>.toolbar-box a,#layout-builder-modal .toolbar .toolbar-tray .menu-item>.toolbar-icon.is-active,#layout-builder-modal .toolbar .toolbar-tray .menu-item>.toolbar-box>.toolbar-icon.is-active,#layout-builder-modal .toolbar .toolbar-tray a.is-active,.media-library-widget-modal .toolbar .toolbar-tray .menu-item--active-trail>.toolbar-box a,.media-library-widget-modal .toolbar .toolbar-tray .menu-item>.toolbar-icon.is-active,.media-library-widget-modal .toolbar .toolbar-tray .menu-item>.toolbar-box>.toolbar-icon.is-active,.media-library-widget-modal .toolbar .toolbar-tray a.is-active,form.media-form .toolbar .toolbar-tray .menu-item--active-trail>.toolbar-box a,form.media-form .toolbar .toolbar-tray .menu-item>.toolbar-icon.is-active,form.media-form .toolbar .toolbar-tray .menu-item>.toolbar-box>.toolbar-icon.is-active,form.media-form .toolbar .toolbar-tray a.is-active {
   color: var(--gin-color-primary);
   font-weight: var(--gin-font-weight-bold);
+  background-color: transparent;
 }
 
 #layout-builder-modal .toolbar .toolbar-tray .menu-item--active-trail>.toolbar-box a::before,#layout-builder-modal .toolbar .toolbar-tray .menu-item>.toolbar-icon.is-active::before,#layout-builder-modal .toolbar .toolbar-tray .menu-item>.toolbar-box>.toolbar-icon.is-active::before,#layout-builder-modal .toolbar .toolbar-tray a.is-active::before,.media-library-widget-modal .toolbar .toolbar-tray .menu-item--active-trail>.toolbar-box a::before,.media-library-widget-modal .toolbar .toolbar-tray .menu-item>.toolbar-icon.is-active::before,.media-library-widget-modal .toolbar .toolbar-tray .menu-item>.toolbar-box>.toolbar-icon.is-active::before,.media-library-widget-modal .toolbar .toolbar-tray a.is-active::before,form.media-form .toolbar .toolbar-tray .menu-item--active-trail>.toolbar-box a::before,form.media-form .toolbar .toolbar-tray .menu-item>.toolbar-icon.is-active::before,form.media-form .toolbar .toolbar-tray .menu-item>.toolbar-box>.toolbar-icon.is-active::before,form.media-form .toolbar .toolbar-tray a.is-active::before {
@@ -288,6 +293,11 @@
 #layout-builder-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-menu-administration .menu-item .menu-item:hover>.toolbar-icon,.media-library-widget-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-menu-administration .menu-item .menu-item:hover>.toolbar-icon,form.media-form .gin--horizontal-toolbar #toolbar-administration .toolbar-menu-administration .menu-item .menu-item:hover>.toolbar-icon {
   color: var(--gin-color-primary-hover);
   background: var(--gin-color-primary-light);
+}
+
+#layout-builder-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-menu-administration .menu-item>.toolbar-icon.is-active,.media-library-widget-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-menu-administration .menu-item>.toolbar-icon.is-active,form.media-form .gin--horizontal-toolbar #toolbar-administration .toolbar-menu-administration .menu-item>.toolbar-icon.is-active {
+  color: var(--gin-color-primary-active);
+  background: var(--gin-bg-item-hover);
 }
 
 #layout-builder-modal #toolbar-item-administration-tray,#layout-builder-modal .toolbar-loading #toolbar-item-administration-tray,.media-library-widget-modal #toolbar-item-administration-tray,.media-library-widget-modal .toolbar-loading #toolbar-item-administration-tray,form.media-form #toolbar-item-administration-tray,form.media-form .toolbar-loading #toolbar-item-administration-tray {

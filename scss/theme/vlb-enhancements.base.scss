@@ -221,17 +221,20 @@ body {
 
 #drupal-off-canvas,
 #layout-builder-modal {
+  button.button,
+  input[type="submit"].button,
   button.button--primary,
   input[type="submit"].button--primary,
   .button--primary[type=submit] {
     margin: 1rem 0;
-    color: var(--gin-color-title);
+    color: #fff;
     width: auto !important;
 
     &:focus,
     &:hover,
     &:active {
-      color: var(--gin-color-button-text);
+      color: #fff;
+      font-weight: bold;
     }
   }
 
@@ -240,12 +243,14 @@ body {
     input[type="submit"].button--primary,
     .button--primary[type=submit] {
       margin: 0;
-      padding: calc(var(--gin-spacing-m) - 2px) calc(var(--gin-spacing-l) - 2px);
+      padding: calc(var(--gin-spacing-s) - 2px) calc(var(--gin-spacing-l) - 2px);
+      color: #fff;
 
       &:focus,
       &:hover,
       &:active {
-        color: var(--gin-color-button-text);
+        color: #fff;
+        font-weight: bold;
       }
     }
   }
@@ -259,6 +264,14 @@ body {
     width: 1.5rem !important;
     height: 1.5rem !important;
   }
+
+  .media-library-item {
+    .media-library-item__preview {
+      padding-bottom: 2.125rem !important;
+      border: 0 !important;
+    }
+  }
+
 }
 
 #drupal-off-canvas,

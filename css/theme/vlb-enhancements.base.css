@@ -243,24 +243,40 @@ body .layout-builder__message--overrides .messages {
   border: 1px solid #dee2e6;
 }
 
+#drupal-off-canvas button.button,
+#drupal-off-canvas input[type=submit].button,
 #drupal-off-canvas button.button--primary,
 #drupal-off-canvas input[type=submit].button--primary,
 #drupal-off-canvas .button--primary[type=submit],
+#layout-builder-modal button.button,
+#layout-builder-modal input[type=submit].button,
 #layout-builder-modal button.button--primary,
 #layout-builder-modal input[type=submit].button--primary,
 #layout-builder-modal .button--primary[type=submit] {
   margin: 1rem 0;
-  color: var(--gin-color-title);
+  color: #fff;
   width: auto !important;
 }
 
-#drupal-off-canvas button.button--primary:focus, #drupal-off-canvas button.button--primary:hover, #drupal-off-canvas button.button--primary:active,
+#drupal-off-canvas button.button:focus, #drupal-off-canvas button.button:hover, #drupal-off-canvas button.button:active,
+#drupal-off-canvas input[type=submit].button:focus,
+#drupal-off-canvas input[type=submit].button:hover,
+#drupal-off-canvas input[type=submit].button:active,
+#drupal-off-canvas button.button--primary:focus,
+#drupal-off-canvas button.button--primary:hover,
+#drupal-off-canvas button.button--primary:active,
 #drupal-off-canvas input[type=submit].button--primary:focus,
 #drupal-off-canvas input[type=submit].button--primary:hover,
 #drupal-off-canvas input[type=submit].button--primary:active,
 #drupal-off-canvas .button--primary[type=submit]:focus,
 #drupal-off-canvas .button--primary[type=submit]:hover,
 #drupal-off-canvas .button--primary[type=submit]:active,
+#layout-builder-modal button.button:focus,
+#layout-builder-modal button.button:hover,
+#layout-builder-modal button.button:active,
+#layout-builder-modal input[type=submit].button:focus,
+#layout-builder-modal input[type=submit].button:hover,
+#layout-builder-modal input[type=submit].button:active,
 #layout-builder-modal button.button--primary:focus,
 #layout-builder-modal button.button--primary:hover,
 #layout-builder-modal button.button--primary:active,
@@ -270,7 +286,8 @@ body .layout-builder__message--overrides .messages {
 #layout-builder-modal .button--primary[type=submit]:focus,
 #layout-builder-modal .button--primary[type=submit]:hover,
 #layout-builder-modal .button--primary[type=submit]:active {
-  color: var(--gin-color-button-text);
+  color: #fff;
+  font-weight: bold;
 }
 
 #drupal-off-canvas .form-actions button.button--primary,
@@ -280,7 +297,8 @@ body .layout-builder__message--overrides .messages {
 #layout-builder-modal .form-actions input[type=submit].button--primary,
 #layout-builder-modal .form-actions .button--primary[type=submit] {
   margin: 0;
-  padding: calc(var(--gin-spacing-m) - 2px) calc(var(--gin-spacing-l) - 2px);
+  padding: calc(var(--gin-spacing-s) - 2px) calc(var(--gin-spacing-l) - 2px);
+  color: #fff;
 }
 
 #drupal-off-canvas .form-actions button.button--primary:focus, #drupal-off-canvas .form-actions button.button--primary:hover, #drupal-off-canvas .form-actions button.button--primary:active,
@@ -299,7 +317,8 @@ body .layout-builder__message--overrides .messages {
 #layout-builder-modal .form-actions .button--primary[type=submit]:focus,
 #layout-builder-modal .form-actions .button--primary[type=submit]:hover,
 #layout-builder-modal .form-actions .button--primary[type=submit]:active {
-  color: var(--gin-color-button-text);
+  color: #fff;
+  font-weight: bold;
 }
 
 #drupal-off-canvas .media-library-item__attributes,
@@ -313,6 +332,12 @@ body .layout-builder__message--overrides .messages {
 #layout-builder-modal .media-library-item .button.media-library-item__remove {
   width: 1.5rem !important;
   height: 1.5rem !important;
+}
+
+#drupal-off-canvas .media-library-item .media-library-item__preview,
+#layout-builder-modal .media-library-item .media-library-item__preview {
+  padding-bottom: 2.125rem !important;
+  border: 0 !important;
 }
 
 #drupal-off-canvas .form-text.description,

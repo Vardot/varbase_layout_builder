@@ -137,6 +137,12 @@
   border-end-start-radius: var(--base-border-radius);
 }
 
+@media (forced-colors: active) {
+  #layout-builder-modal .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link::before,.media-library-widget-modal .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link::before,form.media-form .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link::before {
+    border-inline-start: var(--vertical-tabs-menu-link--active-border-size) solid canvastext;
+  }
+}
+
 #layout-builder-modal .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:hover::before,.media-library-widget-modal .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:hover::before,form.media-form .vertical-tabs__menu-item.is-selected .vertical-tabs__menu-link:hover::before {
   background: none;
 }

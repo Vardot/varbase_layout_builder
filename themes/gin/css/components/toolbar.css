@@ -265,6 +265,11 @@
           mask-image: url("../../media/sprite.svg#bat-view");
 }
 
+#layout-builder-modal .toolbar .toolbar-bar .toolbar-icon-commerce-inbox:before,.media-library-widget-modal .toolbar .toolbar-bar .toolbar-icon-commerce-inbox:before,form.media-form .toolbar .toolbar-bar .toolbar-icon-commerce-inbox:before {
+  -webkit-mask-image: url("../../media/sprite.svg#commerce-inbox-view");
+          mask-image: url("../../media/sprite.svg#commerce-inbox-view");
+}
+
 #layout-builder-modal .toolbar .toolbar-bar .toolbar-icon-escape-admin,.media-library-widget-modal .toolbar .toolbar-bar .toolbar-icon-escape-admin,form.media-form .toolbar .toolbar-bar .toolbar-icon-escape-admin {
   display: none;
 }
@@ -331,16 +336,6 @@
 #layout-builder-modal .toolbar .toolbar-bar .toolbar-icon-workbench-content-tab:before,.media-library-widget-modal .toolbar .toolbar-bar .toolbar-icon-workbench-content-tab:before,form.media-form .toolbar .toolbar-bar .toolbar-icon-workbench-content-tab:before {
   -webkit-mask-image: url("../../media/sprite.svg#tool-view");
           mask-image: url("../../media/sprite.svg#tool-view");
-}
-
-@media (min-width: 61em) {
-  #layout-builder-modal [dir=ltr] .toolbar .toolbar-menu .toolbar-icon,#layout-builder-modal [dir=ltr] .toolbar .toolbar-menu .responsive-preview-icon,.media-library-widget-modal [dir=ltr] .toolbar .toolbar-menu .toolbar-icon,.media-library-widget-modal [dir=ltr] .toolbar .toolbar-menu .responsive-preview-icon,form.media-form [dir=ltr] .toolbar .toolbar-menu .toolbar-icon,form.media-form [dir=ltr] .toolbar .toolbar-menu .responsive-preview-icon {
-    padding-right: var(--gin-spacing-l);
-  }
-
-  #layout-builder-modal [dir=rtl] .toolbar .toolbar-menu .toolbar-icon,#layout-builder-modal [dir=rtl] .toolbar .toolbar-menu .responsive-preview-icon,.media-library-widget-modal [dir=rtl] .toolbar .toolbar-menu .toolbar-icon,.media-library-widget-modal [dir=rtl] .toolbar .toolbar-menu .responsive-preview-icon,form.media-form [dir=rtl] .toolbar .toolbar-menu .toolbar-icon,form.media-form [dir=rtl] .toolbar .toolbar-menu .responsive-preview-icon {
-    padding-left: var(--gin-spacing-l);
-  }
 }
 
 #layout-builder-modal .toolbar-horizontal .toolbar-tray,.media-library-widget-modal .toolbar-horizontal .toolbar-tray,form.media-form .toolbar-horizontal .toolbar-tray {

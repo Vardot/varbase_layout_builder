@@ -357,7 +357,7 @@
 }
 
 #layout-builder-modal .paragraphs-dragdrop__icon,.media-library-widget-modal .paragraphs-dragdrop__icon,form.media-form .paragraphs-dragdrop__icon {
-  top: calc(var(--gin-spacing-xxs)/2);
+  top: var(--gin-spacing-xxxs);
 }
 
 #layout-builder-modal .js .paragraph-type-add-modal-button:hover,.media-library-widget-modal .js .paragraph-type-add-modal-button:hover,form.media-form .js .paragraph-type-add-modal-button:hover {
