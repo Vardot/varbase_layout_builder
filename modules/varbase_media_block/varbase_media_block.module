@@ -115,6 +115,7 @@ function _varbase_media_block_after_build(array $form, FormStateInterface $form_
 function _varbase_media_block_active_media_view_mode_options() {
   $media_view_mode_options = \Drupal::service('entity_display.repository')->getViewModes('media');
 
+  // List of default ignored view modes.
   $ignore_view_mode_list = [
     'media.token',
     'media.slick',
@@ -124,6 +125,11 @@ function _varbase_media_block_active_media_view_mode_options() {
     'media.field_preview',
     'media.varbase_media_hero_slider',
     'media.varbase_media_header',
+    'media.varbase_heroslider',
+    'media.large',
+    'media.medium',
+    'media.small',
+    'media.original',
     '_none',
   ];
 
