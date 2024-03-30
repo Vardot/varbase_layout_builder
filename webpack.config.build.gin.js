@@ -51,8 +51,7 @@ module.exports = {
     'layout/toolbar': ['./themes/gin/scss/layout/toolbar.scss'],
     // Theme
     'theme/ckeditor': ['./themes/gin/scss/theme/ckeditor.scss'],
-    'theme/dialog': ['./themes/gin/scss/theme/dialog.scss'],
-    'theme/vartheme-claro.theme.style': ['./themes/gin/scss/theme/vartheme-claro.theme.style.scss'],
+    'theme/dialog': ['./themes/gin/scss/theme/dialog.scss']
   },
   output: {
     path: path.resolve(__dirname, 'themes/gin/css'),

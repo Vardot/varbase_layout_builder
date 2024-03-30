@@ -142,7 +142,7 @@
 
 @media (min-width: 64em) {
   #layout-builder-modal .gin--edit-form .region-sticky,.media-library-widget-modal .gin--edit-form .region-sticky,form.media-form .gin--edit-form .region-sticky {
-    top: calc(var(--gin-toolbar-y-offset) - var(--gin-spacing-xxxl));
+    top: var(--gin-toolbar-y-offset);
     padding-top: var(--gin-spacing-s);
   }
 }
@@ -2388,6 +2388,10 @@
   border-radius: var(--gin-border-s) var(--gin-border-s) 0 0;
 }
 
+#layout-builder-modal .dropbutton.dropbutton--gin .dropbutton-action>.button,.media-library-widget-modal .dropbutton.dropbutton--gin .dropbutton-action>.button,form.media-form .dropbutton.dropbutton--gin .dropbutton-action>.button {
+  border: var(--dropbutton-border-size) solid transparent !important;
+}
+
 #layout-builder-modal .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item,#layout-builder-modal .dropbutton .dropbutton__items>.dropbutton__item,#layout-builder-modal .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item,.media-library-widget-modal .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item,.media-library-widget-modal .dropbutton .dropbutton__items>.dropbutton__item,.media-library-widget-modal .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item,form.media-form .dropbutton:not(.dropbutton--gin)>.dropbutton__item~.dropbutton__item,form.media-form .dropbutton .dropbutton__items>.dropbutton__item,form.media-form .dropbutton .dropbutton__items>.dropbutton__item~.dropbutton__item {
   background-color: var(--gin-bg-app);
   border: 0 none;
@@ -2899,7 +2903,7 @@
 
 #layout-builder-modal .messages.messages--info,.media-library-widget-modal .messages.messages--info,form.media-form .messages.messages--info {
   color: var(--gin-color-info-light);
-  background-color: var(--gin-bg-info);
+  background: var(--gin-bg-info);
   border-color: var(--gin-bg-info);
 }
 
@@ -2923,7 +2927,7 @@
 
 #layout-builder-modal .messages.messages--status,.media-library-widget-modal .messages.messages--status,form.media-form .messages.messages--status {
   color: var(--gin-color-green-light);
-  background-color: var(--gin-bg-green);
+  background: var(--gin-bg-green);
 }
 
 #layout-builder-modal .messages.messages--status .messages__header:before,.media-library-widget-modal .messages.messages--status .messages__header:before,form.media-form .messages.messages--status .messages__header:before {
@@ -2942,7 +2946,7 @@
 
 #layout-builder-modal .messages.messages--warning,.media-library-widget-modal .messages.messages--warning,form.media-form .messages.messages--warning {
   color: var(--gin-color-warning-light);
-  background-color: var(--gin-bg-warning);
+  background: var(--gin-bg-warning);
 }
 
 #layout-builder-modal .messages.messages--warning .messages__header:before,.media-library-widget-modal .messages.messages--warning .messages__header:before,form.media-form .messages.messages--warning .messages__header:before {
@@ -2961,7 +2965,7 @@
 
 #layout-builder-modal .messages--error,.media-library-widget-modal .messages--error,form.media-form .messages--error {
   color: var(--gin-color-danger-light);
-  background-color: var(--gin-bg-danger);
+  background: var(--gin-bg-danger);
 }
 
 #layout-builder-modal .messages--error .messages__header:before,.media-library-widget-modal .messages--error .messages__header:before,form.media-form .messages--error .messages__header:before {
@@ -2985,6 +2989,89 @@
 #layout-builder-modal .field-plugin-summary,.media-library-widget-modal .field-plugin-summary,form.media-form .field-plugin-summary {
   font-size: var(--gin-font-size-xs);
   color: var(--gin-color-text-light);
+}
+
+#layout-builder-modal .field-option,.media-library-widget-modal .field-option,form.media-form .field-option {
+  --thumb-size: 5rem;
+  gap: var(--gin-spacing-m);
+  align-items: baseline;
+  padding: 0;
+  background-color: transparent;
+  border: 1px solid var(--gin-border-color);
+  border-radius: var(--gin-border-m);
+}
+
+#layout-builder-modal .field-option__thumb,.media-library-widget-modal .field-option__thumb,form.media-form .field-option__thumb {
+  background-color: var(--gin-bg-layer2);
+  border-radius: 0;
+}
+
+#layout-builder-modal [dir=ltr] .field-option__thumb,.media-library-widget-modal [dir=ltr] .field-option__thumb,form.media-form [dir=ltr] .field-option__thumb {
+  border-top-left-radius: var(--gin-border-s);
+  border-bottom-left-radius: var(--gin-border-s);
+}
+
+#layout-builder-modal [dir=rtl] .field-option__thumb,.media-library-widget-modal [dir=rtl] .field-option__thumb,form.media-form [dir=rtl] .field-option__thumb {
+  border-top-right-radius: var(--gin-border-s);
+  border-bottom-right-radius: var(--gin-border-s);
+}
+
+#layout-builder-modal .field-option__icon,.media-library-widget-modal .field-option__icon,form.media-form .field-option__icon {
+  filter: brightness(0);
+}
+
+#layout-builder-modal .gin--dark-mode .field-option__icon,.media-library-widget-modal .gin--dark-mode .field-option__icon,form.media-form .gin--dark-mode .field-option__icon {
+  filter: brightness(0) invert(1);
+}
+
+#layout-builder-modal .field-option__item,.media-library-widget-modal .field-option__item,form.media-form .field-option__item {
+  column-gap: 0;
+  padding-block: var(--gin-spacing-s);
+}
+
+#layout-builder-modal .field-option__item .form-item__label,.media-library-widget-modal .field-option__item .form-item__label,form.media-form .field-option__item .form-item__label {
+  margin-bottom: var(--gin-spacing-xxs);
+}
+
+#layout-builder-modal .field-option .field-option__description,.media-library-widget-modal .field-option .field-option__description,form.media-form .field-option .field-option__description {
+  font-size: var(--gin-font-size-xs);
+  line-height: 1.3;
+  color: var(--gin-color-text-light);
+}
+
+#layout-builder-modal .field-option .field-option-radio,.media-library-widget-modal .field-option .field-option-radio,form.media-form .field-option .field-option-radio {
+  visibility: hidden;
+}
+
+#layout-builder-modal .field-option.selected,#layout-builder-modal .field-option:has(.field-option-radio:checked),.media-library-widget-modal .field-option.selected,.media-library-widget-modal .field-option:has(.field-option-radio:checked),form.media-form .field-option.selected,form.media-form .field-option:has(.field-option-radio:checked) {
+  background-color: var(--gin-bg-layer2);
+}
+
+#layout-builder-modal .field-option.selected .field-option__thumb,#layout-builder-modal .field-option:has(.field-option-radio:checked) .field-option__thumb,.media-library-widget-modal .field-option.selected .field-option__thumb,.media-library-widget-modal .field-option:has(.field-option-radio:checked) .field-option__thumb,form.media-form .field-option.selected .field-option__thumb,form.media-form .field-option:has(.field-option-radio:checked) .field-option__thumb {
+  background-color: var(--gin-color-primary);
+}
+
+#layout-builder-modal .field-option.selected .field-option__icon,#layout-builder-modal .field-option:has(.field-option-radio:checked) .field-option__icon,.media-library-widget-modal .field-option.selected .field-option__icon,.media-library-widget-modal .field-option:has(.field-option-radio:checked) .field-option__icon,form.media-form .field-option.selected .field-option__icon,form.media-form .field-option:has(.field-option-radio:checked) .field-option__icon {
+  filter: brightness(0) invert(1);
+}
+
+#layout-builder-modal .gin--dark-mode .field-option.selected .field-option__icon,#layout-builder-modal .gin--dark-mode .field-option:has(.field-option-radio:checked) .field-option__icon,.media-library-widget-modal .gin--dark-mode .field-option.selected .field-option__icon,.media-library-widget-modal .gin--dark-mode .field-option:has(.field-option-radio:checked) .field-option__icon,form.media-form .gin--dark-mode .field-option.selected .field-option__icon,form.media-form .gin--dark-mode .field-option:has(.field-option-radio:checked) .field-option__icon {
+  filter: brightness(0);
+}
+
+#layout-builder-modal .subfield-option,.media-library-widget-modal .subfield-option,form.media-form .subfield-option {
+  border: 1px solid var(--gin-border-color);
+  border-radius: var(--gin-border-m);
+}
+
+#layout-builder-modal .subfield-option .item-list,.media-library-widget-modal .subfield-option .item-list,form.media-form .subfield-option .item-list {
+  font-size: var(--gin-font-size-xs);
+  color: var(--gin-color-text-light);
+  margin-top: var(--gin-spacing-xs);
+}
+
+#layout-builder-modal .subfield-option.selected,.media-library-widget-modal .subfield-option.selected,form.media-form .subfield-option.selected {
+  background-color: var(--gin-bg-layer2);
 }
 
 #layout-builder-modal .card,.media-library-widget-modal .card,form.media-form .card {
@@ -3170,7 +3257,7 @@
   box-shadow: inset 0 0 0 1px var(--gin-color-focus-border), inset 0 0 0 4px var(--gin-color-focus);
 }
 
-#layout-builder-modal .page-wrapper *:focus,#layout-builder-modal .ui-dialog *:focus,#layout-builder-modal .dropbutton .dropbutton__item>*:focus,#layout-builder-modal .dropbutton .dropbutton__item>*:focus:hover,#layout-builder-modal .dropbutton__items>.dropbutton__item:first-of-type>*:focus,#layout-builder-modal .dropbutton__items>.dropbutton__item:first-of-type~.dropbutton__item>*:focus,#layout-builder-modal .dropbutton__items>.dropbutton__item:first-of-type~.dropbutton__item>*:focus:hover,#layout-builder-modal .form-boolean:focus:active,#layout-builder-modal .form-boolean:focus:hover,#layout-builder-modal .cke.cke_chrome.cke_focus,#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a:focus,#layout-builder-modal .form-element:focus,#layout-builder-modal .form-element:hover:focus,#layout-builder-modal .form-element.error:hover:focus,#layout-builder-modal .form-actions .action-link:focus,#layout-builder-modal .paragraphs-tabs-wrapper .field-multiple-table .draggable.drag,#layout-builder-modal .layout-paragraphs-field .layout-paragraphs-actions input.layout-paragraphs-edit:focus,#layout-builder-modal .layout-paragraphs-field .layout-paragraphs-actions input.layout-paragraphs-remove:focus,#layout-builder-modal .ck .ck.ck-button:active,#layout-builder-modal .ck .ck.ck-button:focus,#layout-builder-modal .ck .ck.ck-button:active:focus,#layout-builder-modal .toolbar-box .toolbar-handle:focus,.media-library-widget-modal .page-wrapper *:focus,.media-library-widget-modal .ui-dialog *:focus,.media-library-widget-modal .dropbutton .dropbutton__item>*:focus,.media-library-widget-modal .dropbutton .dropbutton__item>*:focus:hover,.media-library-widget-modal .dropbutton__items>.dropbutton__item:first-of-type>*:focus,.media-library-widget-modal .dropbutton__items>.dropbutton__item:first-of-type~.dropbutton__item>*:focus,.media-library-widget-modal .dropbutton__items>.dropbutton__item:first-of-type~.dropbutton__item>*:focus:hover,.media-library-widget-modal .form-boolean:focus:active,.media-library-widget-modal .form-boolean:focus:hover,.media-library-widget-modal .cke.cke_chrome.cke_focus,.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a:focus,.media-library-widget-modal .form-element:focus,.media-library-widget-modal .form-element:hover:focus,.media-library-widget-modal .form-element.error:hover:focus,.media-library-widget-modal .form-actions .action-link:focus,.media-library-widget-modal .paragraphs-tabs-wrapper .field-multiple-table .draggable.drag,.media-library-widget-modal .layout-paragraphs-field .layout-paragraphs-actions input.layout-paragraphs-edit:focus,.media-library-widget-modal .layout-paragraphs-field .layout-paragraphs-actions input.layout-paragraphs-remove:focus,.media-library-widget-modal .ck .ck.ck-button:active,.media-library-widget-modal .ck .ck.ck-button:focus,.media-library-widget-modal .ck .ck.ck-button:active:focus,.media-library-widget-modal .toolbar-box .toolbar-handle:focus,form.media-form .page-wrapper *:focus,form.media-form .ui-dialog *:focus,form.media-form .dropbutton .dropbutton__item>*:focus,form.media-form .dropbutton .dropbutton__item>*:focus:hover,form.media-form .dropbutton__items>.dropbutton__item:first-of-type>*:focus,form.media-form .dropbutton__items>.dropbutton__item:first-of-type~.dropbutton__item>*:focus,form.media-form .dropbutton__items>.dropbutton__item:first-of-type~.dropbutton__item>*:focus:hover,form.media-form .form-boolean:focus:active,form.media-form .form-boolean:focus:hover,form.media-form .cke.cke_chrome.cke_focus,form.media-form .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a:focus,form.media-form .form-element:focus,form.media-form .form-element:hover:focus,form.media-form .form-element.error:hover:focus,form.media-form .form-actions .action-link:focus,form.media-form .paragraphs-tabs-wrapper .field-multiple-table .draggable.drag,form.media-form .layout-paragraphs-field .layout-paragraphs-actions input.layout-paragraphs-edit:focus,form.media-form .layout-paragraphs-field .layout-paragraphs-actions input.layout-paragraphs-remove:focus,form.media-form .ck .ck.ck-button:active,form.media-form .ck .ck.ck-button:focus,form.media-form .ck .ck.ck-button:active:focus,form.media-form .toolbar-box .toolbar-handle:focus {
+#layout-builder-modal .page-wrapper *:focus,#layout-builder-modal .ui-dialog *:focus,#layout-builder-modal .dropbutton .dropbutton__item>*:focus,#layout-builder-modal .dropbutton .dropbutton__item>*:focus:hover,#layout-builder-modal .dropbutton__items>.dropbutton__item:first-of-type>*:focus,#layout-builder-modal .dropbutton__items>.dropbutton__item:first-of-type~.dropbutton__item>*:focus,#layout-builder-modal .dropbutton__items>.dropbutton__item:first-of-type~.dropbutton__item>*:focus:hover,#layout-builder-modal .form-boolean:focus:active,#layout-builder-modal .form-boolean:focus:hover,#layout-builder-modal .cke.cke_chrome.cke_focus,#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a:focus,#layout-builder-modal .form-element:focus,#layout-builder-modal .form-element:hover:focus,#layout-builder-modal .form-element.error:hover:focus,#layout-builder-modal .form-actions .action-link:focus,#layout-builder-modal .paragraphs-tabs-wrapper .field-multiple-table .draggable.drag,#layout-builder-modal .layout-paragraphs-field .layout-paragraphs-actions input.layout-paragraphs-edit:focus,#layout-builder-modal .layout-paragraphs-field .layout-paragraphs-actions input.layout-paragraphs-remove:focus,#layout-builder-modal .ck .ck.ck-button:active,#layout-builder-modal .ck .ck.ck-button:focus,#layout-builder-modal .ck .ck.ck-button:active:focus,#layout-builder-modal .toolbar-box .toolbar-handle:focus,#layout-builder-modal .field-option:has(.field-option-radio:checked),#layout-builder-modal .subfield-option:has(.field-option-radio:checked),.media-library-widget-modal .page-wrapper *:focus,.media-library-widget-modal .ui-dialog *:focus,.media-library-widget-modal .dropbutton .dropbutton__item>*:focus,.media-library-widget-modal .dropbutton .dropbutton__item>*:focus:hover,.media-library-widget-modal .dropbutton__items>.dropbutton__item:first-of-type>*:focus,.media-library-widget-modal .dropbutton__items>.dropbutton__item:first-of-type~.dropbutton__item>*:focus,.media-library-widget-modal .dropbutton__items>.dropbutton__item:first-of-type~.dropbutton__item>*:focus:hover,.media-library-widget-modal .form-boolean:focus:active,.media-library-widget-modal .form-boolean:focus:hover,.media-library-widget-modal .cke.cke_chrome.cke_focus,.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a:focus,.media-library-widget-modal .form-element:focus,.media-library-widget-modal .form-element:hover:focus,.media-library-widget-modal .form-element.error:hover:focus,.media-library-widget-modal .form-actions .action-link:focus,.media-library-widget-modal .paragraphs-tabs-wrapper .field-multiple-table .draggable.drag,.media-library-widget-modal .layout-paragraphs-field .layout-paragraphs-actions input.layout-paragraphs-edit:focus,.media-library-widget-modal .layout-paragraphs-field .layout-paragraphs-actions input.layout-paragraphs-remove:focus,.media-library-widget-modal .ck .ck.ck-button:active,.media-library-widget-modal .ck .ck.ck-button:focus,.media-library-widget-modal .ck .ck.ck-button:active:focus,.media-library-widget-modal .toolbar-box .toolbar-handle:focus,.media-library-widget-modal .field-option:has(.field-option-radio:checked),.media-library-widget-modal .subfield-option:has(.field-option-radio:checked),form.media-form .page-wrapper *:focus,form.media-form .ui-dialog *:focus,form.media-form .dropbutton .dropbutton__item>*:focus,form.media-form .dropbutton .dropbutton__item>*:focus:hover,form.media-form .dropbutton__items>.dropbutton__item:first-of-type>*:focus,form.media-form .dropbutton__items>.dropbutton__item:first-of-type~.dropbutton__item>*:focus,form.media-form .dropbutton__items>.dropbutton__item:first-of-type~.dropbutton__item>*:focus:hover,form.media-form .form-boolean:focus:active,form.media-form .form-boolean:focus:hover,form.media-form .cke.cke_chrome.cke_focus,form.media-form .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a:focus,form.media-form .form-element:focus,form.media-form .form-element:hover:focus,form.media-form .form-element.error:hover:focus,form.media-form .form-actions .action-link:focus,form.media-form .paragraphs-tabs-wrapper .field-multiple-table .draggable.drag,form.media-form .layout-paragraphs-field .layout-paragraphs-actions input.layout-paragraphs-edit:focus,form.media-form .layout-paragraphs-field .layout-paragraphs-actions input.layout-paragraphs-remove:focus,form.media-form .ck .ck.ck-button:active,form.media-form .ck .ck.ck-button:focus,form.media-form .ck .ck.ck-button:active:focus,form.media-form .toolbar-box .toolbar-handle:focus,form.media-form .field-option:has(.field-option-radio:checked),form.media-form .subfield-option:has(.field-option-radio:checked) {
   outline: none;
   box-shadow: 0 0 0 1px var(--gin-color-focus-border), 0 0 0 4px var(--gin-color-focus);
 }
