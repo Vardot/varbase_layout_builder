@@ -323,6 +323,7 @@ body .layout-builder__message--overrides .messages {
 
 #drupal-off-canvas .media-library-item__attributes,
 #layout-builder-modal .media-library-item__attributes {
+  position: relative;
   background: transparent !important;
 }
 
@@ -362,6 +363,20 @@ form.media-form input[type=text] {
 form.media-form input[type=text]:focus {
   background-color: var(--gin-bg-input) !important;
   color: var(--gin-color-contextual) !important;
+}
+
+.media-library-widget-modal .media-library-item .media-library-item__preview {
+  padding-bottom: 2.125rem !important;
+}
+
+.media-library-widget-modal .media-library-item__attributes {
+  position: relative !important;
+  background: transparent !important;
+}
+
+.media-library-widget-modal .media-library-wrapper .views-display-link-widget_table,
+.media-library-widget-modal .media-library-wrapper .views-display-link-widget {
+  background: none !important;
 }
 
 #drupal-off-canvas-wrapper {
@@ -563,6 +578,10 @@ form.media-form input[type=text]:focus {
 #layout-builder-modal .ck-source-editing-area textarea {
   height: -webkit-fill-available;
   border-radius: 0;
+}
+
+#layout-builder-modal .bs_tab-pane.bs_tab-pane--appearance > details {
+  border: 1px solid #fff !important;
 }
 
 body .ui-dialog .ui-dialog-titlebar-close {

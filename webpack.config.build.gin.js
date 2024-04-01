@@ -4,6 +4,8 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const SVGSpritemapPlugin = require('svg-spritemap-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const RemoveEmptyScriptsPlugin = require('webpack-remove-empty-scripts');
+const postcssRTLCSS = require('postcss-rtlcss');
+const { Mode, Source } = require('postcss-rtlcss/options');
 
 const isDev = (process.env.NODE_ENV !== 'production');
 
@@ -34,13 +36,10 @@ module.exports = {
     'components/autosave': ['./themes/gin/scss/components/autosave.scss'],
     'components/description_toggle': ['./themes/gin/scss/components/description_toggle.scss'],
     'components/entity_reference_layout': ['./themes/gin/scss/components/entity_reference_layout.scss'],
-    'components/module_filter': ['./themes/gin/scss/components/module_filter.scss'],
     'components/revisions': ['./themes/gin/scss/components/revisions.scss'],
     'components/toolbar': ['./themes/gin/scss/components/toolbar.scss'],
-    'components/breadcrumb': ['./themes/gin/scss/components/breadcrumb.scss'],
     'components/dialog': ['./themes/gin/scss/components/dialog.scss'],
     'components/inline_entity_form': ['./themes/gin/scss/components/inline_entity_form.scss'],
-    'components/node_preview': ['./themes/gin/scss/components/node_preview.scss'],
     'components/toolbar_secondary': ['./themes/gin/scss/components/toolbar_secondary.scss'],
     'components/chosen': ['./themes/gin/scss/components/chosen.scss'],
     'components/dropzonejs': ['./themes/gin/scss/components/dropzonejs.scss'],
@@ -110,6 +109,45 @@ module.exports = {
               postcssOptions: {
                 plugins: [
                   autoprefixer(),
+                  postcssRTLCSS({
+                    ltrPrefix: ['[dir="ltr"]'],
+                    rtlPrefix: ['[dir="rtl"]'],
+                    mode: Mode.combined,
+                    source: Source.ltr,
+                    prefixSelectorTransformer: function (prefix, selector) {
+                      if (selector.includes('html[dir=ltr].js')) {
+                        selector = selector.replace('html[dir=ltr].js','');
+                        return `html[dir="ltr"].js ${selector}`;
+                      }
+
+                      if (selector.includes('html[dir=rtl].js')) {
+                        selector = selector.replace('html[dir=rtl].js','');
+                        return `html[dir="rtl"].js ${selector}`;
+                      }
+
+                      if (selector.includes(' [dir=ltr]')) {
+                        selector = selector.replace(' [dir=ltr]','');
+                        return `[dir="ltr"] ${selector}`;
+                      }
+
+                      if (selector.includes(' [dir=rtl]')) {
+                        selector = selector.replace(' [dir=rtl]','');
+                        return `[dir="rtl"] ${selector}`;
+                      }
+
+                      if (selector.includes('[dir=ltr]')) {
+                        selector = selector.replace('[dir=ltr]','');
+                        return `[dir="ltr"] ${selector}`;
+                      }
+
+                      if (selector.includes('[dir=rtl]')) {
+                        selector = selector.replace('[dir=rtl]','');
+                        return `[dir="rtl"] ${selector}`;
+                      }
+
+                      return `${prefix} ${selector}`;
+                    }
+                  }),
                   ['postcss-perfectionist', {
                     format: 'expanded',
                     indentSize: 2,

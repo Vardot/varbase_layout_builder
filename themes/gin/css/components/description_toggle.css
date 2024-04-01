@@ -10,12 +10,20 @@
   border-radius: 50%;
 }
 
-#layout-builder-modal [dir=ltr] .help-icon__description-toggle,.media-library-widget-modal [dir=ltr] .help-icon__description-toggle,form.media-form [dir=ltr] .help-icon__description-toggle {
+[dir="ltr"] #layout-builder-modal .help-icon__description-toggle,[dir="ltr"] .media-library-widget-modal .help-icon__description-toggle,[dir="ltr"] form.media-form .help-icon__description-toggle {
   margin: .1rem var(--gin-spacing-m) 0 .3rem;
 }
 
-#layout-builder-modal [dir=rtl] .help-icon__description-toggle,.media-library-widget-modal [dir=rtl] .help-icon__description-toggle,form.media-form [dir=rtl] .help-icon__description-toggle {
+[dir="ltr"] #layout-builder-modal .help-icon__description-toggle,[dir="ltr"] .media-library-widget-modal .help-icon__description-toggle,[dir="ltr"] form.media-form .help-icon__description-toggle {
   margin: .1rem .3rem 0 var(--gin-spacing-m);
+}
+
+[dir="rtl"] #layout-builder-modal .help-icon__description-toggle,[dir="rtl"] .media-library-widget-modal .help-icon__description-toggle,[dir="rtl"] form.media-form .help-icon__description-toggle {
+  margin: .1rem .3rem 0 var(--gin-spacing-m);
+}
+
+[dir="rtl"] #layout-builder-modal .help-icon__description-toggle,[dir="rtl"] .media-library-widget-modal .help-icon__description-toggle,[dir="rtl"] form.media-form .help-icon__description-toggle {
+  margin: .1rem var(--gin-spacing-m) 0 .3rem;
 }
 
 #layout-builder-modal .help-icon__description-toggle:before,.media-library-widget-modal .help-icon__description-toggle:before,form.media-form .help-icon__description-toggle:before {
@@ -43,20 +51,36 @@
   align-items: normal;
 }
 
-#layout-builder-modal [dir=ltr] .form-type--checkbox>.help-icon__element-has-description>label,#layout-builder-modal [dir=ltr] .form-type--radio>.help-icon__element-has-description>label,.media-library-widget-modal [dir=ltr] .form-type--checkbox>.help-icon__element-has-description>label,.media-library-widget-modal [dir=ltr] .form-type--radio>.help-icon__element-has-description>label,form.media-form [dir=ltr] .form-type--checkbox>.help-icon__element-has-description>label,form.media-form [dir=ltr] .form-type--radio>.help-icon__element-has-description>label {
+[dir="ltr"] #layout-builder-modal .form-type--checkbox>.help-icon__element-has-description>label,[dir="ltr"] #layout-builder-modal .form-type--radio>.help-icon__element-has-description>label,[dir="ltr"] .media-library-widget-modal .form-type--checkbox>.help-icon__element-has-description>label,[dir="ltr"] .media-library-widget-modal .form-type--radio>.help-icon__element-has-description>label,[dir="ltr"] form.media-form .form-type--checkbox>.help-icon__element-has-description>label,[dir="ltr"] form.media-form .form-type--radio>.help-icon__element-has-description>label {
   margin-left: 6px;
 }
 
-#layout-builder-modal [dir=rtl] .form-type--checkbox>.help-icon__element-has-description>label,#layout-builder-modal [dir=rtl] .form-type--radio>.help-icon__element-has-description>label,.media-library-widget-modal [dir=rtl] .form-type--checkbox>.help-icon__element-has-description>label,.media-library-widget-modal [dir=rtl] .form-type--radio>.help-icon__element-has-description>label,form.media-form [dir=rtl] .form-type--checkbox>.help-icon__element-has-description>label,form.media-form [dir=rtl] .form-type--radio>.help-icon__element-has-description>label {
+[dir="ltr"] #layout-builder-modal .form-type--checkbox>.help-icon__element-has-description>label,[dir="ltr"] #layout-builder-modal .form-type--radio>.help-icon__element-has-description>label,[dir="ltr"] .media-library-widget-modal .form-type--checkbox>.help-icon__element-has-description>label,[dir="ltr"] .media-library-widget-modal .form-type--radio>.help-icon__element-has-description>label,[dir="ltr"] form.media-form .form-type--checkbox>.help-icon__element-has-description>label,[dir="ltr"] form.media-form .form-type--radio>.help-icon__element-has-description>label {
   margin-right: 6px;
 }
 
-#layout-builder-modal [dir=ltr] .form-type--checkbox .checkbox-toggle+.help-icon,#layout-builder-modal [dir=ltr] .form-type--radio .checkbox-toggle+.help-icon,.media-library-widget-modal [dir=ltr] .form-type--checkbox .checkbox-toggle+.help-icon,.media-library-widget-modal [dir=ltr] .form-type--radio .checkbox-toggle+.help-icon,form.media-form [dir=ltr] .form-type--checkbox .checkbox-toggle+.help-icon,form.media-form [dir=ltr] .form-type--radio .checkbox-toggle+.help-icon {
+[dir="rtl"] #layout-builder-modal .form-type--checkbox>.help-icon__element-has-description>label,[dir="rtl"] #layout-builder-modal .form-type--radio>.help-icon__element-has-description>label,[dir="rtl"] .media-library-widget-modal .form-type--checkbox>.help-icon__element-has-description>label,[dir="rtl"] .media-library-widget-modal .form-type--radio>.help-icon__element-has-description>label,[dir="rtl"] form.media-form .form-type--checkbox>.help-icon__element-has-description>label,[dir="rtl"] form.media-form .form-type--radio>.help-icon__element-has-description>label {
+  margin-right: 6px;
+}
+
+[dir="rtl"] #layout-builder-modal .form-type--checkbox>.help-icon__element-has-description>label,[dir="rtl"] #layout-builder-modal .form-type--radio>.help-icon__element-has-description>label,[dir="rtl"] .media-library-widget-modal .form-type--checkbox>.help-icon__element-has-description>label,[dir="rtl"] .media-library-widget-modal .form-type--radio>.help-icon__element-has-description>label,[dir="rtl"] form.media-form .form-type--checkbox>.help-icon__element-has-description>label,[dir="rtl"] form.media-form .form-type--radio>.help-icon__element-has-description>label {
+  margin-left: 6px;
+}
+
+[dir="ltr"] #layout-builder-modal .form-type--checkbox .checkbox-toggle+.help-icon,[dir="ltr"] #layout-builder-modal .form-type--radio .checkbox-toggle+.help-icon,[dir="ltr"] .media-library-widget-modal .form-type--checkbox .checkbox-toggle+.help-icon,[dir="ltr"] .media-library-widget-modal .form-type--radio .checkbox-toggle+.help-icon,[dir="ltr"] form.media-form .form-type--checkbox .checkbox-toggle+.help-icon,[dir="ltr"] form.media-form .form-type--radio .checkbox-toggle+.help-icon {
   padding-left: var(--gin-spacing-xxs);
 }
 
-#layout-builder-modal [dir=rtl] .form-type--checkbox .checkbox-toggle+.help-icon,#layout-builder-modal [dir=rtl] .form-type--radio .checkbox-toggle+.help-icon,.media-library-widget-modal [dir=rtl] .form-type--checkbox .checkbox-toggle+.help-icon,.media-library-widget-modal [dir=rtl] .form-type--radio .checkbox-toggle+.help-icon,form.media-form [dir=rtl] .form-type--checkbox .checkbox-toggle+.help-icon,form.media-form [dir=rtl] .form-type--radio .checkbox-toggle+.help-icon {
+[dir="ltr"] #layout-builder-modal .form-type--checkbox .checkbox-toggle+.help-icon,[dir="ltr"] #layout-builder-modal .form-type--radio .checkbox-toggle+.help-icon,[dir="ltr"] .media-library-widget-modal .form-type--checkbox .checkbox-toggle+.help-icon,[dir="ltr"] .media-library-widget-modal .form-type--radio .checkbox-toggle+.help-icon,[dir="ltr"] form.media-form .form-type--checkbox .checkbox-toggle+.help-icon,[dir="ltr"] form.media-form .form-type--radio .checkbox-toggle+.help-icon {
   padding-right: var(--gin-spacing-xxs);
+}
+
+[dir="rtl"] #layout-builder-modal .form-type--checkbox .checkbox-toggle+.help-icon,[dir="rtl"] #layout-builder-modal .form-type--radio .checkbox-toggle+.help-icon,[dir="rtl"] .media-library-widget-modal .form-type--checkbox .checkbox-toggle+.help-icon,[dir="rtl"] .media-library-widget-modal .form-type--radio .checkbox-toggle+.help-icon,[dir="rtl"] form.media-form .form-type--checkbox .checkbox-toggle+.help-icon,[dir="rtl"] form.media-form .form-type--radio .checkbox-toggle+.help-icon {
+  padding-right: var(--gin-spacing-xxs);
+}
+
+[dir="rtl"] #layout-builder-modal .form-type--checkbox .checkbox-toggle+.help-icon,[dir="rtl"] #layout-builder-modal .form-type--radio .checkbox-toggle+.help-icon,[dir="rtl"] .media-library-widget-modal .form-type--checkbox .checkbox-toggle+.help-icon,[dir="rtl"] .media-library-widget-modal .form-type--radio .checkbox-toggle+.help-icon,[dir="rtl"] form.media-form .form-type--checkbox .checkbox-toggle+.help-icon,[dir="rtl"] form.media-form .form-type--radio .checkbox-toggle+.help-icon {
+  padding-left: var(--gin-spacing-xxs);
 }
 
 #layout-builder-modal .form-type-checkbox .help-icon__element-has-description .checkbox-toggle,.media-library-widget-modal .form-type-checkbox .help-icon__element-has-description .checkbox-toggle,form.media-form .form-type-checkbox .help-icon__element-has-description .checkbox-toggle {
@@ -67,33 +91,57 @@
   margin-top: 0;
 }
 
-#layout-builder-modal [dir=ltr] fieldset:not(.fieldgroup) .help-icon>.fieldset__legend .fieldset__label,.media-library-widget-modal [dir=ltr] fieldset:not(.fieldgroup) .help-icon>.fieldset__legend .fieldset__label,form.media-form [dir=ltr] fieldset:not(.fieldgroup) .help-icon>.fieldset__legend .fieldset__label {
+[dir="ltr"] #layout-builder-modal fieldset:not(.fieldgroup) .help-icon>.fieldset__legend .fieldset__label,[dir="ltr"] .media-library-widget-modal fieldset:not(.fieldgroup) .help-icon>.fieldset__legend .fieldset__label,[dir="ltr"] form.media-form fieldset:not(.fieldgroup) .help-icon>.fieldset__legend .fieldset__label {
   padding-right: 0;
 }
 
-#layout-builder-modal [dir=rtl] fieldset:not(.fieldgroup) .help-icon>.fieldset__legend .fieldset__label,.media-library-widget-modal [dir=rtl] fieldset:not(.fieldgroup) .help-icon>.fieldset__legend .fieldset__label,form.media-form [dir=rtl] fieldset:not(.fieldgroup) .help-icon>.fieldset__legend .fieldset__label {
+[dir="ltr"] #layout-builder-modal fieldset:not(.fieldgroup) .help-icon>.fieldset__legend .fieldset__label,[dir="ltr"] .media-library-widget-modal fieldset:not(.fieldgroup) .help-icon>.fieldset__legend .fieldset__label,[dir="ltr"] form.media-form fieldset:not(.fieldgroup) .help-icon>.fieldset__legend .fieldset__label {
   padding-left: 0;
+}
+
+[dir="rtl"] #layout-builder-modal fieldset:not(.fieldgroup) .help-icon>.fieldset__legend .fieldset__label,[dir="rtl"] .media-library-widget-modal fieldset:not(.fieldgroup) .help-icon>.fieldset__legend .fieldset__label,[dir="rtl"] form.media-form fieldset:not(.fieldgroup) .help-icon>.fieldset__legend .fieldset__label {
+  padding-left: 0;
+}
+
+[dir="rtl"] #layout-builder-modal fieldset:not(.fieldgroup) .help-icon>.fieldset__legend .fieldset__label,[dir="rtl"] .media-library-widget-modal fieldset:not(.fieldgroup) .help-icon>.fieldset__legend .fieldset__label,[dir="rtl"] form.media-form fieldset:not(.fieldgroup) .help-icon>.fieldset__legend .fieldset__label {
+  padding-right: 0;
 }
 
 #layout-builder-modal .field-group-fieldset>.help-icon>.help-icon__description-toggle,#layout-builder-modal fieldset.media-library-widget .help-icon>.help-icon__description-toggle,#layout-builder-modal .field--type-datetime fieldset .help-icon>.help-icon__description-toggle,.media-library-widget-modal .field-group-fieldset>.help-icon>.help-icon__description-toggle,.media-library-widget-modal fieldset.media-library-widget .help-icon>.help-icon__description-toggle,.media-library-widget-modal .field--type-datetime fieldset .help-icon>.help-icon__description-toggle,form.media-form .field-group-fieldset>.help-icon>.help-icon__description-toggle,form.media-form fieldset.media-library-widget .help-icon>.help-icon__description-toggle,form.media-form .field--type-datetime fieldset .help-icon>.help-icon__description-toggle {
   margin-top: 1rem;
 }
 
-#layout-builder-modal [dir=ltr] .field-group-fieldset>.fieldset__description,#layout-builder-modal [dir=ltr] fieldset.media-library-widget .fieldset__description,#layout-builder-modal [dir=ltr] .field--type-datetime fieldset .fieldset__description,.media-library-widget-modal [dir=ltr] .field-group-fieldset>.fieldset__description,.media-library-widget-modal [dir=ltr] fieldset.media-library-widget .fieldset__description,.media-library-widget-modal [dir=ltr] .field--type-datetime fieldset .fieldset__description,form.media-form [dir=ltr] .field-group-fieldset>.fieldset__description,form.media-form [dir=ltr] fieldset.media-library-widget .fieldset__description,form.media-form [dir=ltr] .field--type-datetime fieldset .fieldset__description {
+[dir="ltr"] #layout-builder-modal .field-group-fieldset>.fieldset__description,[dir="ltr"] #layout-builder-modal fieldset.media-library-widget .fieldset__description,[dir="ltr"] #layout-builder-modal .field--type-datetime fieldset .fieldset__description,[dir="ltr"] .media-library-widget-modal .field-group-fieldset>.fieldset__description,[dir="ltr"] .media-library-widget-modal fieldset.media-library-widget .fieldset__description,[dir="ltr"] .media-library-widget-modal .field--type-datetime fieldset .fieldset__description,[dir="ltr"] form.media-form .field-group-fieldset>.fieldset__description,[dir="ltr"] form.media-form fieldset.media-library-widget .fieldset__description,[dir="ltr"] form.media-form .field--type-datetime fieldset .fieldset__description {
   padding-left: var(--gin-spacing-m);
 }
 
-#layout-builder-modal [dir=rtl] .field-group-fieldset>.fieldset__description,#layout-builder-modal [dir=rtl] fieldset.media-library-widget .fieldset__description,#layout-builder-modal [dir=rtl] .field--type-datetime fieldset .fieldset__description,.media-library-widget-modal [dir=rtl] .field-group-fieldset>.fieldset__description,.media-library-widget-modal [dir=rtl] fieldset.media-library-widget .fieldset__description,.media-library-widget-modal [dir=rtl] .field--type-datetime fieldset .fieldset__description,form.media-form [dir=rtl] .field-group-fieldset>.fieldset__description,form.media-form [dir=rtl] fieldset.media-library-widget .fieldset__description,form.media-form [dir=rtl] .field--type-datetime fieldset .fieldset__description {
+[dir="ltr"] #layout-builder-modal .field-group-fieldset>.fieldset__description,[dir="ltr"] #layout-builder-modal fieldset.media-library-widget .fieldset__description,[dir="ltr"] #layout-builder-modal .field--type-datetime fieldset .fieldset__description,[dir="ltr"] .media-library-widget-modal .field-group-fieldset>.fieldset__description,[dir="ltr"] .media-library-widget-modal fieldset.media-library-widget .fieldset__description,[dir="ltr"] .media-library-widget-modal .field--type-datetime fieldset .fieldset__description,[dir="ltr"] form.media-form .field-group-fieldset>.fieldset__description,[dir="ltr"] form.media-form fieldset.media-library-widget .fieldset__description,[dir="ltr"] form.media-form .field--type-datetime fieldset .fieldset__description {
   padding-right: var(--gin-spacing-m);
 }
 
+[dir="rtl"] #layout-builder-modal .field-group-fieldset>.fieldset__description,[dir="rtl"] #layout-builder-modal fieldset.media-library-widget .fieldset__description,[dir="rtl"] #layout-builder-modal .field--type-datetime fieldset .fieldset__description,[dir="rtl"] .media-library-widget-modal .field-group-fieldset>.fieldset__description,[dir="rtl"] .media-library-widget-modal fieldset.media-library-widget .fieldset__description,[dir="rtl"] .media-library-widget-modal .field--type-datetime fieldset .fieldset__description,[dir="rtl"] form.media-form .field-group-fieldset>.fieldset__description,[dir="rtl"] form.media-form fieldset.media-library-widget .fieldset__description,[dir="rtl"] form.media-form .field--type-datetime fieldset .fieldset__description {
+  padding-right: var(--gin-spacing-m);
+}
+
+[dir="rtl"] #layout-builder-modal .field-group-fieldset>.fieldset__description,[dir="rtl"] #layout-builder-modal fieldset.media-library-widget .fieldset__description,[dir="rtl"] #layout-builder-modal .field--type-datetime fieldset .fieldset__description,[dir="rtl"] .media-library-widget-modal .field-group-fieldset>.fieldset__description,[dir="rtl"] .media-library-widget-modal fieldset.media-library-widget .fieldset__description,[dir="rtl"] .media-library-widget-modal .field--type-datetime fieldset .fieldset__description,[dir="rtl"] form.media-form .field-group-fieldset>.fieldset__description,[dir="rtl"] form.media-form fieldset.media-library-widget .fieldset__description,[dir="rtl"] form.media-form .field--type-datetime fieldset .fieldset__description {
+  padding-left: var(--gin-spacing-m);
+}
+
 @media (min-width: 48em) {
-  #layout-builder-modal [dir=ltr] .field-group-fieldset>.fieldset__description,#layout-builder-modal [dir=ltr] fieldset.media-library-widget .fieldset__description,#layout-builder-modal [dir=ltr] .field--type-datetime fieldset .fieldset__description,.media-library-widget-modal [dir=ltr] .field-group-fieldset>.fieldset__description,.media-library-widget-modal [dir=ltr] fieldset.media-library-widget .fieldset__description,.media-library-widget-modal [dir=ltr] .field--type-datetime fieldset .fieldset__description,form.media-form [dir=ltr] .field-group-fieldset>.fieldset__description,form.media-form [dir=ltr] fieldset.media-library-widget .fieldset__description,form.media-form [dir=ltr] .field--type-datetime fieldset .fieldset__description {
+  [dir="ltr"] #layout-builder-modal .field-group-fieldset>.fieldset__description,[dir="ltr"] #layout-builder-modal fieldset.media-library-widget .fieldset__description,[dir="ltr"] #layout-builder-modal .field--type-datetime fieldset .fieldset__description,[dir="ltr"] .media-library-widget-modal .field-group-fieldset>.fieldset__description,[dir="ltr"] .media-library-widget-modal fieldset.media-library-widget .fieldset__description,[dir="ltr"] .media-library-widget-modal .field--type-datetime fieldset .fieldset__description,[dir="ltr"] form.media-form .field-group-fieldset>.fieldset__description,[dir="ltr"] form.media-form fieldset.media-library-widget .fieldset__description,[dir="ltr"] form.media-form .field--type-datetime fieldset .fieldset__description {
     padding-left: var(--gin-spacing-l);
   }
 
-  #layout-builder-modal [dir=rtl] .field-group-fieldset>.fieldset__description,#layout-builder-modal [dir=rtl] fieldset.media-library-widget .fieldset__description,#layout-builder-modal [dir=rtl] .field--type-datetime fieldset .fieldset__description,.media-library-widget-modal [dir=rtl] .field-group-fieldset>.fieldset__description,.media-library-widget-modal [dir=rtl] fieldset.media-library-widget .fieldset__description,.media-library-widget-modal [dir=rtl] .field--type-datetime fieldset .fieldset__description,form.media-form [dir=rtl] .field-group-fieldset>.fieldset__description,form.media-form [dir=rtl] fieldset.media-library-widget .fieldset__description,form.media-form [dir=rtl] .field--type-datetime fieldset .fieldset__description {
+  [dir="ltr"] #layout-builder-modal .field-group-fieldset>.fieldset__description,[dir="ltr"] #layout-builder-modal fieldset.media-library-widget .fieldset__description,[dir="ltr"] #layout-builder-modal .field--type-datetime fieldset .fieldset__description,[dir="ltr"] .media-library-widget-modal .field-group-fieldset>.fieldset__description,[dir="ltr"] .media-library-widget-modal fieldset.media-library-widget .fieldset__description,[dir="ltr"] .media-library-widget-modal .field--type-datetime fieldset .fieldset__description,[dir="ltr"] form.media-form .field-group-fieldset>.fieldset__description,[dir="ltr"] form.media-form fieldset.media-library-widget .fieldset__description,[dir="ltr"] form.media-form .field--type-datetime fieldset .fieldset__description {
     padding-right: var(--gin-spacing-l);
+  }
+
+  [dir="rtl"] #layout-builder-modal .field-group-fieldset>.fieldset__description,[dir="rtl"] #layout-builder-modal fieldset.media-library-widget .fieldset__description,[dir="rtl"] #layout-builder-modal .field--type-datetime fieldset .fieldset__description,[dir="rtl"] .media-library-widget-modal .field-group-fieldset>.fieldset__description,[dir="rtl"] .media-library-widget-modal fieldset.media-library-widget .fieldset__description,[dir="rtl"] .media-library-widget-modal .field--type-datetime fieldset .fieldset__description,[dir="rtl"] form.media-form .field-group-fieldset>.fieldset__description,[dir="rtl"] form.media-form fieldset.media-library-widget .fieldset__description,[dir="rtl"] form.media-form .field--type-datetime fieldset .fieldset__description {
+    padding-right: var(--gin-spacing-l);
+  }
+
+  [dir="rtl"] #layout-builder-modal .field-group-fieldset>.fieldset__description,[dir="rtl"] #layout-builder-modal fieldset.media-library-widget .fieldset__description,[dir="rtl"] #layout-builder-modal .field--type-datetime fieldset .fieldset__description,[dir="rtl"] .media-library-widget-modal .field-group-fieldset>.fieldset__description,[dir="rtl"] .media-library-widget-modal fieldset.media-library-widget .fieldset__description,[dir="rtl"] .media-library-widget-modal .field--type-datetime fieldset .fieldset__description,[dir="rtl"] form.media-form .field-group-fieldset>.fieldset__description,[dir="rtl"] form.media-form fieldset.media-library-widget .fieldset__description,[dir="rtl"] form.media-form .field--type-datetime fieldset .fieldset__description {
+    padding-left: var(--gin-spacing-l);
   }
 }
 
@@ -106,11 +154,19 @@
   top: var(--gin-spacing-m);
 }
 
-#layout-builder-modal [dir=ltr] .system-modules .table-filter .form-type--search .help-icon__description-toggle,#layout-builder-modal [dir=ltr] .system-modules-uninstall .table-filter .form-type--search .help-icon__description-toggle,.media-library-widget-modal [dir=ltr] .system-modules .table-filter .form-type--search .help-icon__description-toggle,.media-library-widget-modal [dir=ltr] .system-modules-uninstall .table-filter .form-type--search .help-icon__description-toggle,form.media-form [dir=ltr] .system-modules .table-filter .form-type--search .help-icon__description-toggle,form.media-form [dir=ltr] .system-modules-uninstall .table-filter .form-type--search .help-icon__description-toggle {
+[dir="ltr"] #layout-builder-modal .system-modules .table-filter .form-type--search .help-icon__description-toggle,[dir="ltr"] #layout-builder-modal .system-modules-uninstall .table-filter .form-type--search .help-icon__description-toggle,[dir="ltr"] .media-library-widget-modal .system-modules .table-filter .form-type--search .help-icon__description-toggle,[dir="ltr"] .media-library-widget-modal .system-modules-uninstall .table-filter .form-type--search .help-icon__description-toggle,[dir="ltr"] form.media-form .system-modules .table-filter .form-type--search .help-icon__description-toggle,[dir="ltr"] form.media-form .system-modules-uninstall .table-filter .form-type--search .help-icon__description-toggle {
   right: calc(var(--gin-spacing-xs)*-1);
 }
 
-#layout-builder-modal [dir=rtl] .system-modules .table-filter .form-type--search .help-icon__description-toggle,#layout-builder-modal [dir=rtl] .system-modules-uninstall .table-filter .form-type--search .help-icon__description-toggle,.media-library-widget-modal [dir=rtl] .system-modules .table-filter .form-type--search .help-icon__description-toggle,.media-library-widget-modal [dir=rtl] .system-modules-uninstall .table-filter .form-type--search .help-icon__description-toggle,form.media-form [dir=rtl] .system-modules .table-filter .form-type--search .help-icon__description-toggle,form.media-form [dir=rtl] .system-modules-uninstall .table-filter .form-type--search .help-icon__description-toggle {
+[dir="ltr"] #layout-builder-modal .system-modules .table-filter .form-type--search .help-icon__description-toggle,[dir="ltr"] #layout-builder-modal .system-modules-uninstall .table-filter .form-type--search .help-icon__description-toggle,[dir="ltr"] .media-library-widget-modal .system-modules .table-filter .form-type--search .help-icon__description-toggle,[dir="ltr"] .media-library-widget-modal .system-modules-uninstall .table-filter .form-type--search .help-icon__description-toggle,[dir="ltr"] form.media-form .system-modules .table-filter .form-type--search .help-icon__description-toggle,[dir="ltr"] form.media-form .system-modules-uninstall .table-filter .form-type--search .help-icon__description-toggle {
   left: calc(var(--gin-spacing-xs)*-1);
+}
+
+[dir="rtl"] #layout-builder-modal .system-modules .table-filter .form-type--search .help-icon__description-toggle,[dir="rtl"] #layout-builder-modal .system-modules-uninstall .table-filter .form-type--search .help-icon__description-toggle,[dir="rtl"] .media-library-widget-modal .system-modules .table-filter .form-type--search .help-icon__description-toggle,[dir="rtl"] .media-library-widget-modal .system-modules-uninstall .table-filter .form-type--search .help-icon__description-toggle,[dir="rtl"] form.media-form .system-modules .table-filter .form-type--search .help-icon__description-toggle,[dir="rtl"] form.media-form .system-modules-uninstall .table-filter .form-type--search .help-icon__description-toggle {
+  left: calc(var(--gin-spacing-xs)*-1);
+}
+
+[dir="rtl"] #layout-builder-modal .system-modules .table-filter .form-type--search .help-icon__description-toggle,[dir="rtl"] #layout-builder-modal .system-modules-uninstall .table-filter .form-type--search .help-icon__description-toggle,[dir="rtl"] .media-library-widget-modal .system-modules .table-filter .form-type--search .help-icon__description-toggle,[dir="rtl"] .media-library-widget-modal .system-modules-uninstall .table-filter .form-type--search .help-icon__description-toggle,[dir="rtl"] form.media-form .system-modules .table-filter .form-type--search .help-icon__description-toggle,[dir="rtl"] form.media-form .system-modules-uninstall .table-filter .form-type--search .help-icon__description-toggle {
+  right: calc(var(--gin-spacing-xs)*-1);
 }
 

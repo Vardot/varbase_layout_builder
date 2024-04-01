@@ -64,7 +64,6 @@ claro:
       themes/claro/css/components/action-link.css: {}
       themes/claro/css/components/ajax-progress.module.css: {}
       themes/claro/css/components/autocomplete-loading.module.css: {}
-      themes/claro/css/components/breadcrumb.css: {}
       themes/claro/css/components/container-inline.css: {}
       themes/claro/css/components/container-inline.module.css: {}
       themes/claro/css/components/content-header.css: {}
@@ -74,7 +73,6 @@ claro:
       themes/claro/css/components/divider.css: {}
       themes/claro/css/components/dropbutton.css: {}
       themes/claro/css/components/dialog.css: {}
-      themes/claro/css/components/messages.css: {}
       themes/claro/css/components/page-title.css: {}
       themes/claro/css/components/entity-meta.css: {}
       themes/claro/css/components/fieldset.css: {}
@@ -110,7 +108,6 @@ claro:
       themes/claro/css/components/views-exposed-form.css: {}
       themes/claro/css/components/views-ui.css: {}
     layout:
-      themes/claro/css/layout/breadcrumb.css: {}
       themes/claro/css/layout/card-list.css: {}
       themes/claro/css/layout/layout.css: {}
       themes/claro/css/layout/local-actions.css: {}
@@ -138,7 +135,6 @@ gin:
       themes/gin/css/components/ajax.css: {}
       themes/gin/css/components/autocomplete.css: {}
       themes/gin/css/components/autosave.css: {}
-      themes/gin/css/components/breadcrumb.css: {}
       themes/gin/css/components/chosen.css: {}
       themes/gin/css/components/contextual_links.css: {}
       themes/gin/css/components/description_toggle.css: {}
@@ -151,8 +147,6 @@ gin:
       themes/gin/css/components/layout_paragraphs.css: {}
       themes/gin/css/components/linkit.css: {}
       themes/gin/css/components/media_library.css: {}
-      themes/gin/css/components/module_filter.css: {}
-      themes/gin/css/components/node_preview.css: {}
       themes/gin/css/components/paragraphs.css: {}
       themes/gin/css/components/responsive_preview.css: {}
       themes/gin/css/components/revisions.css: {}

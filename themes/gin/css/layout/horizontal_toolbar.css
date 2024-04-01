@@ -28,12 +28,20 @@
   box-shadow: none;
 }
 
-#layout-builder-modal [dir=ltr] .toolbar .toolbar-bar,.media-library-widget-modal [dir=ltr] .toolbar .toolbar-bar,form.media-form [dir=ltr] .toolbar .toolbar-bar {
+[dir="ltr"] #layout-builder-modal .toolbar .toolbar-bar,[dir="ltr"] .media-library-widget-modal .toolbar .toolbar-bar,[dir="ltr"] form.media-form .toolbar .toolbar-bar {
   left: 0;
 }
 
-#layout-builder-modal [dir=rtl] .toolbar .toolbar-bar,.media-library-widget-modal [dir=rtl] .toolbar .toolbar-bar,form.media-form [dir=rtl] .toolbar .toolbar-bar {
+[dir="ltr"] #layout-builder-modal .toolbar .toolbar-bar,[dir="ltr"] .media-library-widget-modal .toolbar .toolbar-bar,[dir="ltr"] form.media-form .toolbar .toolbar-bar {
   right: 0;
+}
+
+[dir="rtl"] #layout-builder-modal .toolbar .toolbar-bar,[dir="rtl"] .media-library-widget-modal .toolbar .toolbar-bar,[dir="rtl"] form.media-form .toolbar .toolbar-bar {
+  right: 0;
+}
+
+[dir="rtl"] #layout-builder-modal .toolbar .toolbar-bar,[dir="rtl"] .media-library-widget-modal .toolbar .toolbar-bar,[dir="rtl"] form.media-form .toolbar .toolbar-bar {
+  left: 0;
 }
 
 @media (min-width: 61em) {
@@ -55,26 +63,44 @@
   white-space: nowrap;
 }
 
-#layout-builder-modal [dir=ltr] .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,#layout-builder-modal [dir=ltr] .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle),.media-library-widget-modal [dir=ltr] .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,.media-library-widget-modal [dir=ltr] .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle),form.media-form [dir=ltr] .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,form.media-form [dir=ltr] .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle) {
+[dir="ltr"] #layout-builder-modal .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,[dir="ltr"] #layout-builder-modal .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle),[dir="ltr"] .media-library-widget-modal .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,[dir="ltr"] .media-library-widget-modal .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle),[dir="ltr"] form.media-form .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,[dir="ltr"] form.media-form .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle) {
   padding-left: 3.25em;
   padding-right: 1.25em;
 }
 
-#layout-builder-modal [dir=rtl] .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,#layout-builder-modal [dir=rtl] .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle),.media-library-widget-modal [dir=rtl] .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,.media-library-widget-modal [dir=rtl] .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle),form.media-form [dir=rtl] .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,form.media-form [dir=rtl] .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle) {
+[dir="ltr"] #layout-builder-modal .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,[dir="ltr"] #layout-builder-modal .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle),[dir="ltr"] .media-library-widget-modal .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,[dir="ltr"] .media-library-widget-modal .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle),[dir="ltr"] form.media-form .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,[dir="ltr"] form.media-form .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle) {
   padding-right: 3.25em;
   padding-left: 1.25em;
+}
+
+[dir="rtl"] #layout-builder-modal .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,[dir="rtl"] #layout-builder-modal .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle),[dir="rtl"] .media-library-widget-modal .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,[dir="rtl"] .media-library-widget-modal .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle),[dir="rtl"] form.media-form .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,[dir="rtl"] form.media-form .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle) {
+  padding-right: 3.25em;
+  padding-left: 1.25em;
+}
+
+[dir="rtl"] #layout-builder-modal .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,[dir="rtl"] #layout-builder-modal .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle),[dir="rtl"] .media-library-widget-modal .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,[dir="rtl"] .media-library-widget-modal .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle),[dir="rtl"] form.media-form .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon,[dir="rtl"] form.media-form .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle) {
+  padding-left: 3.25em;
+  padding-right: 1.25em;
 }
 
 #layout-builder-modal .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon::before,#layout-builder-modal .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle)::before,.media-library-widget-modal .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon::before,.media-library-widget-modal .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle)::before,form.media-form .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-icon::before,form.media-form .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle)::before {
   inset-inline-start: 1em;
 }
 
-#layout-builder-modal [dir=ltr] .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle)::before,.media-library-widget-modal [dir=ltr] .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle)::before,form.media-form [dir=ltr] .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle)::before {
+[dir="ltr"] #layout-builder-modal .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle)::before,[dir="ltr"] .media-library-widget-modal .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle)::before,[dir="ltr"] form.media-form .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle)::before {
   left: var(--gin-spacing-s);
 }
 
-#layout-builder-modal [dir=rtl] .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle)::before,.media-library-widget-modal [dir=rtl] .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle)::before,form.media-form [dir=rtl] .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle)::before {
+[dir="ltr"] #layout-builder-modal .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle)::before,[dir="ltr"] .media-library-widget-modal .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle)::before,[dir="ltr"] form.media-form .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle)::before {
   right: var(--gin-spacing-s);
+}
+
+[dir="rtl"] #layout-builder-modal .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle)::before,[dir="rtl"] .media-library-widget-modal .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle)::before,[dir="rtl"] form.media-form .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle)::before {
+  right: var(--gin-spacing-s);
+}
+
+[dir="rtl"] #layout-builder-modal .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle)::before,[dir="rtl"] .media-library-widget-modal .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle)::before,[dir="rtl"] form.media-form .toolbar .toolbar-bar .toolbar-menu-administration>.toolbar-menu>.menu-item>.toolbar-box>.toolbar-icon:not(.toolbar-handle)::before {
+  left: var(--gin-spacing-s);
 }
 
 #layout-builder-modal .toolbar .toolbar-bar .toolbar-toggle-orientation,.media-library-widget-modal .toolbar .toolbar-bar .toolbar-toggle-orientation,form.media-form .toolbar .toolbar-bar .toolbar-toggle-orientation {
@@ -85,12 +111,20 @@
   width: 3rem;
 }
 
-#layout-builder-modal [dir=ltr] .toolbar-tray-vertical .toolbar-menu .level-1>.toolbar-box .toolbar-icon.toolbar-handle:before,.media-library-widget-modal [dir=ltr] .toolbar-tray-vertical .toolbar-menu .level-1>.toolbar-box .toolbar-icon.toolbar-handle:before,form.media-form [dir=ltr] .toolbar-tray-vertical .toolbar-menu .level-1>.toolbar-box .toolbar-icon.toolbar-handle:before {
+[dir="ltr"] #layout-builder-modal .toolbar-tray-vertical .toolbar-menu .level-1>.toolbar-box .toolbar-icon.toolbar-handle:before,[dir="ltr"] .media-library-widget-modal .toolbar-tray-vertical .toolbar-menu .level-1>.toolbar-box .toolbar-icon.toolbar-handle:before,[dir="ltr"] form.media-form .toolbar-tray-vertical .toolbar-menu .level-1>.toolbar-box .toolbar-icon.toolbar-handle:before {
   left: var(--gin-spacing-m);
 }
 
-#layout-builder-modal [dir=rtl] .toolbar-tray-vertical .toolbar-menu .level-1>.toolbar-box .toolbar-icon.toolbar-handle:before,.media-library-widget-modal [dir=rtl] .toolbar-tray-vertical .toolbar-menu .level-1>.toolbar-box .toolbar-icon.toolbar-handle:before,form.media-form [dir=rtl] .toolbar-tray-vertical .toolbar-menu .level-1>.toolbar-box .toolbar-icon.toolbar-handle:before {
+[dir="ltr"] #layout-builder-modal .toolbar-tray-vertical .toolbar-menu .level-1>.toolbar-box .toolbar-icon.toolbar-handle:before,[dir="ltr"] .media-library-widget-modal .toolbar-tray-vertical .toolbar-menu .level-1>.toolbar-box .toolbar-icon.toolbar-handle:before,[dir="ltr"] form.media-form .toolbar-tray-vertical .toolbar-menu .level-1>.toolbar-box .toolbar-icon.toolbar-handle:before {
   right: var(--gin-spacing-m);
+}
+
+[dir="rtl"] #layout-builder-modal .toolbar-tray-vertical .toolbar-menu .level-1>.toolbar-box .toolbar-icon.toolbar-handle:before,[dir="rtl"] .media-library-widget-modal .toolbar-tray-vertical .toolbar-menu .level-1>.toolbar-box .toolbar-icon.toolbar-handle:before,[dir="rtl"] form.media-form .toolbar-tray-vertical .toolbar-menu .level-1>.toolbar-box .toolbar-icon.toolbar-handle:before {
+  right: var(--gin-spacing-m);
+}
+
+[dir="rtl"] #layout-builder-modal .toolbar-tray-vertical .toolbar-menu .level-1>.toolbar-box .toolbar-icon.toolbar-handle:before,[dir="rtl"] .media-library-widget-modal .toolbar-tray-vertical .toolbar-menu .level-1>.toolbar-box .toolbar-icon.toolbar-handle:before,[dir="rtl"] form.media-form .toolbar-tray-vertical .toolbar-menu .level-1>.toolbar-box .toolbar-icon.toolbar-handle:before {
+  left: var(--gin-spacing-m);
 }
 
 #layout-builder-modal .toolbar-tray-horizontal .level-1 .menu-item--expanded>.toolbar-box a,.media-library-widget-modal .toolbar-tray-horizontal .level-1 .menu-item--expanded>.toolbar-box a,form.media-form .toolbar-tray-horizontal .level-1 .menu-item--expanded>.toolbar-box a {
@@ -105,12 +139,20 @@
   background-color: var(--gin-bg-layer);
 }
 
-#layout-builder-modal [dir=ltr] .toolbar-horizontal .toolbar-tray .toolbar-toggle-orientation,.media-library-widget-modal [dir=ltr] .toolbar-horizontal .toolbar-tray .toolbar-toggle-orientation,form.media-form [dir=ltr] .toolbar-horizontal .toolbar-tray .toolbar-toggle-orientation {
+[dir="ltr"] #layout-builder-modal .toolbar-horizontal .toolbar-tray .toolbar-toggle-orientation,[dir="ltr"] .media-library-widget-modal .toolbar-horizontal .toolbar-tray .toolbar-toggle-orientation,[dir="ltr"] form.media-form .toolbar-horizontal .toolbar-tray .toolbar-toggle-orientation {
   border-left: 1px solid var(--gin-border-color);
 }
 
-#layout-builder-modal [dir=rtl] .toolbar-horizontal .toolbar-tray .toolbar-toggle-orientation,.media-library-widget-modal [dir=rtl] .toolbar-horizontal .toolbar-tray .toolbar-toggle-orientation,form.media-form [dir=rtl] .toolbar-horizontal .toolbar-tray .toolbar-toggle-orientation {
+[dir="ltr"] #layout-builder-modal .toolbar-horizontal .toolbar-tray .toolbar-toggle-orientation,[dir="ltr"] .media-library-widget-modal .toolbar-horizontal .toolbar-tray .toolbar-toggle-orientation,[dir="ltr"] form.media-form .toolbar-horizontal .toolbar-tray .toolbar-toggle-orientation {
   border-right: 1px solid var(--gin-border-color);
+}
+
+[dir="rtl"] #layout-builder-modal .toolbar-horizontal .toolbar-tray .toolbar-toggle-orientation,[dir="rtl"] .media-library-widget-modal .toolbar-horizontal .toolbar-tray .toolbar-toggle-orientation,[dir="rtl"] form.media-form .toolbar-horizontal .toolbar-tray .toolbar-toggle-orientation {
+  border-right: 1px solid var(--gin-border-color);
+}
+
+[dir="rtl"] #layout-builder-modal .toolbar-horizontal .toolbar-tray .toolbar-toggle-orientation,[dir="rtl"] .media-library-widget-modal .toolbar-horizontal .toolbar-tray .toolbar-toggle-orientation,[dir="rtl"] form.media-form .toolbar-horizontal .toolbar-tray .toolbar-toggle-orientation {
+  border-left: 1px solid var(--gin-border-color);
 }
 
 #layout-builder-modal .toolbar-tray a,#layout-builder-modal .toolbar-tray span,#layout-builder-modal .toolbar .toolbar-menu .toolbar-menu a,#layout-builder-modal .toolbar .toolbar-menu .toolbar-menu span,.media-library-widget-modal .toolbar-tray a,.media-library-widget-modal .toolbar-tray span,.media-library-widget-modal .toolbar .toolbar-menu .toolbar-menu a,.media-library-widget-modal .toolbar .toolbar-menu .toolbar-menu span,form.media-form .toolbar-tray a,form.media-form .toolbar-tray span,form.media-form .toolbar .toolbar-menu .toolbar-menu a,form.media-form .toolbar .toolbar-menu .toolbar-menu span {
@@ -175,12 +217,20 @@
   top: 12px;
 }
 
-#layout-builder-modal [dir=ltr] .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:before,#layout-builder-modal [dir=ltr] .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus:before,.media-library-widget-modal [dir=ltr] .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:before,.media-library-widget-modal [dir=ltr] .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus:before,form.media-form [dir=ltr] .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:before,form.media-form [dir=ltr] .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus:before {
+[dir="ltr"] #layout-builder-modal .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:before,[dir="ltr"] #layout-builder-modal .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus:before,[dir="ltr"] .media-library-widget-modal .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:before,[dir="ltr"] .media-library-widget-modal .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus:before,[dir="ltr"] form.media-form .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:before,[dir="ltr"] form.media-form .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus:before {
   right: 12px;
 }
 
-#layout-builder-modal [dir=rtl] .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:before,#layout-builder-modal [dir=rtl] .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus:before,.media-library-widget-modal [dir=rtl] .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:before,.media-library-widget-modal [dir=rtl] .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus:before,form.media-form [dir=rtl] .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:before,form.media-form [dir=rtl] .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus:before {
+[dir="ltr"] #layout-builder-modal .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:before,[dir="ltr"] #layout-builder-modal .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus:before,[dir="ltr"] .media-library-widget-modal .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:before,[dir="ltr"] .media-library-widget-modal .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus:before,[dir="ltr"] form.media-form .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:before,[dir="ltr"] form.media-form .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus:before {
   left: 12px;
+}
+
+[dir="rtl"] #layout-builder-modal .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:before,[dir="rtl"] #layout-builder-modal .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus:before,[dir="rtl"] .media-library-widget-modal .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:before,[dir="rtl"] .media-library-widget-modal .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus:before,[dir="rtl"] form.media-form .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:before,[dir="rtl"] form.media-form .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus:before {
+  left: 12px;
+}
+
+[dir="rtl"] #layout-builder-modal .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:before,[dir="rtl"] #layout-builder-modal .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus:before,[dir="rtl"] .media-library-widget-modal .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:before,[dir="rtl"] .media-library-widget-modal .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus:before,[dir="rtl"] form.media-form .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:before,[dir="rtl"] form.media-form .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus:before {
+  right: 12px;
 }
 
 #layout-builder-modal .toolbar-tray-horizontal .menu-item:hover,.media-library-widget-modal .toolbar-tray-horizontal .menu-item:hover,form.media-form .toolbar-tray-horizontal .menu-item:hover {
@@ -214,22 +264,38 @@
     -webkit-overflow-scrolling: touch;
   }
 
-  #layout-builder-modal [dir=ltr] .gin--horizontal-toolbar #toolbar-administration .toolbar-lining,.media-library-widget-modal [dir=ltr] .gin--horizontal-toolbar #toolbar-administration .toolbar-lining,form.media-form [dir=ltr] .gin--horizontal-toolbar #toolbar-administration .toolbar-lining {
+  [dir="ltr"] #layout-builder-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-lining,[dir="ltr"] .media-library-widget-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-lining,[dir="ltr"] form.media-form .gin--horizontal-toolbar #toolbar-administration .toolbar-lining {
     padding-right: 0;
   }
 
-  #layout-builder-modal [dir=rtl] .gin--horizontal-toolbar #toolbar-administration .toolbar-lining,.media-library-widget-modal [dir=rtl] .gin--horizontal-toolbar #toolbar-administration .toolbar-lining,form.media-form [dir=rtl] .gin--horizontal-toolbar #toolbar-administration .toolbar-lining {
+  [dir="ltr"] #layout-builder-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-lining,[dir="ltr"] .media-library-widget-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-lining,[dir="ltr"] form.media-form .gin--horizontal-toolbar #toolbar-administration .toolbar-lining {
     padding-left: 0;
+  }
+
+  [dir="rtl"] #layout-builder-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-lining,[dir="rtl"] .media-library-widget-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-lining,[dir="rtl"] form.media-form .gin--horizontal-toolbar #toolbar-administration .toolbar-lining {
+    padding-left: 0;
+  }
+
+  [dir="rtl"] #layout-builder-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-lining,[dir="rtl"] .media-library-widget-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-lining,[dir="rtl"] form.media-form .gin--horizontal-toolbar #toolbar-administration .toolbar-lining {
+    padding-right: 0;
   }
 }
 
 @media (min-width: 61em) {
-  #layout-builder-modal [dir=ltr] .gin--horizontal-toolbar #toolbar-administration .menu-item__tools,#layout-builder-modal [dir=ltr] .gin--horizontal-toolbar #toolbar-administration .menu-item__admin_toolbar_tools-help,.media-library-widget-modal [dir=ltr] .gin--horizontal-toolbar #toolbar-administration .menu-item__tools,.media-library-widget-modal [dir=ltr] .gin--horizontal-toolbar #toolbar-administration .menu-item__admin_toolbar_tools-help,form.media-form [dir=ltr] .gin--horizontal-toolbar #toolbar-administration .menu-item__tools,form.media-form [dir=ltr] .gin--horizontal-toolbar #toolbar-administration .menu-item__admin_toolbar_tools-help {
+  [dir="ltr"] #layout-builder-modal .gin--horizontal-toolbar #toolbar-administration .menu-item__tools,[dir="ltr"] #layout-builder-modal .gin--horizontal-toolbar #toolbar-administration .menu-item__admin_toolbar_tools-help,[dir="ltr"] .media-library-widget-modal .gin--horizontal-toolbar #toolbar-administration .menu-item__tools,[dir="ltr"] .media-library-widget-modal .gin--horizontal-toolbar #toolbar-administration .menu-item__admin_toolbar_tools-help,[dir="ltr"] form.media-form .gin--horizontal-toolbar #toolbar-administration .menu-item__tools,[dir="ltr"] form.media-form .gin--horizontal-toolbar #toolbar-administration .menu-item__admin_toolbar_tools-help {
     margin-left: calc(var(--gin-spacing-m)*-1);
   }
 
-  #layout-builder-modal [dir=rtl] .gin--horizontal-toolbar #toolbar-administration .menu-item__tools,#layout-builder-modal [dir=rtl] .gin--horizontal-toolbar #toolbar-administration .menu-item__admin_toolbar_tools-help,.media-library-widget-modal [dir=rtl] .gin--horizontal-toolbar #toolbar-administration .menu-item__tools,.media-library-widget-modal [dir=rtl] .gin--horizontal-toolbar #toolbar-administration .menu-item__admin_toolbar_tools-help,form.media-form [dir=rtl] .gin--horizontal-toolbar #toolbar-administration .menu-item__tools,form.media-form [dir=rtl] .gin--horizontal-toolbar #toolbar-administration .menu-item__admin_toolbar_tools-help {
+  [dir="ltr"] #layout-builder-modal .gin--horizontal-toolbar #toolbar-administration .menu-item__tools,[dir="ltr"] #layout-builder-modal .gin--horizontal-toolbar #toolbar-administration .menu-item__admin_toolbar_tools-help,[dir="ltr"] .media-library-widget-modal .gin--horizontal-toolbar #toolbar-administration .menu-item__tools,[dir="ltr"] .media-library-widget-modal .gin--horizontal-toolbar #toolbar-administration .menu-item__admin_toolbar_tools-help,[dir="ltr"] form.media-form .gin--horizontal-toolbar #toolbar-administration .menu-item__tools,[dir="ltr"] form.media-form .gin--horizontal-toolbar #toolbar-administration .menu-item__admin_toolbar_tools-help {
     margin-right: calc(var(--gin-spacing-m)*-1);
+  }
+
+  [dir="rtl"] #layout-builder-modal .gin--horizontal-toolbar #toolbar-administration .menu-item__tools,[dir="rtl"] #layout-builder-modal .gin--horizontal-toolbar #toolbar-administration .menu-item__admin_toolbar_tools-help,[dir="rtl"] .media-library-widget-modal .gin--horizontal-toolbar #toolbar-administration .menu-item__tools,[dir="rtl"] .media-library-widget-modal .gin--horizontal-toolbar #toolbar-administration .menu-item__admin_toolbar_tools-help,[dir="rtl"] form.media-form .gin--horizontal-toolbar #toolbar-administration .menu-item__tools,[dir="rtl"] form.media-form .gin--horizontal-toolbar #toolbar-administration .menu-item__admin_toolbar_tools-help {
+    margin-right: calc(var(--gin-spacing-m)*-1);
+  }
+
+  [dir="rtl"] #layout-builder-modal .gin--horizontal-toolbar #toolbar-administration .menu-item__tools,[dir="rtl"] #layout-builder-modal .gin--horizontal-toolbar #toolbar-administration .menu-item__admin_toolbar_tools-help,[dir="rtl"] .media-library-widget-modal .gin--horizontal-toolbar #toolbar-administration .menu-item__tools,[dir="rtl"] .media-library-widget-modal .gin--horizontal-toolbar #toolbar-administration .menu-item__admin_toolbar_tools-help,[dir="rtl"] form.media-form .gin--horizontal-toolbar #toolbar-administration .menu-item__tools,[dir="rtl"] form.media-form .gin--horizontal-toolbar #toolbar-administration .menu-item__admin_toolbar_tools-help {
+    margin-left: calc(var(--gin-spacing-m)*-1);
   }
 }
 
@@ -245,12 +311,20 @@
 }
 
 @media (min-width: 61em) {
-  #layout-builder-modal [dir=ltr] .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help,.media-library-widget-modal [dir=ltr] .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help,form.media-form [dir=ltr] .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help {
+  [dir="ltr"] #layout-builder-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help,[dir="ltr"] .media-library-widget-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help,[dir="ltr"] form.media-form .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help {
     padding-left: 2.875em;
   }
 
-  #layout-builder-modal [dir=rtl] .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help,.media-library-widget-modal [dir=rtl] .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help,form.media-form [dir=rtl] .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help {
+  [dir="ltr"] #layout-builder-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help,[dir="ltr"] .media-library-widget-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help,[dir="ltr"] form.media-form .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help {
     padding-right: 2.875em;
+  }
+
+  [dir="rtl"] #layout-builder-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help,[dir="rtl"] .media-library-widget-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help,[dir="rtl"] form.media-form .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help {
+    padding-right: 2.875em;
+  }
+
+  [dir="rtl"] #layout-builder-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help,[dir="rtl"] .media-library-widget-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help,[dir="rtl"] form.media-form .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help {
+    padding-left: 2.875em;
   }
 
   #layout-builder-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help:before,.media-library-widget-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help:before,form.media-form .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help:before {
@@ -260,20 +334,36 @@
             mask-size: 28px 28px;
   }
 
-  #layout-builder-modal [dir=ltr] .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help:before,.media-library-widget-modal [dir=ltr] .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help:before,form.media-form [dir=ltr] .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help:before {
+  [dir="ltr"] #layout-builder-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help:before,[dir="ltr"] .media-library-widget-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help:before,[dir="ltr"] form.media-form .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help:before {
     left: 14px;
   }
 
-  #layout-builder-modal [dir=rtl] .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help:before,.media-library-widget-modal [dir=rtl] .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help:before,form.media-form [dir=rtl] .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help:before {
+  [dir="ltr"] #layout-builder-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help:before,[dir="ltr"] .media-library-widget-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help:before,[dir="ltr"] form.media-form .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help:before {
     right: 14px;
   }
 
-  #layout-builder-modal [dir=ltr] .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default,.media-library-widget-modal [dir=ltr] .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default,form.media-form [dir=ltr] .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default {
+  [dir="rtl"] #layout-builder-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help:before,[dir="rtl"] .media-library-widget-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help:before,[dir="rtl"] form.media-form .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help:before {
+    right: 14px;
+  }
+
+  [dir="rtl"] #layout-builder-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help:before,[dir="rtl"] .media-library-widget-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help:before,[dir="rtl"] form.media-form .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help:before {
+    left: 14px;
+  }
+
+  [dir="ltr"] #layout-builder-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default,[dir="ltr"] .media-library-widget-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default,[dir="ltr"] form.media-form .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default {
     margin-right: var(--gin-spacing-xs);
   }
 
-  #layout-builder-modal [dir=rtl] .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default,.media-library-widget-modal [dir=rtl] .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default,form.media-form [dir=rtl] .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default {
+  [dir="ltr"] #layout-builder-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default,[dir="ltr"] .media-library-widget-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default,[dir="ltr"] form.media-form .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default {
     margin-left: var(--gin-spacing-xs);
+  }
+
+  [dir="rtl"] #layout-builder-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default,[dir="rtl"] .media-library-widget-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default,[dir="rtl"] form.media-form .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default {
+    margin-left: var(--gin-spacing-xs);
+  }
+
+  [dir="rtl"] #layout-builder-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default,[dir="rtl"] .media-library-widget-modal .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default,[dir="rtl"] form.media-form .gin--horizontal-toolbar #toolbar-administration .toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default {
+    margin-right: var(--gin-spacing-xs);
   }
 }
 

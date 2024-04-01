@@ -27,7 +27,14 @@
   margin: 0;
   background: rgba(0, 0, 0, 0);
   border-color: #727579;
+}
+
+[dir="ltr"] #layout-builder-modal .field-group-tabs-wrapper .horizontal-tabs .horizontal-tabs-list {
   padding: .3125rem var(--gin-spacing-xs) 0 var(--gin-spacing-l);
+}
+
+[dir="rtl"] #layout-builder-modal .field-group-tabs-wrapper .horizontal-tabs .horizontal-tabs-list {
+  padding: .3125rem var(--gin-spacing-l) 0 var(--gin-spacing-xs);
 }
 
 #layout-builder-modal .field-group-tabs-wrapper .horizontal-tabs .horizontal-tabs-list::before,#layout-builder-modal .field-group-tabs-wrapper .horizontal-tabs .horizontal-tabs-list::after {

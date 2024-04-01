@@ -39,7 +39,6 @@ module.exports = {
     'components/icon-link': ['./themes/claro/scss/components/icon-link.scss'],
     'components/system-admin--links': ['./themes/claro/scss/components/system-admin--links.scss'],
     'components/tablesort-indicator': ['./themes/claro/scss/components/tablesort-indicator.scss'],
-    'components/breadcrumb': ['./themes/claro/scss/components/breadcrumb.scss'],
     'components/fieldset': ['./themes/claro/scss/components/fieldset.scss'],
     'components/image-preview': ['./themes/claro/scss/components/image-preview.scss'],
     'components/system-admin--modules': ['./themes/claro/scss/components/system-admin--modules.scss'],
@@ -70,7 +69,6 @@ module.exports = {
     'components/form': ['./themes/claro/scss/components/form.scss'],
     'components/page-title': ['./themes/claro/scss/components/page-title.scss'],
     // Layout
-    'layout/breadcrumb': ['./themes/claro/scss/layout/breadcrumb.scss'],
     'layout/card-list': ['./themes/claro/scss/layout/card-list.scss'],
     'layout/layout': ['./themes/claro/scss/layout/layout.scss'],
     'layout/local-actions': ['./themes/claro/scss/layout/local-actions.scss'],

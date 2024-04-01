@@ -256,6 +256,7 @@ body {
   }
 
   .media-library-item__attributes {
+    position: relative;
     background: transparent !important;
   }
 
@@ -290,6 +291,27 @@ form.media-form {
     &:focus {
       background-color: var(--gin-bg-input) !important;
       color: var(--gin-color-contextual) !important;
+    }
+  }
+
+}
+
+.media-library-widget-modal {
+  .media-library-item {
+    .media-library-item__preview {
+      padding-bottom: 2.125rem !important;
+    }
+  }
+
+  .media-library-item__attributes {
+    position: relative !important;
+    background: transparent !important;
+  }
+
+  .media-library-wrapper {
+    .views-display-link-widget_table,
+    .views-display-link-widget {
+      background: none !important;
     }
   }
 
@@ -518,6 +540,12 @@ form.media-form {
     textarea {
       height: -webkit-fill-available;
       border-radius: 0;
+    }
+  }
+
+  .bs_tab-pane.bs_tab-pane--appearance {
+    > details {
+      border: 1px solid #fff !important;
     }
   }
 

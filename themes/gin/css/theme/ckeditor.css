@@ -1,72 +1,80 @@
-#layout-builder-modal body.cke_editable_themed,.media-library-widget-modal body.cke_editable_themed,form.media-form body.cke_editable_themed {
+#layout-builder-modal body.cke_editable_themed {
   color: var(--gin-color-text);
 }
 
-#layout-builder-modal body.cke_editable_themed.gin--dark-mode,.media-library-widget-modal body.cke_editable_themed.gin--dark-mode,form.media-form body.cke_editable_themed.gin--dark-mode {
+#layout-builder-modal body.cke_editable_themed.gin--dark-mode {
   background-color: var(--gin-bg-layer2);
 }
 
-#layout-builder-modal a,.media-library-widget-modal a,form.media-form a {
+#layout-builder-modal a {
   color: var(--gin-color-primary);
 }
 
-#layout-builder-modal .cke_panel_grouptitle,.media-library-widget-modal .cke_panel_grouptitle,form.media-form .cke_panel_grouptitle {
+#layout-builder-modal .cke_panel_grouptitle {
   color: var(--gin-color-title);
   background: var(--gin-bg-layer2);
 }
 
-#layout-builder-modal .cke_panel_listItem.cke_selected a,#layout-builder-modal .cke_panel_listItem a:hover,#layout-builder-modal .cke_panel_listItem a:focus,#layout-builder-modal .cke_panel_listItem a:active,.media-library-widget-modal .cke_panel_listItem.cke_selected a,.media-library-widget-modal .cke_panel_listItem a:hover,.media-library-widget-modal .cke_panel_listItem a:focus,.media-library-widget-modal .cke_panel_listItem a:active,form.media-form .cke_panel_listItem.cke_selected a,form.media-form .cke_panel_listItem a:hover,form.media-form .cke_panel_listItem a:focus,form.media-form .cke_panel_listItem a:active {
+#layout-builder-modal .cke_panel_listItem.cke_selected a,#layout-builder-modal .cke_panel_listItem a:hover,#layout-builder-modal .cke_panel_listItem a:focus,#layout-builder-modal .cke_panel_listItem a:active {
   background-color: var(--gin-color-primary-light);
 }
 
-#layout-builder-modal .cke_editable,.media-library-widget-modal .cke_editable,form.media-form .cke_editable {
+#layout-builder-modal .cke_editable {
   line-height: 1.5;
 }
 
-#layout-builder-modal .cke_panel_block,.media-library-widget-modal .cke_panel_block,form.media-form .cke_panel_block {
+#layout-builder-modal .cke_panel_block {
   border-color: var(--gin-border-color-form-element);
   border-radius: var(--gin-border-m);
 }
 
-#layout-builder-modal .cke_panel_block .cke_menu .cke_menubutton_icon,.media-library-widget-modal .cke_panel_block .cke_menu .cke_menubutton_icon,form.media-form .cke_panel_block .cke_menu .cke_menubutton_icon {
+#layout-builder-modal .cke_panel_block .cke_menu .cke_menubutton_icon {
   background-color: var(--gin-bg-app);
 }
 
-#layout-builder-modal .gin--dark-mode .cke_panel_block .cke_menu .cke_menubutton_icon .cke_button_icon,.media-library-widget-modal .gin--dark-mode .cke_panel_block .cke_menu .cke_menubutton_icon .cke_button_icon,form.media-form .gin--dark-mode .cke_panel_block .cke_menu .cke_menubutton_icon .cke_button_icon {
+#layout-builder-modal .gin--dark-mode .cke_panel_block .cke_menu .cke_menubutton_icon .cke_button_icon {
   filter: invert(1);
 }
 
-#layout-builder-modal .cke_panel_block .cke_menu .cke_menubutton_label,.media-library-widget-modal .cke_panel_block .cke_menu .cke_menubutton_label,form.media-form .cke_panel_block .cke_menu .cke_menubutton_label {
+#layout-builder-modal .cke_panel_block .cke_menu .cke_menubutton_label {
   color: var(--gin-color-text);
 }
 
-#layout-builder-modal .cke_panel_block .cke_menu .cke_menubutton_shortcut,.media-library-widget-modal .cke_panel_block .cke_menu .cke_menubutton_shortcut,form.media-form .cke_panel_block .cke_menu .cke_menubutton_shortcut {
+#layout-builder-modal .cke_panel_block .cke_menu .cke_menubutton_shortcut {
   color: var(--gin-color-text-light);
 }
 
-#layout-builder-modal .cke_panel_block .cke_menu a:hover,#layout-builder-modal .cke_panel_block .cke_menu a:focus,#layout-builder-modal .cke_panel_block .cke_menu a:active,.media-library-widget-modal .cke_panel_block .cke_menu a:hover,.media-library-widget-modal .cke_panel_block .cke_menu a:focus,.media-library-widget-modal .cke_panel_block .cke_menu a:active,form.media-form .cke_panel_block .cke_menu a:hover,form.media-form .cke_panel_block .cke_menu a:focus,form.media-form .cke_panel_block .cke_menu a:active {
+#layout-builder-modal .cke_panel_block .cke_menu a:hover,#layout-builder-modal .cke_panel_block .cke_menu a:focus,#layout-builder-modal .cke_panel_block .cke_menu a:active {
   background-color: var(--gin-color-primary-light);
 }
 
-#layout-builder-modal .cke_panel_block .cke_menu a:hover .cke_menubutton_icon,#layout-builder-modal .cke_panel_block .cke_menu a:focus .cke_menubutton_icon,#layout-builder-modal .cke_panel_block .cke_menu a:active .cke_menubutton_icon,.media-library-widget-modal .cke_panel_block .cke_menu a:hover .cke_menubutton_icon,.media-library-widget-modal .cke_panel_block .cke_menu a:focus .cke_menubutton_icon,.media-library-widget-modal .cke_panel_block .cke_menu a:active .cke_menubutton_icon,form.media-form .cke_panel_block .cke_menu a:hover .cke_menubutton_icon,form.media-form .cke_panel_block .cke_menu a:focus .cke_menubutton_icon,form.media-form .cke_panel_block .cke_menu a:active .cke_menubutton_icon {
+#layout-builder-modal .cke_panel_block .cke_menu a:hover .cke_menubutton_icon,#layout-builder-modal .cke_panel_block .cke_menu a:focus .cke_menubutton_icon,#layout-builder-modal .cke_panel_block .cke_menu a:active .cke_menubutton_icon {
   background-color: var(--gin-color-primary-light);
 }
 
-#layout-builder-modal body.cke_editable_themed blockquote,.media-library-widget-modal body.cke_editable_themed blockquote,form.media-form body.cke_editable_themed blockquote {
+#layout-builder-modal body.cke_editable_themed blockquote {
   font-size: var(--gin-font-size-quote);
   position: relative;
   margin: var(--gin-spacing-m);
 }
 
-#layout-builder-modal [dir=ltr] body.cke_editable_themed blockquote,.media-library-widget-modal [dir=ltr] body.cke_editable_themed blockquote,form.media-form [dir=ltr] body.cke_editable_themed blockquote {
+[dir="ltr"] #layout-builder-modal body.cke_editable_themed blockquote {
   padding-left: var(--gin-spacing-l);
 }
 
-#layout-builder-modal [dir=rtl] body.cke_editable_themed blockquote,.media-library-widget-modal [dir=rtl] body.cke_editable_themed blockquote,form.media-form [dir=rtl] body.cke_editable_themed blockquote {
+[dir="ltr"] #layout-builder-modal body.cke_editable_themed blockquote {
   padding-right: var(--gin-spacing-l);
 }
 
-#layout-builder-modal body.cke_editable_themed blockquote::before,.media-library-widget-modal body.cke_editable_themed blockquote::before,form.media-form body.cke_editable_themed blockquote::before {
+[dir="rtl"] #layout-builder-modal body.cke_editable_themed blockquote {
+  padding-right: var(--gin-spacing-l);
+}
+
+[dir="rtl"] #layout-builder-modal body.cke_editable_themed blockquote {
+  padding-left: var(--gin-spacing-l);
+}
+
+#layout-builder-modal body.cke_editable_themed blockquote::before {
   content: "";
   display: block;
   position: absolute;
@@ -77,11 +85,19 @@
   border-radius: 2px;
 }
 
-#layout-builder-modal [dir=ltr] body.cke_editable_themed blockquote::before,.media-library-widget-modal [dir=ltr] body.cke_editable_themed blockquote::before,form.media-form [dir=ltr] body.cke_editable_themed blockquote::before {
+[dir="ltr"] #layout-builder-modal body.cke_editable_themed blockquote::before {
   left: 0;
 }
 
-#layout-builder-modal [dir=rtl] body.cke_editable_themed blockquote::before,.media-library-widget-modal [dir=rtl] body.cke_editable_themed blockquote::before,form.media-form [dir=rtl] body.cke_editable_themed blockquote::before {
+[dir="ltr"] #layout-builder-modal body.cke_editable_themed blockquote::before {
   right: 0;
+}
+
+[dir="rtl"] #layout-builder-modal body.cke_editable_themed blockquote::before {
+  right: 0;
+}
+
+[dir="rtl"] #layout-builder-modal body.cke_editable_themed blockquote::before {
+  left: 0;
 }
 

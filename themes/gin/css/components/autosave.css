@@ -4,11 +4,19 @@
   border-radius: var(--gin-border-xs);
 }
 
-#layout-builder-modal [dir=ltr] #autosave-notification,.media-library-widget-modal [dir=ltr] #autosave-notification,form.media-form [dir=ltr] #autosave-notification {
+[dir="ltr"] #layout-builder-modal #autosave-notification,[dir="ltr"] .media-library-widget-modal #autosave-notification,[dir="ltr"] form.media-form #autosave-notification {
   right: var(--gin-spacing-xs);
 }
 
-#layout-builder-modal [dir=rtl] #autosave-notification,.media-library-widget-modal [dir=rtl] #autosave-notification,form.media-form [dir=rtl] #autosave-notification {
+[dir="ltr"] #layout-builder-modal #autosave-notification,[dir="ltr"] .media-library-widget-modal #autosave-notification,[dir="ltr"] form.media-form #autosave-notification {
   left: var(--gin-spacing-xs);
+}
+
+[dir="rtl"] #layout-builder-modal #autosave-notification,[dir="rtl"] .media-library-widget-modal #autosave-notification,[dir="rtl"] form.media-form #autosave-notification {
+  left: var(--gin-spacing-xs);
+}
+
+[dir="rtl"] #layout-builder-modal #autosave-notification,[dir="rtl"] .media-library-widget-modal #autosave-notification,[dir="rtl"] form.media-form #autosave-notification {
+  right: var(--gin-spacing-xs);
 }
 

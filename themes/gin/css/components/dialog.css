@@ -22,14 +22,24 @@
   top: auto;
 }
 
-#layout-builder-modal [dir=ltr] .ui-dialog:not(.ui-dialog-off-canvas) .layout-region-node-actions,.media-library-widget-modal [dir=ltr] .ui-dialog:not(.ui-dialog-off-canvas) .layout-region-node-actions,form.media-form [dir=ltr] .ui-dialog:not(.ui-dialog-off-canvas) .layout-region-node-actions {
+[dir="ltr"] #layout-builder-modal .ui-dialog:not(.ui-dialog-off-canvas) .layout-region-node-actions,[dir="ltr"] .media-library-widget-modal .ui-dialog:not(.ui-dialog-off-canvas) .layout-region-node-actions,[dir="ltr"] form.media-form .ui-dialog:not(.ui-dialog-off-canvas) .layout-region-node-actions {
   left: var(--gin-spacing-m);
   right: auto;
 }
 
-#layout-builder-modal [dir=rtl] .ui-dialog:not(.ui-dialog-off-canvas) .layout-region-node-actions,.media-library-widget-modal [dir=rtl] .ui-dialog:not(.ui-dialog-off-canvas) .layout-region-node-actions,form.media-form [dir=rtl] .ui-dialog:not(.ui-dialog-off-canvas) .layout-region-node-actions {
+[dir="ltr"] #layout-builder-modal .ui-dialog:not(.ui-dialog-off-canvas) .layout-region-node-actions,[dir="ltr"] .media-library-widget-modal .ui-dialog:not(.ui-dialog-off-canvas) .layout-region-node-actions,[dir="ltr"] form.media-form .ui-dialog:not(.ui-dialog-off-canvas) .layout-region-node-actions {
   right: var(--gin-spacing-m);
   left: auto;
+}
+
+[dir="rtl"] #layout-builder-modal .ui-dialog:not(.ui-dialog-off-canvas) .layout-region-node-actions,[dir="rtl"] .media-library-widget-modal .ui-dialog:not(.ui-dialog-off-canvas) .layout-region-node-actions,[dir="rtl"] form.media-form .ui-dialog:not(.ui-dialog-off-canvas) .layout-region-node-actions {
+  right: var(--gin-spacing-m);
+  left: auto;
+}
+
+[dir="rtl"] #layout-builder-modal .ui-dialog:not(.ui-dialog-off-canvas) .layout-region-node-actions,[dir="rtl"] .media-library-widget-modal .ui-dialog:not(.ui-dialog-off-canvas) .layout-region-node-actions,[dir="rtl"] form.media-form .ui-dialog:not(.ui-dialog-off-canvas) .layout-region-node-actions {
+  left: var(--gin-spacing-m);
+  right: auto;
 }
 
 #layout-builder-modal .ui-dialog:not(.ui-dialog-off-canvas) .layout-region-node-secondary,.media-library-widget-modal .ui-dialog:not(.ui-dialog-off-canvas) .layout-region-node-secondary,form.media-form .ui-dialog:not(.ui-dialog-off-canvas) .layout-region-node-secondary {
@@ -49,10 +59,17 @@
 
 #layout-builder-modal .ui-dialog,.media-library-widget-modal .ui-dialog,form.media-form .ui-dialog {
   position: absolute;
-  left: 0;
   top: 0;
   font-family: var(--gin-font);
   outline: none;
+}
+
+[dir="ltr"] #layout-builder-modal .ui-dialog,[dir="ltr"] .media-library-widget-modal .ui-dialog,[dir="ltr"] form.media-form .ui-dialog {
+  left: 0;
+}
+
+[dir="rtl"] #layout-builder-modal .ui-dialog,[dir="rtl"] .media-library-widget-modal .ui-dialog,[dir="rtl"] form.media-form .ui-dialog {
+  right: 0;
 }
 
 #layout-builder-modal .ui-dialog,#layout-builder-modal .ui-dialog:focus,#layout-builder-modal .ui-dialog:focus:active,#layout-builder-modal .ui-dialog:focus:hover,.media-library-widget-modal .ui-dialog,.media-library-widget-modal .ui-dialog:focus,.media-library-widget-modal .ui-dialog:focus:active,.media-library-widget-modal .ui-dialog:focus:hover,form.media-form .ui-dialog,form.media-form .ui-dialog:focus,form.media-form .ui-dialog:focus:active,form.media-form .ui-dialog:focus:hover {
@@ -82,12 +99,20 @@
   box-sizing: border-box;
 }
 
-#layout-builder-modal [dir=ltr] .ui-dialog .ui-dialog-title,.media-library-widget-modal [dir=ltr] .ui-dialog .ui-dialog-title,form.media-form [dir=ltr] .ui-dialog .ui-dialog-title {
+[dir="ltr"] #layout-builder-modal .ui-dialog .ui-dialog-title,[dir="ltr"] .media-library-widget-modal .ui-dialog .ui-dialog-title,[dir="ltr"] form.media-form .ui-dialog .ui-dialog-title {
   padding-right: var(--gin-spacing-xl);
 }
 
-#layout-builder-modal [dir=rtl] .ui-dialog .ui-dialog-title,.media-library-widget-modal [dir=rtl] .ui-dialog .ui-dialog-title,form.media-form [dir=rtl] .ui-dialog .ui-dialog-title {
+[dir="ltr"] #layout-builder-modal .ui-dialog .ui-dialog-title,[dir="ltr"] .media-library-widget-modal .ui-dialog .ui-dialog-title,[dir="ltr"] form.media-form .ui-dialog .ui-dialog-title {
   padding-left: var(--gin-spacing-xl);
+}
+
+[dir="rtl"] #layout-builder-modal .ui-dialog .ui-dialog-title,[dir="rtl"] .media-library-widget-modal .ui-dialog .ui-dialog-title,[dir="rtl"] form.media-form .ui-dialog .ui-dialog-title {
+  padding-left: var(--gin-spacing-xl);
+}
+
+[dir="rtl"] #layout-builder-modal .ui-dialog .ui-dialog-title,[dir="rtl"] .media-library-widget-modal .ui-dialog .ui-dialog-title,[dir="rtl"] form.media-form .ui-dialog .ui-dialog-title {
+  padding-right: var(--gin-spacing-xl);
 }
 
 #layout-builder-modal .ui-dialog .ui-dialog-content,.media-library-widget-modal .ui-dialog .ui-dialog-content,form.media-form .ui-dialog .ui-dialog-content {
@@ -108,12 +133,20 @@
   margin-bottom: 0;
 }
 
-#layout-builder-modal [dir=ltr] .ui-dialog .ui-widget-content.ui-dialog-buttonpane .button:last-of-type,.media-library-widget-modal [dir=ltr] .ui-dialog .ui-widget-content.ui-dialog-buttonpane .button:last-of-type,form.media-form [dir=ltr] .ui-dialog .ui-widget-content.ui-dialog-buttonpane .button:last-of-type {
+[dir="ltr"] #layout-builder-modal .ui-dialog .ui-widget-content.ui-dialog-buttonpane .button:last-of-type,[dir="ltr"] .media-library-widget-modal .ui-dialog .ui-widget-content.ui-dialog-buttonpane .button:last-of-type,[dir="ltr"] form.media-form .ui-dialog .ui-widget-content.ui-dialog-buttonpane .button:last-of-type {
   margin-right: 0;
 }
 
-#layout-builder-modal [dir=rtl] .ui-dialog .ui-widget-content.ui-dialog-buttonpane .button:last-of-type,.media-library-widget-modal [dir=rtl] .ui-dialog .ui-widget-content.ui-dialog-buttonpane .button:last-of-type,form.media-form [dir=rtl] .ui-dialog .ui-widget-content.ui-dialog-buttonpane .button:last-of-type {
+[dir="ltr"] #layout-builder-modal .ui-dialog .ui-widget-content.ui-dialog-buttonpane .button:last-of-type,[dir="ltr"] .media-library-widget-modal .ui-dialog .ui-widget-content.ui-dialog-buttonpane .button:last-of-type,[dir="ltr"] form.media-form .ui-dialog .ui-widget-content.ui-dialog-buttonpane .button:last-of-type {
   margin-left: 0;
+}
+
+[dir="rtl"] #layout-builder-modal .ui-dialog .ui-widget-content.ui-dialog-buttonpane .button:last-of-type,[dir="rtl"] .media-library-widget-modal .ui-dialog .ui-widget-content.ui-dialog-buttonpane .button:last-of-type,[dir="rtl"] form.media-form .ui-dialog .ui-widget-content.ui-dialog-buttonpane .button:last-of-type {
+  margin-left: 0;
+}
+
+[dir="rtl"] #layout-builder-modal .ui-dialog .ui-widget-content.ui-dialog-buttonpane .button:last-of-type,[dir="rtl"] .media-library-widget-modal .ui-dialog .ui-widget-content.ui-dialog-buttonpane .button:last-of-type,[dir="rtl"] form.media-form .ui-dialog .ui-widget-content.ui-dialog-buttonpane .button:last-of-type {
+  margin-right: 0;
 }
 
 #layout-builder-modal .ui-dialog .ui-widget-content.ui-dialog-buttonpane .button.button--danger,#layout-builder-modal .ui-dialog [data-drupal-selector*=-remove-form] .button.button--danger,.media-library-widget-modal .ui-dialog .ui-widget-content.ui-dialog-buttonpane .button.button--danger,.media-library-widget-modal .ui-dialog [data-drupal-selector*=-remove-form] .button.button--danger,form.media-form .ui-dialog .ui-widget-content.ui-dialog-buttonpane .button.button--danger,form.media-form .ui-dialog [data-drupal-selector*=-remove-form] .button.button--danger {
@@ -136,14 +169,24 @@
   border: none;
 }
 
-#layout-builder-modal [dir=ltr] .ui-dialog .ui-dialog-titlebar-close,.media-library-widget-modal [dir=ltr] .ui-dialog .ui-dialog-titlebar-close,form.media-form [dir=ltr] .ui-dialog .ui-dialog-titlebar-close {
+[dir="ltr"] #layout-builder-modal .ui-dialog .ui-dialog-titlebar-close,[dir="ltr"] .media-library-widget-modal .ui-dialog .ui-dialog-titlebar-close,[dir="ltr"] form.media-form .ui-dialog .ui-dialog-titlebar-close {
   left: auto;
   right: 0;
 }
 
-#layout-builder-modal [dir=rtl] .ui-dialog .ui-dialog-titlebar-close,.media-library-widget-modal [dir=rtl] .ui-dialog .ui-dialog-titlebar-close,form.media-form [dir=rtl] .ui-dialog .ui-dialog-titlebar-close {
+[dir="ltr"] #layout-builder-modal .ui-dialog .ui-dialog-titlebar-close,[dir="ltr"] .media-library-widget-modal .ui-dialog .ui-dialog-titlebar-close,[dir="ltr"] form.media-form .ui-dialog .ui-dialog-titlebar-close {
   right: auto;
   left: 0;
+}
+
+[dir="rtl"] #layout-builder-modal .ui-dialog .ui-dialog-titlebar-close,[dir="rtl"] .media-library-widget-modal .ui-dialog .ui-dialog-titlebar-close,[dir="rtl"] form.media-form .ui-dialog .ui-dialog-titlebar-close {
+  right: auto;
+  left: 0;
+}
+
+[dir="rtl"] #layout-builder-modal .ui-dialog .ui-dialog-titlebar-close,[dir="rtl"] .media-library-widget-modal .ui-dialog .ui-dialog-titlebar-close,[dir="rtl"] form.media-form .ui-dialog .ui-dialog-titlebar-close {
+  left: auto;
+  right: 0;
 }
 
 #layout-builder-modal .ui-dialog .ui-dialog-titlebar-close .ui-icon-closethick,.media-library-widget-modal .ui-dialog .ui-dialog-titlebar-close .ui-icon-closethick,form.media-form .ui-dialog .ui-dialog-titlebar-close .ui-icon-closethick {
@@ -163,12 +206,20 @@
           mask-position: center center;
 }
 
-#layout-builder-modal [dir=ltr] .ui-dialog .ui-dialog-titlebar-close .ui-icon-closethick,.media-library-widget-modal [dir=ltr] .ui-dialog .ui-dialog-titlebar-close .ui-icon-closethick,form.media-form [dir=ltr] .ui-dialog .ui-dialog-titlebar-close .ui-icon-closethick {
+[dir="ltr"] #layout-builder-modal .ui-dialog .ui-dialog-titlebar-close .ui-icon-closethick,[dir="ltr"] .media-library-widget-modal .ui-dialog .ui-dialog-titlebar-close .ui-icon-closethick,[dir="ltr"] form.media-form .ui-dialog .ui-dialog-titlebar-close .ui-icon-closethick {
   left: 0;
 }
 
-#layout-builder-modal [dir=rtl] .ui-dialog .ui-dialog-titlebar-close .ui-icon-closethick,.media-library-widget-modal [dir=rtl] .ui-dialog .ui-dialog-titlebar-close .ui-icon-closethick,form.media-form [dir=rtl] .ui-dialog .ui-dialog-titlebar-close .ui-icon-closethick {
+[dir="ltr"] #layout-builder-modal .ui-dialog .ui-dialog-titlebar-close .ui-icon-closethick,[dir="ltr"] .media-library-widget-modal .ui-dialog .ui-dialog-titlebar-close .ui-icon-closethick,[dir="ltr"] form.media-form .ui-dialog .ui-dialog-titlebar-close .ui-icon-closethick {
   right: 0;
+}
+
+[dir="rtl"] #layout-builder-modal .ui-dialog .ui-dialog-titlebar-close .ui-icon-closethick,[dir="rtl"] .media-library-widget-modal .ui-dialog .ui-dialog-titlebar-close .ui-icon-closethick,[dir="rtl"] form.media-form .ui-dialog .ui-dialog-titlebar-close .ui-icon-closethick {
+  right: 0;
+}
+
+[dir="rtl"] #layout-builder-modal .ui-dialog .ui-dialog-titlebar-close .ui-icon-closethick,[dir="rtl"] .media-library-widget-modal .ui-dialog .ui-dialog-titlebar-close .ui-icon-closethick,[dir="rtl"] form.media-form .ui-dialog .ui-dialog-titlebar-close .ui-icon-closethick {
+  left: 0;
 }
 
 @media (forced-colors: active) {
@@ -197,14 +248,24 @@
   width: calc(100% - var(--gin-spacing-xl)) !important;
 }
 
-#layout-builder-modal [dir=ltr] .erl-overlay,#layout-builder-modal [dir=ltr] .layout-paragraphs-dialog,.media-library-widget-modal [dir=ltr] .erl-overlay,.media-library-widget-modal [dir=ltr] .layout-paragraphs-dialog,form.media-form [dir=ltr] .erl-overlay,form.media-form [dir=ltr] .layout-paragraphs-dialog {
+[dir="ltr"] #layout-builder-modal .erl-overlay,[dir="ltr"] #layout-builder-modal .layout-paragraphs-dialog,[dir="ltr"] .media-library-widget-modal .erl-overlay,[dir="ltr"] .media-library-widget-modal .layout-paragraphs-dialog,[dir="ltr"] form.media-form .erl-overlay,[dir="ltr"] form.media-form .layout-paragraphs-dialog {
   left: 50% !important;
   transform: translate(-50%, -50%);
 }
 
-#layout-builder-modal [dir=rtl] .erl-overlay,#layout-builder-modal [dir=rtl] .layout-paragraphs-dialog,.media-library-widget-modal [dir=rtl] .erl-overlay,.media-library-widget-modal [dir=rtl] .layout-paragraphs-dialog,form.media-form [dir=rtl] .erl-overlay,form.media-form [dir=rtl] .layout-paragraphs-dialog {
+[dir="ltr"] #layout-builder-modal .erl-overlay,[dir="ltr"] #layout-builder-modal .layout-paragraphs-dialog,[dir="ltr"] .media-library-widget-modal .erl-overlay,[dir="ltr"] .media-library-widget-modal .layout-paragraphs-dialog,[dir="ltr"] form.media-form .erl-overlay,[dir="ltr"] form.media-form .layout-paragraphs-dialog {
   right: 50% !important;
   transform: translate(50%, -50%);
+}
+
+[dir="rtl"] #layout-builder-modal .erl-overlay,[dir="rtl"] #layout-builder-modal .layout-paragraphs-dialog,[dir="rtl"] .media-library-widget-modal .erl-overlay,[dir="rtl"] .media-library-widget-modal .layout-paragraphs-dialog,[dir="rtl"] form.media-form .erl-overlay,[dir="rtl"] form.media-form .layout-paragraphs-dialog {
+  right: 50% !important;
+  transform: translate(50%, -50%);
+}
+
+[dir="rtl"] #layout-builder-modal .erl-overlay,[dir="rtl"] #layout-builder-modal .layout-paragraphs-dialog,[dir="rtl"] .media-library-widget-modal .erl-overlay,[dir="rtl"] .media-library-widget-modal .layout-paragraphs-dialog,[dir="rtl"] form.media-form .erl-overlay,[dir="rtl"] form.media-form .layout-paragraphs-dialog {
+  left: 50% !important;
+  transform: translate(-50%, -50%);
 }
 
 @media (min-width: 64em) {

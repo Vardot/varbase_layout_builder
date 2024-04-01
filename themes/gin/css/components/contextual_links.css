@@ -26,14 +26,24 @@
   background: var(--gin-color-primary);
 }
 
-#layout-builder-modal [dir=ltr] .contextual .trigger::before,.media-library-widget-modal [dir=ltr] .contextual .trigger::before,form.media-form [dir=ltr] .contextual .trigger::before {
+[dir="ltr"] #layout-builder-modal .contextual .trigger::before,[dir="ltr"] .media-library-widget-modal .contextual .trigger::before,[dir="ltr"] form.media-form .contextual .trigger::before {
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-#layout-builder-modal [dir=rtl] .contextual .trigger::before,.media-library-widget-modal [dir=rtl] .contextual .trigger::before,form.media-form [dir=rtl] .contextual .trigger::before {
+[dir="ltr"] #layout-builder-modal .contextual .trigger::before,[dir="ltr"] .media-library-widget-modal .contextual .trigger::before,[dir="ltr"] form.media-form .contextual .trigger::before {
   right: 50%;
   transform: translate(50%, -50%);
+}
+
+[dir="rtl"] #layout-builder-modal .contextual .trigger::before,[dir="rtl"] .media-library-widget-modal .contextual .trigger::before,[dir="rtl"] form.media-form .contextual .trigger::before {
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+
+[dir="rtl"] #layout-builder-modal .contextual .trigger::before,[dir="rtl"] .media-library-widget-modal .contextual .trigger::before,[dir="rtl"] form.media-form .contextual .trigger::before {
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #layout-builder-modal .contextual .trigger,#layout-builder-modal .contextual .trigger:hover,#layout-builder-modal .contextual .trigger:focus,.media-library-widget-modal .contextual .trigger,.media-library-widget-modal .contextual .trigger:hover,.media-library-widget-modal .contextual .trigger:focus,form.media-form .contextual .trigger,form.media-form .contextual .trigger:hover,form.media-form .contextual .trigger:focus {
@@ -99,14 +109,24 @@
   border: 2px solid var(--gin-color-button-text);
 }
 
-#layout-builder-modal [dir=ltr] .contextual-region .contextual .contextual-links .ajax-progress-throbber::before,.media-library-widget-modal [dir=ltr] .contextual-region .contextual .contextual-links .ajax-progress-throbber::before,form.media-form [dir=ltr] .contextual-region .contextual .contextual-links .ajax-progress-throbber::before {
+[dir="ltr"] #layout-builder-modal .contextual-region .contextual .contextual-links .ajax-progress-throbber::before,[dir="ltr"] .media-library-widget-modal .contextual-region .contextual .contextual-links .ajax-progress-throbber::before,[dir="ltr"] form.media-form .contextual-region .contextual .contextual-links .ajax-progress-throbber::before {
   left: var(--gin-spacing-xxs);
   border-right: 2px dotted transparent;
 }
 
-#layout-builder-modal [dir=rtl] .contextual-region .contextual .contextual-links .ajax-progress-throbber::before,.media-library-widget-modal [dir=rtl] .contextual-region .contextual .contextual-links .ajax-progress-throbber::before,form.media-form [dir=rtl] .contextual-region .contextual .contextual-links .ajax-progress-throbber::before {
+[dir="ltr"] #layout-builder-modal .contextual-region .contextual .contextual-links .ajax-progress-throbber::before,[dir="ltr"] .media-library-widget-modal .contextual-region .contextual .contextual-links .ajax-progress-throbber::before,[dir="ltr"] form.media-form .contextual-region .contextual .contextual-links .ajax-progress-throbber::before {
   right: var(--gin-spacing-xxs);
   border-left: 2px dotted transparent;
+}
+
+[dir="rtl"] #layout-builder-modal .contextual-region .contextual .contextual-links .ajax-progress-throbber::before,[dir="rtl"] .media-library-widget-modal .contextual-region .contextual .contextual-links .ajax-progress-throbber::before,[dir="rtl"] form.media-form .contextual-region .contextual .contextual-links .ajax-progress-throbber::before {
+  right: var(--gin-spacing-xxs);
+  border-left: 2px dotted transparent;
+}
+
+[dir="rtl"] #layout-builder-modal .contextual-region .contextual .contextual-links .ajax-progress-throbber::before,[dir="rtl"] .media-library-widget-modal .contextual-region .contextual .contextual-links .ajax-progress-throbber::before,[dir="rtl"] form.media-form .contextual-region .contextual .contextual-links .ajax-progress-throbber::before {
+  left: var(--gin-spacing-xxs);
+  border-right: 2px dotted transparent;
 }
 
 #layout-builder-modal .no-touchevents .contextual-region .contextual .contextual-links li a:hover,#layout-builder-modal .no-touchevents .contextual-region .contextual .contextual-links li a:active,.media-library-widget-modal .no-touchevents .contextual-region .contextual .contextual-links li a:hover,.media-library-widget-modal .no-touchevents .contextual-region .contextual .contextual-links li a:active,form.media-form .no-touchevents .contextual-region .contextual .contextual-links li a:hover,form.media-form .no-touchevents .contextual-region .contextual .contextual-links li a:active {

@@ -1,33 +1,33 @@
-#layout-builder-modal .webform-filter-form,.media-library-widget-modal .webform-filter-form,form.media-form .webform-filter-form {
+#layout-builder-modal .webform-filter-form {
   margin-bottom: var(--gin-spacing-xl);
 }
 
-#layout-builder-modal .webform-filter-form .details-wrapper,.media-library-widget-modal .webform-filter-form .details-wrapper,form.media-form .webform-filter-form .details-wrapper {
+#layout-builder-modal .webform-filter-form .details-wrapper {
   margin-top: 0;
   margin-bottom: var(--gin-spacing-xs);
 }
 
-#layout-builder-modal .webform-filter-form+div:not(.gin-layer-wrapper),.media-library-widget-modal .webform-filter-form+div:not(.gin-layer-wrapper),form.media-form .webform-filter-form+div:not(.gin-layer-wrapper) {
+#layout-builder-modal .webform-filter-form+div:not(.gin-layer-wrapper) {
   margin-bottom: var(--gin-spacing-s);
 }
 
-#layout-builder-modal .webform-ui-element-type-change-form .gin-layer-wrapper,.media-library-widget-modal .webform-ui-element-type-change-form .gin-layer-wrapper,form.media-form .webform-ui-element-type-change-form .gin-layer-wrapper {
+#layout-builder-modal .webform-ui-element-type-change-form .gin-layer-wrapper {
   padding: 0;
 }
 
-#layout-builder-modal .webform-element-help,.media-library-widget-modal .webform-element-help,form.media-form .webform-element-help {
+#layout-builder-modal .webform-element-help {
   color: var(--gin-color-text);
   background: transparent;
   border-color: var(--gin-color-text);
 }
 
-#layout-builder-modal .webform-element-help:hover,#layout-builder-modal .webform-element-help:active,#layout-builder-modal .webform-element-help:focus,.media-library-widget-modal .webform-element-help:hover,.media-library-widget-modal .webform-element-help:active,.media-library-widget-modal .webform-element-help:focus,form.media-form .webform-element-help:hover,form.media-form .webform-element-help:active,form.media-form .webform-element-help:focus {
+#layout-builder-modal .webform-element-help:hover,#layout-builder-modal .webform-element-help:active,#layout-builder-modal .webform-element-help:focus {
   color: var(--gin-color-primary);
   border-color: var(--gin-color-primary);
   background-color: transparent;
 }
 
-#layout-builder-modal .ui-tooltip.ui-widget,.media-library-widget-modal .ui-tooltip.ui-widget,form.media-form .ui-tooltip.ui-widget {
+#layout-builder-modal .ui-tooltip.ui-widget {
   font-size: var(--gin-font-size-s);
   color: var(--gin-color-text);
   padding: var(--gin-spacing-m);
@@ -36,33 +36,41 @@
   border-radius: 6px;
 }
 
-#layout-builder-modal [dir=ltr] .ui-tooltip.ui-widget,.media-library-widget-modal [dir=ltr] .ui-tooltip.ui-widget,form.media-form [dir=ltr] .ui-tooltip.ui-widget {
+[dir="ltr"] #layout-builder-modal .ui-tooltip.ui-widget {
   box-shadow: 20px 20px 60px rgba(0, 0, 0, .2);
 }
 
-#layout-builder-modal [dir=rtl] .ui-tooltip.ui-widget,.media-library-widget-modal [dir=rtl] .ui-tooltip.ui-widget,form.media-form [dir=rtl] .ui-tooltip.ui-widget {
+[dir="ltr"] #layout-builder-modal .ui-tooltip.ui-widget {
   box-shadow: -20px 20px 60px rgba(0, 0, 0, .2);
 }
 
-#layout-builder-modal .ui-tooltip.ui-widget hr,.media-library-widget-modal .ui-tooltip.ui-widget hr,form.media-form .ui-tooltip.ui-widget hr {
+[dir="rtl"] #layout-builder-modal .ui-tooltip.ui-widget {
+  box-shadow: -20px 20px 60px rgba(0, 0, 0, .2);
+}
+
+[dir="rtl"] #layout-builder-modal .ui-tooltip.ui-widget {
+  box-shadow: 20px 20px 60px rgba(0, 0, 0, .2);
+}
+
+#layout-builder-modal .ui-tooltip.ui-widget hr {
   margin: var(--gin-spacing-xs) 0;
 }
 
-#layout-builder-modal .webform-details-toggle-state,.media-library-widget-modal .webform-details-toggle-state,form.media-form .webform-details-toggle-state {
+#layout-builder-modal .webform-details-toggle-state {
   color: var(--gin-color-primary);
 }
 
-#layout-builder-modal .webform-ui-elements-table tr.webform-ui-element-type-webform_actions td,.media-library-widget-modal .webform-ui-elements-table tr.webform-ui-element-type-webform_actions td,form.media-form .webform-ui-elements-table tr.webform-ui-element-type-webform_actions td {
+#layout-builder-modal .webform-ui-elements-table tr.webform-ui-element-type-webform_actions td {
   border-top: none;
   border-bottom: none;
   background: none;
 }
 
-#layout-builder-modal .webform-tabs.ui-tabs .ui-tabs-nav,.media-library-widget-modal .webform-tabs.ui-tabs .ui-tabs-nav,form.media-form .webform-tabs.ui-tabs .ui-tabs-nav {
+#layout-builder-modal .webform-tabs.ui-tabs .ui-tabs-nav {
   border-bottom: 0 none;
 }
 
-#layout-builder-modal .webform-tabs.ui-tabs .ui-tabs-nav .ui-tabs-active.ui-state-active a,.media-library-widget-modal .webform-tabs.ui-tabs .ui-tabs-nav .ui-tabs-active.ui-state-active a,form.media-form .webform-tabs.ui-tabs .ui-tabs-nav .ui-tabs-active.ui-state-active a {
+#layout-builder-modal .webform-tabs.ui-tabs .ui-tabs-nav .ui-tabs-active.ui-state-active a {
   border: 2px solid var(--gin-color-primary);
   border-radius: var(--gin-border-m);
 }

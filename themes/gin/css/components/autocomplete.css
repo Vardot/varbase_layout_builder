@@ -52,14 +52,24 @@
   animation: gin-throbber 1s linear infinite;
 }
 
-#layout-builder-modal [dir=ltr] .form-autocomplete.is-autocompleting+.claro-autocomplete__message::after,#layout-builder-modal [dir=ltr] div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber.autocomplete-deluxe-open::after,.media-library-widget-modal [dir=ltr] .form-autocomplete.is-autocompleting+.claro-autocomplete__message::after,.media-library-widget-modal [dir=ltr] div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber.autocomplete-deluxe-open::after,form.media-form [dir=ltr] .form-autocomplete.is-autocompleting+.claro-autocomplete__message::after,form.media-form [dir=ltr] div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber.autocomplete-deluxe-open::after {
+[dir="ltr"] #layout-builder-modal .form-autocomplete.is-autocompleting+.claro-autocomplete__message::after,[dir="ltr"] #layout-builder-modal div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber.autocomplete-deluxe-open::after,[dir="ltr"] .media-library-widget-modal .form-autocomplete.is-autocompleting+.claro-autocomplete__message::after,[dir="ltr"] .media-library-widget-modal div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber.autocomplete-deluxe-open::after,[dir="ltr"] form.media-form .form-autocomplete.is-autocompleting+.claro-autocomplete__message::after,[dir="ltr"] form.media-form div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber.autocomplete-deluxe-open::after {
   right: 12px;
   text-align: right;
 }
 
-#layout-builder-modal [dir=rtl] .form-autocomplete.is-autocompleting+.claro-autocomplete__message::after,#layout-builder-modal [dir=rtl] div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber.autocomplete-deluxe-open::after,.media-library-widget-modal [dir=rtl] .form-autocomplete.is-autocompleting+.claro-autocomplete__message::after,.media-library-widget-modal [dir=rtl] div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber.autocomplete-deluxe-open::after,form.media-form [dir=rtl] .form-autocomplete.is-autocompleting+.claro-autocomplete__message::after,form.media-form [dir=rtl] div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber.autocomplete-deluxe-open::after {
+[dir="ltr"] #layout-builder-modal .form-autocomplete.is-autocompleting+.claro-autocomplete__message::after,[dir="ltr"] #layout-builder-modal div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber.autocomplete-deluxe-open::after,[dir="ltr"] .media-library-widget-modal .form-autocomplete.is-autocompleting+.claro-autocomplete__message::after,[dir="ltr"] .media-library-widget-modal div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber.autocomplete-deluxe-open::after,[dir="ltr"] form.media-form .form-autocomplete.is-autocompleting+.claro-autocomplete__message::after,[dir="ltr"] form.media-form div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber.autocomplete-deluxe-open::after {
   left: 12px;
   text-align: left;
+}
+
+[dir="rtl"] #layout-builder-modal .form-autocomplete.is-autocompleting+.claro-autocomplete__message::after,[dir="rtl"] #layout-builder-modal div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber.autocomplete-deluxe-open::after,[dir="rtl"] .media-library-widget-modal .form-autocomplete.is-autocompleting+.claro-autocomplete__message::after,[dir="rtl"] .media-library-widget-modal div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber.autocomplete-deluxe-open::after,[dir="rtl"] form.media-form .form-autocomplete.is-autocompleting+.claro-autocomplete__message::after,[dir="rtl"] form.media-form div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber.autocomplete-deluxe-open::after {
+  left: 12px;
+  text-align: left;
+}
+
+[dir="rtl"] #layout-builder-modal .form-autocomplete.is-autocompleting+.claro-autocomplete__message::after,[dir="rtl"] #layout-builder-modal div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber.autocomplete-deluxe-open::after,[dir="rtl"] .media-library-widget-modal .form-autocomplete.is-autocompleting+.claro-autocomplete__message::after,[dir="rtl"] .media-library-widget-modal div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber.autocomplete-deluxe-open::after,[dir="rtl"] form.media-form .form-autocomplete.is-autocompleting+.claro-autocomplete__message::after,[dir="rtl"] form.media-form div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber.autocomplete-deluxe-open::after {
+  right: 12px;
+  text-align: right;
 }
 
 #layout-builder-modal div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber.autocomplete-deluxe-open::after,.media-library-widget-modal div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber.autocomplete-deluxe-open::after,form.media-form div.autocomplete-deluxe-container div.autocomplete-deluxe-throbber.autocomplete-deluxe-open::after {
@@ -88,12 +98,20 @@
   box-shadow: none;
 }
 
-#layout-builder-modal [dir=ltr] .autocomplete-deluxe-item,.media-library-widget-modal [dir=ltr] .autocomplete-deluxe-item,form.media-form [dir=ltr] .autocomplete-deluxe-item {
+[dir="ltr"] #layout-builder-modal .autocomplete-deluxe-item,[dir="ltr"] .media-library-widget-modal .autocomplete-deluxe-item,[dir="ltr"] form.media-form .autocomplete-deluxe-item {
   padding: 6px var(--gin-spacing-l) 6px 12px;
 }
 
-#layout-builder-modal [dir=rtl] .autocomplete-deluxe-item,.media-library-widget-modal [dir=rtl] .autocomplete-deluxe-item,form.media-form [dir=rtl] .autocomplete-deluxe-item {
+[dir="ltr"] #layout-builder-modal .autocomplete-deluxe-item,[dir="ltr"] .media-library-widget-modal .autocomplete-deluxe-item,[dir="ltr"] form.media-form .autocomplete-deluxe-item {
   padding: 6px 12px 6px var(--gin-spacing-l);
+}
+
+[dir="rtl"] #layout-builder-modal .autocomplete-deluxe-item,[dir="rtl"] .media-library-widget-modal .autocomplete-deluxe-item,[dir="rtl"] form.media-form .autocomplete-deluxe-item {
+  padding: 6px 12px 6px var(--gin-spacing-l);
+}
+
+[dir="rtl"] #layout-builder-modal .autocomplete-deluxe-item,[dir="rtl"] .media-library-widget-modal .autocomplete-deluxe-item,[dir="rtl"] form.media-form .autocomplete-deluxe-item {
+  padding: 6px var(--gin-spacing-l) 6px 12px;
 }
 
 #layout-builder-modal .autocomplete-deluxe-item:hover,#layout-builder-modal .autocomplete-deluxe-item:active,.media-library-widget-modal .autocomplete-deluxe-item:hover,.media-library-widget-modal .autocomplete-deluxe-item:active,form.media-form .autocomplete-deluxe-item:hover,form.media-form .autocomplete-deluxe-item:active {
@@ -114,12 +132,20 @@
   background: var(--gin-color-primary);
 }
 
-#layout-builder-modal [dir=ltr] .autocomplete-deluxe-item .autocomplete-deluxe-item-delete,.media-library-widget-modal [dir=ltr] .autocomplete-deluxe-item .autocomplete-deluxe-item-delete,form.media-form [dir=ltr] .autocomplete-deluxe-item .autocomplete-deluxe-item-delete {
+[dir="ltr"] #layout-builder-modal .autocomplete-deluxe-item .autocomplete-deluxe-item-delete,[dir="ltr"] .media-library-widget-modal .autocomplete-deluxe-item .autocomplete-deluxe-item-delete,[dir="ltr"] form.media-form .autocomplete-deluxe-item .autocomplete-deluxe-item-delete {
   right: 6px;
 }
 
-#layout-builder-modal [dir=rtl] .autocomplete-deluxe-item .autocomplete-deluxe-item-delete,.media-library-widget-modal [dir=rtl] .autocomplete-deluxe-item .autocomplete-deluxe-item-delete,form.media-form [dir=rtl] .autocomplete-deluxe-item .autocomplete-deluxe-item-delete {
+[dir="ltr"] #layout-builder-modal .autocomplete-deluxe-item .autocomplete-deluxe-item-delete,[dir="ltr"] .media-library-widget-modal .autocomplete-deluxe-item .autocomplete-deluxe-item-delete,[dir="ltr"] form.media-form .autocomplete-deluxe-item .autocomplete-deluxe-item-delete {
   left: 6px;
+}
+
+[dir="rtl"] #layout-builder-modal .autocomplete-deluxe-item .autocomplete-deluxe-item-delete,[dir="rtl"] .media-library-widget-modal .autocomplete-deluxe-item .autocomplete-deluxe-item-delete,[dir="rtl"] form.media-form .autocomplete-deluxe-item .autocomplete-deluxe-item-delete {
+  left: 6px;
+}
+
+[dir="rtl"] #layout-builder-modal .autocomplete-deluxe-item .autocomplete-deluxe-item-delete,[dir="rtl"] .media-library-widget-modal .autocomplete-deluxe-item .autocomplete-deluxe-item-delete,[dir="rtl"] form.media-form .autocomplete-deluxe-item .autocomplete-deluxe-item-delete {
+  right: 6px;
 }
 
 #layout-builder-modal .autocomplete-deluxe-item:hover .autocomplete-deluxe-item-delete,#layout-builder-modal .autocomplete-deluxe-item .autocomplete-deluxe-item-delete:hover,.media-library-widget-modal .autocomplete-deluxe-item:hover .autocomplete-deluxe-item-delete,.media-library-widget-modal .autocomplete-deluxe-item .autocomplete-deluxe-item-delete:hover,form.media-form .autocomplete-deluxe-item:hover .autocomplete-deluxe-item-delete,form.media-form .autocomplete-deluxe-item .autocomplete-deluxe-item-delete:hover {

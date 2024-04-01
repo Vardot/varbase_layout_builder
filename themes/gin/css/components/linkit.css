@@ -1,4 +1,4 @@
-#layout-builder-modal .linkit-matcher-add-form .form-type--boolean .form-boolean,#layout-builder-modal .linkit-attribute-add-form .form-type--boolean .form-boolean,.media-library-widget-modal .linkit-matcher-add-form .form-type--boolean .form-boolean,.media-library-widget-modal .linkit-attribute-add-form .form-type--boolean .form-boolean,form.media-form .linkit-matcher-add-form .form-type--boolean .form-boolean,form.media-form .linkit-attribute-add-form .form-type--boolean .form-boolean {
+#layout-builder-modal .linkit-matcher-add-form .form-type--boolean .form-boolean,#layout-builder-modal .linkit-attribute-add-form .form-type--boolean .form-boolean {
   top: var(--gin-spacing-xxs);
 }
 
