@@ -94,6 +94,12 @@
   margin-block: var(--space-xs);
 }
 
+#layout-builder-modal .form-actions .form-wrapper,#layout-builder-modal .field-actions .form-wrapper,.media-library-widget-modal .form-actions .form-wrapper,.media-library-widget-modal .field-actions .form-wrapper,form.media-form .form-actions .form-wrapper,form.media-form .field-actions .form-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs) 0;
+}
+
 #layout-builder-modal .form-actions .button,#layout-builder-modal .field-actions .button,#layout-builder-modal .form-actions .action-link,#layout-builder-modal .field-actions .action-link,.media-library-widget-modal .form-actions .button,.media-library-widget-modal .field-actions .button,.media-library-widget-modal .form-actions .action-link,.media-library-widget-modal .field-actions .action-link,form.media-form .form-actions .button,form.media-form .field-actions .button,form.media-form .form-actions .action-link,form.media-form .field-actions .action-link {
   margin-block: var(--space-xs);
 }
