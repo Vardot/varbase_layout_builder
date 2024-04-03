@@ -27,10 +27,8 @@
     }
   },
   "require": {
-    "composer/installers": "~2",
-    "oomphinc/composer-installers-extender": "~2",
-    "cweagans/composer-patches": "~1",
     "drupal/core": "~10",
+    "vardot/varbase-patches": "~10.0.0",
     "vardot/entity-definition-update-manager": "~1",
     "vardot/module-installer-factory": "~1",
     "drupal/varbase_media": "~10",
@@ -41,41 +39,17 @@
     "drupal/block_form_alter": "~2",
     "drupal/media_library_form_element": "~2",
     "drupal/bootstrap_layouts": "~5",
-    "drupal/layout_builder_blocks": "1.1.1",
+    "drupal/layout_builder_blocks": "~1",
     "drupal/layout_builder_modal": "~1",
     "drupal/layout_builder_at": "~2",
     "drupal/layout_builder_component_attributes": "~2",
-    "drupal/layout_library": "1.0-beta4",
-    "drupal/section_library": "~1.1.0",
-    "drupal/bootstrap_styles": "1.1.6",
-    "drupal/bootstrap_layout_builder": "2.1.2",
+    "drupal/layout_library": "~1",
+    "drupal/section_library": "~1",
+    "drupal/bootstrap_styles": "~1",
+    "drupal/bootstrap_layout_builder": "~2",
     "drupal/block_library": "~1",
     "drupal/length_indicator": "~1",
     "drupal/paragraphs": "~1",
     "npm-asset/aos": "~2"
-  },
-  "extra": {
-    "installer-types": [
-      "bower-asset",
-      "npm-asset"
-    ],
-    "enable-patching": true,
-    "composer-exit-on-patch-failure": true,
-    "patches": {
-      "drupal/bootstrap_styles": {
-        "Issue #3282082: Support Bootstrap 5 on bootstrap_styles module":
-        "https://www.drupal.org/files/issues/2022-06-14/Fix-support-bootstrap-5-on-bootstrap-styles-3282082-%233.patch"
-      },
-      "drupal/layout_library": {
-        "Issue #3075067: Duplicate entry for key 'block_content_field__uuid__value'":
-        "https://www.drupal.org/files/issues/2023-01-05/3075067-19.patch",
-        "Issue #3273160: Support inline blocks in layout":
-        "https://www.drupal.org/files/issues/2022-12-14/3273160-9.patch"
-      },
-      "drupal/layout_builder_blocks": {
-        "Issue #3349066: Limit Layout Builder Blocks to the front-end theme":
-        "https://www.drupal.org/files/issues/2023-11-20/3349066-14.patch"
-      }
-    }
   }
 }
