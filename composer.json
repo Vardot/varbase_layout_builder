@@ -27,14 +27,12 @@
     }
   },
   "require": {
-    "composer/installers": "~2",
-    "oomphinc/composer-installers-extender": "~2",
-    "cweagans/composer-patches": "~1",
-    "drupal/core": "~9 || ~10",
-    "drupal/varbase_media": "~9",
-    "drupal/varbase_editor": "~9",
+    "drupal/core": "~10",
+    "vardot/varbase-patches": "~9.1.0",
     "vardot/entity-definition-update-manager": "~1",
     "vardot/module-installer-factory": "~1",
+    "drupal/varbase_media": "~9",
+    "drupal/varbase_editor": "~9",
     "drupal/layout_builder_restrictions": "~2",
     "drupal/block_content_permissions": "~1",
     "drupal/entity_block": "~1",
@@ -47,34 +45,12 @@
     "drupal/layout_builder_at": "~2",
     "drupal/layout_builder_component_attributes": "~2",
     "drupal/lb_ux": "1.x-dev",
-    "drupal/layout_library": "1.0-beta4",
+    "drupal/layout_library": "~1",
     "drupal/section_library": "~1",
-    "drupal/bootstrap_styles": "1.1.6",
-    "drupal/bootstrap_layout_builder": "2.1.2",
+    "drupal/bootstrap_styles": "~1",
+    "drupal/bootstrap_layout_builder": "~2",
     "drupal/block_library": "~1",
     "drupal/length_indicator": "~1",
     "npm-asset/aos": "~2"
-  },
-  "extra": {
-    "installer-types": [
-      "bower-asset",
-      "npm-asset"
-    ],
-    "enable-patching": true,
-    "composer-exit-on-patch-failure": true,
-    "patches": {
-      "drupal/lb_ux": {
-        "Issue #3173730: Remove the change of default for auto-submit controller on the existing route to have a better behavior when adding a new section":
-        "https://www.drupal.org/files/issues/2020-09-29/3173730-2.patch",
-        "Issue #3150012: Fix RuntimeException: Callable LayoutBuilderAccessCheck::access requires a value for the $section_storage argument":
-        "https://www.drupal.org/files/issues/2020-10-11/3150012-12_0.patch"
-      },
-      "drupal/layout_library": {
-        "Issue #3075067: Duplicate entry for key 'block_content_field__uuid__value'":
-        "https://www.drupal.org/files/issues/2023-01-05/3075067-19.patch",
-        "Issue #3273160: Support inline blocks in layout":
-        "https://www.drupal.org/files/issues/2022-12-14/3273160-9.patch"
-      }
-    }
   }
 }
