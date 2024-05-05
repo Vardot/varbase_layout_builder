@@ -12,7 +12,6 @@ install:
   - text
   - options
   - link
-  - ckeditor
   - block
   - field
   - field_group
