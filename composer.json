@@ -43,6 +43,7 @@
     "drupal/layout_builder_modal": "~1",
     "drupal/layout_builder_at": "~2",
     "drupal/layout_builder_component_attributes": "~2",
+    "drupal/layout_builder_perms": "~2",
     "drupal/layout_library": "~1",
     "drupal/section_library": "~1",
     "drupal/bootstrap_styles": "~1",

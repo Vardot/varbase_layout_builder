@@ -5,6 +5,9 @@
  * Contains varbase_layout_builder_update_101###(s) hook updates.
  */
 
+use Drupal\Core\Recipe\Recipe;
+use Drupal\Core\Recipe\RecipeRunner;
+
 /**
  * Issue #3326408: Switch from Layout Builder Modal module.
  *
@@ -38,4 +41,15 @@ function varbase_layout_builder_update_10102() {
   if (!\Drupal::moduleHandler()->moduleExists('layout_builder_iframe_modal')) {
     \Drupal::configFactory()->getEditable('layout_builder_iframe_modal.settings')->delete();
   }
+}
+
+/**
+ * Issue #3409288: Add permission to layout builder actions for sections and blocks.
+ *
+ * To Layout Builder Advanced Permissions module.
+ */
+function varbase_layout_builder_update_101003() {
+  $module_path = Drupal::service('module_handler')->getModule('varbase_layout_builder')->getPath();
+  $recipe = Recipe::createFromDirectory($module_path . '/recipes/updates/varbase_layout_builder_update_101003');
+  RecipeRunner::processRecipe($recipe);
 }

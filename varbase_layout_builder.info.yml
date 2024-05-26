@@ -20,6 +20,8 @@ install:
   - layout_builder_modal
   - layout_builder_at
   - layout_builder_component_attributes
+  - layout_builder_perms
+  - layout_builder_perms_global
   - layout_library
   - section_library
   - bootstrap_styles
