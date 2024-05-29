@@ -34,7 +34,7 @@
     "drupal/varbase_media": "~10",
     "drupal/varbase_editor": "~10",
     "drupal/varbase_components": "~2",
-    "drupal/layout_builder_restrictions": "~2",
+    "drupal/layout_builder_restrictions": "~3",
     "drupal/entity_block": "~1",
     "drupal/block_form_alter": "~2",
     "drupal/media_library_form_element": "~2",
