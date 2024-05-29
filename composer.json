@@ -33,7 +33,7 @@
     "vardot/module-installer-factory": "~1",
     "drupal/varbase_media": "~9",
     "drupal/varbase_editor": "~9",
-    "drupal/layout_builder_restrictions": "~2",
+    "drupal/layout_builder_restrictions": "~3",
     "drupal/block_content_permissions": "~1",
     "drupal/entity_block": "~1",
     "drupal/block_form_alter": "~2",
