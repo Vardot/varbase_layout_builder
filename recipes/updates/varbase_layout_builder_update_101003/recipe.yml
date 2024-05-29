@@ -1,0 +1,38 @@
+name: varbase_layout_builder_update_101003
+description: 'Issue #3409288: Add permission to layout builder actions for sections and blocks.'
+type: update
+install:
+  - layout_builder_perms
+  - layout_builder_perms_global
+config:
+  actions:
+    user.role.site_admin:
+      grantPermissions:
+        - 'access layout builder page'
+        - 'create layout builder sections'
+        - 'create layout builder blocks'
+        - 'config layout builder blocks'
+        - 'edit layout builder sections'
+        - 'remove layout builder sections'
+        - 'remove layout builder blocks'
+        - 'reorder layout builder blocks'
+    user.role.content_admin:
+      grantPermissions:
+        - 'access layout builder page'
+        - 'create layout builder sections'
+        - 'create layout builder blocks'
+        - 'config layout builder blocks'
+        - 'edit layout builder sections'
+        - 'remove layout builder sections'
+        - 'remove layout builder blocks'
+        - 'reorder layout builder blocks'
+    user.role.editor:
+      grantPermissions:
+        - 'access layout builder page'
+        - 'create layout builder sections'
+        - 'create layout builder blocks'
+        - 'config layout builder blocks'
+        - 'edit layout builder sections'
+        - 'remove layout builder sections'
+        - 'remove layout builder blocks'
+        - 'reorder layout builder blocks'

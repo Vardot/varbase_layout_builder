@@ -1,3 +1,11 @@
 id: site_admin
 permissions:
   - 'create and edit custom blocks'
+  - 'access layout builder page'
+  - 'create layout builder sections'
+  - 'create layout builder blocks'
+  - 'config layout builder blocks'
+  - 'edit layout builder sections'
+  - 'remove layout builder sections'
+  - 'remove layout builder blocks'
+  - 'reorder layout builder blocks'
