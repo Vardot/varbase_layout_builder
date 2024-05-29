@@ -266,6 +266,17 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
         $theme_wrappers['blb_container_wrapper']['#attributes'] = NestedArray::mergeDeep($theme_wrappers['blb_container_wrapper']['#attributes'] ?? [], $wrapper_attributes);
       }
 
+      if (isset($this->configuration['visibility']) && $this->configuration['visibility'] == 1) {
+        $container_wrapper_visibility = $this->configuration['visibility'];
+        $theme_wrappers['blb_container_wrapper']['#attributes']['data-hidden'] = $container_wrapper_visibility;
+
+        $route_name = \Drupal::routeMatch()->getRouteName();
+        if (!str_contains($route_name, 'layout_builder') && !str_contains($route_name, 'varbase_layout_builder')) {
+          $theme_wrappers['blb_container_wrapper']['#attributes']['class'][] = 'd-none';
+          $build['#access'] = FALSE;
+        }
+      }
+
       $build['#theme_wrappers'] = $theme_wrappers;
 
       // Build dynamic styles.

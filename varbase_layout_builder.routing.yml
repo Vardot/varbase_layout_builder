@@ -5,3 +5,14 @@ varbase_layout_builder.settings:
     _title: "Varbase Layout Builder settings"
   requirements:
     _permission: "administer varbase layout builder settings"
+varbase_layout_builder.visibility_section:
+  path: '/layout_builder/visibility/section/{section_storage_type}/{section_storage}/{delta}'
+  defaults:
+    _form: '\Drupal\varbase_layout_builder\Form\VisibilitySectionForm'
+  requirements:
+    _layout_builder_access: 'view'
+  options:
+    _admin_route: TRUE
+    parameters:
+      section_storage:
+        layout_builder_tempstore: TRUE

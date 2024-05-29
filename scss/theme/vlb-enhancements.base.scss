@@ -598,3 +598,34 @@ body {
     }
   }
 }
+
+.layout-builder__link--visibility {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 1.625rem;
+  height: 1.625rem;
+  margin-inline: 1rem 0;
+  padding: 0;
+  white-space: nowrap;
+  text-indent: -624.9375rem;
+  border: 1px solid #ccc;
+  border-radius: 1.625rem;
+  font-size: 1rem;
+  background: url(../../images/icons/bebebe/invisible.svg) center center / 16px 16px no-repeat;
+
+  &:hover {
+    background: url(../../images/icons/787878/invisible.svg) center center / 16px 16px no-repeat;
+  }
+}
+
+.invisible-section {
+  .layout-builder__link--visibility {
+    background: url(../../images/icons/bebebe/visible.svg) center center / 16px 16px no-repeat;
+
+    &:hover {
+      background: url(../../images/icons/787878/visible.svg) center center / 16px 16px no-repeat;
+    }
+  }
+}

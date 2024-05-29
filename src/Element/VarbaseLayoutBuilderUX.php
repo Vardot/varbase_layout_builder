@@ -62,6 +62,38 @@ class VarbaseLayoutBuilderUX extends LayoutBuilder {
           ),
         ];
       }
+
+      // Pop the last item to add the link before it.
+      $last_key = array_key_last($build);
+      $last_item_section = array_pop($build);
+
+      $build['visibility'] = [
+        '#type' => 'link',
+        '#title' => $this->t('<span>Visibility of @section</span>', ['@section' => $section_label]),
+        '#url' => Url::fromRoute('varbase_layout_builder.visibility_section',
+          [
+            'section_storage_type' => $storage_type,
+            'section_storage' => $storage_id,
+            'delta' => $delta,
+          ]),
+        '#attributes' => [
+          'class' => [
+            'use-ajax',
+            'layout-builder__link',
+            'layout-builder__link--visibility',
+          ],
+          'data-dialog-type' => 'dialog',
+          'data-dialog-renderer' => 'off_canvas',
+        ],
+      ];
+
+      $build[$last_key] = $last_item_section;
+
+      // Add class to layout section container when the section is invisible.
+      if (isset($layout_settings['visibility']) && $layout_settings['visibility'] == 1) {
+        $build['#attributes']['class'][] = 'invisible-section';
+      }
+
     }
 
     return $build;
