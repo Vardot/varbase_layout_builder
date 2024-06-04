@@ -115,7 +115,7 @@ function varbase_layout_builder_form_alter(&$form, FormStateInterface $form_stat
       if (isset($url_object)
         && is_object($url_object)
         && $url_object->isRouted()
-        && $url_object->getRouteName() === 'layout_builder.overrides.node.view') {
+        && preg_match('/^layout_builder\.overrides\.[a-z0-9_]+\.view$/', $url_object->getRouteName())) {
         $add_admin_theme = TRUE;
       }
     }
