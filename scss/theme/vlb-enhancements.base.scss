@@ -348,10 +348,12 @@ body {
 
   button,
   input[type="submit"] {
-    width: auto !important;
+    &:not(.ck-editor *) {
+      width: auto !important;
 
-    &.button--primary {
-      text-align: center;
+      &.button--primary {
+        text-align: center;
+      }
     }
   }
 

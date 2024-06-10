@@ -276,17 +276,17 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
   background-image: url(../../images/plugins/text-alignment/text-justify.svg);
 }
 
-#drupal-off-canvas button,
-#drupal-off-canvas input[type=submit],
-#layout-builder-modal button,
-#layout-builder-modal input[type=submit] {
+#drupal-off-canvas button:not(.ck-editor *),
+#drupal-off-canvas input[type=submit]:not(.ck-editor *),
+#layout-builder-modal button:not(.ck-editor *),
+#layout-builder-modal input[type=submit]:not(.ck-editor *) {
   width: auto !important;
 }
 
-#drupal-off-canvas button.button--primary,
-#drupal-off-canvas input[type=submit].button--primary,
-#layout-builder-modal button.button--primary,
-#layout-builder-modal input[type=submit].button--primary {
+#drupal-off-canvas button:not(.ck-editor *).button--primary,
+#drupal-off-canvas input[type=submit]:not(.ck-editor *).button--primary,
+#layout-builder-modal button:not(.ck-editor *).button--primary,
+#layout-builder-modal input[type=submit]:not(.ck-editor *).button--primary {
   text-align: center;
 }
 
