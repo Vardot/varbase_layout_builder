@@ -679,6 +679,30 @@ body {
     color: #fff !important;
   }
 
+  .ck {
+    &.ck-editor {
+      color: var(--ck-color-text);
+    }
+  }
+
+  .form-element--type-text {
+    color: var(--gin-color-text) !important;
+    background-color: var(--gin-bg-input) !important;
+  }
+
+  .ck-source-editing-area {
+    textarea {
+      height: -webkit-fill-available;
+      border-radius: 0;
+    }
+  }
+
+  .bs_tab-pane.bs_tab-pane--appearance {
+    > details {
+      border: 1px solid #fff !important;
+    }
+  }
+
 }
 
 body {

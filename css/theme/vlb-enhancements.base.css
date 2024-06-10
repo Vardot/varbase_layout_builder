@@ -627,6 +627,24 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
   color: #fff !important;
 }
 
+#layout-builder-modal .ck.ck-editor {
+  color: var(--ck-color-text);
+}
+
+#layout-builder-modal .form-element--type-text {
+  color: var(--gin-color-text) !important;
+  background-color: var(--gin-bg-input) !important;
+}
+
+#layout-builder-modal .ck-source-editing-area textarea {
+  height: -webkit-fill-available;
+  border-radius: 0;
+}
+
+#layout-builder-modal .bs_tab-pane.bs_tab-pane--appearance > details {
+  border: 1px solid #fff !important;
+}
+
 body #drupal-off-canvas-wrapper {
   z-index: 502;
   padding: 0;
