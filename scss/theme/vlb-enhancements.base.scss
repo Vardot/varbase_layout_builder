@@ -687,6 +687,7 @@ body {
     }
   }
 
+  // Fix the height for CKEditor 5 Source code editing area.
   .ck-source-editing-area {
     textarea {
       height: -webkit-fill-available;
