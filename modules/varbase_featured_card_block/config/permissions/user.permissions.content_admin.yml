@@ -1,5 +1,0 @@
-id: content_admin
-permissions:
-  - 'create varbase_featured_card_block block content'
-  - 'delete any varbase_featured_card_block block content'
-  - 'edit any varbase_featured_card_block block content'

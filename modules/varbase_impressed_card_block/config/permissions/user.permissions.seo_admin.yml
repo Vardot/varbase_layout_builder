@@ -1,5 +1,0 @@
-id: seo_admin
-permissions:
-  - 'create varbase_impressed_card_block block content'
-  - 'delete any varbase_impressed_card_block block content'
-  - 'edit any varbase_impressed_card_block block content'

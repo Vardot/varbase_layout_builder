@@ -1,4 +1,3 @@
-uuid: ef9efd68-a10c-4e4e-a0df-2a28259f8c17
 langcode: en
 status: true
 dependencies:
@@ -9,8 +8,6 @@ dependencies:
 third_party_settings:
   content_translation:
     enabled: true
-_core:
-  default_config_hash: zR8TeDyrJEnUlBicnCdJxFeIuqKEjIuCI1FdVBmW9w4
 id: block_content.varbase_html_code_block
 target_entity_type_id: block_content
 target_bundle: varbase_html_code_block

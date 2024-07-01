@@ -1,5 +1,0 @@
-id: content_admin
-permissions:
-  - 'create varbase_gallery_block block content'
-  - 'delete any varbase_gallery_block block content'
-  - 'edit any varbase_gallery_block block content'

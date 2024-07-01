@@ -2,34 +2,32 @@ name: Varbase Landing page (Layout Builder)
 description: Provides Landing page (Layout Builder) content type and related configuration. Use Landing page (Layout Builder) to build pages with custom sections and layouts to display content in a modern way.
 type: module
 package: Varbase
-core_version_requirement: ~10
+core_version_requirement: ~10.3.0 || ~11.0.0
 dependencies:
+  - varbase_seo:varbase_seo
   - varbase_layout_builder:varbase_layout_builder
-install:
-  - user
-  - node
-  - menu_ui
-  - text
-  - options
-  - link
-  - ckeditor5
-  - block
-  - field
-  - field_group
-  - length_indicator
-  - advanced_text_formatter
-  - maxlength
-  - viewsreference
-  - entity_reference_revisions
-  - varbase_seo
-  - varbase_rich_text_block
-  - varbase_html_code_block
-  - varbase_media_block
-  - varbase_gallery_block
-  - varbase_heading_block
-  - varbase_buttons_block
-  - varbase_cta_block
-  - varbase_featured_card_block
-  - varbase_impressed_card_block
-  - varbase_overlay_card_block
-  - varbase_accordion_block
+  - drupal:user
+  - drupal:node
+  - drupal:menu_ui
+  - drupal:text
+  - drupal:options
+  - drupal:link
+  - drupal:block
+  - drupal:field
+  - drupal:field_group
+  - length_indicator:length_indicator
+  - advanced_text_formatter:advanced_text_formatter
+  - maxlength:maxlength
+  - viewsreference:viewsreference
+  - entity_reference_revisions:entity_reference_revisions
+  - varbase_layout_builder:varbase_rich_text_block
+  - varbase_layout_builder:varbase_html_code_block
+  - varbase_layout_builder:varbase_media_block
+  - varbase_layout_builder:varbase_gallery_block
+  - varbase_layout_builder:varbase_heading_block
+  - varbase_layout_builder:varbase_buttons_block
+  - varbase_layout_builder:varbase_cta_block
+  - varbase_layout_builder:varbase_featured_card_block
+  - varbase_layout_builder:varbase_impressed_card_block
+  - varbase_layout_builder:varbase_overlay_card_block
+  - varbase_layout_builder:varbase_accordion_block

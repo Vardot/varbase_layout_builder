@@ -1,5 +1,0 @@
-id: content_admin
-permissions:
-  - 'create varbase_overlay_card_block block content'
-  - 'delete any varbase_overlay_card_block block content'
-  - 'edit any varbase_overlay_card_block block content'

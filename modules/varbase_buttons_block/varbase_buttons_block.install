@@ -5,14 +5,15 @@
  * Install, update and uninstall functions for Varbase Buttons Block module.
  */
 
-use Vardot\Installer\ModuleInstallerFactory;
+use Drupal\Core\Recipe\Recipe;
+use Drupal\Core\Recipe\RecipeRunner;
 
 /**
  * Implements hook_install().
  */
 function varbase_buttons_block_install() {
 
-  // Add permissions.
-  ModuleInstallerFactory::addPermissions('varbase_buttons_block');
+  $default_recipe = Recipe::createFromDirectory(__DIR__ . '/recipes/default');
+  RecipeRunner::processRecipe($default_recipe);
 
 }

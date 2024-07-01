@@ -1,5 +1,0 @@
-id: seo_admin
-permissions:
-  - 'create basic block content'
-  - 'delete any basic block content'
-  - 'edit any basic block content'

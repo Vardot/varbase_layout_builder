@@ -1,0 +1,25 @@
+name: Varbase Accordion Block - Default
+description: A recipe to manage default installed modules, configs and permissions.
+type: install
+config:
+  actions:
+    user.role.editor:
+      grantPermissions:
+        - 'create varbase_accordion_block block content'
+        - 'delete any varbase_accordion_block block content'
+        - 'edit any varbase_accordion_block block content'
+    user.role.seo_admin:
+      grantPermissions:
+        - 'create varbase_accordion_block block content'
+        - 'delete any varbase_accordion_block block content'
+        - 'edit any varbase_accordion_block block content'
+    user.role.content_admin:
+      grantPermissions:
+        - 'create varbase_accordion_block block content'
+        - 'delete any varbase_accordion_block block content'
+        - 'edit any varbase_accordion_block block content'
+    user.role.site_admin:
+      grantPermissions:
+        - 'create varbase_accordion_block block content'
+        - 'delete any varbase_accordion_block block content'
+        - 'edit any varbase_accordion_block block content'

@@ -1,0 +1,85 @@
+name: Varbase Layout Builder - Default
+description: A recipe to manage default installed modules, configs and permissions.
+type: install
+install:
+  - entity_block
+  - block_form_alter
+  - media_library_form_element
+  - bootstrap_layouts
+  - layout_builder_blocks
+  - layout_builder_modal
+  - layout_builder_at
+  - layout_builder_component_attributes
+  - layout_builder_perms
+  - layout_builder_perms_global
+  - layout_library
+  - section_library
+  - bootstrap_styles
+  - bootstrap_layout_builder
+  - block_library
+config:
+  import:
+    entity_block: '*'
+    block_form_alter: '*'
+    media_library_form_element: '*'
+    bootstrap_layouts: '*'
+    layout_builder_blocks: '*'
+    layout_builder_modal: '*'
+    layout_builder_at: '*'
+    layout_builder_component_attributes: '*'
+    layout_builder_perms: '*'
+    layout_builder_perms_global: '*'
+    layout_library: '*'
+    section_library: '*'
+    block_library: '*'
+    bootstrap_layout_builder:
+      - bootstrap_layout_builder.layout.blb_col_1
+      - bootstrap_layout_builder.layout.blb_col_2
+      - bootstrap_layout_builder.layout.blb_col_3
+      - bootstrap_layout_builder.layout.blb_col_4
+      - bootstrap_layout_builder.layout.blb_col_5
+      - bootstrap_layout_builder.layout.blb_col_6
+      - bootstrap_layout_builder.layout.blb_col_7
+      - bootstrap_layout_builder.layout.blb_col_8
+      - bootstrap_layout_builder.layout.blb_col_9
+      - bootstrap_layout_builder.layout.blb_col_10
+      - bootstrap_layout_builder.layout.blb_col_11
+      - bootstrap_layout_builder.layout.blb_col_12
+    varbase_layout_builder: '*'
+  actions:
+    user.role.editor:
+      grantPermissions:
+        - 'create and edit custom blocks'
+        - 'access layout builder page'
+        - 'create layout builder sections'
+        - 'create layout builder blocks'
+        - 'config layout builder blocks'
+        - 'edit layout builder sections'
+        - 'remove layout builder sections'
+        - 'remove layout builder blocks'
+        - 'reorder layout builder blocks'
+    user.role.seo_admin:
+      grantPermissions:
+        - 'create and edit custom blocks'
+    user.role.content_admin:
+      grantPermissions:
+        - 'create and edit custom blocks'
+        - 'access layout builder page'
+        - 'create layout builder sections'
+        - 'create layout builder blocks'
+        - 'config layout builder blocks'
+        - 'edit layout builder sections'
+        - 'remove layout builder sections'
+        - 'remove layout builder blocks'
+        - 'reorder layout builder blocks'
+    user.role.site_admin:
+      grantPermissions:
+        - 'create and edit custom blocks'
+        - 'access layout builder page'
+        - 'create layout builder sections'
+        - 'create layout builder blocks'
+        - 'config layout builder blocks'
+        - 'edit layout builder sections'
+        - 'remove layout builder sections'
+        - 'remove layout builder blocks'
+        - 'reorder layout builder blocks'

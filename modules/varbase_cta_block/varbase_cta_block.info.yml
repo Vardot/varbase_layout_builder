@@ -1,8 +1,8 @@
-name: Varbase CTA block
+name: Varbase CTA Block
 description: A CTA block contains a button link that navigates to the desired destination.
 type: module
 package: "Varbase Blocks"
-core_version_requirement: ~10
+core_version_requirement: ~10.3.0 || ~11.0.0
 dependencies:
   - varbase_layout_builder:varbase_layout_builder
   - varbase_layout_builder:varbase_buttons_block

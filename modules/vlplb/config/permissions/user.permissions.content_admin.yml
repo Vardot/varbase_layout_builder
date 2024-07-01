@@ -1,8 +1,0 @@
-id: content_admin
-permissions:
-  - 'create landing_page_lb content'
-  - 'delete any landing_page_lb content'
-  - 'edit any landing_page_lb content'
-  - 'revert landing_page_lb revisions'
-  - 'view landing_page_lb revisions'
-  - 'configure all landing_page_lb node layout overrides'

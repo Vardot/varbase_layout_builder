@@ -1,0 +1,45 @@
+name: Varbase Landing page (Layout Builder) - Default
+description: A recipe to manage default installed modules, configs and permissions.
+type: install
+# install:
+#   - varbase_rich_text_block
+#   - varbase_html_code_block
+#   - varbase_media_block
+#   - varbase_gallery_block
+#   - varbase_heading_block
+#   - varbase_buttons_block
+#   - varbase_cta_block
+#   - varbase_featured_card_block
+#   - varbase_impressed_card_block
+#   - varbase_overlay_card_block
+#   - varbase_accordion_block
+config:
+  actions:
+    user.role.editor:
+      grantPermissions:
+        - 'create landing_page_lb content'
+        - 'edit any landing_page_lb content'
+        - 'view landing_page_lb revisions'
+        - 'configure all landing_page_lb node layout overrides'
+    user.role.seo_admin:
+      grantPermissions:
+        - 'create landing_page_lb content'
+        - 'delete any landing_page_lb content'
+        - 'edit any landing_page_lb content'
+        - 'view landing_page_lb revisions'
+    user.role.content_admin:
+      grantPermissions:
+        - 'create landing_page_lb content'
+        - 'delete any landing_page_lb content'
+        - 'edit any landing_page_lb content'
+        - 'revert landing_page_lb revisions'
+        - 'view landing_page_lb revisions'
+        - 'configure all landing_page_lb node layout overrides'
+    user.role.site_admin:
+      grantPermissions:
+        - 'create landing_page_lb content'
+        - 'delete any landing_page_lb content'
+        - 'edit any landing_page_lb content'
+        - 'revert landing_page_lb revisions'
+        - 'view landing_page_lb revisions'
+        - 'configure all landing_page_lb node layout overrides'
