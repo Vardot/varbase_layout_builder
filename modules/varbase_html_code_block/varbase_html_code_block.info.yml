@@ -2,7 +2,7 @@ name: Varbase HTML code block
 description: An HTML Code block contains a title and a body with an HTML text format.
 type: module
 package: "Varbase Blocks"
-core_version_requirement: ~9 || ~10
+core_version_requirement: ~9.5.0 || ~10.3.0 || ~11.0.0
 dependencies:
   - drupal:block
   - drupal:block_content
