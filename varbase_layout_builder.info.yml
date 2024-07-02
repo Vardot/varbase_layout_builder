@@ -3,7 +3,7 @@ description: Provides default configuration and enhancements to utilize Drupal c
 type: module
 package: Varbase
 configure: varbase_layout_builder.settings
-core_version_requirement: ~10
+core_version_requirement: ~10.3.0 || ~11.0.0
 dependencies:
   - drupal:system
   - drupal:layout_builder
