@@ -9,8 +9,10 @@ use Drupal\Core\Url;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Template\Attribute;
-use Drupal\varbase_layout_builder\Element\VarbaseLayoutBuilderUX;
 use Drupal\Core\Asset\AttachedAssetsInterface;
+use Drupal\layout_builder\Plugin\Block\InlineBlock;
+use Drupal\varbase_layout_builder\Element\VarbaseLayoutBuilderUX;
+use Drupal\varbase_layout_builder\Plugin\Block\VarbaseLayoutBuilderInlineBlock;
 
 // Include all helpers.
 include_once __DIR__ . '/includes/helpers.inc';
@@ -208,6 +210,17 @@ function _varbase_layout_builder_form_node_form_submit(array &$form, FormStateIn
  */
 function varbase_layout_builder_element_plugin_alter(array &$definitions) {
   $definitions['layout_builder']['class'] = VarbaseLayoutBuilderUX::class;
+}
+
+/**
+ * Implements hook_block_alter().
+ */
+function varbase_layout_builder_block_alter(array &$definitions) {
+  foreach ($definitions as &$definition) {
+    if ($definition['class'] === InlineBlock::class) {
+      $definition['class'] = VarbaseLayoutBuilderInlineBlock::class;
+    }
+  }
 }
 
 /**
