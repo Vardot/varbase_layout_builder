@@ -580,10 +580,6 @@ form.media-form input[type=text]:focus {
   border-radius: 0;
 }
 
-#layout-builder-modal .bs_tab-pane.bs_tab-pane--appearance > details {
-  border: 1px solid #fff !important;
-}
-
 body .ui-dialog .ui-dialog-titlebar-close {
   margin-top: .08rem !important;
   height: 2rem !important;

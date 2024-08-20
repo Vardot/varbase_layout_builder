@@ -31,3 +31,9 @@
 .media-library-widget-modal .claro-details__summary::after {
   display: none;
 }
+
+#layout-builder-modal summary::after,
+#drupal-off-canvas summary:after {
+  border-right-color: #ffffff;
+  border-bottom-color: #ffffff;
+}
