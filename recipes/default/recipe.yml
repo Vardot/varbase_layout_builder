@@ -24,7 +24,6 @@ config:
     media_library_form_element: '*'
     bootstrap_layouts: '*'
     layout_builder_blocks: '*'
-    layout_builder_modal: '*'
     layout_builder_at: '*'
     layout_builder_component_attributes: '*'
     layout_builder_perms: '*'
