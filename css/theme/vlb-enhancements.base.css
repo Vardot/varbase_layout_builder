@@ -507,8 +507,7 @@ form.media-form input[type=text]:focus {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 9'%3e%3cpath fill='none' stroke-width='1.5' d='M1 1l6 6 6-6' stroke='%23545560'/%3e%3c/svg%3e");
   background-repeat: no-repeat !important;
   background-position: 100% 50% !important;
-  -webkit-appearance: none !important;
-          appearance: none !important;
+  appearance: none !important;
 }
 
 #layout-builder-modal #bs_ui ~ button.button,
@@ -568,6 +567,11 @@ form.media-form input[type=text]:focus {
 
 #layout-builder-modal .ck.ck-editor {
   color: var(--ck-color-text);
+}
+
+#layout-builder-modal .ck.ck-editor hr {
+  background: var(--bs-body-color);
+  margin: 1rem 0;
 }
 
 #layout-builder-modal .form-element--type-text {
@@ -633,17 +637,17 @@ body .ui-dialog.ui-front.media-library-widget-modal {
   border: 1px solid #ccc;
   border-radius: 1.625rem;
   font-size: 1rem;
-  background: url(../../images/icons/bebebe/invisible.svg) center center / 16px 16px no-repeat;
+  background: url(../../images/icons/bebebe/invisible.svg) center center/16px 16px no-repeat;
 }
 
 .layout-builder__link--visibility:hover {
-  background: url(../../images/icons/787878/invisible.svg) center center / 16px 16px no-repeat;
+  background: url(../../images/icons/787878/invisible.svg) center center/16px 16px no-repeat;
 }
 
 .invisible-section .layout-builder__link--visibility {
-  background: url(../../images/icons/bebebe/visible.svg) center center / 16px 16px no-repeat;
+  background: url(../../images/icons/bebebe/visible.svg) center center/16px 16px no-repeat;
 }
 
 .invisible-section .layout-builder__link--visibility:hover {
-  background: url(../../images/icons/787878/visible.svg) center center / 16px 16px no-repeat;
+  background: url(../../images/icons/787878/visible.svg) center center/16px 16px no-repeat;
 }

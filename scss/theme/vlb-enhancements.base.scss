@@ -528,6 +528,11 @@ form.media-form {
   .ck {
     &.ck-editor {
       color: var(--ck-color-text);
+
+      hr {
+        background: var(--bs-body-color);
+        margin: 1rem 0;
+      }
     }
   }
 
