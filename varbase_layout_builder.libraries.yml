@@ -111,7 +111,6 @@ claro:
       themes/claro/css/layout/card-list.css: {}
       themes/claro/css/layout/layout.css: {}
       themes/claro/css/layout/local-actions.css: {}
-      themes/claro/css/layout/node-add.css: {}
       themes/claro/css/layout/system-admin--layout.css: {}
     theme:
       themes/claro/css/theme/js.css: {}

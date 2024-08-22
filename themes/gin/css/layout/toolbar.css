@@ -157,10 +157,8 @@
   #layout-builder-modal .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default::before {
     width: 32px;
     height: 32px;
-    -webkit-mask-size: 32px 32px;
-            mask-size: 32px 32px;
-    -webkit-mask-position: center center;
-            mask-position: center center;
+    mask-size: 32px 32px;
+    mask-position: center center;
   }
 
   [dir="ltr"] #layout-builder-modal .toolbar .toolbar-bar #toolbar-item-administration-tray a.toolbar-icon-admin-toolbar-tools-help.toolbar-icon-default::before {

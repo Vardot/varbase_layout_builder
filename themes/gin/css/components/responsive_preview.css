@@ -4,6 +4,7 @@
 
 #layout-builder-modal .responsive-preview-item-list {
   top: 36px !important;
+  transform: none !important;
 }
 
 #layout-builder-modal .toolbar .toolbar-tab-responsive-preview.toolbar-tab .responsive-preview-trigger {
@@ -26,14 +27,10 @@
   top: var(--gin-spacing-s);
   margin: 0;
   background-color: var(--gin-color-text-light);
-  -webkit-mask-image: url("../../media/sprite.svg#drop-view");
-          mask-image: url("../../media/sprite.svg#drop-view");
-  -webkit-mask-size: .75rem .75rem;
-          mask-size: .75rem .75rem;
-  -webkit-mask-position: center center;
-          mask-position: center center;
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
+  mask-image: url("../../media/sprite.svg#drop-view");
+  mask-size: .75rem .75rem;
+  mask-position: center center;
+  mask-repeat: no-repeat;
   box-sizing: border-box;
   transition: transform .2s var(--gin-easing);
 }

@@ -357,12 +357,73 @@ form.media-form input[type=text] {
   color: var(--gin-color-contextual) !important;
 }
 
+#drupal-off-canvas input[type=text],
+#drupal-off-canvas textarea,
+#drupal-off-canvas select,
+#drupal-off-canvas .form-select,
+#drupal-off-canvas .form-tel,
+#drupal-off-canvas .form-email,
+#drupal-off-canvas .form-url,
+#drupal-off-canvas .form-search,
+#drupal-off-canvas .form-number,
+#drupal-off-canvas .form-color,
+#drupal-off-canvas .form-file,
+#drupal-off-canvas .form-textarea,
+#drupal-off-canvas .form-date,
+#drupal-off-canvas .form-time,
+#layout-builder-modal input[type=text],
+#layout-builder-modal textarea,
+#layout-builder-modal select,
+#layout-builder-modal .form-select,
+#layout-builder-modal .form-tel,
+#layout-builder-modal .form-email,
+#layout-builder-modal .form-url,
+#layout-builder-modal .form-search,
+#layout-builder-modal .form-number,
+#layout-builder-modal .form-color,
+#layout-builder-modal .form-file,
+#layout-builder-modal .form-textarea,
+#layout-builder-modal .form-date,
+#layout-builder-modal .form-time {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
 #drupal-off-canvas input[type=text]:focus,
+#drupal-off-canvas textarea:focus,
+#drupal-off-canvas select:focus,
+#drupal-off-canvas .form-select:focus,
+#drupal-off-canvas .form-tel:focus,
+#drupal-off-canvas .form-email:focus,
+#drupal-off-canvas .form-url:focus,
+#drupal-off-canvas .form-search:focus,
+#drupal-off-canvas .form-number:focus,
+#drupal-off-canvas .form-color:focus,
+#drupal-off-canvas .form-file:focus,
+#drupal-off-canvas .form-textarea:focus,
+#drupal-off-canvas .form-date:focus,
+#drupal-off-canvas .form-time:focus,
 #layout-builder-modal input[type=text]:focus,
-.media-library-widget-modal input[type=text]:focus,
-form.media-form input[type=text]:focus {
-  background-color: var(--gin-bg-input) !important;
-  color: var(--gin-color-contextual) !important;
+#layout-builder-modal textarea:focus,
+#layout-builder-modal select:focus,
+#layout-builder-modal .form-select:focus,
+#layout-builder-modal .form-tel:focus,
+#layout-builder-modal .form-email:focus,
+#layout-builder-modal .form-url:focus,
+#layout-builder-modal .form-search:focus,
+#layout-builder-modal .form-number:focus,
+#layout-builder-modal .form-color:focus,
+#layout-builder-modal .form-file:focus,
+#layout-builder-modal .form-textarea:focus,
+#layout-builder-modal .form-date:focus,
+#layout-builder-modal .form-time:focus {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
+#drupal-off-canvas .media-library-edit__link,
+#layout-builder-modal .media-library-edit__link {
+  display: none;
 }
 
 .media-library-widget-modal .media-library-item .media-library-item__preview {
@@ -584,6 +645,31 @@ form.media-form input[type=text]:focus {
   border-radius: 0;
 }
 
+#layout-builder-modal .bs_tab-pane.bs_tab-pane--appearance > details[open] > summary {
+  color: #26a5ff;
+  background-color: #46484e !important;
+}
+
+#layout-builder-modal .bs_tab-pane.bs_tab-pane--appearance > details summary[aria-expanded=true],
+#layout-builder-modal .bs_tab-pane.bs_tab-pane--appearance > details summary:hover,
+#layout-builder-modal .bs_tab-pane.bs_tab-pane--appearance > details summary:focus {
+  color: #26a5ff;
+  background-color: rgba(38, 165, 255, .14) !important;
+}
+
+#layout-builder-modal .field-multiple-table thead th {
+  background: transparent;
+  background-color: transparent;
+}
+
+#layout-builder-modal .ck.ck-style-panel label {
+  color: #000;
+}
+
+#layout-builder-modal .ck.ck-style-panel .ck-style-grid {
+  width: 24rem;
+}
+
 body .ui-dialog .ui-dialog-titlebar-close {
   margin-top: .08rem !important;
   height: 2rem !important;
@@ -651,3 +737,4 @@ body .ui-dialog.ui-front.media-library-widget-modal {
 .invisible-section .layout-builder__link--visibility:hover {
   background: url(../../images/icons/787878/visible.svg) center center/16px 16px no-repeat;
 }
+

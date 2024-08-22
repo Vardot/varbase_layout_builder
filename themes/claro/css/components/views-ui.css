@@ -315,6 +315,26 @@
   font-weight: normal;
 }
 
+@media (scripting: enabled) {
+  #layout-builder-modal .views-tabs__action-list-button:not(.views-tabs--secondary *),.media-library-widget-modal .views-tabs__action-list-button:not(.views-tabs--secondary *),form.media-form .views-tabs__action-list-button:not(.views-tabs--secondary *) {
+    animation-name: appear;
+    animation-duration: .1s;
+    animation-delay: 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: backwards;
+  }
+}
+
+@keyframes appear {
+  from {
+    display: none;
+  }
+
+  to {
+    display: unset;
+  }
+}
+
 #layout-builder-modal [dir=rtl] .views-tabs__action-list-button,.media-library-widget-modal [dir=rtl] .views-tabs__action-list-button,form.media-form [dir=rtl] .views-tabs__action-list-button {
   margin: 0;
 }

@@ -32,14 +32,10 @@
   display: block;
   width: 100%;
   height: 100%;
-  -webkit-mask-image: url("../../media/sprite.svg#help-view");
-          mask-image: url("../../media/sprite.svg#help-view");
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  -webkit-mask-position: center center;
-          mask-position: center center;
-  -webkit-mask-size: 100% 100%;
-          mask-size: 100% 100%;
+  mask-image: url("../../media/sprite.svg#help-view");
+  mask-repeat: no-repeat;
+  mask-position: center center;
+  mask-size: 100% 100%;
 }
 
 #layout-builder-modal .help-icon__description-toggle:hover:before,.media-library-widget-modal .help-icon__description-toggle:hover:before,form.media-form .help-icon__description-toggle:hover:before {
@@ -65,26 +61,6 @@
 
 [dir="rtl"] #layout-builder-modal .form-type--checkbox>.help-icon__element-has-description>label,[dir="rtl"] #layout-builder-modal .form-type--radio>.help-icon__element-has-description>label,[dir="rtl"] .media-library-widget-modal .form-type--checkbox>.help-icon__element-has-description>label,[dir="rtl"] .media-library-widget-modal .form-type--radio>.help-icon__element-has-description>label,[dir="rtl"] form.media-form .form-type--checkbox>.help-icon__element-has-description>label,[dir="rtl"] form.media-form .form-type--radio>.help-icon__element-has-description>label {
   margin-left: 6px;
-}
-
-[dir="ltr"] #layout-builder-modal .form-type--checkbox .checkbox-toggle+.help-icon,[dir="ltr"] #layout-builder-modal .form-type--radio .checkbox-toggle+.help-icon,[dir="ltr"] .media-library-widget-modal .form-type--checkbox .checkbox-toggle+.help-icon,[dir="ltr"] .media-library-widget-modal .form-type--radio .checkbox-toggle+.help-icon,[dir="ltr"] form.media-form .form-type--checkbox .checkbox-toggle+.help-icon,[dir="ltr"] form.media-form .form-type--radio .checkbox-toggle+.help-icon {
-  padding-left: var(--gin-spacing-xxs);
-}
-
-[dir="ltr"] #layout-builder-modal .form-type--checkbox .checkbox-toggle+.help-icon,[dir="ltr"] #layout-builder-modal .form-type--radio .checkbox-toggle+.help-icon,[dir="ltr"] .media-library-widget-modal .form-type--checkbox .checkbox-toggle+.help-icon,[dir="ltr"] .media-library-widget-modal .form-type--radio .checkbox-toggle+.help-icon,[dir="ltr"] form.media-form .form-type--checkbox .checkbox-toggle+.help-icon,[dir="ltr"] form.media-form .form-type--radio .checkbox-toggle+.help-icon {
-  padding-right: var(--gin-spacing-xxs);
-}
-
-[dir="rtl"] #layout-builder-modal .form-type--checkbox .checkbox-toggle+.help-icon,[dir="rtl"] #layout-builder-modal .form-type--radio .checkbox-toggle+.help-icon,[dir="rtl"] .media-library-widget-modal .form-type--checkbox .checkbox-toggle+.help-icon,[dir="rtl"] .media-library-widget-modal .form-type--radio .checkbox-toggle+.help-icon,[dir="rtl"] form.media-form .form-type--checkbox .checkbox-toggle+.help-icon,[dir="rtl"] form.media-form .form-type--radio .checkbox-toggle+.help-icon {
-  padding-right: var(--gin-spacing-xxs);
-}
-
-[dir="rtl"] #layout-builder-modal .form-type--checkbox .checkbox-toggle+.help-icon,[dir="rtl"] #layout-builder-modal .form-type--radio .checkbox-toggle+.help-icon,[dir="rtl"] .media-library-widget-modal .form-type--checkbox .checkbox-toggle+.help-icon,[dir="rtl"] .media-library-widget-modal .form-type--radio .checkbox-toggle+.help-icon,[dir="rtl"] form.media-form .form-type--checkbox .checkbox-toggle+.help-icon,[dir="rtl"] form.media-form .form-type--radio .checkbox-toggle+.help-icon {
-  padding-left: var(--gin-spacing-xxs);
-}
-
-#layout-builder-modal .form-type-checkbox .help-icon__element-has-description .checkbox-toggle,.media-library-widget-modal .form-type-checkbox .help-icon__element-has-description .checkbox-toggle,form.media-form .form-type-checkbox .help-icon__element-has-description .checkbox-toggle {
-  width: 50px !important;
 }
 
 #layout-builder-modal .field-group-details.help-icon__description-container .help-icon__description-toggle,.media-library-widget-modal .field-group-details.help-icon__description-container .help-icon__description-toggle,form.media-form .field-group-details.help-icon__description-container .help-icon__description-toggle {

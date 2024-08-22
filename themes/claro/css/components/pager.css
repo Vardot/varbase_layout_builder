@@ -95,12 +95,9 @@
   #layout-builder-modal .pager__item--first .pager__link::before,#layout-builder-modal .pager__item--previous .pager__link::before,#layout-builder-modal .pager__item--next .pager__link::after,#layout-builder-modal .pager__item--last .pager__link::after,.media-library-widget-modal .pager__item--first .pager__link::before,.media-library-widget-modal .pager__item--previous .pager__link::before,.media-library-widget-modal .pager__item--next .pager__link::after,.media-library-widget-modal .pager__item--last .pager__link::after,form.media-form .pager__item--first .pager__link::before,form.media-form .pager__item--previous .pager__link::before,form.media-form .pager__item--next .pager__link::after,form.media-form .pager__item--last .pager__link::after {
     background-color: linktext;
     background-image: none;
-    -webkit-mask-image: var(--background-image);
-            mask-image: var(--background-image);
-    -webkit-mask-repeat: no-repeat;
-            mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-            mask-position: center;
+    mask-image: var(--background-image);
+    mask-repeat: no-repeat;
+    mask-position: center;
   }
 }
 

@@ -525,14 +525,10 @@
   width: 100%;
   height: 100%;
   background: var(--gin-color-button-text);
-  -webkit-mask-image: url("../../media/sprite.svg#add-view");
-          mask-image: url("../../media/sprite.svg#add-view");
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  -webkit-mask-position: center center;
-          mask-position: center center;
-  -webkit-mask-size: 16px 16px;
-          mask-size: 16px 16px;
+  mask-image: url("../../media/sprite.svg#add-view");
+  mask-repeat: no-repeat;
+  mask-position: center center;
+  mask-size: 16px 16px;
 }
 
 #layout-builder-modal .layout-paragraphs-add-content__group,#layout-builder-modal .layout-paragraphs-add-content--group,#layout-builder-modal .erl-add-content__group,#layout-builder-modal .erl-add-content--group {

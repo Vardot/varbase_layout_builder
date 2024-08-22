@@ -41,8 +41,7 @@
   background: var(--input-bg-color) no-repeat 50% 50%;
   background-size: 100% 100%;
   box-shadow: 0 0 0 4px transparent;
-  -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 
 #layout-builder-modal .form-boolean:active,#layout-builder-modal .form-boolean:hover,.media-library-widget-modal .form-boolean:active,.media-library-widget-modal .form-boolean:hover,form.media-form .form-boolean:active,form.media-form .form-boolean:hover {
@@ -56,8 +55,7 @@
 
 @media (forced-colors: active) {
   #layout-builder-modal .form-boolean,.media-library-widget-modal .form-boolean,form.media-form .form-boolean {
-    -webkit-appearance: auto;
-            appearance: auto;
+    appearance: auto;
   }
 }
 

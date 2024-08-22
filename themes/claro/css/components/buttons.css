@@ -14,8 +14,7 @@
   font-size: var(--font-size-base);
   font-weight: 700;
   line-height: 1rem;
-  -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -103,8 +102,7 @@
           text-decoration: underline;
   border: 0;
   background: none;
-  -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 
 #layout-builder-modal .button--primary,.media-library-widget-modal .button--primary,form.media-form .button--primary {

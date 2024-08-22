@@ -287,11 +287,37 @@ form.media-form {
   input[type=text] {
     background-color: var(--gin-bg-input) !important;
     color: var(--gin-color-contextual) !important;
+  }
+}
+
+#drupal-off-canvas,
+#layout-builder-modal {
+
+  input[type=text],
+  textarea,
+  select,
+  .form-select, 
+  .form-tel,
+  .form-email,
+  .form-url,
+  .form-search,
+  .form-number, 
+  .form-color, 
+  .form-file, 
+  .form-textarea,
+  .form-date,
+  .form-time {
+    background-color: #fff !important;
+    color: #000 !important;
 
     &:focus {
-      background-color: var(--gin-bg-input) !important;
-      color: var(--gin-color-contextual) !important;
+      background-color: #fff !important;
+      color: #000 !important;
     }
+  }
+
+  .media-library-edit__link {
+    display: none;
   }
 
 }
@@ -547,6 +573,37 @@ form.media-form {
       border-radius: 0;
     }
   }
+
+  .bs_tab-pane.bs_tab-pane--appearance {
+    > details[open] > summary {
+      color: #26A5FF;
+      background-color: #46484E !important;
+    }
+
+    > details {
+      summary[aria-expanded='true'],
+      summary:hover, 
+      summary:focus {
+        color: #26A5FF;
+        background-color: rgba(38, 165, 255, 0.14) !important;
+      }
+    }
+  }
+
+  .field-multiple-table thead th {
+    background: transparent;
+    background-color: transparent;
+  }
+
+  .ck.ck-style-panel {
+    label {
+      color: #000;
+    }
+
+    .ck-style-grid {
+      width: 24rem;
+    }
+  } 
 
 }
 

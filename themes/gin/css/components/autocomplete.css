@@ -121,14 +121,10 @@
 
 #layout-builder-modal .autocomplete-deluxe-item .autocomplete-deluxe-item-delete,.media-library-widget-modal .autocomplete-deluxe-item .autocomplete-deluxe-item-delete,form.media-form .autocomplete-deluxe-item .autocomplete-deluxe-item-delete {
   top: 6px;
-  -webkit-mask-image: url("../../media/sprite.svg#close-view");
-          mask-image: url("../../media/sprite.svg#close-view");
-  -webkit-mask-size: 10px 10px;
-          mask-size: 10px 10px;
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-          mask-position: center;
+  mask-image: url("../../media/sprite.svg#close-view");
+  mask-size: 10px 10px;
+  mask-repeat: no-repeat;
+  mask-position: center;
   background: var(--gin-color-primary);
 }
 

@@ -84,6 +84,7 @@
 @media screen and (min-width: 37.5625rem) {
   #layout-builder-modal .form-item__suffix,.media-library-widget-modal .form-item__suffix,form.media-form .form-item__suffix {
     margin-inline-start: var(--space-xs);
+    white-space: nowrap;
   }
 }
 

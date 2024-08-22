@@ -27,8 +27,7 @@
   #layout-builder-modal .form-element--type-select,#layout-builder-modal .form-element--type-select:focus,#layout-builder-modal .form-element--type-select[disabled],.media-library-widget-modal .form-element--type-select,.media-library-widget-modal .form-element--type-select:focus,.media-library-widget-modal .form-element--type-select[disabled],form.media-form .form-element--type-select,form.media-form .form-element--type-select:focus,form.media-form .form-element--type-select[disabled] {
     padding-inline-end: var(--input-padding-horizontal);
     background-image: none;
-    -webkit-appearance: revert;
-            appearance: revert;
+    appearance: revert;
   }
 }
 

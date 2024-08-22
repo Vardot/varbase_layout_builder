@@ -2,6 +2,10 @@
   margin-bottom: var(--gin-spacing-xl);
 }
 
+#layout-builder-modal .webform-filter-form>.container-inline {
+  margin-block: 0;
+}
+
 #layout-builder-modal .webform-filter-form .details-wrapper {
   margin-top: 0;
   margin-bottom: var(--gin-spacing-xs);
@@ -73,5 +77,66 @@
 #layout-builder-modal .webform-tabs.ui-tabs .ui-tabs-nav .ui-tabs-active.ui-state-active a {
   border: 2px solid var(--gin-color-primary);
   border-radius: var(--gin-border-m);
+}
+
+#layout-builder-modal .webform-bulk-form[data-drupal-selector*=-bulk-form]>.container-inline {
+  margin-block-start: calc(var(--gin-spacing-xxs)*-1);
+  margin-block-end: var(--gin-spacing-l);
+}
+
+#layout-builder-modal .webform-bulk-form[data-drupal-selector*=-bulk-form] td:first-child>.form-type-checkbox {
+  margin-block: 0;
+}
+
+#layout-builder-modal .webform-ajax-messages {
+  bottom: var(--gin-spacing-s);
+}
+
+[dir="ltr"] #layout-builder-modal .webform-ajax-messages {
+  left: var(--gin-offset-x);
+  margin-left: var(--gin-spacing-m);
+}
+
+[dir="ltr"] #layout-builder-modal .webform-ajax-messages {
+  right: var(--gin-offset-x);
+  margin-right: var(--gin-spacing-m);
+}
+
+[dir="rtl"] #layout-builder-modal .webform-ajax-messages {
+  right: var(--gin-offset-x);
+  margin-right: var(--gin-spacing-m);
+}
+
+[dir="rtl"] #layout-builder-modal .webform-ajax-messages {
+  left: var(--gin-offset-x);
+  margin-left: var(--gin-spacing-m);
+}
+
+#layout-builder-modal .webform-ajax-messages .messages--info,#layout-builder-modal .webform-ajax-messages .messages--status,#layout-builder-modal .webform-ajax-messages .messages--warning,#layout-builder-modal .webform-ajax-messages .messages--error {
+  display: inline-block;
+}
+
+#layout-builder-modal .webform-edit-form .tabledrag-toggle-weight-wrapper {
+  margin-top: calc(var(--gin-spacing-s)*-1);
+}
+
+[dir="ltr"] #layout-builder-modal .webform-edit-form .tabledrag-toggle-weight-wrapper {
+  float: right;
+}
+
+[dir="ltr"] #layout-builder-modal .webform-edit-form .tabledrag-toggle-weight-wrapper {
+  float: left;
+}
+
+[dir="rtl"] #layout-builder-modal .webform-edit-form .tabledrag-toggle-weight-wrapper {
+  float: left;
+}
+
+[dir="rtl"] #layout-builder-modal .webform-edit-form .tabledrag-toggle-weight-wrapper {
+  float: right;
+}
+
+#layout-builder-modal .webform-edit-form .tabledrag-toggle-weight-wrapper button {
+  position: static;
 }
 

@@ -166,6 +166,7 @@
 
   #layout-builder-modal .is-horizontal .tabs,.media-library-widget-modal .is-horizontal .tabs,form.media-form .is-horizontal .tabs {
     flex-direction: row;
+    align-items: flex-end;
     width: auto;
     margin: 0;
     border: 0;

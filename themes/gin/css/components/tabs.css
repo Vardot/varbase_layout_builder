@@ -39,9 +39,8 @@
 #layout-builder-modal .tabs__link,#layout-builder-modal .claro-details__summary,#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a,.media-library-widget-modal .tabs__link,.media-library-widget-modal .claro-details__summary,.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a,form.media-form .tabs__link,form.media-form .claro-details__summary,form.media-form .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a {
   color: var(--gin-color-text);
   font-size: var(--gin-font-size);
-  font-weight: var(--gin-font-weight-bold);
-  padding-top: calc(var(--gin-spacing-l) - var(--gin-spacing-xxs));
-  padding-bottom: calc(var(--gin-spacing-l) - var(--gin-spacing-xxs));
+  font-weight: var(--gin-font-weight-semibold);
+  padding-block: calc(var(--gin-spacing-l) - var(--gin-spacing-xxs));
 }
 
 #layout-builder-modal .tabs__link strong,#layout-builder-modal .claro-details__summary strong,#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a strong,.media-library-widget-modal .tabs__link strong,.media-library-widget-modal .claro-details__summary strong,.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a strong,form.media-form .tabs__link strong,form.media-form .claro-details__summary strong,form.media-form .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a strong {
@@ -49,7 +48,7 @@
 }
 
 #layout-builder-modal .tabs__link.is-active,#layout-builder-modal .claro-details__summary[aria-expanded=true],#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button.selected a,.media-library-widget-modal .tabs__link.is-active,.media-library-widget-modal .claro-details__summary[aria-expanded=true],.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button.selected a,form.media-form .tabs__link.is-active,form.media-form .claro-details__summary[aria-expanded=true],form.media-form .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button.selected a {
-  font-weight: var(--gin-font-weight-bold);
+  font-weight: var(--gin-font-weight-semibold);
 }
 
 #layout-builder-modal .is-horizontal .tabs__link:hover,#layout-builder-modal .is-horizontal .tabs__link:focus,#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a:hover,#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a:focus,.media-library-widget-modal .is-horizontal .tabs__link:hover,.media-library-widget-modal .is-horizontal .tabs__link:focus,.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a:hover,.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a:focus,form.media-form .is-horizontal .tabs__link:hover,form.media-form .is-horizontal .tabs__link:focus,form.media-form .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a:hover,form.media-form .horizontal-tabs ul.horizontal-tabs-list li.horizontal-tab-button a:focus {
@@ -81,7 +80,7 @@
   #layout-builder-modal .is-horizontal .tabs--primary,#layout-builder-modal .is-horizontal .tabs--secondary,#layout-builder-modal .horizontal-tabs ul.horizontal-tabs-list,.media-library-widget-modal .is-horizontal .tabs--primary,.media-library-widget-modal .is-horizontal .tabs--secondary,.media-library-widget-modal .horizontal-tabs ul.horizontal-tabs-list,form.media-form .is-horizontal .tabs--primary,form.media-form .is-horizontal .tabs--secondary,form.media-form .horizontal-tabs ul.horizontal-tabs-list {
     width: 100%;
     padding: .3125rem var(--gin-spacing-xs) var(--gin-spacing-l);
-    margin-bottom: calc(var(--gin-spacing-l)*-1);
+    margin-bottom: calc(var(--gin-spacing-xl)*-1);
     overflow-x: auto;
   }
 
@@ -248,9 +247,10 @@
 
 @media (min-width: 48em) {
   #layout-builder-modal .is-horizontal .tabs--primary .tabs__link,.media-library-widget-modal .is-horizontal .tabs--primary .tabs__link,form.media-form .is-horizontal .tabs--primary .tabs__link {
-    padding: calc(var(--gin-spacing-s) - 2px) var(--gin-spacing-m);
-    min-height: 2.5rem;
-    border-radius: 2.5rem;
+    font-size: var(--gin-font-size);
+    padding: calc(var(--gin-spacing-xs) - 2px) var(--gin-spacing-s);
+    min-height: 2rem;
+    border-radius: 2rem;
   }
 
   [dir="ltr"] #layout-builder-modal .is-horizontal .tabs--primary .tabs__link,[dir="ltr"] .media-library-widget-modal .is-horizontal .tabs--primary .tabs__link,[dir="ltr"] form.media-form .is-horizontal .tabs--primary .tabs__link {
@@ -433,14 +433,10 @@
 
 #layout-builder-modal .claro-details__summary::before,#layout-builder-modal .claro-details[open]>.claro-details__summary::before,.media-library-widget-modal .claro-details__summary::before,.media-library-widget-modal .claro-details[open]>.claro-details__summary::before,form.media-form .claro-details__summary::before,form.media-form .claro-details[open]>.claro-details__summary::before {
   background: var(--gin-color-text);
-  -webkit-mask-image: url("../../media/sprite.svg#handle-view");
-          mask-image: url("../../media/sprite.svg#handle-view");
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  -webkit-mask-position: center center;
-          mask-position: center center;
-  -webkit-mask-size: 100% 100%;
-          mask-size: 100% 100%;
+  mask-image: url("../../media/sprite.svg#handle-view");
+  mask-repeat: no-repeat;
+  mask-position: center center;
+  mask-size: 100% 100%;
 }
 
 [dir="ltr"] #layout-builder-modal .claro-details__summary::before,[dir="ltr"] #layout-builder-modal .claro-details[open]>.claro-details__summary::before,[dir="ltr"] .media-library-widget-modal .claro-details__summary::before,[dir="ltr"] .media-library-widget-modal .claro-details[open]>.claro-details__summary::before,[dir="ltr"] form.media-form .claro-details__summary::before,[dir="ltr"] form.media-form .claro-details[open]>.claro-details__summary::before {
@@ -656,6 +652,10 @@
 #layout-builder-modal .vertical-tabs__items .vertical-tabs__item>.claro-details__wrapper,.media-library-widget-modal .vertical-tabs__items .vertical-tabs__item>.claro-details__wrapper,form.media-form .vertical-tabs__items .vertical-tabs__item>.claro-details__wrapper {
   display: inline-block;
   width: 100%;
+}
+
+#layout-builder-modal .vertical-tabs__menu-item-title,.media-library-widget-modal .vertical-tabs__menu-item-title,form.media-form .vertical-tabs__menu-item-title {
+  font-weight: var(--gin-font-weight-bold);
 }
 
 #layout-builder-modal .vertical-tabs__menu-item::before,#layout-builder-modal .vertical-tabs__menu-item::after,.media-library-widget-modal .vertical-tabs__menu-item::before,.media-library-widget-modal .vertical-tabs__menu-item::after,form.media-form .vertical-tabs__menu-item::before,form.media-form .vertical-tabs__menu-item::after {

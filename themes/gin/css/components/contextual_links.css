@@ -17,12 +17,9 @@
   display: block;
   width: .75rem;
   height: .75rem;
-  -webkit-mask-image: url("../../media/sprite.svg#media-edit-view");
-          mask-image: url("../../media/sprite.svg#media-edit-view");
-  -webkit-mask-size: var(--gin-spacing-s) var(--gin-spacing-s);
-          mask-size: var(--gin-spacing-s) var(--gin-spacing-s);
-  -webkit-mask-position: 100% 100%;
-          mask-position: 100% 100%;
+  mask-image: url("../../media/sprite.svg#media-edit-view");
+  mask-size: var(--gin-spacing-s) var(--gin-spacing-s);
+  mask-position: 100% 100%;
   background: var(--gin-color-primary);
 }
 

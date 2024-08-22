@@ -7,6 +7,9 @@
 }
 
 #layout-builder-modal body,.media-library-widget-modal body,form.media-form body {
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+          hyphens: auto;
   color: var(--color-fg);
   background: var(--color-bg);
 }
@@ -167,7 +170,6 @@
   margin-block: .25em;
   margin-inline: 2em 0;
   padding: 0;
-  list-style-type: decimal;
 }
 
 #layout-builder-modal abbr[title],.media-library-widget-modal abbr[title],form.media-form abbr[title] {

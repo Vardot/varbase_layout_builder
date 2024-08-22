@@ -9,8 +9,7 @@
   background: var(--input-bg-color);
   font-size: var(--input-font-size);
   line-height: var(--input-line-height);
-  -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 
 #layout-builder-modal .no-touchevents .form-element--extrasmall,#layout-builder-modal .no-touchevents .form-element[name$="][_weight]"],.media-library-widget-modal .no-touchevents .form-element--extrasmall,.media-library-widget-modal .no-touchevents .form-element[name$="][_weight]"],form.media-form .no-touchevents .form-element--extrasmall,form.media-form .no-touchevents .form-element[name$="][_weight]"] {
@@ -21,8 +20,7 @@
 }
 
 #layout-builder-modal .form-element--type-search[type=search],.media-library-widget-modal .form-element--type-search[type=search],form.media-form .form-element--type-search[type=search] {
-  -webkit-appearance: none;
-          appearance: none;
+  appearance: none;
   box-sizing: border-box;
 }
 

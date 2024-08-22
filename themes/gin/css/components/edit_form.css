@@ -99,6 +99,16 @@
   }
 }
 
+@media (max-width: 63.99em) {
+  #layout-builder-modal .gin--edit-form .page-wrapper__node-edit-form .region-sticky #edit-actions,.media-library-widget-modal .gin--edit-form .page-wrapper__node-edit-form .region-sticky #edit-actions,form.media-form .gin--edit-form .page-wrapper__node-edit-form .region-sticky #edit-actions {
+    width: 100%;
+  }
+
+  #layout-builder-modal .gin--edit-form .page-wrapper__node-edit-form .region-sticky #edit-gin-actions,.media-library-widget-modal .gin--edit-form .page-wrapper__node-edit-form .region-sticky #edit-gin-actions,form.media-form .gin--edit-form .page-wrapper__node-edit-form .region-sticky #edit-gin-actions {
+    flex-grow: 1;
+  }
+}
+
 @media (min-width: 108.125em) {
   #layout-builder-modal .gin--edit-form .page-wrapper__node-edit-form .block-page-title-block,.media-library-widget-modal .gin--edit-form .page-wrapper__node-edit-form .block-page-title-block,form.media-form .gin--edit-form .page-wrapper__node-edit-form .block-page-title-block {
     width: 100%;
@@ -124,6 +134,8 @@
 #layout-builder-modal .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary,.media-library-widget-modal .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary,form.media-form .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary {
   z-index: 103;
   width: var(--gin-sidebar-width);
+  min-width: var(--gin-sidebar-min-width);
+  max-width: var(--gin-sidebar-max-width);
   height: calc(100% - var(--gin-toolbar-y-offset));
   position: fixed;
   top: var(--gin-toolbar-y-offset);
@@ -169,7 +181,7 @@
 }
 
 #layout-builder-modal .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .field--name-revision-log,#layout-builder-modal .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .field--name-revision-log-message,.media-library-widget-modal .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .field--name-revision-log,.media-library-widget-modal .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .field--name-revision-log-message,form.media-form .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .field--name-revision-log,form.media-form .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .field--name-revision-log-message {
-  margin-top: var(--gin-spacing-l);
+  margin-top: var(--gin-spacing-s);
 }
 
 #layout-builder-modal .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .accordion,.media-library-widget-modal .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .accordion,form.media-form .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .accordion {
@@ -180,8 +192,7 @@
 
 #layout-builder-modal .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta__header,.media-library-widget-modal .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta__header,form.media-form .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta__header {
   color: var(--gin-color-text);
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding: var(--gin-spacing-m) 1.5rem;
   background-color: var(--gin-bg-layer);
   border: 0 none;
 }
@@ -208,12 +219,30 @@
   }
 }
 
+#layout-builder-modal .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta__header .form-type--item,#layout-builder-modal .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta__header .form-item__label,.media-library-widget-modal .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta__header .form-type--item,.media-library-widget-modal .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta__header .form-item__label,form.media-form .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta__header .form-type--item,form.media-form .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta__header .form-item__label {
+  font-size: var(--gin-font-size-s);
+}
+
+#layout-builder-modal .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta__header .form-item,.media-library-widget-modal .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta__header .form-item,form.media-form .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta__header .form-item {
+  margin-block: var(--gin-spacing-xxs);
+}
+
 #layout-builder-modal .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta__title,.media-library-widget-modal .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta__title,form.media-form .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta__title {
   color: var(--gin-color-title);
   font-weight: var(--gin-font-weight-semibold);
-  margin-top: var(--gin-spacing-xxs);
-  margin-bottom: var(--gin-spacing-m);
   text-shadow: none;
+}
+
+#layout-builder-modal .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta__revision,.media-library-widget-modal .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta__revision,form.media-form .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta__revision {
+  margin-block-start: var(--gin-spacing-m);
+}
+
+#layout-builder-modal .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta__last-saved,#layout-builder-modal .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta__author,.media-library-widget-modal .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta__last-saved,.media-library-widget-modal .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta__author,form.media-form .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta__last-saved,form.media-form .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta__author {
+  margin-block: var(--gin-spacing-xxs);
+}
+
+#layout-builder-modal .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta__last-saved,#layout-builder-modal .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta__last-saved .form-item__label,#layout-builder-modal .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta__author,#layout-builder-modal .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta__author .form-item__label,.media-library-widget-modal .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta__last-saved,.media-library-widget-modal .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta__last-saved .form-item__label,.media-library-widget-modal .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta__author,.media-library-widget-modal .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta__author .form-item__label,form.media-form .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta__last-saved,form.media-form .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta__last-saved .form-item__label,form.media-form .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta__author,form.media-form .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta__author .form-item__label {
+  font-size: var(--gin-font-size-s);
 }
 
 #layout-builder-modal .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta>.accordion__item,.media-library-widget-modal .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta>.accordion__item,form.media-form .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta>.accordion__item {
@@ -228,6 +257,7 @@
 }
 
 #layout-builder-modal .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta>.accordion__item>.claro-details__summary,.media-library-widget-modal .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta>.accordion__item>.claro-details__summary,form.media-form .gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .entity-meta>.accordion__item>.claro-details__summary {
+  font-size: var(--gin-font-size-s);
   display: block;
 }
 
@@ -394,7 +424,7 @@
 
 #layout-builder-modal .gin--edit-form .field--name-title .form-element,.media-library-widget-modal .gin--edit-form .field--name-title .form-element,form.media-form .gin--edit-form .field--name-title .form-element {
   font-size: var(--gin-font-size-h3);
-  font-weight: var(--gin-font-weight-semibold);
+  font-weight: 475;
   line-height: normal;
   letter-spacing: -0.025em;
   width: 100%;

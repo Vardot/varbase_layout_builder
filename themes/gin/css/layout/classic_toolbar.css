@@ -196,8 +196,7 @@
 }
 
 #layout-builder-modal .toolbar .toolbar-bar .toolbar-icon-admin-toolbar-tools-help:before,.media-library-widget-modal .toolbar .toolbar-bar .toolbar-icon-admin-toolbar-tools-help:before,form.media-form .toolbar .toolbar-bar .toolbar-icon-admin-toolbar-tools-help:before {
-  -webkit-mask-size: 20px 20px;
-          mask-size: 20px 20px;
+  mask-size: 20px 20px;
 }
 
 @media (min-width: 61em) {

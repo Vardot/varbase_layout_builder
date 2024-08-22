@@ -196,14 +196,10 @@
   margin: 0;
   transform: none;
   background: #fff;
-  -webkit-mask-image: url("../../media/sprite.svg#close-view");
-          mask-image: url("../../media/sprite.svg#close-view");
-  -webkit-mask-size: var(--gin-icon-size-close) var(--gin-icon-size-close);
-          mask-size: var(--gin-icon-size-close) var(--gin-icon-size-close);
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  -webkit-mask-position: center center;
-          mask-position: center center;
+  mask-image: url("../../media/sprite.svg#close-view");
+  mask-size: var(--gin-icon-size-close) var(--gin-icon-size-close);
+  mask-repeat: no-repeat;
+  mask-position: center center;
 }
 
 [dir="ltr"] #layout-builder-modal .ui-dialog .ui-dialog-titlebar-close .ui-icon-closethick,[dir="ltr"] .media-library-widget-modal .ui-dialog .ui-dialog-titlebar-close .ui-icon-closethick,[dir="ltr"] form.media-form .ui-dialog .ui-dialog-titlebar-close .ui-icon-closethick {
@@ -240,6 +236,11 @@
 
 #layout-builder-modal .ui-dialog .gin-layer-wrapper,.media-library-widget-modal .ui-dialog .gin-layer-wrapper,form.media-form .ui-dialog .gin-layer-wrapper {
   margin-bottom: var(--gin-spacing-l);
+}
+
+#layout-builder-modal .ui-dialog .gin-confirm-form,.media-library-widget-modal .ui-dialog .gin-confirm-form,form.media-form .ui-dialog .gin-confirm-form {
+  margin-top: var(--gin-spacing-m);
+  margin-bottom: var(--gin-spacing-s);
 }
 
 #layout-builder-modal .erl-overlay,#layout-builder-modal .layout-paragraphs-dialog,.media-library-widget-modal .erl-overlay,.media-library-widget-modal .layout-paragraphs-dialog,form.media-form .erl-overlay,form.media-form .layout-paragraphs-dialog {
@@ -337,5 +338,13 @@
 #layout-builder-modal .ui-dialog .gin-layer-wrapper,.media-library-widget-modal .ui-dialog .gin-layer-wrapper,form.media-form .ui-dialog .gin-layer-wrapper {
   margin-bottom: var(--gin-spacing-l);
   margin-top: var(--gin-spacing-l);
+}
+
+#layout-builder-modal .views-ui-dialog.views-ui-dialog>.ui-dialog-content,.media-library-widget-modal .views-ui-dialog.views-ui-dialog>.ui-dialog-content,form.media-form .views-ui-dialog.views-ui-dialog>.ui-dialog-content {
+  padding: 0;
+}
+
+#layout-builder-modal #drupal-modal .gin-sticky-form-actions.form-actions,.media-library-widget-modal #drupal-modal .gin-sticky-form-actions.form-actions,form.media-form #drupal-modal .gin-sticky-form-actions.form-actions {
+  display: none;
 }
 

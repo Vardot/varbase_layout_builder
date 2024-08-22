@@ -114,14 +114,10 @@
 }
 
 #layout-builder-modal .paragraphs-tabs-wrapper .field-multiple-table .draggable .tabledrag-handle::after {
-  -webkit-mask-image: url("../../media/sprite.svg#drag-dots-view");
-          mask-image: url("../../media/sprite.svg#drag-dots-view");
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  -webkit-mask-position: center center;
-          mask-position: center center;
-  -webkit-mask-size: 16px 16px;
-          mask-size: 16px 16px;
+  mask-image: url("../../media/sprite.svg#drag-dots-view");
+  mask-repeat: no-repeat;
+  mask-position: center center;
+  mask-size: 16px 16px;
 }
 
 #layout-builder-modal .paragraphs-tabs-wrapper .field-multiple-table .draggable .tabledrag-changed {
@@ -183,7 +179,7 @@
   display: none;
 }
 
-#layout-builder-modal .paragraphs-subform .form-item {
+#layout-builder-modal .paragraphs-subform .form-item,#layout-builder-modal .paragraphs-subform .field--type-text-with-summary .form-item,#layout-builder-modal .paragraphs-subform .field--widget-text-textarea .form-item {
   margin-bottom: var(--gin-spacing-l);
 }
 
@@ -212,14 +208,10 @@
   height: 100%;
   background-image: none;
   background-color: var(--gin-color-text-light);
-  -webkit-mask-image: url("../../media/sprite.svg#more-view");
-          mask-image: url("../../media/sprite.svg#more-view");
-  -webkit-mask-repeat: no-repeat;
-          mask-repeat: no-repeat;
-  -webkit-mask-position: center center;
-          mask-position: center center;
-  -webkit-mask-size: 16px 16px;
-          mask-size: 16px 16px;
+  mask-image: url("../../media/sprite.svg#more-view");
+  mask-repeat: no-repeat;
+  mask-position: center center;
+  mask-size: 16px 16px;
 }
 
 [dir="ltr"] #layout-builder-modal .paragraphs-dropdown-toggle::after {

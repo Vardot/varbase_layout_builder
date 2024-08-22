@@ -118,9 +118,3 @@
   }
 }
 
-#layout-builder-modal .position-sticky thead,.media-library-widget-modal .position-sticky thead,form.media-form .position-sticky thead {
-  position: sticky;
-  z-index: 500;
-  top: var(--drupal-displace-offset-top);
-}
-

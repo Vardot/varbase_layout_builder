@@ -5,13 +5,14 @@
 }
 
 #layout-builder-modal .skip-link,.media-library-widget-modal .skip-link,form.media-form .skip-link {
-  z-index: 50;
-  left: 50%;
+  z-index: 503;
+  top: 0;
+  left: 0;
   padding: 1px .625rem 2px;
-  transform: translateX(-50%);
   color: var(--skip-link-color);
-  border-radius: 0 0 .625rem .625rem;
+  border-radius: 0 0 .625rem 0;
   background: var(--skip-link-bg-color);
+  box-shadow: 0 0 0 2px var(--color-white), 0 0 0 5px var(--color-focus);
   font-size: .94em;
 }
 
@@ -27,5 +28,11 @@
 
 #layout-builder-modal .skip-link.visually-hidden.focusable:focus,.media-library-widget-modal .skip-link.visually-hidden.focusable:focus,form.media-form .skip-link.visually-hidden.focusable:focus {
   position: absolute !important;
+}
+
+#layout-builder-modal [dir=rtl] .skip-link,.media-library-widget-modal [dir=rtl] .skip-link,form.media-form [dir=rtl] .skip-link {
+  right: 0;
+  left: auto;
+  border-radius: 0 0 0 .625rem;
 }
 

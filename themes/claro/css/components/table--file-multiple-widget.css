@@ -16,33 +16,21 @@
   padding: 0;
 }
 
-#layout-builder-modal .table-file-multiple-widget .tabledrag-handle,.media-library-widget-modal .table-file-multiple-widget .tabledrag-handle,form.media-form .table-file-multiple-widget .tabledrag-handle {
+#layout-builder-modal .table-file-multiple-widget .tabledrag-handle,#layout-builder-modal .table-file-multiple-widget .tabledrag-changed,.media-library-widget-modal .table-file-multiple-widget .tabledrag-handle,.media-library-widget-modal .table-file-multiple-widget .tabledrag-changed,form.media-form .table-file-multiple-widget .tabledrag-handle,form.media-form .table-file-multiple-widget .tabledrag-changed {
   float: left;
-}
-
-#layout-builder-modal [dir=rtl] .table-file-multiple-widget .tabledrag-handle,.media-library-widget-modal [dir=rtl] .table-file-multiple-widget .tabledrag-handle,form.media-form [dir=rtl] .table-file-multiple-widget .tabledrag-handle {
-  float: right;
 }
 
 #layout-builder-modal .table-file-multiple-widget .tabledrag-changed,.media-library-widget-modal .table-file-multiple-widget .tabledrag-changed,form.media-form .table-file-multiple-widget .tabledrag-changed {
-  float: left;
   line-height: calc(var(--tabledrag-handle-icon-size) + var(--space-xs)*2);
-}
-
-#layout-builder-modal [dir=rtl] .table-file-multiple-widget .tabledrag-changed,.media-library-widget-modal [dir=rtl] .table-file-multiple-widget .tabledrag-changed,form.media-form [dir=rtl] .table-file-multiple-widget .tabledrag-changed {
-  float: left;
 }
 
 #layout-builder-modal .table-file-multiple-widget td,.media-library-widget-modal .table-file-multiple-widget td,form.media-form .table-file-multiple-widget td {
   height: calc(var(--space-m)*3);
+  padding-block: var(--space-m);
 }
 
-#layout-builder-modal .table-file-multiple-widget td>:first-child,.media-library-widget-modal .table-file-multiple-widget td>:first-child,form.media-form .table-file-multiple-widget td>:first-child {
-  margin-top: 0;
-}
-
-#layout-builder-modal .table-file-multiple-widget td>:last-child,.media-library-widget-modal .table-file-multiple-widget td>:last-child,form.media-form .table-file-multiple-widget td>:last-child {
-  margin-bottom: 0;
+#layout-builder-modal .table-file-multiple-widget td>:first-child,#layout-builder-modal .table-file-multiple-widget td>:last-child,.media-library-widget-modal .table-file-multiple-widget td>:first-child,.media-library-widget-modal .table-file-multiple-widget td>:last-child,form.media-form .table-file-multiple-widget td>:first-child,form.media-form .table-file-multiple-widget td>:last-child {
+  margin-block: 0;
 }
 
 #layout-builder-modal .table-file-multiple-widget .button.button:only-child,.media-library-widget-modal .table-file-multiple-widget .button.button:only-child,form.media-form .table-file-multiple-widget .button.button:only-child {
@@ -56,18 +44,16 @@
   font-size: var(--font-size-s);
 }
 
-#layout-builder-modal .table-file-multiple-widget td,.media-library-widget-modal .table-file-multiple-widget td,form.media-form .table-file-multiple-widget td {
-  padding-top: var(--space-m);
-  padding-bottom: var(--space-m);
-}
-
 #layout-builder-modal .table-file-multiple-widget .tabledrag-cell,.media-library-widget-modal .table-file-multiple-widget .tabledrag-cell,form.media-form .table-file-multiple-widget .tabledrag-cell {
-  padding-top: var(--space-xs);
-  padding-bottom: var(--space-xs);
+  padding-block: var(--space-xs);
 }
 
 #layout-builder-modal .table-file-multiple-widget .checkbox .form-type--boolean,.media-library-widget-modal .table-file-multiple-widget .checkbox .form-type--boolean,form.media-form .table-file-multiple-widget .checkbox .form-type--boolean {
   line-height: calc(var(--space-m)*3);
+}
+
+#layout-builder-modal [dir=rtl] .table-file-multiple-widget .tabledrag-handle,#layout-builder-modal [dir=rtl] .table-file-multiple-widget .tabledrag-changed,.media-library-widget-modal [dir=rtl] .table-file-multiple-widget .tabledrag-handle,.media-library-widget-modal [dir=rtl] .table-file-multiple-widget .tabledrag-changed,form.media-form [dir=rtl] .table-file-multiple-widget .tabledrag-handle,form.media-form [dir=rtl] .table-file-multiple-widget .tabledrag-changed {
+  float: right;
 }
 
 #layout-builder-modal .no-touchevents .table-file-multiple-widget .checkbox .form-type--boolean,.media-library-widget-modal .no-touchevents .table-file-multiple-widget .checkbox .form-type--boolean,form.media-form .no-touchevents .table-file-multiple-widget .checkbox .form-type--boolean {
@@ -80,18 +66,16 @@
 }
 
 #layout-builder-modal .table-file-multiple-widget--no-upload>tbody:last-child>tr:last-child,.media-library-widget-modal .table-file-multiple-widget--no-upload>tbody:last-child>tr:last-child,form.media-form .table-file-multiple-widget--no-upload>tbody:last-child>tr:last-child {
-  border-bottom: 0;
+  border-block-end: 0;
 }
 
 @media screen and (max-width: 37.5em) {
   #layout-builder-modal .claro-details__wrapper .file-widget-multiple__table-wrapper,.media-library-widget-modal .claro-details__wrapper .file-widget-multiple__table-wrapper,form.media-form .claro-details__wrapper .file-widget-multiple__table-wrapper {
-    margin-right: calc(var(--space-m)*-1);
-    margin-left: calc(var(--space-m)*-1);
+    margin-inline: calc(var(--space-m)*-1);
   }
 
   #layout-builder-modal .claro-details__wrapper .file-widget-multiple__table-wrapper>:not(table),.media-library-widget-modal .claro-details__wrapper .file-widget-multiple__table-wrapper>:not(table),form.media-form .claro-details__wrapper .file-widget-multiple__table-wrapper>:not(table) {
-    margin-right: var(--space-m);
-    margin-left: var(--space-m);
+    margin-inline: var(--space-m);
   }
 }
 

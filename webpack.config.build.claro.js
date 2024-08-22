@@ -72,7 +72,6 @@ module.exports = {
     'layout/card-list': ['./themes/claro/scss/layout/card-list.scss'],
     'layout/layout': ['./themes/claro/scss/layout/layout.scss'],
     'layout/local-actions': ['./themes/claro/scss/layout/local-actions.scss'],
-    'layout/node-add': ['./themes/claro/scss/layout/node-add.scss'],
     'layout/system-admin--layout': ['./themes/claro/scss/layout/system-admin--layout.scss'],
     // Theme
     'theme/bootstrap-styles.dark': ['./themes/claro/scss/theme/bootstrap-styles.dark.scss'],
