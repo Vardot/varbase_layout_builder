@@ -23,26 +23,34 @@ include_once __DIR__ . '/includes/helpers.inc';
 function varbase_layout_builder_entity_operation(EntityInterface $entity) {
   $account = \Drupal::currentUser();
   $entity_type_id = $entity->getEntityTypeId();
+  $entity_bundle = $entity->bundle();
 
-  $route_name = "layout_builder.overrides.$entity_type_id.view";
-  $route_parameters = [
-    $entity_type_id => $entity->id(),
-  ];
+  if ($account->hasPermission('configure any layout')
+    || $account->hasPermission('configure all ' . $entity_bundle . ' ' . $entity_type_id . ' layout overrides')
+    || $account->hasPermission('access layout builder page')) {
 
-  // If current user has access to route, then add the operation link. The
-  // access check will only return TRUE if the bundle is Layout Builder-
-  // enabled, overrides are allowed, and user has necessary permissions.
-  $access_manager = \Drupal::service('access_manager');
-  if (!$access_manager->checkNamedRoute($route_name, $route_parameters, $account)) {
-    return;
+    $route_name = "layout_builder.overrides." . $entity_type_id . ".view";
+    $route_parameters = [
+      $entity_type_id => $entity->id(),
+    ];
+
+    // If current user has access to route, then add the operation link. The
+    // access check will only return TRUE if the bundle is Layout Builder-
+    // enabled, overrides are allowed, and user has necessary permissions.
+    $access_manager = \Drupal::service('access_manager');
+    if (!$access_manager->checkNamedRoute($route_name, $route_parameters, $account)) {
+      return;
+    }
+
+    $operations['layout'] = [
+      'title' => t('Layout'),
+      'url' => Url::fromRoute($route_name, $route_parameters),
+      'weight' => 50,
+    ];
+
+    return $operations;
   }
 
-  $operations['layout'] = [
-    'title' => t('Layout'),
-    'url' => Url::fromRoute($route_name, $route_parameters),
-    'weight' => 50,
-  ];
-  return $operations;
 }
 
 /**
