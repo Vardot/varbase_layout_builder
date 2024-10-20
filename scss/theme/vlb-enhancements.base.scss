@@ -310,6 +310,10 @@ form.media-form {
     background-color: #fff !important;
     color: #000 !important;
 
+    &::placeholder {
+      color: #686868 !important;
+    }
+
     &:focus {
       background-color: #fff !important;
       color: #000 !important;
