@@ -40,7 +40,7 @@
     "drupal/media_library_form_element": "~2",
     "drupal/bootstrap_layouts": "~5",
     "drupal/layout_builder_blocks": "~1",
-    "drupal/layout_builder_modal": "~1",
+    "drupal/layout_builder_modal": "~2",
     "drupal/layout_builder_block_sanitizer": "~1",
     "drupal/layout_builder_at": "~2",
     "drupal/layout_builder_component_attributes": "~2",
