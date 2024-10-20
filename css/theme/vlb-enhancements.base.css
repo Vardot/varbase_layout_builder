@@ -417,7 +417,7 @@ form.media-form input[type=text] {
 #layout-builder-modal .form-textarea::placeholder,
 #layout-builder-modal .form-date::placeholder,
 #layout-builder-modal .form-time::placeholder {
-  color: #686868 !important;
+  color: var(--input-fg-color--placeholder) !important;
 }
 
 #drupal-off-canvas input[type=text]:focus,

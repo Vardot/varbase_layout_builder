@@ -311,7 +311,7 @@ form.media-form {
     color: #000 !important;
 
     &::placeholder {
-      color: #686868 !important;
+      color: var(--input-fg-color--placeholder) !important;
     }
 
     &:focus {
