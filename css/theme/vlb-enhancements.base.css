@@ -524,6 +524,37 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
   background-color: #fff !important;
 }
 
+#drupal-off-canvas .form-select::placeholder,
+#drupal-off-canvas .form-text::placeholder,
+#drupal-off-canvas input[type=text]::placeholder,
+#drupal-off-canvas .form-tel::placeholder,
+#drupal-off-canvas .form-email::placeholder,
+#drupal-off-canvas .form-url::placeholder,
+#drupal-off-canvas .form-search::placeholder,
+#drupal-off-canvas .form-number::placeholder,
+#drupal-off-canvas .form-color::placeholder,
+#drupal-off-canvas .form-file::placeholder,
+#drupal-off-canvas .form-textarea::placeholder,
+#drupal-off-canvas input[type=textarea]::placeholder,
+#drupal-off-canvas .form-date::placeholder,
+#drupal-off-canvas .form-time::placeholder,
+#layout-builder-modal .form-select::placeholder,
+#layout-builder-modal .form-text::placeholder,
+#layout-builder-modal input[type=text]::placeholder,
+#layout-builder-modal .form-tel::placeholder,
+#layout-builder-modal .form-email::placeholder,
+#layout-builder-modal .form-url::placeholder,
+#layout-builder-modal .form-search::placeholder,
+#layout-builder-modal .form-number::placeholder,
+#layout-builder-modal .form-color::placeholder,
+#layout-builder-modal .form-file::placeholder,
+#layout-builder-modal .form-textarea::placeholder,
+#layout-builder-modal input[type=textarea]::placeholder,
+#layout-builder-modal .form-date::placeholder,
+#layout-builder-modal .form-time::placeholder {
+  color: #686868 !important;
+}
+
 #drupal-off-canvas form.section-library-add-section-to-library,
 #layout-builder-modal form.section-library-add-section-to-library {
   padding: 1rem 0;

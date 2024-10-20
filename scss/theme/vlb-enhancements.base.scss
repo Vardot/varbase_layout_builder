@@ -562,6 +562,10 @@ body {
   .form-time {
     color: #222330 !important;
     background-color: #fff !important;
+
+    &::placeholder {
+      color: #686868 !important;
+    }
   }
 
   form.section-library-add-section-to-library {
