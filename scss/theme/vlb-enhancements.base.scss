@@ -564,7 +564,7 @@ body {
     background-color: #fff !important;
 
     &::placeholder {
-      color: #686868 !important;
+      color: var(--input-fg-color--placeholder) !important;
     }
   }
 

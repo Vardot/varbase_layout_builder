@@ -552,7 +552,7 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
 #layout-builder-modal input[type=textarea]::placeholder,
 #layout-builder-modal .form-date::placeholder,
 #layout-builder-modal .form-time::placeholder {
-  color: #686868 !important;
+  color: var(--input-fg-color--placeholder) !important;
 }
 
 #drupal-off-canvas form.section-library-add-section-to-library,
