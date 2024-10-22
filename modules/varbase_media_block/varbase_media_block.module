@@ -132,6 +132,10 @@ function _varbase_media_block_active_media_view_mode_options() {
     'media.autoloop',
     'media.autoplay',
     'media.looping',
+    'media.cke_media_resize_small',
+    'media.cke_media_resize_medium',
+    'media.cke_media_resize_large',
+    'media.cke_media_resize_xl',
     '_none',
   ];
 
