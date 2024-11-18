@@ -8,6 +8,9 @@
 use Drupal\Core\Recipe\Recipe;
 use Drupal\Core\Recipe\RecipeRunner;
 
+// Include all updates.
+include_once __DIR__ . '/includes/updates.inc';
+
 /**
  * Implements hook_install().
  */

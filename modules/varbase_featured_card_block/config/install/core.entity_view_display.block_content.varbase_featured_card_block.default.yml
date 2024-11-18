@@ -24,10 +24,10 @@ third_party_settings:
             style_size: ''
             card_border: 1
             media_position: ''
-            columns_xs_size: '06_06'
+            columns_xs_size: '12_12'
             columns_sm_size: ''
             columns_md_size: ''
-            columns_lg_size: ''
+            columns_lg_size: '06_06'
             columns_xl_size: ''
             columns_xxl_size: ''
             utility_classes: ''
