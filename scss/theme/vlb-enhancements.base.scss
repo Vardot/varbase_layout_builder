@@ -209,6 +209,25 @@ body {
   #bs_nav-tabs {
     position:relative !important;
   }
+
+  .option {
+    .bs_tooltip {
+      width: auto;
+    }
+  }
+
+  .alert-dismissible {
+    .btn-close {
+      width: .75rem !important;
+      mask-repeat: no-repeat;
+    }
+  }
+
+  .paragraphs-dropdown-actions {
+    .paragraphs-dropdown-action.button {
+      width: 100% !important;
+    }
+  }
 }
 
 .dialog-off-canvas-main-canvas {
