@@ -607,6 +607,25 @@ body {
     height: 1.5rem !important;
   }
 
+  .option {
+    .bs_tooltip {
+      width: auto;
+    }
+  }
+
+  .alert-dismissible {
+    .btn-close {
+      width: .75rem !important;
+      mask-repeat: no-repeat;
+    }
+  }
+
+  .paragraphs-dropdown-actions {
+    .paragraphs-dropdown-action.button {
+      width: 100% !important;
+    }
+  }
+
 }
 
 #layout-builder-modal {

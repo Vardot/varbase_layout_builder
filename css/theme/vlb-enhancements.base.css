@@ -596,6 +596,22 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
   height: 1.5rem !important;
 }
 
+#drupal-off-canvas .option .bs_tooltip,
+#layout-builder-modal .option .bs_tooltip {
+  width: auto;
+}
+
+#drupal-off-canvas .alert-dismissible .btn-close,
+#layout-builder-modal .alert-dismissible .btn-close {
+  width: .75rem !important;
+  mask-repeat: no-repeat;
+}
+
+#drupal-off-canvas .paragraphs-dropdown-actions .paragraphs-dropdown-action.button,
+#layout-builder-modal .paragraphs-dropdown-actions .paragraphs-dropdown-action.button {
+  width: 100% !important;
+}
+
 #layout-builder-modal .form-item--editor-format .form-element--editor-format {
   width: auto;
   border-radius: inherit;
