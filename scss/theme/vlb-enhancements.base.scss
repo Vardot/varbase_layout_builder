@@ -224,8 +224,15 @@ body {
   }
 
   .paragraphs-dropdown-actions {
+    top: 2.625em;
+
     .paragraphs-dropdown-action.button {
       width: 100% !important;
+      border-radius: 0;
+
+      &:not(:first-child) {
+        margin-top: 1px;
+      }
     }
   }
 }

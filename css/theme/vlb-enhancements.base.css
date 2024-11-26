@@ -250,10 +250,23 @@ body .layout-builder__message--overrides .messages {
   mask-repeat: no-repeat;
 }
 
+#drupal-off-canvas .paragraphs-dropdown-actions,
+#layout-builder-modal .paragraphs-dropdown-actions,
+.dialog-off-canvas-main-canvas .paragraphs-dropdown-actions {
+  top: 2.625em;
+}
+
 #drupal-off-canvas .paragraphs-dropdown-actions .paragraphs-dropdown-action.button,
 #layout-builder-modal .paragraphs-dropdown-actions .paragraphs-dropdown-action.button,
 .dialog-off-canvas-main-canvas .paragraphs-dropdown-actions .paragraphs-dropdown-action.button {
   width: 100% !important;
+  border-radius: 0;
+}
+
+#drupal-off-canvas .paragraphs-dropdown-actions .paragraphs-dropdown-action.button:not(:first-child),
+#layout-builder-modal .paragraphs-dropdown-actions .paragraphs-dropdown-action.button:not(:first-child),
+.dialog-off-canvas-main-canvas .paragraphs-dropdown-actions .paragraphs-dropdown-action.button:not(:first-child) {
+  margin-top: 1px;
 }
 
 .dialog-off-canvas-main-canvas .block-help {
