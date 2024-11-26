@@ -607,9 +607,20 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
   mask-repeat: no-repeat;
 }
 
+#drupal-off-canvas .paragraphs-dropdown-actions,
+#layout-builder-modal .paragraphs-dropdown-actions {
+  top: 2.625em;
+}
+
 #drupal-off-canvas .paragraphs-dropdown-actions .paragraphs-dropdown-action.button,
 #layout-builder-modal .paragraphs-dropdown-actions .paragraphs-dropdown-action.button {
   width: 100% !important;
+  border-radius: 0;
+}
+
+#drupal-off-canvas .paragraphs-dropdown-actions .paragraphs-dropdown-action.button:not(:first-child),
+#layout-builder-modal .paragraphs-dropdown-actions .paragraphs-dropdown-action.button:not(:first-child) {
+  margin-top: 1px;
 }
 
 #layout-builder-modal .form-item--editor-format .form-element--editor-format {
