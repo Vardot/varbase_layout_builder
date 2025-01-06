@@ -481,6 +481,8 @@ form.media-form {
 }
 
 #layout-builder-modal {
+  padding: 1.5rem 2rem 0.6rem 1.5rem;
+
   div[data-drupal-selector$="-format"] {
     div.form-item {
       display: flex;
@@ -518,6 +520,9 @@ form.media-form {
   }
 
   #bs_ui {
+    overflow-x: hidden;
+    overflow-y: auto;
+
     ~ button.button,
     ~ input[type="submit"].button {
       margin: 2rem 0 0 !important;
@@ -529,6 +534,18 @@ form.media-form {
       &:active {
         color: var(--gin-color-button-text);
       }
+    }
+
+    .blb_tab-content {
+      overflow-x: hidden;
+      overflow-y: auto;
+      height: calc(56vh - 2.1rem);
+      border-block-end: 2px solid #727579;
+      padding: 0.5rem 2rem;
+    }
+
+    #bs_nav-tabs {
+      margin: 0 -40px;
     }
   } 
 
@@ -633,7 +650,16 @@ form.media-form {
     .ck-style-grid {
       width: 24rem;
     }
-  } 
+  }
+
+  form {
+    > #bs_ui ~ button.button,
+    > #bs_ui ~ input[type="submit"].button,
+    > .form-wrapper ~ button.button,
+    > .form-wrapper ~ input[type="submit"].button {
+      margin: 2.1rem auto 0 auto !important;
+    }
+  }
 
 }
 
