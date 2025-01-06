@@ -623,6 +623,10 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
   margin-top: 1px;
 }
 
+#layout-builder-modal {
+  padding: 1.5rem 2rem .6rem 1.5rem;
+}
+
 #layout-builder-modal .form-item--editor-format .form-element--editor-format {
   width: auto;
   border-radius: inherit;
@@ -692,6 +696,34 @@ body .layout-builder__add-block.is-layout-builder-highlighted {
 #layout-builder-modal .ck-source-editing-area textarea {
   height: -webkit-fill-available;
   border-radius: 0;
+}
+
+#layout-builder-modal .claro-details {
+  padding-inline: .5rem;
+}
+
+#layout-builder-modal #bs_ui {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#layout-builder-modal #bs_ui .blb_tab-content {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: calc(56vh - 2.1rem);
+  border-block-end: 2px solid #727579;
+  padding: .5rem 2rem;
+}
+
+#layout-builder-modal #bs_ui #bs_nav-tabs {
+  margin: 0 -40px;
+}
+
+#layout-builder-modal form > #bs_ui ~ button.button,
+#layout-builder-modal form > #bs_ui ~ input[type=submit].button,
+#layout-builder-modal form > .form-wrapper ~ button.button,
+#layout-builder-modal form > .form-wrapper ~ input[type=submit].button {
+  margin: 2.1rem auto 0 auto !important;
 }
 
 body #drupal-off-canvas-wrapper {
