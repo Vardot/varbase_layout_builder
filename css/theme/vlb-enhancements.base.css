@@ -601,6 +601,10 @@ form.media-form input[type=text] {
   display: flow-root;
 }
 
+#layout-builder-modal {
+  padding: 1.5rem 2rem .6rem 1.5rem;
+}
+
 #layout-builder-modal div[data-drupal-selector$=-format] div.form-item {
   display: flex;
   flex-wrap: wrap;
@@ -634,6 +638,11 @@ form.media-form input[type=text] {
   appearance: none !important;
 }
 
+#layout-builder-modal #bs_ui {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
 #layout-builder-modal #bs_ui ~ button.button,
 #layout-builder-modal #bs_ui ~ input[type=submit].button {
   margin: 2rem 0 0 !important;
@@ -646,6 +655,18 @@ form.media-form input[type=text] {
 #layout-builder-modal #bs_ui ~ input[type=submit].button:hover,
 #layout-builder-modal #bs_ui ~ input[type=submit].button:active {
   color: var(--gin-color-button-text);
+}
+
+#layout-builder-modal #bs_ui .blb_tab-content {
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: calc(56vh - 2.1rem);
+  border-block-end: 2px solid #727579;
+  padding: .5rem 2rem;
+}
+
+#layout-builder-modal #bs_ui #bs_nav-tabs {
+  margin: 0 -40px;
 }
 
 #layout-builder-modal .bs_input-boxes--box-model .fieldset-wrapper > div > div input ~ label,
@@ -731,6 +752,13 @@ form.media-form input[type=text] {
 
 #layout-builder-modal .ck.ck-style-panel .ck-style-grid {
   width: 24rem;
+}
+
+#layout-builder-modal form > #bs_ui ~ button.button,
+#layout-builder-modal form > #bs_ui ~ input[type=submit].button,
+#layout-builder-modal form > .form-wrapper ~ button.button,
+#layout-builder-modal form > .form-wrapper ~ input[type=submit].button {
+  margin: 2.1rem auto 0 auto !important;
 }
 
 body .ui-dialog .ui-dialog-titlebar-close {
