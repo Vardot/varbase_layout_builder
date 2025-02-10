@@ -163,6 +163,13 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
       return $this->configFactory->get('system.theme')->get('admin');
     }
 
+    // AJAX trigger for any block form field.
+    if (isset($current_request['_triggering_element_name'])
+      && str_contains($current_request['_triggering_element_name'], 'block_form-field')) {
+
+      return $this->configFactory->get('system.theme')->get('admin');
+    }
+
     return $this->configFactory->get('system.theme')->get('default');
 
   }
