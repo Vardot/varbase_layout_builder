@@ -58,28 +58,3 @@ function varbase_layout_builder__is_dashboard_route() {
   return $dashboard_route;
 }
 
-/**
- * Returns true if the current route is a navigation route with layout builder.
- *
- * @return bool
- *   Returns true for navigation routes.
- */
-function varbase_layout_builder__is_navigation_route() {
-  $navigation_route = drupal_static(__FUNCTION__);
-  if ($navigation_route !== NULL) {
-    return $navigation_route;
-  }
-
-  $route_name = \Drupal::routeMatch()->getRouteName();
-  $navigation_route = FALSE;
-
-  if ($route_name !== NULL
-    && $route_name = 'layout_builder.navigation.view') {
-    $navigation_route = TRUE;
-  }
-
-  $context = NULL;
-  \Drupal::moduleHandler()->alter('varbase_layout_builder__is_navigation_route', $navigation_route, $context);
-  unset($context);
-  return $navigation_route;
-}
