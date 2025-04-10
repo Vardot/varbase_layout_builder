@@ -7,6 +7,7 @@
 
 use Drupal\Core\Recipe\Recipe;
 use Drupal\Core\Recipe\RecipeRunner;
+use Vardot\Installer\ModuleInstallerFactory;
 
 /**
  * Issue #3326408: Switch from Layout Builder Modal module.
