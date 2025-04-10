@@ -145,7 +145,7 @@ function varbase_layout_builder_update_10006() {
  */
 function varbase_layout_builder_update_10007() {
   if (\Drupal::service('module_handler')->moduleExists('layout_builder_at')
-    && \Drupal::service('module_handler')->moduleExists('layout_builder_at')) {
+    && \Drupal::service('module_handler')->moduleExists('layout_builder_perms')) {
 
     // Set a higher module weight for layout_builder_at.
     // To Ensure layout_builder_at's plugins is registered after the one from layout_builder_perms.
