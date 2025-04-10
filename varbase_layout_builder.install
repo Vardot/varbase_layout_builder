@@ -21,10 +21,6 @@ function varbase_layout_builder_install() {
   // Processor for install: in varbase_layout_builder.info.yml file.
   ModuleInstallerFactory::installList('varbase_layout_builder');
 
-  // Set a higher module weight for layout_builder_at.
-  // To Ensure layout_builder_at's plugins is registered after the one from layout_builder_perms, 
-  ModuleInstallerFactory::setModuleWeightAfterInstallation('layout_builder_at', '', ['layout_builder_perms']);
-
   // Remove BLB layout options to use VLB layout options.
   $blb_layout_options = \Drupal::service('config.factory')->listAll($prefix = "bootstrap_layout_builder.layout_option.blb_");
   foreach ($blb_layout_options as $blb_layout_option) {
