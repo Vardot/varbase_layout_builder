@@ -137,3 +137,18 @@ function varbase_layout_builder_update_10006() {
     $bootstrap_styles_settings->set('box_shadow', "shadow-sm|Small\r\nshadow|Regular\r\nshadow-lg|Large")->save(TRUE);
   }
 }
+
+/**
+ * Issue #3518161: Fix conflict of order between Layout Builder Perms and Asymmetric Translation.
+ *
+ * Set a higher module weight for Layout Builder Asymmetric Translation module.
+ */
+function varbase_layout_builder_update_10007() {
+  if (\Drupal::service('module_handler')->moduleExists('layout_builder_at')
+    && \Drupal::service('module_handler')->moduleExists('layout_builder_at')) {
+
+    // Set a higher module weight for layout_builder_at.
+    // To Ensure layout_builder_at's plugins is registered after the one from layout_builder_perms.
+    ModuleInstallerFactory::setModuleWeightAfterInstallation('layout_builder_at', '', ['layout_builder_perms']);
+  }
+}

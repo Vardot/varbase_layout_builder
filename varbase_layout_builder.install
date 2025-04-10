@@ -20,4 +20,8 @@ function varbase_layout_builder_install() {
   $default_recipe = Recipe::createFromDirectory(__DIR__ . '/recipes/default');
   RecipeRunner::processRecipe($default_recipe);
 
+  // Set a higher module weight for layout_builder_at.
+  // To Ensure layout_builder_at's plugins is registered after the one from layout_builder_perms, 
+  ModuleInstallerFactory::setModuleWeightAfterInstallation('layout_builder_at', '', ['layout_builder_perms']);
+
 }
