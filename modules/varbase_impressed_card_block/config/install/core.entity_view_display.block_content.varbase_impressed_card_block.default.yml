@@ -13,20 +13,60 @@ dependencies:
 third_party_settings:
   ds:
     layout:
-      id: pattern_card_impressed
+      id: 'ui_patterns:varbase_components:card_impressed'
       library: null
       disable_css: false
       entity_classes: all_classes
       settings:
-        pattern:
-          field_templates: only_content
-          settings:
-            style_size: ''
-            card_border: 1
-            media_position: top
-            utility_classes: ''
-            card_attributes: ''
-            content_attributes: ''
+        label: ''
+        ui_patterns:
+          component_id: 'varbase_components:card-impressed'
+          variant_id: null
+          props:
+            attributes:
+              source_id: attributes
+              source:
+                value: ''
+            style_size:
+              source_id: select
+              source:
+                value: large
+            card_border:
+              source_id: checkbox
+              source:
+                value: 1
+            padded:
+              source_id: checkbox
+              source:
+                value: 0
+            equal_height:
+              source_id: checkbox
+              source:
+                value: 0
+            anchor_all:
+              source_id: checkbox
+              source:
+                value: 0
+            media_position:
+              source_id: select
+              source:
+                value: top
+            card_attributes:
+              source_id: attributes
+              source:
+                value: ''
+            media_attributes:
+              source_id: attributes
+              source:
+                value: ''
+            content_attributes:
+              source_id: attributes
+              source:
+                value: ''
+            card_impressed_utility_classes: {  }
+            card_impressed_media_utility_classes: {  }
+            card_impressed_content_utility_classes: {  }
+          slots: {  }
     regions:
       media:
         - field_media
