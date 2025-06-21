@@ -20,20 +20,14 @@
     "drupal": {
       "type": "composer",
       "url": "https://packages.drupal.org/8"
-    },
-    "assets": {
-      "type": "composer",
-      "url": "https://asset-packagist.org"
     }
   },
   "require": {
-    "drupal/core": ">=11.1",
-    "vardot/varbase-patches": "~10.1.0 || 10.1.x-dev",
-    "vardot/entity-definition-update-manager": "~1",
-    "vardot/module-installer-factory": "~1",
-    "drupal/varbase_media": "~10.1.0 || 10.1.x-dev",
-    "drupal/varbase_editor": "~10.1.0 || 10.1.x-dev",
-    "drupal/varbase_components": "~3 || 3.0.x-dev",
+    "drupal/core": "~11.2.0",
+    "vardot/varbase-patches": "~10.1.0",
+    "drupal/varbase_media": "~10.1.0",
+    "drupal/varbase_editor": "~10.1.0",
+    "drupal/varbase_components": "~3",
     "drupal/layout_builder_restrictions": "~3",
     "drupal/entity_block": "~2",
     "drupal/block_form_alter": "~2",
