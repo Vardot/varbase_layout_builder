@@ -4,7 +4,6 @@
   "type": "drupal-module",
   "homepage": "https://www.drupal.org/project/varbase_layout_builder",
   "license": "GPL-2.0-or-later",
-  "minimum-stability": "dev",
   "authors": [
     {
       "name": "Vardot",
@@ -15,16 +14,6 @@
   "support": {
     "issues": "https://www.drupal.org/project/issues/varbase_layout_builder",
     "source": "http://cgit.drupalcode.org/varbase_layout_builder"
-  },
-  "repositories": {
-    "drupal": {
-      "type": "composer",
-      "url": "https://packages.drupal.org/8"
-    },
-    "assets": {
-      "type": "composer",
-      "url": "https://asset-packagist.org"
-    }
   },
   "require": {
     "drupal/core": "~9.5.0 || ~10.5.0 || ~11.2.0",
