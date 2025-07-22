@@ -32,7 +32,7 @@
     'block-' ~ plugin_id|clean_class,
   ]
 %}
-{% include "varbase_components:block-heading" with {
+{% include active_theme ~ ":block-heading" with {
   heading_tag: heading_size['#items'].getString(),
   heading_text: label,
   attributes: attributes.addClass(classes)

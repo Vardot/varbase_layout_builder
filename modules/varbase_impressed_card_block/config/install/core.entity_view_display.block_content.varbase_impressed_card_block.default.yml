@@ -13,14 +13,14 @@ dependencies:
 third_party_settings:
   ds:
     layout:
-      id: 'ui_patterns:varbase_components:card_impressed'
+      id: 'ui_patterns:vartheme_bs5:card_impressed'
       library: null
       disable_css: false
       entity_classes: all_classes
       settings:
         label: ''
         ui_patterns:
-          component_id: 'varbase_components:card-impressed'
+          component_id: 'vartheme_bs5:card-impressed'
           variant_id: null
           props:
             attributes:

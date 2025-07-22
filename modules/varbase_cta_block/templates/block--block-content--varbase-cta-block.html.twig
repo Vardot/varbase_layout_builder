@@ -32,7 +32,7 @@
     'block-' ~ plugin_id|clean_class,
   ]
 %}
-{% include "varbase_components:block-cta" with {
+{% include active_theme ~ ":block-cta" with {
   title_tag: 'h2',
   heading: label,
   content: content,
