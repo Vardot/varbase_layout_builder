@@ -1,5 +1,5 @@
 #layout-builder-modal .webform-filter-form {
-  margin-bottom: var(--gin-spacing-xl);
+  margin-block-end: var(--gin-spacing-xl);
 }
 
 #layout-builder-modal .webform-filter-form>.container-inline {
@@ -7,12 +7,12 @@
 }
 
 #layout-builder-modal .webform-filter-form .details-wrapper {
-  margin-top: 0;
-  margin-bottom: var(--gin-spacing-xs);
+  margin-block-start: 0;
+  margin-block-end: var(--gin-spacing-xs);
 }
 
 #layout-builder-modal .webform-filter-form+div:not(.gin-layer-wrapper) {
-  margin-bottom: var(--gin-spacing-s);
+  margin-block-end: var(--gin-spacing-s);
 }
 
 #layout-builder-modal .webform-ui-element-type-change-form .gin-layer-wrapper {
@@ -65,13 +65,12 @@
 }
 
 #layout-builder-modal .webform-ui-elements-table tr.webform-ui-element-type-webform_actions td {
-  border-top: none;
-  border-bottom: none;
+  border-block: none;
   background: none;
 }
 
 #layout-builder-modal .webform-tabs.ui-tabs .ui-tabs-nav {
-  border-bottom: 0 none;
+  border-block-end: 0 none;
 }
 
 #layout-builder-modal .webform-tabs.ui-tabs .ui-tabs-nav .ui-tabs-active.ui-state-active a {
@@ -89,27 +88,9 @@
 }
 
 #layout-builder-modal .webform-ajax-messages {
-  bottom: var(--gin-spacing-s);
-}
-
-[dir="ltr"] #layout-builder-modal .webform-ajax-messages {
-  left: var(--gin-offset-x);
-  margin-left: var(--gin-spacing-m);
-}
-
-[dir="ltr"] #layout-builder-modal .webform-ajax-messages {
-  right: var(--gin-offset-x);
-  margin-right: var(--gin-spacing-m);
-}
-
-[dir="rtl"] #layout-builder-modal .webform-ajax-messages {
-  right: var(--gin-offset-x);
-  margin-right: var(--gin-spacing-m);
-}
-
-[dir="rtl"] #layout-builder-modal .webform-ajax-messages {
-  left: var(--gin-offset-x);
-  margin-left: var(--gin-spacing-m);
+  inset-inline-start: var(--gin-offset-x);
+  inset-block-end: var(--gin-spacing-s);
+  margin-inline-start: var(--gin-spacing-m);
 }
 
 #layout-builder-modal .webform-ajax-messages .messages--info,#layout-builder-modal .webform-ajax-messages .messages--status,#layout-builder-modal .webform-ajax-messages .messages--warning,#layout-builder-modal .webform-ajax-messages .messages--error {
@@ -117,23 +98,8 @@
 }
 
 #layout-builder-modal .webform-edit-form .tabledrag-toggle-weight-wrapper {
-  margin-top: calc(var(--gin-spacing-s)*-1);
-}
-
-[dir="ltr"] #layout-builder-modal .webform-edit-form .tabledrag-toggle-weight-wrapper {
-  float: right;
-}
-
-[dir="ltr"] #layout-builder-modal .webform-edit-form .tabledrag-toggle-weight-wrapper {
-  float: left;
-}
-
-[dir="rtl"] #layout-builder-modal .webform-edit-form .tabledrag-toggle-weight-wrapper {
-  float: left;
-}
-
-[dir="rtl"] #layout-builder-modal .webform-edit-form .tabledrag-toggle-weight-wrapper {
-  float: right;
+  float: end;
+  margin-block-start: calc(var(--gin-spacing-s)*-1);
 }
 
 #layout-builder-modal .webform-edit-form .tabledrag-toggle-weight-wrapper button {

@@ -19,7 +19,7 @@
 }
 
 #layout-builder-modal .button:not(:focus),.media-library-widget-modal .button:not(:focus),form.media-form .button:not(:focus) {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, .25);
+  box-shadow: 0 1px 2px rgb(0, 0, 0, .25);
 }
 
 #layout-builder-modal .button:hover,.media-library-widget-modal .button:hover,form.media-form .button:hover {

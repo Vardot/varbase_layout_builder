@@ -1,22 +1,7 @@
 #layout-builder-modal #autosave-notification,.media-library-widget-modal #autosave-notification,form.media-form #autosave-notification {
   font-size: var(--gin-font-size-s);
-  bottom: var(--gin-spacing-xs);
+  inset-block-end: var(--gin-spacing-xs);
+  inset-inline-end: var(--gin-spacing-xs);
   border-radius: var(--gin-border-xs);
-}
-
-[dir="ltr"] #layout-builder-modal #autosave-notification,[dir="ltr"] .media-library-widget-modal #autosave-notification,[dir="ltr"] form.media-form #autosave-notification {
-  right: var(--gin-spacing-xs);
-}
-
-[dir="ltr"] #layout-builder-modal #autosave-notification,[dir="ltr"] .media-library-widget-modal #autosave-notification,[dir="ltr"] form.media-form #autosave-notification {
-  left: var(--gin-spacing-xs);
-}
-
-[dir="rtl"] #layout-builder-modal #autosave-notification,[dir="rtl"] .media-library-widget-modal #autosave-notification,[dir="rtl"] form.media-form #autosave-notification {
-  left: var(--gin-spacing-xs);
-}
-
-[dir="rtl"] #layout-builder-modal #autosave-notification,[dir="rtl"] .media-library-widget-modal #autosave-notification,[dir="rtl"] form.media-form #autosave-notification {
-  right: var(--gin-spacing-xs);
 }
 

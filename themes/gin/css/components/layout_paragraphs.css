@@ -8,26 +8,10 @@
 }
 
 #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout .layout,#layout-builder-modal .erl-field .erl-layout .layout {
-  border-bottom: 1px solid var(--gin-border-color);
+  border-inline: 1px solid var(--gin-border-color);
   background: var(--gin-bg-layer);
-  border-bottom-left-radius: var(--gin-border-m);
-  border-bottom-right-radius: var(--gin-border-m);
-}
-
-[dir="ltr"] #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout .layout,[dir="ltr"] #layout-builder-modal .erl-field .erl-layout .layout {
-  border-left: 1px solid var(--gin-border-color);
-}
-
-[dir="ltr"] #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout .layout,[dir="ltr"] #layout-builder-modal .erl-field .erl-layout .layout {
-  border-right: 1px solid var(--gin-border-color);
-}
-
-[dir="rtl"] #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout .layout,[dir="rtl"] #layout-builder-modal .erl-field .erl-layout .layout {
-  border-right: 1px solid var(--gin-border-color);
-}
-
-[dir="rtl"] #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout .layout,[dir="rtl"] #layout-builder-modal .erl-field .erl-layout .layout {
-  border-left: 1px solid var(--gin-border-color);
+  border-end-start-radius: var(--gin-border-m);
+  border-end-end-radius: var(--gin-border-m);
 }
 
 #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout .layout-controls,#layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout .layout-paragraphs-actions,#layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout .erl-actions,#layout-builder-modal .erl-field .erl-layout .layout-controls,#layout-builder-modal .erl-field .erl-layout .layout-paragraphs-actions,#layout-builder-modal .erl-field .erl-layout .erl-actions {
@@ -48,44 +32,20 @@
   opacity: 1;
 }
 
-[dir="ltr"] #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-add-content--single button .icon {
-  margin-right: var(--gin-spacing-xs);
-}
-
-[dir="ltr"] #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-add-content--single button .icon {
-  margin-left: var(--gin-spacing-xs);
-}
-
-[dir="rtl"] #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-add-content--single button .icon {
-  margin-left: var(--gin-spacing-xs);
-}
-
-[dir="rtl"] #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-add-content--single button .icon {
-  margin-right: var(--gin-spacing-xs);
+#layout-builder-modal .layout-paragraphs-field .layout-paragraphs-add-content--single button .icon {
+  margin-inline-end: var(--gin-spacing-xs);
 }
 
 #layout-builder-modal .layout-paragraphs-field .active-items {
-  padding-bottom: var(--gin-spacing-xl);
+  padding-block-end: var(--gin-spacing-xl);
 }
 
 #layout-builder-modal .layout-paragraphs-field .layout-handle,#layout-builder-modal .layout-paragraphs-field .layout-up,#layout-builder-modal .layout-paragraphs-field .layout-down {
   font-size: 0;
 }
 
-[dir="ltr"] #layout-builder-modal .layout-paragraphs-field .layout-select__item {
-  margin-left: 0;
-}
-
-[dir="ltr"] #layout-builder-modal .layout-paragraphs-field .layout-select__item {
-  margin-right: 0;
-}
-
-[dir="rtl"] #layout-builder-modal .layout-paragraphs-field .layout-select__item {
-  margin-right: 0;
-}
-
-[dir="rtl"] #layout-builder-modal .layout-paragraphs-field .layout-select__item {
-  margin-left: 0;
+#layout-builder-modal .layout-paragraphs-field .layout-select__item {
+  margin-inline-start: 0;
 }
 
 #layout-builder-modal .layout-paragraphs-field .layout-select__item input+label {
@@ -104,20 +64,8 @@
   align-items: center;
 }
 
-[dir="ltr"] #layout-builder-modal .layout-paragraphs-field .layout-radio-item .form-item {
-  margin-left: var(--gin-spacing-xs);
-}
-
-[dir="ltr"] #layout-builder-modal .layout-paragraphs-field .layout-radio-item .form-item {
-  margin-right: var(--gin-spacing-xs);
-}
-
-[dir="rtl"] #layout-builder-modal .layout-paragraphs-field .layout-radio-item .form-item {
-  margin-right: var(--gin-spacing-xs);
-}
-
-[dir="rtl"] #layout-builder-modal .layout-paragraphs-field .layout-radio-item .form-item {
-  margin-left: var(--gin-spacing-xs);
+#layout-builder-modal .layout-paragraphs-field .layout-radio-item .form-item {
+  margin-inline-start: var(--gin-spacing-xs);
 }
 
 #layout-builder-modal .layout-paragraphs-field .layout-radio-item.active {
@@ -125,11 +73,11 @@
 }
 
 #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout.layout-paragraphs-item .layout-paragraphs-item {
-  margin-bottom: var(--gin-spacing-m);
+  margin-block-end: var(--gin-spacing-m);
 }
 
 #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout.layout-paragraphs-item .layout-paragraphs-item:last-of-type {
-  margin-bottom: var(--gin-spacing-s);
+  margin-block-end: var(--gin-spacing-s);
 }
 
 #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout.layout-paragraphs-item:hover>button.layout-paragraphs-add-content__toggle {
@@ -149,20 +97,8 @@
   background-color: transparent;
 }
 
-[dir="ltr"] #layout-builder-modal .layout-paragraphs-field .paragraph--view-mode--preview {
-  padding-right: 0;
-}
-
-[dir="ltr"] #layout-builder-modal .layout-paragraphs-field .paragraph--view-mode--preview {
-  padding-left: 0;
-}
-
-[dir="rtl"] #layout-builder-modal .layout-paragraphs-field .paragraph--view-mode--preview {
-  padding-left: 0;
-}
-
-[dir="rtl"] #layout-builder-modal .layout-paragraphs-field .paragraph--view-mode--preview {
-  padding-right: 0;
+#layout-builder-modal .layout-paragraphs-field .paragraph--view-mode--preview {
+  padding-inline-end: 0;
 }
 
 #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-disabled-items>.fieldset__wrapper .layout-paragraphs-item {
@@ -170,7 +106,7 @@
 }
 
 #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-disabled-items>.fieldset__wrapper .layout-paragraphs-item:not(:last-of-type) {
-  margin-bottom: var(--gin-spacing-m);
+  margin-block-end: var(--gin-spacing-m);
 }
 
 #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-disabled-items>.fieldset__wrapper .layout-paragraphs-item .layout-paragraphs-add-content__toggle {
@@ -178,7 +114,7 @@
 }
 
 #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-disabled-items__description {
-  margin-bottom: calc((var(--gin-spacing-xs) + var(--gin-spacing-xl))*-1);
+  margin-block-end: calc((var(--gin-spacing-xs) + var(--gin-spacing-xl))*-1);
   pointer-events: none;
 }
 
@@ -188,8 +124,8 @@
 
 #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-disabled-items,#layout-builder-modal .layout-paragraphs-field .layout-paragraphs-disabled-items.form-item.form-wrapper {
   padding: var(--gin-spacing-m);
-  margin-top: 0;
-  margin-bottom: -6rem;
+  margin-block-start: 0;
+  margin-block-end: -6rem;
   background: #f1f1f3;
   border-radius: var(--gin-border-m);
 }
@@ -208,7 +144,8 @@
 }
 
 #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-disabled-items .fieldset__label,#layout-builder-modal .layout-paragraphs-field .layout-paragraphs-disabled-items.form-item.form-wrapper .fieldset__label {
-  padding: var(--gin-spacing-m) 0 var(--gin-spacing-l);
+  padding-block: var(--gin-spacing-m) var(--gin-spacing-l);
+  padding-inline: 0;
 }
 
 #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-disabled-items__description,#layout-builder-modal .layout-paragraphs-field .layout-paragraphs-disabled-items.form-item.form-wrapper__description {
@@ -234,39 +171,12 @@
 #layout-builder-modal .layout-paragraphs-layout-region,#layout-builder-modal .layout-paragraphs-layout-region:hover,#layout-builder-modal .layout-paragraphs-layout-region:focus-within,#layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout-region,#layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout-region:hover,#layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout-region:focus-within,#layout-builder-modal .layout-paragraphs-disabled-items,#layout-builder-modal .layout-paragraphs-disabled-items:hover,#layout-builder-modal .layout-paragraphs-disabled-items:focus-within,#layout-builder-modal .erl-layout-region,#layout-builder-modal .erl-layout-region:hover,#layout-builder-modal .erl-layout-region:focus-within,#layout-builder-modal .erl-field .erl-layout-region,#layout-builder-modal .erl-field .erl-layout-region:hover,#layout-builder-modal .erl-field .erl-layout-region:focus-within,#layout-builder-modal .erl-disabled-items,#layout-builder-modal .erl-disabled-items:hover,#layout-builder-modal .erl-disabled-items:focus-within {
   background: transparent;
   border: 0 none;
-  border-top: 1px solid var(--gin-border-color);
+  border-block-start: 1px solid var(--gin-border-color);
+  border-inline-end: 1px solid var(--gin-border-color);
 }
 
-[dir="ltr"] #layout-builder-modal .layout-paragraphs-layout-region,[dir="ltr"] #layout-builder-modal .layout-paragraphs-layout-region:hover,[dir="ltr"] #layout-builder-modal .layout-paragraphs-layout-region:focus-within,[dir="ltr"] #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout-region,[dir="ltr"] #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout-region:hover,[dir="ltr"] #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout-region:focus-within,[dir="ltr"] #layout-builder-modal .layout-paragraphs-disabled-items,[dir="ltr"] #layout-builder-modal .layout-paragraphs-disabled-items:hover,[dir="ltr"] #layout-builder-modal .layout-paragraphs-disabled-items:focus-within,[dir="ltr"] #layout-builder-modal .erl-layout-region,[dir="ltr"] #layout-builder-modal .erl-layout-region:hover,[dir="ltr"] #layout-builder-modal .erl-layout-region:focus-within,[dir="ltr"] #layout-builder-modal .erl-field .erl-layout-region,[dir="ltr"] #layout-builder-modal .erl-field .erl-layout-region:hover,[dir="ltr"] #layout-builder-modal .erl-field .erl-layout-region:focus-within,[dir="ltr"] #layout-builder-modal .erl-disabled-items,[dir="ltr"] #layout-builder-modal .erl-disabled-items:hover,[dir="ltr"] #layout-builder-modal .erl-disabled-items:focus-within {
-  border-right: 1px solid var(--gin-border-color);
-}
-
-[dir="ltr"] #layout-builder-modal .layout-paragraphs-layout-region,[dir="ltr"] #layout-builder-modal .layout-paragraphs-layout-region:hover,[dir="ltr"] #layout-builder-modal .layout-paragraphs-layout-region:focus-within,[dir="ltr"] #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout-region,[dir="ltr"] #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout-region:hover,[dir="ltr"] #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout-region:focus-within,[dir="ltr"] #layout-builder-modal .layout-paragraphs-disabled-items,[dir="ltr"] #layout-builder-modal .layout-paragraphs-disabled-items:hover,[dir="ltr"] #layout-builder-modal .layout-paragraphs-disabled-items:focus-within,[dir="ltr"] #layout-builder-modal .erl-layout-region,[dir="ltr"] #layout-builder-modal .erl-layout-region:hover,[dir="ltr"] #layout-builder-modal .erl-layout-region:focus-within,[dir="ltr"] #layout-builder-modal .erl-field .erl-layout-region,[dir="ltr"] #layout-builder-modal .erl-field .erl-layout-region:hover,[dir="ltr"] #layout-builder-modal .erl-field .erl-layout-region:focus-within,[dir="ltr"] #layout-builder-modal .erl-disabled-items,[dir="ltr"] #layout-builder-modal .erl-disabled-items:hover,[dir="ltr"] #layout-builder-modal .erl-disabled-items:focus-within {
-  border-left: 1px solid var(--gin-border-color);
-}
-
-[dir="rtl"] #layout-builder-modal .layout-paragraphs-layout-region,[dir="rtl"] #layout-builder-modal .layout-paragraphs-layout-region:hover,[dir="rtl"] #layout-builder-modal .layout-paragraphs-layout-region:focus-within,[dir="rtl"] #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout-region,[dir="rtl"] #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout-region:hover,[dir="rtl"] #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout-region:focus-within,[dir="rtl"] #layout-builder-modal .layout-paragraphs-disabled-items,[dir="rtl"] #layout-builder-modal .layout-paragraphs-disabled-items:hover,[dir="rtl"] #layout-builder-modal .layout-paragraphs-disabled-items:focus-within,[dir="rtl"] #layout-builder-modal .erl-layout-region,[dir="rtl"] #layout-builder-modal .erl-layout-region:hover,[dir="rtl"] #layout-builder-modal .erl-layout-region:focus-within,[dir="rtl"] #layout-builder-modal .erl-field .erl-layout-region,[dir="rtl"] #layout-builder-modal .erl-field .erl-layout-region:hover,[dir="rtl"] #layout-builder-modal .erl-field .erl-layout-region:focus-within,[dir="rtl"] #layout-builder-modal .erl-disabled-items,[dir="rtl"] #layout-builder-modal .erl-disabled-items:hover,[dir="rtl"] #layout-builder-modal .erl-disabled-items:focus-within {
-  border-left: 1px solid var(--gin-border-color);
-}
-
-[dir="rtl"] #layout-builder-modal .layout-paragraphs-layout-region,[dir="rtl"] #layout-builder-modal .layout-paragraphs-layout-region:hover,[dir="rtl"] #layout-builder-modal .layout-paragraphs-layout-region:focus-within,[dir="rtl"] #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout-region,[dir="rtl"] #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout-region:hover,[dir="rtl"] #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout-region:focus-within,[dir="rtl"] #layout-builder-modal .layout-paragraphs-disabled-items,[dir="rtl"] #layout-builder-modal .layout-paragraphs-disabled-items:hover,[dir="rtl"] #layout-builder-modal .layout-paragraphs-disabled-items:focus-within,[dir="rtl"] #layout-builder-modal .erl-layout-region,[dir="rtl"] #layout-builder-modal .erl-layout-region:hover,[dir="rtl"] #layout-builder-modal .erl-layout-region:focus-within,[dir="rtl"] #layout-builder-modal .erl-field .erl-layout-region,[dir="rtl"] #layout-builder-modal .erl-field .erl-layout-region:hover,[dir="rtl"] #layout-builder-modal .erl-field .erl-layout-region:focus-within,[dir="rtl"] #layout-builder-modal .erl-disabled-items,[dir="rtl"] #layout-builder-modal .erl-disabled-items:hover,[dir="rtl"] #layout-builder-modal .erl-disabled-items:focus-within {
-  border-right: 1px solid var(--gin-border-color);
-}
-
-[dir="ltr"] #layout-builder-modal .layout-paragraphs-layout-region:last-of-type,[dir="ltr"] #layout-builder-modal .layout-paragraphs-layout-region:hover:last-of-type,[dir="ltr"] #layout-builder-modal .layout-paragraphs-layout-region:focus-within:last-of-type,[dir="ltr"] #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout-region:last-of-type,[dir="ltr"] #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout-region:hover:last-of-type,[dir="ltr"] #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout-region:focus-within:last-of-type,[dir="ltr"] #layout-builder-modal .layout-paragraphs-disabled-items:last-of-type,[dir="ltr"] #layout-builder-modal .layout-paragraphs-disabled-items:hover:last-of-type,[dir="ltr"] #layout-builder-modal .layout-paragraphs-disabled-items:focus-within:last-of-type,[dir="ltr"] #layout-builder-modal .erl-layout-region:last-of-type,[dir="ltr"] #layout-builder-modal .erl-layout-region:hover:last-of-type,[dir="ltr"] #layout-builder-modal .erl-layout-region:focus-within:last-of-type,[dir="ltr"] #layout-builder-modal .erl-field .erl-layout-region:last-of-type,[dir="ltr"] #layout-builder-modal .erl-field .erl-layout-region:hover:last-of-type,[dir="ltr"] #layout-builder-modal .erl-field .erl-layout-region:focus-within:last-of-type,[dir="ltr"] #layout-builder-modal .erl-disabled-items:last-of-type,[dir="ltr"] #layout-builder-modal .erl-disabled-items:hover:last-of-type,[dir="ltr"] #layout-builder-modal .erl-disabled-items:focus-within:last-of-type {
-  border-bottom-right-radius: var(--gin-border-m);
-}
-
-[dir="ltr"] #layout-builder-modal .layout-paragraphs-layout-region:last-of-type,[dir="ltr"] #layout-builder-modal .layout-paragraphs-layout-region:hover:last-of-type,[dir="ltr"] #layout-builder-modal .layout-paragraphs-layout-region:focus-within:last-of-type,[dir="ltr"] #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout-region:last-of-type,[dir="ltr"] #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout-region:hover:last-of-type,[dir="ltr"] #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout-region:focus-within:last-of-type,[dir="ltr"] #layout-builder-modal .layout-paragraphs-disabled-items:last-of-type,[dir="ltr"] #layout-builder-modal .layout-paragraphs-disabled-items:hover:last-of-type,[dir="ltr"] #layout-builder-modal .layout-paragraphs-disabled-items:focus-within:last-of-type,[dir="ltr"] #layout-builder-modal .erl-layout-region:last-of-type,[dir="ltr"] #layout-builder-modal .erl-layout-region:hover:last-of-type,[dir="ltr"] #layout-builder-modal .erl-layout-region:focus-within:last-of-type,[dir="ltr"] #layout-builder-modal .erl-field .erl-layout-region:last-of-type,[dir="ltr"] #layout-builder-modal .erl-field .erl-layout-region:hover:last-of-type,[dir="ltr"] #layout-builder-modal .erl-field .erl-layout-region:focus-within:last-of-type,[dir="ltr"] #layout-builder-modal .erl-disabled-items:last-of-type,[dir="ltr"] #layout-builder-modal .erl-disabled-items:hover:last-of-type,[dir="ltr"] #layout-builder-modal .erl-disabled-items:focus-within:last-of-type {
-  border-bottom-left-radius: var(--gin-border-m);
-}
-
-[dir="rtl"] #layout-builder-modal .layout-paragraphs-layout-region:last-of-type,[dir="rtl"] #layout-builder-modal .layout-paragraphs-layout-region:hover:last-of-type,[dir="rtl"] #layout-builder-modal .layout-paragraphs-layout-region:focus-within:last-of-type,[dir="rtl"] #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout-region:last-of-type,[dir="rtl"] #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout-region:hover:last-of-type,[dir="rtl"] #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout-region:focus-within:last-of-type,[dir="rtl"] #layout-builder-modal .layout-paragraphs-disabled-items:last-of-type,[dir="rtl"] #layout-builder-modal .layout-paragraphs-disabled-items:hover:last-of-type,[dir="rtl"] #layout-builder-modal .layout-paragraphs-disabled-items:focus-within:last-of-type,[dir="rtl"] #layout-builder-modal .erl-layout-region:last-of-type,[dir="rtl"] #layout-builder-modal .erl-layout-region:hover:last-of-type,[dir="rtl"] #layout-builder-modal .erl-layout-region:focus-within:last-of-type,[dir="rtl"] #layout-builder-modal .erl-field .erl-layout-region:last-of-type,[dir="rtl"] #layout-builder-modal .erl-field .erl-layout-region:hover:last-of-type,[dir="rtl"] #layout-builder-modal .erl-field .erl-layout-region:focus-within:last-of-type,[dir="rtl"] #layout-builder-modal .erl-disabled-items:last-of-type,[dir="rtl"] #layout-builder-modal .erl-disabled-items:hover:last-of-type,[dir="rtl"] #layout-builder-modal .erl-disabled-items:focus-within:last-of-type {
-  border-bottom-left-radius: var(--gin-border-m);
-}
-
-[dir="rtl"] #layout-builder-modal .layout-paragraphs-layout-region:last-of-type,[dir="rtl"] #layout-builder-modal .layout-paragraphs-layout-region:hover:last-of-type,[dir="rtl"] #layout-builder-modal .layout-paragraphs-layout-region:focus-within:last-of-type,[dir="rtl"] #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout-region:last-of-type,[dir="rtl"] #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout-region:hover:last-of-type,[dir="rtl"] #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout-region:focus-within:last-of-type,[dir="rtl"] #layout-builder-modal .layout-paragraphs-disabled-items:last-of-type,[dir="rtl"] #layout-builder-modal .layout-paragraphs-disabled-items:hover:last-of-type,[dir="rtl"] #layout-builder-modal .layout-paragraphs-disabled-items:focus-within:last-of-type,[dir="rtl"] #layout-builder-modal .erl-layout-region:last-of-type,[dir="rtl"] #layout-builder-modal .erl-layout-region:hover:last-of-type,[dir="rtl"] #layout-builder-modal .erl-layout-region:focus-within:last-of-type,[dir="rtl"] #layout-builder-modal .erl-field .erl-layout-region:last-of-type,[dir="rtl"] #layout-builder-modal .erl-field .erl-layout-region:hover:last-of-type,[dir="rtl"] #layout-builder-modal .erl-field .erl-layout-region:focus-within:last-of-type,[dir="rtl"] #layout-builder-modal .erl-disabled-items:last-of-type,[dir="rtl"] #layout-builder-modal .erl-disabled-items:hover:last-of-type,[dir="rtl"] #layout-builder-modal .erl-disabled-items:focus-within:last-of-type {
-  border-bottom-right-radius: var(--gin-border-m);
+#layout-builder-modal .layout-paragraphs-layout-region:last-of-type,#layout-builder-modal .layout-paragraphs-layout-region:hover:last-of-type,#layout-builder-modal .layout-paragraphs-layout-region:focus-within:last-of-type,#layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout-region:last-of-type,#layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout-region:hover:last-of-type,#layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout-region:focus-within:last-of-type,#layout-builder-modal .layout-paragraphs-disabled-items:last-of-type,#layout-builder-modal .layout-paragraphs-disabled-items:hover:last-of-type,#layout-builder-modal .layout-paragraphs-disabled-items:focus-within:last-of-type,#layout-builder-modal .erl-layout-region:last-of-type,#layout-builder-modal .erl-layout-region:hover:last-of-type,#layout-builder-modal .erl-layout-region:focus-within:last-of-type,#layout-builder-modal .erl-field .erl-layout-region:last-of-type,#layout-builder-modal .erl-field .erl-layout-region:hover:last-of-type,#layout-builder-modal .erl-field .erl-layout-region:focus-within:last-of-type,#layout-builder-modal .erl-disabled-items:last-of-type,#layout-builder-modal .erl-disabled-items:hover:last-of-type,#layout-builder-modal .erl-disabled-items:focus-within:last-of-type {
+  border-end-end-radius: var(--gin-border-m);
 }
 
 #layout-builder-modal .layout-paragraphs-layout-region .layout-label,#layout-builder-modal .layout-paragraphs-field .layout-paragraphs-layout-region .layout-label,#layout-builder-modal .layout-paragraphs-disabled-items .layout-label,#layout-builder-modal .erl-layout-region .layout-label,#layout-builder-modal .erl-field .erl-layout-region .layout-label,#layout-builder-modal .erl-disabled-items .layout-label {
@@ -283,7 +193,7 @@
 }
 
 #layout-builder-modal .layout-paragraphs-item:not(:last-of-type),#layout-builder-modal .active-items .layout-paragraphs-item:not(:last-of-type),#layout-builder-modal .layout-paragraphs-field.is-moving .layout-paragraphs-item:hover:not(:last-of-type),#layout-builder-modal .erl-item:not(:last-of-type),#layout-builder-modal .erl-field .erl-layout .erl-item:not(:last-of-type),#layout-builder-modal .erl-field .erl-disabled-items .erl-item:not(:last-of-type) {
-  margin-bottom: var(--gin-spacing-xl);
+  margin-block-end: var(--gin-spacing-xl);
 }
 
 #layout-builder-modal .layout-paragraphs-item:hover,#layout-builder-modal .layout-paragraphs-item:active,#layout-builder-modal .layout-paragraphs-item:focus,#layout-builder-modal .layout-paragraphs-item:focus-within,#layout-builder-modal .active-items .layout-paragraphs-item:hover,#layout-builder-modal .active-items .layout-paragraphs-item:active,#layout-builder-modal .active-items .layout-paragraphs-item:focus,#layout-builder-modal .active-items .layout-paragraphs-item:focus-within,#layout-builder-modal .layout-paragraphs-field.is-moving .layout-paragraphs-item:hover:hover,#layout-builder-modal .layout-paragraphs-field.is-moving .layout-paragraphs-item:hover:active,#layout-builder-modal .layout-paragraphs-field.is-moving .layout-paragraphs-item:hover:focus,#layout-builder-modal .layout-paragraphs-field.is-moving .layout-paragraphs-item:hover:focus-within,#layout-builder-modal .erl-item:hover,#layout-builder-modal .erl-item:active,#layout-builder-modal .erl-item:focus,#layout-builder-modal .erl-item:focus-within,#layout-builder-modal .erl-field .erl-layout .erl-item:hover,#layout-builder-modal .erl-field .erl-layout .erl-item:active,#layout-builder-modal .erl-field .erl-layout .erl-item:focus,#layout-builder-modal .erl-field .erl-layout .erl-item:focus-within,#layout-builder-modal .erl-field .erl-disabled-items .erl-item:hover,#layout-builder-modal .erl-field .erl-disabled-items .erl-item:active,#layout-builder-modal .erl-field .erl-disabled-items .erl-item:focus,#layout-builder-modal .erl-field .erl-disabled-items .erl-item:focus-within {
@@ -304,7 +214,8 @@
 #layout-builder-modal .erl-item label.paragraph-type-label,#layout-builder-modal .erl-item label.paragraph-type--label,#layout-builder-modal .layout-paragraphs-item label.paragraph-type-label,#layout-builder-modal .layout-paragraphs-item label.paragraph-type--label {
   margin: -1px;
   position: absolute;
-  top: 12px;
+  inset-block-start: 12px;
+  inset-inline-start: 50%;
   border: 0 none;
   font-style: normal;
   color: var(--gin-color-text-light);
@@ -312,67 +223,33 @@
 }
 
 [dir="ltr"] #layout-builder-modal .erl-item label.paragraph-type-label,[dir="ltr"] #layout-builder-modal .erl-item label.paragraph-type--label,[dir="ltr"] #layout-builder-modal .layout-paragraphs-item label.paragraph-type-label,[dir="ltr"] #layout-builder-modal .layout-paragraphs-item label.paragraph-type--label {
-  left: 50%;
   transform: translate(-50%);
 }
 
 [dir="ltr"] #layout-builder-modal .erl-item label.paragraph-type-label,[dir="ltr"] #layout-builder-modal .erl-item label.paragraph-type--label,[dir="ltr"] #layout-builder-modal .layout-paragraphs-item label.paragraph-type-label,[dir="ltr"] #layout-builder-modal .layout-paragraphs-item label.paragraph-type--label {
-  right: 50%;
   transform: translate(50%);
 }
 
 [dir="rtl"] #layout-builder-modal .erl-item label.paragraph-type-label,[dir="rtl"] #layout-builder-modal .erl-item label.paragraph-type--label,[dir="rtl"] #layout-builder-modal .layout-paragraphs-item label.paragraph-type-label,[dir="rtl"] #layout-builder-modal .layout-paragraphs-item label.paragraph-type--label {
-  right: 50%;
   transform: translate(50%);
 }
 
 [dir="rtl"] #layout-builder-modal .erl-item label.paragraph-type-label,[dir="rtl"] #layout-builder-modal .erl-item label.paragraph-type--label,[dir="rtl"] #layout-builder-modal .layout-paragraphs-item label.paragraph-type-label,[dir="rtl"] #layout-builder-modal .layout-paragraphs-item label.paragraph-type--label {
-  left: 50%;
   transform: translate(-50%);
 }
 
 #layout-builder-modal .erl-item .layout-controls,#layout-builder-modal .layout-paragraphs-item .layout-controls {
   opacity: 1;
   position: absolute;
-  top: var(--gin-spacing-xs);
-}
-
-[dir="ltr"] #layout-builder-modal .erl-item .layout-controls,[dir="ltr"] #layout-builder-modal .layout-paragraphs-item .layout-controls {
-  left: var(--gin-spacing-xxs);
-}
-
-[dir="ltr"] #layout-builder-modal .erl-item .layout-controls,[dir="ltr"] #layout-builder-modal .layout-paragraphs-item .layout-controls {
-  right: var(--gin-spacing-xxs);
-}
-
-[dir="rtl"] #layout-builder-modal .erl-item .layout-controls,[dir="rtl"] #layout-builder-modal .layout-paragraphs-item .layout-controls {
-  right: var(--gin-spacing-xxs);
-}
-
-[dir="rtl"] #layout-builder-modal .erl-item .layout-controls,[dir="rtl"] #layout-builder-modal .layout-paragraphs-item .layout-controls {
-  left: var(--gin-spacing-xxs);
+  inset-inline-start: var(--gin-spacing-xxs);
+  inset-block-start: var(--gin-spacing-xs);
 }
 
 #layout-builder-modal .erl-item .layout-paragraphs-actions,#layout-builder-modal .layout-paragraphs-item .layout-paragraphs-actions {
   visibility: visible;
   position: absolute;
-  top: var(--gin-spacing-xs);
-}
-
-[dir="ltr"] #layout-builder-modal .erl-item .layout-paragraphs-actions,[dir="ltr"] #layout-builder-modal .layout-paragraphs-item .layout-paragraphs-actions {
-  right: var(--gin-spacing-xxs);
-}
-
-[dir="ltr"] #layout-builder-modal .erl-item .layout-paragraphs-actions,[dir="ltr"] #layout-builder-modal .layout-paragraphs-item .layout-paragraphs-actions {
-  left: var(--gin-spacing-xxs);
-}
-
-[dir="rtl"] #layout-builder-modal .erl-item .layout-paragraphs-actions,[dir="rtl"] #layout-builder-modal .layout-paragraphs-item .layout-paragraphs-actions {
-  left: var(--gin-spacing-xxs);
-}
-
-[dir="rtl"] #layout-builder-modal .erl-item .layout-paragraphs-actions,[dir="rtl"] #layout-builder-modal .layout-paragraphs-item .layout-paragraphs-actions {
-  right: var(--gin-spacing-xxs);
+  inset-inline-end: var(--gin-spacing-xxs);
+  inset-block-start: var(--gin-spacing-xs);
 }
 
 #layout-builder-modal .erl-item .paragraph .field,#layout-builder-modal .layout-paragraphs-item .paragraph .field {
@@ -397,28 +274,14 @@
 
 #layout-builder-modal .erl-item .paragraph .field--name-field-paragraphs .field__item,#layout-builder-modal .layout-paragraphs-item .paragraph .field--name-field-paragraphs .field__item {
   flex-basis: 100%;
-}
-
-[dir="ltr"] #layout-builder-modal .erl-item .paragraph .field--name-field-paragraphs .field__item,[dir="ltr"] #layout-builder-modal .layout-paragraphs-item .paragraph .field--name-field-paragraphs .field__item {
-  margin-right: var(--gin-spacing-xs);
-}
-
-[dir="ltr"] #layout-builder-modal .erl-item .paragraph .field--name-field-paragraphs .field__item,[dir="ltr"] #layout-builder-modal .layout-paragraphs-item .paragraph .field--name-field-paragraphs .field__item {
-  margin-left: var(--gin-spacing-xs);
-}
-
-[dir="rtl"] #layout-builder-modal .erl-item .paragraph .field--name-field-paragraphs .field__item,[dir="rtl"] #layout-builder-modal .layout-paragraphs-item .paragraph .field--name-field-paragraphs .field__item {
-  margin-left: var(--gin-spacing-xs);
-}
-
-[dir="rtl"] #layout-builder-modal .erl-item .paragraph .field--name-field-paragraphs .field__item,[dir="rtl"] #layout-builder-modal .layout-paragraphs-item .paragraph .field--name-field-paragraphs .field__item {
-  margin-right: var(--gin-spacing-xs);
+  margin-inline-end: var(--gin-spacing-xs);
 }
 
 #layout-builder-modal .layout-paragraphs-item.layout-paragraphs-layout,#layout-builder-modal .active-items .layout-paragraphs-item.layout-paragraphs-layout,#layout-builder-modal .layout-paragraphs-field.is-moving .layout-paragraphs-item.layout-paragraphs-layout:hover,#layout-builder-modal .erl-layout.erl-item.form-wrapper {
   position: relative;
-  padding: 47px 0 0;
-  margin-bottom: var(--gin-spacing-m);
+  padding-block: 47px 0;
+  padding-inline: 0;
+  margin-block-end: var(--gin-spacing-m);
   background: none;
   border: 0 none;
   border-radius: var(--gin-border-m);
@@ -429,28 +292,13 @@
   content: "";
   display: block;
   position: absolute;
-  top: 0;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   width: 100%;
   height: 48px;
   background: #fff;
   border-radius: var(--gin-border-m) var(--gin-border-m) 0 0;
   box-shadow: inset 0 0 0 1px var(--gin-border-color);
-}
-
-[dir="ltr"] #layout-builder-modal .layout-paragraphs-item.layout-paragraphs-layout::before,[dir="ltr"] #layout-builder-modal .active-items .layout-paragraphs-item.layout-paragraphs-layout::before,[dir="ltr"] #layout-builder-modal .layout-paragraphs-field.is-moving .layout-paragraphs-item.layout-paragraphs-layout:hover::before,[dir="ltr"] #layout-builder-modal .erl-layout.erl-item.form-wrapper::before {
-  left: 0;
-}
-
-[dir="ltr"] #layout-builder-modal .layout-paragraphs-item.layout-paragraphs-layout::before,[dir="ltr"] #layout-builder-modal .active-items .layout-paragraphs-item.layout-paragraphs-layout::before,[dir="ltr"] #layout-builder-modal .layout-paragraphs-field.is-moving .layout-paragraphs-item.layout-paragraphs-layout:hover::before,[dir="ltr"] #layout-builder-modal .erl-layout.erl-item.form-wrapper::before {
-  right: 0;
-}
-
-[dir="rtl"] #layout-builder-modal .layout-paragraphs-item.layout-paragraphs-layout::before,[dir="rtl"] #layout-builder-modal .active-items .layout-paragraphs-item.layout-paragraphs-layout::before,[dir="rtl"] #layout-builder-modal .layout-paragraphs-field.is-moving .layout-paragraphs-item.layout-paragraphs-layout:hover::before,[dir="rtl"] #layout-builder-modal .erl-layout.erl-item.form-wrapper::before {
-  right: 0;
-}
-
-[dir="rtl"] #layout-builder-modal .layout-paragraphs-item.layout-paragraphs-layout::before,[dir="rtl"] #layout-builder-modal .active-items .layout-paragraphs-item.layout-paragraphs-layout::before,[dir="rtl"] #layout-builder-modal .layout-paragraphs-field.is-moving .layout-paragraphs-item.layout-paragraphs-layout:hover::before,[dir="rtl"] #layout-builder-modal .erl-layout.erl-item.form-wrapper::before {
-  left: 0;
 }
 
 #layout-builder-modal .gin--dark-mode .layout-paragraphs-item.layout-paragraphs-layout::before,#layout-builder-modal .gin--dark-mode .active-items .layout-paragraphs-item.layout-paragraphs-layout::before,#layout-builder-modal .gin--dark-mode .layout-paragraphs-field.is-moving .layout-paragraphs-item.layout-paragraphs-layout:hover::before,#layout-builder-modal .gin--dark-mode .erl-layout.erl-item.form-wrapper::before {
@@ -460,7 +308,7 @@
 #layout-builder-modal .layout-paragraphs-item.layout-paragraphs-layout .paragraph-layout-label,#layout-builder-modal .layout-paragraphs-item.layout-paragraphs-layout .paragraph-layout--label,#layout-builder-modal .active-items .layout-paragraphs-item.layout-paragraphs-layout .paragraph-layout-label,#layout-builder-modal .active-items .layout-paragraphs-item.layout-paragraphs-layout .paragraph-layout--label,#layout-builder-modal .layout-paragraphs-field.is-moving .layout-paragraphs-item.layout-paragraphs-layout:hover .paragraph-layout-label,#layout-builder-modal .layout-paragraphs-field.is-moving .layout-paragraphs-item.layout-paragraphs-layout:hover .paragraph-layout--label,#layout-builder-modal .erl-layout.erl-item.form-wrapper .paragraph-layout-label,#layout-builder-modal .erl-layout.erl-item.form-wrapper .paragraph-layout--label {
   opacity: .6;
   position: absolute;
-  top: 12px;
+  inset-block-start: 12px;
   font-style: normal;
   font-weight: var(--gin-font-weight-heavy) !important;
   color: var(--gin-color-text);
@@ -488,23 +336,8 @@
   height: 1.125rem;
   animation: gin-throbber .75s linear infinite;
   border: 2px solid var(--gin-color-primary);
+  border-inline-end: 2px dotted transparent;
   border-radius: 50%;
-}
-
-[dir="ltr"] #layout-builder-modal .layout-paragraphs-loading div.spinner,[dir="ltr"] #layout-builder-modal .erl-loading div.spinner {
-  border-right: 2px dotted transparent;
-}
-
-[dir="ltr"] #layout-builder-modal .layout-paragraphs-loading div.spinner,[dir="ltr"] #layout-builder-modal .erl-loading div.spinner {
-  border-left: 2px dotted transparent;
-}
-
-[dir="rtl"] #layout-builder-modal .layout-paragraphs-loading div.spinner,[dir="rtl"] #layout-builder-modal .erl-loading div.spinner {
-  border-left: 2px dotted transparent;
-}
-
-[dir="rtl"] #layout-builder-modal .layout-paragraphs-loading div.spinner,[dir="rtl"] #layout-builder-modal .erl-loading div.spinner {
-  border-right: 2px dotted transparent;
 }
 
 #layout-builder-modal .layout-paragraphs-add-content:focus,#layout-builder-modal .erl-add-content:focus {
@@ -514,7 +347,7 @@
 
 #layout-builder-modal .layout-paragraphs-add-content__toggle,#layout-builder-modal .erl-add-content__toggle {
   opacity: 1;
-  bottom: 2px;
+  inset-block-end: 2px;
   background: var(--gin-color-primary);
   border-radius: 50%;
 }
@@ -564,7 +397,7 @@
   color: #000;
   text-align: center;
   flex-basis: 33.333%;
-  margin-bottom: var(--gin-spacing-m);
+  margin-block-end: var(--gin-spacing-m);
 }
 
 @media (min-width: 64em) {
@@ -591,24 +424,10 @@
 #layout-builder-modal .layout-paragraphs-add-content--single,#layout-builder-modal .layout-paragraphs-item>.layout-paragraphs-add-content--single,#layout-builder-modal .erl-field .erl-add-content--single,#layout-builder-modal .erl-field .erl-item>.erl-add-content--single {
   position: static;
   width: 100%;
-  margin: var(--gin-spacing-m) 0 0 0;
+  inset-inline-start: 0;
+  margin: 0;
+  margin-block-start: var(--gin-spacing-m);
   box-sizing: border-box;
-}
-
-[dir="ltr"] #layout-builder-modal .layout-paragraphs-add-content--single,[dir="ltr"] #layout-builder-modal .layout-paragraphs-item>.layout-paragraphs-add-content--single,[dir="ltr"] #layout-builder-modal .erl-field .erl-add-content--single,[dir="ltr"] #layout-builder-modal .erl-field .erl-item>.erl-add-content--single {
-  left: 0;
-}
-
-[dir="ltr"] #layout-builder-modal .layout-paragraphs-add-content--single,[dir="ltr"] #layout-builder-modal .layout-paragraphs-item>.layout-paragraphs-add-content--single,[dir="ltr"] #layout-builder-modal .erl-field .erl-add-content--single,[dir="ltr"] #layout-builder-modal .erl-field .erl-item>.erl-add-content--single {
-  right: 0;
-}
-
-[dir="rtl"] #layout-builder-modal .layout-paragraphs-add-content--single,[dir="rtl"] #layout-builder-modal .layout-paragraphs-item>.layout-paragraphs-add-content--single,[dir="rtl"] #layout-builder-modal .erl-field .erl-add-content--single,[dir="rtl"] #layout-builder-modal .erl-field .erl-item>.erl-add-content--single {
-  right: 0;
-}
-
-[dir="rtl"] #layout-builder-modal .layout-paragraphs-add-content--single,[dir="rtl"] #layout-builder-modal .layout-paragraphs-item>.layout-paragraphs-add-content--single,[dir="rtl"] #layout-builder-modal .erl-field .erl-add-content--single,[dir="rtl"] #layout-builder-modal .erl-field .erl-item>.erl-add-content--single {
-  left: 0;
 }
 
 #layout-builder-modal .layout-paragraphs-add-more-menu,#layout-builder-modal .erl-add-more-menu {
@@ -630,7 +449,7 @@
 
 #layout-builder-modal .layout-paragraphs-add-more-menu__search,#layout-builder-modal .erl-add-more-menu__search {
   background: var(--gin-bg-layer3);
-  border-bottom: 1px solid var(--gin-border-color-layer2);
+  border-block-end: 1px solid var(--gin-border-color-layer2);
   border-radius: 0;
 }
 
@@ -641,7 +460,7 @@
 }
 
 #layout-builder-modal .layout-paragraphs-add-more-menu__item:last-of-type,#layout-builder-modal .erl-add-more-menu__item:last-of-type {
-  margin-bottom: calc(var(--gin-spacing-xs) + var(--gin-spacing-xl));
+  margin-block-end: calc(var(--gin-spacing-xs) + var(--gin-spacing-xl));
 }
 
 #layout-builder-modal .layout-paragraphs-add-more-menu__item.hidden,#layout-builder-modal .erl-add-more-menu__item.hidden {
@@ -663,7 +482,7 @@
 #layout-builder-modal .layout-paragraphs-add-more-menu__item img,#layout-builder-modal .erl-add-more-menu__item img {
   width: 24px;
   height: 24px;
-  margin-bottom: var(--gin-spacing-xs);
+  margin-block-end: var(--gin-spacing-xs);
 }
 
 @media (min-width: 64em) {
@@ -682,13 +501,14 @@
 #layout-builder-modal .layout-paragraphs-add-more-menu__group--layout,#layout-builder-modal .layout-paragraphs-add-more-menu__group--content,#layout-builder-modal .erl-add-more-menu__group--layout,#layout-builder-modal .erl-add-more-menu__group--content {
   justify-content: flex-start;
   overflow-x: hidden;
-  padding-bottom: var(--gin-spacing-xxs);
+  padding-block-end: var(--gin-spacing-xxs);
 }
 
 #layout-builder-modal .layout-paragraphs-add-more-menu__group--layout:not(:empty)::before,#layout-builder-modal .layout-paragraphs-add-more-menu__group--content::before,#layout-builder-modal .erl-add-more-menu__group--layout:not(:empty)::before,#layout-builder-modal .erl-add-more-menu__group--content::before {
   color: var(--gin-color-title);
   flex-basis: 100%;
-  padding: var(--gin-spacing-m) var(--gin-spacing-m) 0;
+  padding-block: var(--gin-spacing-m) 0;
+  padding-inline: var(--gin-spacing-m);
   font-size: var(--gin-font-size-s);
   opacity: .4;
 }
@@ -697,26 +517,8 @@
   content: var(--gin-lp-layout, "Layout");
   display: block;
   width: 100%;
-}
-
-[dir="ltr"] #layout-builder-modal .layout-paragraphs-add-more-menu__group--layout:not(:empty)::before,[dir="ltr"] #layout-builder-modal .erl-add-more-menu__group--layout:not(:empty)::before {
-  padding-left: 0;
-  margin-left: var(--gin-spacing-m);
-}
-
-[dir="ltr"] #layout-builder-modal .layout-paragraphs-add-more-menu__group--layout:not(:empty)::before,[dir="ltr"] #layout-builder-modal .erl-add-more-menu__group--layout:not(:empty)::before {
-  padding-right: 0;
-  margin-right: var(--gin-spacing-m);
-}
-
-[dir="rtl"] #layout-builder-modal .layout-paragraphs-add-more-menu__group--layout:not(:empty)::before,[dir="rtl"] #layout-builder-modal .erl-add-more-menu__group--layout:not(:empty)::before {
-  padding-right: 0;
-  margin-right: var(--gin-spacing-m);
-}
-
-[dir="rtl"] #layout-builder-modal .layout-paragraphs-add-more-menu__group--layout:not(:empty)::before,[dir="rtl"] #layout-builder-modal .erl-add-more-menu__group--layout:not(:empty)::before {
-  padding-left: 0;
-  margin-left: var(--gin-spacing-m);
+  padding-inline-start: 0;
+  margin-inline-start: var(--gin-spacing-m);
 }
 
 #layout-builder-modal .layout-paragraphs-add-more-menu__group--content::before,#layout-builder-modal .erl-add-more-menu__group--content::before {
@@ -724,27 +526,25 @@
 }
 
 #layout-builder-modal .layout-paragraphs-add-more-menu__group--layout+.layout-paragraphs-add-more-menu__group--content,#layout-builder-modal .layout-paragraphs-add-more-menu__group--layout+.erl-add-more-menu__group--content,#layout-builder-modal .erl-add-more-menu__group--layout+.layout-paragraphs-add-more-menu__group--content,#layout-builder-modal .erl-add-more-menu__group--layout+.erl-add-more-menu__group--content {
-  margin-top: -2.6rem;
-  margin-bottom: -2.6rem;
+  margin-block: -2.6rem;
   z-index: 1;
   position: relative;
   background: var(--gin-bg-layer3);
-  border-top: 1px solid var(--gin-border-color-layer);
+  border-block-start: 1px solid var(--gin-border-color-layer);
 }
 
 #layout-builder-modal .layout-paragraphs-add-more-menu__search+.layout-paragraphs-add-more-menu__group .layout-paragraphs-add-more-menu__group--layout+.layout-paragraphs-add-more-menu__group--content,#layout-builder-modal .layout-paragraphs-add-more-menu__search+.layout-paragraphs-add-more-menu__group .layout-paragraphs-add-more-menu__group--layout+.erl-add-more-menu__group--content,#layout-builder-modal .layout-paragraphs-add-more-menu__search+.layout-paragraphs-add-more-menu__group .erl-add-more-menu__group--layout+.layout-paragraphs-add-more-menu__group--content,#layout-builder-modal .layout-paragraphs-add-more-menu__search+.layout-paragraphs-add-more-menu__group .erl-add-more-menu__group--layout+.erl-add-more-menu__group--content,#layout-builder-modal .layout-paragraphs-add-more-menu__search+.erl-add-more-menu__group .layout-paragraphs-add-more-menu__group--layout+.layout-paragraphs-add-more-menu__group--content,#layout-builder-modal .layout-paragraphs-add-more-menu__search+.erl-add-more-menu__group .layout-paragraphs-add-more-menu__group--layout+.erl-add-more-menu__group--content,#layout-builder-modal .layout-paragraphs-add-more-menu__search+.erl-add-more-menu__group .erl-add-more-menu__group--layout+.layout-paragraphs-add-more-menu__group--content,#layout-builder-modal .layout-paragraphs-add-more-menu__search+.erl-add-more-menu__group .erl-add-more-menu__group--layout+.erl-add-more-menu__group--content,#layout-builder-modal .erl-add-more-menu__search+.layout-paragraphs-add-more-menu__group .layout-paragraphs-add-more-menu__group--layout+.layout-paragraphs-add-more-menu__group--content,#layout-builder-modal .erl-add-more-menu__search+.layout-paragraphs-add-more-menu__group .layout-paragraphs-add-more-menu__group--layout+.erl-add-more-menu__group--content,#layout-builder-modal .erl-add-more-menu__search+.layout-paragraphs-add-more-menu__group .erl-add-more-menu__group--layout+.layout-paragraphs-add-more-menu__group--content,#layout-builder-modal .erl-add-more-menu__search+.layout-paragraphs-add-more-menu__group .erl-add-more-menu__group--layout+.erl-add-more-menu__group--content,#layout-builder-modal .erl-add-more-menu__search+.erl-add-more-menu__group .layout-paragraphs-add-more-menu__group--layout+.layout-paragraphs-add-more-menu__group--content,#layout-builder-modal .erl-add-more-menu__search+.erl-add-more-menu__group .layout-paragraphs-add-more-menu__group--layout+.erl-add-more-menu__group--content,#layout-builder-modal .erl-add-more-menu__search+.erl-add-more-menu__group .erl-add-more-menu__group--layout+.layout-paragraphs-add-more-menu__group--content,#layout-builder-modal .erl-add-more-menu__search+.erl-add-more-menu__group .erl-add-more-menu__group--layout+.erl-add-more-menu__group--content {
-  margin-bottom: 0;
+  margin-block-end: 0;
 }
 
 #layout-builder-modal .layout-paragraphs-add-more-menu__search+.layout-paragraphs-add-more-menu__group .layout-paragraphs-add-more-menu__group--layout+.layout-paragraphs-add-more-menu__group--content>div:last-of-type,#layout-builder-modal .layout-paragraphs-add-more-menu__search+.layout-paragraphs-add-more-menu__group .layout-paragraphs-add-more-menu__group--layout+.erl-add-more-menu__group--content>div:last-of-type,#layout-builder-modal .layout-paragraphs-add-more-menu__search+.layout-paragraphs-add-more-menu__group .erl-add-more-menu__group--layout+.layout-paragraphs-add-more-menu__group--content>div:last-of-type,#layout-builder-modal .layout-paragraphs-add-more-menu__search+.layout-paragraphs-add-more-menu__group .erl-add-more-menu__group--layout+.erl-add-more-menu__group--content>div:last-of-type,#layout-builder-modal .layout-paragraphs-add-more-menu__search+.erl-add-more-menu__group .layout-paragraphs-add-more-menu__group--layout+.layout-paragraphs-add-more-menu__group--content>div:last-of-type,#layout-builder-modal .layout-paragraphs-add-more-menu__search+.erl-add-more-menu__group .layout-paragraphs-add-more-menu__group--layout+.erl-add-more-menu__group--content>div:last-of-type,#layout-builder-modal .layout-paragraphs-add-more-menu__search+.erl-add-more-menu__group .erl-add-more-menu__group--layout+.layout-paragraphs-add-more-menu__group--content>div:last-of-type,#layout-builder-modal .layout-paragraphs-add-more-menu__search+.erl-add-more-menu__group .erl-add-more-menu__group--layout+.erl-add-more-menu__group--content>div:last-of-type,#layout-builder-modal .erl-add-more-menu__search+.layout-paragraphs-add-more-menu__group .layout-paragraphs-add-more-menu__group--layout+.layout-paragraphs-add-more-menu__group--content>div:last-of-type,#layout-builder-modal .erl-add-more-menu__search+.layout-paragraphs-add-more-menu__group .layout-paragraphs-add-more-menu__group--layout+.erl-add-more-menu__group--content>div:last-of-type,#layout-builder-modal .erl-add-more-menu__search+.layout-paragraphs-add-more-menu__group .erl-add-more-menu__group--layout+.layout-paragraphs-add-more-menu__group--content>div:last-of-type,#layout-builder-modal .erl-add-more-menu__search+.layout-paragraphs-add-more-menu__group .erl-add-more-menu__group--layout+.erl-add-more-menu__group--content>div:last-of-type,#layout-builder-modal .erl-add-more-menu__search+.erl-add-more-menu__group .layout-paragraphs-add-more-menu__group--layout+.layout-paragraphs-add-more-menu__group--content>div:last-of-type,#layout-builder-modal .erl-add-more-menu__search+.erl-add-more-menu__group .layout-paragraphs-add-more-menu__group--layout+.erl-add-more-menu__group--content>div:last-of-type,#layout-builder-modal .erl-add-more-menu__search+.erl-add-more-menu__group .erl-add-more-menu__group--layout+.layout-paragraphs-add-more-menu__group--content>div:last-of-type,#layout-builder-modal .erl-add-more-menu__search+.erl-add-more-menu__group .erl-add-more-menu__group--layout+.erl-add-more-menu__group--content>div:last-of-type {
-  margin-bottom: 0;
+  margin-block-end: 0;
 }
 
 #layout-builder-modal fieldset.layout-paragraphs-field,#layout-builder-modal fieldset.fieldset.erl-field {
   position: relative;
-  padding-top: 0;
-  padding-left: 0;
-  padding-right: 0;
+  padding-block-start: 0;
+  padding-inline: 0;
   background: transparent;
   box-shadow: none;
 }
@@ -763,7 +563,7 @@
 
 #layout-builder-modal .layout-paragraphs-field .layout-paragraphs-moving-message {
   z-index: 2;
-  top: calc(var(--gin-spacing-xs)*-1);
+  inset-block-start: calc(var(--gin-spacing-xs)*-1);
   width: calc(100% - var(--gin-spacing-xxl));
   padding: var(--gin-spacing-xs);
   margin: var(--gin-spacing-m);
@@ -790,8 +590,7 @@
 }
 
 #layout-builder-modal .ui-widget-content .layout-paragraphs-form-actions {
-  margin-bottom: 0 !important;
-  padding-top: 0;
-  padding-bottom: 0;
+  margin-block-end: 0 !important;
+  padding-block: 0;
 }
 

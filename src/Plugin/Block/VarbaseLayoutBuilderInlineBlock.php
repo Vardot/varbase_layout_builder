@@ -11,7 +11,6 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  * Inline Block for Varbase Layout Builder.
  *
  * A custom class from the InlineBlockUX class from the lb_ux module.
- *
  */
 class VarbaseLayoutBuilderInlineBlock extends InlineBlock {
 

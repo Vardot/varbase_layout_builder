@@ -172,11 +172,6 @@
   padding: 0;
 }
 
-#layout-builder-modal abbr[title],.media-library-widget-modal abbr[title],form.media-form abbr[title] {
-  -webkit-text-decoration: none;
-          text-decoration: none;
-}
-
 #layout-builder-modal code,.media-library-widget-modal code,form.media-form code {
   margin: .5em 0;
 }
@@ -206,5 +201,9 @@
 #layout-builder-modal .page-wrapper *:focus,#layout-builder-modal .ui-dialog *:focus,.media-library-widget-modal .page-wrapper *:focus,.media-library-widget-modal .ui-dialog *:focus,form.media-form .page-wrapper *:focus,form.media-form .ui-dialog *:focus {
   outline: var(--focus-outline);
   box-shadow: var(--focus-box-shadow);
+}
+
+#layout-builder-modal .views-tabs,#layout-builder-modal .views-display-top>input.button,.media-library-widget-modal .views-tabs,.media-library-widget-modal .views-display-top>input.button,form.media-form .views-tabs,form.media-form .views-display-top>input.button {
+  display: none;
 }
 

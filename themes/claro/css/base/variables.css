@@ -3,8 +3,8 @@
   --color-white: #fff;
   --color-text: var(--color-gray);
   --color-text-light: var(--color-gray-500);
-  --color-gray-050-o-40: rgba(243, 244, 249, .4);
-  --color-gray-200-o-80: rgba(212, 212, 218, .8);
+  --color-gray-050-o-40: rgb(243, 244, 249, .4);
+  --color-gray-200-o-80: rgb(212, 212, 218, .8);
   --color-maximumred: var(--color-red-500);
   --color-sunglow: #ffd23f;
   --color-sunglow-shaded: #977405;
@@ -63,7 +63,7 @@
   --color-link: var(--color-absolutezero);
   --color-link-hover: var(--color-absolutezero-hover);
   --color-link-active: var(--color-absolutezero-active);
-  --color-divider: rgba(142, 146, 156, .5);
+  --color-divider: rgb(142, 146, 156, .5);
   --font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   --font-family-serif: "Times New Roman", times, serif;
   --line-height: 1.5;
@@ -95,7 +95,7 @@
   --outline-size: 2px;
   --focus-outline: var(--outline-size) dotted transparent;
   --focus-box-shadow: 0 0 0 var(--focus-border-offset-size) var(--color-white), 0 0 0 calc(var(--focus-border-size) + var(--focus-border-offset-size)) var(--color-focus);
-  --shadow-z3: 0 .875rem 1.875rem rgba(0, 0, 0, .1);
+  --shadow-z3: 0 .875rem 1.875rem rgb(0, 0, 0, .1);
   --input-fg-color: var(--color-fg);
   --input-bg-color: var(--color-bg);
   --input-fg-color--description: var(--color-gray-800);
@@ -105,7 +105,7 @@
   --input--focus-border-color: var(--color-absolutezero);
   --input--error-color: var(--color-maximumred);
   --input--error-border-color: var(--color-maximumred);
-  --input--disabled-color: rgba(84, 85, 96, .6);
+  --input--disabled-color: rgb(84, 85, 96, .6);
   --input--disabled-fg-color: var(--color-gray-800);
   --input--disabled-bg-color: #f2f2f3;
   --input--disabled-border-color: #bababf;
@@ -131,7 +131,7 @@
   --details-summary-shadow-color: var(--color-focus);
   --details-summary-focus-border-size: var(--focus-border-size);
   --details-desktop-wrapper-padding-start: calc(var(--space-m) + var(--space-s) + var(--space-xs));
-  --details-box-shadow: 0 2px .25rem rgba(0, 0, 0, .1);
+  --details-box-shadow: 0 2px .25rem rgb(0, 0, 0, .1);
   --details-border-size: 1px;
   --details-border-size-radius: 2px;
   --details-accordion-border-size-radius: var(--base-border-radius);
@@ -164,8 +164,8 @@
   --jui-dropdown-bg-color: var(--color-white);
   --jui-dropdown--active-fg-color: var(--color-white);
   --jui-dropdown--active-bg-color: var(--color-absolutezero);
-  --jui-dropdown-border-color: rgba(216, 217, 224, .8);
-  --jui-dropdown-shadow-color: rgba(34, 35, 48, .1);
+  --jui-dropdown-border-color: rgb(216, 217, 224, .8);
+  --jui-dropdown-shadow-color: rgb(34, 35, 48, .1);
   --jui-dialog-title-color: var(--color-white);
   --jui-dialog-title-bg-color: var(--color-text);
   --jui-dialog-title-font-size: var(--font-size-h4);
@@ -189,7 +189,6 @@
   --progress-bar-description-font-size: var(--font-size-xs);
   --progress-track-border-color: var(--color-gray-500);
   --progress-track-bg-color: var(--color-gray-200);
-  --tabledrag-handle-icon-size: calc(17rem / 16);
   --ajax-progress-margin-horizontal: var(--space-s);
   --breadcrumb-height: 1.25rem;
   --layout-region-edit-width: min(60rem, 100%);

@@ -118,3 +118,7 @@
   }
 }
 
+#layout-builder-modal .ui-autocomplete,.media-library-widget-modal .ui-autocomplete,form.media-form .ui-autocomplete {
+  z-index: 501;
+}
+

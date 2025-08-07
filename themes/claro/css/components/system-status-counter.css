@@ -27,6 +27,10 @@
   background-size: 2.5rem;
 }
 
+#layout-builder-modal [dir=rtl] .system-status-counter__status-icon::before,.media-library-widget-modal [dir=rtl] .system-status-counter__status-icon::before,form.media-form [dir=rtl] .system-status-counter__status-icon::before {
+  background-position: left center;
+}
+
 @media (forced-colors: active) {
   #layout-builder-modal .system-status-counter__status-icon::before,.media-library-widget-modal .system-status-counter__status-icon::before,form.media-form .system-status-counter__status-icon::before {
     background-color: canvastext;
@@ -35,11 +39,6 @@
     mask-position: right center;
     mask-size: 2.5rem;
   }
-}
-
-#layout-builder-modal [dir=rtl] .system-status-counter__status-icon,.media-library-widget-modal [dir=rtl] .system-status-counter__status-icon,form.media-form [dir=rtl] .system-status-counter__status-icon {
-  border-inline-end: 1px solid #e6e4df;
-  border-inline-start: 0;
 }
 
 #layout-builder-modal .system-status-counter__status-icon--error::before,.media-library-widget-modal .system-status-counter__status-icon--error::before,form.media-form .system-status-counter__status-icon--error::before {

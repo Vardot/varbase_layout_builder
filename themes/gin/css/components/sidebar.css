@@ -2,7 +2,7 @@
   cursor: ew-resize;
   z-index: 104;
   position: absolute;
-  top: 0;
+  inset-block-start: 0;
   inset-inline-start: 0;
   padding: 0;
   display: block;
@@ -99,8 +99,8 @@
   cursor: pointer;
   background: transparent;
   display: block;
-  height: 32px;
   width: 32px;
+  height: 32px;
   border-radius: var(--gin-border-m);
   transition: background var(--gin-transition-fast);
 }
@@ -113,8 +113,8 @@
   mask-repeat: no-repeat;
   mask-position: center center;
   background-color: var(--gin-icon-color);
-  mask-image: url("../../media/sprite.svg#config-view");
-  mask-size: var(--gin-icon-size-toolbar-secondary) var(--gin-icon-size-toolbar-secondary);
+  mask-image: url("../../media/sprite.svg#sidebar-view");
+  mask-size: var(--gin-icon-size-sidebar-toggle) var(--gin-icon-size-sidebar-toggle);
   border-radius: 50%;
 }
 
@@ -133,23 +133,8 @@
 #layout-builder-modal .meta-sidebar__close {
   z-index: 104;
   position: absolute;
-  top: 18px;
-}
-
-[dir="ltr"] #layout-builder-modal .meta-sidebar__close {
-  right: var(--gin-spacing-m);
-}
-
-[dir="ltr"] #layout-builder-modal .meta-sidebar__close {
-  left: var(--gin-spacing-m);
-}
-
-[dir="rtl"] #layout-builder-modal .meta-sidebar__close {
-  left: var(--gin-spacing-m);
-}
-
-[dir="rtl"] #layout-builder-modal .meta-sidebar__close {
-  right: var(--gin-spacing-m);
+  inset-block-start: 18px;
+  inset-inline-end: var(--gin-spacing-m);
 }
 
 @media (min-width: 64em) {
@@ -166,28 +151,13 @@
 #layout-builder-modal .meta-sidebar__overlay {
   z-index: 102;
   position: fixed;
-  top: 0;
+  inset-block-start: 0;
+  inset-inline-start: 0;
   width: 100%;
   height: 100%;
   opacity: 0;
   visibility: hidden;
   background: var(--gin-bg-layer2);
-}
-
-[dir="ltr"] #layout-builder-modal .meta-sidebar__overlay {
-  left: 0;
-}
-
-[dir="ltr"] #layout-builder-modal .meta-sidebar__overlay {
-  right: 0;
-}
-
-[dir="rtl"] #layout-builder-modal .meta-sidebar__overlay {
-  right: 0;
-}
-
-[dir="rtl"] #layout-builder-modal .meta-sidebar__overlay {
-  left: 0;
 }
 
 #layout-builder-modal body[data-meta-sidebar=open] .meta-sidebar__overlay {
