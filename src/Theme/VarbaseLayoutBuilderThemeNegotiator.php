@@ -172,6 +172,118 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
       return $this->configFactory->get('system.theme')->get('admin');
     }
 
+    // AJAX trigger for section configuration forms (including background settings).
+    if (isset($current_request['_triggering_element_name'])) {
+      $triggering_element = $current_request['_triggering_element_name'];
+
+      // Handle section configuration AJAX requests
+      if (str_contains($triggering_element, 'configure_section')
+          || str_contains($triggering_element, 'layout_settings')
+          || str_contains($triggering_element, 'section_settings')
+          || str_contains($triggering_element, 'background')
+          || str_contains($triggering_element, 'bootstrap_styles')
+          || str_contains($triggering_element, 'layout_builder_styles')) {
+
+        return $this->configFactory->get('system.theme')->get('admin');
+      }
+
+      // Handle block creation and configuration AJAX requests
+      if (str_contains($triggering_element, 'add_block')
+          || str_contains($triggering_element, 'configure_block')
+          || str_contains($triggering_element, 'update_block')
+          || str_contains($triggering_element, 'block_form')
+          || str_contains($triggering_element, 'inline_block')
+          || str_contains($triggering_element, 'custom_block')) {
+
+        return $this->configFactory->get('system.theme')->get('admin');
+      }
+
+      // Handle media-related AJAX requests in layout builder context
+      if (str_contains($triggering_element, 'media')
+          || str_contains($triggering_element, 'field_media')
+          || str_contains($triggering_element, 'entity_browser')
+          || str_contains($triggering_element, 'upload')) {
+
+        // Check if this is in layout builder context
+        $route_name = $this->requestStack->getCurrentRequest()->attributes->get('_route');
+        $path = $this->requestStack->getCurrentRequest()->getPathInfo();
+
+        if (($route_name && (str_contains($route_name, 'layout_builder') || str_contains($route_name, 'block')))
+            || ($path && (str_contains($path, 'layout_builder') || str_contains($path, 'layout')))) {
+
+          return $this->configFactory->get('system.theme')->get('admin');
+        }
+      }
+
+      // Handle general layout builder form AJAX requests
+      if (str_contains($triggering_element, 'layout_builder')
+          || str_contains($triggering_element, 'configure-section')
+          || str_contains($triggering_element, 'blb_')) {
+
+        return $this->configFactory->get('system.theme')->get('admin');
+      }
+
+      // Handle form element AJAX requests that might be in layout builder context
+      if (str_contains($triggering_element, 'field_')
+          || str_contains($triggering_element, 'settings')
+          || str_contains($triggering_element, 'ajax')) {
+
+        // Check if this is in layout builder context via route or path
+        $route_name = $this->requestStack->getCurrentRequest()->attributes->get('_route');
+        $path = $this->requestStack->getCurrentRequest()->getPathInfo();
+
+        if (($route_name && (str_contains($route_name, 'layout_builder')
+                          || str_contains($route_name, 'add_block')
+                          || str_contains($route_name, 'update_block')))
+            || ($path && (str_contains($path, 'layout_builder')
+                       || str_contains($path, '/layout/')))) {
+
+          return $this->configFactory->get('system.theme')->get('admin');
+        }
+      }
+    }
+
+    // Handle layout builder form IDs and routes
+    $route_name = $this->requestStack->getCurrentRequest()->attributes->get('_route');
+    if ($route_name && (str_contains($route_name, 'layout_builder.configure_section')
+                     || str_contains($route_name, 'layout_builder.add_block')
+                     || str_contains($route_name, 'layout_builder.update_block')
+                     || str_contains($route_name, 'layout_builder.choose_block')
+                     || str_contains($route_name, 'layout_builder.choose_section'))) {
+      return $this->configFactory->get('system.theme')->get('admin');
+    }
+
+    // Check for form_id indicating layout builder operations
+    if (isset($current_request['form_id'])) {
+      $form_id = $current_request['form_id'];
+      if (str_contains($form_id, 'layout_builder_configure_section')
+          || str_contains($form_id, 'configure_section')
+          || str_contains($form_id, 'layout_builder_add_block')
+          || str_contains($form_id, 'layout_builder_update_block')
+          || str_contains($form_id, 'layout_builder_configure_block')
+          || str_contains($form_id, 'bootstrap_styles')
+          || str_contains($form_id, 'inline_block')
+          || str_contains($form_id, 'custom_block')) {
+
+        return $this->configFactory->get('system.theme')->get('admin');
+      }
+    }
+
+    // Additional check for dialog options that might contain layout builder context
+    if (isset($current_request['dialogOptions'])) {
+      $dialog_options = $current_request['dialogOptions'];
+      if (is_array($dialog_options)) {
+        $dialog_str = json_encode($dialog_options);
+        if (str_contains($dialog_str, 'layout_builder')
+            || str_contains($dialog_str, 'layout-builder')
+            || str_contains($dialog_str, 'add_block')
+            || str_contains($dialog_str, 'configure_block')) {
+
+          return $this->configFactory->get('system.theme')->get('admin');
+        }
+      }
+    }
+
     return $this->configFactory->get('system.theme')->get('default');
 
   }

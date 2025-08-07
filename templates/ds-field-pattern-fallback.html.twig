@@ -1,0 +1,48 @@
+{#
+/**
+ * @file
+ * Fallback template for DS pattern field template.
+ * 
+ * This template provides a fallback rendering for the 'pattern' DS field
+ * template plugin to prevent fatal errors.
+ *
+ * Available variables:
+ * - field: Array representing the field.
+ * - settings: Settings for the template.
+ * - label: Field label.
+ * - field_item_wrapper_element: HTML element for field items wrapper.
+ * - field_items_classes: CSS classes for field items.
+ * - label_wrapper: Whether to wrap the label.
+ * - label_wrapper_element: HTML element for label wrapper.
+ */
+#}
+
+{# Label wrapper element start #}
+{% if label and label_wrapper %}
+  <{{ label_wrapper_element|default('h3') }}{{ label_attributes }}>
+{% endif %}
+
+{# Label #}
+{% if label %}
+  {{ label }}
+{% endif %}
+
+{# Label wrapper element end #}
+{% if label and label_wrapper %}
+  </{{ label_wrapper_element|default('h3') }}>
+{% endif %}
+
+{# Field items wrapper start #}
+{% if field_items_wrapper %}
+  <{{ field_item_wrapper_element|default('div') }}{% if field_items_classes %} class="{{ field_items_classes }}"{% endif %}>
+{% endif %}
+
+{# Field items #}
+{% for item in items %}
+  {{ item.content }}
+{% endfor %}
+
+{# Field items wrapper end #}
+{% if field_items_wrapper %}
+  </{{ field_item_wrapper_element|default('div') }}>
+{% endif %}
