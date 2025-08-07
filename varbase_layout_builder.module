@@ -284,6 +284,22 @@ function varbase_layout_builder_theme() {
       'render element' => 'content',
       'base hook' => 'layout',
     ],
+    'ds_field_pattern_fallback' => [
+      'template' => 'ds-field-pattern-fallback',
+      'variables' => [
+        'field' => [],
+        'settings' => [],
+        'label' => NULL,
+        'label_hidden' => FALSE,
+        'field_item_wrapper_element' => 'div',
+        'field_items_classes' => '',
+        'field_items_wrapper' => FALSE,
+        'label_wrapper' => FALSE,
+        'label_wrapper_element' => 'h3',
+        'label_attributes' => [],
+        'items' => [],
+      ],
+    ],
   ];
 }
 

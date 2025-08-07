@@ -10,6 +10,7 @@
  * - field: Array representing the field.
  * - settings: Settings for the template.
  * - label: Field label.
+ * - label_hidden: Whether the label is hidden.
  * - field_item_wrapper_element: HTML element for field items wrapper.
  * - field_items_classes: CSS classes for field items.
  * - label_wrapper: Whether to wrap the label.
@@ -17,19 +18,20 @@
  */
 #}
 
-{# Label wrapper element start #}
-{% if label and label_wrapper %}
-  <{{ label_wrapper_element|default('h3') }}{{ label_attributes }}>
-{% endif %}
+{# Only show label if it exists and is not hidden #}
+{% if label and not label_hidden %}
+  {# Label wrapper element start #}
+  {% if label_wrapper %}
+    <{{ label_wrapper_element|default('h3') }}{{ label_attributes }}>
+  {% endif %}
 
-{# Label #}
-{% if label %}
+  {# Label #}
   {{ label }}
-{% endif %}
 
-{# Label wrapper element end #}
-{% if label and label_wrapper %}
-  </{{ label_wrapper_element|default('h3') }}>
+  {# Label wrapper element end #}
+  {% if label_wrapper %}
+    </{{ label_wrapper_element|default('h3') }}>
+  {% endif %}
 {% endif %}
 
 {# Field items wrapper start #}

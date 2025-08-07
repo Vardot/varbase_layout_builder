@@ -8,7 +8,7 @@ use Drupal\ds\Attribute\DsFieldTemplate;
 
 /**
  * Fallback DS field template plugin for pattern.
- *
+ * 
  * This provides a fallback for the 'pattern' plugin that was referenced
  * but missing, preventing fatal errors in the field template system.
  */
@@ -17,7 +17,7 @@ use Drupal\ds\Attribute\DsFieldTemplate;
   title: new TranslatableMarkup('Pattern (Fallback)'),
   theme: 'ds_field_pattern_fallback',
 )]
-class Pattern extends DsFieldTemplateBase {
+class DsFieldPatternFallback extends DsFieldTemplateBase {
 
   /**
    * {@inheritdoc}
