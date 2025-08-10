@@ -65,7 +65,7 @@ function varbase_layout_builder_update_101004() {
     && \Drupal::service('module_handler')->moduleExists('layout_builder_perms')) {
 
     // Set a higher module weight for layout_builder_at.
-    // To Ensure layout_builder_at's plugins is registered after the one from layout_builder_perms. 
+    // To Ensure layout_builder_at's plugins is registered after the one from layout_builder_perms.
     ModuleInstallerFactory::setModuleWeightAfterInstallation('layout_builder_at', '', ['layout_builder_perms']);
   }
 }

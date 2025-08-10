@@ -3,27 +3,12 @@
 }
 
 #layout-builder-modal #toolbar-item-workbench-tray .toolbar-icon:before {
+  inset-inline-start: var(--gin-spacing-s);
   background: var(--gin-icon-color);
   background-image: none;
   mask-size: var(--gin-icon-size-toolbar) var(--gin-icon-size-toolbar);
   mask-repeat: no-repeat;
   mask-position: center center;
-}
-
-[dir="ltr"] #layout-builder-modal #toolbar-item-workbench-tray .toolbar-icon:before {
-  left: var(--gin-spacing-s);
-}
-
-[dir="ltr"] #layout-builder-modal #toolbar-item-workbench-tray .toolbar-icon:before {
-  right: var(--gin-spacing-s);
-}
-
-[dir="rtl"] #layout-builder-modal #toolbar-item-workbench-tray .toolbar-icon:before {
-  right: var(--gin-spacing-s);
-}
-
-[dir="rtl"] #layout-builder-modal #toolbar-item-workbench-tray .toolbar-icon:before {
-  left: var(--gin-spacing-s);
 }
 
 #layout-builder-modal #toolbar-item-workbench-tray .toolbar-icon:hover:before,#layout-builder-modal #toolbar-item-workbench-tray .toolbar-icon.is-active:before {

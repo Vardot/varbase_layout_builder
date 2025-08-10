@@ -4,7 +4,7 @@
 
 #layout-builder-modal .erl-field .erl-disabled-items,#layout-builder-modal .erl-field .erl-disabled-items.form-item.form-wrapper {
   padding: var(--gin-spacing-m);
-  margin-bottom: -6rem;
+  margin-block-end: -6rem;
   background: #f1f1f3;
   border-radius: var(--gin-border-m);
 }
@@ -18,7 +18,8 @@
 }
 
 #layout-builder-modal .erl-field .erl-disabled-items .fieldset__label,#layout-builder-modal .erl-field .erl-disabled-items.form-item.form-wrapper .fieldset__label {
-  padding: var(--gin-spacing-m) 0 var(--gin-spacing-l);
+  padding-block: var(--gin-spacing-m) var(--gin-spacing-l);
+  padding-inline: 0;
 }
 
 #layout-builder-modal .erl-field .erl-disabled-items__description,#layout-builder-modal .erl-field .erl-disabled-items.form-item.form-wrapper__description {
@@ -48,7 +49,8 @@
   color: var(--gin-color-primary);
   line-height: 1.3;
   background: var(--gin-bg-item-hover);
-  padding: var(--gin-spacing-m) var(--gin-spacing-m) 34px var(--gin-spacing-m);
+  padding-block: var(--gin-spacing-m) 34px;
+  padding-inline: var(--gin-spacing-m);
   border: 1px dashed var(--gin-color-primary);
   border-radius: var(--gin-border-m);
   transform: none;
@@ -67,20 +69,8 @@
   opacity: 1;
 }
 
-[dir="ltr"] #layout-builder-modal .erl-field .erl-add-content--single button .icon {
-  margin-right: var(--gin-spacing-xs);
-}
-
-[dir="ltr"] #layout-builder-modal .erl-field .erl-add-content--single button .icon {
-  margin-left: var(--gin-spacing-xs);
-}
-
-[dir="rtl"] #layout-builder-modal .erl-field .erl-add-content--single button .icon {
-  margin-left: var(--gin-spacing-xs);
-}
-
-[dir="rtl"] #layout-builder-modal .erl-field .erl-add-content--single button .icon {
-  margin-right: var(--gin-spacing-xs);
+#layout-builder-modal .erl-field .erl-add-content--single button .icon {
+  margin-inline-end: var(--gin-spacing-xs);
 }
 
 #layout-builder-modal .erl-field .layout-radio-item>div {
@@ -88,20 +78,8 @@
   align-items: center;
 }
 
-[dir="ltr"] #layout-builder-modal .erl-field .layout-radio-item .form-item {
-  margin-left: var(--gin-spacing-xs);
-}
-
-[dir="ltr"] #layout-builder-modal .erl-field .layout-radio-item .form-item {
-  margin-right: var(--gin-spacing-xs);
-}
-
-[dir="rtl"] #layout-builder-modal .erl-field .layout-radio-item .form-item {
-  margin-right: var(--gin-spacing-xs);
-}
-
-[dir="rtl"] #layout-builder-modal .erl-field .layout-radio-item .form-item {
-  margin-left: var(--gin-spacing-xs);
+#layout-builder-modal .erl-field .layout-radio-item .form-item {
+  margin-inline-start: var(--gin-spacing-xs);
 }
 
 #layout-builder-modal .erl-field .layout-radio-item.active {
@@ -131,17 +109,18 @@
 }
 
 #layout-builder-modal .erl-disabled-wrapper .erl-item:not(:last-of-type) {
-  margin-bottom: var(--gin-spacing-m);
+  margin-block-end: var(--gin-spacing-m);
 }
 
 #layout-builder-modal .erl-disabled-wrapper .erl-disabled-items__description {
-  top: var(--gin-spacing-m);
+  inset-block-start: var(--gin-spacing-m);
 }
 
 #layout-builder-modal .erl-item label.paragraph-type-label,#layout-builder-modal .erl-item label.paragraph-type--label {
   margin: -1px;
   position: absolute;
-  top: 12px;
+  inset-block-start: 12px;
+  inset-inline-start: 50%;
   border: 0 none;
   font-style: normal;
   color: var(--gin-color-text-light);
@@ -149,45 +128,26 @@
 }
 
 [dir="ltr"] #layout-builder-modal .erl-item label.paragraph-type-label,[dir="ltr"] #layout-builder-modal .erl-item label.paragraph-type--label {
-  left: 50%;
   transform: translate(-50%);
 }
 
 [dir="ltr"] #layout-builder-modal .erl-item label.paragraph-type-label,[dir="ltr"] #layout-builder-modal .erl-item label.paragraph-type--label {
-  right: 50%;
   transform: translate(50%);
 }
 
 [dir="rtl"] #layout-builder-modal .erl-item label.paragraph-type-label,[dir="rtl"] #layout-builder-modal .erl-item label.paragraph-type--label {
-  right: 50%;
   transform: translate(50%);
 }
 
 [dir="rtl"] #layout-builder-modal .erl-item label.paragraph-type-label,[dir="rtl"] #layout-builder-modal .erl-item label.paragraph-type--label {
-  left: 50%;
   transform: translate(-50%);
 }
 
 #layout-builder-modal .erl-item .layout-controls {
   opacity: 1;
   position: absolute;
-  top: var(--gin-spacing-xs);
-}
-
-[dir="ltr"] #layout-builder-modal .erl-item .layout-controls {
-  left: var(--gin-spacing-xxs);
-}
-
-[dir="ltr"] #layout-builder-modal .erl-item .layout-controls {
-  right: var(--gin-spacing-xxs);
-}
-
-[dir="rtl"] #layout-builder-modal .erl-item .layout-controls {
-  right: var(--gin-spacing-xxs);
-}
-
-[dir="rtl"] #layout-builder-modal .erl-item .layout-controls {
-  left: var(--gin-spacing-xxs);
+  inset-inline-start: var(--gin-spacing-xxs);
+  inset-block-start: var(--gin-spacing-xs);
 }
 
 #layout-builder-modal .erl-item .paragraph .field {
@@ -211,44 +171,14 @@
 
 #layout-builder-modal .erl-item .paragraph .field--name-field-paragraphs .field__item {
   flex-basis: 100%;
-}
-
-[dir="ltr"] #layout-builder-modal .erl-item .paragraph .field--name-field-paragraphs .field__item {
-  margin-right: var(--gin-spacing-xs);
-}
-
-[dir="ltr"] #layout-builder-modal .erl-item .paragraph .field--name-field-paragraphs .field__item {
-  margin-left: var(--gin-spacing-xs);
-}
-
-[dir="rtl"] #layout-builder-modal .erl-item .paragraph .field--name-field-paragraphs .field__item {
-  margin-left: var(--gin-spacing-xs);
-}
-
-[dir="rtl"] #layout-builder-modal .erl-item .paragraph .field--name-field-paragraphs .field__item {
-  margin-right: var(--gin-spacing-xs);
+  margin-inline-end: var(--gin-spacing-xs);
 }
 
 #layout-builder-modal .erl-item .erl-actions {
   visibility: visible;
   position: absolute;
-  top: var(--gin-spacing-xs);
-}
-
-[dir="ltr"] #layout-builder-modal .erl-item .erl-actions {
-  right: var(--gin-spacing-xxs);
-}
-
-[dir="ltr"] #layout-builder-modal .erl-item .erl-actions {
-  left: var(--gin-spacing-xxs);
-}
-
-[dir="rtl"] #layout-builder-modal .erl-item .erl-actions {
-  left: var(--gin-spacing-xxs);
-}
-
-[dir="rtl"] #layout-builder-modal .erl-item .erl-actions {
-  right: var(--gin-spacing-xxs);
+  inset-inline-end: var(--gin-spacing-xxs);
+  inset-block-start: var(--gin-spacing-xs);
 }
 
 #layout-builder-modal .erl-layout.erl-item.form-wrapper:hover>button.erl-add-content__toggle,#layout-builder-modal .erl-layout.erl-item.form-wrapper:hover>button.layout-paragraphs-add-content__toggle {

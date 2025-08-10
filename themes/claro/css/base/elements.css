@@ -172,11 +172,6 @@
   padding: 0;
 }
 
-#layout-builder-modal abbr[title],.media-library-widget-modal abbr[title],form.media-form abbr[title] {
-  -webkit-text-decoration: none;
-          text-decoration: none;
-}
-
 #layout-builder-modal code,.media-library-widget-modal code,form.media-form code {
   margin: .5em 0;
 }

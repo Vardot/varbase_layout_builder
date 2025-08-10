@@ -109,6 +109,10 @@
   align-self: center;
 }
 
+#layout-builder-modal .form-actions>.form-wrapper,.media-library-widget-modal .form-actions>.form-wrapper,form.media-form .form-actions>.form-wrapper {
+  margin-inline: 0 var(--space-s);
+}
+
 #layout-builder-modal .confirm-parent,#layout-builder-modal .password-parent,.media-library-widget-modal .confirm-parent,.media-library-widget-modal .password-parent,form.media-form .confirm-parent,form.media-form .password-parent {
   overflow: visible;
   width: auto;

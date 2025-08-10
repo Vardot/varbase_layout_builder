@@ -30,74 +30,35 @@
 }
 
 #layout-builder-modal .region-breadcrumb,.media-library-widget-modal .region-breadcrumb,form.media-form .region-breadcrumb {
-  margin-top: var(--gin-spacing-m);
+  margin-block-start: var(--gin-spacing-m);
 }
 
 #layout-builder-modal .toolbar .toolbar-bar,.media-library-widget-modal .toolbar .toolbar-bar,form.media-form .toolbar .toolbar-bar {
   position: fixed;
+  inset-inline-start: 0;
   width: 100%;
   background: #100f10;
   box-shadow: none;
-}
-
-[dir="ltr"] #layout-builder-modal .toolbar .toolbar-bar,[dir="ltr"] .media-library-widget-modal .toolbar .toolbar-bar,[dir="ltr"] form.media-form .toolbar .toolbar-bar {
-  left: 0;
-}
-
-[dir="ltr"] #layout-builder-modal .toolbar .toolbar-bar,[dir="ltr"] .media-library-widget-modal .toolbar .toolbar-bar,[dir="ltr"] form.media-form .toolbar .toolbar-bar {
-  right: 0;
-}
-
-[dir="rtl"] #layout-builder-modal .toolbar .toolbar-bar,[dir="rtl"] .media-library-widget-modal .toolbar .toolbar-bar,[dir="rtl"] form.media-form .toolbar .toolbar-bar {
-  right: 0;
-}
-
-[dir="rtl"] #layout-builder-modal .toolbar .toolbar-bar,[dir="rtl"] .media-library-widget-modal .toolbar .toolbar-bar,[dir="rtl"] form.media-form .toolbar .toolbar-bar {
-  left: 0;
 }
 
 #layout-builder-modal .toolbar .toolbar-menu,#layout-builder-modal .toolbar-horizontal .menu-item>.toolbar-menu,#layout-builder-modal .toolbar-horizontal .toolbar-tray .menu-item--expanded.menu-item--expanded,#layout-builder-modal .toolbar .toolbar-tray,.media-library-widget-modal .toolbar .toolbar-menu,.media-library-widget-modal .toolbar-horizontal .menu-item>.toolbar-menu,.media-library-widget-modal .toolbar-horizontal .toolbar-tray .menu-item--expanded.menu-item--expanded,.media-library-widget-modal .toolbar .toolbar-tray,form.media-form .toolbar .toolbar-menu,form.media-form .toolbar-horizontal .menu-item>.toolbar-menu,form.media-form .toolbar-horizontal .toolbar-tray .menu-item--expanded.menu-item--expanded,form.media-form .toolbar .toolbar-tray {
   background-color: var(--gin-bg-layer);
 }
 
-[dir="ltr"] #layout-builder-modal .toolbar-horizontal .toolbar-tray .toolbar-toggle-orientation,[dir="ltr"] .media-library-widget-modal .toolbar-horizontal .toolbar-tray .toolbar-toggle-orientation,[dir="ltr"] form.media-form .toolbar-horizontal .toolbar-tray .toolbar-toggle-orientation {
-  border-left: 1px solid var(--gin-border-color);
-}
-
-[dir="ltr"] #layout-builder-modal .toolbar-horizontal .toolbar-tray .toolbar-toggle-orientation,[dir="ltr"] .media-library-widget-modal .toolbar-horizontal .toolbar-tray .toolbar-toggle-orientation,[dir="ltr"] form.media-form .toolbar-horizontal .toolbar-tray .toolbar-toggle-orientation {
-  border-right: 1px solid var(--gin-border-color);
-}
-
-[dir="rtl"] #layout-builder-modal .toolbar-horizontal .toolbar-tray .toolbar-toggle-orientation,[dir="rtl"] .media-library-widget-modal .toolbar-horizontal .toolbar-tray .toolbar-toggle-orientation,[dir="rtl"] form.media-form .toolbar-horizontal .toolbar-tray .toolbar-toggle-orientation {
-  border-right: 1px solid var(--gin-border-color);
-}
-
-[dir="rtl"] #layout-builder-modal .toolbar-horizontal .toolbar-tray .toolbar-toggle-orientation,[dir="rtl"] .media-library-widget-modal .toolbar-horizontal .toolbar-tray .toolbar-toggle-orientation,[dir="rtl"] form.media-form .toolbar-horizontal .toolbar-tray .toolbar-toggle-orientation {
-  border-left: 1px solid var(--gin-border-color);
+#layout-builder-modal .toolbar-horizontal .toolbar-tray .toolbar-toggle-orientation,.media-library-widget-modal .toolbar-horizontal .toolbar-tray .toolbar-toggle-orientation,form.media-form .toolbar-horizontal .toolbar-tray .toolbar-toggle-orientation {
+  border-inline-start: 1px solid var(--gin-border-color);
 }
 
 #layout-builder-modal .toolbar-tray-horizontal ul li.menu-item .menu-item,.media-library-widget-modal .toolbar-tray-horizontal ul li.menu-item .menu-item,form.media-form .toolbar-tray-horizontal ul li.menu-item .menu-item {
-  border-bottom: 1px solid var(--gin-border-color);
+  border-block-end: 1px solid var(--gin-border-color);
 }
 
-[dir="ltr"] #layout-builder-modal .toolbar-tray-horizontal .toolbar-menu .level-1>.toolbar-box a,[dir="ltr"] .media-library-widget-modal .toolbar-tray-horizontal .toolbar-menu .level-1>.toolbar-box a,[dir="ltr"] form.media-form .toolbar-tray-horizontal .toolbar-menu .level-1>.toolbar-box a {
-  padding-right: 2.25em;
-}
-
-[dir="ltr"] #layout-builder-modal .toolbar-tray-horizontal .toolbar-menu .level-1>.toolbar-box a,[dir="ltr"] .media-library-widget-modal .toolbar-tray-horizontal .toolbar-menu .level-1>.toolbar-box a,[dir="ltr"] form.media-form .toolbar-tray-horizontal .toolbar-menu .level-1>.toolbar-box a {
-  padding-left: 2.25em;
-}
-
-[dir="rtl"] #layout-builder-modal .toolbar-tray-horizontal .toolbar-menu .level-1>.toolbar-box a,[dir="rtl"] .media-library-widget-modal .toolbar-tray-horizontal .toolbar-menu .level-1>.toolbar-box a,[dir="rtl"] form.media-form .toolbar-tray-horizontal .toolbar-menu .level-1>.toolbar-box a {
-  padding-left: 2.25em;
-}
-
-[dir="rtl"] #layout-builder-modal .toolbar-tray-horizontal .toolbar-menu .level-1>.toolbar-box a,[dir="rtl"] .media-library-widget-modal .toolbar-tray-horizontal .toolbar-menu .level-1>.toolbar-box a,[dir="rtl"] form.media-form .toolbar-tray-horizontal .toolbar-menu .level-1>.toolbar-box a {
-  padding-right: 2.25em;
+#layout-builder-modal .toolbar-tray-horizontal .toolbar-menu .level-1>.toolbar-box a,.media-library-widget-modal .toolbar-tray-horizontal .toolbar-menu .level-1>.toolbar-box a,form.media-form .toolbar-tray-horizontal .toolbar-menu .level-1>.toolbar-box a {
+  padding-inline-end: 2.25em;
 }
 
 #layout-builder-modal .toolbar-tray-horizontal .toolbar-menu .level-1>.toolbar-box .toolbar-icon.toolbar-handle,.media-library-widget-modal .toolbar-tray-horizontal .toolbar-menu .level-1>.toolbar-box .toolbar-icon.toolbar-handle,form.media-form .toolbar-tray-horizontal .toolbar-menu .level-1>.toolbar-box .toolbar-icon.toolbar-handle {
-  top: .75rem;
+  inset-block-start: .75rem;
 }
 
 #layout-builder-modal .toolbar-tray-horizontal .level-1 .menu-item--expanded>.toolbar-box a,.media-library-widget-modal .toolbar-tray-horizontal .level-1 .menu-item--expanded>.toolbar-box a,form.media-form .toolbar-tray-horizontal .level-1 .menu-item--expanded>.toolbar-box a {
@@ -164,29 +125,17 @@
 }
 
 #layout-builder-modal .gin--classic-toolbar .page-wrapper__node-edit-form .layout-region-node-secondary,.media-library-widget-modal .gin--classic-toolbar .page-wrapper__node-edit-form .layout-region-node-secondary,form.media-form .gin--classic-toolbar .page-wrapper__node-edit-form .layout-region-node-secondary {
-  padding-top: var(--gin-toolbar-y-offset);
+  padding-block-start: var(--gin-toolbar-y-offset);
 }
 
 @media (min-width: 64em) {
   #layout-builder-modal .gin--classic-toolbar table.sticky-header,.media-library-widget-modal .gin--classic-toolbar table.sticky-header,form.media-form .gin--classic-toolbar table.sticky-header {
-    margin-top: 0;
+    margin-block-start: 0;
   }
 }
 
-[dir="ltr"] #layout-builder-modal .toolbar-menu .menu-item>span,[dir="ltr"] .media-library-widget-modal .toolbar-menu .menu-item>span,[dir="ltr"] form.media-form .toolbar-menu .menu-item>span {
-  padding-left: 2.75em;
-}
-
-[dir="ltr"] #layout-builder-modal .toolbar-menu .menu-item>span,[dir="ltr"] .media-library-widget-modal .toolbar-menu .menu-item>span,[dir="ltr"] form.media-form .toolbar-menu .menu-item>span {
-  padding-right: 2.75em;
-}
-
-[dir="rtl"] #layout-builder-modal .toolbar-menu .menu-item>span,[dir="rtl"] .media-library-widget-modal .toolbar-menu .menu-item>span,[dir="rtl"] form.media-form .toolbar-menu .menu-item>span {
-  padding-right: 2.75em;
-}
-
-[dir="rtl"] #layout-builder-modal .toolbar-menu .menu-item>span,[dir="rtl"] .media-library-widget-modal .toolbar-menu .menu-item>span,[dir="rtl"] form.media-form .toolbar-menu .menu-item>span {
-  padding-left: 2.75em;
+#layout-builder-modal .toolbar-menu .menu-item>span,.media-library-widget-modal .toolbar-menu .menu-item>span,form.media-form .toolbar-menu .menu-item>span {
+  padding-inline-start: 2.75em;
 }
 
 #layout-builder-modal .toolbar .toolbar-bar .toolbar-icon-admin-toolbar-tools-help,.media-library-widget-modal .toolbar .toolbar-bar .toolbar-icon-admin-toolbar-tools-help,form.media-form .toolbar .toolbar-bar .toolbar-icon-admin-toolbar-tools-help {
@@ -200,20 +149,8 @@
 }
 
 @media (min-width: 61em) {
-  [dir="ltr"] #layout-builder-modal .toolbar .toolbar-bar .toolbar-icon-admin-toolbar-tools-help:before,[dir="ltr"] .media-library-widget-modal .toolbar .toolbar-bar .toolbar-icon-admin-toolbar-tools-help:before,[dir="ltr"] form.media-form .toolbar .toolbar-bar .toolbar-icon-admin-toolbar-tools-help:before {
-    left: var(--gin-spacing-m);
-  }
-
-  [dir="ltr"] #layout-builder-modal .toolbar .toolbar-bar .toolbar-icon-admin-toolbar-tools-help:before,[dir="ltr"] .media-library-widget-modal .toolbar .toolbar-bar .toolbar-icon-admin-toolbar-tools-help:before,[dir="ltr"] form.media-form .toolbar .toolbar-bar .toolbar-icon-admin-toolbar-tools-help:before {
-    right: var(--gin-spacing-m);
-  }
-
-  [dir="rtl"] #layout-builder-modal .toolbar .toolbar-bar .toolbar-icon-admin-toolbar-tools-help:before,[dir="rtl"] .media-library-widget-modal .toolbar .toolbar-bar .toolbar-icon-admin-toolbar-tools-help:before,[dir="rtl"] form.media-form .toolbar .toolbar-bar .toolbar-icon-admin-toolbar-tools-help:before {
-    right: var(--gin-spacing-m);
-  }
-
-  [dir="rtl"] #layout-builder-modal .toolbar .toolbar-bar .toolbar-icon-admin-toolbar-tools-help:before,[dir="rtl"] .media-library-widget-modal .toolbar .toolbar-bar .toolbar-icon-admin-toolbar-tools-help:before,[dir="rtl"] form.media-form .toolbar .toolbar-bar .toolbar-icon-admin-toolbar-tools-help:before {
-    left: var(--gin-spacing-m);
+  #layout-builder-modal .toolbar .toolbar-bar .toolbar-icon-admin-toolbar-tools-help:before,.media-library-widget-modal .toolbar .toolbar-bar .toolbar-icon-admin-toolbar-tools-help:before,form.media-form .toolbar .toolbar-bar .toolbar-icon-admin-toolbar-tools-help:before {
+    inset-inline-start: var(--gin-spacing-m);
   }
 }
 
@@ -228,63 +165,21 @@
 }
 
 #layout-builder-modal .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:before,#layout-builder-modal .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus:before,.media-library-widget-modal .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:before,.media-library-widget-modal .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus:before,form.media-form .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:before,form.media-form .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus:before {
-  top: var(--gin-spacing-s);
-}
-
-[dir="ltr"] #layout-builder-modal .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:before,[dir="ltr"] #layout-builder-modal .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus:before,[dir="ltr"] .media-library-widget-modal .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:before,[dir="ltr"] .media-library-widget-modal .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus:before,[dir="ltr"] form.media-form .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:before,[dir="ltr"] form.media-form .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus:before {
-  right: var(--gin-spacing-s);
-}
-
-[dir="ltr"] #layout-builder-modal .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:before,[dir="ltr"] #layout-builder-modal .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus:before,[dir="ltr"] .media-library-widget-modal .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:before,[dir="ltr"] .media-library-widget-modal .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus:before,[dir="ltr"] form.media-form .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:before,[dir="ltr"] form.media-form .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus:before {
-  left: var(--gin-spacing-s);
-}
-
-[dir="rtl"] #layout-builder-modal .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:before,[dir="rtl"] #layout-builder-modal .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus:before,[dir="rtl"] .media-library-widget-modal .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:before,[dir="rtl"] .media-library-widget-modal .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus:before,[dir="rtl"] form.media-form .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:before,[dir="rtl"] form.media-form .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus:before {
-  left: var(--gin-spacing-s);
-}
-
-[dir="rtl"] #layout-builder-modal .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:before,[dir="rtl"] #layout-builder-modal .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus:before,[dir="rtl"] .media-library-widget-modal .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:before,[dir="rtl"] .media-library-widget-modal .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus:before,[dir="rtl"] form.media-form .toolbar-tray-horizontal ul li.menu-item--expanded ul li.menu-item--expanded:before,[dir="rtl"] form.media-form .toolbar-tray-horizontal .toolbar-menu:not(:first-child) li.menu-item--expanded>a:focus:before {
-  right: var(--gin-spacing-s);
+  inset-block-start: var(--gin-spacing-s);
+  inset-inline-end: var(--gin-spacing-s);
 }
 
 #layout-builder-modal #admin-toolbar-search-tab .form-item::before,.media-library-widget-modal #admin-toolbar-search-tab .form-item::before,form.media-form #admin-toolbar-search-tab .form-item::before {
-  top: 6px;
+  inset-block-start: 6px;
+  inset-inline-start: 26px;
 }
 
-[dir="ltr"] #layout-builder-modal #admin-toolbar-search-tab .form-item::before,[dir="ltr"] .media-library-widget-modal #admin-toolbar-search-tab .form-item::before,[dir="ltr"] form.media-form #admin-toolbar-search-tab .form-item::before {
-  left: 26px;
-}
-
-[dir="ltr"] #layout-builder-modal #admin-toolbar-search-tab .form-item::before,[dir="ltr"] .media-library-widget-modal #admin-toolbar-search-tab .form-item::before,[dir="ltr"] form.media-form #admin-toolbar-search-tab .form-item::before {
-  right: 26px;
-}
-
-[dir="rtl"] #layout-builder-modal #admin-toolbar-search-tab .form-item::before,[dir="rtl"] .media-library-widget-modal #admin-toolbar-search-tab .form-item::before,[dir="rtl"] form.media-form #admin-toolbar-search-tab .form-item::before {
-  right: 26px;
-}
-
-[dir="rtl"] #layout-builder-modal #admin-toolbar-search-tab .form-item::before,[dir="rtl"] .media-library-widget-modal #admin-toolbar-search-tab .form-item::before,[dir="rtl"] form.media-form #admin-toolbar-search-tab .form-item::before {
-  left: 26px;
-}
-
-[dir="ltr"] #layout-builder-modal #admin-toolbar-search-input,[dir="ltr"] .media-library-widget-modal #admin-toolbar-search-input,[dir="ltr"] form.media-form #admin-toolbar-search-input {
-  padding-left: var(--gin-spacing-xl);
-}
-
-[dir="ltr"] #layout-builder-modal #admin-toolbar-search-input,[dir="ltr"] .media-library-widget-modal #admin-toolbar-search-input,[dir="ltr"] form.media-form #admin-toolbar-search-input {
-  padding-right: var(--gin-spacing-xl);
-}
-
-[dir="rtl"] #layout-builder-modal #admin-toolbar-search-input,[dir="rtl"] .media-library-widget-modal #admin-toolbar-search-input,[dir="rtl"] form.media-form #admin-toolbar-search-input {
-  padding-right: var(--gin-spacing-xl);
-}
-
-[dir="rtl"] #layout-builder-modal #admin-toolbar-search-input,[dir="rtl"] .media-library-widget-modal #admin-toolbar-search-input,[dir="rtl"] form.media-form #admin-toolbar-search-input {
-  padding-left: var(--gin-spacing-xl);
+#layout-builder-modal #admin-toolbar-search-input,.media-library-widget-modal #admin-toolbar-search-input,form.media-form #admin-toolbar-search-input {
+  padding-inline-start: var(--gin-spacing-xl);
 }
 
 #layout-builder-modal #toolbar-item-administration-tray,#layout-builder-modal .toolbar-loading #toolbar-item-administration-tray,.media-library-widget-modal #toolbar-item-administration-tray,.media-library-widget-modal .toolbar-loading #toolbar-item-administration-tray,form.media-form #toolbar-item-administration-tray,form.media-form .toolbar-loading #toolbar-item-administration-tray {
-  border-bottom: 1px solid var(--gin-border-color);
+  border-block-end: 1px solid var(--gin-border-color);
   box-shadow: 0 0 4px rgba(0, 0, 0, .1);
 }
 

@@ -28,6 +28,7 @@
 }
 
 #layout-builder-modal .field-plugin-settings-edit-wrapper,.media-library-widget-modal .field-plugin-settings-edit-wrapper,form.media-form .field-plugin-settings-edit-wrapper {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -40,8 +41,9 @@
 }
 
 #layout-builder-modal .field-plugin-settings-edit-wrapper .ajax-progress--throbber,.media-library-widget-modal .field-plugin-settings-edit-wrapper .ajax-progress--throbber,form.media-form .field-plugin-settings-edit-wrapper .ajax-progress--throbber {
-  margin-right: 0;
-  margin-left: 0;
+  position: absolute;
+  inset-block-start: 1.5625rem;
+  margin-inline: 0;
 }
 
 #layout-builder-modal .draggable.field-plugin-settings-editing,#layout-builder-modal .draggable.drag-previous.field-plugin-settings-editing,.media-library-widget-modal .draggable.field-plugin-settings-editing,.media-library-widget-modal .draggable.drag-previous.field-plugin-settings-editing,form.media-form .draggable.field-plugin-settings-editing,form.media-form .draggable.drag-previous.field-plugin-settings-editing {
