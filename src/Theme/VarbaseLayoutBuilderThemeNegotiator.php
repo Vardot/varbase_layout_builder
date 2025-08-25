@@ -109,6 +109,57 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
       $current_request = $this->requestStack->getCurrentRequest()->request->all();
     }
 
+    // Check if this is a preview refresh after block configuration.
+    // When blocks are saved, the preview should use the frontend theme.
+    $is_preview_refresh = FALSE;
+    if (isset($current_request['_triggering_element_value'])) {
+      $triggering_value = $current_request['_triggering_element_value'];
+      if ($triggering_value === 'Update' || $triggering_value === 'Add block' || $triggering_value === 'Save') {
+        $is_preview_refresh = TRUE;
+      }
+    }
+
+    // Also check the op parameter for block operations
+    if (!$is_preview_refresh && isset($current_request['op'])) {
+      $op_value = $current_request['op'];
+      if ($op_value === 'Update' || $op_value === 'Add block' || $op_value === 'Save') {
+        $is_preview_refresh = TRUE;
+      }
+    }
+
+    // Check if we're in a layout builder preview context
+    $is_layout_preview = FALSE;
+    if (isset($current_request['ajax_page_state'])
+      && isset($current_request['ajax_page_state']['theme'])
+      && $current_request['ajax_page_state']['theme'] == $this->configFactory->get('system.theme')->get('default')) {
+      
+      // This is a request originating from the frontend theme
+      if (isset($current_request['_wrapper_format'])
+        && $current_request['_wrapper_format'] == 'drupal_ajax') {
+        $is_layout_preview = TRUE;
+      }
+      
+      // Also check if it's a layout builder rebuild request
+      if (isset($current_request['form_id'])
+        && (str_contains($current_request['form_id'], 'layout_builder')
+          || str_contains($current_request['form_id'], 'layout_builder_form'))) {
+        $is_layout_preview = TRUE;
+      }
+    }
+
+    // If this is a preview refresh and we're in layout preview context, use frontend theme
+    if ($is_preview_refresh && $is_layout_preview) {
+      return $this->configFactory->get('system.theme')->get('default');
+    }
+    
+    // Additional check: if dialog is closed after block config, ensure preview uses frontend theme
+    if (isset($current_request['dialogOptions'])
+      && isset($current_request['dialogOptions']['target'])
+      && $current_request['dialogOptions']['target'] == 'layout-builder-modal'
+      && $is_preview_refresh) {
+      return $this->configFactory->get('system.theme')->get('default');
+    }
+
     // Media Library Theme Negotiator.
     if (isset($current_request['_triggering_element_name'])
       && str_contains($current_request['_triggering_element_name'], 'media-library')) {
@@ -165,15 +216,16 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
       return $this->configFactory->get('system.theme')->get('admin');
     }
 
-    // AJAX trigger for any block form field.
+    // AJAX trigger for any block form field - but not for preview refresh.
     if (isset($current_request['_triggering_element_name'])
-      && str_contains($current_request['_triggering_element_name'], 'block_form-field')) {
+      && str_contains($current_request['_triggering_element_name'], 'block_form-field')
+      && !$is_preview_refresh) {
 
       return $this->configFactory->get('system.theme')->get('admin');
     }
 
     // AJAX trigger for section configuration forms (including background settings).
-    if (isset($current_request['_triggering_element_name'])) {
+    if (isset($current_request['_triggering_element_name']) && !$is_preview_refresh) {
       $triggering_element = $current_request['_triggering_element_name'];
 
       // Handle section configuration AJAX requests
@@ -187,7 +239,7 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
         return $this->configFactory->get('system.theme')->get('admin');
       }
 
-      // Handle block creation and configuration AJAX requests
+      // Handle block creation and configuration AJAX requests - but not preview refresh
       if (str_contains($triggering_element, 'add_block')
           || str_contains($triggering_element, 'configure_block')
           || str_contains($triggering_element, 'update_block')
@@ -198,7 +250,7 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
         return $this->configFactory->get('system.theme')->get('admin');
       }
 
-      // Handle media-related AJAX requests in layout builder context
+      // Handle media-related AJAX requests in layout builder context - but not preview refresh
       if (str_contains($triggering_element, 'media')
           || str_contains($triggering_element, 'field_media')
           || str_contains($triggering_element, 'entity_browser')
@@ -215,7 +267,7 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
         }
       }
 
-      // Handle general layout builder form AJAX requests
+      // Handle general layout builder form AJAX requests - but not preview refresh
       if (str_contains($triggering_element, 'layout_builder')
           || str_contains($triggering_element, 'configure-section')
           || str_contains($triggering_element, 'blb_')) {
@@ -223,7 +275,7 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
         return $this->configFactory->get('system.theme')->get('admin');
       }
 
-      // Handle form element AJAX requests that might be in layout builder context
+      // Handle form element AJAX requests that might be in layout builder context - but not preview refresh
       if (str_contains($triggering_element, 'field_')
           || str_contains($triggering_element, 'settings')
           || str_contains($triggering_element, 'ajax')) {
