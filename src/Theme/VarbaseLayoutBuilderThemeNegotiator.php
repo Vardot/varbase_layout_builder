@@ -132,13 +132,13 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
     if (isset($current_request['ajax_page_state'])
       && isset($current_request['ajax_page_state']['theme'])
       && $current_request['ajax_page_state']['theme'] == $this->configFactory->get('system.theme')->get('default')) {
-      
+
       // This is a request originating from the frontend theme
       if (isset($current_request['_wrapper_format'])
         && $current_request['_wrapper_format'] == 'drupal_ajax') {
         $is_layout_preview = TRUE;
       }
-      
+
       // Also check if it's a layout builder rebuild request
       if (isset($current_request['form_id'])
         && (str_contains($current_request['form_id'], 'layout_builder')
@@ -151,7 +151,7 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
     if ($is_preview_refresh && $is_layout_preview) {
       return $this->configFactory->get('system.theme')->get('default');
     }
-    
+
     // Additional check: if dialog is closed after block config, ensure preview uses frontend theme
     if (isset($current_request['dialogOptions'])
       && isset($current_request['dialogOptions']['target'])

@@ -11,6 +11,10 @@ node_modules
 *.*~
 .vim
 
+# Ignore Yarn
+.yarn/*
+
+
 # Eclipse settings files.
 .project
 .pydevproject

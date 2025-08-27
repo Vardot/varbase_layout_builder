@@ -8,7 +8,7 @@ use Drupal\ds\Attribute\DsFieldTemplate;
 
 /**
  * Fallback DS field template plugin for pattern.
- * 
+ *
  * This provides a fallback for the 'pattern' plugin that was referenced
  * but missing, preventing fatal errors in the field template system.
  */
