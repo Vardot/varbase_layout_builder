@@ -733,7 +733,8 @@ form.media-form input[type=text] {
 }
 
 #layout-builder-modal .fieldset__label,
-#layout-builder-modal .fieldset__prefix {
+#layout-builder-modal .fieldset__prefix,
+#layout-builder-modal .paragraph-type-label {
   color: #fff !important;
 }
 
@@ -796,15 +797,17 @@ form.media-form input[type=text] {
   background: transparent !important;
 }
 
-#layout-builder-modal .field-group-tabs-wrapper .horizontal-tab-button {
+#layout-builder-modal .form-wrapper .field-group-tabs-wrapper .horizontal-tabs .horizontal-tabs-list {
+  padding: 0;
+}
+
+#layout-builder-modal .form-wrapper .field-group-tabs-wrapper .horizontal-tabs .horizontal-tabs-list .horizontal-tab-button {
   margin-bottom: 0 !important;
+  margin-right: 0;
+  margin-left: 0;
 }
 
-#layout-builder-modal .field-group-tabs-wrapper .horizontal-tab-button span.summary {
-  display: inline;
-}
-
-#layout-builder-modal .horizontal-tab-button .summary {
+#layout-builder-modal .form-wrapper .field-group-tabs-wrapper .horizontal-tabs .horizontal-tabs-list .horizontal-tab-button span.summary {
   display: inline-block;
 }
 

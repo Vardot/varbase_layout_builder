@@ -613,7 +613,8 @@ form.media-form {
   }
 
   .fieldset__label,
-  .fieldset__prefix {
+  .fieldset__prefix,
+  .paragraph-type-label {
     color: #fff !important;
   }
 
@@ -692,19 +693,23 @@ form.media-form {
     }
   }
 
-  .field-group-tabs-wrapper {
-    .horizontal-tab-button {
-      margin-bottom: 0 !important;
-
-      span.summary {
-        display: inline;
+  .form-wrapper {
+    .field-group-tabs-wrapper {
+      .horizontal-tabs {
+        .horizontal-tabs-list {
+          padding: 0;
+      
+          .horizontal-tab-button {
+            margin-bottom: 0 !important;
+            margin-right: 0;
+            margin-left: 0;
+      
+            span.summary {
+              display: inline-block;
+            }
+          }
+        }
       }
-    } 
-  }
-
-  .horizontal-tab-button {
-    .summary {
-      display: inline-block;
     }
   }
 
