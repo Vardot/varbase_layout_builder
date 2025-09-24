@@ -129,26 +129,25 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
 
     // Check if we're in a layout builder preview context
     $is_layout_preview = FALSE;
-    if (isset($current_request['ajax_page_state'])
-      && isset($current_request['ajax_page_state']['theme'])
-      && $current_request['ajax_page_state']['theme'] == $this->configFactory->get('system.theme')->get('default')) {
-
-      // This is a request originating from the frontend theme
-      if (isset($current_request['_wrapper_format'])
-        && $current_request['_wrapper_format'] == 'drupal_ajax') {
-        $is_layout_preview = TRUE;
-      }
-
-      // Also check if it's a layout builder rebuild request
-      if (isset($current_request['form_id'])
-        && (str_contains($current_request['form_id'], 'layout_builder')
-          || str_contains($current_request['form_id'], 'layout_builder_form'))) {
-        $is_layout_preview = TRUE;
-      }
+    // This is a request originating from the frontend theme
+    if (isset($current_request['_wrapper_format'])
+      && $current_request['_wrapper_format'] == 'drupal_ajax') {
+      $is_layout_preview = TRUE;
     }
+    
+    // Also check if it's a layout builder rebuild request
+    if (!$is_layout_preview && isset($current_request['form_id'])
+      && (str_contains($current_request['form_id'], 'layout_builder')
+        || str_contains($current_request['form_id'], 'layout_builder_form'))) {
+      $is_layout_preview = TRUE;
+    }
+
 
     // If this is a preview refresh and we're in layout preview context, use frontend theme
     if ($is_preview_refresh && $is_layout_preview) {
+      $admin_theme = $this->configFactory->get('system.theme')->get('admin');
+      $this->loadAdminThemeCallbacks($admin_theme); // Always load admin theme callbacks
+
       return $this->configFactory->get('system.theme')->get('default');
     }
 
@@ -338,6 +337,16 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
 
     return $this->configFactory->get('system.theme')->get('default');
 
+  }
+
+  protected function loadAdminThemeCallbacks(string $theme): void {
+    if (!function_exists($theme . '_form_after_build') && $this->themeHandler->themeExists($theme)) {
+      $path = $this->themeHandler->getTheme($theme)->getPath();
+      $file = DRUPAL_ROOT . '/' . $path . '/' . $theme . '.theme';
+      if (is_file($file)) {
+        include_once $file;
+      }
+    }
   }
 
 }
