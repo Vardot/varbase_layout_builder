@@ -1,7 +1,11 @@
 node_modules/**/*
+.yarn/**/*
 # Ignore deliberately malformed YAML files.
 drupalci.yml
 
 webpack.config.js
 webpack.config.dev.js
 webpack.config.build.js
+webpack.config.build.claro9.js
+webpack.config.build.claro10.js
+webpack.config.build.plugins.js

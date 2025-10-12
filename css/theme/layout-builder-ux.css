@@ -86,7 +86,7 @@
 
 .layout-builder__link--add {
   display: block;
-  padding: .5em 0;
+  padding: 0.5em 0;
   padding-left: 30px;
   transition: all 100ms linear;
   text-transform: uppercase;
@@ -152,7 +152,7 @@
 .layout-builder__section .ui-sortable-helper {
   border: 2px solid #618dac;
   outline: initial;
-  box-shadow: 0 10px 24px 0 rgba(0, 0, 0, .5);
+  box-shadow: 0 10px 24px 0 rgba(0, 0, 0, 0.5);
 }
 
 .layout-builder__section .ui-state-drop {
@@ -169,21 +169,18 @@
 }
 
 /* Remove border from 'inner' layout builder block when it is highlighted. */
-
 .layout-builder-block .layout-builder-block.is-layout-builder-highlighted,
 .layout-builder__layout.is-layout-builder-highlighted {
   border: 0;
 }
 
 /* Override colors and floats that Bartik sets. */
-
 .layout-container .region-header .layout-builder-block {
   float: none;
   clear: none;
 }
 
 /* Layout Selection */
-
 #drupal-off-canvas .layout-selection li {
   padding-bottom: 0;
 }
@@ -195,7 +192,7 @@
   padding-left: 25px; /* LTR */
 }
 
-[dir=rtl] #drupal-off-canvas .layout-selection li a {
+[dir="rtl"] #drupal-off-canvas .layout-selection li a {
   padding-right: 25px;
   padding-left: 0;
 }
@@ -209,13 +206,12 @@
   background-color: inherit;
 }
 
-[dir=rtl] #drupal-off-canvas .layout-selection li a svg {
+[dir="rtl"] #drupal-off-canvas .layout-selection li a svg {
   margin-right: 0;
   margin-left: 1em;
 }
 
 #drupal-off-canvas .layout-selection li a div {
-  padding-top: .55em;
+  padding-top: 0.55em;
   background-color: inherit;
 }
-

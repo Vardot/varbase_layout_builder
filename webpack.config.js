@@ -22,7 +22,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'css/theme'),
-    pathinfo: true,
+    pathinfo: false,
     publicPath: '',
   },
   module: {
@@ -35,7 +35,8 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[path][name].[ext]', //?[contenthash]
-              outputPath: '../../'
+              outputPath: '../../',
+              esModule: false,
             },
           },
           {
@@ -51,22 +52,20 @@ module.exports = {
         use: [
           {
             loader: MiniCssExtractPlugin.loader,
-            options: {
-              name: '[name].[ext]?[hash]',
-            }
           },
           {
             loader: 'css-loader',
             options: {
               sourceMap: isDev,
               importLoaders: 2,
-              url: (url) => {
-                // Don't handle sprite svg
-                if (url.includes('sprite.svg')) {
-                  return false;
+              url: {
+                filter: (url) => {
+                  // Don't handle sprite svg or any image paths
+                  if (url.includes('sprite.svg') || url.includes('/images/')) {
+                    return false;
+                  }
+                  return true;
                 }
-
-                return true;
               },
             },
           },
@@ -76,16 +75,7 @@ module.exports = {
               sourceMap: isDev,
               postcssOptions: {
                 plugins: [
-                  autoprefixer(),
-                  ['postcss-perfectionist', {
-                    format: 'expanded',
-                    indentSize: 2,
-                    trimLeadingZero: true,
-                    zeroLengthNoUnit: false,
-                    maxAtRuleLength: false,
-                    maxSelectorLength: false,
-                    maxValueLength: false,
-                  }]
+                  autoprefixer()
                 ],
               },
             },

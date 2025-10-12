@@ -57,4 +57,3 @@ function varbase_layout_builder__is_dashboard_route() {
   unset($context);
   return $dashboard_route;
 }
-

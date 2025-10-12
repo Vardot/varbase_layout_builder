@@ -137,4 +137,3 @@ function varbase_layout_builder_update_10006() {
     $bootstrap_styles_settings->set('box_shadow', "shadow-sm|Small\r\nshadow|Regular\r\nshadow-lg|Large")->save(TRUE);
   }
 }
-

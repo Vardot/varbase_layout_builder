@@ -5,10 +5,10 @@
  * Which located at /libraries/aos
  */
 
-(function ($, _, Drupal) {
+(function scrollEffectsInit($, _, Drupal) {
   Drupal.behaviors.VarbaseLayoutBuilderscrollEffectsInit = {
-    attach: function () {
+    attach() {
       AOS.init();
-    }
+    },
   };
 })(window.jQuery, window._, window.Drupal);
