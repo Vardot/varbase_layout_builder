@@ -134,7 +134,7 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
       && $current_request['_wrapper_format'] == 'drupal_ajax') {
       $is_layout_preview = TRUE;
     }
-    
+
     // Also check if it's a layout builder rebuild request
     if (!$is_layout_preview && isset($current_request['form_id'])
       && (str_contains($current_request['form_id'], 'layout_builder')
@@ -142,11 +142,11 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
       $is_layout_preview = TRUE;
     }
 
-
     // If this is a preview refresh and we're in layout preview context, use frontend theme
     if ($is_preview_refresh && $is_layout_preview) {
       $admin_theme = $this->configFactory->get('system.theme')->get('admin');
-      $this->loadAdminThemeCallbacks($admin_theme); // Always load admin theme callbacks
+      // Always load admin theme callbacks
+      $this->loadAdminThemeCallbacks($admin_theme);
 
       return $this->configFactory->get('system.theme')->get('default');
     }
