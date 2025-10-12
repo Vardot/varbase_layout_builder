@@ -636,7 +636,7 @@ form.media-form {
 
   .ck-source-editing-area {
     textarea {
-      height: -webkit-fill-available;
+      height: stretch;
       border-radius: 0;
     }
   }

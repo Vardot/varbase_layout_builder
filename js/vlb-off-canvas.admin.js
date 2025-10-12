@@ -8,7 +8,9 @@
   Drupal.behaviors.varbaseLayoutBuilderOffCanvas = {
     attach(context) {
       $(once('body', context)).each(function () {
-        const drupalOffCanvasWrapper = $('.ui-dialog-off-canvas.ui-dialog-position-side');
+        const drupalOffCanvasWrapper = $(
+          '.ui-dialog-off-canvas.ui-dialog-position-side',
+        );
         if (drupalOffCanvasWrapper) {
           drupalOffCanvasWrapper.addClass('gin--dark-mode');
         }

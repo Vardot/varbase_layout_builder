@@ -1,6 +1,7 @@
 # Ignore node modules
 node_modules
 /*/node_modules
+.yarn/
 
 # Ignore Variables
 /css/variables.css

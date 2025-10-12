@@ -49,7 +49,7 @@ class VisibilitySectionForm extends LayoutRebuildConfirmFormBase {
     $visibility = isset($section_settings["visibility"]) ? $section_settings["visibility"] : FALSE;
     $status = $visibility ? 'invisible' : 'visible';
 
-    return $this->t('Current status is ' . $status . '.<br>This action will change the visibility status.');
+    return $this->t('Current status is @status.<br>This action will change the visibility status.', ['@status' => $status]);
   }
 
   /**

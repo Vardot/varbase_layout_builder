@@ -54,7 +54,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'themes/gin/css'),
-    pathinfo: true,
+    pathinfo: false,
     publicPath: '',
   },
   module: {
@@ -67,7 +67,8 @@ module.exports = {
             loader: 'file-loader',
             options: {
               name: '[path][name].[ext]', //?[contenthash]
-              outputPath: '../../'
+              outputPath: '../../',
+              esModule: false
             },
           },
           {

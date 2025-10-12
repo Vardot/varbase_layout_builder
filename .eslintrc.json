@@ -10,6 +10,9 @@
     "es6": true,
     "node": true
   },
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
   "globals": {
     "Drupal": true,
     "drupalSettings": true,
@@ -18,19 +21,24 @@
     "_": true,
     "Cookies": true,
     "Backbone": true,
-    "Modernizr": true,
+    "htmx": true,
     "loadjs": true,
     "Shepherd": true,
     "Sortable": true,
     "once": true,
     "CKEditor5": true,
-    "tabbable": true
+    "tabbable": true,
+    "transliterate": true,
+    "bodyScrollLock" : true,
+    "FloatingUIDOM": true,
+    "AOS": true
   },
   "rules": {
     "prettier/prettier": "error",
     "consistent-return": ["off"],
     "no-underscore-dangle": ["off"],
-    "max-nested-callbacks": ["warn", 3],
+    "func-names": ["off"],
+    "max-nested-callbacks": ["warn", 5],
     "import/no-mutable-exports": ["warn"],
     "no-plusplus": ["warn", {
       "allowForLoopAfterthoughts": true
