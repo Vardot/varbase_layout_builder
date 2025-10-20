@@ -246,6 +246,10 @@ class VarbaseBootstrapButtonLinkFormatter extends LinkFormatter {
       if ($button_target == 1) {
         $attributes['target'] = '_blank';
       }
+      else {
+        // Integrate with the External Links settings on "Do not alter links with a default target value" opiton.
+        $attributes['target'] = '_self';
+      }
 
       // Add collected classes to attributes.
       if (!empty($btn_class)) {
