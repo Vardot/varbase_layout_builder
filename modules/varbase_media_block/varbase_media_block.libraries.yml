@@ -1,0 +1,9 @@
+media_block_link_field:
+  version: 1.x
+  js:
+    js/media-block-link-field.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once
