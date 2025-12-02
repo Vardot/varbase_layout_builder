@@ -8,6 +8,7 @@
     "vendor/**",
     "*.min.js",
     "*.min.css",
+    "*.patch",
     "composer.lock",
     "package-lock.json",
     "yarn.lock",
@@ -190,6 +191,7 @@
     "backtosite",
     "toleft",
     "totop",
+    "htmx",
     "jquery",
     "modernizr",
     "ckeditor"

@@ -1,0 +1,7 @@
+varbase_media_block.get_media_bundle:
+  path: '/varbase-media-block/get-media-bundle/{media_id}'
+  defaults:
+    _controller: '\Drupal\varbase_media_block\Controller\MediaBundleController::getMediaBundle'
+  requirements:
+    _permission: 'access content'
+    media_id: \d+

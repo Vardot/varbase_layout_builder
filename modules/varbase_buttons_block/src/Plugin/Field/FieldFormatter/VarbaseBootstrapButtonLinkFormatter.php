@@ -247,7 +247,7 @@ class VarbaseBootstrapButtonLinkFormatter extends LinkFormatter {
         $attributes['target'] = '_blank';
       }
       else {
-        // Integrate with the External Links settings on "Do not alter links with a default target value" opiton.
+        // Integrate with the External Links settings on "Do not alter links with a default target value" option.
         $attributes['target'] = '_self';
       }
 
