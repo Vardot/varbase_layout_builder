@@ -756,8 +756,12 @@ body .ui-dialog:not(.ui-dialog-off-canvas) {
 body .ui-dialog.ui-front.media-library-widget-modal {
   z-index: 1270;
 }
-body .ui-dialog .form-item__label,
-body .ui-dialog .form-item__description {
+body .ui-dialog #drupal-off-canvas .ui-dialog .form-item__label,
+body .ui-dialog #drupal-off-canvas .ui-dialog .form-item__description,
+body .ui-dialog #layout-builder-modal .ui-dialog .form-item__label,
+body .ui-dialog #layout-builder-modal .ui-dialog .form-item__description,
+body .ui-dialog .dialog-off-canvas-main-canvas .ui-dialog .form-item__label,
+body .ui-dialog .dialog-off-canvas-main-canvas .ui-dialog .form-item__description {
   color: #fff !important;
 }
 
