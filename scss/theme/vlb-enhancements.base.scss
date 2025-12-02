@@ -755,9 +755,15 @@ body {
       z-index: 1270;
     }
 
-    .form-item__label,
-    .form-item__description {
-      color: #fff !important;
+    #drupal-off-canvas,
+    #layout-builder-modal,
+    .dialog-off-canvas-main-canvas {
+      .ui-dialog {
+        .form-item__label,
+        .form-item__description {
+          color: #fff !important;
+        }
+      }
     }
   }
 }
