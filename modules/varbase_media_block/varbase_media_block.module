@@ -22,51 +22,27 @@ function varbase_media_block_block_type_form_alter(array &$form, FormStateInterf
     }
 
     if (isset($form['field_media']) && isset($form['field_link'])) {
-      $form['#attached']['library'][] = 'core/drupal.states';
-      $form['field_media']['#after_build'][] = '_varbase_media_block_field_media_after_build';
-      $form['#after_build'][] = '_varbase_media_block_after_build';
-
-      $form['field_link']['#states'] = [
-        'visible' => [
-          ':input[name="settings[block_form][field_media][media_library_selection]"]' => ['value' => 'image'],
-        ],
-      ];
-    }
-  }
-}
-
-/**
- * After build callback for media field element in the Varbase Media Block form.
- *
- * @param array $element
- *   Element definition for the Varbase Media Block field_media field.
- * @param \Drupal\Core\Form\FormStateInterface $form_state
- *   Form state of the Varbase Media Block form.
- *
- * @return array
- *   The updated element.
- */
-function _varbase_media_block_field_media_after_build(array $element, FormStateInterface $form_state): array {
-
-  if (isset($element['widget'])
-    && isset($element['widget']['media_library_selection'])
-    && isset($element['widget']['media_library_selection']['#value'])) {
-
-    $media_id = $element['widget']['media_library_selection']['#value'];
-
-    if ($media_id) {
-      $media = Media::load($media_id);
-      if ($media) {
-        $element['widget']['media_library_selection']['#attributes']['value'] = $media->bundle();
+      // Add AJAX callback to media field to rebuild form when media changes.
+      if (isset($form['field_media']['widget'][0])) {
+        $form['field_media']['widget'][0]['#ajax'] = [
+          'callback' => '_varbase_media_block_media_ajax_callback',
+          'wrapper' => 'varbase-media-block-form-wrapper',
+          'event' => 'change',
+        ];
       }
+
+      // Add wrapper for AJAX.
+      $form['#prefix'] = '<div id="varbase-media-block-form-wrapper">';
+      $form['#suffix'] = '</div>';
+
+      // Add after_build to control initial visibility.
+      $form['#after_build'][] = '_varbase_media_block_control_link_visibility';
     }
   }
-
-  return $element;
 }
 
 /**
- * After build callback in the Varbase Media Block form.
+ * After build callback to control link field visibility based on media type.
  *
  * @param array $form
  *   Form definition for the Varbase Media Block form.
@@ -76,23 +52,81 @@ function _varbase_media_block_field_media_after_build(array $element, FormStateI
  * @return array
  *   The updated form.
  */
-function _varbase_media_block_after_build(array $form, FormStateInterface $form_state): array {
+function _varbase_media_block_control_link_visibility(array $form, FormStateInterface $form_state): array {
 
-  if (isset($form['field_media']['widget'])
-    && isset($form['field_media']['widget']['selection'])
-    && isset($form['field_media']['widget']['selection'][0])
-    && isset($form['field_media']['widget']['selection'][0]['target_id'])
-    && isset($form['field_media']['widget']['selection'][0]['target_id']['#value'])) {
+  $media_bundle = NULL;
 
+  // Check for media selection in different possible locations.
+  // Location 1: In the widget selection array.
+  if (isset($form['field_media']['widget']['selection'][0]['target_id']['#value'])) {
     $media_id = $form['field_media']['widget']['selection'][0]['target_id']['#value'];
-
     if ($media_id) {
       $media = Media::load($media_id);
       if ($media) {
-        $form['field_media']['widget']['media_library_selection']['#attributes']['value'] = $media->bundle();
+        $media_bundle = $media->bundle();
       }
     }
   }
+
+  // Location 2: In media_library_selection hidden field.
+  if (empty($media_bundle) && isset($form['field_media']['widget']['media_library_selection']['#value'])) {
+    $media_id = $form['field_media']['widget']['media_library_selection']['#value'];
+    if ($media_id) {
+      $media = Media::load($media_id);
+      if ($media) {
+        $media_bundle = $media->bundle();
+      }
+    }
+  }
+
+  // Location 3: Check form state values.
+  if (empty($media_bundle)) {
+    $values = $form_state->getValues();
+    if (isset($values['field_media'][0]['target_id'])) {
+      $media_id = $values['field_media'][0]['target_id'];
+      if ($media_id) {
+        $media = Media::load($media_id);
+        if ($media) {
+          $media_bundle = $media->bundle();
+        }
+      }
+    }
+  }
+
+  // Control link field visibility based on media bundle.
+  // Strategy: Always show by default, JavaScript will hide for non-image media.
+  if (isset($form['field_link'])) {
+    // Always keep link field accessible.
+    $form['field_link']['#access'] = TRUE;
+
+    // Define media types that should NOT show link field.
+    $hidden_media_types = ['video', 'remote_video', 'audio', 'file'];
+
+    // If we KNOW it's a media type that should be hidden, hide it.
+    if ($media_bundle && in_array($media_bundle, $hidden_media_types)) {
+      $form['field_link']['#attributes']['class'][] = 'js-media-link-hidden';
+      $form['field_link']['#attributes']['style'] = 'display: none;';
+      $form['field_link']['#attributes']['data-media-type'] = $media_bundle;
+    }
+    else {
+      // For image or unknown (no media selected yet), keep visible.
+      // This ensures link field shows up when user selects image first time.
+      $form['field_link']['#attributes']['data-media-type'] = $media_bundle ?: 'unknown';
+    }
+
+    // Add a hidden field to track media bundle type for JavaScript.
+    $form['media_bundle_type_tracker'] = [
+      '#type' => 'hidden',
+      '#value' => $media_bundle ?: '',
+      '#attributes' => [
+        'class' => ['media-bundle-type-tracker'],
+        'data-current-bundle' => $media_bundle ?: '',
+      ],
+    ];
+  }
+
+  // Attach JavaScript library for dynamic updates.
+  $form['#attached']['library'][] = 'varbase_media_block/media_block_link_field';
 
   return $form;
 }
