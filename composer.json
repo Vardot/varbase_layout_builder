@@ -16,7 +16,7 @@
     "source": "http://cgit.drupalcode.org/varbase_layout_builder"
   },
   "require": {
-    "drupal/core": "~9.5.0 || ~10.5.0 || ~11.2.0",
+    "drupal/core": "~9.5.0 || ~10.6.0 || ~11.3.0",
     "drupal/varbase_media": "~9",
     "drupal/layout_builder_modal": "~1",
     "drupal/layout_builder_restrictions": "~2",
