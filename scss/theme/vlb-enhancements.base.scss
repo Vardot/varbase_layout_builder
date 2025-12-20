@@ -754,16 +754,31 @@ body {
     &.ui-front.media-library-widget-modal {
       z-index: 1270;
     }
+  }
+}
 
-    #drupal-off-canvas,
-    #layout-builder-modal,
-    .dialog-off-canvas-main-canvas {
-      .ui-dialog {
-        .form-item__label,
-        .form-item__description {
-          color: #fff !important;
-        }
-      }
+#drupal-off-canvas,
+#layout-builder-modal {
+  .form-item__label,
+  .form-item__description {
+    color: #fff !important;
+  }
+
+  // Keep default (dark) label colors for media library modals
+  .media-library-widget-modal,
+  form.media-form {
+    .form-item__label,
+    .form-item__description {
+      color: inherit !important;
+    }
+  }
+}
+
+.dialog-off-canvas-main-canvas {
+  .ui-dialog:not(.media-library-widget-modal) {
+    .form-item__label,
+    .form-item__description {
+      color: #fff !important;
     }
   }
 }
