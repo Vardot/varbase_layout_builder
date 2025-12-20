@@ -754,12 +754,26 @@ body .ui-dialog:not(.ui-dialog-off-canvas) {
 body .ui-dialog.ui-front.media-library-widget-modal {
   z-index: 1270;
 }
-body .ui-dialog #drupal-off-canvas .ui-dialog .form-item__label,
-body .ui-dialog #drupal-off-canvas .ui-dialog .form-item__description,
-body .ui-dialog #layout-builder-modal .ui-dialog .form-item__label,
-body .ui-dialog #layout-builder-modal .ui-dialog .form-item__description,
-body .ui-dialog .dialog-off-canvas-main-canvas .ui-dialog .form-item__label,
-body .ui-dialog .dialog-off-canvas-main-canvas .ui-dialog .form-item__description {
+
+#drupal-off-canvas .form-item__label,
+#drupal-off-canvas .form-item__description,
+#layout-builder-modal .form-item__label,
+#layout-builder-modal .form-item__description {
+  color: #fff !important;
+}
+#drupal-off-canvas .media-library-widget-modal .form-item__label,
+#drupal-off-canvas .media-library-widget-modal .form-item__description,
+#drupal-off-canvas form.media-form .form-item__label,
+#drupal-off-canvas form.media-form .form-item__description,
+#layout-builder-modal .media-library-widget-modal .form-item__label,
+#layout-builder-modal .media-library-widget-modal .form-item__description,
+#layout-builder-modal form.media-form .form-item__label,
+#layout-builder-modal form.media-form .form-item__description {
+  color: inherit !important;
+}
+
+.dialog-off-canvas-main-canvas .ui-dialog:not(.media-library-widget-modal) .form-item__label,
+.dialog-off-canvas-main-canvas .ui-dialog:not(.media-library-widget-modal) .form-item__description {
   color: #fff !important;
 }
 
