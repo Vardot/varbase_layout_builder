@@ -75,6 +75,7 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
     if (isset($use_claro)
       && $use_claro == 1
       && varbase_layout_builder__is_layout_builder_route()
+      && !varbase_layout_builder__is_dashboards_route()
       && !varbase_layout_builder__is_dashboard_route()
       && $route_match->getRouteName() !== 'layout_builder.navigation.view'
       && ($this->themeHandler->themeExists('gin') || $this->themeHandler->themeExists('claro'))) {
@@ -106,6 +107,68 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
     }
     else {
       $current_request = $this->requestStack->getCurrentRequest()->request->all();
+    }
+
+    // Check if this is a preview refresh after block configuration.
+    // When blocks are saved, the preview should use the frontend theme.
+    $is_preview_refresh = FALSE;
+    if (isset($current_request['_triggering_element_value'])) {
+      $triggering_value = $current_request['_triggering_element_value'];
+      if ($triggering_value === 'Update' 
+        || $triggering_value === 'Add block' 
+        || $triggering_value === 'Add section'
+        || $triggering_value === 'Save') {
+        $is_preview_refresh = TRUE;
+      }
+    }
+
+    // Also check the op parameter for block operations
+    if (!$is_preview_refresh && isset($current_request['op'])) {
+      $op_value = $current_request['op'];
+      if ($op_value === 'Update' 
+        || $op_value === 'Add block' 
+        || $op_value === 'Add section'
+        || $op_value === 'Save') {
+        $is_preview_refresh = TRUE;
+      }
+    }
+
+    // Check if triggering element name contains settings_block_form_field
+    if (!$is_preview_refresh && isset($current_request['_triggering_element_name'])
+      && str_contains($current_request['_triggering_element_name'], 'settings_block_form_field')) {
+      $is_preview_refresh = TRUE;
+    }
+
+    // Check if we're in a layout builder preview context
+    $is_layout_preview = FALSE;
+    // This is a request originating from the frontend theme
+    if (isset($current_request['_wrapper_format'])
+      && $current_request['_wrapper_format'] == 'drupal_ajax') {
+      $is_layout_preview = TRUE;
+    }
+
+    // Also check if it's a layout builder rebuild request
+    if (!$is_layout_preview && isset($current_request['form_id'])
+      && (str_contains($current_request['form_id'], 'layout_builder')
+        || str_contains($current_request['form_id'], 'layout_builder_form'))) {
+      $is_layout_preview = TRUE;
+    }
+
+    // If this is a preview refresh and we're in layout preview context, use frontend theme
+    if ($is_preview_refresh && $is_layout_preview) {
+      $admin_theme = $this->configFactory->get('system.theme')->get('admin');
+      // Always load admin theme callbacks
+      $this->loadAdminThemeCallbacks($admin_theme);
+
+      return $this->configFactory->get('system.theme')->get('default');
+    }
+
+    // Additional check: if dialog is closed after block config, ensure preview uses frontend theme
+    if (isset($current_request['dialogOptions'])
+      && isset($current_request['dialogOptions']['target'])
+      && $current_request['dialogOptions']['target'] == 'layout-builder-modal'
+      && $is_preview_refresh) {
+      return $this->configFactory->get('system.theme')->get('default');
     }
 
     // Media Library Theme Negotiator.
@@ -164,15 +227,138 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
       return $this->configFactory->get('system.theme')->get('admin');
     }
 
-    // AJAX trigger for any block form field.
+    // AJAX trigger for any block form field - but not for preview refresh.
     if (isset($current_request['_triggering_element_name'])
-      && str_contains($current_request['_triggering_element_name'], 'block_form-field')) {
+      && str_contains($current_request['_triggering_element_name'], 'block_form-field')
+      && !$is_preview_refresh) {
 
       return $this->configFactory->get('system.theme')->get('admin');
     }
 
+    // AJAX trigger for section configuration forms (including background settings).
+    if (isset($current_request['_triggering_element_name']) && !$is_preview_refresh) {
+      $triggering_element = $current_request['_triggering_element_name'];
+
+      // Handle section configuration AJAX requests
+      if (str_contains($triggering_element, 'configure_section')
+          || str_contains($triggering_element, 'layout_settings')
+          || str_contains($triggering_element, 'section_settings')
+          || str_contains($triggering_element, 'background')
+          || str_contains($triggering_element, 'bootstrap_styles')
+          || str_contains($triggering_element, 'layout_builder_styles')) {
+
+        return $this->configFactory->get('system.theme')->get('admin');
+      }
+
+      // Handle block creation and configuration AJAX requests - but not preview refresh
+      if (str_contains($triggering_element, 'add_block')
+          || str_contains($triggering_element, 'configure_block')
+          || str_contains($triggering_element, 'update_block')
+          || str_contains($triggering_element, 'block_form')
+          || str_contains($triggering_element, 'inline_block')
+          || str_contains($triggering_element, 'custom_block')) {
+
+        return $this->configFactory->get('system.theme')->get('admin');
+      }
+
+      // Handle media-related AJAX requests in layout builder context - but not preview refresh
+      if (str_contains($triggering_element, 'media')
+          || str_contains($triggering_element, 'field_media')
+          || str_contains($triggering_element, 'entity_browser')
+          || str_contains($triggering_element, 'upload')) {
+
+        // Check if this is in layout builder context
+        $route_name = $this->requestStack->getCurrentRequest()->attributes->get('_route');
+        $path = $this->requestStack->getCurrentRequest()->getPathInfo();
+
+        if (($route_name && (str_contains($route_name, 'layout_builder') || str_contains($route_name, 'block')))
+            || ($path && (str_contains($path, 'layout_builder') || str_contains($path, 'layout')))) {
+
+          return $this->configFactory->get('system.theme')->get('admin');
+        }
+      }
+
+      // Handle general layout builder form AJAX requests - but not preview refresh
+      if (str_contains($triggering_element, 'layout_builder')
+          || str_contains($triggering_element, 'configure-section')
+          || str_contains($triggering_element, 'blb_')) {
+
+        return $this->configFactory->get('system.theme')->get('admin');
+      }
+
+      // Handle form element AJAX requests that might be in layout builder context - but not preview refresh
+      if (str_contains($triggering_element, 'field_')
+          || str_contains($triggering_element, 'settings')
+          || str_contains($triggering_element, 'ajax')) {
+
+        // Check if this is in layout builder context via route or path
+        $route_name = $this->requestStack->getCurrentRequest()->attributes->get('_route');
+        $path = $this->requestStack->getCurrentRequest()->getPathInfo();
+
+        if (($route_name && (str_contains($route_name, 'layout_builder')
+                          || str_contains($route_name, 'add_block')
+                          || str_contains($route_name, 'update_block')))
+            || ($path && (str_contains($path, 'layout_builder')
+                       || str_contains($path, '/layout/')))) {
+
+          return $this->configFactory->get('system.theme')->get('admin');
+        }
+      }
+    }
+
+    // Handle layout builder form IDs and routes
+    $route_name = $this->requestStack->getCurrentRequest()->attributes->get('_route');
+    if ($route_name && (str_contains($route_name, 'layout_builder.configure_section')
+                     || str_contains($route_name, 'layout_builder.add_block')
+                     || str_contains($route_name, 'layout_builder.update_block')
+                     || str_contains($route_name, 'layout_builder.choose_block')
+                     || str_contains($route_name, 'layout_builder.choose_section'))) {
+      return $this->configFactory->get('system.theme')->get('admin');
+    }
+
+    // Check for form_id indicating layout builder operations
+    if (isset($current_request['form_id'])) {
+      $form_id = $current_request['form_id'];
+      if (str_contains($form_id, 'layout_builder_configure_section')
+          || str_contains($form_id, 'configure_section')
+          || str_contains($form_id, 'layout_builder_add_block')
+          || str_contains($form_id, 'layout_builder_update_block')
+          || str_contains($form_id, 'layout_builder_configure_block')
+          || str_contains($form_id, 'bootstrap_styles')
+          || str_contains($form_id, 'inline_block')
+          || str_contains($form_id, 'custom_block')) {
+
+        return $this->configFactory->get('system.theme')->get('admin');
+      }
+    }
+
+    // Additional check for dialog options that might contain layout builder context
+    if (isset($current_request['dialogOptions'])) {
+      $dialog_options = $current_request['dialogOptions'];
+      if (is_array($dialog_options)) {
+        $dialog_str = json_encode($dialog_options);
+        if (str_contains($dialog_str, 'layout_builder')
+            || str_contains($dialog_str, 'layout-builder')
+            || str_contains($dialog_str, 'add_block')
+            || str_contains($dialog_str, 'configure_block')) {
+
+          return $this->configFactory->get('system.theme')->get('admin');
+        }
+      }
+    }
+
     return $this->configFactory->get('system.theme')->get('default');
 
+  }
+
+  protected function loadAdminThemeCallbacks(string $theme): void {
+    if (!function_exists($theme . '_form_after_build') && $this->themeHandler->themeExists($theme)) {
+      $path = $this->themeHandler->getTheme($theme)->getPath();
+      $file = DRUPAL_ROOT . '/' . $path . '/' . $theme . '.theme';
+      if (is_file($file)) {
+        include_once $file;
+      }
+    }
   }
 
 }
