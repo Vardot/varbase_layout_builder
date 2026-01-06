@@ -33,6 +33,32 @@ function varbase_layout_builder__is_layout_builder_route() {
 }
 
 /**
+ * Returns true if the current route is a dashboards route.
+ *
+ * @return bool
+ *   Returns true for dashboard routes.
+ */
+function varbase_layout_builder__is_dashboards_route() {
+  $dashboard_route = drupal_static(__FUNCTION__);
+  if ($dashboard_route !== NULL) {
+    return $dashboard_route;
+  }
+
+  $route_name = \Drupal::routeMatch()->getRouteName();
+  $dashboard_route = FALSE;
+
+  if ($route_name !== NULL
+    && (str_contains($route_name, 'dashboards') || str_contains(\Drupal::requestStack()->getCurrentRequest()->getPathInfo(), 'dashboards'))) {
+    $dashboard_route = TRUE;
+  }
+
+  $context = NULL;
+  \Drupal::moduleHandler()->alter('varbase_layout_builder__is_dashboards_route', $dashboard_route, $context);
+  unset($context);
+  return $dashboard_route;
+}
+
+/**
  * Returns true if the current route is a dashboard route.
  *
  * @return bool
@@ -48,7 +74,7 @@ function varbase_layout_builder__is_dashboard_route() {
   $dashboard_route = FALSE;
 
   if ($route_name !== NULL
-    && (str_contains($route_name, 'dashboards') || str_contains(\Drupal::requestStack()->getCurrentRequest()->getPathInfo(), 'dashboards'))) {
+    && (str_contains($route_name, 'dashboard') || str_contains(\Drupal::requestStack()->getCurrentRequest()->getPathInfo(), 'dashboard'))) {
     $dashboard_route = TRUE;
   }
 
