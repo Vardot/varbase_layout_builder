@@ -1,0 +1,5 @@
+services:
+  lb_ux.route_alter:
+    class: Drupal\lb_ux\Routing\LBUXRouteAlter
+    tags:
+      - { name: event_subscriber }

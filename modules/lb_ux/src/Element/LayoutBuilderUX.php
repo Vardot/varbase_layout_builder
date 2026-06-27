@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\varbase_layout_builder\Element;
+namespace Drupal\lb_ux\Element;
 
 use Drupal\Core\Render\Element;
 use Drupal\Core\Url;
@@ -12,25 +12,13 @@ use Drupal\layout_builder\SectionStorageInterface;
  *
  * @phpstan-ignore-next-line
  */
-class VarbaseLayoutBuilderUX extends LayoutBuilder {
+class LayoutBuilderUX extends LayoutBuilder {
 
   /**
    * {@inheritdoc}
    */
   protected function buildAdministrativeSection(SectionStorageInterface $section_storage, $delta) {
     $build = parent::buildAdministrativeSection($section_storage, $delta);
-
-    $storage_type = $section_storage->getStorageType();
-    $storage_id = $section_storage->getStorageId();
-    $section = $section_storage->getSection($delta);
-
-    $layout = $section->getLayout();
-    $layout_settings = $section->getLayoutSettings();
-    $section_label = !empty($layout_settings['label']) ? $layout_settings['label'] : $this->t('Section @section', ['@section' => $delta + 1]);
-
-    $layout_definition = $layout->getPluginDefinition();
-
-    $region_labels = $layout_definition->getRegionLabels();
 
     $section_label = $build['#attributes']['aria-label'];
 
@@ -59,27 +47,6 @@ class VarbaseLayoutBuilderUX extends LayoutBuilder {
       'configure' => $build['configure'],
       'remove' => $build['remove'],
     ];
-
-    // @phpstan-ignore-next-line
-    if (\Drupal::moduleHandler()->moduleExists('section_library')) {
-      $add_section_url = Url::fromRoute('section_library.add_section_to_library', $build['configure']['#url']->getRouteParameters());
-      $build['actions']['add_section_to_library'] = [
-        '#type' => 'link',
-        '#title' => $this->t('<span class="visually-hidden">Add section to library @section</span>', ['@section' => $section_label]),
-        '#url' => $add_section_url,
-        '#access' => $add_section_url->access(),
-        '#attributes' => [
-          'class' => [
-            'use-ajax',
-            'layout-builder__link',
-            'layout-builder__link--add-section-to-library',
-          ],
-          'data-dialog-type' => 'dialog',
-          'data-dialog-renderer' => 'off_canvas',
-        ],
-      ];
-    }
-
     unset($build['configure'], $build['remove'], $build['section_label']);
 
     foreach (Element::children($build['layout-builder__section']) as $region) {
@@ -90,6 +57,9 @@ class VarbaseLayoutBuilderUX extends LayoutBuilder {
 
         $preview_fallback_string = $build['layout-builder__section'][$region][$uuid]['#attributes']['data-layout-content-preview-placeholder-label'];
         $route_parameters = $build['layout-builder__section'][$region][$uuid]['#contextual_links']['layout_builder_block']['route_parameters'];
+
+        // Remove default contextual links.
+        unset($build['layout-builder__section'][$region][$uuid]['#contextual_links']['layout_builder_block']);
 
         // Ensure the 'content' key is present, as set by
         // \Drupal\layout_builder\EventSubscriber\BlockComponentRenderArray.
@@ -159,60 +129,8 @@ class VarbaseLayoutBuilderUX extends LayoutBuilder {
           ],
           'content' => $build['layout-builder__section'][$region][$uuid]['content'],
         ];
-
-        // @phpstan-ignore-next-line
-        if (\Drupal::moduleHandler()->moduleExists('layout_builder_component_attributes')) {
-          $build['layout-builder__section'][$region][$uuid]['content']['actions']['layout_builder_block_attributes'] = [
-            '#type' => 'link',
-            '#title' => $this->t('<span class="visually-hidden">Manage attributes @block</span>', ['@block' => $preview_fallback_string]),
-            '#url' => Url::fromRoute('layout_builder_component_attributes.manage_attributes', $route_parameters),
-            '#attributes' => [
-              'class' => [
-                'use-ajax',
-                'layout-builder__link',
-                'layout-builder__link--layout_builder_block_attributes',
-              ],
-              'data-dialog-type' => 'dialog',
-              'data-dialog-renderer' => 'off_canvas',
-            ],
-          ];
-        }
       }
     }
-
-    foreach ($layout_definition->getRegions() as $region => $info) {
-      if ($region == 'section_header') {
-        $plugin_id = 'inline_block:varbase_heading_block';
-        $build['layout-builder__section']['section_header']['layout_builder_add_block']['link'] = [
-          '#type' => 'link',
-          '#title' => $this->t('Add heading <span class="visually-hidden">in @section, @region region</span>', [
-            '@section' => $section_label,
-            '@region' => $region_labels['section_header'],
-          ]),
-          '#url' => Url::fromRoute('layout_builder.add_block',
-            [
-              'section_storage_type' => $storage_type,
-              'section_storage' => $storage_id,
-              'delta' => $delta,
-              'plugin_id' => $plugin_id,
-              'region' => 'section_header',
-            ],
-            [
-              'attributes' => [
-                'class' => [
-                  'use-ajax',
-                  'layout-builder__link',
-                  'layout-builder__link--add',
-                ],
-                'data-dialog-type' => 'dialog',
-                'data-dialog-renderer' => 'off_canvas',
-              ],
-            ]
-          ),
-        ];
-      }
-    }
-
     return $build;
   }
 
@@ -221,12 +139,8 @@ class VarbaseLayoutBuilderUX extends LayoutBuilder {
    */
   protected function layout(SectionStorageInterface $section_storage) {
     $build = parent::layout($section_storage);
-
-    // @phpstan-ignore-next-line
-    if (\Drupal::service('theme.manager')->getActiveTheme()->getName() !== \Drupal::config('system.theme')->get('admin')) {
-      $build['#attached']['library'][] = 'lb_ux/drupal.lb_ux';
-      $build['#attached']['library'][] = 'lb_ux/drupal.lb_ux_message';
-    }
+    $build['#attached']['library'][] = 'lb_ux/drupal.lb_ux';
+    $build['#attached']['library'][] = 'lb_ux/drupal.lb_ux_message';
     return $build;
   }
 

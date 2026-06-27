@@ -4,7 +4,7 @@ namespace Drupal\varbase_layout_builder\Plugin\Layout;
 
 use Drupal\Component\Utility\NestedArray;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Serialization\Yaml;
+use Drupal\Component\Serialization\Yaml;
 use Drupal\bootstrap_layout_builder\Plugin\Layout\BootstrapLayout;
 use Drupal\Component\Utility\Html;
 
@@ -288,6 +288,7 @@ class VarbaseLayoutBuilderBootstrapLayout extends BootstrapLayout {
     $form = parent::buildConfigurationForm($form, $form_state);
 
     // VLB layout defaults.
+    // @phpstan-ignore-next-line
     $vlb_layout_defaults = \Drupal::config('varbase_layout_builder.layout_defaults');
 
     // Container type defaults.

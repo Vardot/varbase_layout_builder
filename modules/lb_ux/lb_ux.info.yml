@@ -1,0 +1,9 @@
+name: 'Layout Builder UX'
+type: module
+description: 'Alters the Layout Builder UI for better usability'
+package: Layout Builder
+core_version_requirement: ^9.2 || ^10 || ^11
+dependencies:
+  - drupal:layout_builder
+
+# Bundled into Varbase Layout Builder and maintained for Drupal ~11.3.

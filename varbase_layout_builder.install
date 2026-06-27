@@ -56,3 +56,20 @@ function varbase_layout_builder_install() {
   ModuleInstallerFactory::importConfigsFromList('varbase_layout_builder', $forced_configs, InstallStorage::CONFIG_OPTIONAL_DIRECTORY);
 
 }
+
+/**
+ * Uninstall the block_content_permissions contrib module (merged into core).
+ *
+ * The per-bundle block content permissions block_content_permissions used to
+ * provide (for example "create varbase_gallery_block block content") are now
+ * provided by Drupal core's block_content module on both Drupal ~10.6 and
+ * ~11.3, using the exact same permission strings. Uninstalling the contrib
+ * module therefore keeps every existing role permission valid.
+ */
+function varbase_layout_builder_update_90003() {
+  if (\Drupal::moduleHandler()->moduleExists('block_content_permissions')) {
+    \Drupal::service('module_installer')->uninstall(['block_content_permissions']);
+    return (string) t('Uninstalled the block_content_permissions module; Drupal core now provides the block content permissions.');
+  }
+  return (string) t('The block_content_permissions module is not installed; nothing to do.');
+}

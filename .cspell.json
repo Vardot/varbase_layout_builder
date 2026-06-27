@@ -200,6 +200,22 @@
     "jquery",
     "modernizr",
     "ckeditor",
-    "Scaned"
+    "Scaned",
+    "LBUX",
+    "lbux",
+    "blb",
+    "Blazy",
+    "slick",
+    "aos",
+    "webship",
+    "cucumber",
+    "playwright",
+    "contentinfo",
+    "phar",
+    "phpstan",
+    "Artefacts",
+    "infobars",
+    "domcontentloaded",
+    "networkidle"
   ]
 }

@@ -1,3 +1,16 @@
+################################################################################
+# GitLab CI for the Varbase Layout Builder module.
+#
+# Two halves:
+#   1. The standard Drupal CI validation jobs (composer-lint, cspell, eslint,
+#      phpcs, phpstan, phpunit) provided by the drupalci templates. phpunit
+#      runs the module's tests/src Kernel + Functional tests on Drupal ~11.3.
+#   2. A webship-js BDD browser-test job (Playwright + Cucumber-js) that runs
+#      the tests/features/drupal/** suite against a freshly installed Drupal
+#      Standard site provisioned by the tests/varbase_layout_builder_test recipe (which
+#      installs Varbase Layout Builder and grants the administration permission).
+################################################################################
+
 include:
   - project: $_GITLAB_TEMPLATES_REPO
     ref: $_GITLAB_TEMPLATES_REF
@@ -5,27 +18,110 @@ include:
       - "/includes/include.drupalci.main.yml"
       - "/includes/include.drupalci.variables.yml"
       - "/includes/include.drupalci.workflows.yml"
-composer:
-  script:
-    - composer config minimum-stability dev
-    - composer config repositories.drupal composer https://packages.drupal.org/8
-    - composer config --no-plugins allow-plugins.composer/installers true
-    - composer config --no-plugins allow-plugins.drupal/core-composer-scaffold true
-    - composer config --no-plugins allow-plugins.cweagans/composer-patches true
-    - composer config --no-plugins allow-plugins.oomphinc/composer-installers-extender true
-    - composer config --no-plugins allow-plugins.phpstan/extension-installer true
-    - composer config --no-plugins allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
-    - composer require --no-update cweagans/composer-patches:~1
-    - composer install -vvv
+
+variables:
+  COMPOSER_FLAGS: "--no-strict-lock"
+  COMPOSER_MEMORY_LIMIT: "-1"
+  # No yarn.lock is committed; Yarn 4 defaults to immutable installs and would
+  # refuse to create one. Allow lockfile creation in CI for every job.
+  YARN_ENABLE_IMMUTABLE_INSTALLS: "false"
+
+# = Validate stage (all blocking) =
 composer-lint:
-  allow_failure: true
+  allow_failure: false
 cspell:
-  allow_failure: true
+  allow_failure: false
 eslint:
-  allow_failure: true
+  allow_failure: false
 phpcs:
-  allow_failure: true
+  allow_failure: false
 phpstan:
-  allow_failure: true
+  allow_failure: false
 phpunit:
-  allow_failure: true
+  allow_failure: false
+  variables:
+    _PHPUNIT_EXTRA: ''
+
+# = Reusable before_script fragments (via !reference) =
+.fragments:
+  web_db: &web_db
+    - mkdir -pv $CI_PROJECT_DIR/$_WEB_ROOT/sites/default/files
+    - mkdir -pv $CI_PROJECT_DIR/$_WEB_ROOT/sites/simpletest
+    - chmod -R 777 $CI_PROJECT_DIR/$_WEB_ROOT/sites/default/files
+    - chmod -R 777 $CI_PROJECT_DIR/$_WEB_ROOT/sites/simpletest
+    - rm -rf /var/www/html && ln -s $CI_PROJECT_DIR/$_WEB_ROOT /var/www/html
+    - chown -R www-data:www-data $CI_PROJECT_DIR
+    - service apache2 start
+    - export SIMPLETEST_DB=mysql://$MYSQL_USER:$MYSQL_PASSWORD@database/$MYSQL_DATABASE
+  node_playwright: &node_playwright
+    - curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
+    - apt-get install -y nodejs
+    - node --version && npm --version
+    - 'test -f .yarnrc.yml || echo "nodeLinker: node-modules" > .yarnrc.yml'
+    # Back up cucumber.js - webship-js's postinstall can clobber it under yarn 4.
+    - cp cucumber.js .cucumber.js.bak
+    - corepack enable
+    - yarn install
+    - cp .cucumber.js.bak cucumber.js && rm .cucumber.js.bak
+    - ./node_modules/.bin/playwright install --with-deps chromium
+
+# = webship-js BDD - Drupal Standard profile + varbase_layout_builder_test recipe =
+webship-js-test:
+  extends: .testing-job-base
+  needs: [composer]
+  # Run the browser tests on both Drupal ~10.6 and ~11.3 (dual support).
+  parallel:
+    matrix:
+      - DRUPAL_CORE: ["~11.3.0", "~10.6.0"]
+  # Only the database service is needed. Playwright bundles its own Chromium,
+  # so Selenium and chromedriver are not required.
+  services:
+    - name: $_CONFIG_DOCKERHUB_ROOT/$_TARGET_DB_TYPE-$_TARGET_DB_VERSION:$_TARGET_DB_IMAGE_TAG
+      alias: database
+  variables:
+    LAUNCH_URL: "http://localhost"
+    FORCE_COLOR: "1"
+  artifacts:
+    when: always
+    paths:
+      - tests/reports/
+      - tests/screenshots/
+      - tests/videos/
+    expire_in: 7 days
+  before_script:
+    - !reference [.fragments, web_db]
+    # Set the Drupal core version for this matrix leg (no-op on ~11.3.0 which is
+    # already built; downgrades to ~10.6.0 for the Drupal 10 leg).
+    - composer --working-dir=$CI_PROJECT_DIR require "drupal/core-recommended:$DRUPAL_CORE" "drupal/core-composer-scaffold:$DRUPAL_CORE" --update-with-all-dependencies --no-interaction
+    - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT site:install standard
+        --db-url=$SIMPLETEST_DB --account-name=webmaster --account-pass=dD.123123ddd
+        --site-name="Varbase Layout Builder Test" -y
+    # Install Varbase Layout Builder via the module installer (bypasses interactive
+    # requirements prompts and leniently skips optional configs).
+    - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT php:eval '\Drupal::service("module_installer")->install(["varbase_layout_builder"]);' || true
+    # Varbase Layout Builder renders Bootstrap layouts, so use the Varbase theme
+    # (vartheme_bs4, the front-end theme Varbase 9.1.x/9.2.x ships) as the default,
+    # with vartheme_claro as admin. CI/test only.
+    - composer config --no-plugins allow-plugins.vardot/varbase-patches true || true
+    - composer --working-dir=$CI_PROJECT_DIR require "drupal/vartheme_bs4:9.0.x-dev" "drupal/vartheme_claro:3.0.x-dev" --no-interaction || true
+    - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT theme:install vartheme_bs4 vartheme_claro -y || true
+    - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT config:set system.theme default vartheme_bs4 -y || true
+    - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT config:set system.theme admin vartheme_claro -y || true
+    # Get the needed front-end libraries with yarn and copy them into the test
+    # site's libraries directory (no asset-packagist; CI/test only).
+    - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT cache:rebuild
+    - !reference [.fragments, node_playwright]
+    # Copy the yarn-installed front-end libraries into the test libraries dir.
+    - mkdir -p $CI_PROJECT_DIR/$_WEB_ROOT/libraries
+    - for m in 'node_modules/@ckeditor/ckeditor5-media-embed:ckeditor5/plugins/media-embed' 'node_modules/aos:aos' 'node_modules/blazy:blazy' 'node_modules/slick-carousel/slick:slick' 'node_modules/ace-builds/src-min:ace' 'node_modules/dropzone:dropzone'; do src="$CI_PROJECT_DIR/${m%%:*}"; dst="$CI_PROJECT_DIR/$_WEB_ROOT/libraries/${m##*:}"; if [ -d "$src" ]; then mkdir -p "$(dirname "$dst")"; cp -r "$src" "$dst"; fi; done
+  script:
+    # cucumber.js loads only tests/features/drupal/**. Disable webship-js's auto
+    # HTML hook and run generate-reports explicitly so HTML + PDF land next to
+    # the JSON in tests/reports/.
+    - WEBSHIP_REPORT_DISABLE=1 ./node_modules/.bin/cucumber-js --config cucumber.js --tags "not @wip"
+    - node ./node_modules/webship-js/bin/generate-reports.js
+        --json tests/reports/cucumber_report.json
+        --out  tests/reports/cucumber_report.html
+        --format all
+        --pdf-out tests/reports/cucumber_report.pdf
+  allow_failure: false

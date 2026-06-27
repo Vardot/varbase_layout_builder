@@ -1,0 +1,5 @@
+name: 'Varbase Layout Builder Test'
+description: 'Provisions a site for the Varbase Layout Builder automated tests.'
+type: 'Testing'
+install:
+  - varbase_layout_builder
