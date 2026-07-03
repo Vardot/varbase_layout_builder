@@ -1,4 +1,6 @@
-node_modules/**/*
+**/node_modules
 themes/**/*
-
+js/plugins/**/*
 webpack.config*.js
+drupalci.yml
+**/drupalci.yml

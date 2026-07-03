@@ -14,7 +14,13 @@
     "**/.*.json",
     ".*ignore",
     "themes/claro/**",
-    "themes/gin/**"
+    "themes/gin/**",
+    "js/plugins/**",
+    "patches/**",
+    ".gitlab-ci-local/**",
+    "tests/reports/**",
+    "tests/screenshots/**",
+    "tests/videos/**"
   ],
   "words": [
     "varbase",
@@ -98,6 +104,20 @@
     "tableselect",
     "tablesort",
     "tempstore",
-    "titlebar"
+    "titlebar",
+    "cweagans",
+    "oomphinc",
+    "Artefacts",
+    "webship",
+    "WEBSHIP",
+    "Olivero",
+    "infobars",
+    "setuid",
+    "incognito",
+    "normaluser",
+    "editoruser",
+    "layoutbuilder",
+    "blb",
+    "vlb"
   ]
 }

@@ -39,3 +39,15 @@ ehthumbs.db
 .bash_history
 .bashrc
 errors.log
+yarn.lock
+
+# Ignore local gitlab-ci-local runner artifacts.
+.gitlab-ci-local/
+
+# Ignore webship-js generated test artifacts (reports/screenshots/videos).
+/tests/reports/*
+!/tests/reports/.gitkeep
+/tests/screenshots/*
+!/tests/screenshots/.gitkeep
+/tests/videos/*
+!/tests/videos/.gitkeep

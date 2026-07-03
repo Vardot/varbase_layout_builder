@@ -1,3 +1,32 @@
+################################################################################
+# GitLab CI for the Varbase Layout Builder module (10.1.x line - Drupal ~11.4).
+#
+# Two halves:
+#   1. The standard Drupal CI validation jobs (composer-lint, cspell, eslint,
+#      phpcs, phpstan, stylelint) provided by the drupalci templates. Every
+#      validate job gates strictly (allow_failure:false).
+#   2. A webship-js BDD browser-test job (Playwright + Cucumber-js) that runs
+#      the tests/features/drupal/** suite against a freshly installed Drupal
+#      Standard site.
+#
+# Note on the webship-js provisioning strategy (SLIM install):
+#   Varbase Layout Builder hard-depends (info.yml) on varbase_media and
+#   varbase_editor. Their released 10.1.x siblings on the drupal.org Composer
+#   facade ship config that is incompatible with the current core/contrib
+#   schemas (the fixes live only on the not-yet-released 10.1.x branches), so
+#   enabling the varbase_layout_builder module cascade-installs a stack that
+#   cannot resolve/install cleanly in CI. Instead this job installs the
+#   *payload of the module's recipes/default* - core Layout Builder plus the
+#   Layout Builder contrib stack (Layout Builder Restrictions, Bootstrap Layout
+#   Builder, Section Library, Layout Library, Layout Builder Perms/AT/Blocks/
+#   Modal/Component Attributes, Bootstrap Styles/Layouts, Entity Block, Block
+#   Library, ...) - on the Standard profile and enables Layout Builder on a
+#   content type. This exercises the real Layout Builder admin routes, the
+#   Layout Builder editing UI and the Layout Builder permission matrix without
+#   the unreleased-sibling media/editor cascade. It does NOT weaken the module's
+#   committed core requirement (~11.4.0).
+################################################################################
+
 include:
   - project: $_GITLAB_TEMPLATES_REPO
     ref: $_GITLAB_TEMPLATES_REF
@@ -5,27 +34,153 @@ include:
       - "/includes/include.drupalci.main.yml"
       - "/includes/include.drupalci.variables.yml"
       - "/includes/include.drupalci.workflows.yml"
-composer:
-  script:
-    - composer config minimum-stability dev
-    - composer config repositories.drupal composer https://packages.drupal.org/8
-    - composer config --no-plugins allow-plugins.composer/installers true
-    - composer config --no-plugins allow-plugins.drupal/core-composer-scaffold true
-    - composer config --no-plugins allow-plugins.cweagans/composer-patches true
-    - composer config --no-plugins allow-plugins.oomphinc/composer-installers-extender true
-    - composer config --no-plugins allow-plugins.phpstan/extension-installer true
-    - composer config --no-plugins allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
-    - composer require --no-update cweagans/composer-patches:~1
-    - composer install -vvv
+
+variables:
+  # The 10.1.x branch targets Drupal core 11.4 only. Pin the core version and
+  # ignore the project's info.yml core_version_requirement when resolving it.
+  DRUPAL_CORE: "11.4.0"
+  IGNORE_PROJECT_DRUPAL_CORE_VERSION: "1"
+  # Make every drupalci validate job blocking (stylelint et al. default to
+  # allow_failure:true). Combined with the per-job allow_failure:false overrides
+  # below, the whole pipeline gates strictly.
+  _ALL_VALIDATE_ALLOW_FAILURE: "0"
+  COMPOSER_FLAGS: "--no-strict-lock"
+  COMPOSER_MEMORY_LIMIT: "-1"
+  # No yarn.lock is relied upon in CI; Yarn 4 defaults to immutable installs and
+  # would refuse to create one. Allow lockfile creation in CI for every job.
+  YARN_ENABLE_IMMUTABLE_INSTALLS: "false"
+
+# = Validate stage (all blocking) =
+# Force EVERY drupalci validate job to gate. _ALL_VALIDATE_ALLOW_FAILURE=0
+# flips the template default (stylelint and a few others default to
+# allow_failure:true) to blocking; the explicit per-job overrides below make the
+# intent unmissable and cover jobs that read their own _*_ALLOW_FAILURE var.
 composer-lint:
-  allow_failure: true
+  allow_failure: false
 cspell:
-  allow_failure: true
+  allow_failure: false
 eslint:
-  allow_failure: true
+  allow_failure: false
 phpcs:
-  allow_failure: true
+  allow_failure: false
 phpstan:
-  allow_failure: true
-phpunit:
-  allow_failure: true
+  allow_failure: false
+stylelint:
+  allow_failure: false
+
+# = Reusable before_script fragments (via !reference) =
+.fragments:
+  web_db: &web_db
+    - mkdir -pv $CI_PROJECT_DIR/$_WEB_ROOT/sites/default/files
+    - mkdir -pv $CI_PROJECT_DIR/$_WEB_ROOT/sites/simpletest
+    - chmod -R 777 $CI_PROJECT_DIR/$_WEB_ROOT/sites/default/files
+    - chmod -R 777 $CI_PROJECT_DIR/$_WEB_ROOT/sites/simpletest
+    - rm -rf /var/www/html && ln -s $CI_PROJECT_DIR/$_WEB_ROOT /var/www/html
+    - chown -R www-data:www-data $CI_PROJECT_DIR
+    - service apache2 start
+    - export SIMPLETEST_DB=mysql://$MYSQL_USER:$MYSQL_PASSWORD@database/$MYSQL_DATABASE
+  node_playwright: &node_playwright
+    - curl -fsSL https://deb.nodesource.com/setup_20.x | bash -
+    - apt-get install -y nodejs
+    - node --version && npm --version
+    - 'test -f .yarnrc.yml || echo "nodeLinker: node-modules" > .yarnrc.yml'
+    # Back up cucumber.js - webship-js's postinstall can clobber it under yarn 4.
+    - cp cucumber.js .cucumber.js.bak
+    - corepack enable
+    - yarn install
+    - cp .cucumber.js.bak cucumber.js && rm .cucumber.js.bak
+    - ./node_modules/.bin/playwright install --with-deps chromium
+
+# = webship-js BDD - Drupal Standard profile + Layout Builder contrib stack =
+webship-js-test:
+  extends: .testing-job-base
+  needs: [composer]
+  # Installing the Layout Builder contrib stack pulls a fair amount of contrib,
+  # so allow more than the default 30-minute job wall-clock.
+  timeout: 2h
+  # Only the database service is needed. Playwright bundles its own Chromium,
+  # so Selenium and chromedriver are not required.
+  services:
+    - name: $_CONFIG_DOCKERHUB_ROOT/$_TARGET_DB_TYPE-$_TARGET_DB_VERSION:$_TARGET_DB_IMAGE_TAG
+      alias: database
+  variables:
+    LAUNCH_URL: "http://localhost"
+    FORCE_COLOR: "1"
+  artifacts:
+    when: always
+    paths:
+      - tests/reports/
+      - tests/screenshots/
+      - tests/videos/
+    expire_in: 7 days
+  before_script:
+    - !reference [.fragments, web_db]
+    - git config --global --add safe.directory "$CI_PROJECT_DIR" || true
+    # Drupal core 11.4.0 is not yet installable through the drupal.org Composer
+    # facade used by CI, so the composer job resolves to the latest available
+    # 11.3.x. The static jobs (phpcs, phpstan, composer-lint) validate the 11.4
+    # target directly; this browser job verifies runtime behavior on the closest
+    # installable core. Relax any checked-out info.yml core_version_requirement
+    # for the test site only (this does NOT change the committed ~11.4.0
+    # requirement) so every enabled module can install.
+    - |
+      for SCAN in "$CI_PROJECT_DIR" "$CI_PROJECT_DIR/$_WEB_ROOT"; do
+        find "$SCAN" -name '*.info.yml' -print0 2>/dev/null \
+          | xargs -0 -r sed -i -E "s/core_version_requirement:[[:space:]]*'?~11\\.4\\.0'?/core_version_requirement: '^11.3 || ^11.4'/"
+      done
+    - cd $CI_PROJECT_DIR
+    - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT site:install standard
+        --db-url=$SIMPLETEST_DB --account-name=webmaster --account-pass=dD.123123ddd
+        --site-name="Varbase Layout Builder Test" -y
+    # Install core Layout Builder plus the Varbase Layout Builder contrib stack
+    # (the payload of the module's recipes/default). Enabling the stack directly
+    # (rather than the varbase_layout_builder module, which hard-depends on the
+    # unreleased-sibling varbase_media/varbase_editor cascade) exercises the same
+    # Layout Builder routes, editing UI and permission model.
+    - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT pm:install
+        layout_builder layout_discovery block_content
+        entity_block block_form_alter media_library_form_element
+        bootstrap_layouts bootstrap_styles bootstrap_layout_builder
+        layout_builder_blocks layout_builder_modal layout_builder_component_attributes
+        layout_builder_perms layout_builder_at layout_library section_library
+        block_library layout_builder_restrictions -y
+    - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT cache:rebuild
+    # Enable Layout Builder (overridable) on the Standard "page" content type's
+    # default view display, so the Manage layout editing UI is available and the
+    # permission matrix has a concrete route to exercise.
+    - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT php:eval
+        '$d = \Drupal::entityTypeManager()->getStorage("entity_view_display")->load("node.page.default"); if ($d) { $d->enableLayoutBuilder()->setOverridable()->save(); }'
+    - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT cache:rebuild
+    # Create a normal authenticated user (no Layout Builder permissions) for the
+    # permission-matrix scenarios.
+    - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT user:create normaluser --mail="normaluser@example.test" --password="dD.123123ddd" -y || true
+    - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT cache:rebuild
+    - !reference [.fragments, node_playwright]
+  script:
+    # cucumber.js loads only tests/features/drupal/**. Disable webship-js's auto
+    # HTML hook and run generate-reports explicitly so HTML + PDF land next to
+    # the JSON in tests/reports/.
+    - WEBSHIP_REPORT_DISABLE=1 ./node_modules/.bin/cucumber-js --config cucumber.js --tags "not @wip"
+    - node ./node_modules/webship-js/bin/generate-reports.js
+        --json tests/reports/cucumber_report.json
+        --out  tests/reports/cucumber_report.html
+        --format all
+        --pdf-out tests/reports/cucumber_report.pdf
+  allow_failure: false
+
+# Allow the Varbase stack Composer plugins in the CI build (allow-plugins lives
+# in varbase_project, not modules).
+composer:
+  before_script:
+    - composer config --no-plugins allow-plugins.symfony/runtime true || true
+    - composer config --no-plugins allow-plugins.composer/installers true || true
+    - composer config --no-plugins allow-plugins.cweagans/composer-patches true || true
+    - composer config --no-plugins allow-plugins.oomphinc/composer-installers-extender true || true
+    - composer config --no-plugins allow-plugins.drupal/core-composer-scaffold true || true
+    - composer config --no-plugins allow-plugins.drupal/core-project-message true || true
+    - composer config --no-plugins allow-plugins.dealerdirect/phpcodesniffer-composer-installer true || true
+    - composer config --no-plugins allow-plugins.phpstan/extension-installer true || true
+    - composer config --no-plugins allow-plugins.php-http/discovery true || true
+    - composer config --no-plugins allow-plugins.tbachert/spi true || true
+    - composer config --no-plugins allow-plugins.vardot/varbase-patches true || true
+    - composer require --no-update vardot/varbase-patches:~10.1.0

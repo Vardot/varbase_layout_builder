@@ -1,0 +1,32 @@
+parameters:
+    level: 0
+    fileExtensions:
+        - php
+        - module
+        - inc
+        - install
+        - theme
+        - profile
+    reportUnmatchedIgnoredErrors: false
+    ignoreErrors:
+        # new static() is a best practice in Drupal, so we cannot fix that.
+        - "#^Unsafe usage of new static#"
+        # Varbase Layout Builder deliberately extends core Layout Builder classes
+        # to enhance their behavior. Those base classes are marked @internal by
+        # core, but subclassing them is the only supported way to alter the
+        # Layout Builder UI/forms/blocks; there is no public API to extend.
+        -
+            message: '#extends @internal class#'
+            paths:
+                - src/Element/VarbaseLayoutBuilderUX.php
+                - src/Form/VisibilitySectionForm.php
+                - src/Plugin/Block/VarbaseLayoutBuilderInlineBlock.php
+        # These \Drupal:: calls live in a render Element plugin and a Layout
+        # plugin whose parent method signatures / render pipeline do not expose a
+        # constructor-injection seam; using the service container statically here
+        # matches the surrounding core Layout Builder plugins.
+        -
+            message: '#\\Drupal calls should be avoided in classes, use dependency injection instead#'
+            paths:
+                - src/Element/VarbaseLayoutBuilderUX.php
+                - src/Plugin/Layout/VarbaseLayoutBuilderBootstrapLayout.php

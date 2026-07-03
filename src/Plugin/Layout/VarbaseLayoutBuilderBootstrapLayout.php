@@ -4,7 +4,7 @@ namespace Drupal\varbase_layout_builder\Plugin\Layout;
 
 use Drupal\Component\Utility\NestedArray;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Serialization\Yaml;
+use Drupal\Component\Serialization\Yaml;
 use Drupal\bootstrap_layout_builder\Plugin\Layout\BootstrapLayout;
 use Drupal\Component\Utility\Html;
 

@@ -1,0 +1,17 @@
+{
+  "css": {
+    "drupal page heading": "h1",
+    "drupal status messages": ".messages--status",
+    "drupal error messages": ".messages--error",
+    "drupal access denied heading": "h1:has-text('Access denied')",
+    "user login form": "#user-login-form",
+    "admin content view": ".view-content",
+    "content type list": ".views-table, table",
+    "manage display tab": "a:has-text('Manage display')",
+    "layout builder add section link": "a.layout-builder__link--add, .layout-builder__add-section, a:has-text('Add section')",
+    "layout builder save button": "input[value='Save layout'], .layout-builder__save",
+    "layout builder ui": ".layout-builder, #layout-builder",
+    "save button": "#edit-submit"
+  },
+  "xpath": {}
+}

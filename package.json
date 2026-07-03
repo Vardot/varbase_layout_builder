@@ -18,9 +18,26 @@
     "lint:js": "node ./node_modules/eslint/bin/eslint.js .",
     "lint:css": "stylelint \"**/*.css\" \"!themes/**\"",
     "lint:yaml": "node ./node_modules/eslint/bin/eslint.js --ext .yml .",
-    "spellcheck": "cspell lint ."
+    "spellcheck": "cspell lint .",
+    "test": "cucumber-js --config cucumber.js",
+    "test:chromium": "BROWSER=chromium cucumber-js --config cucumber.js",
+    "test:firefox": "BROWSER=firefox cucumber-js --config cucumber.js",
+    "test:webkit": "BROWSER=webkit cucumber-js --config cucumber.js",
+    "generate-reports": "generate-reports"
   },
   "author": "Vardot",
+  "dependencies": {
+    "@cucumber/cucumber": "10.0.1",
+    "@cucumber/pretty-formatter": "1.0.0",
+    "playwright": "1.60.0",
+    "tsx": "4.22.1",
+    "webship-js": "~2.0.0"
+  },
+  "resolutions": {
+    "@cucumber/cucumber": "10.0.1",
+    "@cucumber/pretty-formatter": "1.0.0",
+    "playwright": "1.60.0"
+  },
   "license": "GPL-2.0-or-later",
   "keywords": [
     "SASS",

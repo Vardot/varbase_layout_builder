@@ -114,8 +114,8 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
     $is_preview_refresh = FALSE;
     if (isset($current_request['_triggering_element_value'])) {
       $triggering_value = $current_request['_triggering_element_value'];
-      if ($triggering_value === 'Update' 
-        || $triggering_value === 'Add block' 
+      if ($triggering_value === 'Update'
+        || $triggering_value === 'Add block'
         || $triggering_value === 'Add section'
         || $triggering_value === 'Save') {
         $is_preview_refresh = TRUE;
@@ -125,8 +125,8 @@ class VarbaseLayoutBuilderThemeNegotiator extends AjaxBasePageNegotiator {
     // Also check the op parameter for block operations
     if (!$is_preview_refresh && isset($current_request['op'])) {
       $op_value = $current_request['op'];
-      if ($op_value === 'Update' 
-        || $op_value === 'Add block' 
+      if ($op_value === 'Update'
+        || $op_value === 'Add block'
         || $op_value === 'Add section'
         || $op_value === 'Save') {
         $is_preview_refresh = TRUE;
