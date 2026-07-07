@@ -79,7 +79,7 @@ webship-js-test:
   # Run the browser tests on both Drupal ~10.6 and ~11.3 (dual support).
   parallel:
     matrix:
-      - DRUPAL_CORE: ["~11.3.0", "~10.6.0"]
+      - DRUPAL_CORE: ["~11.4.0", "~10.6.0"]
   # Only the database service is needed. Playwright bundles its own Chromium,
   # so Selenium and chromedriver are not required.
   services:
@@ -110,7 +110,11 @@ webship-js-test:
     # (vartheme_bs4, the front-end theme Varbase 9.1.x/9.2.x ships) as the default,
     # with vartheme_claro as admin. CI/test only.
     - composer config --no-plugins allow-plugins.vardot/varbase-patches true || true
-    - composer --working-dir=$CI_PROJECT_DIR require "drupal/vartheme_bs4:9.0.x-dev" "drupal/vartheme_claro:3.0.x-dev" --no-interaction || true
+    # Per-core themes: Drupal 11.4 -> vartheme_bs4 9.2.0 + vartheme_claro 3.1.0;
+    # Drupal 10.6 -> vartheme_bs4 9.1.x + vartheme_claro 3.0.x (vartheme_bs4 9.0.x is retired).
+    - |
+      if [ "$DRUPAL_CORE" = "~11.4.0" ]; then VBS4="~9.2.0"; VCLARO="~3.1.0"; else VBS4="~9.1.0"; VCLARO="~3.0.0"; fi
+      composer --working-dir=$CI_PROJECT_DIR require "drupal/vartheme_bs4:$VBS4" "drupal/vartheme_claro:$VCLARO" --no-interaction || true
     - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT theme:install vartheme_bs4 vartheme_claro -y || true
     - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT config:set system.theme default vartheme_bs4 -y || true
     - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT config:set system.theme admin vartheme_claro -y || true
