@@ -1,3 +1,7 @@
+[![pipeline status](https://git.drupalcode.org/project/varbase_layout_builder/badges/10.0.x/pipeline.svg)](https://git.drupalcode.org/project/varbase_layout_builder/-/pipelines)
+[![Varbase Layout Builder](https://img.shields.io/badge/Varbase%20Layout%20Builder-10.0.69-0d6efc?labelColor=001d38&style=flat-square)](https://git.drupalcode.org/project/varbase_layout_builder/-/pipelines?ref=10.0.69)
+[![Automated Functional Testing](https://git.drupalcode.org/project/varbase_layout_builder/badges/10.0.x/pipeline.svg)](https://git.drupalcode.org/project/varbase_layout_builder/-/pipelines)
+
 # Varbase Layout Builder
 
 Provides default configuration and enhancements to utilize
