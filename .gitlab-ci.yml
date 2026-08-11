@@ -149,7 +149,10 @@ webship-js-test:
     # default view display, so the Manage layout editing UI is available and the
     # permission matrix has a concrete route to exercise.
     - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT php:eval
-        '$d = \Drupal::entityTypeManager()->getStorage("entity_view_display")->load("node.page.default"); if ($d) { $d->enableLayoutBuilder()->setOverridable()->save(); }'
+        'if (!\Drupal\node\Entity\NodeType::load("page")) { \Drupal\node\Entity\NodeType::create(["type" => "page", "name" => "Basic page", "display_submitted" => FALSE])->save(); } if (!\Drupal\field\Entity\FieldStorageConfig::loadByName("node", "body")) { \Drupal\field\Entity\FieldStorageConfig::create(["field_name" => "body", "entity_type" => "node", "type" => "text_with_summary"])->save(); } if (!\Drupal\field\Entity\FieldConfig::loadByName("node", "page", "body")) { \Drupal\field\Entity\FieldConfig::create(["field_name" => "body", "entity_type" => "node", "bundle" => "page", "label" => "Body"])->save(); } $r = \Drupal::service("entity_display.repository"); $r->getFormDisplay("node", "page")->setComponent("body", ["type" => "text_textarea_with_summary"])->save(); $r->getViewDisplay("node", "page")->setComponent("body", ["type" => "text_default", "label" => "hidden"])->save();'
+    - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT cache:rebuild
+    - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT php:eval
+        '\Drupal::entityTypeManager()->getStorage("entity_view_display")->load("node.page.default")->enableLayoutBuilder()->setOverridable()->save();'
     - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT cache:rebuild
     # Create a normal authenticated user (no Layout Builder permissions) for the
     # permission-matrix scenarios.

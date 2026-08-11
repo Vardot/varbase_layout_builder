@@ -5,6 +5,7 @@
  * Contains varbase_layout_builder.module.
  */
 
+use Drupal\Core\Cache\CacheableMetadata;
 use Drupal\Core\Url;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Form\FormStateInterface;
@@ -20,7 +21,10 @@ include_once __DIR__ . '/includes/helpers.inc';
 /**
  * Implements hook_entity_operation().
  */
-function varbase_layout_builder_entity_operation(EntityInterface $entity) {
+function varbase_layout_builder_entity_operation(EntityInterface $entity, ?CacheableMetadata $cacheable_metadata = NULL) {
+  if ($cacheable_metadata) {
+    $cacheable_metadata->addCacheContexts(['user.permissions']);
+  }
   $account = \Drupal::currentUser();
   $entity_type_id = $entity->getEntityTypeId();
   $entity_bundle = $entity->bundle();

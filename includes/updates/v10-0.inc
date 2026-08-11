@@ -5,7 +5,7 @@
  * Contains varbase_layout_builder_update_100###(s) hook updates.
  */
 
-use Symfony\Component\Yaml\Yaml;
+use Drupal\Component\Serialization\Yaml;
 use Drupal\Core\Config\InstallStorage;
 use Vardot\Installer\ModuleInstallerFactory;
 
@@ -29,7 +29,7 @@ function varbase_layout_builder_update_10001() {
       $config_path = $install_path . '/' . $config_name . '.yml';
       if (file_exists($config_path)) {
         $config_content = file_get_contents($config_path);
-        $config_data = (array) Yaml::parse($config_content);
+        $config_data = (array) Yaml::decode($config_content);
         $config_factory = \Drupal::configFactory()->getEditable($config_name);
         $config_factory->setData($config_data)->save(TRUE);
       }
