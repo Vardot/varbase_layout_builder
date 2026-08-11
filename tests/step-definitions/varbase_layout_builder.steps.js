@@ -4,7 +4,7 @@
  * @file
  * Custom step definitions for the Varbase Core test suite.
  *
- * Most of the suite reuses the step definitions that ship with webship-js
+ * Most of the suite reuses the step definitions that ship with varbase-e2e
  * (navigation, web-first assertions, accessibility). Only a few module-specific
  * helpers live here: logging in as a named user from cucumber.js
  * worldParameters.users, dropping back to an anonymous session, and creating a
@@ -14,7 +14,7 @@
 const { Given, When } = require('@cucumber/cucumber');
 const {
   friendly,
-} = require('webship-js/tests/step-definitions/webship');
+} = require('@vardot/varbase-e2e/tests/step-definitions/varbase-e2e');
 
 /**
  * Navigate with domcontentloaded only — heavy front-end themes (Bootstrap/AOS)
@@ -48,36 +48,6 @@ async function attempt(body, message) {
 }
 
 /**
- * Log in as a named test user defined in cucumber.js worldParameters.users.
- *
- * Example: Given I am a logged in user with the "Webmaster" user
- */
-Given(/^I am a logged in user with( the)*( username)* "([^"]*)?"( user)?$/, async function (theCase, usernameCase, key, userCase) {
-  const users = this.parameters.users || {};
-  if (!(key in users)) {
-    throw new Error(`No user named "${key}" in cucumber.js worldParameters.users`);
-  }
-  const { username, password } = users[key];
-  if (!username || !password) {
-    throw new Error(`User "${key}" is missing username or password in worldParameters.users`);
-  }
-  await attempt(async () => {
-    // Heavy Bootstrap front-end theme: navigate with domcontentloaded only and do
-    // not load the (heavy) /user page to verify; the admin-page steps reveal a
-    // failed login by hitting an access-denied page.
-    await this.context.clearCookies();
-    await gotoUrl(this.page, `${this.parameters.launchUrl}/user/login`);
-    await this.page.locator('#edit-name').fill(username);
-    await this.page.locator('#edit-pass').fill(password);
-    await Promise.all([
-      this.page.waitForURL((url) => !/\/user\/login/.test(String(url)), { timeout: 30000 }).catch(() => {}),
-      this.page.locator('#edit-submit').click(),
-    ]);
-    await settle(this.page);
-  }, `Could not log in as "${key}"`);
-});
-
-/**
  * Drop back to an anonymous session by clearing every cookie.
  *
  * Example: Given I am an anonymous visitor
@@ -105,7 +75,7 @@ When(/^(?:I |we )?create a basic page titled "([^"]*)"$/, async function (title)
 /**
  * Open an administration page and assert it is reachable.
  *
- * Uses the webship-js smart-wait helpers (gotoUrl + waitForPageLoad) so heavy
+ * Uses the varbase-e2e smart-wait helpers (gotoUrl + waitForPageLoad) so heavy
  * Varbase admin pages are fully settled before the assertion, and reports any
  * access-denied / not-found / fatal-error page with a tester-friendly message.
  *
@@ -129,7 +99,7 @@ const path = require('path');
 /**
  * Attach a file from the suite's own tests/assets directory to a file input.
  *
- * webship-js resolves "attach the file" against its bundled assets folder, so
+ * varbase-e2e resolves "attach the file" against its bundled assets folder, so
  * this step resolves against the project's tests/assets so committed fixtures
  * (e.g. flag-earth.jpg) can be uploaded.
  *
@@ -146,7 +116,7 @@ When(/^(?:I |we )?attach the media file "([^"]*)" to "([^"]*)"$/, async function
 /**
  * Fill a form field located by a raw CSS selector with a value.
  *
- * The webship-js "fill in ... for ..." step resolves fields by label; this step
+ * The varbase-e2e "fill in ... for ..." step resolves fields by label; this step
  * fills by selector so fields with array-style names (e.g. redirect_source) can
  * be set reliably.
  *
