@@ -44,7 +44,7 @@ yarn.lock
 # Ignore local gitlab-ci-local runner artifacts.
 .gitlab-ci-local/
 
-# Ignore webship-js generated test artifacts (reports/screenshots/videos).
+# Ignore varbase-e2e generated test artifacts (reports/screenshots/videos).
 /tests/reports/*
 !/tests/reports/.gitkeep
 /tests/screenshots/*

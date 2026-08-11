@@ -5,11 +5,11 @@
 #   1. The standard Drupal CI validation jobs (composer-lint, cspell, eslint,
 #      phpcs, phpstan, stylelint) provided by the drupalci templates. Every
 #      validate job gates strictly (allow_failure:false).
-#   2. A webship-js BDD browser-test job (Playwright + Cucumber-js) that runs
+#   2. A varbase-e2e BDD browser-test job (Playwright + Cucumber-js) that runs
 #      the tests/features/drupal/** suite against a freshly installed Drupal
 #      Standard site.
 #
-# Note on the webship-js provisioning strategy (SLIM install):
+# Note on the varbase-e2e provisioning strategy (SLIM install):
 #   Varbase Layout Builder hard-depends (info.yml) on varbase_media and
 #   varbase_editor. Their released 10.1.x siblings on the drupal.org Composer
 #   facade ship config that is incompatible with the current core/contrib
@@ -84,15 +84,15 @@ stylelint:
     - apt-get install -y nodejs
     - node --version && npm --version
     - 'test -f .yarnrc.yml || echo "nodeLinker: node-modules" > .yarnrc.yml'
-    # Back up cucumber.js - webship-js's postinstall can clobber it under yarn 4.
+    # Back up cucumber.js - varbase-e2e's postinstall can clobber it under yarn 4.
     - cp cucumber.js .cucumber.js.bak
     - corepack enable
     - yarn install
     - cp .cucumber.js.bak cucumber.js && rm .cucumber.js.bak
     - ./node_modules/.bin/playwright install --with-deps chromium
 
-# = webship-js BDD - Drupal Standard profile + Layout Builder contrib stack =
-webship-js-test:
+# = varbase-e2e BDD - Drupal Standard profile + Layout Builder contrib stack =
+varbase-e2e-test:
   extends: .testing-job-base
   needs: [composer]
   # Installing the Layout Builder contrib stack pulls a fair amount of contrib,
@@ -145,12 +145,15 @@ webship-js-test:
         layout_builder_perms layout_builder_at layout_library section_library
         block_library layout_builder_restrictions -y
     - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT cache:rebuild
-    # Enable Layout Builder (overridable) on the Standard "page" content type's
-    # default view display, so the Manage layout editing UI is available and the
-    # permission matrix has a concrete route to exercise.
+    # Provision the Basic page content type with a Body field when the install
+    # profile did not create it, so the suite never depends on what the profile
+    # happens to ship.
     - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT php:eval
         'if (!\Drupal\node\Entity\NodeType::load("page")) { \Drupal\node\Entity\NodeType::create(["type" => "page", "name" => "Basic page", "display_submitted" => FALSE])->save(); } if (!\Drupal\field\Entity\FieldStorageConfig::loadByName("node", "body")) { \Drupal\field\Entity\FieldStorageConfig::create(["field_name" => "body", "entity_type" => "node", "type" => "text_with_summary"])->save(); } if (!\Drupal\field\Entity\FieldConfig::loadByName("node", "page", "body")) { \Drupal\field\Entity\FieldConfig::create(["field_name" => "body", "entity_type" => "node", "bundle" => "page", "label" => "Body"])->save(); } $r = \Drupal::service("entity_display.repository"); $r->getFormDisplay("node", "page")->setComponent("body", ["type" => "text_textarea_with_summary"])->save(); $r->getViewDisplay("node", "page")->setComponent("body", ["type" => "text_default", "label" => "hidden"])->save();'
     - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT cache:rebuild
+    # Enable Layout Builder (overridable) on the "page" content type's default
+    # view display, so the Manage layout editing UI is available and the
+    # permission matrix has a concrete route to exercise.
     - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT php:eval
         '\Drupal::entityTypeManager()->getStorage("entity_view_display")->load("node.page.default")->enableLayoutBuilder()->setOverridable()->save();'
     - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT cache:rebuild
@@ -160,11 +163,11 @@ webship-js-test:
     - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT cache:rebuild
     - !reference [.fragments, node_playwright]
   script:
-    # cucumber.js loads only tests/features/drupal/**. Disable webship-js's auto
+    # cucumber.js loads only tests/features/drupal/**. Disable varbase-e2e's auto
     # HTML hook and run generate-reports explicitly so HTML + PDF land next to
     # the JSON in tests/reports/.
-    - WEBSHIP_REPORT_DISABLE=1 ./node_modules/.bin/cucumber-js --config cucumber.js --tags "not @wip"
-    - node ./node_modules/webship-js/bin/generate-reports.js
+    - VARBASE_E2E_REPORT_DISABLE=1 ./node_modules/.bin/cucumber-js --config cucumber.js --tags "not @wip"
+    - node ./node_modules/@vardot/varbase-e2e/bin/generate-reports.js
         --json tests/reports/cucumber_report.json
         --out  tests/reports/cucumber_report.html
         --format all
