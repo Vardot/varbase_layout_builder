@@ -8,12 +8,12 @@
  * (navigation, web-first assertions, accessibility). Only a few module-specific
  * helpers live here: logging in as a named user from cucumber.js
  * worldParameters.users, dropping back to an anonymous session, opening an
- * administration page while asserting it is reachable, visiting a page without
- * asserting reachability, and asserting a page is access-restricted (used by
- * the Layout Builder permission matrix scenarios).
+ * administration page while asserting it is reachable, and visiting a page
+ * without asserting reachability. The access-restricted assertion the
+ * permission matrix scenarios use now ships with varbase-e2e.
  */
 
-const { Given, When, Then } = require('@cucumber/cucumber');
+const { Given, When } = require('@cucumber/cucumber');
 const {
   friendly,
   gotoUrl,
@@ -85,22 +85,3 @@ When(/^I visit the page "([^"]*)"$/, async function (path) {
   }, `Could not visit the page "${path}"`);
 });
 
-/**
- * Assert the current page is access-restricted (Access denied or a login form).
- *
- * Anonymous visitors are redirected to the log-in form (403 -> /user/login),
- * while an authenticated user without the Layout Builder permissions sees the
- * core "Access denied" page. Accept either as "restricted".
- *
- * Example: Then the page should be access restricted
- */
-Then(/^the page should be access restricted$/, async function () {
-  await attempt(async () => {
-    const restricted = await this.page.locator(
-      'h1:has-text("Access denied"), #user-login-form, form.user-login-form, input[value="Log in"]'
-    ).count();
-    if (restricted === 0) {
-      throw new Error('Expected an access-denied page or a log-in form, but the page was reachable');
-    }
-  }, 'The page was expected to be access restricted but was reachable');
-});
