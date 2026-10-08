@@ -60,16 +60,57 @@ function varbase_layout_builder_install() {
 /**
  * Uninstall the block_content_permissions contrib module (merged into core).
  *
- * The per-bundle block content permissions block_content_permissions used to
- * provide (for example "create varbase_gallery_block block content") are now
- * provided by Drupal core's block_content module on both Drupal ~10.6 and
- * ~11.3, using the exact same permission strings. Uninstalling the contrib
- * module therefore keeps every existing role permission valid.
+ * Drupal core's block_content module now provides per-bundle block content
+ * permissions, but not all of them under the names block_content_permissions
+ * used. "create <type> block content" and "delete any <type> block content"
+ * are identical in core. The others are not:
+ * - "update any <type> block content" is "edit any <type> block content".
+ * - "administer block content types" is "administer block types".
+ * - "view restricted block content" is "access block library".
+ *
+ * Uninstalling a module removes the permissions it provided from every role,
+ * so roles would silently lose those three. Grant the core equivalents first.
  */
 function varbase_layout_builder_update_90003() {
-  if (\Drupal::moduleHandler()->moduleExists('block_content_permissions')) {
-    \Drupal::service('module_installer')->uninstall(['block_content_permissions']);
-    return (string) t('Uninstalled the block_content_permissions module; Drupal core now provides the block content permissions.');
+  if (!\Drupal::moduleHandler()->moduleExists('block_content_permissions')) {
+    return (string) t('The block_content_permissions module is not installed; nothing to do.');
   }
-  return (string) t('The block_content_permissions module is not installed; nothing to do.');
+
+  $renamed = [
+    'administer block content types' => 'administer block types',
+    'view restricted block content' => 'access block library',
+  ];
+  $updated_roles = [];
+  /** @var \Drupal\user\RoleInterface $role */
+  foreach (\Drupal::entityTypeManager()->getStorage('user_role')->loadMultiple() as $role) {
+    if ($role->isAdmin()) {
+      continue;
+    }
+    $grant = [];
+    foreach ($role->getPermissions() as $permission) {
+      if (preg_match('/^update any (.+) block content$/', $permission, $matches)) {
+        $grant[] = 'edit any ' . $matches[1] . ' block content';
+      }
+      elseif (isset($renamed[$permission])) {
+        $grant[] = $renamed[$permission];
+      }
+    }
+    $grant = array_diff(array_unique($grant), $role->getPermissions());
+    if ($grant) {
+      foreach ($grant as $permission) {
+        $role->grantPermission($permission);
+      }
+      $role->save();
+      $updated_roles[] = $role->id();
+    }
+  }
+
+  \Drupal::service('module_installer')->uninstall(['block_content_permissions']);
+
+  if ($updated_roles) {
+    return (string) t('Granted the Drupal core block content permissions to @roles, then uninstalled the block_content_permissions module.', [
+      '@roles' => implode(', ', $updated_roles),
+    ]);
+  }
+  return (string) t('Uninstalled the block_content_permissions module; Drupal core now provides the block content permissions.');
 }
