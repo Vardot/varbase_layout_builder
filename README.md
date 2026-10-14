@@ -40,6 +40,6 @@ However, using it with [Varbase](https://www.drupal.org/project/varbase) gives y
 Check out Varbase documentation for more details.
 
 Join Our Slack Team for Feedback and Support
-Join now: http://slack.varbase.vardot.com/
+Join now: https://varbase.slack.com
 
 Sponsored and developed by [Vardot](https://www.drupal.org/vardot).
