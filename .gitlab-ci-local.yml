@@ -33,7 +33,7 @@ composer-lint:
 # ---- cspell : spell-check the whole project --------------------------------
 cspell:
   stage: validate
-  image: public.ecr.aws/docker/library/node:20
+  image: public.ecr.aws/docker/library/node:24
   script:
     - npm install -g cspell@8
     - cspell lint . --no-progress
@@ -46,7 +46,7 @@ cspell:
 # lint the module's own JS with the project config.
 eslint:
   stage: validate
-  image: public.ecr.aws/docker/library/node:20
+  image: public.ecr.aws/docker/library/node:24
   script:
     - npm install --no-save --no-fund --no-audit --legacy-peer-deps eslint@8
     - >
@@ -60,7 +60,7 @@ eslint:
 # build image - passes; this local job mirrors that.
 stylelint:
   stage: validate
-  image: public.ecr.aws/docker/library/node:20
+  image: public.ecr.aws/docker/library/node:24
   script:
     - npm install --no-save --no-fund --no-audit --legacy-peer-deps stylelint@16
     - >

@@ -3,8 +3,8 @@
   "description": "Provides default configuration and enhancements to utilize Drupal core''s Layout Builder.",
   "private": true,
   "engines": {
-    "yarn": ">= 4.9.3",
-    "node": ">= 20.0"
+    "yarn": ">= 4.18.1",
+    "node": ">= 24.0"
   },
   "scripts": {
     "theme:build": "webpack --progress --config webpack.config.build.js && prettier --write \"css/**/*.css\" && stylelint \"css/**/*.css\" --fix",
@@ -27,10 +27,10 @@
   },
   "author": "Vardot",
   "dependencies": {
-    "@cucumber/cucumber": "10.0.1",
-    "@cucumber/pretty-formatter": "1.0.0",
-    "playwright": "1.60.0",
-    "tsx": "4.22.1",
+    "@cucumber/cucumber": "^10.0.1",
+    "@cucumber/pretty-formatter": "^1.0.0",
+    "playwright": "^1.60.0",
+    "tsx": "^4.22.1",
     "@vardot/varbase-e2e": "^2.0.7"
   },
   "resolutions": {
@@ -94,5 +94,5 @@
     "last 1 Samsung version",
     "Firefox ESR"
   ],
-  "packageManager": "yarn@4.9.3"
+  "packageManager": "yarn@4.18.1"
 }
