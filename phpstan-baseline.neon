@@ -1,0 +1,6 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Class Drupal\\\\varbase_layout_builder\\\\Form\\\\VarbaseLayoutBuilderConfigureSectionForm extends @internal class Drupal\\\\layout_builder\\\\Form\\\\ConfigureSectionForm\\.$#"
+			count: 1
+			path: src/Form/VarbaseLayoutBuilderConfigureSectionForm.php

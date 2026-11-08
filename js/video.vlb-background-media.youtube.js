@@ -3,22 +3,22 @@
  * Behaviors of Varbase Layout Builder for Youtube video scripts.
  */
 
-(function($, _, Drupal) {
+(function ($, _, Drupal) {
   Drupal.behaviors.varbaseLayoutBuilderRemoteVideoYoutube = {
-    attach: function(context) {
+    attach(context) {
       if (context === window.document) {
-        $(document).ready(function() {
+        $(document).ready(function () {
           if (
-            $(".background-media-wrapper").find('iframe[src*="youtube.com"]')
+            $('.background-media-wrapper').find('iframe[src*="youtube.com"]')
               .length > 0
           ) {
-            const closestYoutubeIframe = $(".background-media-wrapper")
+            const closestYoutubeIframe = $('.background-media-wrapper')
               .find('iframe[src*="youtube.com"]')
               .get(0).contentWindow;
-            closestYoutubeIframe.postMessage("play", "*");
+            closestYoutubeIframe.postMessage('play', '*');
           }
         });
       }
-    }
+    },
   };
 })(window.jQuery, window._, window.Drupal);

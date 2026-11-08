@@ -94,7 +94,7 @@
   {% set has_vlb_background_color = true %}
   {{ attach_library('varbase_layout_builder/vlb-colors') }}
 
-  {# When we do have Background color we add edge to edge exepte if do not want to have a an edge to edge background #}
+  {# When we do have Background color we add edge to edge except if do not want to have a an edge to edge background #}
   {% if settings.vlb_section_config.vlb_background_edge2edge and settings.vlb_section_config.vlb_background_edge2edge == 1 %}
     {% set width_edge2edge = true %}
     {% set section_attributes = section_attributes.addClass('bg-edge2edge') %}
@@ -133,7 +133,7 @@
   {% endif %}
 {% endif %}
 
-{# When we do have width classes and not using the advacned mode #}
+{# When we do have width classes and not using the advanced mode #}
 {% if settings.vlb_section_config.vlb_width_classes and settings.vlb_section_config.vlb_use_advanced != 1 %}
   {% set attributes = attributes.addClass(settings.vlb_section_config.vlb_width_classes) %}
 {% endif %}

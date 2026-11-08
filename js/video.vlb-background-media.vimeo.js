@@ -1,24 +1,24 @@
 /**
  * @file
- * Behaviors of Varbase Layout Builder for vimeo embeded videos scripts.
+ * Behaviors of Varbase Layout Builder for vimeo embedded videos scripts.
  */
 
-(function($, _, Drupal) {
+(function ($, _, Drupal) {
   Drupal.behaviors.varbaseLayoutBuilderRemoteVideoVimeo = {
-    attach: function(context) {
+    attach(context) {
       if (context === window.document) {
-        $(document).ready(function() {
+        $(document).ready(function () {
           if (
-            $(".background-media-wrapper").find('iframe[src*="vimeo.com"]')
+            $('.background-media-wrapper').find('iframe[src*="vimeo.com"]')
               .length > 0
           ) {
-            const closestVimeoIframe = $(".background-media-wrapper")
+            const closestVimeoIframe = $('.background-media-wrapper')
               .find('iframe[src*="vimeo.com"]')
               .get(0).contentWindow;
-            closestVimeoIframe.postMessage("play", "*");
+            closestVimeoIframe.postMessage('play', '*');
           }
         });
       }
-    }
+    },
   };
 })(window.jQuery, window._, window.Drupal);

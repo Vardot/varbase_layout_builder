@@ -829,7 +829,7 @@ function varbase_layout_builder_preprocess_media__video__background_media(&$vari
 
     $background_media_video_fid = $variables['elements']['#media']->getSource()->getSourceFieldValue($variables['elements']['#media']);
     $background_media_video_file = File::load($background_media_video_fid);
-    $variables['background_media_video_url'] = file_create_url($background_media_video_file->getFileUri());
+    $variables['background_media_video_url'] = \Drupal::service('file_url_generator')->generateAbsoluteString($background_media_video_file->getFileUri());
     $variables['background_media_video_type'] = $background_media_video_file->getMimeType();
   }
 }

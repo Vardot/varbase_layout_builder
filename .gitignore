@@ -38,3 +38,9 @@ ehthumbs.db
 errors.log
 
 .yarn/*
+
+# JavaScript lockfiles are not committed: installs resolve from package.json
+# (engines).
+yarn.lock
+package-lock.json
+pnpm-lock.yaml

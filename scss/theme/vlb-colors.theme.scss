@@ -17,7 +17,7 @@ $vlb-palette-color-alto:             #d3d3d3;
 $vlb-palette-color-persian-red:      #cc3c2d;
 $vlb-palette-color-anzac:            #E4B649;
 
-// Associate background colors nemas to a function name.
+// Associate background colors names to a function name.
 $vlb_color_01: $vlb-palette-color-boston-blue;       // Blue
 $vlb_color_02: $vlb-palette-color-pickled-bluewood;  // Madison
 $vlb_color_03: $vlb-palette-color-silver-chalice;    // Dark Gray
@@ -49,7 +49,7 @@ $vlb-colors: map-merge(
 $vlb-palette-color-black:            #000000;
 $vlb-palette-color-white:            #ffffff;
 
-// Associate foreground colors nemas to a function name.
+// Associate foreground colors names to a function name.
 $vlb_foreground_color_01: $vlb-palette-color-white; // White
 $vlb_foreground_color_02: $vlb-palette-color-white; // White
 $vlb_foreground_color_03: $vlb-palette-color-white; // White

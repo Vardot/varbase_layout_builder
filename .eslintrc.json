@@ -29,6 +29,7 @@
     "tabbable": true
   },
   "rules": {
+    "no-use-before-define": ["error", { "functions": false }],
     "prettier/prettier": "error",
     "consistent-return": ["off"],
     "no-underscore-dangle": ["off"],
