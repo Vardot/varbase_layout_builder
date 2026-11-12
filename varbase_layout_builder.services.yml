@@ -5,3 +5,8 @@ services:
       ["@csrf_token", "@config.factory", "@request_stack", "@theme_handler"]
     tags:
       - { name: theme_negotiator, priority: 5000 }
+  # Drupal 10 does not discover hook classes, so register it here.
+  Drupal\varbase_layout_builder\Hook\EditorLanguageHooks:
+    class: Drupal\varbase_layout_builder\Hook\EditorLanguageHooks
+    arguments:
+      ['@language_manager', '@current_route_match', '@?Drupal\ckeditor5\LanguageMapper']

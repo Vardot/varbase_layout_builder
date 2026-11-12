@@ -9,8 +9,10 @@ use Drupal\Core\Cache\CacheableMetadata;
 use Drupal\Core\Url;
 use Drupal\Core\Entity\EntityInterface;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Hook\Attribute\LegacyHook;
 use Drupal\Core\Template\Attribute;
 use Drupal\varbase_layout_builder\Element\VarbaseLayoutBuilderUX;
+use Drupal\varbase_layout_builder\Hook\EditorLanguageHooks;
 use Drupal\Core\Asset\AttachedAssetsInterface;
 
 // Include all helpers.
@@ -429,4 +431,12 @@ function varbase_layout_builder_css_alter(&$css, AttachedAssetsInterface $assets
     unset($css['core/misc/dialog/off-canvas/css/drupal.css']);
 
   }
+}
+
+/**
+ * Implements hook_editor_js_settings_alter().
+ */
+#[LegacyHook]
+function varbase_layout_builder_editor_js_settings_alter(array &$settings): void {
+  \Drupal::service(EditorLanguageHooks::class)->editorJsSettingsAlter($settings);
 }
