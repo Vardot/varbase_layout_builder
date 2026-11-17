@@ -1,3 +1,13 @@
+################################################################################
+# GitLab CI for the Varbase Layout Builder module, 10.1.x branch.
+#
+# The standard Drupal CI validation jobs (composer, composer-lint, cspell,
+# eslint, phpcs, phpstan, stylelint) from the drupalci templates, all blocking,
+# as on the 10.0.x and 10.2.x branches. The template's own composer job builds
+# the Drupal site the other jobs check against; this branch supports
+# Drupal ~10.6.0 || ~11.3.0, so it is pinned to the latest 11.3 release.
+################################################################################
+
 include:
   - project: $_GITLAB_TEMPLATES_REPO
     ref: $_GITLAB_TEMPLATES_REF
@@ -5,27 +15,40 @@ include:
       - "/includes/include.drupalci.main.yml"
       - "/includes/include.drupalci.variables.yml"
       - "/includes/include.drupalci.workflows.yml"
+
+variables:
+  # varbase_components ~2 needs four cl_* modules with no Drupal 11 release
+  # (their composer.json still declares ^10 at most): install them through
+  # the lenient endpoint, which ignores that core constraint.
+  _LENIENT_ALLOW_LIST: "cl_block,cl_components,cl_selector_field,cl_server"
+  _ALL_VALIDATE_ALLOW_FAILURE: "0"
+  COMPOSER_FLAGS: "--no-strict-lock"
+  COMPOSER_MEMORY_LIMIT: "-1"
+  # Yarn 4 defaults to immutable installs; allow the lockfile to be updated in CI.
+  YARN_ENABLE_IMMUTABLE_INSTALLS: "false"
+
+# Run for merge requests, branch pushes, and tags.
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+    - if: $CI_COMMIT_BRANCH
+    - if: $CI_COMMIT_TAG
+
+# The branch supports Drupal ~10.6.0 || ~11.3.0. The template's composer job sets
+# DRUPAL_CORE itself, so it has to be set on that job, not globally.
 composer:
-  script:
-    - composer config minimum-stability dev
-    - composer config repositories.drupal composer https://packages.drupal.org/8
-    - composer config --no-plugins allow-plugins.composer/installers true
-    - composer config --no-plugins allow-plugins.drupal/core-composer-scaffold true
-    - composer config --no-plugins allow-plugins.cweagans/composer-patches true
-    - composer config --no-plugins allow-plugins.oomphinc/composer-installers-extender true
-    - composer config --no-plugins allow-plugins.phpstan/extension-installer true
-    - composer config --no-plugins allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
-    - composer require --no-update cweagans/composer-patches:~1
-    - composer install -vvv
+  variables:
+    DRUPAL_CORE: "11.3.21"
+
 composer-lint:
-  allow_failure: true
+  allow_failure: false
 cspell:
-  allow_failure: true
+  allow_failure: false
 eslint:
-  allow_failure: true
+  allow_failure: false
 phpcs:
-  allow_failure: true
+  allow_failure: false
 phpstan:
-  allow_failure: true
-phpunit:
-  allow_failure: true
+  allow_failure: false
+stylelint:
+  allow_failure: false

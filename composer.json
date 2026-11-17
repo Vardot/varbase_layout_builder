@@ -38,5 +38,15 @@
     "drupal/block_library": "~1",
     "drupal/length_indicator": "~1",
     "drupal/paragraphs": "~1"
+  },
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true,
+      "cweagans/composer-patches": true,
+      "drupal/core-composer-scaffold": true,
+      "oomphinc/composer-installers-extender": true,
+      "symfony/runtime": true,
+      "vardot/varbase-patches": true
+    }
   }
 }
