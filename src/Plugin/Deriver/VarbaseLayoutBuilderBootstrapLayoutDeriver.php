@@ -59,6 +59,7 @@ class VarbaseLayoutBuilderBootstrapLayoutDeriver extends DeriverBase implements 
           'regions' => $this->getRegions($layout->getNumberOfColumns()),
           'theme_hook' => 'blb_section',
           'icon_map' => $this->getIconMap($layout->getNumberOfColumns()),
+          'provider' => 'varbase_layout_builder',
         ]);
       }
     }
