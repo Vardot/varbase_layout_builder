@@ -2,7 +2,7 @@ name: 'Layout Builder UX'
 type: module
 description: 'Alters the Layout Builder UI for better usability'
 package: Layout Builder
-core_version_requirement: ^9.2 || ^10 || ^11
+core_version_requirement: ^10.6 || ^11.4 || ^12
 dependencies:
   - drupal:layout_builder
 

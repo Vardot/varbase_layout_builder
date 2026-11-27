@@ -78,10 +78,11 @@ phpunit:
 varbase-e2e-test:
   extends: .testing-job-base
   needs: [composer]
-  # Run the browser tests on both Drupal ~10.6 and ~11.3 (dual support).
+  # Run the browser tests on Drupal ~11.4. The former "~10.6.0" leg never ran on 10.6: the composer job exports
+  # DRUPAL_CORE (dotenv), which overrode the matrix value, and this stack (drupal/core-dev 11.4, 9.2.x modules) needs 11.4.
   parallel:
     matrix:
-      - DRUPAL_CORE: ["~11.4.0", "~10.6.0"]
+      - E2E_DRUPAL_CORE: ["~11.4.0"]
   # Only the database service is needed. Playwright bundles its own Chromium,
   # so Selenium and chromedriver are not required.
   services:
@@ -101,7 +102,14 @@ varbase-e2e-test:
     - !reference [.fragments, web_db]
     # Set the Drupal core version for this matrix leg (no-op on ~11.3.0 which is
     # already built; downgrades to ~10.6.0 for the Drupal 10 leg).
-    - composer --working-dir=$CI_PROJECT_DIR require "drupal/core-recommended:$DRUPAL_CORE" "drupal/core-composer-scaffold:$DRUPAL_CORE" --update-with-all-dependencies --no-interaction
+    # Change core only when the installed one is not already on the target minor (the composer job installs ~11.4).
+    - |
+      CURRENT=$(composer --working-dir=$CI_PROJECT_DIR show drupal/core | sed -n 's/^versions *: *\* *//p')
+      TARGET_MINOR=$(echo "$E2E_DRUPAL_CORE" | sed 's/^~\([0-9]*\.[0-9]*\).*/\1/')
+      case "$CURRENT" in
+        "$TARGET_MINOR".*) echo "Drupal $CURRENT is already on $E2E_DRUPAL_CORE";;
+        *) composer --working-dir=$CI_PROJECT_DIR require "drupal/core-recommended:$E2E_DRUPAL_CORE" "drupal/core-composer-scaffold:$E2E_DRUPAL_CORE" --update-with-all-dependencies --prefer-stable --no-interaction;;
+      esac
     - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT site:install standard
         --db-url=$SIMPLETEST_DB --account-name=webmaster --account-pass=dD.123123ddd
         --site-name="Varbase Layout Builder Test" -y
@@ -115,7 +123,7 @@ varbase-e2e-test:
     # Per-core themes: Drupal 11.4 -> vartheme_bs4 9.2.0 + vartheme_claro 3.1.0;
     # Drupal 10.6 -> vartheme_bs4 9.1.x + vartheme_claro 3.0.x (vartheme_bs4 9.0.x is retired).
     - |
-      if [ "$DRUPAL_CORE" = "~11.4.0" ]; then VBS4="~9.2.0"; VCLARO="~3.1.0"; else VBS4="~9.1.0"; VCLARO="~3.0.0"; fi
+      if [ "$E2E_DRUPAL_CORE" = "~11.4.0" ]; then VBS4="~9.2.0"; VCLARO="~3.1.0"; else VBS4="~9.1.0"; VCLARO="~3.0.0"; fi
       composer --working-dir=$CI_PROJECT_DIR require "drupal/vartheme_bs4:$VBS4" "drupal/vartheme_claro:$VCLARO" --no-interaction || true
     - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT theme:install vartheme_bs4 vartheme_claro -y || true
     - $CI_PROJECT_DIR/vendor/bin/drush --root=$CI_PROJECT_DIR/$_WEB_ROOT config:set system.theme default vartheme_bs4 -y || true
